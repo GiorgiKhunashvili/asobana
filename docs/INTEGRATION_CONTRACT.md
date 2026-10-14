@@ -220,7 +220,8 @@ concatenated characters: pass selected unique tile IDs in order.
 
 The pure rules also export `layoutWheel`, `hitTest`, `advanceSelection`,
 `selectionWord` and seeded `shuffleTiles`. `GestureSelectionEvent` is `begin`/`move`
-with local `{x,y}`, or `release`/`cancel`. Begin must hit a tile; entering a previously
+with local `{x,y}`, or `release`/`cancel`. The native adapter manually activates only for a single touch beginning on a tile;
+empty-space touches yield to scrolling. Begin must hit a tile; entering a previously
 selected tile is ignored; release submits 2+ tiles once; failure/cancellation submits
 nothing. No backtracking in v1. Shuffle/cancel clear the active selection. Shuffling
 changes positions only; IDs and letters stay paired. Tap mode is an accessible

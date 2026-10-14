@@ -6,6 +6,7 @@ import {
   advanceSelection,
   EMPTY_SELECTION,
   layoutWheel,
+  hitTest,
   selectionWord,
   shuffleTiles,
   type WheelSelection,
@@ -62,8 +63,22 @@ export function useLetterWheel({
     return pan
       .enabled(!disabled)
       .minDistance(0)
+      .manualActivation(true)
       .maxPointers(1)
       .shouldCancelWhenOutside(false)
+      .onTouchesDown((event, manager) => {
+        'worklet';
+        const touch = event.allTouches[0];
+        if (
+          event.numberOfTouches !== 1 ||
+          !touch ||
+          hitTest(touch, layout) === null
+        ) {
+          manager.fail();
+        } else {
+          manager.activate();
+        }
+      })
       .onBegin((event) => {
         'worklet';
         pointer.set({ x: event.x, y: event.y });
@@ -108,7 +123,7 @@ export function useLetterWheel({
         selection.set(EMPTY_SELECTION);
         scheduleOnRN(clearPreview);
       })
-      .onFinalize((event, success) => {
+      .onFinalize(() => {
         'worklet';
         selection.set(EMPTY_SELECTION);
         scheduleOnRN(clearPreview);

@@ -87,31 +87,33 @@ export function LetterWheel(props: LetterWheelProps) {
           ? selectionWord(tapIds, props.tiles) || 'აირჩიე ასოები'
           : wheel.preview || 'შეაერთე ასოები'}
       </Label>
-      <GestureDetector gesture={wheel.gesture}>
-        <View
-          testID="letter-wheel"
-          style={{
-            width: props.size,
-            height: props.size,
-            borderRadius: props.size / 2,
-            backgroundColor: '#e4ede7',
-          }}
-        >
-          <Canvas pointerEvents="none" style={StyleSheet.absoluteFill}>
-            <Path
-              path={path}
-              color="#69a88b"
-              style="stroke"
-              strokeWidth={7}
-              strokeCap="round"
-              strokeJoin="round"
-            />
-          </Canvas>
-          {wheel.layout.map((tile) => (
-            <Tile key={tile.id} tile={tile} selection={wheel.selection} />
-          ))}
-        </View>
-      </GestureDetector>
+      {!tapMode && (
+        <GestureDetector gesture={wheel.gesture}>
+          <View
+            testID="letter-wheel"
+            style={{
+              width: props.size,
+              height: props.size,
+              borderRadius: props.size / 2,
+              backgroundColor: '#e4ede7',
+            }}
+          >
+            <Canvas pointerEvents="none" style={StyleSheet.absoluteFill}>
+              <Path
+                path={path}
+                color="#69a88b"
+                style="stroke"
+                strokeWidth={7}
+                strokeCap="round"
+                strokeJoin="round"
+              />
+            </Canvas>
+            {wheel.layout.map((tile) => (
+              <Tile key={tile.id} tile={tile} selection={wheel.selection} />
+            ))}
+          </View>
+        </GestureDetector>
+      )}
       <View style={styles.row}>
         <Action
           label="არევა · Shuffle"
