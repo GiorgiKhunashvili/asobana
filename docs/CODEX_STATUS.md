@@ -4,6 +4,24 @@ Updated: 2026-10-14 (Asia/Tbilisi). **Milestone A prototype implemented.**
 Core gameplay and save/resume are verified in automated tests and native emulator
 flows. This is not a production-store release or a hardware performance sign-off.
 
+## Latest: first TestFlight upload
+
+- **GeoWords 0.1.0 (1) is ready for internal TestFlight testing.** Apple confirmed
+  `VALID` and `READY_FOR_BETA_TESTING`; EAS build and submission both finished.
+  Uploaded on 2026-10-14 at 12:03:19 Asia/Tbilisi.
+- Store-signed IPA built using Xcode 26.6 and iOS 26.5 SDK, minimum iOS 16.4.
+  Binary inspection confirmed embedded offline Hermes bundle, all four Georgian
+  fonts, correct version/bundle ID and no recording/background-audio permission.
+- App ID `6822637685`, bundle `dev.geowords.prototype`, Dinein group developer team.
+  Internal `Team (Expo)` group and owner access created. Store record temporarily
+  named `GeoWords (dca1bf)` because the original name was taken; installed name
+  remains `GeoWords`. External testing/public App Store release not submitted.
+- EAS production/store profile, remote build numbering, opaque rosette app icon,
+  encryption declaration and reusable submission configuration saved. See
+  [TESTFLIGHT.md](TESTFLIGHT.md) for dashboard links, evidence and next uploads.
+- Signed build includes Claude's current uncommitted UI from the uploaded working
+  tree. Those UI files remain intact and outside the release-config commit.
+
 ## Latest: 50-level beta content
 
 - Active content revision 2 contains **50 levels**, each with **4–5 crossword
@@ -112,9 +130,10 @@ Native debug reports/screenshots are preserved under ignored `artifacts/maestro-
 - Native-speaker editorial review and content licensing review before a larger release.
 - Physical iOS/Android devices, measured 60 FPS/frame timing, haptic behavior,
   audio quality and accessibility audits have not been signed off.
-- Standalone signed release builds, airplane-mode cold startup without Expo Go,
-  app-store distribution and full device matrix remain unverified. No runtime game
-  logic or bundled content requires internet; Expo Go still requires its dev server.
+- Store-signed iOS build and internal TestFlight distribution are verified.
+  Physical-device install, airplane-mode cold startup and the full device matrix
+  remain unverified. Android standalone signing and public App Store distribution
+  remain pending. The iOS IPA embeds the game bundle and font/audio assets.
 - Native save error/disk-full injection was tested with real SQLite/store tests,
   not by exhausting simulator storage. SQLite DB migrations and content revision
   1 → 2 upgrade are implemented. Future content upgrades require explicit support.

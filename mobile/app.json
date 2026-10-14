@@ -8,7 +8,10 @@
     "userInterfaceStyle": "light",
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "dev.geowords.prototype"
+      "bundleIdentifier": "dev.geowords.prototype",
+      "config": {
+        "usesNonExemptEncryption": false
+      }
     },
     "android": {
       "package": "dev.geowords.prototype"
@@ -16,12 +19,28 @@
     "plugins": [
       "expo-router",
       "expo-sqlite",
-      "expo-audio",
+      [
+        "expo-audio",
+        {
+          "microphonePermission": false,
+          "recordAudioAndroid": false,
+          "enableBackgroundPlayback": false,
+          "enableBackgroundRecording": false
+        }
+      ],
       "expo-font",
       "expo-status-bar"
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "99b3845a-54a7-4cdc-9a58-1fcd9a5ac298"
+      }
+    },
+    "owner": "gkhunashvili",
+    "icon": "./assets/icon.png"
   }
 }
