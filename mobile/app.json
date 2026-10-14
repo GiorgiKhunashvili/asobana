@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "GeoWords",
+    "slug": "geowords",
+    "version": "0.1.0",
+    "scheme": "geowords",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "dev.geowords.prototype"
+    },
+    "android": {
+      "package": "dev.geowords.prototype"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-sqlite",
+      "expo-audio",
+      "expo-font",
+      "expo-status-bar"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

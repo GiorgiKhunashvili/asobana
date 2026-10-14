@@ -1,0 +1,9 @@
+package-lock.json
+uv.lock
+content/levels/*.json
+content/schemas/*.json
+content/dictionaries/*.json
+artifacts/
+mobile/dist/
+mobile/ios/
+mobile/android/
