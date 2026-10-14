@@ -1,23 +1,22 @@
-# iPhone 17 Pro, level ka-003 initial viewport after restart.yaml.
+# Level ka-003 after restart.yaml. Tiles on the 402x874 pt wheel: კ top,
+# ა upper right, რ lower right, ი lower left, ნ upper left.
 appId: host.exp.Exponent
 ---
-- assertVisible: '138 მონეტა · 0/2 სიტყვა · Bonus 0'
+- assertVisible: '0/2 სიტყვა · ბონუსი 0'
 - swipe:
-    start: 50%, 64%
-    end: 75%, 72%
+    start: 50%, 54%
+    end: 80%, 64%
     duration: 700
-- assertVisible: 'სცადე კიდევ · Try again'
-- assertVisible: '138 მონეტა · 0/2 სიტყვა · Bonus 0'
+- assertVisible: 'კა, ეს სიტყვა აქ არ არის'
+- assertVisible: '138 მონეტა'
+# A drag starting on empty wheel space must not select letters.
 - swipe:
-    start: 50%, 77%
-    end: 50%, 45%
+    start: 50%, 69%
+    end: 50%, 40%
     duration: 700
-- scrollUntilVisible:
-    element: 'Tap mode'
-    direction: DOWN
-    centerElement: true
+- assertVisible: '0/2 სიტყვა · ბონუსი 0'
 - tapOn:
-    text: 'Tap mode'
-    retryTapIfNoChange: true
-- assertVisible: 'Swipe mode'
-- assertVisible: 'Submit'
+    id: input-mode
+- assertVisible: 'ბორბლით შეყვანა'
+- assertVisible:
+    id: tap-submit

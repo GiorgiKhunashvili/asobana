@@ -1,32 +1,41 @@
 # Run after drag.yaml on a first-level save with only მე found.
 appId: host.exp.Exponent
 ---
-- assertVisible: '100 მონეტა · 1/2 სიტყვა · Bonus 0'
+- assertVisible: '1/2 სიტყვა · ბონუსი 0'
 - swipe:
-    start: 50%, 52%
-    end: 27%, 70%
+    start: 50%, 54%
+    end: 22%, 76%
     duration: 700
-- assertVisible: 'ეს სიტყვა უკვე ნაპოვნია · Already found'
-- assertVisible: '100 მონეტა · 1/2 სიტყვა · Bonus 0'
+- assertVisible: 'მე, უკვე ნაპოვნია'
+- assertVisible: '1/2 სიტყვა · ბონუსი 0'
 - swipe:
-    start: 27%, 70%
-    end: 50%, 52%
+    start: 22%, 76%
+    end: 50%, 54%
     duration: 700
-- assertVisible: 'სცადე კიდევ · Try again'
-- assertVisible: '100 მონეტა · 1/2 სიტყვა · Bonus 0'
-- tapOn: 'Tap mode'
-- scrollUntilVisible:
-    element: 'Submit'
-    direction: DOWN
-- tapOn: 'მ · 1'
-- tapOn: 'ზ · 2'
-- tapOn: 'ე · 3'
-- tapOn: 'Submit'
-- assertVisible: '125 მონეტა · 2/2 სიტყვა · Bonus 0'
-- assertVisible: 'დონე დასრულებულია · Level completed'
+- assertVisible: 'ემ, ეს სიტყვა აქ არ არის'
+- assertVisible: '100 მონეტა'
+- tapOn:
+    id: input-mode
+- assertVisible: 'ბორბლით შეყვანა'
+- tapOn:
+    id: tap-tile-tile-1
+- tapOn:
+    id: tap-tile-tile-2
+- tapOn:
+    id: tap-tile-tile-3
+- tapOn:
+    id: tap-submit
+- assertVisible: '125 მონეტა'
+# Completion fires the board, then hands off to the victory screen by itself.
+- extendedWaitUntil:
+    visible:
+      id: victory-title
+    timeout: 10000
+- assertVisible: 'ჯილდო 25 მონეტა'
 - takeScreenshot: artifacts/ios-level-1-completed
-- tapOn: 'გილოცავ! · Victory'
-- tapOn: 'შემდეგი დონე · Next level'
+- tapOn:
+    id: victory-next
 - assertVisible: 'ოჯახი'
-- assertVisible: '125 მონეტა · 0/2 სიტყვა · Bonus 0'
+- assertVisible: '0/2 სიტყვა · ბონუსი 0'
+- assertVisible: '125 მონეტა'
 - takeScreenshot: artifacts/ios-level-2-unlocked

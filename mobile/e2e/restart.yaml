@@ -3,33 +3,47 @@ appId: host.exp.Exponent
 ---
 - stopApp
 - openLink: exp://127.0.0.1:8081
-- extendedWaitUntil:
-    visible: 'ქართული სიტყვები'
-    timeout: 30000
-- assertVisible: '113 მონეტა · Coins'
-- tapOn: 'გაგრძელება · Continue'
-- assertVisible: 'ოჯახი'
-- assertVisible: '113 მონეტა · 1/2 სიტყვა · Bonus 1'
-- takeScreenshot: artifacts/ios-restart-restored
-- scrollUntilVisible:
-    element: 'Tap mode'
-    direction: DOWN
-    centerElement: true
+# Simulator/Expo Go prompts on fresh installs and cold starts; not app UI.
 - tapOn:
-    text: 'Tap mode'
-    retryTapIfNoChange: true
-- assertVisible: 'Swipe mode'
-- scrollUntilVisible:
-    element: 'Submit'
-    direction: DOWN
-- tapOn: 'მ · 5'
-- tapOn: 'ა · 4'
-- tapOn: 'მ · 7'
-- tapOn: 'ა · 6'
-- tapOn: 'Submit'
-- assertVisible: '138 მონეტა · 2/2 სიტყვა · Bonus 1'
-- tapOn: 'გილოცავ! · Victory'
-- tapOn: 'შემდეგი დონე · Next level'
+    text: 'Open'
+    optional: true
+- tapOn:
+    text: 'Continue'
+    optional: true
+- tapOn:
+    id: xmark
+    optional: true
+- extendedWaitUntil:
+    visible:
+      id: home-continue
+    timeout: 30000
+- assertVisible: '113 მონეტა'
+- tapOn:
+    id: home-continue
+- assertVisible: 'ოჯახი'
+- assertVisible: '1/2 სიტყვა · ბონუსი 1'
+- takeScreenshot: artifacts/ios-restart-restored
+- tapOn:
+    id: input-mode
+- assertVisible: 'ბორბლით შეყვანა'
+- tapOn:
+    id: tap-tile-tile-5
+- tapOn:
+    id: tap-tile-tile-4
+- tapOn:
+    id: tap-tile-tile-7
+- tapOn:
+    id: tap-tile-tile-6
+- tapOn:
+    id: tap-submit
+- assertVisible: '138 მონეტა'
+- extendedWaitUntil:
+    visible:
+      id: victory-title
+    timeout: 10000
+- tapOn:
+    id: victory-next
 - assertVisible: 'სახლი'
-- assertVisible: '138 მონეტა · 0/2 სიტყვა · Bonus 0'
+- assertVisible: '0/2 სიტყვა · ბონუსი 0'
+- assertVisible: '138 მონეტა'
 - takeScreenshot: artifacts/ios-chapter-2-unlocked

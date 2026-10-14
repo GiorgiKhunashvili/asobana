@@ -59,6 +59,17 @@ For the tested Pixel 10 Pro emulator:
 `startup.yaml` → `android-drag.yaml` → `android-duplicate.yaml` →
 `android-finish.yaml` (which runs `android-restart.yaml`).
 
+The flows address controls by `testID` (`home-continue`, `input-mode`,
+`tap-tile-<tileId>`, `tap-submit`, `hint-cell`, `victory-next`, …) and read results
+from accessible labels such as `100 მონეტა`, `1/2 სიტყვა · ბონუსი 0` and the word
+strip's `მე, უკვე ნაპოვნია`. A completed level hands off to the victory screen on
+its own, so flows wait for `victory-title` instead of tapping a button. On fresh
+Expo Go installs the startup/restart flows accept the system "Open" prompt and
+dismiss Expo Go's developer-menu intro; on a never-used simulator, accept the first
+prompt by hand once. The iOS sequence passed on an iPhone 17 simulator (same
+402x874 pt viewport as the 17 Pro) after the presentation redesign. Android swipe
+coordinates were re-measured from the redesigned screen but the Android flows have
+not been re-run since the redesign.
 Coordinates are specific to those portrait viewports. iOS Expo Go opens Home
 on cold launch; Android Expo Go may restore the active route directly, which the
 Android restart flow accepts and verifies. Both must restore authoritative SQLite

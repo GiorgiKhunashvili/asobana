@@ -1,21 +1,26 @@
 # Run after android-drag.yaml / android-duplicate.yaml.
 appId: host.exp.Exponent
 ---
-- scrollUntilVisible:
-    element: 'Tap mode'
-    direction: DOWN
-    centerElement: true
 - tapOn:
-    text: 'Tap mode'
-    retryTapIfNoChange: true
-- assertVisible: 'Swipe mode'
-- tapOn: 'მ · 1'
-- tapOn: 'ზ · 2'
-- tapOn: 'ე · 3'
-- tapOn: 'Submit'
-- assertVisible: '125 მონეტა · 2/2 სიტყვა · Bonus 0'
-- tapOn: 'გილოცავ! · Victory'
-- tapOn: 'შემდეგი დონე · Next level'
+    id: input-mode
+- assertVisible: 'ბორბლით შეყვანა'
+- tapOn:
+    id: tap-tile-tile-1
+- tapOn:
+    id: tap-tile-tile-2
+- tapOn:
+    id: tap-tile-tile-3
+- tapOn:
+    id: tap-submit
+- assertVisible: '125 მონეტა'
+# Completion fires the board, then hands off to the victory screen by itself.
+- extendedWaitUntil:
+    visible:
+      id: victory-title
+    timeout: 10000
+- tapOn:
+    id: victory-next
 - assertVisible: 'ოჯახი'
-- assertVisible: '125 მონეტა · 0/2 სიტყვა · Bonus 0'
+- assertVisible: '0/2 სიტყვა · ბონუსი 0'
+- assertVisible: '125 მონეტა'
 - runFlow: android-restart.yaml

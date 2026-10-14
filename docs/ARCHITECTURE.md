@@ -19,10 +19,12 @@ becomes available. No existing application or Claude presentation files existed.
   authoritative state, report errors without silently discarding player progress.
 - `mobile/src/services`: optional platform effects driven by engine events.
 - `mobile/app`: Expo Router routes; navigation never changes business rules.
-- `mobile/src/components` and `screens`: replaceable temporary presentation.
+- `mobile/src/theme`, `components` and `screens`: Claude-owned presentation
+  (`docs/UI_DESIGN_SYSTEM.md`). `components/useLetterWheel.ts` and
+  `GestureScrollContext.ts` remain the Codex-owned input adapter.
 - `puzzle-generator`: typed Python ingestion, validation, seeded layout/export.
 
-Claude owns future theme, typography, visual components and presentation animations.
+Claude owns theme, typography, visual components and presentation animations.
 Codex owns input recognition and the engine/state/storage boundary. Use
 `docs/INTEGRATION_CONTRACT.md` instead of reaching into engine internals.
 

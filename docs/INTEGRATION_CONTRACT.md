@@ -4,7 +4,7 @@ This is the handoff to Claude Code. Public contracts live in
 `mobile/src/models/types.ts`, `mobile/src/engine/index.ts`,
 `mobile/src/state/createGameStore.ts`, `mobile/src/components/useLetterWheel.ts`
 and `mobile/src/navigation/routes.ts`. These source types are authoritative.
-The temporary components demonstrate integration and may be replaced.
+Claude's components (`docs/UI_DESIGN_SYSTEM.md`) build on these contracts.
 
 ## Ownership and imports
 
@@ -146,7 +146,7 @@ Use `useMemo` for array/object selectors rather than returning a new object dire
 from a Zustand selector. Stable primitive and reference selectors prevent update loops.
 
 A working component adapter is in `mobile/src/screens/GameplayScreen.tsx`.
-The same connection pattern, with temporary components, is:
+The same connection pattern, using the shipped components with their defaults, is:
 
 ```tsx
 import { useCallback, useMemo } from 'react';
@@ -204,7 +204,7 @@ level ID when levels change. Input props: `tiles`, `size`, `disabled`,
 It returns `layout` (tile ID/letter/x/y/radius), Reanimated `selection` and `pointer`
 shared values, low-frequency text `preview`, RNGH `gesture`, `shuffle()` and `cancel()`.
 
-The temporary `Page` wraps its React Native ScrollView in a native gesture and
+`Screen` (`src/components/Screen.tsx`) wraps its React Native ScrollView in a native gesture and
 provides `GestureScrollContext`. The wheel blocks that native gesture during input.
 Preserve this relationship (or an equivalent RNGH external-gesture relationship)
 when replacing screen containers; a plain competing scroll view can cancel tracing.
@@ -277,4 +277,4 @@ content. Next-level navigation follows the engine's next ID.
 Run `npm run check` and Python checks in the README after changing integrations.
 The UI cannot be considered native-verified based on component mocks alone. Preserve
 Georgian font coverage, offline assets, safe areas, accessible button roles, readable
-errors and minimum 44-point touch targets when replacing temporary presentation.
+errors and minimum 44-point touch targets when changing presentation.

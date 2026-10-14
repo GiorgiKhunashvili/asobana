@@ -1,49 +1,79 @@
-# Run on iPhone 17 Pro after chapter-gesture.yaml (ka-003 in tap mode).
+# Run after chapter-gesture.yaml (ka-003 in tap mode).
 appId: host.exp.Exponent
 ---
-- assertVisible: 'Swipe mode'
-- tapOn: 'რ · 3'
-- tapOn: 'კ · 1'
-- tapOn: 'ი · 4'
-- tapOn: 'ნ · 5'
-- tapOn: 'ა · 2'
-- tapOn: 'Submit'
-- assertVisible: '141 მონეტა · 0/2 სიტყვა · Bonus 1'
-- tapOn: 'კ · 1'
-- tapOn: 'ა · 2'
-- tapOn: 'რ · 3'
-- tapOn: 'ი · 4'
-- tapOn: 'Submit'
-- assertVisible: '141 მონეტა · 1/2 სიტყვა · Bonus 1'
-- tapOn: 'კ · 1'
-- tapOn: 'ა · 2'
-- tapOn: 'ნ · 5'
-- tapOn: 'ი · 4'
-- tapOn: 'Submit'
-- assertVisible: '166 მონეტა · 2/2 სიტყვა · Bonus 1'
-- tapOn: 'გილოცავ! · Victory'
-- tapOn: 'შემდეგი დონე · Next level'
-- assertVisible: '166 მონეტა · 0/2 სიტყვა · Bonus 0'
-- scrollUntilVisible:
-    element: 'Tap mode'
-    direction: DOWN
-    centerElement: true
+- assertVisible: 'ბორბლით შეყვანა'
 - tapOn:
-    text: 'Tap mode'
-    retryTapIfNoChange: true
-- assertVisible: 'Swipe mode'
-- tapOn: 'გ · 1'
-- tapOn: 'ზ · 2'
-- tapOn: 'ა · 3'
-- tapOn: 'Submit'
-- assertVisible: '166 მონეტა · 1/2 სიტყვა · Bonus 0'
-- tapOn: 'ზ · 2'
-- tapOn: 'ღ · 4'
-- tapOn: 'ვ · 5'
-- tapOn: 'ა · 3'
-- tapOn: 'Submit'
-- assertVisible: '191 მონეტა · 2/2 სიტყვა · Bonus 0'
-- tapOn: 'გილოცავ! · Victory'
-- assertVisible: 'ოთხივე დონე დასრულებულია · All prototype levels completed!'
-- assertNotVisible: 'შემდეგი დონე · Next level'
+    id: tap-tile-tile-3
+- tapOn:
+    id: tap-tile-tile-1
+- tapOn:
+    id: tap-tile-tile-4
+- tapOn:
+    id: tap-tile-tile-5
+- tapOn:
+    id: tap-tile-tile-2
+- tapOn:
+    id: tap-submit
+- assertVisible: '141 მონეტა'
+- assertVisible: '0/2 სიტყვა · ბონუსი 1'
+- tapOn:
+    id: tap-tile-tile-1
+- tapOn:
+    id: tap-tile-tile-2
+- tapOn:
+    id: tap-tile-tile-3
+- tapOn:
+    id: tap-tile-tile-4
+- tapOn:
+    id: tap-submit
+- assertVisible: '1/2 სიტყვა · ბონუსი 1'
+- tapOn:
+    id: tap-tile-tile-1
+- tapOn:
+    id: tap-tile-tile-2
+- tapOn:
+    id: tap-tile-tile-5
+- tapOn:
+    id: tap-tile-tile-4
+- tapOn:
+    id: tap-submit
+- assertVisible: '166 მონეტა'
+- extendedWaitUntil:
+    visible:
+      id: victory-title
+    timeout: 10000
+- tapOn:
+    id: victory-next
+- assertVisible: '0/2 სიტყვა · ბონუსი 0'
+- assertVisible: '166 მონეტა'
+- tapOn:
+    id: input-mode
+- assertVisible: 'ბორბლით შეყვანა'
+- tapOn:
+    id: tap-tile-tile-1
+- tapOn:
+    id: tap-tile-tile-2
+- tapOn:
+    id: tap-tile-tile-3
+- tapOn:
+    id: tap-submit
+- assertVisible: '1/2 სიტყვა · ბონუსი 0'
+- tapOn:
+    id: tap-tile-tile-2
+- tapOn:
+    id: tap-tile-tile-4
+- tapOn:
+    id: tap-tile-tile-5
+- tapOn:
+    id: tap-tile-tile-3
+- tapOn:
+    id: tap-submit
+- assertVisible: '191 მონეტა'
+- extendedWaitUntil:
+    visible:
+      id: victory-title
+    timeout: 10000
+- assertVisible: 'ამ კრებულის ყველა დონე გავლილია.'
+- assertNotVisible:
+    id: victory-next
 - takeScreenshot: artifacts/ios-pack-completed

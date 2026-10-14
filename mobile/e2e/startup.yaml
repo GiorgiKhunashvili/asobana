@@ -1,14 +1,29 @@
 # Requires SDK 57 Expo Go and a running Metro at IPv4 localhost:8081.
+# Fresh GeoWords save; iPhone 17 / 17 Pro portrait (402x874 pt).
 appId: host.exp.Exponent
 ---
 - openLink: exp://127.0.0.1:8081
+# Simulator/Expo Go prompts on fresh installs and cold starts; not app UI.
+- tapOn:
+    text: 'Open'
+    optional: true
+- tapOn:
+    text: 'Continue'
+    optional: true
+- tapOn:
+    id: xmark
+    optional: true
 - extendedWaitUntil:
-    visible: 'ქართული სიტყვები'
+    visible:
+      id: home-continue
     timeout: 60000
+- assertVisible: 'ქართული'
+- assertVisible: '100 მონეტა'
 - takeScreenshot: artifacts/ios-home
-- tapOn: 'გაგრძელება · Continue'
+- tapOn:
+    id: home-continue
 - extendedWaitUntil:
     visible: 'შეაერთე ასოები'
     timeout: 15000
-- assertVisible: '100 მონეტა · 0/2 სიტყვა · Bonus 0'
+- assertVisible: '0/2 სიტყვა · ბონუსი 0'
 - takeScreenshot: artifacts/ios-level-1

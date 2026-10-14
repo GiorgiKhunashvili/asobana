@@ -1,10 +1,12 @@
-# Geometry recorded from the fresh first-level iPhone 17 Pro viewport.
+# Wheel geometry for a 402x874 pt portrait viewport: 330 pt disc centred at
+# y=603, tiles on a 128 pt orbit. Level 1 tiles: მ top, ზ lower right, ე lower left.
 appId: host.exp.Exponent
 ---
 - swipe:
-    start: 50%, 52%
-    end: 27%, 70%
+    start: 50%, 54%
+    end: 22%, 76%
     duration: 1000
-- assertVisible: '100 მონეტა · 1/2 სიტყვა · Bonus 0'
-- assertVisible: 'მე ✓'
+- assertVisible: 'მე, ნაპოვნია'
+- assertVisible: '1/2 სიტყვა · ბონუსი 0'
+- assertVisible: '100 მონეტა'
 - takeScreenshot: artifacts/ios-drag-result

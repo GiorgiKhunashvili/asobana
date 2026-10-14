@@ -1,10 +1,13 @@
-# Pixel 10 Pro, 1280x2856 portrait, fresh first-level viewport.
+# Pixel 10 Pro, 1280x2856 px portrait (427x952 dp), fresh first-level viewport.
+# Wheel measured on the redesigned game screen: 330 dp disc centred at y=615 dp,
+# tiles on a 128 dp orbit; level 1 has მ top, ზ lower right, ე lower left.
 appId: host.exp.Exponent
 ---
 - swipe:
-    start: 50%, 48%
-    end: 29%, 65%
+    start: 50%, 51%
+    end: 24%, 71%
     duration: 800
-- assertVisible: '100 მონეტა · 1/2 სიტყვა · Bonus 0'
-- assertVisible: 'მე ✓'
+- assertVisible: 'მე, ნაპოვნია'
+- assertVisible: '1/2 სიტყვა · ბონუსი 0'
+- assertVisible: '100 მონეტა'
 - takeScreenshot: artifacts/android-drag-result

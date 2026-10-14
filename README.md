@@ -3,7 +3,8 @@
 Offline Georgian crossword prototype for iOS and Android. Connect wheel letters,
 find target and bonus words, spend coins on hints, complete levels and resume from
 local SQLite. Four manually authored levels use ten reference-checked Georgian
-words. Branding and final presentation remain open for Claude's design work.
+words. The interface is an original Georgian cloisonné-enamel design with bundled
+Georgian fonts ([design system](docs/UI_DESIGN_SYSTEM.md)); final branding is open.
 
 ## Requirements
 
@@ -33,9 +34,10 @@ cd mobile
 NODE_OPTIONS=--dns-result-order=ipv4first npx expo start --localhost --ios
 ```
 
-Open Continue or Chapters. Drag from one letter to another, then release. Each
-tile can be used once per attempt; repeated letters have separate tiles. Shuffle
-changes their order. Tap mode provides explicit letter buttons and Submit/Clear.
+Open გაგრძელება (Continue) or თავები (Chapters). Drag from one letter to another,
+then release. Each tile can be used once per attempt; repeated letters have separate
+tiles. Shuffle changes their order. The keypad button beside the wheel switches to
+tap mode: tap letters in order, then the check in the wheel's hub; ✕ clears.
 Find every crossword word to unlock the next level. Bonuses are optional. Hints
 reveal a cell or word and deduct the displayed price. Progress and settings commit
 before success feedback, so force-close/reopen resumes the last committed state.
@@ -90,7 +92,7 @@ large-scale content optimizer. Runtime code has no third-party Python dependenci
 - [Claude integration contract](docs/INTEGRATION_CONTRACT.md)
 - [Development plan](docs/DEVELOPMENT_PLAN.md)
 - [Current implementation and verification status](docs/CODEX_STATUS.md)
-- [Presentation ownership](docs/UI_DESIGN_SYSTEM.md)
+- [Design system and presentation](docs/UI_DESIGN_SYSTEM.md)
 - [Vocabulary provenance and license](content/dictionaries/README.md)
 - [Native test checklist](docs/NATIVE_TEST_CHECKLIST.md)
 
@@ -103,7 +105,7 @@ versions show an error and preserve the data. There is no destructive reset flow
 
 `mobile/app` holds Router routes; `mobile/src/engine` is pure rules;
 `models`, `content`, `storage`, `state`, `services` and `navigation` provide stable
-interfaces; `components` and `screens` are replaceable temporary presentation.
+interfaces; `theme`, `components` and `screens` are Claude-owned presentation.
 `content` contains vocabulary, packs and JSON schemas. `puzzle-generator` contains
 Python tooling and tests. The GitHub Actions workflow is configured to run both stacks and validate Python
 exports with the TypeScript loader. It has not been executed on GitHub yet. Native smoke flows are in `mobile/e2e`.

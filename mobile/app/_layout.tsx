@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { ActivityIndicator, View } from 'react-native';
+import { ActivityIndicator, StyleSheet, View } from 'react-native';
 import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
@@ -7,78 +7,69 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { gameStore, useGameStore } from '../src/state/gameStore';
 import { useGameFeedback } from '../src/services/feedback';
-import { Action, Label, styles } from '../src/components/PrototypePrimitives';
+import { Backdrop } from '../src/components/Backdrop';
+import { PrimaryButton } from '../src/components/Buttons';
+import { Display, Txt } from '../src/components/Text';
+import { chapterTone, fontAssets, palette, space } from '../src/theme';
+
 function Feedback() {
   useGameFeedback();
   return null;
 }
+
+const tone = chapterTone(null);
+
 export default function RootLayout() {
-  const [fontsLoaded, fontError] = useFonts({
-    NotoGeorgian: require('../assets/fonts/NotoSansGeorgian.ttf'),
-  });
+  const [fontsLoaded, fontError] = useFonts(fontAssets);
   const status = useGameStore((state) => state.status);
   const error = useGameStore((state) => state.error);
   useEffect(() => {
     void gameStore.getState().initialize();
   }, []);
+  const failed = status === 'error' || fontError;
   return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
+    <GestureHandlerRootView
+      style={[styles.root, { backgroundColor: tone.ground[1] }]}
+    >
       <SafeAreaProvider>
-        <StatusBar style="dark" />
-        {status === 'error' || fontError ? (
-          <View style={[styles.page, { flex: 1, justifyContent: 'center' }]}>
-            <Label style={styles.heading}>Unable to load GeoWords</Label>
-            <Label style={styles.error}>{error ?? fontError?.message}</Label>
-            <Label>Your saved data has been preserved.</Label>
-            <Action
-              label="Retry loading"
-              onPress={() => {
-                void gameStore.getState().initialize();
-              }}
-            />
-          </View>
-        ) : status !== 'ready' || !fontsLoaded ? (
-          <View
-            style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}
-          >
-            <ActivityIndicator />
-            <Label>იტვირთება…</Label>
+        <StatusBar style="light" />
+        {failed || status !== 'ready' || !fontsLoaded ? (
+          <View style={styles.center}>
+            <Backdrop tone={tone} glowY={0.45} />
+            {failed ? (
+              <View style={styles.failure}>
+                <Display variant="heading">თამაში ვერ ჩაიტვირთა</Display>
+                <Txt accessibilityRole="alert" color={palette.pomegranateLight}>
+                  {error ?? fontError?.message}
+                </Txt>
+                <Txt color={palette.textMuted}>
+                  შენახული პროგრესი ხელუხლებელია. სცადე ხელახლა.
+                </Txt>
+                <PrimaryButton
+                  label="ხელახლა ჩატვირთვა"
+                  onPress={() => {
+                    void gameStore.getState().initialize();
+                  }}
+                />
+              </View>
+            ) : (
+              <ActivityIndicator color={palette.gold} size="large" />
+            )}
           </View>
         ) : (
           <>
             <Feedback />
             <Stack
               screenOptions={{
-                headerStyle: { backgroundColor: '#f4f3ee' },
-                headerTintColor: '#193e3c',
-                contentStyle: { backgroundColor: '#f4f3ee' },
-                headerTitleStyle: { fontFamily: 'NotoGeorgian' },
+                headerShown: false,
+                contentStyle: { backgroundColor: tone.ground[1] },
+                animation: 'slide_from_right',
               }}
             >
-              <Stack.Screen name="index" options={{ title: 'GeoWords' }} />
-              <Stack.Screen
-                name="chapters/index"
-                options={{ title: 'თავები · Chapters' }}
-              />
-              <Stack.Screen
-                name="chapters/[chapterId]"
-                options={{ title: 'დონეები · Levels' }}
-              />
-              <Stack.Screen
-                name="game/[levelId]"
-                options={{ title: 'ითამაშე · Play' }}
-              />
+              <Stack.Screen name="index" options={{ animation: 'fade' }} />
               <Stack.Screen
                 name="victory/[levelId]"
-                options={{ title: 'გილოცავ! · Victory' }}
-              />
-              <Stack.Screen
-                name="settings"
-                options={{ title: 'პარამეტრები · Settings' }}
-              />
-              <Stack.Screen
-                name="shop"
-                options={{ title: 'მონეტები · Coins' }}
+                options={{ animation: 'fade' }}
               />
             </Stack>
           </>
@@ -87,3 +78,9 @@ export default function RootLayout() {
     </GestureHandlerRootView>
   );
 }
+
+const styles = StyleSheet.create({
+  root: { flex: 1 },
+  center: { flex: 1, alignItems: 'center', justifyContent: 'center' },
+  failure: { padding: space.xl, gap: space.lg, alignSelf: 'stretch' },
+});
