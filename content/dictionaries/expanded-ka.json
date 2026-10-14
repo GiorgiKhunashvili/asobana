@@ -1,0 +1,2250 @@
+{
+  "schemaVersion": 1,
+  "id": "expanded-topic-vocabulary",
+  "license": "CC-BY-SA-4.0",
+  "source": "Wiktionary contributors; individually reference-checked Georgian entries with recorded source revisions",
+  "reviewStatus": "prototype-reference-checked",
+  "checkedOn": "2026-10-14",
+  "entries": [
+    {
+      "word": "აგური",
+      "gloss": "brick",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=აგური&oldid=92253475",
+      "sourceRevision": 92253475,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ავდარი",
+      "gloss": "bad weather, rainy weather",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ავდარი&oldid=84112279",
+      "sourceRevision": 84112279,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ათასი",
+      "gloss": "thousand",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ათასი&oldid=88613928",
+      "sourceRevision": 88613928,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ათი",
+      "gloss": "ten (10)",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ათი&oldid=92452509",
+      "sourceRevision": 92452509,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "აი",
+      "gloss": "attention particle",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=აი&oldid=82304659",
+      "sourceRevision": 82304659,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "აივანი",
+      "gloss": "balcony",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=აივანი&oldid=84097190",
+      "sourceRevision": 84097190,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ალი",
+      "gloss": "blaze, flame, fire",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ალი&oldid=91716422",
+      "sourceRevision": 91716422,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ალუბალი",
+      "gloss": "sour cherry",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ალუბალი&oldid=88091339",
+      "sourceRevision": 88091339,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "არფა",
+      "gloss": "harp",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=არფა&oldid=93122307",
+      "sourceRevision": 93122307,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "არწივი",
+      "gloss": "eagle",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=არწივი&oldid=92197068",
+      "sourceRevision": 92197068,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "არხი",
+      "gloss": "canal",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=არხი&oldid=88616856",
+      "sourceRevision": 88616856,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ასი",
+      "gloss": "hundred",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ასი&oldid=91740577",
+      "sourceRevision": 91740577,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ატამი",
+      "gloss": "peach",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ატამი&oldid=92251681",
+      "sourceRevision": 92251681,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ბაბუა",
+      "gloss": "grandfather, grandpa",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბაბუა&oldid=84113258",
+      "sourceRevision": 84113258,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ბალახი",
+      "gloss": "grass",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბალახი&oldid=85585178",
+      "sourceRevision": 85585178,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ბალი",
+      "gloss": "sweet cherry",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბალი&oldid=88091312",
+      "sourceRevision": 88091312,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ბალიში",
+      "gloss": "pillow, cushion",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბალიში&oldid=84629170",
+      "sourceRevision": 84629170,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ბამბა",
+      "gloss": "cotton, cotton wool",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბამბა&oldid=92983814",
+      "sourceRevision": 92983814,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ბანი",
+      "gloss": "bass voice",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბანი&oldid=92486488",
+      "sourceRevision": 92486488,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ბარი",
+      "gloss": "valley",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბარი&oldid=92290776",
+      "sourceRevision": 92290776,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ბატი",
+      "gloss": "goose",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბატი&oldid=93569666",
+      "sourceRevision": 93569666,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ბაღი",
+      "gloss": "garden",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბაღი&oldid=91650045",
+      "sourceRevision": 91650045,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ბაყაყი",
+      "gloss": "frog",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბაყაყი&oldid=93479131",
+      "sourceRevision": 93479131,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ბგერა",
+      "gloss": "sound",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბგერა&oldid=88996488",
+      "sourceRevision": 88996488,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ბებია",
+      "gloss": "grandmother, grannie, granny",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბებია&oldid=91806387",
+      "sourceRevision": 91806387,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ბეწვი",
+      "gloss": "fur, pile",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბეწვი&oldid=84097655",
+      "sourceRevision": 84097655,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ბინა",
+      "gloss": "apartment",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბინა&oldid=91650031",
+      "sourceRevision": 91650031,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ბიძა",
+      "gloss": "uncle",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბიძა&oldid=85565433",
+      "sourceRevision": 85565433,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ბრინჯი",
+      "gloss": "rice",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბრინჯი&oldid=92283506",
+      "sourceRevision": 92283506,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ბუ",
+      "gloss": "owl",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბუ&oldid=84113660",
+      "sourceRevision": 84113660,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ბუჩქი",
+      "gloss": "bush, shrub",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბუჩქი&oldid=90059573",
+      "sourceRevision": 90059573,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "გემი",
+      "gloss": "ship",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=გემი&oldid=89946921",
+      "sourceRevision": 89946921,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "გემო",
+      "gloss": "palate, taste",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=გემო&oldid=85068633",
+      "sourceRevision": 85068633,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "გველი",
+      "gloss": "snake, serpent",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=გველი&oldid=91784251",
+      "sourceRevision": 91784251,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "გზა",
+      "gloss": "way, path, road",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=გზა&oldid=92469046",
+      "sourceRevision": 92469046,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "გიტარა",
+      "gloss": "guitar",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=გიტარა&oldid=84096739",
+      "sourceRevision": 84096739,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "გორა",
+      "gloss": "hill",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=გორა&oldid=86783102",
+      "sourceRevision": 86783102,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "გრილი",
+      "gloss": "cool, breezy, chilly",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=გრილი&oldid=84114167",
+      "sourceRevision": 84114167,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "გული",
+      "gloss": "heart",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=გული&oldid=85033436",
+      "sourceRevision": 85033436,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "გუნდი",
+      "gloss": "choir; team",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=გუნდი&oldid=84103461",
+      "sourceRevision": 84103461,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "და",
+      "gloss": "sister; and",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=და&oldid=91742422",
+      "sourceRevision": 91742422,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "დათვი",
+      "gloss": "bear",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=დათვი&oldid=88296116",
+      "sourceRevision": 88296116,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "დანა",
+      "gloss": "knife",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=დანა&oldid=85055782",
+      "sourceRevision": 85055782,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "დარი",
+      "gloss": "fair weather",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=დარი&oldid=85046597",
+      "sourceRevision": 85046597,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "დედა",
+      "gloss": "mother",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=დედა&oldid=89905818",
+      "sourceRevision": 89905818,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "დეიდა",
+      "gloss": "maternal aunt",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=დეიდა&oldid=84114512",
+      "sourceRevision": 84114512,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "დოლი",
+      "gloss": "drum",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=დოლი&oldid=88002790",
+      "sourceRevision": 88002790,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "დუეტი",
+      "gloss": "duet",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=დუეტი&oldid=84098278",
+      "sourceRevision": 84098278,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "დღე",
+      "gloss": "day",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=დღე&oldid=87846959",
+      "sourceRevision": 87846959,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ეზო",
+      "gloss": "yard, courtyard",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ეზო&oldid=84114761",
+      "sourceRevision": 84114761,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ელვა",
+      "gloss": "lightning",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ელვა&oldid=84883466",
+      "sourceRevision": 84883466,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ენა",
+      "gloss": "language; tongue",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ენა&oldid=84114872",
+      "sourceRevision": 84114872,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ერთი",
+      "gloss": "one (1)",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ერთი&oldid=90004560",
+      "sourceRevision": 90004560,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ეტლი",
+      "gloss": "carriage",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ეტლი&oldid=84096046",
+      "sourceRevision": 84096046,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ექვსი",
+      "gloss": "six (6)",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ექვსი&oldid=85767407",
+      "sourceRevision": 85767407,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ვაზა",
+      "gloss": "vase",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ვაზა&oldid=84115013",
+      "sourceRevision": 84115013,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ვაზი",
+      "gloss": "vine, grapevine",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ვაზი&oldid=92197071",
+      "sourceRevision": 92197071,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ვაკე",
+      "gloss": "plain, plane",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ვაკე&oldid=84098446",
+      "sourceRevision": 84098446,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ვალი",
+      "gloss": "debt",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ვალი&oldid=92962192",
+      "sourceRevision": 92962192,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ვალსი",
+      "gloss": "waltz",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ვალსი&oldid=84098452",
+      "sourceRevision": 84098452,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ვარდი",
+      "gloss": "rose",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ვარდი&oldid=92921026",
+      "sourceRevision": 92921026,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ვაშლი",
+      "gloss": "apple",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ვაშლი&oldid=84115080",
+      "sourceRevision": 84115080,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ველი",
+      "gloss": "field",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ველი&oldid=91740713",
+      "sourceRevision": 91740713,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ვეფხვი",
+      "gloss": "tiger",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ვეფხვი&oldid=85067960",
+      "sourceRevision": 85067960,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ვეშაპი",
+      "gloss": "whale",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ვეშაპი&oldid=88296435",
+      "sourceRevision": 88296435,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ვიოლინო",
+      "gloss": "violin",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ვიოლინო&oldid=87908662",
+      "sourceRevision": 87908662,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ვირთხა",
+      "gloss": "rat",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ვირთხა&oldid=84115189",
+      "sourceRevision": 84115189,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ვირი",
+      "gloss": "donkey, ass",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ვირი&oldid=84115191",
+      "sourceRevision": 84115191,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ზარი",
+      "gloss": "bell",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ზარი&oldid=91725840",
+      "sourceRevision": 91725840,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ზებრა",
+      "gloss": "zebra",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ზებრა&oldid=88499986",
+      "sourceRevision": 88499986,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ზევით",
+      "gloss": "upwards, up",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ზევით&oldid=91661887",
+      "sourceRevision": 91661887,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ზეთი",
+      "gloss": "oil",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ზეთი&oldid=85041797",
+      "sourceRevision": 85041797,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ზემო",
+      "gloss": "upper, top",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ზემო&oldid=91661809",
+      "sourceRevision": 91661809,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ზვიგენი",
+      "gloss": "shark",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ზვიგენი&oldid=84115337",
+      "sourceRevision": 84115337,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ზომა",
+      "gloss": "measure, quantity, size",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ზომა&oldid=84098591",
+      "sourceRevision": 84098591,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ზონა",
+      "gloss": "zone",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ზონა&oldid=88168219",
+      "sourceRevision": 88168219,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ზურგი",
+      "gloss": "back",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ზურგი&oldid=85066897",
+      "sourceRevision": 85066897,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ზღვა",
+      "gloss": "sea",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ზღვა&oldid=85073355",
+      "sourceRevision": 85073355,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "თაგვი",
+      "gloss": "mouse",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=თაგვი&oldid=84668681",
+      "sourceRevision": 84668681,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "თავი",
+      "gloss": "head",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=თავი&oldid=92422654",
+      "sourceRevision": 92422654,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "თათი",
+      "gloss": "paw",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=თათი&oldid=84115445",
+      "sourceRevision": 84115445,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "თარო",
+      "gloss": "board, shelf",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=თარო&oldid=86397556",
+      "sourceRevision": 86397556,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "თასი",
+      "gloss": "bowl, chalice",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=თასი&oldid=91740579",
+      "sourceRevision": 91740579,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "თაფლი",
+      "gloss": "honey",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=თაფლი&oldid=85066913",
+      "sourceRevision": 85066913,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "თბილი",
+      "gloss": "warm",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=თბილი&oldid=84115519",
+      "sourceRevision": 84115519,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "თევზი",
+      "gloss": "fish",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=თევზი&oldid=84115535",
+      "sourceRevision": 84115535,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "თესლი",
+      "gloss": "seed",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=თესლი&oldid=84115578",
+      "sourceRevision": 84115578,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "თეძო",
+      "gloss": "hip, thigh",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=თეძო&oldid=84098694",
+      "sourceRevision": 84098694,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "თვალი",
+      "gloss": "eye",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=თვალი&oldid=91725811",
+      "sourceRevision": 91725811,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "თვე",
+      "gloss": "month",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=თვე&oldid=84115591",
+      "sourceRevision": 84115591,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "თივა",
+      "gloss": "hay",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=თივა&oldid=84115648",
+      "sourceRevision": 84115648,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "თითი",
+      "gloss": "finger",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=თითი&oldid=84115653",
+      "sourceRevision": 84115653,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "თმა",
+      "gloss": "hair",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=თმა&oldid=84115666",
+      "sourceRevision": 84115666,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "თოვლი",
+      "gloss": "snow",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=თოვლი&oldid=87846971",
+      "sourceRevision": 87846971,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "თოლია",
+      "gloss": "seagull",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=თოლია&oldid=92228044",
+      "sourceRevision": 92228044,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "თხა",
+      "gloss": "goat",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=თხა&oldid=91742427",
+      "sourceRevision": 91742427,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ია",
+      "gloss": "violet (genus)",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ია&oldid=91725277",
+      "sourceRevision": 91725277,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "იაკი",
+      "gloss": "yak",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=იაკი&oldid=84098730",
+      "sourceRevision": 84098730,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "იატაკი",
+      "gloss": "floor",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=იატაკი&oldid=84115760",
+      "sourceRevision": 84115760,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "იდაყვი",
+      "gloss": "elbow",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=იდაყვი&oldid=90005976",
+      "sourceRevision": 90005976,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "იელი",
+      "gloss": "yellow azalea",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=იელი&oldid=92248936",
+      "sourceRevision": 92248936,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ირემი",
+      "gloss": "deer",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ირემი&oldid=87787166",
+      "sourceRevision": 87787166,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "იხვი",
+      "gloss": "duck",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=იხვი&oldid=93558662",
+      "sourceRevision": 93558662,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "კაბა",
+      "gloss": "dress, frock",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კაბა&oldid=91727674",
+      "sourceRevision": 91727674,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "კაკალი",
+      "gloss": "walnut; walnut tree",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კაკალი&oldid=92767192",
+      "sourceRevision": 92767192,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "კამა",
+      "gloss": "dill",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კამა&oldid=84098960",
+      "sourceRevision": 84098960,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "კანი",
+      "gloss": "skin",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კანი&oldid=91727807",
+      "sourceRevision": 91727807,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "კარადა",
+      "gloss": "cupboard, wardrobe, closet",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კარადა&oldid=84116032",
+      "sourceRevision": 84116032,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "კარაქი",
+      "gloss": "butter",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კარაქი&oldid=87818208",
+      "sourceRevision": 87818208,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "კარი",
+      "gloss": "door",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კარი&oldid=91725839",
+      "sourceRevision": 91725839,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "კარტი",
+      "gloss": "card",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კარტი&oldid=84099032",
+      "sourceRevision": 84099032,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "კატა",
+      "gloss": "cat",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კატა&oldid=92251014",
+      "sourceRevision": 92251014,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "კაცი",
+      "gloss": "man",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კაცი&oldid=91715252",
+      "sourceRevision": 91715252,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "კბილი",
+      "gloss": "tooth",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კბილი&oldid=87882636",
+      "sourceRevision": 87882636,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "კედელი",
+      "gloss": "wall",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კედელი&oldid=88966872",
+      "sourceRevision": 88966872,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "კერა",
+      "gloss": "hearth",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კერა&oldid=91649986",
+      "sourceRevision": 91649986,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "კეცი",
+      "gloss": "ketsi, earthenware frying pan (usually from clay)",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კეცი&oldid=84116112",
+      "sourceRevision": 84116112,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "კვერცხი",
+      "gloss": "egg",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კვერცხი&oldid=88002397",
+      "sourceRevision": 88002397,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "კიბე",
+      "gloss": "ladder, stair, staircase, stairway",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კიბე&oldid=84099111",
+      "sourceRevision": 84099111,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "კივი",
+      "gloss": "kiwi fruit; kiwi bird",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კივი&oldid=85514534",
+      "sourceRevision": 85514534,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "კილო",
+      "gloss": "kilo",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კილო&oldid=87915475",
+      "sourceRevision": 87915475,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "კირი",
+      "gloss": "lime, calcium oxide",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კირი&oldid=85066928",
+      "sourceRevision": 85066928,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "კლდე",
+      "gloss": "cliff, crag, scar, rock",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კლდე&oldid=84116197",
+      "sourceRevision": 84116197,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "კორტი",
+      "gloss": "tennis-court",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კორტი&oldid=84116301",
+      "sourceRevision": 84116301,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "კოცნა",
+      "gloss": "kiss",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კოცნა&oldid=89840627",
+      "sourceRevision": 89840627,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "კოჭი",
+      "gloss": "ankle",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კოჭი&oldid=71847132",
+      "sourceRevision": 71847132,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "კუ",
+      "gloss": "tortoise, turtle",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კუ&oldid=87900523",
+      "sourceRevision": 87900523,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "კუნთი",
+      "gloss": "muscle",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კუნთი&oldid=84099392",
+      "sourceRevision": 84099392,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "კუნძული",
+      "gloss": "island",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კუნძული&oldid=84116390",
+      "sourceRevision": 84116390,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ლამპა",
+      "gloss": "lamp",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ლამპა&oldid=89202010",
+      "sourceRevision": 89202010,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ლობიო",
+      "gloss": "bean",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ლობიო&oldid=85078465",
+      "sourceRevision": 85078465,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ლოდი",
+      "gloss": "block, rubble",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ლოდი&oldid=84099538",
+      "sourceRevision": 84099538,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ლომი",
+      "gloss": "lion",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ლომი&oldid=88002876",
+      "sourceRevision": 88002876,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "მაგიდა",
+      "gloss": "table",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მაგიდა&oldid=84116591",
+      "sourceRevision": 84116591,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "მადა",
+      "gloss": "appetite, stomach",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მადა&oldid=84099577",
+      "sourceRevision": 84099577,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "მაიმუნი",
+      "gloss": "monkey, ape",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მაიმუნი&oldid=84116618",
+      "sourceRevision": 84116618,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "მამა",
+      "gloss": "father",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მამა&oldid=90045543",
+      "sourceRevision": 90045543,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "მამალი",
+      "gloss": "rooster",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მამალი&oldid=91716460",
+      "sourceRevision": 91716460,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "მამიდა",
+      "gloss": "paternal aunt",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მამიდა&oldid=84116651",
+      "sourceRevision": 84116651,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "მარილი",
+      "gloss": "salt",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მარილი&oldid=88563420",
+      "sourceRevision": 88563420,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "მარში",
+      "gloss": "march",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მარში&oldid=84099689",
+      "sourceRevision": 84099689,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "მაჯა",
+      "gloss": "wrist",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მაჯა&oldid=92228046",
+      "sourceRevision": 92228046,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "მგელი",
+      "gloss": "wolf",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მგელი&oldid=92197078",
+      "sourceRevision": 92197078,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "მდინარე",
+      "gloss": "river, stream",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მდინარე&oldid=91715988",
+      "sourceRevision": 91715988,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "მე",
+      "gloss": "I, me",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მე&oldid=88364583",
+      "sourceRevision": 88364583,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "მელა",
+      "gloss": "fox",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მელა&oldid=87951716",
+      "sourceRevision": 87951716,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "მელოდია",
+      "gloss": "melody, tune",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მელოდია&oldid=84099811",
+      "sourceRevision": 84099811,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "მზე",
+      "gloss": "Sun",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მზე&oldid=87988791",
+      "sourceRevision": 87988791,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "მთა",
+      "gloss": "mountain, hill",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მთა&oldid=89024782",
+      "sourceRevision": 89024782,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "მილიონი",
+      "gloss": "million",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მილიონი&oldid=68812037",
+      "sourceRevision": 68812037,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "მინა",
+      "gloss": "glass (material)",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მინა&oldid=87787812",
+      "sourceRevision": 87787812,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "მინდორი",
+      "gloss": "meadow, field",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მინდორი&oldid=87383984",
+      "sourceRevision": 87383984,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "მისი",
+      "gloss": "his/her/its",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მისი&oldid=88068887",
+      "sourceRevision": 88068887,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "მკლავი",
+      "gloss": "arm",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მკლავი&oldid=90012056",
+      "sourceRevision": 90012056,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "მსხალი",
+      "gloss": "pear",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მსხალი&oldid=84117341",
+      "sourceRevision": 84117341,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "მტრედი",
+      "gloss": "pigeon, dove",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მტრედი&oldid=84117351",
+      "sourceRevision": 84117351,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "მუცელი",
+      "gloss": "stomach, tummy",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მუცელი&oldid=84117402",
+      "sourceRevision": 84117402,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "მუხა",
+      "gloss": "oak",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მუხა&oldid=92422641",
+      "sourceRevision": 92422641,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "მუხლი",
+      "gloss": "knee",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მუხლი&oldid=87900783",
+      "sourceRevision": 87900783,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "მღვიმე",
+      "gloss": "cavern",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მღვიმე&oldid=88287497",
+      "sourceRevision": 88287497,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "მწვანე",
+      "gloss": "green",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მწვანე&oldid=87444780",
+      "sourceRevision": 87444780,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "მხარი",
+      "gloss": "shoulder",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მხარი&oldid=88428524",
+      "sourceRevision": 88428524,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ნავი",
+      "gloss": "boat",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ნავი&oldid=92972261",
+      "sourceRevision": 92972261,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ნაკადი",
+      "gloss": "gush, spurt, squirt, stream",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ნაკადი&oldid=84100276",
+      "sourceRevision": 84100276,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ნამი",
+      "gloss": "dew, morning dew",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ნამი&oldid=91716533",
+      "sourceRevision": 91716533,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ნაპირი",
+      "gloss": "shore, strand, waterside",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ნაპირი&oldid=87900827",
+      "sourceRevision": 87900827,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ნაძვი",
+      "gloss": "spruce",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ნაძვი&oldid=84117591",
+      "sourceRevision": 84117591,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ნეკნი",
+      "gloss": "rib",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ნეკნი&oldid=84096682",
+      "sourceRevision": 84096682,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ნესვი",
+      "gloss": "melon",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ნესვი&oldid=92228059",
+      "sourceRevision": 92228059,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ნიკაპი",
+      "gloss": "chin",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ნიკაპი&oldid=85437203",
+      "sourceRevision": 85437203,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ნისლი",
+      "gloss": "fog, mist",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ნისლი&oldid=93465462",
+      "sourceRevision": 93465462,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ნული",
+      "gloss": "zero",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ნული&oldid=91637299",
+      "sourceRevision": 91637299,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ნუში",
+      "gloss": "almond",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ნუში&oldid=92234316",
+      "sourceRevision": 92234316,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ოთახი",
+      "gloss": "room, chamber",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ოთახი&oldid=84117752",
+      "sourceRevision": 84117752,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ოთხი",
+      "gloss": "four (4)",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ოთხი&oldid=87444782",
+      "sourceRevision": 87444782,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ოთხმოცი",
+      "gloss": "eighty",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ოთხმოცი&oldid=90075063",
+      "sourceRevision": 90075063,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ომი",
+      "gloss": "war",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ომი&oldid=87916537",
+      "sourceRevision": 87916537,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ოპერა",
+      "gloss": "opera",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ოპერა&oldid=88755212",
+      "sourceRevision": 88755212,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ორი",
+      "gloss": "two (2)",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ორი&oldid=83446489",
+      "sourceRevision": 83446489,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ორმოცი",
+      "gloss": "forty",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ორმოცი&oldid=90075083",
+      "sourceRevision": 90075083,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ოცდაათი",
+      "gloss": "thirty (30)",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ოცდაათი&oldid=90075084",
+      "sourceRevision": 90075084,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ოცი",
+      "gloss": "twenty (20)",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ოცი&oldid=90075102",
+      "sourceRevision": 90075102,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "პანდა",
+      "gloss": "panda",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=პანდა&oldid=84117940",
+      "sourceRevision": 84117940,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "პარიკი",
+      "gloss": "wig",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=პარიკი&oldid=84209336",
+      "sourceRevision": 84209336,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "პარკი",
+      "gloss": "plastic bag",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=პარკი&oldid=88106258",
+      "sourceRevision": 88106258,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "პიანინო",
+      "gloss": "piano",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=პიანინო&oldid=84118013",
+      "sourceRevision": 84118013,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "პიკი",
+      "gloss": "peak",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=პიკი&oldid=84100699",
+      "sourceRevision": 84100699,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "პირი",
+      "gloss": "mouth",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=პირი&oldid=89949118",
+      "sourceRevision": 89949118,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "პიტნა",
+      "gloss": "mint, spearmint",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=პიტნა&oldid=88172203",
+      "sourceRevision": 88172203,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "პური",
+      "gloss": "bread",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=პური&oldid=85067902",
+      "sourceRevision": 85067902,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "რეპი",
+      "gloss": "rap music",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=რეპი&oldid=84096821",
+      "sourceRevision": 84096821,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "რვა",
+      "gloss": "eight (8)",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=რვა&oldid=91742434",
+      "sourceRevision": 91742434,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "რიტმი",
+      "gloss": "beat, cadence, rhythm",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=რიტმი&oldid=84101078",
+      "sourceRevision": 84101078,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "რკინა",
+      "gloss": "iron (metal)",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=რკინა&oldid=84118339",
+      "sourceRevision": 84118339,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "როკი",
+      "gloss": "rock music",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=როკი&oldid=91546711",
+      "sourceRevision": 91546711,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "როლი",
+      "gloss": "role",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=როლი&oldid=84101100",
+      "sourceRevision": 84101100,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "რული",
+      "gloss": "nap",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=რული&oldid=84285406",
+      "sourceRevision": 84285406,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "რუხი",
+      "gloss": "gray/grey",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=რუხი&oldid=84090896",
+      "sourceRevision": 84090896,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "რძალი",
+      "gloss": "daughter-in-law; sister-in-law",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=რძალი&oldid=91716433",
+      "sourceRevision": 91716433,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "რძე",
+      "gloss": "milk",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=რძე&oldid=87999921",
+      "sourceRevision": 87999921,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "საათი",
+      "gloss": "clock; hour",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=საათი&oldid=88414361",
+      "sourceRevision": 88414361,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "საბანი",
+      "gloss": "blanket",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=საბანი&oldid=91776633",
+      "sourceRevision": 91776633,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "სამი",
+      "gloss": "three (3)",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=სამი&oldid=87444788",
+      "sourceRevision": 87444788,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "სამოცი",
+      "gloss": "sixty",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=სამოცი&oldid=90075123",
+      "sourceRevision": 90075123,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "სარკე",
+      "gloss": "looking-glass, mirror",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=სარკე&oldid=84101249",
+      "sourceRevision": 84101249,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "საწოლი",
+      "gloss": "bed",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=საწოლი&oldid=81818101",
+      "sourceRevision": 81818101,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "სახლი",
+      "gloss": "home, house, dwelling",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=სახლი&oldid=85066957",
+      "sourceRevision": 85066957,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "სეტყვა",
+      "gloss": "hail",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=სეტყვა&oldid=87787560",
+      "sourceRevision": 87787560,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "სია",
+      "gloss": "list",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=სია&oldid=91725365",
+      "sourceRevision": 91725365,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "სითბო",
+      "gloss": "warmth",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=სითბო&oldid=75370460",
+      "sourceRevision": 75370460,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "სიმი",
+      "gloss": "string",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=სიმი&oldid=84096110",
+      "sourceRevision": 84096110,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "სიმღერა",
+      "gloss": "song",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=სიმღერა&oldid=92437876",
+      "sourceRevision": 92437876,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "სისხლი",
+      "gloss": "blood",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=სისხლი&oldid=87809162",
+      "sourceRevision": 87809162,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "სიცივე",
+      "gloss": "coldness, frigidity",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=სიცივე&oldid=84119113",
+      "sourceRevision": 84119113,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "სიძე",
+      "gloss": "son-in-law; groom",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=სიძე&oldid=85101367",
+      "sourceRevision": 85101367,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "სკამი",
+      "gloss": "chair",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=სკამი&oldid=92290656",
+      "sourceRevision": 92290656,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "სმა",
+      "gloss": "drinking, imbibing",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=სმა&oldid=91715322",
+      "sourceRevision": 91715322,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "სოკო",
+      "gloss": "mushroom",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=სოკო&oldid=92256152",
+      "sourceRevision": 92256152,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "სული",
+      "gloss": "spirit, ghost",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=სული&oldid=84119285",
+      "sourceRevision": 84119285,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "სუნი",
+      "gloss": "smell",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=სუნი&oldid=88613338",
+      "sourceRevision": 88613338,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ტანგო",
+      "gloss": "tango",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ტანგო&oldid=84119337",
+      "sourceRevision": 84119337,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ტანი",
+      "gloss": "body",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ტანი&oldid=85068639",
+      "sourceRevision": 85068639,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ტახტი",
+      "gloss": "ottoman bench",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ტახტი&oldid=84101822",
+      "sourceRevision": 84101822,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ტბა",
+      "gloss": "lake",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ტბა&oldid=87995548",
+      "sourceRevision": 87995548,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ტერფი",
+      "gloss": "foot",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ტერფი&oldid=81822046",
+      "sourceRevision": 81822046,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ტვინი",
+      "gloss": "brain",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ტვინი&oldid=87890090",
+      "sourceRevision": 87890090,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ტონი",
+      "gloss": "tone",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ტონი&oldid=84103458",
+      "sourceRevision": 84103458,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ტორტი",
+      "gloss": "tart",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ტორტი&oldid=84101907",
+      "sourceRevision": 84101907,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ტოტი",
+      "gloss": "branch, twig",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ტოტი&oldid=84757550",
+      "sourceRevision": 84757550,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ტური",
+      "gloss": "round",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ტური&oldid=48311506",
+      "sourceRevision": 48311506,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ტყე",
+      "gloss": "forest, wood",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ტყე&oldid=87846042",
+      "sourceRevision": 87846042,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "უდაბნო",
+      "gloss": "desert",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=უდაბნო&oldid=84096660",
+      "sourceRevision": 84096660,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ფანჯარა",
+      "gloss": "window",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ფანჯარა&oldid=84119772",
+      "sourceRevision": 84119772,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ფარდა",
+      "gloss": "curtain, purdah",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ფარდა&oldid=84127055",
+      "sourceRevision": 84127055,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ფარი",
+      "gloss": "shield",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ფარი&oldid=92290778",
+      "sourceRevision": 92290778,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ფასი",
+      "gloss": "price, cost",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ფასი&oldid=92376157",
+      "sourceRevision": 92376157,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ფერი",
+      "gloss": "color, hue",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ფერი&oldid=91170240",
+      "sourceRevision": 91170240,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ფეხი",
+      "gloss": "foot; leg",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ფეხი&oldid=84119832",
+      "sourceRevision": 84119832,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ფირი",
+      "gloss": "film",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ფირი&oldid=84102247",
+      "sourceRevision": 84102247,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ფიჭვი",
+      "gloss": "pine",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ფიჭვი&oldid=88091347",
+      "sourceRevision": 88091347,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ფლეიტა",
+      "gloss": "flute",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ფლეიტა&oldid=92228066",
+      "sourceRevision": 92228066,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ფოთოლი",
+      "gloss": "leaf",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ფოთოლი&oldid=88091315",
+      "sourceRevision": 88091315,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ფრჩხილი",
+      "gloss": "nail",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ფრჩხილი&oldid=84119958",
+      "sourceRevision": 84119958,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ქათამი",
+      "gloss": "chicken",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ქათამი&oldid=84119996",
+      "sourceRevision": 84119996,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ქარი",
+      "gloss": "wind",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ქარი&oldid=91725845",
+      "sourceRevision": 91725845,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ქედი",
+      "gloss": "mountain range",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ქედი&oldid=84103457",
+      "sourceRevision": 84103457,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ქვიშა",
+      "gloss": "sand",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ქვიშა&oldid=84120106",
+      "sourceRevision": 84120106,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ქლიავი",
+      "gloss": "plum",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ქლიავი&oldid=84120131",
+      "sourceRevision": 84120131,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ქმარი",
+      "gloss": "husband",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ქმარი&oldid=84120133",
+      "sourceRevision": 84120133,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ქორი",
+      "gloss": "goshawk",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ქორი&oldid=92251688",
+      "sourceRevision": 92251688,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ქურა",
+      "gloss": "stove, furnace",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ქურა&oldid=91715085",
+      "sourceRevision": 91715085,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ქუსლი",
+      "gloss": "heel",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ქუსლი&oldid=84120189",
+      "sourceRevision": 84120189,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ღამე",
+      "gloss": "night",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ღამე&oldid=85066691",
+      "sourceRevision": 85066691,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ღერო",
+      "gloss": "blade, haulm, stalk, stem",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ღერო&oldid=87901541",
+      "sourceRevision": 87901541,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ღობე",
+      "gloss": "fence, hedge",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ღობე&oldid=84120239",
+      "sourceRevision": 84120239,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ღორი",
+      "gloss": "pig",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ღორი&oldid=87862575",
+      "sourceRevision": 87862575,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ღუმელი",
+      "gloss": "stove",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ღუმელი&oldid=84120256",
+      "sourceRevision": 84120256,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ყელი",
+      "gloss": "throat",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ყელი&oldid=91740621",
+      "sourceRevision": 91740621,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ყველი",
+      "gloss": "cheese",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ყველი&oldid=88628482",
+      "sourceRevision": 88628482,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ყინვა",
+      "gloss": "frost, freezing, freezing temperatures, severe cold",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ყინვა&oldid=86840657",
+      "sourceRevision": 86840657,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ყინული",
+      "gloss": "ice",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ყინული&oldid=87787551",
+      "sourceRevision": 87787551,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ყურე",
+      "gloss": "bay, bight",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ყურე&oldid=84102567",
+      "sourceRevision": 84102567,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ყური",
+      "gloss": "ear",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ყური&oldid=84120377",
+      "sourceRevision": 84120377,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "შავი",
+      "gloss": "black",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=შავი&oldid=87444791",
+      "sourceRevision": 87444791,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "შაქარი",
+      "gloss": "sugar",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=შაქარი&oldid=91006621",
+      "sourceRevision": 91006621,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "შვიდი",
+      "gloss": "seven (7)",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=შვიდი&oldid=85767397",
+      "sourceRevision": 85767397,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "შვილი",
+      "gloss": "child",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=შვილი&oldid=90518663",
+      "sourceRevision": 90518663,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ჩაი",
+      "gloss": "tea (drink made from leaves of tea plant)",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ჩაი&oldid=81819876",
+      "sourceRevision": 81819876,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ჩალა",
+      "gloss": "straw",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ჩალა&oldid=91725192",
+      "sourceRevision": 91725192,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ცა",
+      "gloss": "sky, firmament",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ცა&oldid=91742441",
+      "sourceRevision": 91742441,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ცალი",
+      "gloss": "piece",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ცალი&oldid=84091576",
+      "sourceRevision": 84091576,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ცელი",
+      "gloss": "scythe",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ცელი&oldid=91740712",
+      "sourceRevision": 91740712,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ცივი",
+      "gloss": "cold",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ცივი&oldid=92420944",
+      "sourceRevision": 92420944,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ცოლი",
+      "gloss": "wife",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ცოლი&oldid=88967453",
+      "sourceRevision": 88967453,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ცხენი",
+      "gloss": "horse",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ცხენი&oldid=88968964",
+      "sourceRevision": 88968964,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ცხვარი",
+      "gloss": "sheep",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ცხვარი&oldid=92419538",
+      "sourceRevision": 92419538,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ცხვირი",
+      "gloss": "nose",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ცხვირი&oldid=87995521",
+      "sourceRevision": 87995521,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ცხრა",
+      "gloss": "nine (9)",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ცხრა&oldid=85767360",
+      "sourceRevision": 85767360,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ძალა",
+      "gloss": "power, force, strength",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ძალა&oldid=91725193",
+      "sourceRevision": 91725193,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ძაღლი",
+      "gloss": "dog",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ძაღლი&oldid=87819186",
+      "sourceRevision": 87819186,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ძვალი",
+      "gloss": "bone",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ძვალი&oldid=91716436",
+      "sourceRevision": 91716436,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ძველი",
+      "gloss": "old",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ძველი&oldid=91740636",
+      "sourceRevision": 91740636,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ძილი",
+      "gloss": "sleep",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ძილი&oldid=88022106",
+      "sourceRevision": 88022106,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ძირი",
+      "gloss": "root",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ძირი&oldid=84120950",
+      "sourceRevision": 84120950,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ძმა",
+      "gloss": "brother",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ძმა&oldid=84887585",
+      "sourceRevision": 84887585,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "წამწამი",
+      "gloss": "eyelashes",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=წამწამი&oldid=72094983",
+      "sourceRevision": 72094983,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "წარბი",
+      "gloss": "brow, eyebrow",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=წარბი&oldid=89949138",
+      "sourceRevision": 89949138,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "წერა",
+      "gloss": "writing",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=წერა&oldid=91049084",
+      "sourceRevision": 91049084,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "წვენი",
+      "gloss": "gravy, juice, sap",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=წვენი&oldid=88091352",
+      "sourceRevision": 88091352,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "წვერი",
+      "gloss": "beard; tip",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=წვერი&oldid=84121025",
+      "sourceRevision": 84121025,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "წვიმა",
+      "gloss": "rain",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=წვიმა&oldid=88801840",
+      "sourceRevision": 88801840,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "წყალი",
+      "gloss": "water",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=წყალი&oldid=88914697",
+      "sourceRevision": 88914697,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "წყარო",
+      "gloss": "spring",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=წყარო&oldid=88091334",
+      "sourceRevision": 88091334,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ჭალა",
+      "gloss": "floodplain; riverside grove",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ჭალა&oldid=92391673",
+      "sourceRevision": 92391673,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ჭაობი",
+      "gloss": "bog, marsh, mire, morass, quagmire, slough, swamp",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ჭაობი&oldid=84102929",
+      "sourceRevision": 84102929,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ჭერი",
+      "gloss": "ceiling",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ჭერი&oldid=84102935",
+      "sourceRevision": 84102935,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ჭექა",
+      "gloss": "thunder",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ჭექა&oldid=84121145",
+      "sourceRevision": 84121145,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ჭიშკარი",
+      "gloss": "gate, gateway",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ჭიშკარი&oldid=84121163",
+      "sourceRevision": 84121163,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ხავსი",
+      "gloss": "moss",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ხავსი&oldid=88004014",
+      "sourceRevision": 88004014,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ხაზი",
+      "gloss": "line",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ხაზი&oldid=84121190",
+      "sourceRevision": 84121190,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ხალი",
+      "gloss": "birthmark, mole",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ხალი&oldid=84121202",
+      "sourceRevision": 84121202,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ხალიჩა",
+      "gloss": "carpet, rug",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ხალიჩა&oldid=84121204",
+      "sourceRevision": 84121204,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ხარი",
+      "gloss": "ox, bull",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ხარი&oldid=91725836",
+      "sourceRevision": 91725836,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ხატი",
+      "gloss": "icon",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ხატი&oldid=91328605",
+      "sourceRevision": 91328605,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ხე",
+      "gloss": "tree",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ხე&oldid=91649841",
+      "sourceRevision": 91649841,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ხევი",
+      "gloss": "ravine",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ხევი&oldid=84121241",
+      "sourceRevision": 84121241,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ხელი",
+      "gloss": "hand",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ხელი&oldid=93360724",
+      "sourceRevision": 93360724,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ხეობა",
+      "gloss": "valley",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ხეობა&oldid=84121284",
+      "sourceRevision": 84121284,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ხიდი",
+      "gloss": "bridge",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ხიდი&oldid=84121301",
+      "sourceRevision": 84121301,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ხილი",
+      "gloss": "fruit, fruits",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ხილი&oldid=90045077",
+      "sourceRevision": 90045077,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ხმა",
+      "gloss": "voice, sound",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ხმა&oldid=84121314",
+      "sourceRevision": 84121314,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ხორბალი",
+      "gloss": "wheat",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ხორბალი&oldid=92369211",
+      "sourceRevision": 92369211,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ხორცი",
+      "gloss": "meat",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ხორცი&oldid=91715264",
+      "sourceRevision": 91715264,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ხუთი",
+      "gloss": "five (5)",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ხუთი&oldid=87444795",
+      "sourceRevision": 87444795,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ჯაზი",
+      "gloss": "jazz",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ჯაზი&oldid=84121382",
+      "sourceRevision": 84121382,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ჯამი",
+      "gloss": "sum; bowl",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ჯამი&oldid=91650107",
+      "sourceRevision": 91650107,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ჯანი",
+      "gloss": "health",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ჯანი&oldid=84121391",
+      "sourceRevision": 84121391,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ჯარი",
+      "gloss": "army, host",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ჯარი&oldid=91725851",
+      "sourceRevision": 91725851,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ჯორი",
+      "gloss": "mule",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ჯორი&oldid=84121454",
+      "sourceRevision": 84121454,
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ჰიმნი",
+      "gloss": "anthem",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ჰიმნი&oldid=84121547",
+      "sourceRevision": 84121547,
+      "reviewStatus": "prototype-reference-checked"
+    }
+  ]
+}

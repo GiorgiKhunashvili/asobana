@@ -1,0 +1,4453 @@
+{
+  "schemaVersion": 1,
+  "id": "geowords-prototype",
+  "revision": 4,
+  "chapters": [
+    {
+      "id": "weather",
+      "title": "ამინდი"
+    },
+    {
+      "id": "animals",
+      "title": "ცხოველები"
+    },
+    {
+      "id": "family",
+      "title": "ოჯახი"
+    },
+    {
+      "id": "body",
+      "title": "სხეული"
+    },
+    {
+      "id": "plants",
+      "title": "მცენარეები"
+    },
+    {
+      "id": "landscape",
+      "title": "ბუნება"
+    },
+    {
+      "id": "food",
+      "title": "საკვები"
+    },
+    {
+      "id": "home",
+      "title": "სახლი და ეზო"
+    },
+    {
+      "id": "numbers",
+      "title": "რიცხვები"
+    },
+    {
+      "id": "music",
+      "title": "მუსიკა"
+    }
+  ],
+  "levels": [
+    {
+      "schemaVersion": 1,
+      "id": "ka-001",
+      "chapterId": "weather",
+      "title": "ამინდი",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "ც"
+        },
+        {
+          "id": "tile-2",
+          "letter": "მ"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ე"
+        },
+        {
+          "id": "tile-4",
+          "letter": "ზ"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ლ"
+        },
+        {
+          "id": "tile-6",
+          "letter": "ვ"
+        },
+        {
+          "id": "tile-7",
+          "letter": "ა"
+        }
+      ],
+      "grid": {
+        "rows": 3,
+        "columns": 4
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "ელვა",
+          "acceptedAnswers": [
+            "ელვა"
+          ],
+          "row": 2,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "ცა",
+          "acceptedAnswers": [
+            "ცა"
+          ],
+          "row": 1,
+          "column": 3,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "მზე",
+          "acceptedAnswers": [
+            "მზე"
+          ],
+          "row": 0,
+          "column": 0,
+          "direction": "down"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 48,
+        "tier": "medium"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-002",
+      "chapterId": "weather",
+      "title": "ამინდი",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "დ"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-3",
+          "letter": "რ"
+        },
+        {
+          "id": "tile-4",
+          "letter": "ქ"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ჭ"
+        },
+        {
+          "id": "tile-6",
+          "letter": "ე"
+        },
+        {
+          "id": "tile-7",
+          "letter": "ი"
+        }
+      ],
+      "grid": {
+        "rows": 4,
+        "columns": 4
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "დარი",
+          "acceptedAnswers": [
+            "დარი"
+          ],
+          "row": 3,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "ჭექა",
+          "acceptedAnswers": [
+            "ჭექა"
+          ],
+          "row": 0,
+          "column": 1,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "ქარი",
+          "acceptedAnswers": [
+            "ქარი"
+          ],
+          "row": 0,
+          "column": 3,
+          "direction": "down"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 61,
+        "tier": "medium"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-003",
+      "chapterId": "weather",
+      "title": "ამინდი",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "წ"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-3",
+          "letter": "მ"
+        },
+        {
+          "id": "tile-4",
+          "letter": "ყ"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ვ"
+        },
+        {
+          "id": "tile-6",
+          "letter": "ნ"
+        },
+        {
+          "id": "tile-7",
+          "letter": "ი"
+        }
+      ],
+      "grid": {
+        "rows": 7,
+        "columns": 4
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "ნამი",
+          "acceptedAnswers": [
+            "ნამი"
+          ],
+          "row": 4,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "წვიმა",
+          "acceptedAnswers": [
+            "წვიმა"
+          ],
+          "row": 2,
+          "column": 3,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "ყინვა",
+          "acceptedAnswers": [
+            "ყინვა"
+          ],
+          "row": 0,
+          "column": 1,
+          "direction": "down"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 65,
+        "tier": "hard"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-004",
+      "chapterId": "weather",
+      "title": "ამინდი",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "ლ"
+        },
+        {
+          "id": "tile-2",
+          "letter": "თ"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-4",
+          "letter": "ს"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ნ"
+        },
+        {
+          "id": "tile-6",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-7",
+          "letter": "ო"
+        },
+        {
+          "id": "tile-8",
+          "letter": "ბ"
+        }
+      ],
+      "grid": {
+        "rows": 7,
+        "columns": 5
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "ნისლი",
+          "acceptedAnswers": [
+            "ნისლი"
+          ],
+          "row": 2,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "სითბო",
+          "acceptedAnswers": [
+            "სითბო"
+          ],
+          "row": 2,
+          "column": 2,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "თბილი",
+          "acceptedAnswers": [
+            "თბილი"
+          ],
+          "row": 0,
+          "column": 4,
+          "direction": "down"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 70,
+        "tier": "hard"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-005",
+      "chapterId": "weather",
+      "title": "ამინდი",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "დ"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-4",
+          "letter": "ც"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-6",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-7",
+          "letter": "ვ"
+        },
+        {
+          "id": "tile-8",
+          "letter": "რ"
+        }
+      ],
+      "grid": {
+        "rows": 6,
+        "columns": 5
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "ცივი",
+          "acceptedAnswers": [
+            "ცივი"
+          ],
+          "row": 1,
+          "column": 1,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "ავდარი",
+          "acceptedAnswers": [
+            "ავდარი"
+          ],
+          "row": 0,
+          "column": 3,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "ცა",
+          "acceptedAnswers": [
+            "ცა"
+          ],
+          "row": 3,
+          "column": 2,
+          "direction": "across"
+        },
+        {
+          "id": "word-4",
+          "answer": "დარი",
+          "acceptedAnswers": [
+            "დარი"
+          ],
+          "row": 5,
+          "column": 0,
+          "direction": "across"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 74,
+        "tier": "hard"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-006",
+      "chapterId": "animals",
+      "title": "ცხოველები",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "უ"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ტ"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-4",
+          "letter": "კ"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ბ"
+        },
+        {
+          "id": "tile-6",
+          "letter": "ა"
+        }
+      ],
+      "grid": {
+        "rows": 2,
+        "columns": 5
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "ბუ",
+          "acceptedAnswers": [
+            "ბუ"
+          ],
+          "row": 1,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "კუ",
+          "acceptedAnswers": [
+            "კუ"
+          ],
+          "row": 0,
+          "column": 1,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "კატა",
+          "acceptedAnswers": [
+            "კატა"
+          ],
+          "row": 0,
+          "column": 1,
+          "direction": "across"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 43,
+        "tier": "easy"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-007",
+      "chapterId": "animals",
+      "title": "ცხოველები",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "ხ"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-4",
+          "letter": "ტ"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ბ"
+        },
+        {
+          "id": "tile-6",
+          "letter": "რ"
+        },
+        {
+          "id": "tile-7",
+          "letter": "თ"
+        }
+      ],
+      "grid": {
+        "rows": 4,
+        "columns": 4
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "ხარი",
+          "acceptedAnswers": [
+            "ხარი"
+          ],
+          "row": 3,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "ბატი",
+          "acceptedAnswers": [
+            "ბატი"
+          ],
+          "row": 0,
+          "column": 3,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "თხა",
+          "acceptedAnswers": [
+            "თხა"
+          ],
+          "row": 1,
+          "column": 1,
+          "direction": "across"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 50,
+        "tier": "medium"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-008",
+      "chapterId": "animals",
+      "title": "ცხოველები",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ო"
+        },
+        {
+          "id": "tile-4",
+          "letter": "რ"
+        },
+        {
+          "id": "tile-5",
+          "letter": "მ"
+        },
+        {
+          "id": "tile-6",
+          "letter": "ლ"
+        },
+        {
+          "id": "tile-7",
+          "letter": "ძ"
+        },
+        {
+          "id": "tile-8",
+          "letter": "ღ"
+        }
+      ],
+      "grid": {
+        "rows": 5,
+        "columns": 4
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "ლომი",
+          "acceptedAnswers": [
+            "ლომი"
+          ],
+          "row": 3,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "ძაღლი",
+          "acceptedAnswers": [
+            "ძაღლი"
+          ],
+          "row": 0,
+          "column": 0,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "ღორი",
+          "acceptedAnswers": [
+            "ღორი"
+          ],
+          "row": 0,
+          "column": 3,
+          "direction": "down"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 58,
+        "tier": "medium"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-009",
+      "chapterId": "animals",
+      "title": "ცხოველები",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ვ"
+        },
+        {
+          "id": "tile-3",
+          "letter": "მ"
+        },
+        {
+          "id": "tile-4",
+          "letter": "ე"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-6",
+          "letter": "გ"
+        },
+        {
+          "id": "tile-7",
+          "letter": "ლ"
+        },
+        {
+          "id": "tile-8",
+          "letter": "თ"
+        }
+      ],
+      "grid": {
+        "rows": 6,
+        "columns": 5
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "მგელი",
+          "acceptedAnswers": [
+            "მგელი"
+          ],
+          "row": 2,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "გველი",
+          "acceptedAnswers": [
+            "გველი"
+          ],
+          "row": 0,
+          "column": 2,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "მელა",
+          "acceptedAnswers": [
+            "მელა"
+          ],
+          "row": 2,
+          "column": 0,
+          "direction": "down"
+        },
+        {
+          "id": "word-4",
+          "answer": "თაგვი",
+          "acceptedAnswers": [
+            "თაგვი"
+          ],
+          "row": 0,
+          "column": 0,
+          "direction": "across"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 65,
+        "tier": "hard"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-010",
+      "chapterId": "animals",
+      "title": "ცხოველები",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "რ"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-4",
+          "letter": "თ"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-6",
+          "letter": "ხ"
+        },
+        {
+          "id": "tile-7",
+          "letter": "ვ"
+        },
+        {
+          "id": "tile-8",
+          "letter": "დ"
+        }
+      ],
+      "grid": {
+        "rows": 6,
+        "columns": 6
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "იხვი",
+          "acceptedAnswers": [
+            "იხვი"
+          ],
+          "row": 5,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "დათვი",
+          "acceptedAnswers": [
+            "დათვი"
+          ],
+          "row": 1,
+          "column": 3,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "ვირთხა",
+          "acceptedAnswers": [
+            "ვირთხა"
+          ],
+          "row": 3,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-4",
+          "answer": "ვირი",
+          "acceptedAnswers": [
+            "ვირი"
+          ],
+          "row": 0,
+          "column": 1,
+          "direction": "down"
+        },
+        {
+          "id": "word-5",
+          "answer": "თხა",
+          "acceptedAnswers": [
+            "თხა"
+          ],
+          "row": 1,
+          "column": 5,
+          "direction": "down"
+        }
+      ],
+      "bonusWords": [
+        "ხარი"
+      ],
+      "difficulty": {
+        "score": 76,
+        "tier": "hard"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-011",
+      "chapterId": "family",
+      "title": "ოჯახი",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "მ"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-3",
+          "letter": "მ"
+        },
+        {
+          "id": "tile-4",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ე"
+        },
+        {
+          "id": "tile-6",
+          "letter": "დ"
+        },
+        {
+          "id": "tile-7",
+          "letter": "დ"
+        }
+      ],
+      "grid": {
+        "rows": 4,
+        "columns": 4
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "და",
+          "acceptedAnswers": [
+            "და"
+          ],
+          "row": 1,
+          "column": 2,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "მამა",
+          "acceptedAnswers": [
+            "მამა"
+          ],
+          "row": 0,
+          "column": 3,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "დედა",
+          "acceptedAnswers": [
+            "დედა"
+          ],
+          "row": 3,
+          "column": 0,
+          "direction": "across"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 49,
+        "tier": "medium"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-012",
+      "chapterId": "family",
+      "title": "ოჯახი",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ც"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ბ"
+        },
+        {
+          "id": "tile-4",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ო"
+        },
+        {
+          "id": "tile-6",
+          "letter": "ლ"
+        },
+        {
+          "id": "tile-7",
+          "letter": "ძ"
+        },
+        {
+          "id": "tile-8",
+          "letter": "მ"
+        }
+      ],
+      "grid": {
+        "rows": 6,
+        "columns": 4
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "ბიძა",
+          "acceptedAnswers": [
+            "ბიძა"
+          ],
+          "row": 3,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "ძმა",
+          "acceptedAnswers": [
+            "ძმა"
+          ],
+          "row": 3,
+          "column": 2,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "ცოლი",
+          "acceptedAnswers": [
+            "ცოლი"
+          ],
+          "row": 0,
+          "column": 1,
+          "direction": "down"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 59,
+        "tier": "medium"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-013",
+      "chapterId": "family",
+      "title": "ოჯახი",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "ბ"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ბ"
+        },
+        {
+          "id": "tile-4",
+          "letter": "უ"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-6",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-7",
+          "letter": "დ"
+        },
+        {
+          "id": "tile-8",
+          "letter": "ე"
+        }
+      ],
+      "grid": {
+        "rows": 5,
+        "columns": 5
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "ბაბუა",
+          "acceptedAnswers": [
+            "ბაბუა"
+          ],
+          "row": 4,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "და",
+          "acceptedAnswers": [
+            "და"
+          ],
+          "row": 3,
+          "column": 4,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "ბებია",
+          "acceptedAnswers": [
+            "ბებია"
+          ],
+          "row": 0,
+          "column": 1,
+          "direction": "down"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 62,
+        "tier": "medium"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-014",
+      "chapterId": "family",
+      "title": "ოჯახი",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "ძ"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ქ"
+        },
+        {
+          "id": "tile-4",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-5",
+          "letter": "რ"
+        },
+        {
+          "id": "tile-6",
+          "letter": "ლ"
+        },
+        {
+          "id": "tile-7",
+          "letter": "მ"
+        }
+      ],
+      "grid": {
+        "rows": 7,
+        "columns": 5
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "რძალი",
+          "acceptedAnswers": [
+            "რძალი"
+          ],
+          "row": 4,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "ძმა",
+          "acceptedAnswers": [
+            "ძმა"
+          ],
+          "row": 4,
+          "column": 1,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "ქმარი",
+          "acceptedAnswers": [
+            "ქმარი"
+          ],
+          "row": 0,
+          "column": 4,
+          "direction": "down"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 69,
+        "tier": "hard"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-015",
+      "chapterId": "family",
+      "title": "ოჯახი",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "დ"
+        },
+        {
+          "id": "tile-2",
+          "letter": "მ"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-4",
+          "letter": "დ"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-6",
+          "letter": "ე"
+        },
+        {
+          "id": "tile-7",
+          "letter": "მ"
+        },
+        {
+          "id": "tile-8",
+          "letter": "ა"
+        }
+      ],
+      "grid": {
+        "rows": 6,
+        "columns": 6
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "მამიდა",
+          "acceptedAnswers": [
+            "მამიდა"
+          ],
+          "row": 3,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "დედა",
+          "acceptedAnswers": [
+            "დედა"
+          ],
+          "row": 0,
+          "column": 1,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "მამა",
+          "acceptedAnswers": [
+            "მამა"
+          ],
+          "row": 2,
+          "column": 5,
+          "direction": "down"
+        },
+        {
+          "id": "word-4",
+          "answer": "დეიდა",
+          "acceptedAnswers": [
+            "დეიდა"
+          ],
+          "row": 1,
+          "column": 0,
+          "direction": "across"
+        }
+      ],
+      "bonusWords": [
+        "და"
+      ],
+      "difficulty": {
+        "score": 77,
+        "tier": "hard"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-016",
+      "chapterId": "body",
+      "title": "სხეული",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "ტ"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ნ"
+        },
+        {
+          "id": "tile-4",
+          "letter": "ე"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-6",
+          "letter": "კ"
+        }
+      ],
+      "grid": {
+        "rows": 4,
+        "columns": 4
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "ენა",
+          "acceptedAnswers": [
+            "ენა"
+          ],
+          "row": 1,
+          "column": 1,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "ტანი",
+          "acceptedAnswers": [
+            "ტანი"
+          ],
+          "row": 0,
+          "column": 3,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "კანი",
+          "acceptedAnswers": [
+            "კანი"
+          ],
+          "row": 3,
+          "column": 0,
+          "direction": "across"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 46,
+        "tier": "medium"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-017",
+      "chapterId": "body",
+      "title": "სხეული",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "მ"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-4",
+          "letter": "ვ"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-6",
+          "letter": "თ"
+        },
+        {
+          "id": "tile-7",
+          "letter": "თ"
+        }
+      ],
+      "grid": {
+        "rows": 6,
+        "columns": 4
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "თავი",
+          "acceptedAnswers": [
+            "თავი"
+          ],
+          "row": 3,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "თმა",
+          "acceptedAnswers": [
+            "თმა"
+          ],
+          "row": 3,
+          "column": 0,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "თითი",
+          "acceptedAnswers": [
+            "თითი"
+          ],
+          "row": 0,
+          "column": 3,
+          "direction": "down"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 50,
+        "tier": "medium"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-018",
+      "chapterId": "body",
+      "title": "სხეული",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "ფ"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ბ"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-4",
+          "letter": "ლ"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ე"
+        },
+        {
+          "id": "tile-6",
+          "letter": "კ"
+        },
+        {
+          "id": "tile-7",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-8",
+          "letter": "ხ"
+        }
+      ],
+      "grid": {
+        "rows": 4,
+        "columns": 5
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "კბილი",
+          "acceptedAnswers": [
+            "კბილი"
+          ],
+          "row": 2,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "ხელი",
+          "acceptedAnswers": [
+            "ხელი"
+          ],
+          "row": 0,
+          "column": 3,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "ფეხი",
+          "acceptedAnswers": [
+            "ფეხი"
+          ],
+          "row": 0,
+          "column": 1,
+          "direction": "across"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 58,
+        "tier": "medium"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-019",
+      "chapterId": "body",
+      "title": "სხეული",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "უ"
+        },
+        {
+          "id": "tile-2",
+          "letter": "რ"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-4",
+          "letter": "ზ"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ყ"
+        },
+        {
+          "id": "tile-6",
+          "letter": "გ"
+        },
+        {
+          "id": "tile-7",
+          "letter": "ე"
+        },
+        {
+          "id": "tile-8",
+          "letter": "ლ"
+        }
+      ],
+      "grid": {
+        "rows": 7,
+        "columns": 7
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "ყელი",
+          "acceptedAnswers": [
+            "ყელი"
+          ],
+          "row": 3,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "გული",
+          "acceptedAnswers": [
+            "გული"
+          ],
+          "row": 0,
+          "column": 3,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "ზურგი",
+          "acceptedAnswers": [
+            "ზურგი"
+          ],
+          "row": 1,
+          "column": 2,
+          "direction": "across"
+        },
+        {
+          "id": "word-4",
+          "answer": "ყური",
+          "acceptedAnswers": [
+            "ყური"
+          ],
+          "row": 3,
+          "column": 0,
+          "direction": "down"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 68,
+        "tier": "hard"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-020",
+      "chapterId": "body",
+      "title": "სხეული",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "ლ"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ხ"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-4",
+          "letter": "ვ"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-6",
+          "letter": "მ"
+        },
+        {
+          "id": "tile-7",
+          "letter": "კ"
+        },
+        {
+          "id": "tile-8",
+          "letter": "თ"
+        }
+      ],
+      "grid": {
+        "rows": 7,
+        "columns": 7
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "თავი",
+          "acceptedAnswers": [
+            "თავი"
+          ],
+          "row": 1,
+          "column": 3,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "თვალი",
+          "acceptedAnswers": [
+            "თვალი"
+          ],
+          "row": 0,
+          "column": 5,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "მკლავი",
+          "acceptedAnswers": [
+            "მკლავი"
+          ],
+          "row": 4,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-4",
+          "answer": "თმა",
+          "acceptedAnswers": [
+            "თმა"
+          ],
+          "row": 3,
+          "column": 0,
+          "direction": "down"
+        },
+        {
+          "id": "word-5",
+          "answer": "ხალი",
+          "acceptedAnswers": [
+            "ხალი"
+          ],
+          "row": 3,
+          "column": 3,
+          "direction": "down"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 76,
+        "tier": "hard"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-021",
+      "chapterId": "plants",
+      "title": "მცენარეები",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "ვ"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-4",
+          "letter": "ზ"
+        },
+        {
+          "id": "tile-5",
+          "letter": "თ"
+        }
+      ],
+      "grid": {
+        "rows": 5,
+        "columns": 4
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "ვაზი",
+          "acceptedAnswers": [
+            "ვაზი"
+          ],
+          "row": 3,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "ია",
+          "acceptedAnswers": [
+            "ია"
+          ],
+          "row": 3,
+          "column": 3,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "თივა",
+          "acceptedAnswers": [
+            "თივა"
+          ],
+          "row": 0,
+          "column": 1,
+          "direction": "down"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 41,
+        "tier": "easy"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-022",
+      "chapterId": "plants",
+      "title": "მცენარეები",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ხ"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-4",
+          "letter": "ე"
+        },
+        {
+          "id": "tile-5",
+          "letter": "უ"
+        },
+        {
+          "id": "tile-6",
+          "letter": "კ"
+        },
+        {
+          "id": "tile-7",
+          "letter": "მ"
+        }
+      ],
+      "grid": {
+        "rows": 4,
+        "columns": 4
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "კამა",
+          "acceptedAnswers": [
+            "კამა"
+          ],
+          "row": 0,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "მუხა",
+          "acceptedAnswers": [
+            "მუხა"
+          ],
+          "row": 0,
+          "column": 2,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "ხე",
+          "acceptedAnswers": [
+            "ხე"
+          ],
+          "row": 2,
+          "column": 2,
+          "direction": "across"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 49,
+        "tier": "medium"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-023",
+      "chapterId": "plants",
+      "title": "მცენარეები",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "რ"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ძ"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-4",
+          "letter": "კ"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ვ"
+        },
+        {
+          "id": "tile-6",
+          "letter": "დ"
+        },
+        {
+          "id": "tile-7",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-8",
+          "letter": "ი"
+        }
+      ],
+      "grid": {
+        "rows": 4,
+        "columns": 7
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "ვარდი",
+          "acceptedAnswers": [
+            "ვარდი"
+          ],
+          "row": 1,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "ძირი",
+          "acceptedAnswers": [
+            "ძირი"
+          ],
+          "row": 0,
+          "column": 4,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "კივი",
+          "acceptedAnswers": [
+            "კივი"
+          ],
+          "row": 3,
+          "column": 3,
+          "direction": "across"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 58,
+        "tier": "medium"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-024",
+      "chapterId": "plants",
+      "title": "მცენარეები",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "ლ"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ხ"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-4",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ბ"
+        },
+        {
+          "id": "tile-6",
+          "letter": "ჩ"
+        },
+        {
+          "id": "tile-7",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-8",
+          "letter": "ი"
+        }
+      ],
+      "grid": {
+        "rows": 6,
+        "columns": 6
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "ბალი",
+          "acceptedAnswers": [
+            "ბალი"
+          ],
+          "row": 3,
+          "column": 2,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "ჩალა",
+          "acceptedAnswers": [
+            "ჩალა"
+          ],
+          "row": 2,
+          "column": 3,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "ხილი",
+          "acceptedAnswers": [
+            "ხილი"
+          ],
+          "row": 0,
+          "column": 5,
+          "direction": "down"
+        },
+        {
+          "id": "word-4",
+          "answer": "ბალახი",
+          "acceptedAnswers": [
+            "ბალახი"
+          ],
+          "row": 5,
+          "column": 0,
+          "direction": "across"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 71,
+        "tier": "hard"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-025",
+      "chapterId": "plants",
+      "title": "მცენარეები",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ძ"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ხ"
+        },
+        {
+          "id": "tile-4",
+          "letter": "ე"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ნ"
+        },
+        {
+          "id": "tile-6",
+          "letter": "ვ"
+        },
+        {
+          "id": "tile-7",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-8",
+          "letter": "ს"
+        }
+      ],
+      "grid": {
+        "rows": 5,
+        "columns": 7
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "ნაძვი",
+          "acceptedAnswers": [
+            "ნაძვი"
+          ],
+          "row": 0,
+          "column": 2,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "ნესვი",
+          "acceptedAnswers": [
+            "ნესვი"
+          ],
+          "row": 0,
+          "column": 2,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "ია",
+          "acceptedAnswers": [
+            "ია"
+          ],
+          "row": 0,
+          "column": 6,
+          "direction": "down"
+        },
+        {
+          "id": "word-4",
+          "answer": "ხე",
+          "acceptedAnswers": [
+            "ხე"
+          ],
+          "row": 1,
+          "column": 1,
+          "direction": "across"
+        },
+        {
+          "id": "word-5",
+          "answer": "ხავსი",
+          "acceptedAnswers": [
+            "ხავსი"
+          ],
+          "row": 3,
+          "column": 0,
+          "direction": "across"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 86,
+        "tier": "hard"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-026",
+      "chapterId": "landscape",
+      "title": "ბუნება",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "ყ"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ტ"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ბ"
+        },
+        {
+          "id": "tile-4",
+          "letter": "თ"
+        },
+        {
+          "id": "tile-5",
+          "letter": "მ"
+        },
+        {
+          "id": "tile-6",
+          "letter": "ე"
+        },
+        {
+          "id": "tile-7",
+          "letter": "ა"
+        }
+      ],
+      "grid": {
+        "rows": 3,
+        "columns": 5
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "მთა",
+          "acceptedAnswers": [
+            "მთა"
+          ],
+          "row": 2,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "ტბა",
+          "acceptedAnswers": [
+            "ტბა"
+          ],
+          "row": 0,
+          "column": 2,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "ტყე",
+          "acceptedAnswers": [
+            "ტყე"
+          ],
+          "row": 0,
+          "column": 2,
+          "direction": "across"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 46,
+        "tier": "medium"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-027",
+      "chapterId": "landscape",
+      "title": "ბუნება",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "ე"
+        },
+        {
+          "id": "tile-2",
+          "letter": "დ"
+        },
+        {
+          "id": "tile-3",
+          "letter": "კ"
+        },
+        {
+          "id": "tile-4",
+          "letter": "ლ"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-6",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-7",
+          "letter": "პ"
+        },
+        {
+          "id": "tile-8",
+          "letter": "ო"
+        }
+      ],
+      "grid": {
+        "rows": 4,
+        "columns": 7
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "კლდე",
+          "acceptedAnswers": [
+            "კლდე"
+          ],
+          "row": 2,
+          "column": 3,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "პიკი",
+          "acceptedAnswers": [
+            "პიკი"
+          ],
+          "row": 0,
+          "column": 3,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "ლოდი",
+          "acceptedAnswers": [
+            "ლოდი"
+          ],
+          "row": 3,
+          "column": 0,
+          "direction": "across"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 55,
+        "tier": "medium"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-028",
+      "chapterId": "landscape",
+      "title": "ბუნება",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "ე"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-4",
+          "letter": "კ"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ზ"
+        },
+        {
+          "id": "tile-6",
+          "letter": "ვ"
+        },
+        {
+          "id": "tile-7",
+          "letter": "ღ"
+        },
+        {
+          "id": "tile-8",
+          "letter": "ლ"
+        }
+      ],
+      "grid": {
+        "rows": 5,
+        "columns": 4
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "ვაკე",
+          "acceptedAnswers": [
+            "ვაკე"
+          ],
+          "row": 2,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "ზღვა",
+          "acceptedAnswers": [
+            "ზღვა"
+          ],
+          "row": 0,
+          "column": 0,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "ველი",
+          "acceptedAnswers": [
+            "ველი"
+          ],
+          "row": 1,
+          "column": 3,
+          "direction": "down"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 60,
+        "tier": "medium"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-029",
+      "chapterId": "landscape",
+      "title": "ბუნება",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "დ"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-4",
+          "letter": "ქ"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ვ"
+        },
+        {
+          "id": "tile-6",
+          "letter": "ე"
+        },
+        {
+          "id": "tile-7",
+          "letter": "ხ"
+        },
+        {
+          "id": "tile-8",
+          "letter": "შ"
+        }
+      ],
+      "grid": {
+        "rows": 5,
+        "columns": 4
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "ქედი",
+          "acceptedAnswers": [
+            "ქედი"
+          ],
+          "row": 2,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "ხევი",
+          "acceptedAnswers": [
+            "ხევი"
+          ],
+          "row": 1,
+          "column": 1,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "ქვიშა",
+          "acceptedAnswers": [
+            "ქვიშა"
+          ],
+          "row": 0,
+          "column": 3,
+          "direction": "down"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 68,
+        "tier": "hard"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-030",
+      "chapterId": "landscape",
+      "title": "ბუნება",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "ბ"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-3",
+          "letter": "რ"
+        },
+        {
+          "id": "tile-4",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-5",
+          "letter": "გ"
+        },
+        {
+          "id": "tile-6",
+          "letter": "ო"
+        },
+        {
+          "id": "tile-7",
+          "letter": "ტ"
+        },
+        {
+          "id": "tile-8",
+          "letter": "ჭ"
+        }
+      ],
+      "grid": {
+        "rows": 6,
+        "columns": 7
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "გორა",
+          "acceptedAnswers": [
+            "გორა"
+          ],
+          "row": 5,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "ტბა",
+          "acceptedAnswers": [
+            "ტბა"
+          ],
+          "row": 3,
+          "column": 3,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "ბარი",
+          "acceptedAnswers": [
+            "ბარი"
+          ],
+          "row": 4,
+          "column": 3,
+          "direction": "across"
+        },
+        {
+          "id": "word-4",
+          "answer": "ჭაობი",
+          "acceptedAnswers": [
+            "ჭაობი"
+          ],
+          "row": 0,
+          "column": 6,
+          "direction": "down"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 77,
+        "tier": "hard"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-031",
+      "chapterId": "food",
+      "title": "საკვები",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "ჩ"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ფ"
+        },
+        {
+          "id": "tile-4",
+          "letter": "ბ"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ლ"
+        },
+        {
+          "id": "tile-6",
+          "letter": "თ"
+        },
+        {
+          "id": "tile-7",
+          "letter": "ი"
+        }
+      ],
+      "grid": {
+        "rows": 6,
+        "columns": 4
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "ბალი",
+          "acceptedAnswers": [
+            "ბალი"
+          ],
+          "row": 4,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "ჩაი",
+          "acceptedAnswers": [
+            "ჩაი"
+          ],
+          "row": 3,
+          "column": 1,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "თაფლი",
+          "acceptedAnswers": [
+            "თაფლი"
+          ],
+          "row": 0,
+          "column": 3,
+          "direction": "down"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 53,
+        "tier": "medium"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-032",
+      "chapterId": "food",
+      "title": "საკვები",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "ე"
+        },
+        {
+          "id": "tile-2",
+          "letter": "უ"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ზ"
+        },
+        {
+          "id": "tile-4",
+          "letter": "თ"
+        },
+        {
+          "id": "tile-5",
+          "letter": "რ"
+        },
+        {
+          "id": "tile-6",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-7",
+          "letter": "ძ"
+        },
+        {
+          "id": "tile-8",
+          "letter": "პ"
+        }
+      ],
+      "grid": {
+        "rows": 3,
+        "columns": 5
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "ზეთი",
+          "acceptedAnswers": [
+            "ზეთი"
+          ],
+          "row": 2,
+          "column": 1,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "რძე",
+          "acceptedAnswers": [
+            "რძე"
+          ],
+          "row": 0,
+          "column": 2,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "პური",
+          "acceptedAnswers": [
+            "პური"
+          ],
+          "row": 0,
+          "column": 0,
+          "direction": "across"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 54,
+        "tier": "medium"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-033",
+      "chapterId": "food",
+      "title": "საკვები",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "ვ"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-4",
+          "letter": "წ"
+        },
+        {
+          "id": "tile-5",
+          "letter": "შ"
+        },
+        {
+          "id": "tile-6",
+          "letter": "ე"
+        },
+        {
+          "id": "tile-7",
+          "letter": "ლ"
+        },
+        {
+          "id": "tile-8",
+          "letter": "ყ"
+        }
+      ],
+      "grid": {
+        "rows": 7,
+        "columns": 5
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "ვაშლი",
+          "acceptedAnswers": [
+            "ვაშლი"
+          ],
+          "row": 4,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "წყალი",
+          "acceptedAnswers": [
+            "წყალი"
+          ],
+          "row": 2,
+          "column": 1,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "ყველი",
+          "acceptedAnswers": [
+            "ყველი"
+          ],
+          "row": 0,
+          "column": 4,
+          "direction": "down"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 60,
+        "tier": "medium"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-034",
+      "chapterId": "food",
+      "title": "საკვები",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "რ"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-3",
+          "letter": "კ"
+        },
+        {
+          "id": "tile-4",
+          "letter": "ქ"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ტ"
+        },
+        {
+          "id": "tile-6",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-7",
+          "letter": "მ"
+        },
+        {
+          "id": "tile-8",
+          "letter": "ა"
+        }
+      ],
+      "grid": {
+        "rows": 6,
+        "columns": 5
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "ატამი",
+          "acceptedAnswers": [
+            "ატამი"
+          ],
+          "row": 1,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "კარაქი",
+          "acceptedAnswers": [
+            "კარაქი"
+          ],
+          "row": 0,
+          "column": 2,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "კამა",
+          "acceptedAnswers": [
+            "კამა"
+          ],
+          "row": 3,
+          "column": 1,
+          "direction": "across"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 67,
+        "tier": "hard"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-035",
+      "chapterId": "food",
+      "title": "საკვები",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "ს"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ე"
+        },
+        {
+          "id": "tile-3",
+          "letter": "თ"
+        },
+        {
+          "id": "tile-4",
+          "letter": "ზ"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ნ"
+        },
+        {
+          "id": "tile-6",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-7",
+          "letter": "წ"
+        },
+        {
+          "id": "tile-8",
+          "letter": "ვ"
+        }
+      ],
+      "grid": {
+        "rows": 6,
+        "columns": 7
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "წვენი",
+          "acceptedAnswers": [
+            "წვენი"
+          ],
+          "row": 4,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "ნესვი",
+          "acceptedAnswers": [
+            "ნესვი"
+          ],
+          "row": 1,
+          "column": 1,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "თევზი",
+          "acceptedAnswers": [
+            "თევზი"
+          ],
+          "row": 0,
+          "column": 4,
+          "direction": "down"
+        },
+        {
+          "id": "word-4",
+          "answer": "ზეთი",
+          "acceptedAnswers": [
+            "ზეთი"
+          ],
+          "row": 1,
+          "column": 3,
+          "direction": "across"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 75,
+        "tier": "hard"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-036",
+      "chapterId": "home",
+      "title": "სახლი და ეზო",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "ღ"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ნ"
+        },
+        {
+          "id": "tile-4",
+          "letter": "ბ"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-6",
+          "letter": "მ"
+        }
+      ],
+      "grid": {
+        "rows": 6,
+        "columns": 4
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "ბაღი",
+          "acceptedAnswers": [
+            "ბაღი"
+          ],
+          "row": 3,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "მინა",
+          "acceptedAnswers": [
+            "მინა"
+          ],
+          "row": 2,
+          "column": 3,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "ბინა",
+          "acceptedAnswers": [
+            "ბინა"
+          ],
+          "row": 0,
+          "column": 1,
+          "direction": "down"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 47,
+        "tier": "medium"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-037",
+      "chapterId": "home",
+      "title": "სახლი და ეზო",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "ე"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ბ"
+        },
+        {
+          "id": "tile-3",
+          "letter": "კ"
+        },
+        {
+          "id": "tile-4",
+          "letter": "ო"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ღ"
+        },
+        {
+          "id": "tile-6",
+          "letter": "ზ"
+        },
+        {
+          "id": "tile-7",
+          "letter": "ი"
+        }
+      ],
+      "grid": {
+        "rows": 6,
+        "columns": 3
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "ეზო",
+          "acceptedAnswers": [
+            "ეზო"
+          ],
+          "row": 3,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "ღობე",
+          "acceptedAnswers": [
+            "ღობე"
+          ],
+          "row": 2,
+          "column": 2,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "კიბე",
+          "acceptedAnswers": [
+            "კიბე"
+          ],
+          "row": 0,
+          "column": 0,
+          "direction": "down"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 50,
+        "tier": "medium"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-038",
+      "chapterId": "home",
+      "title": "სახლი და ეზო",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "თ"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-3",
+          "letter": "რ"
+        },
+        {
+          "id": "tile-4",
+          "letter": "უ"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ო"
+        },
+        {
+          "id": "tile-6",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-7",
+          "letter": "ხ"
+        },
+        {
+          "id": "tile-8",
+          "letter": "ქ"
+        }
+      ],
+      "grid": {
+        "rows": 6,
+        "columns": 4
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "თარო",
+          "acceptedAnswers": [
+            "თარო"
+          ],
+          "row": 2,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "ქურა",
+          "acceptedAnswers": [
+            "ქურა"
+          ],
+          "row": 0,
+          "column": 2,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "ოთახი",
+          "acceptedAnswers": [
+            "ოთახი"
+          ],
+          "row": 1,
+          "column": 0,
+          "direction": "down"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 63,
+        "tier": "medium"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-039",
+      "chapterId": "home",
+      "title": "სახლი და ეზო",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "კ"
+        },
+        {
+          "id": "tile-2",
+          "letter": "მ"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ე"
+        },
+        {
+          "id": "tile-4",
+          "letter": "რ"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ნ"
+        },
+        {
+          "id": "tile-6",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-7",
+          "letter": "ს"
+        },
+        {
+          "id": "tile-8",
+          "letter": "ი"
+        }
+      ],
+      "grid": {
+        "rows": 7,
+        "columns": 6
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "სარკე",
+          "acceptedAnswers": [
+            "სარკე"
+          ],
+          "row": 5,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "კარი",
+          "acceptedAnswers": [
+            "კარი"
+          ],
+          "row": 3,
+          "column": 2,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "სკამი",
+          "acceptedAnswers": [
+            "სკამი"
+          ],
+          "row": 3,
+          "column": 1,
+          "direction": "across"
+        },
+        {
+          "id": "word-4",
+          "answer": "მინა",
+          "acceptedAnswers": [
+            "მინა"
+          ],
+          "row": 0,
+          "column": 3,
+          "direction": "down"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 69,
+        "tier": "hard"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-040",
+      "chapterId": "home",
+      "title": "სახლი და ეზო",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ღ"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ჭ"
+        },
+        {
+          "id": "tile-4",
+          "letter": "ბ"
+        },
+        {
+          "id": "tile-5",
+          "letter": "კ"
+        },
+        {
+          "id": "tile-6",
+          "letter": "ე"
+        },
+        {
+          "id": "tile-7",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-8",
+          "letter": "რ"
+        }
+      ],
+      "grid": {
+        "rows": 6,
+        "columns": 7
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "კერა",
+          "acceptedAnswers": [
+            "კერა"
+          ],
+          "row": 2,
+          "column": 3,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "კარი",
+          "acceptedAnswers": [
+            "კარი"
+          ],
+          "row": 0,
+          "column": 5,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "კიბე",
+          "acceptedAnswers": [
+            "კიბე"
+          ],
+          "row": 2,
+          "column": 3,
+          "direction": "down"
+        },
+        {
+          "id": "word-4",
+          "answer": "ბაღი",
+          "acceptedAnswers": [
+            "ბაღი"
+          ],
+          "row": 3,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-5",
+          "answer": "ჭერი",
+          "acceptedAnswers": [
+            "ჭერი"
+          ],
+          "row": 5,
+          "column": 2,
+          "direction": "across"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 75,
+        "tier": "hard"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-041",
+      "chapterId": "numbers",
+      "title": "რიცხვები",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "თ"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ს"
+        },
+        {
+          "id": "tile-4",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-5",
+          "letter": "მ"
+        }
+      ],
+      "grid": {
+        "rows": 5,
+        "columns": 3
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "ათი",
+          "acceptedAnswers": [
+            "ათი"
+          ],
+          "row": 2,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "სამი",
+          "acceptedAnswers": [
+            "სამი"
+          ],
+          "row": 1,
+          "column": 0,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "ასი",
+          "acceptedAnswers": [
+            "ასი"
+          ],
+          "row": 0,
+          "column": 2,
+          "direction": "down"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 41,
+        "tier": "easy"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-042",
+      "chapterId": "numbers",
+      "title": "რიცხვები",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-2",
+          "letter": "თ"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ო"
+        },
+        {
+          "id": "tile-4",
+          "letter": "უ"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ხ"
+        },
+        {
+          "id": "tile-6",
+          "letter": "ლ"
+        },
+        {
+          "id": "tile-7",
+          "letter": "ნ"
+        }
+      ],
+      "grid": {
+        "rows": 6,
+        "columns": 4
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "ნული",
+          "acceptedAnswers": [
+            "ნული"
+          ],
+          "row": 3,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "ხუთი",
+          "acceptedAnswers": [
+            "ხუთი"
+          ],
+          "row": 2,
+          "column": 1,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "ოთხი",
+          "acceptedAnswers": [
+            "ოთხი"
+          ],
+          "row": 0,
+          "column": 3,
+          "direction": "down"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 51,
+        "tier": "medium"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-043",
+      "chapterId": "numbers",
+      "title": "რიცხვები",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "ე"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-4",
+          "letter": "რ"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ს"
+        },
+        {
+          "id": "tile-6",
+          "letter": "ვ"
+        },
+        {
+          "id": "tile-7",
+          "letter": "თ"
+        },
+        {
+          "id": "tile-8",
+          "letter": "ქ"
+        }
+      ],
+      "grid": {
+        "rows": 7,
+        "columns": 4
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "ერთი",
+          "acceptedAnswers": [
+            "ერთი"
+          ],
+          "row": 4,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "რვა",
+          "acceptedAnswers": [
+            "რვა"
+          ],
+          "row": 4,
+          "column": 1,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "ექვსი",
+          "acceptedAnswers": [
+            "ექვსი"
+          ],
+          "row": 0,
+          "column": 3,
+          "direction": "down"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 57,
+        "tier": "medium"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-044",
+      "chapterId": "numbers",
+      "title": "რიცხვები",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ხ"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-4",
+          "letter": "მ"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ც"
+        },
+        {
+          "id": "tile-6",
+          "letter": "ო"
+        },
+        {
+          "id": "tile-7",
+          "letter": "ო"
+        },
+        {
+          "id": "tile-8",
+          "letter": "რ"
+        }
+      ],
+      "grid": {
+        "rows": 5,
+        "columns": 6
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "ორმოცი",
+          "acceptedAnswers": [
+            "ორმოცი"
+          ],
+          "row": 2,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "ოცი",
+          "acceptedAnswers": [
+            "ოცი"
+          ],
+          "row": 2,
+          "column": 3,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "ცხრა",
+          "acceptedAnswers": [
+            "ცხრა"
+          ],
+          "row": 0,
+          "column": 1,
+          "direction": "down"
+        },
+        {
+          "id": "word-4",
+          "answer": "ორი",
+          "acceptedAnswers": [
+            "ორი"
+          ],
+          "row": 0,
+          "column": 5,
+          "direction": "down"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 69,
+        "tier": "hard"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-045",
+      "chapterId": "numbers",
+      "title": "რიცხვები",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ს"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ო"
+        },
+        {
+          "id": "tile-4",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-5",
+          "letter": "თ"
+        },
+        {
+          "id": "tile-6",
+          "letter": "მ"
+        },
+        {
+          "id": "tile-7",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-8",
+          "letter": "ც"
+        }
+      ],
+      "grid": {
+        "rows": 6,
+        "columns": 7
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "ასი",
+          "acceptedAnswers": [
+            "ასი"
+          ],
+          "row": 2,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "ათი",
+          "acceptedAnswers": [
+            "ათი"
+          ],
+          "row": 0,
+          "column": 2,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "ათასი",
+          "acceptedAnswers": [
+            "ათასი"
+          ],
+          "row": 0,
+          "column": 2,
+          "direction": "across"
+        },
+        {
+          "id": "word-4",
+          "answer": "სამოცი",
+          "acceptedAnswers": [
+            "სამოცი"
+          ],
+          "row": 0,
+          "column": 5,
+          "direction": "down"
+        },
+        {
+          "id": "word-5",
+          "answer": "სამი",
+          "acceptedAnswers": [
+            "სამი"
+          ],
+          "row": 1,
+          "column": 0,
+          "direction": "down"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 80,
+        "tier": "hard"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-046",
+      "chapterId": "music",
+      "title": "მუსიკა",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "ზ"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ო"
+        },
+        {
+          "id": "tile-4",
+          "letter": "რ"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ჯ"
+        },
+        {
+          "id": "tile-6",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-7",
+          "letter": "კ"
+        }
+      ],
+      "grid": {
+        "rows": 6,
+        "columns": 4
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "ზარი",
+          "acceptedAnswers": [
+            "ზარი"
+          ],
+          "row": 3,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "ჯაზი",
+          "acceptedAnswers": [
+            "ჯაზი"
+          ],
+          "row": 2,
+          "column": 1,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "როკი",
+          "acceptedAnswers": [
+            "როკი"
+          ],
+          "row": 0,
+          "column": 3,
+          "direction": "down"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 51,
+        "tier": "medium"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-047",
+      "chapterId": "music",
+      "title": "მუსიკა",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "ე"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-3",
+          "letter": "პ"
+        },
+        {
+          "id": "tile-4",
+          "letter": "რ"
+        },
+        {
+          "id": "tile-5",
+          "letter": "შ"
+        },
+        {
+          "id": "tile-6",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-7",
+          "letter": "მ"
+        },
+        {
+          "id": "tile-8",
+          "letter": "ხ"
+        }
+      ],
+      "grid": {
+        "rows": 5,
+        "columns": 5
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "მარში",
+          "acceptedAnswers": [
+            "მარში"
+          ],
+          "row": 3,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "ხმა",
+          "acceptedAnswers": [
+            "ხმა"
+          ],
+          "row": 2,
+          "column": 0,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "რეპი",
+          "acceptedAnswers": [
+            "რეპი"
+          ],
+          "row": 0,
+          "column": 4,
+          "direction": "down"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 62,
+        "tier": "medium"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-048",
+      "chapterId": "music",
+      "title": "მუსიკა",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-2",
+          "letter": "დ"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ნ"
+        },
+        {
+          "id": "tile-4",
+          "letter": "ო"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ლ"
+        },
+        {
+          "id": "tile-6",
+          "letter": "კ"
+        },
+        {
+          "id": "tile-7",
+          "letter": "ტ"
+        },
+        {
+          "id": "tile-8",
+          "letter": "რ"
+        }
+      ],
+      "grid": {
+        "rows": 6,
+        "columns": 4
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "დოლი",
+          "acceptedAnswers": [
+            "დოლი"
+          ],
+          "row": 3,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "ტონი",
+          "acceptedAnswers": [
+            "ტონი"
+          ],
+          "row": 2,
+          "column": 1,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "როკი",
+          "acceptedAnswers": [
+            "როკი"
+          ],
+          "row": 0,
+          "column": 3,
+          "direction": "down"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 65,
+        "tier": "hard"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-049",
+      "chapterId": "music",
+      "title": "მუსიკა",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "ვ"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ლ"
+        },
+        {
+          "id": "tile-4",
+          "letter": "მ"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-6",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-7",
+          "letter": "ხ"
+        },
+        {
+          "id": "tile-8",
+          "letter": "ს"
+        }
+      ],
+      "grid": {
+        "rows": 6,
+        "columns": 5
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "ვალსი",
+          "acceptedAnswers": [
+            "ვალსი"
+          ],
+          "row": 2,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "ხმა",
+          "acceptedAnswers": [
+            "ხმა"
+          ],
+          "row": 0,
+          "column": 1,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "სიმი",
+          "acceptedAnswers": [
+            "სიმი"
+          ],
+          "row": 2,
+          "column": 3,
+          "direction": "down"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 67,
+        "tier": "hard"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-050",
+      "chapterId": "music",
+      "title": "მუსიკა",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "პ"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ო"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-4",
+          "letter": "რ"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-6",
+          "letter": "ე"
+        },
+        {
+          "id": "tile-7",
+          "letter": "ჯ"
+        },
+        {
+          "id": "tile-8",
+          "letter": "ზ"
+        }
+      ],
+      "grid": {
+        "rows": 5,
+        "columns": 6
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "რეპი",
+          "acceptedAnswers": [
+            "რეპი"
+          ],
+          "row": 3,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "ზარი",
+          "acceptedAnswers": [
+            "ზარი"
+          ],
+          "row": 0,
+          "column": 3,
+          "direction": "down"
+        },
+        {
+          "id": "word-3",
+          "answer": "ოპერა",
+          "acceptedAnswers": [
+            "ოპერა"
+          ],
+          "row": 0,
+          "column": 0,
+          "direction": "down"
+        },
+        {
+          "id": "word-4",
+          "answer": "ჯაზი",
+          "acceptedAnswers": [
+            "ჯაზი"
+          ],
+          "row": 1,
+          "column": 2,
+          "direction": "across"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "score": 68,
+        "tier": "hard"
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    }
+  ]
+}

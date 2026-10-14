@@ -1,5 +1,9 @@
 # First TestFlight content
 
+This documents historical revision 2. The active campaign is now
+[themed revision 3](THEMED_CONTENT.md), which replaces scenery chapters with
+semantic topics and permits three-answer puzzles within the eight-tile limit.
+
 The first beta target is **50 levels**, with **4–5 crossword answers in every
 level**. Bonus words do not count toward this minimum. This is our product target,
 not an Apple level-count requirement. It gives testers enough progression to

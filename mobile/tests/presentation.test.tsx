@@ -4,7 +4,7 @@ import { PrimaryButton, RoundButton } from '../src/components/Buttons';
 import { CrosswordBoard } from '../src/components/CrosswordBoard';
 import { LetterWheel } from '../src/components/LetterWheel';
 import { Display } from '../src/components/Text';
-import { catalog } from '../src/content/catalog';
+import { GameplayScreen } from '../src/screens/GameplayScreen';
 import { initialState, transition } from '../src/engine/game';
 import { selectGameplay } from '../src/engine/selectors';
 import {
@@ -13,7 +13,7 @@ import {
   stripFeedback,
 } from '../src/screens/presentEvents';
 import { chapterTone, toMtavruli } from '../src/theme';
-import { reachLevel, submit, tilesFor } from './helpers';
+import { catalog, reachLevel, submit, tilesFor } from './legacyHelpers';
 
 // Animation and drawing are verified on the simulator; here they are inert.
 jest.mock('react-native-worklets', () =>
@@ -22,6 +22,30 @@ jest.mock('react-native-worklets', () =>
 jest.mock('react-native-reanimated', () =>
   require('react-native-reanimated/mock'),
 );
+jest.mock('expo-router', () => ({
+  router: { canGoBack: () => false, replace: jest.fn(), push: jest.fn() },
+  useFocusEffect: jest.fn(),
+}));
+jest.mock(
+  'react-native-safe-area-context',
+  () => require('react-native-safe-area-context/jest/mock').default,
+);
+jest.mock('../src/services/feedback', () => ({ tileHaptic: jest.fn() }));
+jest.mock('../src/state/gameStore', () => {
+  const { initialState } = require('../src/engine/game');
+  const { catalog } = require('../src/content/catalog');
+  const state = {
+    game: initialState(catalog),
+    busy: false,
+    error: null,
+    eventBatch: { sequence: 0, events: [] },
+    dispatch: jest.fn(),
+  };
+  return {
+    gameStore: { getState: () => state },
+    useGameStore: (selector: (state: unknown) => unknown) => selector(state),
+  };
+});
 jest.mock('@shopify/react-native-skia', () => {
   const builder = {
     moveTo: () => builder,
@@ -43,6 +67,14 @@ jest.mock('@shopify/react-native-skia', () => {
 });
 
 const level = catalog.levels[0]!;
+
+test('gameplay shows the Georgian topic heading above the hidden board', async () => {
+  const screen = await render(<GameplayScreen levelId="ka-001" />);
+  expect(screen.getByTestId('level-topic')).toHaveTextContent('ამინდი');
+  expect(screen.getByLabelText('დონე 1')).toBeTruthy();
+  expect(screen.queryByText('მზე')).toBeNull();
+  expect(screen.getByLabelText('0/3 სიტყვა · ბონუსი 0')).toBeTruthy();
+});
 
 test('hidden cells expose no answers; committed words render in Georgian', async () => {
   const view = selectGameplay(initialState(catalog), catalog);

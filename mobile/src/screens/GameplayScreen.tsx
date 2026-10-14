@@ -30,6 +30,7 @@ import { levelTone, motion, palette, space } from '../theme';
 import { boardMoment, celebrationLength, stripFeedback } from './presentEvents';
 
 const BAR = 60;
+const TOPIC = 48;
 const STATUS = 34;
 const STRIP = 72;
 const MAX_CONTENT = 520;
@@ -186,6 +187,7 @@ function GameLayout({
     insets.top -
     insets.bottom -
     BAR -
+    TOPIC -
     STATUS -
     STRIP -
     wheel -
@@ -200,8 +202,7 @@ function GameLayout({
       glowY={0.7}
       header={
         <TopBar
-          eyebrow={`დონე ${levelNumber}`}
-          title={model.title}
+          title={`დონე ${levelNumber}`}
           trailing={
             <CoinBadge
               coins={model.coins}
@@ -212,6 +213,15 @@ function GameLayout({
       }
       contentStyle={styles.content}
     >
+      <Txt
+        accessibilityRole="header"
+        testID="level-topic"
+        variant="heading"
+        color={palette.goldLight}
+        style={styles.topic}
+      >
+        {model.title}
+      </Txt>
       <View
         style={[styles.boardArea, { minHeight: Math.max(boardHeight, 120) }]}
       >
@@ -354,6 +364,12 @@ function Progress({
 
 const styles = StyleSheet.create({
   content: { alignItems: 'center', paddingBottom: space.md },
+  topic: {
+    alignSelf: 'stretch',
+    textAlign: 'center',
+    minHeight: TOPIC,
+    paddingVertical: space.sm,
+  },
   boardArea: {
     justifyContent: 'center',
     alignSelf: 'stretch',

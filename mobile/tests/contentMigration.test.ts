@@ -1,7 +1,7 @@
 import { mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { catalog, previousCatalogs } from '../src/content/catalog';
+import { previousCatalogs } from '../src/content/catalog';
 import {
   initialState,
   isUnlocked,
@@ -21,6 +21,7 @@ import { reachLevel, submit } from './legacyHelpers';
 import { TestSqlite } from './sqliteAdapter';
 
 const legacy = previousCatalogs[0]!;
+const catalog = previousCatalogs[1]!;
 
 test('a paid old crossing hint reveals both retained letters when the new grid separates them', () => {
   const oldLevel = legacy.levels[3]!;

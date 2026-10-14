@@ -1,0 +1,664 @@
+{
+  "schemaVersion": 1,
+  "id": "geowords-prototype",
+  "revision": 3,
+  "topics": [
+    {
+      "id": "weather",
+      "title": "ამინდი",
+      "words": [
+        "მზე",
+        "ცა",
+        "ქარი",
+        "წვიმა",
+        "თოვლი",
+        "ცივი",
+        "თბილი"
+      ]
+    },
+    {
+      "id": "animals",
+      "title": "ცხოველები",
+      "words": [
+        "ბუ",
+        "ვირი",
+        "თევზი",
+        "თოლია",
+        "იაკი",
+        "იხვი",
+        "კატა",
+        "ლომი",
+        "ქორი",
+        "ღორი",
+        "ძაღლი",
+        "ჯორი"
+      ]
+    },
+    {
+      "id": "family",
+      "title": "ოჯახი",
+      "words": [
+        "ბაბუა",
+        "დედა",
+        "მამა",
+        "ძმა",
+        "ცოლი"
+      ]
+    },
+    {
+      "id": "body",
+      "title": "სხეული",
+      "words": [
+        "გული",
+        "ენა",
+        "თავი",
+        "თვალი",
+        "თითი",
+        "თმა",
+        "კანი",
+        "კოჭი",
+        "პირი",
+        "ტანი",
+        "ყელი",
+        "ყური",
+        "ხალი",
+        "ხელი"
+      ]
+    },
+    {
+      "id": "plants",
+      "title": "მცენარეები",
+      "words": [
+        "ბამბა",
+        "ვაზი",
+        "თივა",
+        "ია",
+        "კამა",
+        "ტოტი",
+        "ღერო",
+        "ჩალა",
+        "ძირი",
+        "ხე",
+        "ხილი"
+      ]
+    },
+    {
+      "id": "landscape",
+      "title": "ბუნება",
+      "words": [
+        "ბარი",
+        "გორა",
+        "ველი",
+        "ზღვა",
+        "მთა",
+        "პიკი",
+        "ლოდი",
+        "ქედი",
+        "ქვიშა",
+        "ტყე"
+      ]
+    },
+    {
+      "id": "food",
+      "title": "საკვები",
+      "words": [
+        "ზეთი",
+        "კამა",
+        "პური",
+        "რძე",
+        "ტორტი",
+        "ყველი",
+        "ჩაი",
+        "ხილი"
+      ]
+    },
+    {
+      "id": "home",
+      "title": "სახლი და ეზო",
+      "words": [
+        "ბინა",
+        "კარი",
+        "კერა",
+        "მინა",
+        "ტახტი",
+        "ქურა",
+        "ღობე",
+        "ეზო",
+        "ბაღი",
+        "ვაზა"
+      ]
+    },
+    {
+      "id": "numbers",
+      "title": "რიცხვები",
+      "words": [
+        "ათი",
+        "ასი",
+        "ორი",
+        "სამი",
+        "ნული"
+      ]
+    },
+    {
+      "id": "music",
+      "title": "მუსიკა",
+      "words": [
+        "ბანი",
+        "ზარი",
+        "სიმი",
+        "ტონი",
+        "ხმა"
+      ]
+    }
+  ],
+  "levels": [
+    {
+      "id": "ka-001",
+      "topicId": "weather",
+      "sourceWords": [
+        "ცა",
+        "ქარი",
+        "ცივი"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-002",
+      "topicId": "weather",
+      "sourceWords": [
+        "თოვლი",
+        "ცივი",
+        "თბილი"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-003",
+      "topicId": "weather",
+      "sourceWords": [
+        "მზე",
+        "ცა",
+        "წვიმა"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-004",
+      "topicId": "weather",
+      "sourceWords": [
+        "ცა",
+        "ქარი",
+        "წვიმა"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-005",
+      "topicId": "weather",
+      "sourceWords": [
+        "ცა",
+        "თოვლი",
+        "ცივი"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-006",
+      "topicId": "animals",
+      "sourceWords": [
+        "თოლია",
+        "იაკი",
+        "ლომი"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-007",
+      "topicId": "animals",
+      "sourceWords": [
+        "ღორი",
+        "ძაღლი",
+        "ჯორი"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-008",
+      "topicId": "animals",
+      "sourceWords": [
+        "ვირი",
+        "თევზი",
+        "იხვი"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-009",
+      "topicId": "animals",
+      "sourceWords": [
+        "ვირი",
+        "იაკი",
+        "კატა"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-010",
+      "topicId": "animals",
+      "sourceWords": [
+        "თოლია",
+        "ლომი",
+        "ქორი"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-011",
+      "topicId": "animals",
+      "sourceWords": [
+        "თოლია",
+        "ლომი",
+        "ძაღლი"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-012",
+      "topicId": "animals",
+      "sourceWords": [
+        "ვირი",
+        "იხვი",
+        "ქორი",
+        "ღორი"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-013",
+      "topicId": "family",
+      "sourceWords": [
+        "ბაბუა",
+        "მამა",
+        "ძმა"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-014",
+      "topicId": "family",
+      "sourceWords": [
+        "დედა",
+        "მამა",
+        "ძმა"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-015",
+      "topicId": "body",
+      "sourceWords": [
+        "გული",
+        "ყელი",
+        "ყური"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-016",
+      "topicId": "body",
+      "sourceWords": [
+        "ენა",
+        "კანი",
+        "კოჭი"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-017",
+      "topicId": "body",
+      "sourceWords": [
+        "გული",
+        "კანი",
+        "ტანი"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-018",
+      "topicId": "body",
+      "sourceWords": [
+        "თითი",
+        "თმა",
+        "პირი"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-019",
+      "topicId": "body",
+      "sourceWords": [
+        "თითი",
+        "პირი",
+        "ყური"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-020",
+      "topicId": "body",
+      "sourceWords": [
+        "ენა",
+        "თავი",
+        "თვალი",
+        "ხალი",
+        "ხელი"
+      ],
+      "seed": 9
+    },
+    {
+      "id": "ka-021",
+      "topicId": "body",
+      "sourceWords": [
+        "თავი",
+        "თვალი",
+        "თმა",
+        "ხალი",
+        "ხელი"
+      ],
+      "seed": 18
+    },
+    {
+      "id": "ka-022",
+      "topicId": "plants",
+      "sourceWords": [
+        "ძირი",
+        "ხე",
+        "ხილი"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-023",
+      "topicId": "plants",
+      "sourceWords": [
+        "ია",
+        "ძირი",
+        "ხილი"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-024",
+      "topicId": "plants",
+      "sourceWords": [
+        "ტოტი",
+        "ღერო",
+        "ხე"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-025",
+      "topicId": "plants",
+      "sourceWords": [
+        "ბამბა",
+        "ია",
+        "ჩალა"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-026",
+      "topicId": "plants",
+      "sourceWords": [
+        "ბამბა",
+        "კამა",
+        "ჩალა"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-027",
+      "topicId": "plants",
+      "sourceWords": [
+        "ვაზი",
+        "თივა",
+        "ტოტი"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-028",
+      "topicId": "plants",
+      "sourceWords": [
+        "ვაზი",
+        "თივა",
+        "ია",
+        "კამა"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-029",
+      "topicId": "landscape",
+      "sourceWords": [
+        "ბარი",
+        "გორა",
+        "ლოდი"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-030",
+      "topicId": "landscape",
+      "sourceWords": [
+        "ველი",
+        "ქედი",
+        "ტყე"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-031",
+      "topicId": "landscape",
+      "sourceWords": [
+        "ველი",
+        "ქედი",
+        "ქვიშა"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-032",
+      "topicId": "landscape",
+      "sourceWords": [
+        "ველი",
+        "ლოდი",
+        "ტყე"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-033",
+      "topicId": "landscape",
+      "sourceWords": [
+        "ლოდი",
+        "ქედი",
+        "ტყე"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-034",
+      "topicId": "food",
+      "sourceWords": [
+        "ზეთი",
+        "პური",
+        "რძე"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-035",
+      "topicId": "food",
+      "sourceWords": [
+        "ზეთი",
+        "რძე",
+        "ჩაი"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-036",
+      "topicId": "food",
+      "sourceWords": [
+        "პური",
+        "რძე",
+        "ჩაი"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-037",
+      "topicId": "home",
+      "sourceWords": [
+        "ბინა",
+        "მინა",
+        "ვაზა"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-038",
+      "topicId": "home",
+      "sourceWords": [
+        "კერა",
+        "ქურა",
+        "ეზო"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-039",
+      "topicId": "home",
+      "sourceWords": [
+        "კარი",
+        "ღობე",
+        "ბაღი"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-040",
+      "topicId": "home",
+      "sourceWords": [
+        "ბინა",
+        "მინა",
+        "ტახტი"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-041",
+      "topicId": "home",
+      "sourceWords": [
+        "კერა",
+        "ეზო",
+        "ვაზა"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-042",
+      "topicId": "home",
+      "sourceWords": [
+        "კარი",
+        "მინა",
+        "ქურა"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-043",
+      "topicId": "home",
+      "sourceWords": [
+        "ბინა",
+        "კარი",
+        "კერა",
+        "ბაღი"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-044",
+      "topicId": "numbers",
+      "sourceWords": [
+        "ათი",
+        "ასი",
+        "ნული"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-045",
+      "topicId": "numbers",
+      "sourceWords": [
+        "ათი",
+        "ორი",
+        "სამი"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-046",
+      "topicId": "numbers",
+      "sourceWords": [
+        "ასი",
+        "სამი",
+        "ნული"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-047",
+      "topicId": "numbers",
+      "sourceWords": [
+        "ათი",
+        "ასი",
+        "ორი",
+        "სამი"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-048",
+      "topicId": "music",
+      "sourceWords": [
+        "ბანი",
+        "ზარი",
+        "ტონი"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-049",
+      "topicId": "music",
+      "sourceWords": [
+        "ბანი",
+        "სიმი",
+        "ხმა"
+      ],
+      "seed": 0
+    },
+    {
+      "id": "ka-050",
+      "topicId": "music",
+      "sourceWords": [
+        "ზარი",
+        "სიმი",
+        "ხმა"
+      ],
+      "seed": 0
+    }
+  ]
+}

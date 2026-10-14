@@ -2,8 +2,12 @@
 
 Offline Georgian crossword prototype for iOS and Android. Connect wheel letters,
 find target and bonus words, spend coins on hints, complete levels and resume from
-local SQLite. Four manually authored levels use ten reference-checked Georgian
-words. The interface is an original Georgian cloisonné-enamel design with bundled
+local SQLite. Fifty puzzles use related Georgian words across ten topics, with
+the current topic displayed above the board. Each puzzle has three to five answers
+and at most eight letter tiles. The 320-word reference vocabulary supports 142
+distinct target answers, with difficulty increasing within each topic
+([content notes](docs/EXPANDED_CONTENT.md)).
+The interface is an original Georgian cloisonné-enamel design with bundled
 Georgian fonts ([design system](docs/UI_DESIGN_SYSTEM.md)); final branding is open.
 
 ## Requirements
@@ -94,6 +98,7 @@ large-scale content optimizer. Runtime code has no third-party Python dependenci
 - [Current implementation and verification status](docs/CODEX_STATUS.md)
 - [Design system and presentation](docs/UI_DESIGN_SYSTEM.md)
 - [Vocabulary provenance and license](content/dictionaries/README.md)
+- [Expanded campaign, pacing and save migration](docs/EXPANDED_CONTENT.md)
 - [Native test checklist](docs/NATIVE_TEST_CHECKLIST.md)
 
 The separately requested `GEOWORDS_PRODUCT_AND_ENGINEERING_SPEC.md` was absent.

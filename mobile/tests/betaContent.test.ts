@@ -1,8 +1,13 @@
-import { catalog, previousCatalogs, vocabulary } from '../src/content/catalog';
+import { previousCatalogs, vocabulary } from '../src/content/catalog';
 import { initialState, isUnlocked, transition } from '../src/engine/game';
 import { selectChapters, selectGameplay } from '../src/engine/selectors';
 import { parseSnapshot } from '../src/storage/snapshot';
-import { tilesFor, submit } from './helpers';
+import { tilesFor, submit as send } from './helpers';
+import type { GameState, Level } from '../src/models/types';
+
+const catalog = previousCatalogs[1]!;
+const submit = (state: GameState, level: Level, word: string) =>
+  send(state, level, word, catalog);
 
 test('beta contains 50 distinct connected levels, each with four or five targets', () => {
   expect(catalog.levels).toHaveLength(50);
