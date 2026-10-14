@@ -1,0 +1,23 @@
+# iPhone 17 Pro, level ka-003 initial viewport after restart.yaml.
+appId: host.exp.Exponent
+---
+- assertVisible: '138 მონეტა · 0/2 სიტყვა · Bonus 0'
+- swipe:
+    start: 50%, 64%
+    end: 75%, 72%
+    duration: 700
+- assertVisible: 'სცადე კიდევ · Try again'
+- assertVisible: '138 მონეტა · 0/2 სიტყვა · Bonus 0'
+- swipe:
+    start: 50%, 77%
+    end: 50%, 45%
+    duration: 700
+- scrollUntilVisible:
+    element: 'Tap mode'
+    direction: DOWN
+    centerElement: true
+- tapOn:
+    text: 'Tap mode'
+    retryTapIfNoChange: true
+- assertVisible: 'Swipe mode'
+- assertVisible: 'Submit'

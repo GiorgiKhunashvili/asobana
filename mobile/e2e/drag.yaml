@@ -1,0 +1,10 @@
+# Geometry recorded from the fresh first-level iPhone 17 Pro viewport.
+appId: host.exp.Exponent
+---
+- swipe:
+    start: 50%, 52%
+    end: 27%, 70%
+    duration: 1000
+- assertVisible: '100 მონეტა · 1/2 სიტყვა · Bonus 0'
+- assertVisible: 'მე ✓'
+- takeScreenshot: artifacts/ios-drag-result

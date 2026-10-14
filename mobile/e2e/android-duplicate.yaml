@@ -1,0 +1,9 @@
+# Run after android-drag.yaml with the first level still at its initial scroll position.
+appId: host.exp.Exponent
+---
+- swipe:
+    start: 50%, 48%
+    end: 29%, 65%
+    duration: 700
+- assertVisible: 'ეს სიტყვა უკვე ნაპოვნია · Already found'
+- assertVisible: '100 მონეტა · 1/2 სიტყვა · Bonus 0'

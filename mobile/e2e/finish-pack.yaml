@@ -1,0 +1,49 @@
+# Run on iPhone 17 Pro after chapter-gesture.yaml (ka-003 in tap mode).
+appId: host.exp.Exponent
+---
+- assertVisible: 'Swipe mode'
+- tapOn: 'რ · 3'
+- tapOn: 'კ · 1'
+- tapOn: 'ი · 4'
+- tapOn: 'ნ · 5'
+- tapOn: 'ა · 2'
+- tapOn: 'Submit'
+- assertVisible: '141 მონეტა · 0/2 სიტყვა · Bonus 1'
+- tapOn: 'კ · 1'
+- tapOn: 'ა · 2'
+- tapOn: 'რ · 3'
+- tapOn: 'ი · 4'
+- tapOn: 'Submit'
+- assertVisible: '141 მონეტა · 1/2 სიტყვა · Bonus 1'
+- tapOn: 'კ · 1'
+- tapOn: 'ა · 2'
+- tapOn: 'ნ · 5'
+- tapOn: 'ი · 4'
+- tapOn: 'Submit'
+- assertVisible: '166 მონეტა · 2/2 სიტყვა · Bonus 1'
+- tapOn: 'გილოცავ! · Victory'
+- tapOn: 'შემდეგი დონე · Next level'
+- assertVisible: '166 მონეტა · 0/2 სიტყვა · Bonus 0'
+- scrollUntilVisible:
+    element: 'Tap mode'
+    direction: DOWN
+    centerElement: true
+- tapOn:
+    text: 'Tap mode'
+    retryTapIfNoChange: true
+- assertVisible: 'Swipe mode'
+- tapOn: 'გ · 1'
+- tapOn: 'ზ · 2'
+- tapOn: 'ა · 3'
+- tapOn: 'Submit'
+- assertVisible: '166 მონეტა · 1/2 სიტყვა · Bonus 0'
+- tapOn: 'ზ · 2'
+- tapOn: 'ღ · 4'
+- tapOn: 'ვ · 5'
+- tapOn: 'ა · 3'
+- tapOn: 'Submit'
+- assertVisible: '191 მონეტა · 2/2 სიტყვა · Bonus 0'
+- tapOn: 'გილოცავ! · Victory'
+- assertVisible: 'ოთხივე დონე დასრულებულია · All prototype levels completed!'
+- assertNotVisible: 'შემდეგი დონე · Next level'
+- takeScreenshot: artifacts/ios-pack-completed

@@ -1,0 +1,16 @@
+# Pixel 10 Pro. Android Expo Go restores the active route on cold launch.
+appId: host.exp.Exponent
+---
+- stopApp
+- openLink: exp://127.0.0.1:8081
+- extendedWaitUntil:
+    visible: 'ოჯახი'
+    timeout: 30000
+- assertVisible: '125 მონეტა · 0/2 სიტყვა · Bonus 0'
+- swipe:
+    start: 50%, 58%
+    end: 70%, 63%
+    duration: 700
+- assertVisible: 'სცადე კიდევ · Try again'
+- assertVisible: '125 მონეტა · 0/2 სიტყვა · Bonus 0'
+- takeScreenshot: artifacts/android-restart-restored

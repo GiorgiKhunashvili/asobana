@@ -1,0 +1,10 @@
+# Pixel 10 Pro, 1280x2856 portrait, fresh first-level viewport.
+appId: host.exp.Exponent
+---
+- swipe:
+    start: 50%, 48%
+    end: 29%, 65%
+    duration: 800
+- assertVisible: '100 მონეტა · 1/2 სიტყვა · Bonus 0'
+- assertVisible: 'მე ✓'
+- takeScreenshot: artifacts/android-drag-result

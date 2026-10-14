@@ -1,0 +1,21 @@
+# Run after android-drag.yaml / android-duplicate.yaml.
+appId: host.exp.Exponent
+---
+- scrollUntilVisible:
+    element: 'Tap mode'
+    direction: DOWN
+    centerElement: true
+- tapOn:
+    text: 'Tap mode'
+    retryTapIfNoChange: true
+- assertVisible: 'Swipe mode'
+- tapOn: 'მ · 1'
+- tapOn: 'ზ · 2'
+- tapOn: 'ე · 3'
+- tapOn: 'Submit'
+- assertVisible: '125 მონეტა · 2/2 სიტყვა · Bonus 0'
+- tapOn: 'გილოცავ! · Victory'
+- tapOn: 'შემდეგი დონე · Next level'
+- assertVisible: 'ოჯახი'
+- assertVisible: '125 მონეტა · 0/2 სიტყვა · Bonus 0'
+- runFlow: android-restart.yaml
