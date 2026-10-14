@@ -1,0 +1,42 @@
+name: GeoWords checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  mobile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - run: npx expo install --check
+        working-directory: mobile
+      - run: npx expo export --platform ios --platform android
+        working-directory: mobile
+        env:
+          CI: '1'
+  generator:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@1c37ad07a6a961277cf70c0d37d6f313000f5884 # v10.3.0
+        with:
+          version: '0.12.20'
+      - run: uv sync --locked --python 3.13
+        working-directory: puzzle-generator
+      - run: uv run ruff check . && uv run ruff format --check . && uv run mypy src && uv run pytest
+        working-directory: puzzle-generator
+      - run: uv run python -m geowords_generator --allow-prototype --seed 42
+        working-directory: puzzle-generator
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: node --import tsx scripts/validate-draft.ts artifacts/draft.v1.json
