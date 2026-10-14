@@ -1,5 +1,6 @@
 import type { GameState, LevelPack } from '../models/types';
 import { parseSnapshot } from './snapshot';
+import { restoreContent } from './contentMigration';
 export interface SqlTransaction {
   execAsync(sql: string): Promise<void>;
   getFirstAsync<T>(
@@ -58,27 +59,43 @@ export async function migrateDatabase(database: SqlDatabase): Promise<void> {
 export function createSqliteRepository(
   database: SqlDatabase,
   pack: LevelPack,
+  previousPacks: readonly LevelPack[] = [],
 ): GameRepository {
   return {
     async load() {
-      const row = await database.getFirstAsync<{
-        payload: string;
-        revision: number;
-        save_format: number;
-      }>(
-        'SELECT payload, revision, save_format FROM game_snapshot WHERE id = 1',
-      );
-      if (!row) return null;
-      if (
-        row.save_format !== 1 ||
-        !Number.isSafeInteger(row.revision) ||
-        row.revision < 1
-      )
-        throw new Error('Unsupported or corrupt saved progress');
-      return {
-        state: parseSnapshot(JSON.parse(row.payload) as unknown, pack),
-        revision: row.revision,
-      };
+      let loaded: SavedGame | null = null;
+      await database.withExclusiveTransactionAsync(async (tx) => {
+        const row = await tx.getFirstAsync<{
+          payload: string;
+          revision: number;
+          save_format: number;
+        }>(
+          'SELECT payload, revision, save_format FROM game_snapshot WHERE id = 1',
+        );
+        if (!row) return;
+        if (
+          row.save_format !== 1 ||
+          !Number.isSafeInteger(row.revision) ||
+          row.revision < 1
+        )
+          throw new Error('Unsupported or corrupt saved progress');
+        const restored = restoreContent(
+          JSON.parse(row.payload) as unknown,
+          pack,
+          previousPacks,
+        );
+        const revision = row.revision + (restored.migrated ? 1 : 0);
+        if (!Number.isSafeInteger(revision))
+          throw new Error('Invalid save revision');
+        if (restored.migrated)
+          await tx.runAsync(
+            'UPDATE game_snapshot SET payload = ?, revision = ? WHERE id = 1',
+            JSON.stringify(restored.state),
+            revision,
+          );
+        loaded = { state: restored.state, revision };
+      });
+      return loaded;
     },
     async save(state, expectedRevision) {
       const validated = parseSnapshot(state, pack);

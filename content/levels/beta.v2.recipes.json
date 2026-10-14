@@ -1,0 +1,985 @@
+{
+  "schemaVersion": 1,
+  "id": "geowords-prototype",
+  "revision": 2,
+  "chapters": [
+    {
+      "id": "beginning",
+      "title": "დასაწყისი"
+    },
+    {
+      "id": "discovery",
+      "title": "აღმოჩენა"
+    },
+    {
+      "id": "garden",
+      "title": "ბაღი"
+    },
+    {
+      "id": "river",
+      "title": "მდინარე"
+    },
+    {
+      "id": "heights",
+      "title": "სიმაღლეები"
+    },
+    {
+      "id": "colors",
+      "title": "ფერები"
+    },
+    {
+      "id": "paths",
+      "title": "ბილიკები"
+    },
+    {
+      "id": "seasons",
+      "title": "სეზონები"
+    },
+    {
+      "id": "horizon",
+      "title": "ჰორიზონტი"
+    },
+    {
+      "id": "summit",
+      "title": "მწვერვალი"
+    }
+  ],
+  "levels": [
+    {
+      "id": "ka-001",
+      "authoring": "manual-extension",
+      "requiredWords": [
+        "მზე",
+        "მე",
+        "ეზო",
+        "ზომა"
+      ],
+      "chapterId": "beginning",
+      "title": "მზე",
+      "maxWords": 4,
+      "manualLevel": {
+        "schemaVersion": 1,
+        "id": "ka-001",
+        "chapterId": "beginning",
+        "title": "მზე",
+        "tiles": [
+          {
+            "id": "tile-1",
+            "letter": "მ"
+          },
+          {
+            "id": "tile-2",
+            "letter": "ზ"
+          },
+          {
+            "id": "tile-3",
+            "letter": "ე"
+          },
+          {
+            "id": "tile-4",
+            "letter": "ო"
+          },
+          {
+            "id": "tile-5",
+            "letter": "ა"
+          }
+        ],
+        "grid": {
+          "rows": 3,
+          "columns": 6
+        },
+        "words": [
+          {
+            "id": "word-1",
+            "answer": "მზე",
+            "acceptedAnswers": [
+              "მზე"
+            ],
+            "row": 0,
+            "column": 0,
+            "direction": "across"
+          },
+          {
+            "id": "word-2",
+            "answer": "მე",
+            "acceptedAnswers": [
+              "მე"
+            ],
+            "row": 0,
+            "column": 0,
+            "direction": "down"
+          },
+          {
+            "id": "word-3",
+            "answer": "ეზო",
+            "acceptedAnswers": [
+              "ეზო"
+            ],
+            "row": 0,
+            "column": 2,
+            "direction": "down"
+          },
+          {
+            "id": "word-4",
+            "answer": "ზომა",
+            "acceptedAnswers": [
+              "ზომა"
+            ],
+            "row": 1,
+            "column": 2,
+            "direction": "across"
+          }
+        ],
+        "bonusWords": [],
+        "difficulty": {
+          "tier": "easy",
+          "score": 25
+        },
+        "hints": {
+          "allowCell": true,
+          "allowWord": true
+        },
+        "reviewStatus": "generated-draft"
+      }
+    },
+    {
+      "id": "ka-002",
+      "authoring": "seeded-extension",
+      "seed": 0,
+      "sourceWords": [
+        "დედა",
+        "მამა",
+        "მთა",
+        "თმა"
+      ],
+      "chapterId": "beginning",
+      "title": "ოჯახი",
+      "maxWords": 4
+    },
+    {
+      "id": "ka-003",
+      "authoring": "seeded-extension",
+      "seed": 0,
+      "sourceWords": [
+        "კარი",
+        "კანი",
+        "კირი",
+        "კერა"
+      ],
+      "chapterId": "discovery",
+      "title": "სახლი",
+      "maxWords": 4
+    },
+    {
+      "id": "ka-004",
+      "authoring": "seeded-extension",
+      "seed": 0,
+      "sourceWords": [
+        "გზა",
+        "ზღვა",
+        "ვაზი",
+        "ვაზა"
+      ],
+      "chapterId": "discovery",
+      "title": "ზღვა",
+      "maxWords": 4
+    },
+    {
+      "id": "ka-005",
+      "authoring": "seeded-layout",
+      "seed": 10004,
+      "sourceWords": [
+        "ათი",
+        "აი",
+        "ალი",
+        "ასი",
+        "თასი",
+        "ია",
+        "სია"
+      ],
+      "chapterId": "garden",
+      "title": "ბილიკი 5",
+      "maxWords": 4
+    },
+    {
+      "id": "ka-006",
+      "authoring": "seeded-layout",
+      "seed": 10078,
+      "sourceWords": [
+        "დღე",
+        "ორი",
+        "ღერო",
+        "ღორი"
+      ],
+      "chapterId": "garden",
+      "title": "ბილიკი 6",
+      "maxWords": 4
+    },
+    {
+      "id": "ka-007",
+      "authoring": "seeded-layout",
+      "seed": 10480,
+      "sourceWords": [
+        "აი",
+        "ასი",
+        "ია",
+        "მისი",
+        "სამი",
+        "სია",
+        "სიმი",
+        "სმა",
+        "ძმა"
+      ],
+      "chapterId": "garden",
+      "title": "ბილიკი 7",
+      "maxWords": 4
+    },
+    {
+      "id": "ka-008",
+      "authoring": "seeded-layout",
+      "seed": 10608,
+      "sourceWords": [
+        "ხე",
+        "ხელი",
+        "ხიდი",
+        "ხილი"
+      ],
+      "chapterId": "garden",
+      "title": "ბილიკი 8",
+      "maxWords": 4
+    },
+    {
+      "id": "ka-009",
+      "authoring": "seeded-layout",
+      "seed": 10058,
+      "sourceWords": [
+        "ათი",
+        "აი",
+        "ბანი",
+        "ბინა",
+        "თათი",
+        "ია"
+      ],
+      "chapterId": "garden",
+      "title": "ბილიკი 9",
+      "maxWords": 4
+    },
+    {
+      "id": "ka-010",
+      "authoring": "seeded-layout",
+      "seed": 10050,
+      "sourceWords": [
+        "აი",
+        "ალი",
+        "ია",
+        "ჩაი",
+        "ჩალა",
+        "ხალი"
+      ],
+      "chapterId": "garden",
+      "title": "ბილიკი 10",
+      "maxWords": 4
+    },
+    {
+      "id": "ka-011",
+      "authoring": "seeded-layout",
+      "seed": 10256,
+      "sourceWords": [
+        "კირი",
+        "პიკი",
+        "პირი",
+        "ძირი"
+      ],
+      "chapterId": "river",
+      "title": "ბილიკი 11",
+      "maxWords": 4
+    },
+    {
+      "id": "ka-012",
+      "authoring": "seeded-layout",
+      "seed": 10604,
+      "sourceWords": [
+        "აი",
+        "ია",
+        "კაცი",
+        "ომი",
+        "ცა"
+      ],
+      "chapterId": "river",
+      "title": "ბილიკი 12",
+      "maxWords": 4
+    },
+    {
+      "id": "ka-013",
+      "authoring": "seeded-layout",
+      "seed": 10341,
+      "sourceWords": [
+        "თვე",
+        "თმა",
+        "მე",
+        "მთა",
+        "სმა"
+      ],
+      "chapterId": "river",
+      "title": "ბილიკი 13",
+      "maxWords": 4
+    },
+    {
+      "id": "ka-014",
+      "authoring": "seeded-layout",
+      "seed": 10590,
+      "sourceWords": [
+        "აი",
+        "ასი",
+        "ია",
+        "სია",
+        "სუნი",
+        "ფასი"
+      ],
+      "chapterId": "river",
+      "title": "ბილიკი 14",
+      "maxWords": 4
+    },
+    {
+      "id": "ka-015",
+      "authoring": "seeded-layout",
+      "seed": 10630,
+      "sourceWords": [
+        "ველი",
+        "ძველი",
+        "ხე",
+        "ხელი"
+      ],
+      "chapterId": "river",
+      "title": "ბილიკი 15",
+      "maxWords": 4
+    },
+    {
+      "id": "ka-016",
+      "authoring": "seeded-layout",
+      "seed": 10232,
+      "sourceWords": [
+        "ბაბუა",
+        "ბამბა",
+        "ბუ",
+        "კაბა",
+        "კამა"
+      ],
+      "chapterId": "river",
+      "title": "ბილიკი 16",
+      "maxWords": 5
+    },
+    {
+      "id": "ka-017",
+      "authoring": "seeded-layout",
+      "seed": 10166,
+      "sourceWords": [
+        "აი",
+        "ენა",
+        "ია",
+        "მე",
+        "მინა",
+        "მწვანე",
+        "ნავი",
+        "წვიმა",
+        "ჯამი",
+        "ჯანი"
+      ],
+      "chapterId": "heights",
+      "title": "ბილიკი 17",
+      "maxWords": 5
+    },
+    {
+      "id": "ka-018",
+      "authoring": "seeded-layout",
+      "seed": 10250,
+      "sourceWords": [
+        "ეტლი",
+        "ველი",
+        "თვე",
+        "თოვლი",
+        "ტყე",
+        "ყელი",
+        "ყველი"
+      ],
+      "chapterId": "heights",
+      "title": "ბილიკი 18",
+      "maxWords": 5
+    },
+    {
+      "id": "ka-019",
+      "authoring": "seeded-layout",
+      "seed": 10447,
+      "sourceWords": [
+        "ათი",
+        "აი",
+        "ალი",
+        "ვალი",
+        "თავი",
+        "თვალი",
+        "თივა",
+        "თოვლი",
+        "თოლია",
+        "ია",
+        "კილო",
+        "კოჭი"
+      ],
+      "chapterId": "heights",
+      "title": "ბილიკი 19",
+      "maxWords": 5
+    },
+    {
+      "id": "ka-020",
+      "authoring": "seeded-layout",
+      "seed": 10163,
+      "sourceWords": [
+        "გემი",
+        "გემო",
+        "გული",
+        "ლომი",
+        "მე",
+        "ომი"
+      ],
+      "chapterId": "heights",
+      "title": "ბილიკი 20",
+      "maxWords": 5
+    },
+    {
+      "id": "ka-021",
+      "authoring": "seeded-layout",
+      "seed": 10182,
+      "sourceWords": [
+        "აი",
+        "ვირი",
+        "ია",
+        "ფარი",
+        "ფირი",
+        "ცა",
+        "ცივი"
+      ],
+      "chapterId": "heights",
+      "title": "ბილიკი 21",
+      "maxWords": 5
+    },
+    {
+      "id": "ka-022",
+      "authoring": "seeded-layout",
+      "seed": 10014,
+      "sourceWords": [
+        "ზევით",
+        "ზეთი",
+        "თევზი",
+        "თვე",
+        "თითი"
+      ],
+      "chapterId": "heights",
+      "title": "ბილიკი 22",
+      "maxWords": 5
+    },
+    {
+      "id": "ka-023",
+      "authoring": "seeded-layout",
+      "seed": 10073,
+      "sourceWords": [
+        "აი",
+        "ზონა",
+        "ია",
+        "ტანი",
+        "ტონი",
+        "ხაზი",
+        "ხატი"
+      ],
+      "chapterId": "colors",
+      "title": "ბილიკი 23",
+      "maxWords": 5
+    },
+    {
+      "id": "ka-024",
+      "authoring": "seeded-layout",
+      "seed": 10395,
+      "sourceWords": [
+        "აი",
+        "ალი",
+        "გორა",
+        "ია",
+        "ორი",
+        "როლი",
+        "ცა",
+        "ცალი",
+        "ცოლი"
+      ],
+      "chapterId": "colors",
+      "title": "ბილიკი 24",
+      "maxWords": 5
+    },
+    {
+      "id": "ka-025",
+      "authoring": "seeded-layout",
+      "seed": 10271,
+      "sourceWords": [
+        "რძე",
+        "ფერი",
+        "ფირი",
+        "ძილი",
+        "ძირი"
+      ],
+      "chapterId": "colors",
+      "title": "ბილიკი 25",
+      "maxWords": 5
+    },
+    {
+      "id": "ka-026",
+      "authoring": "seeded-layout",
+      "seed": 10245,
+      "sourceWords": [
+        "აი",
+        "არხი",
+        "ია",
+        "რუხი",
+        "ტური",
+        "ქარი",
+        "ქურა",
+        "ხატი"
+      ],
+      "chapterId": "colors",
+      "title": "ბილიკი 26",
+      "maxWords": 5
+    },
+    {
+      "id": "ka-027",
+      "authoring": "seeded-layout",
+      "seed": 10676,
+      "sourceWords": [
+        "აი",
+        "ეზო",
+        "ზარი",
+        "ია",
+        "ორი",
+        "ჯარი",
+        "ჯორი"
+      ],
+      "chapterId": "colors",
+      "title": "ბილიკი 27",
+      "maxWords": 5
+    },
+    {
+      "id": "ka-028",
+      "authoring": "seeded-layout",
+      "seed": 10355,
+      "sourceWords": [
+        "დანა",
+        "ენა",
+        "მადა",
+        "მე",
+        "მწვანე"
+      ],
+      "chapterId": "colors",
+      "title": "ბილიკი 28",
+      "maxWords": 5
+    },
+    {
+      "id": "ka-029",
+      "authoring": "seeded-layout",
+      "seed": 10274,
+      "sourceWords": [
+        "ათი",
+        "აი",
+        "ალი",
+        "ასი",
+        "თასი",
+        "ია",
+        "საათი",
+        "სია",
+        "ძალა",
+        "ძაღლი"
+      ],
+      "chapterId": "paths",
+      "title": "ბილიკი 29",
+      "maxWords": 5
+    },
+    {
+      "id": "ka-030",
+      "authoring": "seeded-layout",
+      "seed": 10389,
+      "sourceWords": [
+        "აი",
+        "ია",
+        "იაკი",
+        "კარი",
+        "კირი",
+        "ორი",
+        "პარიკი",
+        "პარკი",
+        "პიკი",
+        "პირი",
+        "ღორი"
+      ],
+      "chapterId": "paths",
+      "title": "ბილიკი 30",
+      "maxWords": 5
+    },
+    {
+      "id": "ka-031",
+      "authoring": "seeded-layout",
+      "seed": 10048,
+      "sourceWords": [
+        "კილო",
+        "ორი",
+        "როლი",
+        "რული",
+        "ყური"
+      ],
+      "chapterId": "paths",
+      "title": "ბილიკი 31",
+      "maxWords": 5
+    },
+    {
+      "id": "ka-032",
+      "authoring": "seeded-layout",
+      "seed": 10440,
+      "sourceWords": [
+        "აი",
+        "ალი",
+        "ეტლი",
+        "ია",
+        "კატა",
+        "კაცი",
+        "კეცი",
+        "ცა",
+        "ცალი",
+        "ცელი"
+      ],
+      "chapterId": "paths",
+      "title": "ბილიკი 32",
+      "maxWords": 5
+    },
+    {
+      "id": "ka-033",
+      "authoring": "seeded-layout",
+      "seed": 10165,
+      "sourceWords": [
+        "ველი",
+        "ნული",
+        "სული",
+        "სუნი",
+        "ყელი",
+        "ყველი"
+      ],
+      "chapterId": "paths",
+      "title": "ბილიკი 33",
+      "maxWords": 5
+    },
+    {
+      "id": "ka-034",
+      "authoring": "seeded-layout",
+      "seed": 10214,
+      "sourceWords": [
+        "ათი",
+        "აი",
+        "თავი",
+        "თივა",
+        "ია",
+        "კანი",
+        "კაცი",
+        "კოცნა",
+        "ნავი",
+        "ცა"
+      ],
+      "chapterId": "paths",
+      "title": "ბილიკი 34",
+      "maxWords": 5
+    },
+    {
+      "id": "ka-035",
+      "authoring": "seeded-layout",
+      "seed": 10174,
+      "sourceWords": [
+        "ლოდი",
+        "ლომი",
+        "მე",
+        "ომი",
+        "ქედი"
+      ],
+      "chapterId": "seasons",
+      "title": "ბილიკი 35",
+      "maxWords": 5
+    },
+    {
+      "id": "ka-036",
+      "authoring": "seeded-layout",
+      "seed": 10253,
+      "sourceWords": [
+        "აი",
+        "ია",
+        "ორი",
+        "ტორტი",
+        "ტოტი",
+        "ქარი",
+        "ქორი"
+      ],
+      "chapterId": "seasons",
+      "title": "ბილიკი 36",
+      "maxWords": 5
+    },
+    {
+      "id": "ka-037",
+      "authoring": "seeded-layout",
+      "seed": 10100,
+      "sourceWords": [
+        "აი",
+        "ბარი",
+        "ბეწვი",
+        "ვაზი",
+        "ზარი",
+        "ია",
+        "წერა"
+      ],
+      "chapterId": "seasons",
+      "title": "ბილიკი 37",
+      "maxWords": 5
+    },
+    {
+      "id": "ka-038",
+      "authoring": "seeded-layout",
+      "seed": 10528,
+      "sourceWords": [
+        "აი",
+        "ეზო",
+        "ენა",
+        "ვაზი",
+        "ზემო",
+        "ზომა",
+        "ზონა",
+        "ია",
+        "მე",
+        "მზე",
+        "მინა",
+        "ნავი",
+        "ომი"
+      ],
+      "chapterId": "seasons",
+      "title": "ბილიკი 38",
+      "maxWords": 5
+    },
+    {
+      "id": "ka-039",
+      "authoring": "seeded-layout",
+      "seed": 10635,
+      "sourceWords": [
+        "აი",
+        "ალი",
+        "ია",
+        "მე",
+        "ძმა",
+        "ხალი",
+        "ხე",
+        "ხელი",
+        "ხმა"
+      ],
+      "chapterId": "seasons",
+      "title": "ბილიკი 39",
+      "maxWords": 5
+    },
+    {
+      "id": "ka-040",
+      "authoring": "seeded-layout",
+      "seed": 10301,
+      "sourceWords": [
+        "აი",
+        "ია",
+        "კარი",
+        "კარტი",
+        "კორტი",
+        "ორი",
+        "ჩაი"
+      ],
+      "chapterId": "seasons",
+      "title": "ბილიკი 40",
+      "maxWords": 5
+    },
+    {
+      "id": "ka-041",
+      "authoring": "seeded-layout",
+      "seed": 10194,
+      "sourceWords": [
+        "ველი",
+        "თბილი",
+        "თვე",
+        "ძველი",
+        "ძილი"
+      ],
+      "chapterId": "horizon",
+      "title": "ბილიკი 41",
+      "maxWords": 5
+    },
+    {
+      "id": "ka-042",
+      "authoring": "seeded-layout",
+      "seed": 10130,
+      "sourceWords": [
+        "აი",
+        "ასი",
+        "ზომა",
+        "ზონა",
+        "ია",
+        "მინა",
+        "მისი",
+        "ომი",
+        "სამი",
+        "სია",
+        "სიმი",
+        "სმა"
+      ],
+      "chapterId": "horizon",
+      "title": "ბილიკი 42",
+      "maxWords": 5
+    },
+    {
+      "id": "ka-043",
+      "authoring": "seeded-layout",
+      "seed": 10265,
+      "sourceWords": [
+        "აი",
+        "არხი",
+        "ია",
+        "ქარი",
+        "ქვიშა",
+        "შავი"
+      ],
+      "chapterId": "horizon",
+      "title": "ბილიკი 43",
+      "maxWords": 5
+    },
+    {
+      "id": "ka-044",
+      "authoring": "seeded-layout",
+      "seed": 10666,
+      "sourceWords": [
+        "ბამბა",
+        "დღე",
+        "მადა",
+        "მე",
+        "ღამე"
+      ],
+      "chapterId": "horizon",
+      "title": "ბილიკი 44",
+      "maxWords": 5
+    },
+    {
+      "id": "ka-045",
+      "authoring": "seeded-layout",
+      "seed": 10577,
+      "sourceWords": [
+        "აი",
+        "ბარი",
+        "ბუ",
+        "ია",
+        "კაბა",
+        "კარი",
+        "პარკი",
+        "პური"
+      ],
+      "chapterId": "horizon",
+      "title": "ბილიკი 45",
+      "maxWords": 5
+    },
+    {
+      "id": "ka-046",
+      "authoring": "seeded-layout",
+      "seed": 10493,
+      "sourceWords": [
+        "აი",
+        "ალი",
+        "ეტლი",
+        "ია",
+        "ტახტი",
+        "ტყე",
+        "ყელი",
+        "ხალი",
+        "ხატი",
+        "ხე",
+        "ხელი"
+      ],
+      "chapterId": "horizon",
+      "title": "ბილიკი 46",
+      "maxWords": 5
+    },
+    {
+      "id": "ka-047",
+      "authoring": "seeded-layout",
+      "seed": 10254,
+      "sourceWords": [
+        "კირი",
+        "პიკი",
+        "პირი",
+        "რძე",
+        "ძირი"
+      ],
+      "chapterId": "summit",
+      "title": "ბილიკი 47",
+      "maxWords": 5
+    },
+    {
+      "id": "ka-048",
+      "authoring": "seeded-layout",
+      "seed": 10374,
+      "sourceWords": [
+        "აი",
+        "არხი",
+        "ბარი",
+        "ბაღი",
+        "ია",
+        "ორი",
+        "ღერო",
+        "ღობე",
+        "ღორი",
+        "ხე"
+      ],
+      "chapterId": "summit",
+      "title": "ბილიკი 48",
+      "maxWords": 5
+    },
+    {
+      "id": "ka-049",
+      "authoring": "seeded-layout",
+      "seed": 10027,
+      "sourceWords": [
+        "აი",
+        "ეზო",
+        "ენა",
+        "ზემო",
+        "ზომა",
+        "ზონა",
+        "ია",
+        "მე",
+        "მზე",
+        "მინა",
+        "ომი",
+        "ჯამი",
+        "ჯანი"
+      ],
+      "chapterId": "summit",
+      "title": "ბილიკი 49",
+      "maxWords": 5
+    },
+    {
+      "id": "ka-050",
+      "authoring": "seeded-layout",
+      "seed": 10242,
+      "sourceWords": [
+        "აი",
+        "ალი",
+        "არხი",
+        "ვალი",
+        "ვირი",
+        "ია",
+        "იხვი",
+        "ხალი",
+        "ხილი"
+      ],
+      "chapterId": "summit",
+      "title": "ბილიკი 50",
+      "maxWords": 5
+    }
+  ]
+}

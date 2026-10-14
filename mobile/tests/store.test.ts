@@ -1,11 +1,10 @@
-import { catalog } from '../src/content/catalog';
+import { catalog, tilesFor } from './legacyHelpers';
 import { createGameStore } from '../src/state/createGameStore';
 import {
   createSqliteRepository,
   migrateDatabase,
 } from '../src/storage/repository';
 import { TestSqlite } from './sqliteAdapter';
-import { tilesFor } from './helpers';
 test('queued commands commit once; a new store resumes with rewards/unlocks', async () => {
   const db = new TestSqlite();
   await migrateDatabase(db);

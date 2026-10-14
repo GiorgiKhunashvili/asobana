@@ -1,0 +1,103 @@
+# Requires the completed four-level prototype save (191 coins). No save reset.
+appId: host.exp.Exponent
+---
+- stopApp
+- openLink: exp://127.0.0.1:8081
+- tapOn:
+    text: 'Open'
+    optional: true
+- tapOn:
+    text: 'Continue'
+    optional: true
+- tapOn:
+    id: xmark
+    optional: true
+- extendedWaitUntil:
+    visible:
+      id: home-continue
+    timeout: 60000
+- assertVisible: '191 მონეტა'
+- tapOn:
+    id: home-continue
+- assertVisible: '4/4 სიტყვა · ბონუსი 0'
+- tapOn:
+    id: level-continue
+- extendedWaitUntil:
+    visible:
+      id: victory-next
+    timeout: 15000
+- tapOn:
+    id: victory-next
+- assertVisible: '0/4 სიტყვა · ბონუსი 0'
+- tapOn:
+    id: input-mode
+- tapOn:
+    id: tap-tile-tile-2
+- tapOn:
+    id: tap-tile-tile-3
+- tapOn:
+    id: tap-tile-tile-4
+- tapOn:
+    id: tap-submit
+- assertVisible: '0/4 სიტყვა · ბონუსი 1'
+- tapOn:
+    id: tap-tile-tile-3
+- tapOn:
+    id: tap-tile-tile-4
+- tapOn:
+    id: tap-tile-tile-2
+- tapOn:
+    id: tap-submit
+- assertVisible: '1/4 სიტყვა · ბონუსი 1'
+- tapOn:
+    id: tap-tile-tile-2
+- tapOn:
+    id: tap-tile-tile-4
+- tapOn:
+    id: tap-submit
+- assertVisible: '2/4 სიტყვა · ბონუსი 1'
+- tapOn:
+    id: tap-tile-tile-4
+- tapOn:
+    id: tap-tile-tile-2
+- tapOn:
+    id: tap-submit
+- assertVisible: '3/4 სიტყვა · ბონუსი 1'
+- tapOn:
+    id: tap-tile-tile-2
+- tapOn:
+    id: tap-tile-tile-1
+- tapOn:
+    id: tap-tile-tile-4
+- tapOn:
+    id: tap-submit
+- extendedWaitUntil:
+    visible:
+      id: victory-next
+    timeout: 15000
+- assertVisible: '219 მონეტა'
+- takeScreenshot: artifacts/ios-beta-level-5-completed
+- tapOn:
+    id: victory-next
+- assertVisible: '0/4 სიტყვა · ბონუსი 0'
+- stopApp
+- openLink: exp://127.0.0.1:8081
+- tapOn:
+    text: 'Open'
+    optional: true
+- tapOn:
+    text: 'Continue'
+    optional: true
+- tapOn:
+    id: xmark
+    optional: true
+- extendedWaitUntil:
+    visible:
+      id: home-continue
+    timeout: 30000
+- assertVisible: '219 მონეტა'
+- tapOn:
+    id: home-continue
+- assertVisible: 'ბილიკი 6'
+- assertVisible: '0/4 სიტყვა · ბონუსი 0'
+- takeScreenshot: artifacts/ios-beta-restarted

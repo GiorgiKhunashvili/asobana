@@ -6,7 +6,7 @@ import {
   selectionWord,
   shuffleTiles,
 } from '../src/engine/wheel';
-import { catalog } from '../src/content/catalog';
+import { catalog } from './legacyHelpers';
 const tiles = catalog.levels[1]!.tiles;
 const layout = layoutWheel(tiles, 280);
 test('unique IDs, circular bounds and deterministic geometry', () => {

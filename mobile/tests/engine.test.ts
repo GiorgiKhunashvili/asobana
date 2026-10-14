@@ -1,4 +1,10 @@
-import { catalog, vocabulary } from '../src/content/catalog';
+import {
+  catalog,
+  vocabulary,
+  reachLevel,
+  submit,
+  tilesFor,
+} from './legacyHelpers';
 import {
   canFormWord,
   GEORGIAN_ALPHABET,
@@ -9,7 +15,6 @@ import { initialState, isUnlocked, transition } from '../src/engine/game';
 import { parseLevel, parsePack } from '../src/engine/validation';
 import { selectChapters, selectGameplay } from '../src/engine/selectors';
 import { parseSnapshot } from '../src/storage/snapshot';
-import { reachLevel, submit, tilesFor } from './helpers';
 const first = catalog.levels[0]!;
 const family = catalog.levels[1]!;
 const home = catalog.levels[2]!;

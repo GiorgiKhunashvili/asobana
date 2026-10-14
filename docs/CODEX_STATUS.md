@@ -4,6 +4,33 @@ Updated: 2026-10-14 (Asia/Tbilisi). **Milestone A prototype implemented.**
 Core gameplay and save/resume are verified in automated tests and native emulator
 flows. This is not a production-store release or a hardware performance sign-off.
 
+## Latest: 50-level beta content
+
+- Active content revision 2 contains **50 levels**, each with **4–5 crossword
+  answers**: 15 levels with four answers and 35 with five. Bonus words are separate.
+- 137 distinct target words, 147 reference-checked dictionary entries with source
+  revisions and CC BY-SA attribution, ten chapters and grids no larger than 7 × 7.
+- Original four puzzles expanded while retaining IDs and old answers. Transactional
+  save upgrade preserves coins, completed levels, partial answers, paid hints,
+  bonuses, settings and unlocks. No repeat rewards; unknown/corrupt saves retained.
+- Recorded recipes reproduce all 50 layouts but always export drafts. Python/TS
+  validators and complete engine solve pass; Georgian native editorial review and
+  difficulty tuning remain pending. See [BETA_CONTENT.md](BETA_CONTENT.md).
+- Claude's UI integration is present in the working tree; it is preserved separately
+  from this content/storage work. Its completion-feedback test now solves every
+  current target rather than the original two tutorial answers.
+- Current automated results: **72 Jest tests / 7 suites**, **49 Pytest tests**;
+  strict TS, ESLint, Ruff and Mypy pass. iOS/Android Hermes bundles produced.
+  The earlier verification table is historical revision 1 testing.
+- iPhone 17 Pro / iOS 26.5 / Expo Go: old four-completion save upgraded from
+  revision 1 to 2, preserving **191 coins** and all four completions. The new fifth
+  level counted four crossword answers and a separate bonus; completion produced
+  **219 coins**, unlocked ka-006, and process restart restored that level/balance.
+  Debug evidence: `artifacts/maestro-beta-upgrade-final`. This native beta check used
+  tap input; larger five-answer boards were validated/solved in engine tests.
+  Initial runs needed a Metro cache refresh and IPv4 localhost binding.
+  No new Android-native beta flow was run; the Android export passed.
+
 ## Completed
 
 - Expo SDK 57.0.28 / RN 0.86.3 / React 19.2.3 application with strict TypeScript,
@@ -12,9 +39,9 @@ flows. This is not a production-store release or a hardware performance sign-off
   intersecting crosswords, target/bonus/duplicate handling, reveals, hints, coins,
   completion rewards exactly once, sequential level/chapter unlocking and replay.
 - Versioned pack schema, structural/semantic validators and bundled content loader.
-- Four manually authored, mechanically validated and solvable levels using ten
-  individually reference-checked Georgian words. Per-entry Wiktionary attribution
-  and CC BY-SA license recorded. No fake words or unreviewed generated levels bundled.
+- Fifty mechanically validated and solvable levels with four or five targets each.
+  Assistant reference/layout review, per-entry Wiktionary attribution and CC BY-SA
+  license recorded. Native Georgian editorial approval remains pending.
 - Unique tile IDs, circular geometry, deterministic shuffle/selection, UI-thread
   path updates, native release/cancel handling and accessible tap input.
 - Native input claims drags only when a single touch starts on a letter. Empty
@@ -33,7 +60,7 @@ flows. This is not a production-store release or a hardware performance sign-off
   contract with working TypeScript examples, run/test instructions and native flows.
 - npm/uv lockfiles, Jest/RNTL/Pytest, ESLint/Prettier, Ruff/Mypy and CI workflow.
 
-## Verification actually performed
+## Historical prototype verification (content revision 1)
 
 | Check                                          | Result                                                                                                                                                                                                                                                         |
 | ---------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -80,8 +107,8 @@ Native debug reports/screenshots are preserved under ignored `artifacts/maestro-
 ## Remaining / limitations
 
 - Reconcile the missing full product spec and decide final branding.
-- Claude should implement final theme/screens/visual animations using
-  `INTEGRATION_CONTRACT.md`; current views are temporary functional presentation.
+- Claude visual integration is mostly complete in the working tree; finish native
+  presentation QA using `INTEGRATION_CONTRACT.md`.
 - Native-speaker editorial review and content licensing review before a larger release.
 - Physical iOS/Android devices, measured 60 FPS/frame timing, haptic behavior,
   audio quality and accessibility audits have not been signed off.
@@ -89,9 +116,8 @@ Native debug reports/screenshots are preserved under ignored `artifacts/maestro-
   app-store distribution and full device matrix remain unverified. No runtime game
   logic or bundled content requires internet; Expo Go still requires its dev server.
 - Native save error/disk-full injection was tested with real SQLite/store tests,
-  not by exhausting simulator storage. SQLite DB migrations are implemented;
-  changed content revisions are intentionally rejected until an explicit save
-  migration is added. No released older content exists yet.
+  not by exhausting simulator storage. SQLite DB migrations and content revision
+  1 → 2 upgrade are implemented. Future content upgrades require explicit support.
 - GitHub Actions is configured but not executed remotely; no GitHub repository,
   push or PR was requested or created.
 - Known transitive npm advisories remain (five underlying advisory families;

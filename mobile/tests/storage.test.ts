@@ -1,7 +1,7 @@
 import { mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { catalog } from '../src/content/catalog';
+import { catalog, submit } from './legacyHelpers';
 import { initialState, transition } from '../src/engine/game';
 import {
   createSqliteRepository,
@@ -9,7 +9,6 @@ import {
   StaleSaveError,
 } from '../src/storage/repository';
 import { TestSqlite } from './sqliteAdapter';
-import { submit } from './helpers';
 test('real SQLite migrate, atomic save, close/reopen, CAS and settings restore', async () => {
   const folder = mkdtempSync(join(tmpdir(), 'geowords-'));
   const path = join(folder, 'game.db');
