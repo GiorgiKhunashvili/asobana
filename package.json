@@ -21,5 +21,9 @@
     "generate": "cd puzzle-generator && uv run python -m geowords_generator",
     "validate:content": "npm run validate:content -w mobile",
     "check": "npm run typecheck && npm run lint && npm test && npm run validate:content && npm run format:check"
+  },
+  "overrides": {
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
   }
 }

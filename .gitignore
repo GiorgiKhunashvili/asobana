@@ -6,6 +6,7 @@ coverage/
 __pycache__/
 .pytest_cache/
 .ruff_cache/
+.mypy_cache/
 *.pyc
 .DS_Store
 mobile/ios/

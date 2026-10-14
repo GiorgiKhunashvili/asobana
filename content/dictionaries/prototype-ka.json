@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "id": "prototype-vocabulary",
+  "license": "CC-BY-SA-4.0",
+  "source": "Wiktionary contributors; individually reference-checked, no bulk dictionary imported",
+  "reviewStatus": "prototype-reference-checked",
+  "checkedOn": "2026-10-14",
+  "entries": [
+    {
+      "word": "მზე",
+      "gloss": "sun",
+      "sourceUrl": "https://en.wiktionary.org/wiki/მზე",
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "მე",
+      "gloss": "I",
+      "sourceUrl": "https://en.wiktionary.org/wiki/მე",
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "დედა",
+      "gloss": "mother",
+      "sourceUrl": "https://en.wiktionary.org/wiki/დედა",
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "მამა",
+      "gloss": "father",
+      "sourceUrl": "https://en.wiktionary.org/wiki/მამა",
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "მადა",
+      "gloss": "appetite",
+      "sourceUrl": "https://en.wiktionary.org/wiki/მადა",
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "კარი",
+      "gloss": "door",
+      "sourceUrl": "https://en.wiktionary.org/wiki/კარი",
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "კანი",
+      "gloss": "skin",
+      "sourceUrl": "https://en.wiktionary.org/wiki/კანი",
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "რკინა",
+      "gloss": "iron",
+      "sourceUrl": "https://en.wiktionary.org/wiki/რკინა",
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "გზა",
+      "gloss": "road",
+      "sourceUrl": "https://en.wiktionary.org/wiki/გზა",
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "word": "ზღვა",
+      "gloss": "sea",
+      "sourceUrl": "https://en.wiktionary.org/wiki/ზღვა",
+      "reviewStatus": "prototype-reference-checked"
+    }
+  ]
+}

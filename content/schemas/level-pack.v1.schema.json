@@ -1,0 +1,240 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "revision",
+    "chapters",
+    "levels"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]{0,63}$"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 1000000000
+    },
+    "chapters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "title"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]{0,63}$"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "levels": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/level"
+      },
+      "minItems": 1
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://geowords.invalid/schemas/level-pack.v1.schema.json",
+  "title": "GeoWords level pack v1",
+  "$defs": {
+    "level": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schemaVersion",
+        "id",
+        "chapterId",
+        "title",
+        "tiles",
+        "grid",
+        "words",
+        "bonusWords",
+        "difficulty",
+        "hints",
+        "reviewStatus"
+      ],
+      "properties": {
+        "schemaVersion": {
+          "const": 1
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]{0,63}$"
+        },
+        "chapterId": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]{0,63}$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tiles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "letter"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9][a-z0-9-]{0,63}$"
+              },
+              "letter": {
+                "type": "string",
+                "pattern": "^[ა-ჰ]$"
+              }
+            }
+          },
+          "minItems": 2,
+          "maxItems": 8
+        },
+        "grid": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "rows",
+            "columns"
+          ],
+          "properties": {
+            "rows": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 20
+            },
+            "columns": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 20
+            }
+          }
+        },
+        "words": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "answer",
+              "acceptedAnswers",
+              "row",
+              "column",
+              "direction"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9][a-z0-9-]{0,63}$"
+              },
+              "answer": {
+                "type": "string",
+                "pattern": "^[ა-ჰ]{2,16}$"
+              },
+              "acceptedAnswers": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[ა-ჰ]{2,16}$"
+                },
+                "minItems": 1,
+                "maxItems": 1
+              },
+              "row": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 19
+              },
+              "column": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 19
+              },
+              "direction": {
+                "enum": [
+                  "across",
+                  "down"
+                ]
+              }
+            }
+          },
+          "minItems": 1,
+          "maxItems": 30
+        },
+        "bonusWords": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[ა-ჰ]{2,16}$"
+          },
+          "uniqueItems": true
+        },
+        "difficulty": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "tier",
+            "score"
+          ],
+          "properties": {
+            "tier": {
+              "enum": [
+                "easy",
+                "medium",
+                "hard"
+              ]
+            },
+            "score": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            }
+          }
+        },
+        "hints": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "allowCell",
+            "allowWord"
+          ],
+          "properties": {
+            "allowCell": {
+              "type": "boolean"
+            },
+            "allowWord": {
+              "type": "boolean"
+            }
+          }
+        },
+        "reviewStatus": {
+          "enum": [
+            "prototype-reference-checked",
+            "generated-draft"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,277 @@
+{
+  "schemaVersion": 1,
+  "id": "geowords-prototype",
+  "revision": 1,
+  "chapters": [
+    {
+      "id": "beginning",
+      "title": "დასაწყისი"
+    },
+    {
+      "id": "discovery",
+      "title": "აღმოჩენა"
+    }
+  ],
+  "levels": [
+    {
+      "schemaVersion": 1,
+      "id": "ka-001",
+      "chapterId": "beginning",
+      "title": "მზე",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "მ"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ზ"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ე"
+        }
+      ],
+      "grid": {
+        "rows": 2,
+        "columns": 3
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "მზე",
+          "acceptedAnswers": [
+            "მზე"
+          ],
+          "row": 0,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "მე",
+          "acceptedAnswers": [
+            "მე"
+          ],
+          "row": 0,
+          "column": 0,
+          "direction": "down"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "tier": "easy",
+        "score": 10
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-002",
+      "chapterId": "beginning",
+      "title": "ოჯახი",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "დ"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ე"
+        },
+        {
+          "id": "tile-3",
+          "letter": "დ"
+        },
+        {
+          "id": "tile-4",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-5",
+          "letter": "მ"
+        },
+        {
+          "id": "tile-6",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-7",
+          "letter": "მ"
+        }
+      ],
+      "grid": {
+        "rows": 4,
+        "columns": 4
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "დედა",
+          "acceptedAnswers": [
+            "დედა"
+          ],
+          "row": 1,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "მამა",
+          "acceptedAnswers": [
+            "მამა"
+          ],
+          "row": 0,
+          "column": 3,
+          "direction": "down"
+        }
+      ],
+      "bonusWords": [
+        "მადა"
+      ],
+      "difficulty": {
+        "tier": "easy",
+        "score": 20
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-003",
+      "chapterId": "discovery",
+      "title": "სახლი",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "კ"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-3",
+          "letter": "რ"
+        },
+        {
+          "id": "tile-4",
+          "letter": "ი"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ნ"
+        }
+      ],
+      "grid": {
+        "rows": 4,
+        "columns": 4
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "კარი",
+          "acceptedAnswers": [
+            "კარი"
+          ],
+          "row": 0,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "კანი",
+          "acceptedAnswers": [
+            "კანი"
+          ],
+          "row": 0,
+          "column": 0,
+          "direction": "down"
+        }
+      ],
+      "bonusWords": [
+        "რკინა"
+      ],
+      "difficulty": {
+        "tier": "easy",
+        "score": 30
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ka-004",
+      "chapterId": "discovery",
+      "title": "ზღვა",
+      "tiles": [
+        {
+          "id": "tile-1",
+          "letter": "გ"
+        },
+        {
+          "id": "tile-2",
+          "letter": "ზ"
+        },
+        {
+          "id": "tile-3",
+          "letter": "ა"
+        },
+        {
+          "id": "tile-4",
+          "letter": "ღ"
+        },
+        {
+          "id": "tile-5",
+          "letter": "ვ"
+        }
+      ],
+      "grid": {
+        "rows": 4,
+        "columns": 3
+      },
+      "words": [
+        {
+          "id": "word-1",
+          "answer": "გზა",
+          "acceptedAnswers": [
+            "გზა"
+          ],
+          "row": 3,
+          "column": 0,
+          "direction": "across"
+        },
+        {
+          "id": "word-2",
+          "answer": "ზღვა",
+          "acceptedAnswers": [
+            "ზღვა"
+          ],
+          "row": 0,
+          "column": 2,
+          "direction": "down"
+        }
+      ],
+      "bonusWords": [],
+      "difficulty": {
+        "tier": "easy",
+        "score": 40
+      },
+      "hints": {
+        "allowCell": true,
+        "allowWord": true
+      },
+      "reviewStatus": "prototype-reference-checked"
+    }
+  ]
+}

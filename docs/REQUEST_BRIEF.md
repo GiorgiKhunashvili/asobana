@@ -33,6 +33,7 @@ If a requirement is unclear, make a reasonable, well-documented engineering deci
 Use the following stack:
 
 **Mobile application**
+
 - React Native
 - TypeScript with strict mode
 - Expo and Expo Router
@@ -43,12 +44,14 @@ Use the following stack:
 - Expo SQLite
 
 **Puzzle generation**
+
 - Python 3.12+
 - Typed, modular puzzle-generation architecture
 - JSON-based level export
 - Automated generation and validation tests
 
 **Testing and development**
+
 - ESLint and Prettier
 - Jest or another compatible TypeScript test runner
 - React Native Testing Library
@@ -57,6 +60,7 @@ Use the following stack:
 - GitHub Actions for CI
 
 **Future integrations**
+
 - Google AdMob
 - RevenueCat
 - Firebase Analytics / Crashlytics
@@ -374,6 +378,7 @@ Provide animation events to the presentation layer instead of embedding visual d
 Use a structure similar to:
 
 geowords/
+
 - mobile/
   - app/
   - src/
