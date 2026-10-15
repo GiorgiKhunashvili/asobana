@@ -1,8 +1,25 @@
 # Codex status
 
-Updated: 2026-10-14 (Asia/Tbilisi). **Milestone A prototype implemented.**
+Updated: 2026-10-15 (Asia/Tbilisi). **Milestone A prototype implemented.**
 Core gameplay and save/resume are verified in automated tests and native emulator
 flows. This is not a production-store release or a hardware performance sign-off.
+
+## Latest: second TestFlight build
+
+- Source commit `c6eb3d1`, content revision 4: 50 themed levels, 320 reference-checked
+  dictionary entries and gradual difficulty progression. Current target counts are
+  35 three-answer, ten four-answer and five five-answer boards.
+- Preflight passed: 92 Jest tests / ten suites, 56 Pytest tests, strict TypeScript,
+  ESLint, all 50 engine solves and Prettier.
+- **GeoWords 0.1.0 (2) is available in TestFlight.** EAS build/submission finished;
+  Apple confirmed `VALID / IN_BETA_TESTING`, verified on 2026-10-15. Uploaded
+  2026-10-14 at 19:14:54 Asia/Tbilisi. Same app identity and signing as build 1.
+- Signed IPA inspection verified version/build, offline Hermes bundle, all four
+  Georgian fonts and permission settings; Xcode 26.6 / iOS 26.5 SDK, iOS 16.4 minimum.
+- Archive verification matched the current content, UI and save-migration source.
+  Existing root-level Expo/EAS files reference another workspace project; this
+  release used the established `mobile/` project and preserved those files.
+- Build/submission links and evidence: [TESTFLIGHT.md](TESTFLIGHT.md).
 
 ## Latest: first TestFlight upload
 

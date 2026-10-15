@@ -53,6 +53,33 @@ and all four Georgian font files, with no microphone/background-audio permission
 The archive is 23,781,506 bytes; local verification evidence is under ignored
 `artifacts/geowords-0.1.0-build-1.ipa` and `artifacts/ipa-info.json`.
 
+## Second beta — 2026-10-14
+
+Apple confirmed **VALID / IN_BETA_TESTING** for version **0.1.0 (2)**.
+Both EAS build and submission finished successfully. Apple recorded the upload
+on 2026-10-14 at **19:14:54 Asia/Tbilisi**; availability was verified on 2026-10-15.
+
+Version **0.1.0 (2)** builds source commit `c6eb3d1` with the revision 4 themed
+campaign and gradual difficulty progression. It retains the existing app ID,
+bundle identifier, signing credentials and TestFlight destination.
+
+- [Build](https://expo.dev/accounts/gkhunashvili/projects/geowords/builds/3de76f78-53f8-4de0-b485-e5a94dacf913).
+- [Submission](https://expo.dev/accounts/gkhunashvili/projects/geowords/submissions/ca5e2e3b-d6cd-40e3-9b91-b0f02257ef67).
+- Current campaign: 50 themed levels; 35 three-answer, ten four-answer and five
+  five-answer boards, 320 reference-checked dictionary entries. This is the
+  committed pacing change described in [EXPANDED_CONTENT.md](EXPANDED_CONTENT.md).
+- Preflight: 92 Jest tests in ten suites, 56 Python tests, strict TypeScript,
+  ESLint, all 50 engine solutions and Prettier passed.
+- Archive comparison verified the current content, UI, migration code, fonts,
+  app icon and established GeoWords project/bundle IDs. Evidence is under ignored
+  `artifacts/testflight-build-2-source*`.
+- Signed IPA verification confirmed version 0.1.0 (2), the existing bundle ID,
+  embedded offline Hermes bundle and all four Georgian fonts. It uses Xcode 26.6 /
+  iOS 26.5 SDK with iOS 16.4 minimum; size is 23,804,015 bytes. Evidence: ignored
+  `artifacts/geowords-0.1.0-build-2.ipa` and `artifacts/ipa-build-2-info.json`.
+- Additional root-level `app.json` / `eas.json` point to a separate workspace
+  project. This release runs from `mobile/` and preserves those existing files.
+
 ## Subsequent uploads
 
 Run from `mobile/`:
