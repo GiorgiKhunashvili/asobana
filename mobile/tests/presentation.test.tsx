@@ -70,10 +70,10 @@ const level = catalog.levels[0]!;
 
 test('gameplay shows the Georgian topic heading above the hidden board', async () => {
   const screen = await render(<GameplayScreen levelId="ka-001" />);
-  expect(screen.getByTestId('level-topic')).toHaveTextContent('ამინდი');
+  expect(screen.getByTestId('level-topic')).toHaveTextContent('დასაწყისი');
   expect(screen.getByLabelText('დონე 1')).toBeTruthy();
   expect(screen.queryByText('მზე')).toBeNull();
-  expect(screen.getByLabelText('0/3 სიტყვა · ბონუსი 0')).toBeTruthy();
+  expect(screen.getByLabelText('0/4 სიტყვა · ბონუსი 0')).toBeTruthy();
 });
 
 test('hidden cells expose no answers; committed words render in Georgian', async () => {

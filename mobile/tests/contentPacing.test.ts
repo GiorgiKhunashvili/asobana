@@ -2,9 +2,11 @@ import expandedVocabulary from '../../content/dictionaries/expanded-ka.json';
 import legacyVocabulary from '../../content/dictionaries/beta-ka.json';
 import manifest from '../../content/levels/themed.v4.recipes.json';
 import oldManifest from '../../content/levels/themed.v3.recipes.json';
-import { catalog, previousCatalogs } from '../src/content/catalog';
+import { previousCatalogs } from '../src/content/catalog';
 import { validatePacing } from '../src/content/pacing';
 import type { LevelPack } from '../src/models/types';
+
+const catalog = previousCatalogs[3]!;
 
 function repetition(pack: LevelPack) {
   const targets = pack.levels.flatMap((level) =>

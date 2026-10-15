@@ -11,7 +11,7 @@ import { reachLevel, submit } from './helpers';
 import { TestSqlite } from './sqliteAdapter';
 
 describe.each(previousCatalogs)(
-  'topic upgrade from revision $revision',
+  'discovery upgrade from revision $revision',
   (previous) => {
     test('completed levels and earned coins remain intact', () => {
       let state = reachLevel(previous.levels.length - 1, previous);
@@ -100,6 +100,7 @@ describe.each(previousCatalogs)(
 
 test('completion credits from a longer old board pay once and hints survive smaller boards', () => {
   const previous = previousCatalogs[1]!;
+  const target = previousCatalogs[2]!;
   const old = previous.levels[0]!;
   let state = { ...initialState(previous), coins: 1000 };
   for (let i = 0; i < 3; i++)
@@ -109,10 +110,10 @@ test('completion credits from a longer old board pay once and hints survive smal
       previous,
     ).state;
   expect(state.progress[old.id]?.completed).toBe(false);
-  const upgraded = restoreContent(state, catalog, previousCatalogs).state;
+  const upgraded = restoreContent(state, target, previousCatalogs).state;
   expect(upgraded.progress[old.id]?.completed).toBe(true);
   expect(upgraded.coins).toBe(state.coins + 25);
-  expect(restoreContent(upgraded, catalog, previousCatalogs).state.coins).toBe(
+  expect(restoreContent(upgraded, target, previousCatalogs).state.coins).toBe(
     upgraded.coins,
   );
 });

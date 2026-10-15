@@ -1,9 +1,12 @@
-import { catalog, topics } from '../src/content/catalog';
+import { previousCatalogs } from '../src/content/catalog';
+import { topics } from '../../content/levels/themed.v4.recipes.json';
 import { validateTopics } from '../src/content/topics';
 import { initialState, isUnlocked, transition } from '../src/engine/game';
 import { selectGameplay } from '../src/engine/selectors';
 import { parseSnapshot } from '../src/storage/snapshot';
 import { submit } from './helpers';
+
+const catalog = previousCatalogs[3]!;
 
 test('all 50 distinct puzzles and their bonuses fit the topic displayed above the board', () => {
   expect(catalog.levels).toHaveLength(50);
@@ -68,15 +71,15 @@ test('the full themed campaign solves, rewards once, and restores valid snapshot
     ).state;
     for (const bonus of level.bonusWords) {
       const before = state.coins;
-      state = submit(state, level, bonus).state;
+      state = submit(state, level, bonus, catalog).state;
       bonusCount++;
       expect(state.coins).toBe(before + 3);
       expect(selectGameplay(state, catalog).foundWords).toBe(0);
-      expect(submit(state, level, bonus).state).toBe(state);
+      expect(submit(state, level, bonus, catalog).state).toBe(state);
     }
     let completions = 0;
     for (const word of level.words) {
-      const result = submit(state, level, word.answer);
+      const result = submit(state, level, word.answer, catalog);
       completions += result.events.filter(
         (event) => event.type === 'level-completed',
       ).length;
@@ -85,7 +88,9 @@ test('the full themed campaign solves, rewards once, and restores valid snapshot
     expect(completions).toBe(1);
     expect(state.progress[level.id]?.completed).toBe(true);
     expect(state.coins).toBe(100 + (index + 1) * 25 + bonusCount * 3);
-    expect(submit(state, level, level.words[0]!.answer).state).toBe(state);
+    expect(submit(state, level, level.words[0]!.answer, catalog).state).toBe(
+      state,
+    );
   }
   expect(bonusCount).toBeGreaterThan(0);
   expect(selectGameplay(state, catalog).nextLevelId).toBeNull();

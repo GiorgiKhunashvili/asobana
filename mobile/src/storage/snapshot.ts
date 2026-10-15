@@ -52,11 +52,13 @@ export function parseSnapshot(value: unknown, pack: LevelPack): GameState {
         'hintsUsed',
         0,
         // Reauthored boards may be smaller than the board these hints were used on.
-        pack.revision === 4
-          ? 860
-          : pack.revision === 3
-            ? 430
-            : cells.size + level.words.length,
+        pack.revision === 5
+          ? 914 // Revision 4 allowance plus at most 49 cells and five words.
+          : pack.revision === 4
+            ? 860
+            : pack.revision === 3
+              ? 430
+              : cells.size + level.words.length,
       ),
       completed: boolean(saved.completed, 'completed'),
     };

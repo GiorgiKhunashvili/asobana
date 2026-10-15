@@ -21,7 +21,8 @@ export function restoreContent(
     previous?.id === 'geowords-prototype' &&
     previous.id === pack.id &&
     (([1, 2].includes(previous.revision) && pack.revision === 3) ||
-      ([1, 2, 3].includes(previous.revision) && pack.revision === 4))
+      ([1, 2, 3].includes(previous.revision) && pack.revision === 4) ||
+      ([1, 2, 3, 4].includes(previous.revision) && pack.revision === 5))
   )
     return {
       state: migrateTopics(parseSnapshot(value, previous), previous, pack),

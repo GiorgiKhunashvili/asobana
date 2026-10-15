@@ -4,6 +4,27 @@ Updated: 2026-10-15 (Asia/Tbilisi). **Milestone A prototype implemented.**
 Core gameplay and save/resume are verified in automated tests and native emulator
 flows. This is not a production-store release or a hardware performance sign-off.
 
+## Latest: 50-level discovery rebuild
+
+- Active revision 5: all 50 levels rebuilt, 5 physical tiles through level 20,
+  gradual 5–6-tile stages after that, and no seven/eight-tile wheels.
+- Four introductory boards have four answers; the other 46 have five. Mixed
+  vocabulary provides 246 answer slots, 151 distinct targets, 50 distinct wheels,
+  and 127 bonus opportunities. Every verified formable extra is recognized.
+- 421 reference-checked dictionary entries with exact source links; assistant
+  reference/layout review complete, native Georgian editorial review pending.
+- UI implementation, economy and hints preserved. Direct save upgrades from all
+  four historical revisions retain coins, completions, partial credits, paid hints,
+  unlocks and settings; SQLite rollback and close/reopen verified.
+- 101 Jest / 12 suites, 60 Pytest, complete engine solves, TS/ESLint/Prettier,
+  Ruff/Mypy and both iOS/Android Hermes exports pass.
+- iPhone simulator retained 192 coins and partial level 8 progress; bonus +3,
+  duplicate rejection, completion +25 and level 9 unlock verified. A clean reload
+  restored 220 coins, all five solved answers and the bonus. Shared content now
+  has an explicit Metro watcher. No new Android-native run.
+- Source rebuild only; TestFlight 0.1.0 (2) still runs revision 4. See
+  [DISCOVERY_CONTENT.md](DISCOVERY_CONTENT.md) for all 50 reviewed recipes and limits.
+
 ## Latest: second TestFlight build
 
 - Source commit `c6eb3d1`, content revision 4: 50 themed levels, 320 reference-checked
