@@ -15,12 +15,19 @@ import { VictoryLogo } from '../../src/components/Logo';
 import { Screen, TopBar } from '../../src/components/Screen';
 import { Display, Txt } from '../../src/components/Text';
 import { catalog } from '../../src/content/catalog';
-import { nextLevelId } from '../../src/engine/game';
 import { BONUS_GOAL, freeCellHints } from '../../src/engine/bonusRewards';
 import { selectPostcards } from '../../src/engine/postcards';
 import { routes, singleParam } from '../../src/navigation/routes';
 import { gameStore, useGameStore } from '../../src/state/gameStore';
-import { countryOf, levelTone, onScene, palette, space } from '../../src/theme';
+import { nextUnfinished } from '../../src/screens/nextLevel';
+import {
+  countryOf,
+  levelLabel,
+  levelTone,
+  onScene,
+  palette,
+  space,
+} from '../../src/theme';
 
 /** Reward from the batch that completed this level, if that is how we got here. */
 function freshReward(levelId: string | null): number | null {
@@ -54,7 +61,9 @@ export default function Victory() {
     );
   const index = catalog.levels.findIndex((level) => level.id === id);
   const level = catalog.levels[index];
-  const next = nextLevelId(catalog, id);
+  // Where the player goes on: the first unfinished level, not merely the next number.
+  const nextLevel = nextUnfinished(game);
+  const next = nextLevel?.id ?? null;
   const progress = game.progress[id];
   const emblem = Math.min(width * 0.46, 190);
   const chapterCard = selectPostcards(game, catalog).find(
@@ -129,7 +138,7 @@ export default function Victory() {
           გილოცავ!
         </Display>
         <Txt variant="bodyStrong" style={[styles.centered, onScene]}>
-          {`„${level?.title ?? ''}“ გავლილია`}
+          {`${levelLabel(id)} გავლილია`}
         </Txt>
         {Boolean(progress?.bonusWords.length) && (
           <Txt variant="caption" style={onScene}>
@@ -172,7 +181,7 @@ export default function Victory() {
         {next ? (
           <PrimaryButton
             label="შემდეგი დონე"
-            detail={`დონე ${index + 2}`}
+            detail={`დონე ${nextLevel?.number ?? ''}`}
             testID="victory-next"
             onPress={() => router.replace(routes.game(next))}
           />

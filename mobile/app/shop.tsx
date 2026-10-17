@@ -8,6 +8,7 @@ import { Display, Txt } from '../src/components/Text';
 import { DEFAULT_ECONOMY } from '../src/engine/game';
 import { BONUS_GOAL, freeCellHints } from '../src/engine/bonusRewards';
 import { useGameStore } from '../src/state/gameStore';
+import { progressTone } from '../src/screens/nextLevel';
 import { levelTone, palette, space } from '../src/theme';
 
 function Line({
@@ -34,11 +35,10 @@ function Line({
 export default function Coins() {
   const game = useGameStore((state) => state.game);
   const coins = useGameStore((state) => state.game?.coins ?? 0);
-  const current = useGameStore((state) => state.game?.currentLevelId);
   return (
     <Screen
       veil={0.55}
-      tone={levelTone(current)}
+      tone={game ? progressTone(game) : levelTone(null)}
       header={<TopBar title="მონეტები" />}
       contentStyle={styles.content}
     >

@@ -128,7 +128,8 @@ test('album previews the next place and opens only earned postcards', async () =
 
 test('gameplay shows the Georgian topic heading above the hidden board', async () => {
   const screen = await render(<GameplayScreen levelId="ka-001" />);
-  expect(screen.getByTestId('level-topic')).toHaveTextContent('დასაწყისი');
+  // Levels are named by place and step, not by their placeholder content title.
+  expect(screen.getByTestId('level-topic')).toHaveTextContent('თბილისი · 1/5');
   expect(screen.getByLabelText('დონე 1')).toBeTruthy();
   expect(screen.queryByText('მზე')).toBeNull();
   expect(screen.getByLabelText('0/5 სიტყვა · ბონუსი 0')).toBeTruthy();
@@ -333,6 +334,7 @@ test('finishing the last stop in a country announces the next country', async ()
     expect(screen.getByTestId('victory-new-country')).toHaveTextContent(
       'ახალი ქვეყანა: თურქეთი!',
     );
+    expect(screen.getByText('ბათუმი · 5/5 გავლილია')).toBeTruthy();
     jest.mocked(useLocalSearchParams).mockReturnValue({ levelId: 'ka-089' });
     await screen.rerender(<Victory />);
     expect(screen.queryByTestId('victory-new-country')).toBeNull();
@@ -347,4 +349,40 @@ test('home shows the logo and reads the game name once', async () => {
   const screen = await render(<Home />);
   expect(screen.getByTestId('home-logo')).toBeTruthy();
   expect(screen.getByRole('header', { name: 'ასობანა' })).toBeTruthy();
+});
+
+test("looking back at a finished level keeps the player's place", async () => {
+  const before = gameStore.getState().game;
+  try {
+    // At level 18, the player opens finished level 2 from the path.
+    const back = transition(
+      reachCurrentLevel(17),
+      { type: 'open-level', levelId: 'ka-002' },
+      journeyCatalog,
+    ).state;
+    expect(back.currentLevelId).toBe('ka-002');
+    gameStore.setState({ game: back });
+
+    const level = await render(<GameplayScreen levelId="ka-002" />);
+    expect(level.getByText('ეს დონე უკვე გავლილია')).toBeTruthy();
+    expect(level.getByTestId('level-topic')).toHaveTextContent('თბილისი · 2/5');
+    await fireEvent.press(level.getByTestId('review-continue'));
+    expect(router.replace).toHaveBeenCalledWith({
+      pathname: '/game/[levelId]',
+      params: { levelId: 'ka-018' },
+    });
+
+    // Home still continues at level 18, named by its place.
+    const home = await render(<Home />);
+    expect(
+      home.getByRole('button', { name: 'გაგრძელება, დონე 18 · ყაზბეგი · 3/5' }),
+    ).toBeTruthy();
+    await fireEvent.press(home.getByTestId('home-continue'));
+    expect(router.push).toHaveBeenCalledWith({
+      pathname: '/game/[levelId]',
+      params: { levelId: 'ka-018' },
+    });
+  } finally {
+    gameStore.setState({ game: before });
+  }
 });

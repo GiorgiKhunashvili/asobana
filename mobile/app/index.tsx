@@ -8,11 +8,11 @@ import { HomeLogo, INTRO_TITLE_DELAY } from '../src/components/Logo';
 import { Screen, TopBar } from '../src/components/Screen';
 import { Display, Txt } from '../src/components/Text';
 import { catalog } from '../src/content/catalog';
-import { selectLevels } from '../src/engine/selectors';
+import { nextUnfinished, progressTone } from '../src/screens/nextLevel';
 import { selectPostcards } from '../src/engine/postcards';
 import { routes } from '../src/navigation/routes';
 import { useGameStore } from '../src/state/gameStore';
-import { levelTone, onScene, palette, space } from '../src/theme';
+import { levelLabel, onScene, palette, space } from '../src/theme';
 
 const NAME = 'ასობანა';
 /** The logo traces itself on the first home visit of each launch only. */
@@ -53,14 +53,12 @@ export default function Home() {
     return first;
   });
   if (!game) return null;
-  const levels = selectLevels(game, catalog);
-  const current = levels.find((level) => level.id === game.currentLevelId);
-  const finished = levels.every((level) => level.completed);
+  const next = nextUnfinished(game);
   const cards = selectPostcards(game, catalog).filter((card) => !card.legacy);
   const collected = cards.filter((card) => card.collected).length;
   return (
     <Screen
-      tone={levelTone(game.currentLevelId)}
+      tone={progressTone(game)}
       glowY={0.3}
       header={
         <TopBar
@@ -97,21 +95,19 @@ export default function Home() {
         entering={FadeInDown.delay(260).duration(500)}
         style={styles.actions}
       >
-        {finished ? (
+        {next ? (
           <PrimaryButton
-            label="ყველა დონე გავლილია"
-            detail="დონეების ნახვა"
+            label="გაგრძელება"
+            detail={`დონე ${next.number} · ${levelLabel(next.id)}`}
             testID="home-continue"
-            onPress={() => router.push('/chapters')}
+            onPress={() => router.push(routes.game(next.id))}
           />
         ) : (
           <PrimaryButton
-            label="გაგრძელება"
-            {...(current && {
-              detail: `დონე ${current.number} · ${current.title}`,
-            })}
+            label="ყველა დონე გავლილია"
+            detail="მოგზაურობის ნახვა"
             testID="home-continue"
-            onPress={() => router.push(routes.game(game.currentLevelId))}
+            onPress={() => router.push('/chapters')}
           />
         )}
         <View style={styles.row}>

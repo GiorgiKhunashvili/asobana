@@ -15,7 +15,8 @@ import { Txt } from '../src/components/Text';
 import { DEFAULT_ECONOMY } from '../src/engine/game';
 import type { Settings as GameSettings } from '../src/models/types';
 import { gameStore, useGameStore } from '../src/state/gameStore';
-import { levelTone, palette, space } from '../src/theme';
+import { progressTone } from '../src/screens/nextLevel';
+import { palette, space } from '../src/theme';
 
 const OPTIONS: readonly {
   key: keyof GameSettings;
@@ -71,7 +72,7 @@ export default function Settings() {
   return (
     <Screen
       veil={0.55}
-      tone={levelTone(game.currentLevelId)}
+      tone={progressTone(game)}
       header={<TopBar title="პარამეტრები" />}
       contentStyle={styles.content}
     >

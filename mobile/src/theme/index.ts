@@ -107,6 +107,8 @@ export {
   COUNTRIES,
   countryById,
   countryOf,
+  levelLabel,
+  placeOfLevel,
   stopTitle,
   type Country,
 } from './journey';

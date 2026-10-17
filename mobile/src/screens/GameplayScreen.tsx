@@ -28,7 +28,15 @@ import type { GameCommand, GameplayView } from '../models/types';
 import { routes } from '../navigation/routes';
 import { tileHaptic } from '../services/feedback';
 import { gameStore, useGameStore } from '../state/gameStore';
-import { levelTone, motion, onScene, palette, space } from '../theme';
+import {
+  levelLabel,
+  levelTone,
+  motion,
+  onScene,
+  palette,
+  space,
+} from '../theme';
+import { nextUnfinished } from './nextLevel';
 import { boardMoment, celebrationLength, stripFeedback } from './presentEvents';
 
 const BAR = 60;
@@ -154,6 +162,7 @@ export function GameplayScreen({ levelId }: { levelId: string | null }) {
       moment={moment}
       feedback={feedback}
       celebrating={celebration !== null}
+      next={game ? nextUnfinished(game) : null}
       onSubmit={submit}
     />
   );
@@ -168,6 +177,7 @@ function GameLayout({
   moment,
   feedback,
   celebrating,
+  next,
   onSubmit,
 }: {
   model: GameplayView;
@@ -178,6 +188,8 @@ function GameLayout({
   moment: ReturnType<typeof boardMoment>;
   feedback: ReturnType<typeof stripFeedback>;
   celebrating: boolean;
+  /** Where "continue" leads when a finished level is opened to look back. */
+  next: ReturnType<typeof nextUnfinished>;
   onSubmit: (tileIds: readonly string[]) => void;
 }) {
   const { width, height } = useWindowDimensions();
@@ -224,7 +236,7 @@ function GameLayout({
           numberOfLines={1}
           style={[styles.topic, onScene]}
         >
-          {model.title}
+          {levelLabel(model.levelId) || model.title}
         </Txt>
         <Progress
           found={model.foundWords}
@@ -261,7 +273,34 @@ function GameLayout({
           </Txt>
         </Animated.View>
       )}
-      {model.completed ? (
+      {model.completed && !celebrating ? (
+        // Opened again to look back: the solved board, then on to the real next level.
+        <Animated.View
+          key="review"
+          entering={FadeIn.duration(motion.slow)}
+          style={[styles.complete, { width: content }]}
+        >
+          <Txt variant="bodyStrong" style={onScene}>
+            ეს დონე უკვე გავლილია
+          </Txt>
+          {next ? (
+            <PrimaryButton
+              label="გაგრძელება"
+              detail={`დონე ${next.number} · ${levelLabel(next.id)}`}
+              testID="review-continue"
+              onPress={() => router.replace(routes.game(next.id))}
+              style={styles.wide}
+            />
+          ) : null}
+          <SecondaryButton
+            label="მოგზაურობა"
+            icon="route"
+            testID="review-journey"
+            onPress={() => router.replace('/chapters')}
+            style={styles.wide}
+          />
+        </Animated.View>
+      ) : model.completed ? (
         <Animated.View
           key="complete"
           entering={FadeIn.delay(celebrating ? 500 : 0).duration(motion.slow)}

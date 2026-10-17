@@ -132,6 +132,22 @@ and painted styles all read as atlases rather than as a game.
   "ახალი ქვეყანა: …" after the last stop of a country; copy says "ადგილი"
   (place) where it said "თავი" (chapter).
 
+### The player's place and level names
+
+- **Continue always means the real next level.** The engine moves its current
+  level to any level the player opens, including a finished one.
+  `nextUnfinished()` (`src/screens/nextLevel.ts`) keeps the player's place:
+  the current level while it is unfinished, otherwise the first open unfinished
+  level. Home's "გაგრძელება", victory's next level, the path's pulsing level and
+  the backgrounds of home, album, coins and settings all use it.
+- **Finished levels open to look back.** The solved board is shown with
+  "ეს დონე უკვე გავლილია", a "გაგრძელება" button to the real next level and a
+  way back to the journey. They are not replayed (that would need engine rules
+  for rewards and progress).
+- **Levels are named by place and step:** `levelLabel()` gives
+  "ყაზბეგი · 3/5". Content titles are numbered placeholders ("აღმოჩენა 18") and
+  are not shown on home, above the board or on victory.
+
 ### Stop paintings and placeholders
 
 `src/theme/journey.ts` groups the 48 stop IDs from `content/journey-v13.json`

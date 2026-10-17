@@ -9,14 +9,9 @@ import { Display, Txt } from '../../src/components/Text';
 import { catalog } from '../../src/content/catalog';
 import { selectPostcards } from '../../src/engine/postcards';
 import { routes } from '../../src/navigation/routes';
+import { progressTone } from '../../src/screens/nextLevel';
 import { useGameStore } from '../../src/state/gameStore';
-import {
-  COUNTRIES,
-  levelTone,
-  palette,
-  sceneFor,
-  space,
-} from '../../src/theme';
+import { COUNTRIES, palette, sceneFor, space } from '../../src/theme';
 
 type Card = ReturnType<typeof selectPostcards>[number];
 
@@ -44,7 +39,7 @@ export default function Postcards() {
   const next = cards.find((card) => card.next);
   return (
     <Screen
-      tone={levelTone(game.currentLevelId)}
+      tone={progressTone(game)}
       veil={0.65}
       header={<TopBar title="ალბომი" />}
       contentStyle={styles.content}

@@ -138,3 +138,26 @@ export function countryById(id: string): Country {
 export function stopTitle(chapterId: string): string | undefined {
   return catalog.chapters.find((chapter) => chapter.id === chapterId)?.title;
 }
+
+/** The stop a level belongs to and its step there, e.g. ყაზბეგი, 3 of 5. */
+export function placeOfLevel(levelId: string | null | undefined) {
+  const level = catalog.levels.find((entry) => entry.id === levelId);
+  if (!level) return null;
+  const own = catalog.levels.filter(
+    (entry) => entry.chapterId === level.chapterId,
+  );
+  return {
+    place: stopTitle(level.chapterId) ?? '',
+    step: own.indexOf(level) + 1,
+    steps: own.length,
+  };
+}
+
+/**
+ * How a level is named on screen: by its place and step ("ყაზბეგი · 3/5").
+ * Content titles are numbered placeholders ("აღმოჩენა 18") and stay unshown.
+ */
+export function levelLabel(levelId: string | null | undefined): string {
+  const place = placeOfLevel(levelId);
+  return place ? `${place.place} · ${place.step}/${place.steps}` : '';
+}

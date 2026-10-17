@@ -41,6 +41,7 @@ import { catalog } from '../content/catalog';
 import { selectPostcards } from '../engine/postcards';
 import { selectChapters, selectLevels } from '../engine/selectors';
 import { routes } from '../navigation/routes';
+import { nextUnfinished } from './nextLevel';
 import { useGameStore } from '../state/gameStore';
 import {
   COUNTRIES,
@@ -135,10 +136,7 @@ export function JourneyScreen() {
     const levels = selectLevels(game, catalog);
     const chapters = selectChapters(game, catalog);
     const cards = selectPostcards(game, catalog).filter((card) => !card.legacy);
-    const current =
-      levels.find(
-        (level) => level.id === game.currentLevelId && !level.completed,
-      ) ?? levels.find((level) => level.unlocked && !level.completed);
+    const current = nextUnfinished(game);
     const rows: Row[] = [];
     let previous: Country | null = null;
     chapters.forEach((chapter, index) => {
