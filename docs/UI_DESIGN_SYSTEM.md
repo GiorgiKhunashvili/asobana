@@ -112,7 +112,23 @@ and painted styles all read as atlases rather than as a game.
 - **Chrome.** A country pill (name, `done/total` stops and a thin progress
   line) that opens the journey sheet, and coins. The bottom bar belongs to the
   tab layout (see [Navigation](#navigation-2026-10-17)). The mark at the right
-  of each stop header (lock, postcard, check) is status only, not a control.
+  of each stop header (lock, postcard, check) is status only.
+- **Place sheet.** Tapping a stop header opens its sheet: the painting, the
+  stop's levels and postcard progress and its "იცოდი?" fact
+  ([Place facts](PLACE_FACTS.md)), with "გაგრძელება" when its next level is the
+  player's and "ბარათის ნახვა" once its card is collected. Stops not reached yet
+  show a veiled painting and "ჯერ არ ჩასულხარ" and keep their fact for the
+  arrival. The same fact (`PlaceFact`) appears on victory after a stop's first
+  level, the arrival.
+- **Postcard page** (`StampedPostcard`, owner's pick of three styles on
+  2026-10-17). A collected card is a large postage stamp tilted on the veiled
+  painting: perforated paper cut with Skia, the card number on the painting, the
+  place in Mtavruli on the stamp's foot and an ivory postmark (country, stop
+  number, wavy lines) over its top right corner. The caption sits below, and the
+  fact is written on a paper note held by a strip of tape. It echoes the stamps
+  beside each stop on the path. The album and victory keep the compact
+  `Postcard` (painting band, place, number). Rejected: a two-sided card that
+  flips to show the fact, and a full-screen travel poster.
 - **Journey sheet.** Stops and levels completed overall, then the six countries
   on a dashed line with progress, "შენ აქ ხარ" on the current one and locks
   ahead. Tapping an open country scrolls the path to it.
@@ -269,7 +285,7 @@ or content changes (prefer columns ≥ rows, or transpose tall layouts) fix that
 - `PlaceArt` — a stop's painting cropped to its box, or its placeholder landscape.
 - `PrimaryButton`, `SecondaryButton`, `RoundButton`, `Card`, `CoinBadge`,
   `CoinGlyph`, `Icon` (Skia line icons, no icon font), `LoadingLogo` /
-  `VictoryLogo`, `Postcard`, `TabBar`,
+  `VictoryLogo`, `Postcard`, `StampedPostcard`, `PlaceFact`, `TabBar`,
   `BonusMeter`, `Txt`, `Display`.
 
 ## Motion and the event contract

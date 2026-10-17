@@ -42,6 +42,9 @@ Every stop's postcard has a one-sentence Georgian caption describing its paintin
 the 38 new ones were written by Claude, without native-speaker review, and await
 the owner's approval.
 
+Each stop also has one "იცოდი?" fact (`placeFacts`, same file), checked against a
+source and approved by the owner on 2026-10-17; see [Place facts](PLACE_FACTS.md).
+
 ---
 
 # Historical revision 12: everyday-word campaign

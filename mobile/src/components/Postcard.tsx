@@ -1,35 +1,24 @@
 import { StyleSheet, View } from 'react-native';
-import { destinationCaptions } from '../content/destinations';
-import {
-  countryById,
-  palette,
-  sceneFor,
-  space,
-  STOP_PAINTINGS,
-} from '../theme';
+import { palette, sceneFor, space } from '../theme';
 import { PlaceArt } from './PlaceArt';
 import { Display, Txt } from './Text';
 
-/** A painting mounted on ivory stock; the stamp records chapter collection. */
+/**
+ * A collected card in the album and on victory: the painting's band on ivory
+ * stock, the place and its number. The full card is `StampedPostcard`.
+ */
 export function Postcard({
   chapterId,
   number,
-  compact = false,
 }: {
   readonly chapterId: string;
   readonly number: number;
-  readonly compact?: boolean;
 }) {
   const scene = sceneFor(chapterId);
-  // Stops share captions with the original painting they show.
-  const caption =
-    destinationCaptions[chapterId] ??
-    destinationCaptions[STOP_PAINTINGS[chapterId] ?? ''] ??
-    countryById(scene.country).name;
   return (
     <View style={styles.card} testID={`postcard-${chapterId}`}>
-      <View style={compact ? styles.band : styles.painting}>
-        <PlaceArt scene={scene} variant={compact ? 'band' : 'full'} />
+      <View style={styles.band}>
+        <PlaceArt scene={scene} variant="band" />
       </View>
       <View style={styles.caption}>
         <View style={styles.title}>
@@ -45,11 +34,6 @@ export function Postcard({
             </Txt>
           </View>
         </View>
-        {!compact && (
-          <Txt variant="body" color={palette.ink}>
-            {caption}
-          </Txt>
-        )}
       </View>
     </View>
   );
@@ -65,7 +49,6 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   band: { height: 112, overflow: 'hidden' },
-  painting: { aspectRatio: 2 / 3, overflow: 'hidden' },
   caption: { padding: space.sm, gap: space.sm },
   title: { flexDirection: 'row', gap: space.sm, alignItems: 'center' },
   place: { flex: 1 },

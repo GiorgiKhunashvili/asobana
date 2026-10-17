@@ -1,5 +1,5 @@
 import { useLocalSearchParams } from 'expo-router';
-import { Postcard } from '../../src/components/Postcard';
+import { StampedPostcard } from '../../src/components/PostcardStamp';
 import { Screen, TopBar } from '../../src/components/Screen';
 import { Txt } from '../../src/components/Text';
 import { catalog } from '../../src/content/catalog';
@@ -19,7 +19,7 @@ export default function Destination() {
   return (
     <Screen
       tone={chapterTone(id)}
-      veil={0.65}
+      veil={0.72}
       header={<TopBar title="ბარათი" />}
       contentStyle={{
         gap: space.md,
@@ -29,7 +29,7 @@ export default function Destination() {
       }}
     >
       {card?.collected ? (
-        <Postcard chapterId={card.chapterId} number={card.number} />
+        <StampedPostcard chapterId={card.chapterId} number={card.number} />
       ) : (
         <Txt>
           {card

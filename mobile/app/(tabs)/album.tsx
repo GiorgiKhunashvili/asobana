@@ -24,7 +24,7 @@ function OpenCard({ card }: { readonly card: Card }) {
       onPress={() => router.push(routes.postcard(card.chapterId))}
       style={({ pressed }) => ({ opacity: pressed ? 0.85 : 1 })}
     >
-      <Postcard chapterId={card.chapterId} number={card.number} compact />
+      <Postcard chapterId={card.chapterId} number={card.number} />
     </Pressable>
   );
 }

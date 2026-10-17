@@ -9,6 +9,7 @@ import Animated, {
 } from 'react-native-reanimated';
 import { PrimaryButton, SecondaryButton } from '../../src/components/Buttons';
 import { CoinBadge, CoinGlyph } from '../../src/components/CoinBadge';
+import { PlaceFact } from '../../src/components/PlaceFact';
 import { Postcard } from '../../src/components/Postcard';
 import { BonusMeter } from '../../src/components/BonusMeter';
 import { VictoryLogo } from '../../src/components/Logo';
@@ -73,6 +74,8 @@ export default function Victory() {
     .slice(index + 1)
     .some((entry) => entry.chapterId === level?.chapterId);
   const showCard = chapterEnd && chapterCard?.collected;
+  // A stop's first win is the player's arrival: tell them about the place.
+  const arrival = catalog.levels[index - 1]?.chapterId !== level?.chapterId;
   const nextChapter = catalog.levels.find(
     (entry) => entry.id === next,
   )?.chapterId;
@@ -109,7 +112,6 @@ export default function Victory() {
           <Postcard
             chapterId={chapterCard.chapterId}
             number={chapterCard.number}
-            compact
           />
           <SecondaryButton
             label="ბარათის ნახვა"
@@ -157,6 +159,14 @@ export default function Victory() {
           <Txt variant="number" color={palette.ink} style={styles.rewardText}>
             +{reward}
           </Txt>
+        </Animated.View>
+      )}
+      {arrival && (
+        <Animated.View
+          entering={FadeIn.delay(600).duration(500)}
+          style={styles.fact}
+        >
+          <PlaceFact chapterId={level?.chapterId} />
         </Animated.View>
       )}
       <BonusMeter
@@ -223,6 +233,7 @@ const styles = StyleSheet.create({
     gap: space.lg,
   },
   centered: { textAlign: 'center' },
+  fact: { width: '100%', maxWidth: 400 },
   emblem: { marginTop: -space.xl },
   title: { alignItems: 'center', gap: space.xs, marginTop: -space.xl },
   reward: {

@@ -29,6 +29,8 @@ import { catalog as journeyCatalog } from '../src/content/catalog';
 import { JourneyScreen } from '../src/screens/JourneyScreen';
 import { TabBar } from '../src/components/TabBar';
 import { blockedHaptic } from '../src/services/feedback';
+import { StampedPostcard } from '../src/components/PostcardStamp';
+import { placeFacts } from '../src/content/destinations';
 import { catalog, reachLevel, submit, tilesFor } from './legacyHelpers';
 
 // Animation and drawing are verified on the simulator; here they are inert.
@@ -81,6 +83,8 @@ jest.mock('@shopify/react-native-skia', () => {
   const builder = {
     moveTo: () => builder,
     lineTo: () => builder,
+    addRect: () => builder,
+    addCircle: () => builder,
     setFillType: () => builder,
     detach: () => ({}),
   };
@@ -96,9 +100,11 @@ jest.mock('@shopify/react-native-skia', () => {
     RadialGradient: Nothing,
     Rect: Nothing,
     RoundedRect: Nothing,
+    PathOp: { Difference: 0 },
     Skia: {
       PathBuilder: { Make: () => builder, MakeFromPath: () => builder },
-      Path: { MakeFromSVGString: () => ({}) },
+      Path: { MakeFromSVGString: () => ({}), MakeFromOp: () => ({}) },
+      XYWHRect: () => ({}),
     },
     vec: (x: number, y: number) => ({ x, y }),
   };
@@ -472,4 +478,61 @@ test("looking back at a finished level keeps the player's place", async () => {
   } finally {
     gameStore.setState({ game: before });
   }
+});
+
+test('a place card opens its sheet; the fact waits until the player arrives', async () => {
+  const before = gameStore.getState().game;
+  try {
+    gameStore.setState({ game: reachCurrentLevel(3) });
+    const screen = await render(<JourneyScreen />);
+    await fireEvent.press(screen.getByTestId('stop-tbilisi'));
+    expect(screen.getByTestId('place-sheet')).toBeTruthy();
+    expect(screen.getByTestId('place-fact')).toHaveTextContent(
+      placeFacts.tbilisi!,
+      { exact: false },
+    );
+    expect(screen.getByText('დონე 1–5 · 3/5 გავლილია')).toBeTruthy();
+    expect(screen.getByText('ბარათამდე დარჩა 2 დონე')).toBeTruthy();
+    await fireEvent.press(screen.getByTestId('place-continue'));
+    expect(router.push).toHaveBeenCalledWith({
+      pathname: '/game/[levelId]',
+      params: { levelId: 'ka-004' },
+    });
+    expect(screen.queryByTestId('place-sheet')).toBeNull();
+    // A place not reached yet keeps its fact for the arrival.
+    await fireEvent.press(screen.getByTestId('stop-mtskheta'));
+    expect(screen.getByText('ჯერ არ ჩასულხარ')).toBeTruthy();
+    expect(screen.queryByTestId('place-fact')).toBeNull();
+    expect(screen.queryByTestId('place-continue')).toBeNull();
+  } finally {
+    gameStore.setState({ game: before });
+  }
+});
+
+test("the fact greets a place's first win and stays on its stamped postcard", async () => {
+  const before = gameStore.getState().game;
+  try {
+    gameStore.setState({ game: reachCurrentLevel(17) });
+    jest.mocked(useLocalSearchParams).mockReturnValue({ levelId: 'ka-016' });
+    const screen = await render(<Victory />);
+    expect(screen.getByTestId('place-fact')).toHaveTextContent(
+      placeFacts.kazbegi!,
+      { exact: false },
+    );
+    jest.mocked(useLocalSearchParams).mockReturnValue({ levelId: 'ka-017' });
+    await screen.rerender(<Victory />);
+    expect(screen.queryByTestId('place-fact')).toBeNull();
+  } finally {
+    gameStore.setState({ game: before });
+  }
+  // The full card is a stamp with the fact on a note; earned pre-journey
+  // cards have no fact and show the stamp alone.
+  const card = await render(<StampedPostcard chapterId="kazbegi" number={4} />);
+  expect(card.getByLabelText('ყაზბეგი, ბარათი 4, საქართველო')).toBeTruthy();
+  expect(card.getByTestId('place-fact')).toHaveTextContent(
+    placeFacts.kazbegi!,
+    { exact: false },
+  );
+  await card.rerender(<StampedPostcard chapterId="weather" number={1} />);
+  expect(card.queryByTestId('place-fact')).toBeNull();
 });

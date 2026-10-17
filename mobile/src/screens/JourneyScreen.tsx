@@ -38,10 +38,15 @@ import Animated, {
 } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { EnamelBackdrop } from '../components/Backdrop';
-import { PrimaryButton, RoundButton } from '../components/Buttons';
+import {
+  PrimaryButton,
+  RoundButton,
+  SecondaryButton,
+} from '../components/Buttons';
 import { CoinBadge } from '../components/CoinBadge';
 import { Icon } from '../components/Icon';
 import { PlaceArt } from '../components/PlaceArt';
+import { PlaceFact } from '../components/PlaceFact';
 import { Display, Txt } from '../components/Text';
 import { catalog } from '../content/catalog';
 import { selectPostcards } from '../engine/postcards';
@@ -73,6 +78,7 @@ const ROW_END = 44;
 const DIVIDER = 76;
 const COUNTRY_CARD = 268;
 const COUNTRY_ART = 112;
+const PLACE_ART = 150;
 const ZIG = [0, 46, 70, 46, 0, -46] as const;
 
 const GROUND = {
@@ -147,6 +153,8 @@ export function JourneyScreen() {
   const insets = useSafeAreaInsets();
   const { width } = useWindowDimensions();
   const [sheet, setSheet] = useState(false);
+  /** The stop whose sheet is open, by ID so it follows fresh progress. */
+  const [placeId, setPlaceId] = useState<string | null>(null);
   /** True while the player's next level is scrolled out of view. */
   const [away, setAway] = useState(false);
   const [notice, setNotice] = useState<{ key: number; text: string } | null>(
@@ -268,7 +276,12 @@ export function JourneyScreen() {
   const renderItem = useCallback<ListRenderItem<Row>>(
     ({ item }) =>
       item.kind === 'stop' ? (
-        <StopSection row={item} width={width} onBlocked={blocked} />
+        <StopSection
+          row={item}
+          width={width}
+          onBlocked={blocked}
+          onOpen={setPlaceId}
+        />
       ) : (
         <CountrySection row={item} width={width} />
       ),
@@ -318,6 +331,10 @@ export function JourneyScreen() {
 
   if (!game || !data) return null;
   const current = data.current;
+  const place = data.rows.find(
+    (row): row is StopRow => row.kind === 'stop' && row.chapter.id === placeId,
+  );
+  const sheetOpen = sheet || Boolean(place);
   const jumpTo = (country: Country) => {
     const index = data.rows.findIndex(
       (row) => row.kind === 'country' && row.country === country,
@@ -409,6 +426,13 @@ export function JourneyScreen() {
           onBlocked={blocked}
         />
       )}
+      {place && (
+        <PlaceSheet
+          row={place}
+          width={width}
+          onClose={() => setPlaceId(null)}
+        />
+      )}
       {notice && (
         <Animated.View
           key={notice.key}
@@ -420,7 +444,9 @@ export function JourneyScreen() {
             styles.notice,
             {
               bottom:
-                away && current && !sheet ? CONTINUE_ROOM + space.sm : space.lg,
+                away && current && !sheetOpen
+                  ? CONTINUE_ROOM + space.sm
+                  : space.lg,
             },
           ]}
         >
@@ -438,10 +464,12 @@ const StopSection = memo(function StopSection({
   row,
   width,
   onBlocked,
+  onOpen,
 }: {
   row: StopRow;
   width: number;
   onBlocked: OnBlocked;
+  onOpen: (chapterId: string) => void;
 }) {
   const cx = width / 2;
   const k = Math.min(1.25, width / 402);
@@ -467,11 +495,17 @@ const StopSection = memo(function StopSection({
   }));
   return (
     <View style={{ height: rowHeight(row) }}>
-      <View
-        style={[styles.header, locked && styles.headerLocked]}
-        accessibilityRole="header"
+      <Pressable
+        style={({ pressed }) => [
+          styles.header,
+          locked && styles.headerLocked,
+          pressed && styles.pressed,
+        ]}
+        accessibilityRole="button"
         accessibilityLabel={`ადგილი ${row.number}, ${row.chapter.title}, ${done} / ${row.levels.length} დონე${locked ? ', ჩაკეტილია' : ''}`}
+        accessibilityHint="ადგილის შესახებ"
         testID={`stop-${row.chapter.id}`}
+        onPress={() => onOpen(row.chapter.id)}
       >
         <PlaceArt
           scene={row.scene}
@@ -504,7 +538,7 @@ const StopSection = memo(function StopSection({
               : `დონე ${first}–${last} · ${done}/${row.levels.length}`}
           </Txt>
         </View>
-        {/* A status mark, not a control: the postcard coin opens the card. */}
+        {/* Status only; the whole card opens the place sheet. */}
         <View style={styles.headerMark} pointerEvents="none">
           <Icon
             name={locked ? 'lock' : row.card?.collected ? 'check' : 'card'}
@@ -512,7 +546,7 @@ const StopSection = memo(function StopSection({
             color={palette.goldLight}
           />
         </View>
-      </View>
+      </Pressable>
       {points.slice(1).map((point, index) => {
         const from = points[index]!;
         const lit = point.state === 'done' || point.state === 'current';
@@ -1018,6 +1052,122 @@ function JourneySheet({
     (chapter) => chapter.completedLevels === chapter.totalLevels,
   ).length;
   return (
+    <Sheet title="შენი მოგზაურობა" testID="journey-sheet" onClose={onClose}>
+      <View style={styles.sum}>
+        <Txt variant="caption">{`${stopsDone} / ${chapters.length} ადგილი`}</Txt>
+        <Txt variant="caption">{`${levelsDone} / ${levelsTotal} დონე`}</Txt>
+      </View>
+      <View style={styles.big}>
+        <View
+          style={[
+            styles.bigFill,
+            {
+              width: `${Math.max(2, (100 * levelsDone) / Math.max(1, levelsTotal))}%`,
+            },
+          ]}
+        />
+      </View>
+      <View style={styles.legs}>
+        <View style={styles.legLine} />
+        {COUNTRIES.map((country) => {
+          const stops = chapters.filter((chapter) =>
+            country.chapterIds.includes(chapter.id),
+          );
+          const done = stops.filter(
+            (stop) => stop.completedLevels === stop.totalLevels,
+          ).length;
+          const open = stops.some((stop) => stop.unlocked);
+          const here = country === current;
+          return (
+            <Pressable
+              key={country.id}
+              accessibilityRole="button"
+              accessibilityLabel={`${country.name}, ${done} / ${stops.length} ადგილი${open ? '' : ', ჩაკეტილია'}${here ? ', შენ აქ ხარ' : ''}`}
+              accessibilityState={{ disabled: !open }}
+              testID={`journey-country-${country.id}`}
+              onPress={() =>
+                open ? onJump(country) : onBlocked({ kind: 'country' })
+              }
+              style={({ pressed }) => [styles.leg, pressed && styles.pressed]}
+            >
+              <View
+                style={[
+                  styles.legDot,
+                  here && styles.legDotHere,
+                  open && !here && styles.legDotOpen,
+                ]}
+              >
+                <Icon
+                  name={here ? 'route' : open ? 'check' : 'lock'}
+                  size={18}
+                  color={
+                    here ? palette.ink : open ? palette.goldLight : '#A79CC6'
+                  }
+                />
+              </View>
+              <View style={styles.legBody}>
+                <View style={styles.legTitle}>
+                  <Txt
+                    variant="bodyStrong"
+                    color={open ? palette.text : palette.textMuted}
+                  >
+                    {country.name}
+                  </Txt>
+                  {here && (
+                    <View style={styles.here}>
+                      <Txt
+                        variant="caption"
+                        color={palette.ink}
+                        style={styles.bold}
+                      >
+                        შენ აქ ხარ
+                      </Txt>
+                    </View>
+                  )}
+                </View>
+                <Txt
+                  variant="caption"
+                  color={palette.textMuted}
+                  numberOfLines={2}
+                >
+                  {`${stops.length} ადგილი · ${country.route}`}
+                </Txt>
+                {open && (
+                  <View style={styles.legBar}>
+                    <View
+                      style={[
+                        styles.legFill,
+                        {
+                          width: `${(100 * done) / Math.max(1, stops.length)}%`,
+                        },
+                      ]}
+                    />
+                  </View>
+                )}
+              </View>
+            </Pressable>
+          );
+        })}
+      </View>
+    </Sheet>
+  );
+}
+
+/** Bottom sheet over the path: dimmed backdrop, title row and close button. */
+function Sheet({
+  title,
+  eyebrow,
+  testID,
+  onClose,
+  children,
+}: {
+  title: string;
+  eyebrow?: string;
+  testID: string;
+  onClose: () => void;
+  children: ReactNode;
+}) {
+  return (
     <View style={StyleSheet.absoluteFill}>
       <Animated.View entering={FadeIn} exiting={FadeOut} style={styles.dim}>
         <Pressable
@@ -1031,13 +1181,20 @@ function JourneySheet({
         entering={SlideInDown.springify().damping(18)}
         exiting={SlideOutDown}
         style={styles.sheet}
-        testID="journey-sheet"
+        testID={testID}
         accessibilityViewIsModal
       >
         <View style={styles.sheetHead}>
-          <Display variant="title" color={palette.goldLight}>
-            შენი მოგზაურობა
-          </Display>
+          <View style={styles.sheetTitle}>
+            {eyebrow && (
+              <Display variant="eyebrow" color={palette.gold} numberOfLines={1}>
+                {eyebrow}
+              </Display>
+            )}
+            <Display variant="title" color={palette.goldLight}>
+              {title}
+            </Display>
+          </View>
           <RoundButton
             label="დახურვა"
             icon="close"
@@ -1045,104 +1202,93 @@ function JourneySheet({
             onPress={onClose}
           />
         </View>
-        <View style={styles.sum}>
-          <Txt variant="caption">{`${stopsDone} / ${chapters.length} ადგილი`}</Txt>
-          <Txt variant="caption">{`${levelsDone} / ${levelsTotal} დონე`}</Txt>
-        </View>
-        <View style={styles.big}>
-          <View
-            style={[
-              styles.bigFill,
-              {
-                width: `${Math.max(2, (100 * levelsDone) / Math.max(1, levelsTotal))}%`,
-              },
-            ]}
-          />
-        </View>
-        <View style={styles.legs}>
-          <View style={styles.legLine} />
-          {COUNTRIES.map((country) => {
-            const stops = chapters.filter((chapter) =>
-              country.chapterIds.includes(chapter.id),
-            );
-            const done = stops.filter(
-              (stop) => stop.completedLevels === stop.totalLevels,
-            ).length;
-            const open = stops.some((stop) => stop.unlocked);
-            const here = country === current;
-            return (
-              <Pressable
-                key={country.id}
-                accessibilityRole="button"
-                accessibilityLabel={`${country.name}, ${done} / ${stops.length} ადგილი${open ? '' : ', ჩაკეტილია'}${here ? ', შენ აქ ხარ' : ''}`}
-                accessibilityState={{ disabled: !open }}
-                testID={`journey-country-${country.id}`}
-                onPress={() =>
-                  open ? onJump(country) : onBlocked({ kind: 'country' })
-                }
-                style={({ pressed }) => [styles.leg, pressed && styles.pressed]}
-              >
-                <View
-                  style={[
-                    styles.legDot,
-                    here && styles.legDotHere,
-                    open && !here && styles.legDotOpen,
-                  ]}
-                >
-                  <Icon
-                    name={here ? 'route' : open ? 'check' : 'lock'}
-                    size={18}
-                    color={
-                      here ? palette.ink : open ? palette.goldLight : '#A79CC6'
-                    }
-                  />
-                </View>
-                <View style={styles.legBody}>
-                  <View style={styles.legTitle}>
-                    <Txt
-                      variant="bodyStrong"
-                      color={open ? palette.text : palette.textMuted}
-                    >
-                      {country.name}
-                    </Txt>
-                    {here && (
-                      <View style={styles.here}>
-                        <Txt
-                          variant="caption"
-                          color={palette.ink}
-                          style={styles.bold}
-                        >
-                          შენ აქ ხარ
-                        </Txt>
-                      </View>
-                    )}
-                  </View>
-                  <Txt
-                    variant="caption"
-                    color={palette.textMuted}
-                    numberOfLines={2}
-                  >
-                    {`${stops.length} ადგილი · ${country.route}`}
-                  </Txt>
-                  {open && (
-                    <View style={styles.legBar}>
-                      <View
-                        style={[
-                          styles.legFill,
-                          {
-                            width: `${(100 * done) / Math.max(1, stops.length)}%`,
-                          },
-                        ]}
-                      />
-                    </View>
-                  )}
-                </View>
-              </Pressable>
-            );
-          })}
-        </View>
+        {children}
       </Animated.View>
     </View>
+  );
+}
+
+/**
+ * A stop up close: its painting, progress and, once the player has arrived,
+ * its "იცოდი?" fact, with ways on to its next level or its postcard.
+ */
+function PlaceSheet({
+  row,
+  width,
+  onClose,
+}: {
+  row: StopRow;
+  width: number;
+  onClose: () => void;
+}) {
+  const arrived = row.chapter.unlocked;
+  const done = row.levels.filter((level) => level.completed).length;
+  const first = row.levels[0]?.number ?? 0;
+  const last = row.levels[row.levels.length - 1]?.number ?? 0;
+  const next = row.currentIndex >= 0 ? row.levels[row.currentIndex] : null;
+  const collected = Boolean(row.card?.collected);
+  const go = (to: () => void) => () => {
+    onClose();
+    to();
+  };
+  return (
+    <Sheet
+      title={row.chapter.title}
+      eyebrow={`ადგილი ${row.number} · ${row.country.name}`}
+      testID="place-sheet"
+      onClose={onClose}
+    >
+      <View style={styles.place}>
+        <View style={styles.placeArt}>
+          <PlaceArt
+            scene={row.scene}
+            size={{ width: width - 2 * space.xl, height: PLACE_ART }}
+          />
+          {!arrived && <View style={styles.countryVeil} />}
+        </View>
+        <View>
+          <Txt variant="caption" color={palette.textMuted}>
+            {arrived
+              ? `დონე ${first}–${last} · ${done}/${row.levels.length} გავლილია`
+              : `დონე ${first}–${last}`}
+          </Txt>
+          {arrived && (
+            <Txt variant="caption" color={palette.textMuted}>
+              {collected
+                ? 'ბარათი შეგროვდა'
+                : `ბარათამდე დარჩა ${row.card?.remaining ?? row.levels.length} დონე`}
+            </Txt>
+          )}
+        </View>
+        {arrived ? (
+          <PlaceFact chapterId={row.chapter.id} />
+        ) : (
+          <View style={styles.note}>
+            <Icon name="lock" size={16} color={palette.goldLight} />
+            <Txt variant="bodyStrong" color={palette.goldLight}>
+              ჯერ არ ჩასულხარ
+            </Txt>
+          </View>
+        )}
+        {next && (
+          <PrimaryButton
+            label="გაგრძელება"
+            detail={`დონე ${next.number} · ${levelLabel(next.id)}`}
+            icon="play"
+            testID="place-continue"
+            onPress={go(() => router.push(routes.game(next.id)))}
+          />
+        )}
+        {collected && (
+          <SecondaryButton
+            label="ბარათის ნახვა"
+            icon="card"
+            testID="place-postcard"
+            onPress={go(() => router.push(routes.postcard(row.chapter.id)))}
+          />
+        )}
+      </View>
+    </Sheet>
   );
 }
 
@@ -1379,7 +1525,7 @@ const styles = StyleSheet.create({
     bottom: 0,
     paddingHorizontal: space.xl,
     paddingTop: space.lg,
-    paddingBottom: space.xxl + space.lg,
+    paddingBottom: space.xl + space.md,
     backgroundColor: '#1E1733',
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
@@ -1390,7 +1536,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+    gap: space.md,
   },
+  sheetTitle: { flex: 1 },
+  place: { gap: space.md, marginTop: space.md },
+  placeArt: { height: PLACE_ART, borderRadius: 18, overflow: 'hidden' },
   sum: {
     flexDirection: 'row',
     justifyContent: 'space-between',
