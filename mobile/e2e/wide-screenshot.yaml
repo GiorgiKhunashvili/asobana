@@ -10,10 +10,10 @@ appId: host.exp.Exponent
     optional: true
 - extendedWaitUntil:
     visible:
-      id: home-continue
+      id: path-current
     timeout: 60000
 - tapOn:
-    id: home-continue
+    id: path-current
 - extendedWaitUntil:
     visible:
       id: word-progress

@@ -15,11 +15,11 @@ appId: host.exp.Exponent
     optional: true
 - extendedWaitUntil:
     visible:
-      id: home-continue
+      id: path-current
     timeout: 30000
 - assertVisible: '113 მონეტა'
 - tapOn:
-    id: home-continue
+    id: path-current
 - assertVisible: 'ოჯახი'
 - assertVisible: '1/2 სიტყვა · ბონუსი 1'
 - takeScreenshot: artifacts/ios-restart-restored

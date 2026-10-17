@@ -25,16 +25,10 @@ The mark is drawn live in Skia from the same vector paths, because it is itself
 a word being found: three letter-dots joined by one swipe. It replaced the
 earlier enamel rosette on home and victory.
 
-- **Home intro** (`HomeLogo`, first home visit of each launch, about 2.5 s, tap
-  to skip), in the logo's own colours only: the gold A forms (slight overshoot),
-  its navy dots pop in like wheel letters, the navy swipe draws its two strokes
-  across the gold, the gold glows once and a light sweep crosses it. The name
-  ასობანა appears letter by letter from `INTRO_TITLE_DELAY`, and the tagline
-  follows on a dusk pill so it reads on the brightest skies. (A first version
-  traced the swipe in the game's pomegranate cord colour; on the logo that read
-  as a foreign colour.)
-- **Home idle:** a spark runs the swipe every 4.2 s, lighting each dot as it
-  passes, with a slow light sweep every other spark.
+- **Home intro and idle (removed 2026-10-17).** The home screen traced the
+  logo on each launch and ran an idle spark. The owner dropped the home screen
+  for the path (see [Navigation](#navigation-2026-10-17)), and `HomeLogo` went
+  with it; the launch lockup below is now the logo moment.
 - **Launch:** the native splash (`expo-splash-screen` in `mobile/app.json`) is
   navy `#0B294B` with `branding/splash-lockup.png`: the mark (160 pt) above the
   name ასობანა in gold-light display letters, 260 x 200 pt, built by
@@ -53,8 +47,8 @@ earlier enamel rosette on home and victory.
 - **Victory** (`VictoryLogo`): the A grows in, the dots pop and the swipe
   traces in the stop's accent, then 18 gold, ivory and accent tiles burst from
   the dots. Stop endings still show the earned postcard instead.
-- A soft dusk shadow keeps the mark readable on bright paintings. Loops stop
-  while home is hidden; with Reduce Motion the mark is static.
+- A soft dusk shadow keeps the mark readable on bright paintings. With Reduce
+  Motion the mark is static.
 
 ## Concept
 
@@ -87,9 +81,8 @@ journey stop it shows, and stops without one use a placeholder (see
   tracing cord and chosen letters share the scene's `accent`, a deep colour picked
   from the painting (Kazbegi dusk indigo, Kakheti saperavi, Tbilisi brick, ...).
   The wheel is a 90% ivory disc with a soft shadow, so the painting breathes through.
-- **Composition.** Home puts the title in the sky and the actions on the
-  foreground, leaving the landmark visible between them. Chapter cards show each
-  chapter's horizon strip.
+- **Composition.** Text-heavy screens (album, settings, coins) veil the
+  painting; the board and victory leave the landmark visible.
 - **`CoverImage`.** React Native's `cover` mode mis-crops these large bundled
   images on iOS (it showed a zoomed corner), so images are laid out with an
   explicit aspect-correct frame.
@@ -116,9 +109,10 @@ and painted styles all read as atlases rather than as a game.
   their number. The postcard coin opens the collected card.
 - **Stamps.** Beside a finished stop, its painting as a perforated stamp
   ("შეგროვდა"); beside the current stop, a "?" stamp counting the levels left.
-- **Chrome.** Home button, a country pill (name, `done/total` stops and a thin
-  progress line) that opens the journey sheet, and coins. A bottom bar links the
-  journey, album, shop and settings; it pushes routes rather than hosting tabs.
+- **Chrome.** A country pill (name, `done/total` stops and a thin progress
+  line) that opens the journey sheet, and coins. The bottom bar belongs to the
+  tab layout (see [Navigation](#navigation-2026-10-17)). The mark at the right
+  of each stop header (lock, postcard, check) is status only, not a control.
 - **Journey sheet.** Stops and levels completed overall, then the six countries
   on a dashed line with progress, "შენ აქ ხარ" on the current one and locks
   ahead. Tapping an open country scrolls the path to it.
@@ -126,11 +120,35 @@ and painted styles all read as atlases rather than as a game.
   the current stop's header when its next level fits on screen, otherwise centred
   on that level. Pulse and bubble loops stop when the path is hidden or reduced
   motion is on. Locked level titles stay hidden; coins show numbers only.
-- **Elsewhere.** Home links "მოგზაურობა" and counts album cards out of 48. The
-  album groups cards by country, folds unreached countries into one line and
+- **Locked taps answer.** A locked level, postcard or country shakes (levels and
+  postcards), gives a warning haptic and shows a short note above the bar for
+  2.2 s, also announced to VoiceOver: "ჯერ გაიარე დონე N" (N is the next level;
+  levels unlock in order), "ბარათამდე დარჩა N დონე", "გაიხსნება წინა ქვეყნის
+  შემდეგ". Locked coins stay up when pressed instead of sinking.
+- **Continue button.** While the next level is scrolled out of view, a gold
+  "გაგრძელება · დონე 18 · ყაზბეგი · 3/5" button floats above the bar and opens
+  it. It replaced home's continue button.
+- **Elsewhere.** The album groups cards by country, folds unreached countries into one line and
   lists earned pre-journey postcards as "ძველი ბარათები". Victory announces
   "ახალი ქვეყანა: …" after the last stop of a country; copy says "ადგილი"
   (place) where it said "თავი" (chapter).
+
+### Navigation (2026-10-17)
+
+The owner chose one structure: launch lockup, then the path as the main screen.
+
+- **Tabs** (`app/(tabs)`, `src/components/TabBar.tsx`): მოგზაურობა (the path,
+  `/`), ალბომი (`/album`) and პარამეტრები (`/settings`) share the enamel bar.
+  Switching tabs keeps each screen, including the path's scroll position. The
+  tab screens have no back button and use `Screen`'s `tabbed` mode, which
+  leaves the home-indicator inset to the bar.
+- **Over the tabs**, full screen, with a back arrow: the board, victory, a
+  single postcard and the coins page (`/coins`, opened from the coin badge).
+  `toJourney()` closes whatever is open and returns to the path; victory's
+  "მოგზაურობა" and the board's look-back and locked messages use it.
+- **Removed:** the home screen, its "მთავარი" buttons, the per-stop level grid
+  (`/chapters/[chapterId]`) and the "მაღაზია" tab. Nothing is sold, so the
+  coins page stays an explanation titled "მონეტები" until purchases are decided.
 
 ### The player's place and level names
 
@@ -138,15 +156,15 @@ and painted styles all read as atlases rather than as a game.
   level to any level the player opens, including a finished one.
   `nextUnfinished()` (`src/screens/nextLevel.ts`) keeps the player's place:
   the current level while it is unfinished, otherwise the first open unfinished
-  level. Home's "გაგრძელება", victory's next level, the path's pulsing level and
-  the backgrounds of home, album, coins and settings all use it.
+  level. The path's continue button, victory's next level, the path's pulsing
+  level and the backgrounds of album, coins and settings all use it.
 - **Finished levels open to look back.** The solved board is shown with
   "ეს დონე უკვე გავლილია", a "გაგრძელება" button to the real next level and a
   way back to the journey. They are not replayed (that would need engine rules
   for rewards and progress).
 - **Levels are named by place and step:** `levelLabel()` gives
   "ყაზბეგი · 3/5". Content titles are numbered placeholders ("აღმოჩენა 18") and
-  are not shown on home, above the board or on victory.
+  are not shown on the path, above the board or on victory.
 
 ### Stop paintings and placeholders
 
@@ -250,8 +268,8 @@ or content changes (prefer columns ≥ rows, or transpose tall layouts) fix that
 
 - `PlaceArt` — a stop's painting cropped to its box, or its placeholder landscape.
 - `PrimaryButton`, `SecondaryButton`, `RoundButton`, `Card`, `CoinBadge`,
-  `CoinGlyph`, `Icon` (Skia line icons, no icon font), `HomeLogo` /
-  `LoadingLogo` / `VictoryLogo`, `Postcard`,
+  `CoinGlyph`, `Icon` (Skia line icons, no icon font), `LoadingLogo` /
+  `VictoryLogo`, `Postcard`, `TabBar`,
   `BonusMeter`, `Txt`, `Display`.
 
 ## Motion and the event contract

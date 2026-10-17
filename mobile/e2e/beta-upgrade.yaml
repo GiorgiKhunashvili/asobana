@@ -14,11 +14,11 @@ appId: host.exp.Exponent
     optional: true
 - extendedWaitUntil:
     visible:
-      id: home-continue
+      id: path-current
     timeout: 60000
 - assertVisible: '191 მონეტა'
 - tapOn:
-    id: home-continue
+    id: path-current
 - assertVisible: '4/4 სიტყვა · ბონუსი 0'
 - tapOn:
     id: level-continue
@@ -93,11 +93,11 @@ appId: host.exp.Exponent
     optional: true
 - extendedWaitUntil:
     visible:
-      id: home-continue
+      id: path-current
     timeout: 30000
 - assertVisible: '219 მონეტა'
 - tapOn:
-    id: home-continue
+    id: path-current
 - assertVisible: 'ბილიკი 6'
 - assertVisible: '0/4 სიტყვა · ბონუსი 0'
 - takeScreenshot: artifacts/ios-beta-restarted

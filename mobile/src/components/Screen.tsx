@@ -20,6 +20,7 @@ export function Screen({
   contentStyle,
   glowY,
   veil = 0,
+  tabbed = false,
 }: PropsWithChildren<{
   readonly tone: Tone;
   readonly header?: ReactNode;
@@ -27,6 +28,8 @@ export function Screen({
   readonly glowY?: number;
   /** Darkens the painting for screens that are mostly text and cards (0–1). */
   readonly veil?: number;
+  /** Above the bottom tab bar, which already keeps clear of the home indicator. */
+  readonly tabbed?: boolean;
 }>) {
   const scrollGesture = useMemo(() => Gesture.Native(), []);
   return (
@@ -38,7 +41,9 @@ export function Screen({
       />
       <SafeAreaView
         style={styles.root}
-        edges={['top', 'left', 'right', 'bottom']}
+        edges={
+          tabbed ? ['top', 'left', 'right'] : ['top', 'left', 'right', 'bottom']
+        }
       >
         {header}
         <GestureScrollContext.Provider value={scrollGesture}>

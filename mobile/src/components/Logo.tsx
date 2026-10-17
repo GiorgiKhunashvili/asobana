@@ -11,13 +11,11 @@ import {
   Skia,
   vec,
 } from '@shopify/react-native-skia';
-import { useIsFocused } from 'expo-router';
 import { useEffect } from 'react';
-import { Pressable, View } from 'react-native';
+import { View } from 'react-native';
 import {
   cancelAnimation,
   Easing,
-  interpolateColor,
   useDerivedValue,
   useReducedMotion,
   useSharedValue,
@@ -43,7 +41,6 @@ const DOTS = [
   [105, 394],
 ] as const;
 export const NAVY = '#0B294B';
-const GLOW = '#3D6FA8';
 const UNIT = 512;
 
 // Even-odd keeps the A's counter open, so the light sweep skips it.
@@ -316,181 +313,6 @@ function Tile({
       />
     </Group>
   );
-}
-
-/* ------------------------------------------------------------------ home */
-
-/** Intro timeline (ms): the logo traces itself like a found word. */
-const INTRO = {
-  body: [0, 560],
-  dots: [320, 450, 580],
-  cord1: [600, 420],
-  cord2: [900, 460],
-  glow: [1380, 520],
-  sweep: [1550, 900],
-  end: 2450,
-} as const;
-/** When the intro's title can start appearing, for screens that pair text with it. */
-export const INTRO_TITLE_DELAY = 1150;
-const IDLE_PERIOD = 4200;
-const IDLE_RUN = 1500;
-
-/**
- * The home logo. With `intro`, it traces itself once (tap to skip); then a spark
- * runs along the swipe every few seconds, lighting each dot it passes. Loops
- * stop while the screen is hidden or Reduce Motion is on.
- */
-export function HomeLogo({
-  size,
-  intro,
-}: {
-  readonly size: number;
-  readonly intro: boolean;
-}) {
-  const reduced = useReducedMotion();
-  const focused = useIsFocused();
-  const playIntro = intro && !reduced;
-  const clock = useSharedValue<number>(playIntro ? 0 : INTRO.end);
-  const loop = useSharedValue(0);
-  const running = useSharedValue(0);
-  /** 1 once the intro is over; the idle loop may run only then. */
-  const settled = useSharedValue(playIntro ? 0 : 1);
-  /** 1 while the idle loop is allowed (home visible, motion on). */
-  const allowed = useSharedValue(0);
-
-  // The intro hands over to the idle loop on the UI thread, without a re-render.
-  useEffect(() => {
-    if (!playIntro) return;
-    clock.set(
-      withTiming(
-        INTRO.end,
-        { duration: INTRO.end, easing: Easing.linear },
-        (done) => {
-          if (!done) return;
-          settled.set(1);
-          if (allowed.get()) startIdle(loop, running);
-        },
-      ),
-    );
-    return () => cancelAnimation(clock);
-  }, [clock, playIntro, settled, allowed, loop, running]);
-
-  useEffect(() => {
-    allowed.set(!reduced && focused ? 1 : 0);
-    if (reduced || !focused) {
-      cancelAnimation(loop);
-      loop.set(0);
-      running.set(0);
-    } else if (settled.get()) startIdle(loop, running);
-  }, [reduced, focused, allowed, settled, loop, running]);
-
-  const skip = () => {
-    if (settled.get()) return;
-    cancelAnimation(clock);
-    clock.set(INTRO.end);
-    settled.set(1);
-    if (allowed.get()) startIdle(loop, running);
-  };
-
-  // Only the logo's own colours: the gold A forms, its navy dots pop in and the
-  // navy swipe draws itself across it, then the gold glows once.
-  const cord1 = useDerivedValue(() =>
-    easeInOut(seg(clock.get(), INTRO.cord1[0], INTRO.cord1[1])),
-  );
-  const cord2 = useDerivedValue(() =>
-    easeInOut(seg(clock.get(), INTRO.cord2[0], INTRO.cord2[1])),
-  );
-  const form = useDerivedValue(() =>
-    seg(clock.get(), INTRO.body[0], INTRO.body[1]),
-  );
-  const bodyOpacity = useDerivedValue(() => Math.min(1, form.get() / 0.5));
-  const bodyScale = useDerivedValue(() => {
-    const u = form.get();
-    return u < 0.6
-      ? 0.9 + 0.13 * easeOut(u / 0.6)
-      : 1.03 - (0.03 * (u - 0.6)) / 0.4;
-  });
-  const bodyColor = useDerivedValue(() =>
-    interpolateColor(
-      Math.sin(Math.PI * seg(clock.get(), INTRO.glow[0], INTRO.glow[1])),
-      [0, 1],
-      [palette.gold, palette.goldLight],
-    ),
-  );
-  const sweepX = useDerivedValue(() => {
-    const t = clock.get();
-    if (t < INTRO.end) {
-      const u = seg(t, INTRO.sweep[0], INTRO.sweep[1]);
-      return u <= 0 ? -400 : -200 + u * 900;
-    }
-    // In idle, one slow sweep every other spark.
-    const u = loop.get() / (IDLE_PERIOD * 2);
-    return u < 0.2 ? -200 + (u / 0.2) * 900 : -400;
-  });
-  const spark = useSpark(loop, running, IDLE_PERIOD, IDLE_RUN);
-  const dot0 = useHomeDot(0, clock, spark);
-  const dot1 = useHomeDot(1, clock, spark);
-  const dot2 = useHomeDot(2, clock, spark);
-
-  return (
-    <Pressable
-      onPress={skip}
-      accessible
-      accessibilityRole="image"
-      accessibilityLabel="ასობანა"
-      testID="home-logo"
-    >
-      <View pointerEvents="none">
-        <MarkCanvas
-          size={size}
-          pad={size * 0.08}
-          bodyOpacity={bodyOpacity}
-          bodyScale={bodyScale}
-          bodyColor={bodyColor}
-          cordEnds={[cord1, cord2]}
-          dots={[dot0, dot1, dot2]}
-          sweepX={sweepX}
-          spark={spark}
-        />
-      </View>
-    </Pressable>
-  );
-}
-
-function startIdle(loop: SharedValue<number>, running: SharedValue<number>) {
-  'worklet';
-  loop.set(0);
-  running.set(1);
-  loop.set(
-    withRepeat(
-      withTiming(IDLE_PERIOD * 2, {
-        duration: IDLE_PERIOD * 2,
-        easing: Easing.linear,
-      }),
-      -1,
-    ),
-  );
-}
-
-function useHomeDot(
-  i: number,
-  clock: SharedValue<number>,
-  spark: ReturnType<typeof useSpark>,
-): DotLook {
-  const [cx, cy] = DOTS[i]!;
-  const near = useDerivedValue(() =>
-    spark.opacity.get() > 0
-      ? Math.max(0, 1 - Math.hypot(spark.x.get() - cx, spark.y.get() - cy) / 70)
-      : 0,
-  );
-  const scale = useDerivedValue(() =>
-    pop(seg(clock.get(), INTRO.dots[i]!, 380)),
-  );
-  const r = useDerivedValue(() => 32 + near.get() * 6);
-  const color = useDerivedValue(() =>
-    interpolateColor(near.get(), [0, 1], [NAVY, GLOW]),
-  );
-  return { scale, r, color };
 }
 
 /**

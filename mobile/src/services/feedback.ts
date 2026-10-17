@@ -6,6 +6,13 @@ export function tileHaptic(): void {
   if (gameStore.getState().game?.settings.haptics)
     void Haptics.selectionAsync().catch(() => undefined);
 }
+/** A tap on something still locked. */
+export function blockedHaptic(): void {
+  if (gameStore.getState().game?.settings.haptics)
+    void Haptics.notificationAsync(
+      Haptics.NotificationFeedbackType.Warning,
+    ).catch(() => undefined);
+}
 /** Effects are optional; failures never roll back a committed game transition. */
 export function useGameFeedback(): void {
   const batch = useGameStore((state) => state.eventBatch);

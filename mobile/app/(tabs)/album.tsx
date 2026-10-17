@@ -41,7 +41,8 @@ export default function Postcards() {
     <Screen
       tone={progressTone(game)}
       veil={0.65}
-      header={<TopBar title="ალბომი" />}
+      tabbed
+      header={<TopBar title="ალბომი" onBack={null} />}
       contentStyle={styles.content}
     >
       <Display variant="title">მოგზაურობის ალბომი</Display>
@@ -58,7 +59,7 @@ export default function Postcards() {
           <SecondaryButton
             label="მოგზაურობის გაგრძელება"
             icon="route"
-            onPress={() => router.push('/chapters')}
+            onPress={() => router.navigate('/')}
           />
         </View>
       ) : (

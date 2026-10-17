@@ -15,13 +15,14 @@ appId: host.exp.Exponent
     optional: true
 - extendedWaitUntil:
     visible:
-      id: home-continue
+      id: path-current
     timeout: 60000
-- assertVisible: 'ასობანა'
+- assertVisible:
+    id: tab-journey
 - assertVisible: '100 მონეტა'
-- takeScreenshot: artifacts/ios-home
+- takeScreenshot: artifacts/ios-journey
 - tapOn:
-    id: home-continue
+    id: path-current
 - extendedWaitUntil:
     visible: 'შეაერთე ასოები'
     timeout: 15000

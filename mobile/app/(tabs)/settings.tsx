@@ -6,17 +6,18 @@ import {
   View,
 } from 'react-native';
 import Constants from 'expo-constants';
-import { SecondaryButton } from '../src/components/Buttons';
-import { Card, CardRow } from '../src/components/Card';
-import { Icon, type IconName } from '../src/components/Icon';
-import { goBack, Screen, TopBar } from '../src/components/Screen';
-import { StudioCredit } from '../src/components/StudioCredit';
-import { Txt } from '../src/components/Text';
-import { DEFAULT_ECONOMY } from '../src/engine/game';
-import type { Settings as GameSettings } from '../src/models/types';
-import { gameStore, useGameStore } from '../src/state/gameStore';
-import { progressTone } from '../src/screens/nextLevel';
-import { palette, space } from '../src/theme';
+import { router } from 'expo-router';
+import { SecondaryButton } from '../../src/components/Buttons';
+import { Card, CardRow } from '../../src/components/Card';
+import { Icon, type IconName } from '../../src/components/Icon';
+import { Screen, TopBar } from '../../src/components/Screen';
+import { StudioCredit } from '../../src/components/StudioCredit';
+import { Txt } from '../../src/components/Text';
+import { DEFAULT_ECONOMY } from '../../src/engine/game';
+import type { Settings as GameSettings } from '../../src/models/types';
+import { gameStore, useGameStore } from '../../src/state/gameStore';
+import { progressTone } from '../../src/screens/nextLevel';
+import { palette, space } from '../../src/theme';
 
 const OPTIONS: readonly {
   key: keyof GameSettings;
@@ -54,7 +55,7 @@ function confirmReset() {
             .reset()
             .then(() => {
               AccessibilityInfo.announceForAccessibility('პროგრესი განულდა');
-              goBack();
+              router.navigate('/');
             })
             // A failed save keeps the old progress; the screen shows `error`.
             .catch(() => undefined);
@@ -73,7 +74,8 @@ export default function Settings() {
     <Screen
       veil={0.55}
       tone={progressTone(game)}
-      header={<TopBar title="პარამეტრები" />}
+      tabbed
+      header={<TopBar title="პარამეტრები" onBack={null} />}
       contentStyle={styles.content}
     >
       <Card>

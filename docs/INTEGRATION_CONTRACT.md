@@ -305,18 +305,18 @@ coins/progression. No ads, purchases, authentication or analytics SDKs are insta
 
 ## Navigation contracts
 
-| Route                   | Parameters | Guard                      |
-| ----------------------- | ---------- | -------------------------- |
-| `/`                     | none       | Initialization complete    |
-| `/chapters`             | none       | Loaded catalog             |
-| `/chapters/[chapterId]` | chapterId  | Must exist in catalog      |
-| `/game/[levelId]`       | levelId    | Must exist and be unlocked |
-| `/victory/[levelId]`    | levelId    | Must have saved completion |
-| `/settings`             | none       | Initialized game           |
-| `/shop`                 | none       | Informational coin screen  |
+| Route                    | Parameters | Guard                                    |
+| ------------------------ | ---------- | ---------------------------------------- |
+| `/`                      | none       | Initialization complete; the path (tab)  |
+| `/album`                 | none       | Initialized game (tab)                   |
+| `/settings`              | none       | Initialized game (tab)                   |
+| `/postcards/[chapterId]` | chapterId  | Shows the card only once it is collected |
+| `/game/[levelId]`        | levelId    | Must exist and be unlocked               |
+| `/victory/[levelId]`     | levelId    | Must have saved completion               |
+| `/coins`                 | none       | Informational coin screen                |
 
-Use `routes.game(id)`, `routes.chapter(id)`, `routes.victory(id)` from
-`src/navigation/routes.ts`. `singleParam` rejects array/missing parameters. URLs
+Use `routes.game(id)`, `routes.postcard(id)`, `routes.victory(id)` and
+`toJourney()` from `src/navigation/routes.ts`. `singleParam` rejects array/missing parameters. URLs
 contain no answers or state snapshots. Navigation into a level persists an
 `open-level` command before rendering its controls; locked deep links never unlock
 content. Next-level navigation follows the engine's next ID.

@@ -17,7 +17,7 @@ import { Display, Txt } from '../../src/components/Text';
 import { catalog } from '../../src/content/catalog';
 import { BONUS_GOAL, freeCellHints } from '../../src/engine/bonusRewards';
 import { selectPostcards } from '../../src/engine/postcards';
-import { routes, singleParam } from '../../src/navigation/routes';
+import { routes, singleParam, toJourney } from '../../src/navigation/routes';
 import { gameStore, useGameStore } from '../../src/state/gameStore';
 import { nextUnfinished } from '../../src/screens/nextLevel';
 import {
@@ -52,9 +52,9 @@ export default function Victory() {
         <View style={styles.center}>
           <Txt style={styles.centered}>ჯერ ეს დონე გაიარე.</Txt>
           <SecondaryButton
-            label="მთავარი"
-            icon="home"
-            onPress={() => router.replace('/')}
+            label="მოგზაურობა"
+            icon="route"
+            onPress={toJourney}
           />
         </View>
       </Screen>
@@ -92,7 +92,7 @@ export default function Victory() {
           trailing={
             <CoinBadge
               coins={game.coins}
-              onPress={() => router.push('/shop')}
+              onPress={() => router.push('/coins')}
             />
           }
         />
@@ -196,22 +196,12 @@ export default function Victory() {
             </Txt>
           </Animated.View>
         )}
-        <View style={styles.row}>
-          <SecondaryButton
-            label="მოგზაურობა"
-            icon="route"
-            testID="victory-chapters"
-            style={styles.half}
-            onPress={() => router.replace('/chapters')}
-          />
-          <SecondaryButton
-            label="მთავარი"
-            icon="home"
-            testID="victory-home"
-            style={styles.half}
-            onPress={() => router.replace('/')}
-          />
-        </View>
+        <SecondaryButton
+          label="მოგზაურობა"
+          icon="route"
+          testID="victory-journey"
+          onPress={toJourney}
+        />
       </Animated.View>
     </Screen>
   );
@@ -254,6 +244,4 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   finale: { paddingVertical: space.sm },
-  row: { flexDirection: 'row', gap: space.md },
-  half: { flex: 1 },
 });

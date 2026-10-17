@@ -5,12 +5,11 @@ import { CrosswordBoard } from '../src/components/CrosswordBoard';
 import { LetterWheel } from '../src/components/LetterWheel';
 import { Display } from '../src/components/Text';
 import { BonusMeter } from '../src/components/BonusMeter';
-import Postcards from '../app/postcards';
+import Postcards from '../app/(tabs)/album';
 import { gameStore } from '../src/state/gameStore';
 import { reachLevel as reachCurrentLevel } from './helpers';
 import { router, useLocalSearchParams } from 'expo-router';
 import Victory from '../app/victory/[levelId]';
-import Home from '../app/index';
 import { GameplayScreen } from '../src/screens/GameplayScreen';
 import { initialState, transition } from '../src/engine/game';
 import { selectGameplay } from '../src/engine/selectors';
@@ -28,6 +27,8 @@ import {
 } from '../src/theme';
 import { catalog as journeyCatalog } from '../src/content/catalog';
 import { JourneyScreen } from '../src/screens/JourneyScreen';
+import { TabBar } from '../src/components/TabBar';
+import { blockedHaptic } from '../src/services/feedback';
 import { catalog, reachLevel, submit, tilesFor } from './legacyHelpers';
 
 // Animation and drawing are verified on the simulator; here they are inert.
@@ -39,7 +40,13 @@ jest.mock('react-native-reanimated', () => ({
   useReducedMotion: () => false,
 }));
 jest.mock('expo-router', () => ({
-  router: { canGoBack: () => false, replace: jest.fn(), push: jest.fn() },
+  router: {
+    canGoBack: () => false,
+    replace: jest.fn(),
+    push: jest.fn(),
+    navigate: jest.fn(),
+    dismissTo: jest.fn(),
+  },
   useFocusEffect: jest.fn(),
   useIsFocused: () => true,
   useLocalSearchParams: jest.fn(() => ({})),
@@ -48,7 +55,10 @@ jest.mock(
   'react-native-safe-area-context',
   () => require('react-native-safe-area-context/jest/mock').default,
 );
-jest.mock('../src/services/feedback', () => ({ tileHaptic: jest.fn() }));
+jest.mock('../src/services/feedback', () => ({
+  tileHaptic: jest.fn(),
+  blockedHaptic: jest.fn(),
+}));
 jest.mock('../src/state/gameStore', () => {
   const { initialState } = require('../src/engine/game');
   const { catalog } = require('../src/content/catalog');
@@ -320,6 +330,9 @@ test('journey path shows progress, the country pill and the whole route', async 
       screen.getByLabelText('საქართველო, 3 / 18 ადგილი, შენ აქ ხარ'),
     ).toBeTruthy();
     expect(screen.getByTestId('journey-country-turkey')).toBeDisabled();
+    // The old home and shop links are gone from the path.
+    expect(screen.queryByTestId('journey-home')).toBeNull();
+    expect(screen.queryByText('მაღაზია')).toBeNull();
   } finally {
     gameStore.setState({ game: before });
   }
@@ -345,10 +358,71 @@ test('finishing the last stop in a country announces the next country', async ()
   }
 });
 
-test('home shows the logo and reads the game name once', async () => {
-  const screen = await render(<Home />);
-  expect(screen.getByTestId('home-logo')).toBeTruthy();
-  expect(screen.getByRole('header', { name: 'ასობანა' })).toBeTruthy();
+test('locked levels, postcards and countries say what opens them', async () => {
+  const before = gameStore.getState().game;
+  try {
+    gameStore.setState({ game: reachCurrentLevel(3) });
+    const screen = await render(<JourneyScreen />);
+    expect(screen.queryByTestId('path-notice')).toBeNull();
+    await fireEvent.press(screen.getByTestId('level-ka-005'));
+    expect(screen.getByTestId('path-notice')).toHaveTextContent(
+      'ჯერ გაიარე დონე 4',
+    );
+    expect(blockedHaptic).toHaveBeenCalledTimes(1);
+    await fireEvent.press(screen.getByTestId('path-postcard-tbilisi'));
+    expect(screen.getByTestId('path-notice')).toHaveTextContent(
+      'ბარათამდე დარჩა 2 დონე',
+    );
+    await fireEvent.press(screen.getByTestId('journey-pill'));
+    await fireEvent.press(screen.getByTestId('journey-country-turkey'));
+    expect(screen.getByTestId('path-notice')).toHaveTextContent(
+      'გაიხსნება წინა ქვეყნის შემდეგ',
+    );
+    expect(router.push).not.toHaveBeenCalled();
+  } finally {
+    gameStore.setState({ game: before });
+  }
+});
+
+test('the bottom bar has the journey, album and settings, and no shop', async () => {
+  const routeList = ['index', 'album', 'settings'].map((name) => ({
+    key: `${name}-key`,
+    name,
+    params: undefined,
+  }));
+  const navigation = {
+    emit: jest.fn(() => ({ defaultPrevented: false })),
+    navigate: jest.fn(),
+  };
+  const props = {
+    state: { index: 0, routes: routeList },
+    navigation,
+    insets: { top: 0, bottom: 20, left: 0, right: 0 },
+  } as unknown as Parameters<typeof TabBar>[0];
+  const screen = await render(<TabBar {...props} />);
+  expect(
+    screen.getAllByRole('tab').map((tab) => tab.props.accessibilityLabel),
+  ).toEqual(['მოგზაურობა', 'ალბომი', 'პარამეტრები']);
+  expect(screen.getByTestId('tab-journey')).toBeSelected();
+  await fireEvent.press(screen.getByTestId('tab-album'));
+  expect(navigation.navigate).toHaveBeenCalledWith('album', undefined);
+  // The open tab does not stack itself again.
+  await fireEvent.press(screen.getByTestId('tab-journey'));
+  expect(navigation.navigate).toHaveBeenCalledTimes(1);
+});
+
+test('victory returns to the journey path; there is no home button', async () => {
+  const before = gameStore.getState().game;
+  try {
+    gameStore.setState({ game: reachCurrentLevel(3) });
+    jest.mocked(useLocalSearchParams).mockReturnValue({ levelId: 'ka-003' });
+    const screen = await render(<Victory />);
+    expect(screen.queryByText('მთავარი')).toBeNull();
+    await fireEvent.press(screen.getByTestId('victory-journey'));
+    expect(router.dismissTo).toHaveBeenCalledWith('/');
+  } finally {
+    gameStore.setState({ game: before });
+  }
 });
 
 test("looking back at a finished level keeps the player's place", async () => {
@@ -372,12 +446,25 @@ test("looking back at a finished level keeps the player's place", async () => {
       params: { levelId: 'ka-018' },
     });
 
-    // Home still continues at level 18, named by its place.
-    const home = await render(<Home />);
+    // The path still marks level 18 as the next one, and once the player
+    // scrolls away from it, its continue button names the place.
+    const path = await render(<JourneyScreen />);
+    expect(path.queryByTestId('path-continue')).toBeNull();
+    const list = path.getByTestId('journey-path');
+    await fireEvent(list, 'layout', {
+      nativeEvent: { layout: { x: 0, y: 0, width: 402, height: 700 } },
+    });
+    await fireEvent.scroll(list, {
+      nativeEvent: {
+        contentOffset: { x: 0, y: 0 },
+        contentSize: { width: 402, height: 60000 },
+        layoutMeasurement: { width: 402, height: 700 },
+      },
+    });
     expect(
-      home.getByRole('button', { name: 'გაგრძელება, დონე 18 · ყაზბეგი · 3/5' }),
+      path.getByRole('button', { name: 'გაგრძელება, დონე 18 · ყაზბეგი · 3/5' }),
     ).toBeTruthy();
-    await fireEvent.press(home.getByTestId('home-continue'));
+    await fireEvent.press(path.getByTestId('path-continue'));
     expect(router.push).toHaveBeenCalledWith({
       pathname: '/game/[levelId]',
       params: { levelId: 'ka-018' },

@@ -32,6 +32,7 @@ function Line({
   );
 }
 
+/** What coins are for. A shop takes this place once there is something to buy. */
 export default function Coins() {
   const game = useGameStore((state) => state.game);
   const coins = useGameStore((state) => state.game?.coins ?? 0);

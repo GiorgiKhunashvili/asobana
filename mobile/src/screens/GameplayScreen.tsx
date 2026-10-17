@@ -25,7 +25,7 @@ import { catalog } from '../content/catalog';
 import { isUnlocked } from '../engine/game';
 import { selectGameplay } from '../engine/selectors';
 import type { GameCommand, GameplayView } from '../models/types';
-import { routes } from '../navigation/routes';
+import { routes, toJourney } from '../navigation/routes';
 import { tileHaptic } from '../services/feedback';
 import { gameStore, useGameStore } from '../state/gameStore';
 import {
@@ -123,9 +123,9 @@ export function GameplayScreen({ levelId }: { levelId: string | null }) {
             ეს დონე ჯერ ჩაკეტილია. გაიარე წინა დონეები.
           </Txt>
           <SecondaryButton
-            label="მთავარი"
-            icon="home"
-            onPress={() => router.replace('/')}
+            label="მოგზაურობა"
+            icon="route"
+            onPress={toJourney}
           />
         </View>
       </Screen>
@@ -221,7 +221,7 @@ function GameLayout({
           trailing={
             <CoinBadge
               coins={model.coins}
-              onPress={() => router.push('/shop')}
+              onPress={() => router.push('/coins')}
             />
           }
         />
@@ -296,7 +296,7 @@ function GameLayout({
             label="მოგზაურობა"
             icon="route"
             testID="review-journey"
-            onPress={() => router.replace('/chapters')}
+            onPress={toJourney}
             style={styles.wide}
           />
         </Animated.View>

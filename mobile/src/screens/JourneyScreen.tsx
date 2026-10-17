@@ -9,18 +9,24 @@ import {
   type ReactNode,
 } from 'react';
 import {
+  AccessibilityInfo,
   FlatList,
   Pressable,
   StyleSheet,
   useWindowDimensions,
   View,
+  type LayoutChangeEvent,
   type ListRenderItem,
+  type NativeScrollEvent,
+  type NativeSyntheticEvent,
 } from 'react-native';
 import Animated, {
   cancelAnimation,
   Easing,
   FadeIn,
+  FadeInDown,
   FadeOut,
+  Keyframe,
   SlideInDown,
   SlideOutDown,
   useAnimatedStyle,
@@ -32,21 +38,23 @@ import Animated, {
 } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { EnamelBackdrop } from '../components/Backdrop';
-import { RoundButton } from '../components/Buttons';
+import { PrimaryButton, RoundButton } from '../components/Buttons';
 import { CoinBadge } from '../components/CoinBadge';
-import { Icon, type IconName } from '../components/Icon';
+import { Icon } from '../components/Icon';
 import { PlaceArt } from '../components/PlaceArt';
 import { Display, Txt } from '../components/Text';
 import { catalog } from '../content/catalog';
 import { selectPostcards } from '../engine/postcards';
 import { selectChapters, selectLevels } from '../engine/selectors';
 import { routes } from '../navigation/routes';
+import { blockedHaptic } from '../services/feedback';
 import { nextUnfinished } from './nextLevel';
 import { useGameStore } from '../state/gameStore';
 import {
   COUNTRIES,
   countryOf,
   fonts,
+  levelLabel,
   palette,
   sceneFor,
   space,
@@ -100,6 +108,17 @@ interface CountryRow {
   readonly scene: Scene;
 }
 type Row = StopRow | CountryRow;
+/** What a tap on something still locked was aimed at. */
+type Blocked =
+  | { readonly kind: 'level' }
+  | { readonly kind: 'card'; readonly remaining: number }
+  | { readonly kind: 'country' };
+type OnBlocked = (what: Blocked) => void;
+
+/** How long a "still locked" note stays up. */
+const NOTICE_MS = 2200;
+/** Room the floating continue button takes above the bottom bar. */
+const CONTINUE_ROOM = 84;
 
 function rowHeight(row: Row) {
   if (row.kind === 'country')
@@ -126,10 +145,16 @@ function nodeY(row: StopRow, index: number) {
 export function JourneyScreen() {
   const game = useGameStore((state) => state.game);
   const insets = useSafeAreaInsets();
-  const { width, height } = useWindowDimensions();
+  const { width } = useWindowDimensions();
   const [sheet, setSheet] = useState(false);
+  /** True while the player's next level is scrolled out of view. */
+  const [away, setAway] = useState(false);
+  const [notice, setNotice] = useState<{ key: number; text: string } | null>(
+    null,
+  );
   const list = useRef<FlatList<Row>>(null);
   const scrolled = useRef(false);
+  const viewport = useRef(0);
 
   const data = useMemo(() => {
     if (!game) return null;
@@ -194,6 +219,7 @@ export function JourneyScreen() {
       rows,
       heights,
       offsets,
+      current,
       focus,
       stopTop,
       country,
@@ -215,34 +241,83 @@ export function JourneyScreen() {
     }),
     [data],
   );
+  // Locked things answer a tap with what opens them, rather than nothing.
+  const nextNumber = data?.current?.number ?? null;
+  const blocked = useCallback<OnBlocked>(
+    (what) => {
+      const text =
+        what.kind === 'card'
+          ? `ბარათამდე დარჩა ${what.remaining} დონე`
+          : what.kind === 'country'
+            ? 'გაიხსნება წინა ქვეყნის შემდეგ'
+            : nextNumber
+              ? `ჯერ გაიარე დონე ${nextNumber}`
+              : 'ეს დონე ჯერ ჩაკეტილია';
+      blockedHaptic();
+      AccessibilityInfo.announceForAccessibility(text);
+      setNotice((last) => ({ key: (last?.key ?? 0) + 1, text }));
+    },
+    [nextNumber],
+  );
+  useEffect(() => {
+    if (!notice) return;
+    const timer = setTimeout(() => setNotice(null), NOTICE_MS);
+    return () => clearTimeout(timer);
+  }, [notice]);
+
   const renderItem = useCallback<ListRenderItem<Row>>(
     ({ item }) =>
       item.kind === 'stop' ? (
-        <StopSection row={item} width={width} />
+        <StopSection row={item} width={width} onBlocked={blocked} />
       ) : (
         <CountrySection row={item} width={width} />
       ),
-    [width],
+    [width, blocked],
+  );
+
+  // The continue button shows only while the next level is out of view.
+  const scrollY = useRef(0);
+  const track = useCallback(() => {
+    if (!data?.current || !viewport.current) return setAway(false);
+    const node = space.sm + data.focus;
+    const y = scrollY.current;
+    const out =
+      node + NODE_CURRENT / 2 < y ||
+      node - NODE_CURRENT / 2 > y + viewport.current - CONTINUE_ROOM;
+    setAway(out);
+  }, [data]);
+  useEffect(track, [track]);
+  const onScroll = useCallback(
+    (event: NativeSyntheticEvent<NativeScrollEvent>) => {
+      scrollY.current = event.nativeEvent.contentOffset.y;
+      track();
+    },
+    [track],
   );
 
   // Open at the player's next level rather than at the start of the journey.
-  const onLayout = useCallback(() => {
-    if (scrolled.current || !data) return;
-    scrolled.current = true;
-    const viewport = height - insets.top - insets.bottom - 150;
-    // Show the stop's painting too when its next level still fits below it.
-    const fromHeader = data.stopTop - space.sm;
-    const offset =
-      data.focus + NODE_CURRENT - fromHeader < viewport
-        ? fromHeader
-        : data.focus - viewport * 0.55;
-    list.current?.scrollToOffset({
-      offset: Math.max(0, offset),
-      animated: false,
-    });
-  }, [data, height, insets.top, insets.bottom]);
+  const onLayout = useCallback(
+    (event: LayoutChangeEvent) => {
+      viewport.current = event.nativeEvent.layout.height;
+      if (scrolled.current || !data) return track();
+      scrolled.current = true;
+      // Show the stop's painting too when its next level still fits below it.
+      const fromHeader = data.stopTop - space.sm;
+      const offset = Math.max(
+        0,
+        data.focus + NODE_CURRENT - fromHeader < viewport.current
+          ? fromHeader
+          : data.focus - viewport.current * 0.55,
+      );
+      list.current?.scrollToOffset({ offset, animated: false });
+      scrollY.current = offset;
+      track();
+    },
+    [data, track],
+  );
 
   if (!game || !data) return null;
+  const current = data.current;
   const jumpTo = (country: Country) => {
     const index = data.rows.findIndex(
       (row) => row.kind === 'country' && row.country === country,
@@ -258,13 +333,6 @@ export function JourneyScreen() {
     <View style={styles.root}>
       <EnamelBackdrop tone={GROUND} glowY={0.45} />
       <View style={[styles.top, { paddingTop: insets.top + space.xs }]}>
-        <RoundButton
-          label="მთავარი"
-          icon="home"
-          size={44}
-          testID="journey-home"
-          onPress={() => router.replace('/')}
-        />
         <Pressable
           accessibilityRole="button"
           accessibilityLabel={`${data.country.name}, ${data.countryDone} / ${data.countryTotal} ადგილი. მოგზაურობის ნახვა`}
@@ -294,7 +362,7 @@ export function JourneyScreen() {
             />
           </View>
         </Pressable>
-        <CoinBadge coins={game.coins} onPress={() => router.push('/shop')} />
+        <CoinBadge coins={game.coins} onPress={() => router.push('/coins')} />
       </View>
       <FlatList
         ref={list}
@@ -303,17 +371,33 @@ export function JourneyScreen() {
         renderItem={renderItem}
         getItemLayout={getItemLayout}
         onLayout={onLayout}
+        onScroll={onScroll}
+        scrollEventThrottle={64}
         initialNumToRender={3}
         maxToRenderPerBatch={2}
         windowSize={5}
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{
           paddingTop: space.sm,
-          paddingBottom: space.xl,
+          paddingBottom: space.xl + CONTINUE_ROOM,
         }}
         testID="journey-path"
       />
-      <BottomNav bottom={insets.bottom} />
+      {away && current && (
+        <Animated.View
+          entering={FadeInDown.duration(220)}
+          exiting={FadeOut.duration(160)}
+          style={styles.continue}
+        >
+          <PrimaryButton
+            label="გაგრძელება"
+            detail={`დონე ${current.number} · ${levelLabel(current.id)}`}
+            icon="play"
+            testID="path-continue"
+            onPress={() => router.push(routes.game(current.id))}
+          />
+        </Animated.View>
+      )}
       {sheet && (
         <JourneySheet
           chapters={data.chapters}
@@ -322,7 +406,27 @@ export function JourneyScreen() {
           levelsTotal={data.levelsTotal}
           onClose={() => setSheet(false)}
           onJump={jumpTo}
+          onBlocked={blocked}
         />
+      )}
+      {notice && (
+        <Animated.View
+          key={notice.key}
+          entering={FadeInDown.duration(200)}
+          exiting={FadeOut.duration(200)}
+          pointerEvents="none"
+          testID="path-notice"
+          style={[
+            styles.notice,
+            {
+              bottom:
+                away && current && !sheet ? CONTINUE_ROOM + space.sm : space.lg,
+            },
+          ]}
+        >
+          <Icon name="lock" size={18} color={palette.goldLight} />
+          <Txt variant="label">{notice.text}</Txt>
+        </Animated.View>
       )}
     </View>
   );
@@ -333,9 +437,11 @@ export function JourneyScreen() {
 const StopSection = memo(function StopSection({
   row,
   width,
+  onBlocked,
 }: {
   row: StopRow;
   width: number;
+  onBlocked: OnBlocked;
 }) {
   const cx = width / 2;
   const k = Math.min(1.25, width / 402);
@@ -398,10 +504,11 @@ const StopSection = memo(function StopSection({
               : `დონე ${first}–${last} · ${done}/${row.levels.length}`}
           </Txt>
         </View>
-        <View style={styles.headerBadge}>
+        {/* A status mark, not a control: the postcard coin opens the card. */}
+        <View style={styles.headerMark} pointerEvents="none">
           <Icon
             name={locked ? 'lock' : row.card?.collected ? 'check' : 'card'}
-            size={22}
+            size={26}
             color={palette.goldLight}
           />
         </View>
@@ -436,7 +543,9 @@ const StopSection = memo(function StopSection({
           }`}
           testID={`level-${level.id}`}
           onPress={
-            level.unlocked ? () => router.push(routes.game(level.id)) : null
+            level.unlocked
+              ? () => router.push(routes.game(level.id))
+              : () => onBlocked({ kind: 'level' })
           }
         />
       ))}
@@ -449,7 +558,11 @@ const StopSection = memo(function StopSection({
         onPress={
           row.card?.collected
             ? () => router.push(routes.postcard(row.chapter.id))
-            : null
+            : () =>
+                onBlocked({
+                  kind: 'card',
+                  remaining: row.card?.remaining ?? row.levels.length,
+                })
         }
       />
       {(row.card?.collected || row.currentIndex >= 0) && (
@@ -540,7 +653,19 @@ const FACES: Record<NodeState, { face: string; depth: string; ring?: string }> =
     locked: { face: '#3A3157', depth: '#221B39' },
   };
 
-/** A raised enamel button: a face over a darker rim that it sinks into when pressed. */
+/** A locked coin shakes its head when tapped. */
+const SHAKE = new Keyframe({
+  0: { transform: [{ translateX: 0 }] },
+  20: { transform: [{ translateX: -7 }] },
+  50: { transform: [{ translateX: 7 }] },
+  75: { transform: [{ translateX: -4 }] },
+  100: { transform: [{ translateX: 0 }] },
+}).duration(280);
+
+/**
+ * A raised enamel button: a face over a darker rim that it sinks into when
+ * pressed. Locked coins stay up and shake instead.
+ */
 function Coin({
   width,
   height,
@@ -563,50 +688,64 @@ function Coin({
   children: ReactNode;
 }) {
   const look = FACES[state];
+  const locked = state === 'locked';
+  // Each tap on a locked coin remounts it, which replays the shake.
+  const [shakes, setShakes] = useState(0);
   return (
-    <Pressable
-      accessibilityRole="button"
-      accessibilityLabel={accessibilityLabel}
-      accessibilityState={{ disabled: !onPress, selected: state === 'current' }}
-      disabled={!onPress}
-      testID={testID}
-      onPress={onPress}
-      style={{ width, height: height + DEPTH }}
-    >
-      {({ pressed }) => (
-        <>
-          <View
-            style={[
-              styles.coin,
-              {
-                width,
-                height,
-                borderRadius: radius,
-                top: DEPTH,
-                backgroundColor: look.depth,
-              },
-            ]}
-          />
-          <View
-            style={[
-              styles.coin,
-              styles.coinFace,
-              {
-                width,
-                height,
-                borderRadius: radius,
-                top: pressed ? DEPTH - 2 : 0,
-                backgroundColor: look.face,
-                borderColor: look.ring ?? 'transparent',
-                borderWidth: look.ring ? ringWidth : 0,
-              },
-            ]}
-          >
-            {children}
-          </View>
-        </>
-      )}
-    </Pressable>
+    <Animated.View key={shakes} {...(shakes > 0 && { entering: SHAKE })}>
+      <Pressable
+        accessibilityRole="button"
+        accessibilityLabel={accessibilityLabel}
+        accessibilityState={{
+          disabled: locked || !onPress,
+          selected: state === 'current',
+        }}
+        disabled={!onPress}
+        testID={testID}
+        onPress={
+          onPress &&
+          (() => {
+            if (locked) setShakes((count) => count + 1);
+            onPress();
+          })
+        }
+        style={{ width, height: height + DEPTH }}
+      >
+        {({ pressed }) => (
+          <>
+            <View
+              style={[
+                styles.coin,
+                {
+                  width,
+                  height,
+                  borderRadius: radius,
+                  top: DEPTH,
+                  backgroundColor: look.depth,
+                },
+              ]}
+            />
+            <View
+              style={[
+                styles.coin,
+                styles.coinFace,
+                {
+                  width,
+                  height,
+                  borderRadius: radius,
+                  top: pressed && !locked ? DEPTH - 2 : 0,
+                  backgroundColor: look.face,
+                  borderColor: look.ring ?? 'transparent',
+                  borderWidth: look.ring ? ringWidth : 0,
+                },
+              ]}
+            >
+              {children}
+            </View>
+          </>
+        )}
+      </Pressable>
+    </Animated.View>
   );
 }
 
@@ -634,6 +773,8 @@ function PathNode({
     <View
       style={[styles.nodeBox, { left: x - size / 2, top: y - size / 2 }]}
       pointerEvents="box-none"
+      // A stable handle on the next level for the device flows in e2e/.
+      {...(state === 'current' && { testID: 'path-current' })}
     >
       {state === 'current' && <Pulse size={size} />}
       {state === 'current' && <Bubble size={size} />}
@@ -856,65 +997,6 @@ function Bubble({ size }: { size: number }) {
 
 /* ------------------------------------------------------------------ chrome */
 
-const TABS: readonly {
-  label: string;
-  icon: IconName;
-  href: '/chapters' | '/postcards' | '/shop' | '/settings';
-  testID: string;
-}[] = [
-  {
-    label: 'მოგზაურობა',
-    icon: 'route',
-    href: '/chapters',
-    testID: 'tab-journey',
-  },
-  { label: 'ალბომი', icon: 'card', href: '/postcards', testID: 'tab-album' },
-  { label: 'მაღაზია', icon: 'bag', href: '/shop', testID: 'tab-shop' },
-  {
-    label: 'პარამეტრები',
-    icon: 'sliders',
-    href: '/settings',
-    testID: 'tab-settings',
-  },
-];
-
-function BottomNav({ bottom }: { bottom: number }) {
-  return (
-    <View style={[styles.tabs, { paddingBottom: Math.max(bottom, space.sm) }]}>
-      {TABS.map((tab, index) => {
-        const active = index === 0;
-        return (
-          <Pressable
-            key={tab.href}
-            accessibilityRole="tab"
-            accessibilityLabel={tab.label}
-            accessibilityState={{ selected: active }}
-            testID={tab.testID}
-            onPress={active ? undefined : () => router.push(tab.href)}
-            style={({ pressed }) => [styles.tab, pressed && styles.pressed]}
-          >
-            <View style={[styles.tabIcon, active && styles.tabIconActive]}>
-              <Icon
-                name={tab.icon}
-                size={22}
-                color={active ? palette.goldLight : palette.textMuted}
-              />
-            </View>
-            <Txt
-              variant="caption"
-              numberOfLines={1}
-              color={active ? palette.goldLight : palette.textMuted}
-              style={styles.tabLabel}
-            >
-              {tab.label}
-            </Txt>
-          </Pressable>
-        );
-      })}
-    </View>
-  );
-}
-
 function JourneySheet({
   chapters,
   current,
@@ -922,6 +1004,7 @@ function JourneySheet({
   levelsTotal,
   onClose,
   onJump,
+  onBlocked,
 }: {
   chapters: readonly Chapter[];
   current: Country;
@@ -929,6 +1012,7 @@ function JourneySheet({
   levelsTotal: number;
   onClose: () => void;
   onJump: (country: Country) => void;
+  onBlocked: OnBlocked;
 }) {
   const stopsDone = chapters.filter(
     (chapter) => chapter.completedLevels === chapter.totalLevels,
@@ -992,9 +1076,10 @@ function JourneySheet({
                 accessibilityRole="button"
                 accessibilityLabel={`${country.name}, ${done} / ${stops.length} ადგილი${open ? '' : ', ჩაკეტილია'}${here ? ', შენ აქ ხარ' : ''}`}
                 accessibilityState={{ disabled: !open }}
-                disabled={!open}
                 testID={`journey-country-${country.id}`}
-                onPress={() => onJump(country)}
+                onPress={() =>
+                  open ? onJump(country) : onBlocked({ kind: 'country' })
+                }
                 style={({ pressed }) => [styles.leg, pressed && styles.pressed]}
               >
                 <View
@@ -1120,17 +1205,10 @@ const styles = StyleSheet.create({
   },
   headerLocked: { borderColor: 'rgba(167, 156, 198, 0.35)' },
   headerText: { paddingLeft: space.lg, paddingRight: 76, gap: 2 },
-  headerBadge: {
+  headerMark: {
     position: 'absolute',
-    right: space.lg,
-    width: 46,
-    height: 46,
-    borderRadius: 15,
-    backgroundColor: 'rgba(18, 12, 36, 0.55)',
-    borderWidth: 1.5,
-    borderColor: 'rgba(255, 230, 166, 0.6)',
-    alignItems: 'center',
-    justifyContent: 'center',
+    right: space.lg + 4,
+    opacity: 0.9,
   },
   dot: {
     position: 'absolute',
@@ -1272,28 +1350,26 @@ const styles = StyleSheet.create({
     marginTop: space.xs,
   },
 
-  tabs: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    paddingTop: space.sm,
-    backgroundColor: '#120C24',
-    borderTopWidth: 1,
-    borderTopColor: 'rgba(227, 182, 90, 0.25)',
-  },
-  tab: { alignItems: 'center', gap: 3, minWidth: 72, minHeight: 48 },
-  tabIcon: {
-    width: 48,
-    height: 32,
-    borderRadius: 12,
+  continue: {
+    position: 'absolute',
+    left: space.lg,
+    right: space.lg,
+    bottom: space.md,
     alignItems: 'center',
-    justifyContent: 'center',
   },
-  tabIconActive: {
-    backgroundColor: 'rgba(227, 182, 90, 0.18)',
+  notice: {
+    position: 'absolute',
+    alignSelf: 'center',
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: space.sm,
+    paddingHorizontal: space.lg,
+    paddingVertical: space.sm + 2,
+    borderRadius: 999,
+    backgroundColor: '#2A1F45',
     borderWidth: 1.5,
-    borderColor: 'rgba(227, 182, 90, 0.6)',
+    borderColor: 'rgba(227, 182, 90, 0.55)',
   },
-  tabLabel: { fontSize: 11, lineHeight: 15 },
 
   dim: { ...StyleSheet.absoluteFill, backgroundColor: 'rgba(8, 5, 16, 0.62)' },
   sheet: {

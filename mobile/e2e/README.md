@@ -1,3 +1,16 @@
+# Navigation change — 2026-10-17
+
+The home screen is gone: the app opens on the journey path. Flows that tapped
+`home-continue` now tap `path-current`, the path's next-level coin. Only the
+navigation steps changed; the stale flows below still assert old words and counts.
+
+On 2026-10-17, `wide-screenshot.yaml` (pointed at Metro on port 8090, with a
+leading `stopApp`) passed on the isolated **GeoWords UI iPhone 17** simulator
+(iOS 26.5, Expo Go) with a save at level 18: it found `path-current`, opened
+level 18 and asserted its title and 0/5 progress. The tabs, locked-level notes,
+floating continue button, victory's return to the path and the coins page were
+checked by hand on the same simulator. No native build or Android run.
+
 # Journey feature checks — content revision 10
 
 On 2026-10-16, an isolated iPhone 17 / iOS 26.5 / Expo Go 57.0.9 ran the native

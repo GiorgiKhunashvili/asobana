@@ -111,7 +111,7 @@ export default function RootLayout() {
                 animation: 'slide_from_right',
               }}
             >
-              <Stack.Screen name="index" options={{ animation: 'fade' }} />
+              <Stack.Screen name="(tabs)" options={{ animation: 'fade' }} />
               <Stack.Screen
                 name="victory/[levelId]"
                 options={{ animation: 'fade' }}
