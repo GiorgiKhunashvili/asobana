@@ -37,6 +37,11 @@ Automated check results and limitations are recorded in the revision-13 review.
 The new content is local; no native-device playtest or TestFlight upload is claimed.
 Claude owns the 48-stop map, artwork and screen work.
 
+Every stop's postcard has a one-sentence Georgian caption describing its painting
+(`mobile/src/content/destinations.ts`). The ten original captions are unchanged;
+the 38 new ones were written by Claude, without native-speaker review, and await
+the owner's approval.
+
 ---
 
 # Historical revision 12: everyday-word campaign
