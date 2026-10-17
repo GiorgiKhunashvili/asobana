@@ -22,6 +22,39 @@ need a new native build to show the updated app name under the icon.
 The App Store Connect record's temporary name also needs a separate metadata
 update; the release records below retain their historical names.
 
+## Tutorial beta — 2026-10-17 (uploaded, Apple processing)
+
+**Version 0.1.0 (11)** was built locally from master `90b33d7` and uploaded to
+App Store Connect on 2026-10-17 at the owner's request. EAS Submit reported the
+upload complete; Apple's processing status was not confirmed when this was
+written. The build ran on this Mac like build 10, so it used no Expo cloud build
+credits. The upload went through EAS Submit with the App Store Connect key held on EAS.
+
+New since build 10, all from master:
+
+- the player's place is kept and levels are named by their stop (`00cf4bf`);
+- postcard captions for the 38 new stops (`318a491`);
+- the app opens on the journey path with one bottom bar (`0e2a6ca`);
+- place facts and the perforated postcard stamp (`1b81277`);
+- the first-time tutorial and Settings "როგორ ვითამაშოთ" (`90b33d7`).
+
+- [Submission](https://expo.dev/accounts/gkhunashvili/projects/geowords/submissions/3bc4882a-c9bf-4da4-a4de-14819eb3c954).
+- [TestFlight](https://appstoreconnect.apple.com/apps/6822637685/testflight/ios).
+- Remote build number incremented from 10 to 11. Xcode 26.6. Expo doctor
+  flagged four Expo packages one patch behind SDK 57 (`expo`, `expo-constants`,
+  `expo-linking`, `expo-router`); this warning doesn't stop the build, and the
+  packages were left as they were.
+- IPA check: display name Asobana, 0.1.0 (11), bundle `dev.geowords.prototype`,
+  iOS 16.4 minimum, `SplashScreen` launch storyboard, embedded Hermes bundle
+  (contains the tutorial and place-fact code), 96 scene JPEGs, four Georgian
+  fonts. Size: 35,713,945 bytes.
+- Evidence (git-ignored): `artifacts/asobana-0.1.0-11.ipa`,
+  `artifacts/asobana-11-local-build.log`, `artifacts/asobana-11-submit.log`.
+- Preflight on `90b33d7`: root check (198 app tests, all 240 level solves,
+  type/lint/format) and an iOS export passed. Generator tests were not rerun
+  (no content or generator change). The tutorial passed in Expo Go on an iPhone
+  17 simulator; this native build has not yet been installed on a device.
+
 ## Journey beta — 2026-10-17 (uploaded, Apple processing)
 
 **Version 0.1.0 (10)** was built locally and uploaded to App Store Connect on
