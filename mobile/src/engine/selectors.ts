@@ -12,6 +12,7 @@ import {
   revealedCells,
 } from './game';
 import { solutionCells } from './grid';
+import { BONUS_GOAL, freeCellHints } from './bonusRewards';
 export function selectGameplay(
   state: GameState,
   pack: LevelPack,
@@ -38,18 +39,20 @@ export function selectGameplay(
     foundWords: progress.solvedWordIds.length,
     totalWords: level.words.length,
     bonusCount: progress.bonusWords.length,
+    bonusMeter: state.bonusRewards.totalFound % BONUS_GOAL,
+    freeCellHints: freeCellHints(state),
     hintsUsed: progress.hintsUsed,
     completed: progress.completed,
     nextLevelId: progress.completed ? nextLevelId(pack, level.id) : null,
     canUseCellHint:
       !progress.completed &&
       level.hints.allowCell &&
-      state.coins >= economy.cellHintCost,
+      (freeCellHints(state) > 0 || state.coins >= economy.cellHintCost),
     canUseWordHint:
       !progress.completed &&
       level.hints.allowWord &&
       state.coins >= economy.wordHintCost,
-    cellHintCost: economy.cellHintCost,
+    cellHintCost: freeCellHints(state) > 0 ? 0 : economy.cellHintCost,
     wordHintCost: economy.wordHintCost,
   };
 }

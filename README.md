@@ -1,14 +1,28 @@
-# GeoWords
+# Asobana
 
 Offline Georgian crossword prototype for iOS and Android. Connect wheel letters,
 find target and bonus words, spend coins on hints, complete levels and resume from
-local SQLite. Fifty puzzles use related Georgian words across ten topics, with
-the current topic displayed above the board. Each puzzle has three to five answers
-and at most eight letter tiles. The 320-word reference vocabulary supports 142
-distinct target answers, with difficulty increasing within each topic
-([content notes](docs/EXPANDED_CONTENT.md)).
+local SQLite. Content revision 13 has 240 wide, connected, mixed-topic puzzles
+across 48 journey stops, with five answers per board and five to seven wheel tiles.
+Required spellings and accepted variants may repeat only at least 75 levels apart;
+there are no two-letter targets. The reference dictionary has 1,312 entries /
+1,274 eligible words, while the separate everyday-target allowlist has 869 words.
+Pronouns, excluded verbs/action forms, name-only entries, reviewed barbarisms and
+owner-excluded `რული` cannot appear as targets or bonuses. Valid rare words remain
+optional bonuses; every eligible formable extra is recognized.
+See [the campaign rules](docs/DISCOVERY_CONTENT.md) and
+[the vocabulary review and all 240 boards](docs/VOCABULARY_REVIEW_V13.md).
+Five-letter answers begin at level 3 and six-letter answers at level 18; every
+board from level 26 has at least two longer answers. Claude owns the new journey
+map, destination paintings and screen integration; the content uses the exact
+48 stop IDs in `content/journey-v13.json`.
+Each chapter builds toward a challenge and follows it with a gentler board.
+Completing a chapter collects its illustrated destination postcard in the travel
+album. Every ten bonus finds earns a free letter hint, carried across levels and
+spent before coins. Previous progress and earned rewards survive content updates.
 The interface is an original Georgian cloisonné-enamel design with bundled
-Georgian fonts ([design system](docs/UI_DESIGN_SYSTEM.md)); final branding is open.
+Georgian fonts ([design system](docs/UI_DESIGN_SYSTEM.md)). The game is named
+**Asobana**, displayed as **ასობანა** in the Georgian interface.
 
 ## Requirements
 
@@ -92,6 +106,7 @@ large-scale content optimizer. Runtime code has no third-party Python dependenci
 
 ## Collaboration and architecture
 
+- [AI contributor instructions and word-generation rules](AGENTS.md)
 - [Architecture](docs/ARCHITECTURE.md)
 - [Claude integration contract](docs/INTEGRATION_CONTRACT.md)
 - [Development plan](docs/DEVELOPMENT_PLAN.md)
@@ -104,7 +119,9 @@ large-scale content optimizer. Runtime code has no third-party Python dependenci
 The separately requested `GEOWORDS_PRODUCT_AND_ENGINEERING_SPEC.md` was absent.
 The pasted implementation brief is the requirements baseline; reconcile the missing
 spec before expanding product scope. Database corruption or newer save/content
-versions show an error and preserve the data. There is no destructive reset flow.
+versions show an error and preserve the data; nothing is reset automatically.
+To start over, use Settings → პროგრესის განულება (after a confirmation it returns to
+level 1 with the starting coins; sound and haptics settings stay).
 
 ## Repository
 

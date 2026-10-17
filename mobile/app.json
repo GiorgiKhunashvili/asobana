@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "GeoWords",
+    "name": "Asobana",
     "slug": "geowords",
     "version": "0.1.0",
     "scheme": "geowords",
@@ -29,7 +29,16 @@
         }
       ],
       "expo-font",
-      "expo-status-bar"
+      "expo-status-bar",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#0B294B",
+          "image": "./assets/branding/splash-lockup.png",
+          "imageWidth": 260,
+          "resizeMode": "contain"
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true

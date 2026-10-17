@@ -1,5 +1,5 @@
 # Requires SDK 57 Expo Go and a running Metro at IPv4 localhost:8081.
-# Fresh GeoWords save; iPhone 17 / 17 Pro portrait (402x874 pt).
+# Fresh Asobana save; iPhone 17 / 17 Pro portrait (402x874 pt).
 appId: host.exp.Exponent
 ---
 - openLink: exp://127.0.0.1:8081
@@ -17,7 +17,7 @@ appId: host.exp.Exponent
     visible:
       id: home-continue
     timeout: 60000
-- assertVisible: 'ქართული'
+- assertVisible: 'ასობანა'
 - assertVisible: '100 მონეტა'
 - takeScreenshot: artifacts/ios-home
 - tapOn:

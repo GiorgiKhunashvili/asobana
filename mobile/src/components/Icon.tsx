@@ -63,7 +63,20 @@ const ICONS = {
   ],
   haptics: [{ d: 'M8.5 4h7v16h-7zM4.5 9v6M19.5 9v6' }],
   home: [{ d: 'M4 11.5L12 5l8 6.5V20H4z' }],
+  restart: [{ d: 'M19.5 12a7.5 7.5 0 1 1-2.2-5.3M19.5 3.8v3.9h-3.9' }],
   star: [{ d: STAR8, fill: true }],
+  route: [
+    { d: dot(6, 18, 2.4), fill: true },
+    { d: 'M18 3.6a2.4 2.4 0 1 0 0 4.8a2.4 2.4 0 1 0 0-4.8' },
+    { d: 'M8.6 17.2c6.2 0 1.6-9.4 7-10.6' },
+  ],
+  card: [
+    { d: 'M3.5 5.5h17v13h-17z' },
+    { d: 'M6 16l4.5-4.5 3 3 2.5-2.5 2.5 2.5' },
+    { d: dot(16.2, 9.2, 1.6), fill: true },
+  ],
+  bag: [{ d: 'M5.5 9h13l-1.2 11H6.7zM9 9V7.5a3 3 0 0 1 6 0V9' }],
+  play: [{ d: 'M8.5 5.5v13l10.5-6.5z', fill: true }],
 } satisfies Record<string, readonly Part[]>;
 
 export type IconName = keyof typeof ICONS;

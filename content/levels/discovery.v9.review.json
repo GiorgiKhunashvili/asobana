@@ -1,0 +1,7 @@
+{
+  "revision": 9,
+  "draftSha256": "a71f92b06fbb3639547001adbecfc650fb4b5da453c5bcf848aaa2434118fa4f",
+  "reviewedAt": "2026-10-15",
+  "reviewer": "Codex assistant reference and content review",
+  "scope": "Added 686 individually selected and reference-checked ordinary Georgian noun/adjective senses with exact Wiktionary revision links. Kept all 547 historical entries unchanged. Held 12 ambiguous, rare or unsupported candidate senses and omitted 64 candidates without sufficient reference support. Enforced pronoun, conjugated-verb, verbal-action-form and personal-name-only exclusions. Owner explicitly approved retaining ordinary word meanings of personal-name homographs. Inspected eight replacement layouts (levels 20, 23, 25, 26, 30, 32, 37, 50); other 42 layouts remain unchanged. All 250 required spellings are unique; 23 required spellings are new to the campaign. Regenerated all eligible formable bonuses against 1202 playable words: 109 bonus opportunities across 41 spellings. Confirmed connected crossings, word spacing, tight bounds and phone size constraints. Historical revisions remain immutable for save migration. Native-speaker editorial approval and corpus-based commonness calibration remain pending."
+}

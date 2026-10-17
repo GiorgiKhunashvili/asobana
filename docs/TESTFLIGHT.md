@@ -1,4 +1,108 @@
-# GeoWords TestFlight
+# Asobana TestFlight
+
+## Branding update — 2026-10-17
+
+The product name is **Asobana** (**ასობანა** in the Georgian interface).
+The source app display name and home-screen title have been updated. Existing
+Expo project, bundle, URL scheme, content-pack and SQLite identifiers remain
+stable for updates and saved progress. The root workspace Expo configuration
+belongs to a separate project; releases continue to run from `mobile/`.
+
+The owner-selected concept 01 connected A is now the source app icon and home
+emblem. The brand kit includes SVG masters, transparent PNG symbols and wordmarks,
+plus single-colour variants. Icon validation confirmed 1024 × 1024 RGB with no
+alpha; the PNG branding exports retain transparency. Small-size previews were
+visually checked at 96, 64, 48 and 32 px. The checks below also passed after logo
+integration, with the new icon included in the iOS export.
+
+Validation passed: resolved Expo configuration reports `Asobana`; TypeScript,
+ESLint, formatting, all 14 presentation tests and an iOS bundle export passed.
+No native build, device test or TestFlight upload was performed. Installed copies
+need a new native build to show the updated app name under the icon.
+The App Store Connect record's temporary name also needs a separate metadata
+update; the release records below retain their historical names.
+
+## Journey beta — 2026-10-17 (uploaded, Apple processing)
+
+**Version 0.1.0 (10)** was built locally and uploaded to App Store Connect on
+2026-10-17; Apple's processing status was not yet confirmed when this was
+written. Expo cloud build credits were used up, so the build ran on this Mac
+(the same flow as Dayboo): with Homebrew CocoaPods/fastlane on the path,
+`npx eas-cli build --profile production --platform ios --local --non-interactive
+--output <ipa>` from `mobile/`, then `npx eas-cli submit --platform ios --profile
+production --path <ipa> --non-interactive`. Local builds use no cloud build
+credits; signing and the App Store Connect key come from EAS credentials.
+
+Contents: content revision 13 (240 levels, 48 journey stops), the journey path,
+all 48 stop paintings, the animated Asobana logo, the navy launch splash with
+ასობანა, and the Spilo Games studio credit. Existing uncommitted work was included.
+
+- [Submission](https://expo.dev/accounts/gkhunashvili/projects/geowords/submissions/471d7878-0181-4448-b0cd-0f52fb266b40).
+- [TestFlight](https://appstoreconnect.apple.com/apps/6822637685/testflight/ios).
+- Remote build number incremented from 9 to 10. Xcode 26.6.
+- IPA check: display name Asobana, 0.1.0 (10), bundle `dev.geowords.prototype`,
+  iOS 16.4 minimum, `SplashScreen` launch storyboard, embedded Hermes bundle,
+  96 scene JPEGs (48 stops), four Georgian fonts, studio and splash images, no
+  microphone or background-audio keys. Size: 35,701,257 bytes.
+- Evidence (git-ignored): `artifacts/asobana-0.1.0-journey.ipa`,
+  `artifacts/asobana-journey-local-build.log`, `artifacts/asobana-journey-submit.log`.
+- Preflight: root check (177 app tests, all 240 level solves, type/lint/format)
+  and 84 generator tests passed. Simulator checks in Expo Go only; the native
+  splash and the first native run are untested until this build is installed.
+
+## Previous beta — 2026-10-16
+
+**Version 0.1.0 (9) is VALID / IN_BETA_TESTING.** Apple recorded the upload at
+2026-10-16 11:30:22 Asia/Tbilisi. The completed submission targets the existing
+internal `Team (Expo)` group. No public App Store release or external beta review
+was submitted.
+
+This release contains content revision 12: 50 rebuilt puzzles with 250 unique
+everyday required answers, including 74 five-letter and 21 six-letter words.
+The everyday allowlist keeps uncommon words bonus-only; pronouns, excluded
+verb/action forms and name-only entries remain blocked. Later levels use seven
+tiles. Save migration preserves progress, coins, hints, postcards and bonus rewards.
+
+- [Submission](https://expo.dev/accounts/gkhunashvili/projects/geowords/submissions/513ae569-65db-4c35-a33f-8ac1491df5df).
+- [TestFlight](https://appstoreconnect.apple.com/apps/6822637685/testflight/ios).
+- Signed locally with the existing release toolchain; production build numbering
+  incremented from 8 to 9. Existing uncommitted game changes were included.
+- Verified 133 source/asset files against the temporary build copy. Only the
+  temporary package's iOS/Android scripts changed during Expo prebuild.
+- IPA verification confirmed version/build/bundle ID, embedded offline bundle,
+  all scene images and four Georgian fonts. Size: 26,926,097 bytes.
+- Evidence: `artifacts/testflight-v12-source-checks.json`,
+  `artifacts/testflight-v12-ipa-info.json`, `artifacts/testflight-v12-submission.json`
+  and `artifacts/apple-testflight-v12-status.json` (git-ignored).
+- Preflight: 161 app tests, 80 generator tests, all 50 engine solves, static checks
+  and iOS export passed. No new native device run for this content revision.
+
+## Previous beta — revision 10, 2026-10-16
+
+**Version 0.1.0 (8) is VALID / IN_BETA_TESTING.** Apple recorded the upload at
+2026-10-16 08:37:01 Asia/Tbilisi. The completed submission targets the existing internal
+`Team (Expo)` group. No public App Store release or external beta review was submitted.
+
+This release contains content revision 10: the expanded 1,202-word playable
+vocabulary, 250 unique required answers, revised chapter pacing, ten destination
+postcards and the persistent bonus meter (ten finds earn one free letter hint).
+Existing saves retain progress, earned coins and paid hints.
+
+- [Submission](https://expo.dev/accounts/gkhunashvili/projects/geowords/submissions/684a7bde-13e5-4ca9-8671-4c045f5965a5).
+- [TestFlight](https://appstoreconnect.apple.com/apps/6822637685/testflight/ios).
+- Signed locally using the existing release toolchain in `artifacts/release-tools/env.sh`.
+  The production profile incremented the remote build number from 7 to 8.
+- Compared 126 source/asset files with the temporary build copy. Only the temporary
+  package's iOS/Android script commands were changed by Expo prebuild; gameplay,
+  content and artwork matched. Existing uncommitted work was included and preserved.
+- IPA inspection verified version/build/bundle ID, the embedded offline Hermes
+  bundle, all scene images and four Georgian fonts. Size: 26,903,375 bytes.
+- Evidence: `artifacts/testflight-v10-source-checks.json`,
+  `artifacts/testflight-v10-ipa-info.json`, `artifacts/testflight-v10-submission.json`
+  and `artifacts/apple-testflight-v10-status.json` (all git-ignored).
+- Preflight: 148 app tests, 76 generator tests, all 50 engine solves, type/lint/format
+  checks and iOS export pass. The isolated iPhone flow verifies earning/using a
+  free hint, chapter completion, postcard viewing and album collection.
 
 ## Release configuration
 
@@ -12,9 +116,12 @@
 - Apple distribution certificate is reused; a new provisioning profile was
   created for this bundle ID. EAS manages signing and submission credentials;
   private keys and passwords are not stored in this repository.
-- `mobile/assets/icon.svg` adapts the existing seven-arm rosette and theme palette.
-  `icon.png` is 1024 × 1024 with no alpha channel. Regenerate from the SVG with
-  `npm exec --yes --package sharp-cli -- sharp --input mobile/assets/icon.svg --output mobile/assets/icon.png flatten`.
+- `mobile/assets/icon.svg` is the owner-selected concept 01 connected A in gold
+  on navy. `icon.png` is 1024 × 1024 RGB with no alpha or pre-rounded corners.
+  Regenerate the icon and advertising variants with `node scripts/build-branding.cjs`
+  in an environment with `sharp` available. The home screen uses the same icon.
+  This logo source change requires a new native build to update installed icons;
+  it has not been uploaded to TestFlight.
 - Audio is foreground playback only. Unused microphone/recording/background-audio
   permissions are disabled in the Expo plugin configuration.
 - Export compliance declares no non-exempt encryption. The game uses local SQLite

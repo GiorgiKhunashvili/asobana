@@ -49,7 +49,7 @@ test('the shipped revision 4 save upgrades atomically and survives closing SQLit
       previousCatalogs,
     ).load())!;
     expect(upgraded.revision).toBe(2);
-    expect(upgraded.state.contentRevision).toBe(5);
+    expect(upgraded.state.contentRevision).toBe(catalog.revision);
     expect(upgraded.state.coins).toBe(state.coins);
     expect(upgraded.state.currentLevelId).toBe(level.id);
     expect(upgraded.state.settings).toEqual(state.settings);

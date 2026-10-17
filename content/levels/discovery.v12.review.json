@@ -1,0 +1,7 @@
+{
+  "revision": 12,
+  "draftSha256": "d5111422bef23a8951c665a1de18c8101fecbadd7ac5a582368874ac24a0de27",
+  "reviewedAt": "2026-10-16",
+  "reviewer": "Codex assistant everyday-word review",
+  "scope": "All 250 previous required words reviewed individually in everyday-targets-v12.json. Required words must belong to the explicit everyday allowlist; all policy-eligible dictionary entries remain valid as optional bonuses. Grammar and name-only exclusions apply to both. Ordinary noun/name homographs remain eligible per owner clarification. Rebuild retains 50 boards, 250 unique required spellings, actual 5–6-letter progression, connected wide layouts and chapter challenge/recovery waves. Later levels may use seven tiles to combine familiar words without rare filler. Familiarity is an assistant editorial judgment supported by a licensed frequency proxy, not native-speaker validation. Historical content remains immutable; no TestFlight upload."
+}

@@ -1,12 +1,18 @@
 """Small-wheel mixed vocabulary campaign; generation never grants approval."""
 
+import json
 from collections import Counter
+from pathlib import Path
 from typing import TypedDict
 
 from .generator import derive_letters, generate_level
-from .models import ChapterJSON, DifficultyJSON, LevelJSON, PackJSON
+from .models import ChapterJSON, DifficultyJSON, LevelJSON, PackJSON, WordJSON
 from .validation import validate_pack
 from .vocabulary import can_form_word
+
+JOURNEY = json.loads(
+    (Path(__file__).resolve().parents[3] / "content/journey-v13.json").read_text()
+)
 
 
 class DiscoveryRecipe(TypedDict):
@@ -26,17 +32,20 @@ class DiscoveryManifest(TypedDict):
 
 
 def discovery_difficulty(
-    level: LevelJSON, familiarity: dict[str, int]
+    level: LevelJSON, familiarity: dict[str, int], *, revision: int = 10
 ) -> DifficultyJSON:
     words = [word["answer"] for word in level["words"]]
     if any(familiarity.get(word) not in (1, 2) for word in words):
         raise ValueError("Missing familiar-word estimate")
     score = min(
         100,
-        (len(level["tiles"]) - 4) * 15
+        (len(level["tiles"]) - 4) * (8 if revision >= 11 else 15)
         + (len(words) - 4) * 8
         + 2 * max(map(len, words))
-        + sum(2 * (len(word) - 2) + 5 * (familiarity[word] - 1) for word in words),
+        + sum(
+            2 * (len(word) - 2) + (3 if revision >= 11 else 5) * (familiarity[word] - 1)
+            for word in words
+        ),
     )
     return {
         "score": score,
@@ -47,11 +56,15 @@ def discovery_difficulty(
 def validate_discovery(
     pack: PackJSON, vocabulary: set[str], familiarity: dict[str, int]
 ) -> None:
-    if len(pack["levels"]) != 50 or len(pack["chapters"]) != 10:
-        raise ValueError("Discovery requires 50 levels in ten chapters")
+    journey = pack["revision"] >= 13
+    count = JOURNEY["levelCount"] if journey else 50
+    if len(pack["levels"]) != count or len(pack["chapters"]) != count // 5:
+        raise ValueError(f"Discovery requires {count} levels in {count // 5} chapters")
     wheels: set[str] = set()
     signatures: set[tuple[str, ...]] = set()
     uses: Counter[str] = Counter()
+    accepted_uses: set[str] = set()
+    last_required: dict[str, int] = {}
     chapter_uses: Counter[str] = Counter()
     previous: set[str] = set()
     for index, level in enumerate(pack["levels"]):
@@ -66,10 +79,39 @@ def validate_discovery(
         ):
             raise ValueError("Discovery identities or chapter order changed")
         words = [word["answer"] for word in level["words"]]
-        if len(words) not in ((4, 5) if index < 10 else (5,)):
-            raise ValueError("Discovery requires four or five targets, then five")
+        if journey:
+            validate_required_gap(level["words"], index, last_required)
+        elif pack["revision"] >= 8:
+            accepted = {
+                answer for word in level["words"] for answer in word["acceptedAnswers"]
+            }
+            if accepted_uses.intersection(accepted):
+                raise ValueError("Repeated required answer")
+            accepted_uses.update(accepted)
+        if len(words) not in (
+            (5,)
+            if journey
+            else (5, 6, 7)
+            if pack["revision"] >= 6
+            else (4, 5)
+            if index < 10
+            else (5,)
+        ):
+            raise ValueError("Discovery targets violate campaign progression")
         wheel = "".join(sorted(tile["letter"] for tile in level["tiles"]))
-        allowed_tiles = (5,) if index < 20 else (6,) if 30 <= index < 40 else (5, 6)
+        allowed_tiles = (
+            ((5,) if index < 5 else (6,) if index < 25 else (7,))
+            if journey
+            else ((5,) if index < 5 else (5, 6) if index < 25 else (5, 6, 7))
+            if pack["revision"] >= 12
+            else ((5,) if index < 5 else (5, 6))
+            if pack["revision"] >= 11
+            else (5,)
+            if index < 20
+            else (6,)
+            if 30 <= index < 40
+            else (5, 6)
+        )
         if len(wheel) not in allowed_tiles:
             raise ValueError("Wheel exceeds its progression stage")
         if "".join(derive_letters(words)) != wheel:
@@ -87,18 +129,29 @@ def validate_discovery(
         previous = set(words)
         uses.update(words)
         chapter_uses.update(words)
-        if max(uses.values()) > 7 or max(chapter_uses.values()) > 2:
+        if (
+            not journey and max(uses.values()) > (1 if pack["revision"] >= 8 else 7)
+        ) or max(chapter_uses.values()) > 2:
             raise ValueError("Discovery answers repeat too often")
         bonuses = sorted(
             word
             for word in vocabulary
             if word not in words and can_form_word(word, list(wheel))
         )
-        if not bonuses or level["bonusWords"] != bonuses:
+        if (not bonuses and pack["revision"] < 7) or level["bonusWords"] != bonuses:
             raise ValueError("Bonus list must include every verified formable extra")
-        if level["difficulty"] != discovery_difficulty(level, familiarity):
+        if level["difficulty"] != discovery_difficulty(
+            level, familiarity, revision=pack["revision"]
+        ):
             raise ValueError("Difficulty does not match discovery puzzle")
-    for start, end in ((20, 30), (40, 50)):
+    stages = (
+        ()
+        if pack["revision"] >= 11
+        else ((20, 30),)
+        if pack["revision"] >= 10
+        else ((20, 30), (40, 50))
+    )
+    for start, end in stages:
         if {len(level["tiles"]) for level in pack["levels"][start:end]} != {5, 6}:
             raise ValueError("Mixed stages require both five and six tiles")
 
@@ -139,3 +192,22 @@ def rebuild_discovery(manifest: DiscoveryManifest, vocabulary: set[str]) -> Pack
     validate_pack(pack, vocabulary)
     validate_discovery(pack, vocabulary, manifest["familiarity"])
     return pack
+
+
+def validate_required_gap(
+    words: list[WordJSON], index: int, last_required: dict[str, int]
+) -> None:
+    """Accepted spellings share the global cooldown; bonuses never enter it."""
+    board: set[str] = set()
+    for word in words:
+        accepted = set(word["acceptedAnswers"]) | {word["answer"]}
+        if board.intersection(accepted):
+            raise ValueError("Repeated required answer within a board")
+        board.update(accepted)
+    for answer in board:
+        if (
+            index - last_required.get(answer, -JOURNEY["minRequiredGap"])
+            < JOURNEY["minRequiredGap"]
+        ):
+            raise ValueError("Required answer repeats inside the 75-level gap")
+    last_required.update(dict.fromkeys(board, index))

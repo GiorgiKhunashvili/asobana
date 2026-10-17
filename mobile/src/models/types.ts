@@ -54,6 +54,12 @@ export interface GameState {
   readonly contentRevision: number;
   readonly currentLevelId: string;
   readonly coins: number;
+  /** Original earned cards survive the move to the 48-stop journey. */
+  readonly legacyPostcardChapterIds?: readonly string[];
+  readonly bonusRewards: {
+    readonly totalFound: number;
+    readonly hintsSpent: number;
+  };
   readonly progress: Readonly<Record<string, LevelProgress>>;
   readonly settings: Settings;
 }
@@ -114,6 +120,7 @@ export type GameEvent =
       readonly kind: 'cell' | 'word';
       readonly cost: number;
     }
+  | { readonly type: 'bonus-hint-earned' }
   | {
       readonly type: 'level-completed';
       readonly levelId: string;
@@ -145,6 +152,8 @@ export interface GameplayView {
   readonly foundWords: number;
   readonly totalWords: number;
   readonly bonusCount: number;
+  readonly bonusMeter: number;
+  readonly freeCellHints: number;
   readonly hintsUsed: number;
   readonly completed: boolean;
   readonly nextLevelId: string | null;

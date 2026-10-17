@@ -1,0 +1,55 @@
+SPILO GAMES — APPROVED LOGO HANDOFF
+
+Owner selected concept 04D-3A on 2026-10-17.
+
+Project folder:
+mobile/assets/studio/spilo-games/
+
+FILES
+approved-reference-04D-3A.png
+  Exact, unchanged selected artwork, 1536 x 1024. This is the visual
+  source of truth. It includes the lavender background and concept label.
+
+spilo-games-logo-transparent.png
+  Transparent PNG derivative, 1536 x 1024, prepared with built-in image
+  generation to remove the background and concept label. Use on a light
+  surface. Contains transparent padding; preserve aspect ratio. This is
+  a generated raster derivative, not a vector master or pixel-exact cutout.
+
+concept.prompt.txt / transparent-export.prompt.txt
+  Exact generation and cleanup prompts for provenance.
+
+DESIGN TO PRESERVE
+- SPILO in uppercase, GAMES beneath.
+- Dark plum lettering; pale lavender is the reference presentation color.
+- Elephant head in negative space entirely inside the P bowl.
+- Crescent ear detail, small round eye and curled trunk.
+- Straight barred capital I and clearly readable S, P, I, L, O.
+- Lettering is custom artwork; no exact font file accompanies this logo.
+  Use the image rather than retyping it with a substitute font.
+
+IMPLEMENTATION GUIDANCE FOR CLAUDE
+Read root AGENTS.md before making changes. This is the Spilo Games studio
+identity. The game remains Asobana / ასობანა with its existing approved
+navy-and-gold A icon. Use this asset for a studio credit, About screen,
+or a studio splash placement according to the owner's requested scope.
+
+Use a static React Native Image require with the relative path appropriate
+to the component. Example from mobile/app/index.tsx:
+
+<Image
+  source={require('../assets/studio/spilo-games/spilo-games-logo-transparent.png')}
+  accessibilityLabel="Spilo Games"
+  resizeMode="contain"
+  style={{ width: 240, height: 160 }}
+/>
+
+The whole PNG is 3:2 with internal transparent padding; account for that
+when choosing the displayed size. Check lettering and elephant details at
+the actual device size and check transparency against the intended surface.
+The plum artwork needs a light background for contrast.
+
+If a production SVG is needed, trace the approved reference faithfully
+and compare the result to it. Do not redesign the elephant or typography.
+These files have been prepared for handoff only; no screen integration,
+native build, TestFlight upload, or store publication was performed.

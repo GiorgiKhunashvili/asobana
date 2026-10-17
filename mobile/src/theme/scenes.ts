@@ -1,0 +1,510 @@
+import type { ImageSourcePropType } from 'react-native';
+import { countryOf, stopTitle } from './journey';
+
+/**
+ * A painted place behind a chapter. `accent` is a deep colour taken from the
+ * painting for found cells, chips and progress; `sky` is the average colour
+ * behind the board, shown while the image decodes. Stops whose painting has
+ * not arrived yet have no `image`/`band`: they are drawn by `PlaceArt` in
+ * their country's colours, and every screen keeps working.
+ */
+export interface Scene {
+  readonly id: string;
+  readonly place: string;
+  readonly image?: ImageSourcePropType;
+  /** Horizon strip for chapter cards (decodes far smaller than the full image). */
+  readonly band?: ImageSourcePropType;
+  readonly accent: string;
+  readonly sky: string;
+  /** Country whose colours draw the placeholder painting. */
+  readonly country: string;
+}
+
+/**
+ * Bundled paintings. The first ten are keyed by their historical chapter IDs,
+ * which earned legacy postcards keep (INTEGRATION_CONTRACT.md, revision 13);
+ * journey stops reuse them through `STOP_PAINTINGS`. A new stop painting is
+ * added here under its stop ID (see scripts/build-scenes.py).
+ */
+export const SCENES: readonly Scene[] = [
+  {
+    id: 'weather',
+    place: 'ყაზბეგი',
+    image: require('../../assets/scenes/weather.jpg'),
+    band: require('../../assets/scenes/weather-band.jpg'),
+    accent: '#3B3A6E',
+    sky: '#EDBFA0',
+    country: 'georgia',
+  },
+  {
+    id: 'animals',
+    place: 'თუშეთი',
+    image: require('../../assets/scenes/animals.jpg'),
+    band: require('../../assets/scenes/animals-band.jpg'),
+    accent: '#2F4C3C',
+    sky: '#DDB8A8',
+    country: 'georgia',
+  },
+  {
+    id: 'family',
+    place: 'ძველი თბილისი',
+    image: require('../../assets/scenes/family.jpg'),
+    band: require('../../assets/scenes/family-band.jpg'),
+    accent: '#6E2F2C',
+    sky: '#F2B285',
+    country: 'georgia',
+  },
+  {
+    id: 'body',
+    place: 'კაცხის სვეტი',
+    image: require('../../assets/scenes/body.jpg'),
+    band: require('../../assets/scenes/body-band.jpg'),
+    accent: '#4A5230',
+    sky: '#E6B48B',
+    country: 'georgia',
+  },
+  {
+    id: 'plants',
+    place: 'კახეთი',
+    image: require('../../assets/scenes/plants.jpg'),
+    band: require('../../assets/scenes/plants-band.jpg'),
+    accent: '#5B2643',
+    sky: '#F5AC85',
+    country: 'georgia',
+  },
+  {
+    id: 'landscape',
+    place: 'მახუნცეთის ხიდი',
+    image: require('../../assets/scenes/landscape.jpg'),
+    band: require('../../assets/scenes/landscape-band.jpg'),
+    accent: '#2B4F5A',
+    sky: '#E8B893',
+    country: 'georgia',
+  },
+  {
+    id: 'food',
+    place: 'მცხეთა',
+    image: require('../../assets/scenes/food.jpg'),
+    band: require('../../assets/scenes/food-band.jpg'),
+    accent: '#1E5D5F',
+    sky: '#D9C8BF',
+    country: 'georgia',
+  },
+  {
+    id: 'home',
+    place: 'ანანური',
+    image: require('../../assets/scenes/home.jpg'),
+    band: require('../../assets/scenes/home-band.jpg'),
+    accent: '#6A4521',
+    sky: '#E7B5A4',
+    country: 'georgia',
+  },
+  {
+    id: 'numbers',
+    place: 'სასახლის ბაღი',
+    image: require('../../assets/scenes/numbers.jpg'),
+    band: require('../../assets/scenes/numbers-band.jpg'),
+    accent: '#4A2F5C',
+    sky: '#EFB88F',
+    country: 'georgia',
+  },
+  {
+    id: 'music',
+    place: 'ბათუმი',
+    image: require('../../assets/scenes/music.jpg'),
+    band: require('../../assets/scenes/music-band.jpg'),
+    accent: '#23486E',
+    sky: '#EEB190',
+    country: 'georgia',
+  },
+  // The other 38 journey stops (painted 2026-10-17), keyed by stop ID.
+  {
+    id: 'david-gareja',
+    place: 'დავით გარეჯი',
+    image: require('../../assets/scenes/david-gareja.jpg'),
+    band: require('../../assets/scenes/david-gareja-band.jpg'),
+    accent: '#6B3A4E',
+    sky: '#A1B7E0',
+    country: 'georgia',
+  },
+  {
+    id: 'uplistsikhe',
+    place: 'უფლისციხე',
+    image: require('../../assets/scenes/uplistsikhe.jpg'),
+    band: require('../../assets/scenes/uplistsikhe-band.jpg'),
+    accent: '#6E4A1F',
+    sky: '#9FB5D3',
+    country: 'georgia',
+  },
+  {
+    id: 'borjomi',
+    place: 'ბორჯომი',
+    image: require('../../assets/scenes/borjomi.jpg'),
+    band: require('../../assets/scenes/borjomi-band.jpg'),
+    accent: '#2E5A43',
+    sky: '#B6C1D5',
+    country: 'georgia',
+  },
+  {
+    id: 'vardzia',
+    place: 'ვარძია',
+    image: require('../../assets/scenes/vardzia.jpg'),
+    band: require('../../assets/scenes/vardzia-band.jpg'),
+    accent: '#4E3A6E',
+    sky: '#A092C6',
+    country: 'georgia',
+  },
+  {
+    id: 'racha',
+    place: 'რაჭა',
+    image: require('../../assets/scenes/racha.jpg'),
+    band: require('../../assets/scenes/racha-band.jpg'),
+    accent: '#6A2F45',
+    sky: '#C7ADC6',
+    country: 'georgia',
+  },
+  {
+    id: 'kutaisi-gelati',
+    place: 'ქუთაისი და გელათი',
+    image: require('../../assets/scenes/kutaisi-gelati.jpg'),
+    band: require('../../assets/scenes/kutaisi-gelati-band.jpg'),
+    accent: '#7A3A22',
+    sky: '#A4B7D6',
+    country: 'georgia',
+  },
+  {
+    id: 'svaneti',
+    place: 'სვანეთი',
+    image: require('../../assets/scenes/svaneti.jpg'),
+    band: require('../../assets/scenes/svaneti-band.jpg'),
+    accent: '#2F4E73',
+    sky: '#71AEF4',
+    country: 'georgia',
+  },
+  {
+    id: 'martvili',
+    place: 'მარტვილის კანიონი',
+    image: require('../../assets/scenes/martvili.jpg'),
+    band: require('../../assets/scenes/martvili-band.jpg'),
+    accent: '#1F5E55',
+    sky: '#A2C9CE',
+    country: 'georgia',
+  },
+  {
+    id: 'tao-klarjeti',
+    place: 'ტაო-კლარჯეთი',
+    image: require('../../assets/scenes/tao-klarjeti.jpg'),
+    band: require('../../assets/scenes/tao-klarjeti-band.jpg'),
+    accent: '#6E3F4A',
+    sky: '#B2C6DF',
+    country: 'turkey',
+  },
+  {
+    id: 'sumela',
+    place: 'სუმელა',
+    image: require('../../assets/scenes/sumela.jpg'),
+    band: require('../../assets/scenes/sumela-band.jpg'),
+    accent: '#2F4F45',
+    sky: '#96A8C3',
+    country: 'turkey',
+  },
+  {
+    id: 'cappadocia',
+    place: 'კაპადოკია',
+    image: require('../../assets/scenes/cappadocia.jpg'),
+    band: require('../../assets/scenes/cappadocia-band.jpg'),
+    accent: '#7A4030',
+    sky: '#B9A8C4',
+    country: 'turkey',
+  },
+  {
+    id: 'pamukkale',
+    place: 'პამუკალე',
+    image: require('../../assets/scenes/pamukkale.jpg'),
+    band: require('../../assets/scenes/pamukkale-band.jpg'),
+    accent: '#6B2F55',
+    sky: '#9A6C93',
+    country: 'turkey',
+  },
+  {
+    id: 'ephesus',
+    place: 'ეფესო',
+    image: require('../../assets/scenes/ephesus.jpg'),
+    band: require('../../assets/scenes/ephesus-band.jpg'),
+    accent: '#22585E',
+    sky: '#9CB6E0',
+    country: 'turkey',
+  },
+  {
+    id: 'istanbul',
+    place: 'სტამბოლი',
+    image: require('../../assets/scenes/istanbul.jpg'),
+    band: require('../../assets/scenes/istanbul-band.jpg'),
+    accent: '#24396E',
+    sky: '#4F66A9',
+    country: 'turkey',
+  },
+  {
+    id: 'plovdiv',
+    place: 'პლოვდივი',
+    image: require('../../assets/scenes/plovdiv.jpg'),
+    band: require('../../assets/scenes/plovdiv-band.jpg'),
+    accent: '#7A5226',
+    sky: '#BDC8E7',
+    country: 'bulgaria',
+  },
+  {
+    id: 'petritsoni',
+    place: 'პეტრიწონი',
+    image: require('../../assets/scenes/petritsoni.jpg'),
+    band: require('../../assets/scenes/petritsoni-band.jpg'),
+    accent: '#36553A',
+    sky: '#A3C3EC',
+    country: 'bulgaria',
+  },
+  {
+    id: 'rila',
+    place: 'რილა',
+    image: require('../../assets/scenes/rila.jpg'),
+    band: require('../../assets/scenes/rila-band.jpg'),
+    accent: '#7A2E2E',
+    sky: '#76B2F5',
+    country: 'bulgaria',
+  },
+  {
+    id: 'thessaloniki',
+    place: 'თესალონიკი',
+    image: require('../../assets/scenes/thessaloniki.jpg'),
+    band: require('../../assets/scenes/thessaloniki-band.jpg'),
+    accent: '#5A3466',
+    sky: '#B6A5D2',
+    country: 'greece',
+  },
+  {
+    id: 'iviron-athos',
+    place: 'ივერონი, ათონი',
+    image: require('../../assets/scenes/iviron-athos.jpg'),
+    band: require('../../assets/scenes/iviron-athos-band.jpg'),
+    accent: '#3A3A6E',
+    sky: '#B9B5D3',
+    country: 'greece',
+  },
+  {
+    id: 'meteora',
+    place: 'მეტეორა',
+    image: require('../../assets/scenes/meteora.jpg'),
+    band: require('../../assets/scenes/meteora-band.jpg'),
+    accent: '#3E4A5E',
+    sky: '#A7B0C9',
+    country: 'greece',
+  },
+  {
+    id: 'volos-iolcos',
+    place: 'ვოლოსი',
+    image: require('../../assets/scenes/volos-iolcos.jpg'),
+    band: require('../../assets/scenes/volos-iolcos-band.jpg'),
+    accent: '#285670',
+    sky: '#98ACCA',
+    country: 'greece',
+  },
+  {
+    id: 'delphi',
+    place: 'დელფო',
+    image: require('../../assets/scenes/delphi.jpg'),
+    band: require('../../assets/scenes/delphi-band.jpg'),
+    accent: '#4F5A2C',
+    sky: '#91BEF7',
+    country: 'greece',
+  },
+  {
+    id: 'athens',
+    place: 'ათენი',
+    image: require('../../assets/scenes/athens.jpg'),
+    band: require('../../assets/scenes/athens-band.jpg'),
+    accent: '#6E4E22',
+    sky: '#9E93C1',
+    country: 'greece',
+  },
+  {
+    id: 'santorini',
+    place: 'სანტორინი',
+    image: require('../../assets/scenes/santorini.jpg'),
+    band: require('../../assets/scenes/santorini-band.jpg'),
+    accent: '#1F4E86',
+    sky: '#AD8AB6',
+    country: 'greece',
+  },
+  {
+    id: 'corfu',
+    place: 'კორფუ',
+    image: require('../../assets/scenes/corfu.jpg'),
+    band: require('../../assets/scenes/corfu-band.jpg'),
+    accent: '#16615E',
+    sky: '#67ABF7',
+    country: 'greece',
+  },
+  {
+    id: 'butrint',
+    place: 'ბუტრინტი',
+    image: require('../../assets/scenes/butrint.jpg'),
+    band: require('../../assets/scenes/butrint-band.jpg'),
+    accent: '#245A6A',
+    sky: '#9CBBE1',
+    country: 'balkans',
+  },
+  {
+    id: 'gjirokaster',
+    place: 'გიროკასტრა',
+    image: require('../../assets/scenes/gjirokaster.jpg'),
+    band: require('../../assets/scenes/gjirokaster-band.jpg'),
+    accent: '#4A4A5E',
+    sky: '#AAB7D8',
+    country: 'balkans',
+  },
+  {
+    id: 'berat',
+    place: 'ბერატი',
+    image: require('../../assets/scenes/berat.jpg'),
+    band: require('../../assets/scenes/berat-band.jpg'),
+    accent: '#4B3570',
+    sky: '#6163AA',
+    country: 'balkans',
+  },
+  {
+    id: 'ohrid',
+    place: 'ოჰრიდი',
+    image: require('../../assets/scenes/ohrid.jpg'),
+    band: require('../../assets/scenes/ohrid-band.jpg'),
+    accent: '#2E4D78',
+    sky: '#B396C4',
+    country: 'balkans',
+  },
+  {
+    id: 'kotor',
+    place: 'კოტორი',
+    image: require('../../assets/scenes/kotor.jpg'),
+    band: require('../../assets/scenes/kotor-band.jpg'),
+    accent: '#7A3428',
+    sky: '#90B8E7',
+    country: 'balkans',
+  },
+  {
+    id: 'dubrovnik',
+    place: 'დუბროვნიკი',
+    image: require('../../assets/scenes/dubrovnik.jpg'),
+    band: require('../../assets/scenes/dubrovnik-band.jpg'),
+    accent: '#1F4D73',
+    sky: '#A0B0CB',
+    country: 'balkans',
+  },
+  {
+    id: 'split',
+    place: 'სპლიტი',
+    image: require('../../assets/scenes/split.jpg'),
+    band: require('../../assets/scenes/split-band.jpg'),
+    accent: '#5E3A63',
+    sky: '#B39CC2',
+    country: 'balkans',
+  },
+  {
+    id: 'plitvice',
+    place: 'პლიტვიცე',
+    image: require('../../assets/scenes/plitvice.jpg'),
+    band: require('../../assets/scenes/plitvice-band.jpg'),
+    accent: '#2D5A38',
+    sky: '#61A7F4',
+    country: 'balkans',
+  },
+  {
+    id: 'venice',
+    place: 'ვენეცია',
+    image: require('../../assets/scenes/venice.jpg'),
+    band: require('../../assets/scenes/venice-band.jpg'),
+    accent: '#2A5B66',
+    sky: '#BAB9DD',
+    country: 'italy',
+  },
+  {
+    id: 'florence',
+    place: 'ფლორენცია',
+    image: require('../../assets/scenes/florence.jpg'),
+    band: require('../../assets/scenes/florence-band.jpg'),
+    accent: '#7D3B26',
+    sky: '#B2BDD8',
+    country: 'italy',
+  },
+  {
+    id: 'rome',
+    place: 'რომი',
+    image: require('../../assets/scenes/rome.jpg'),
+    band: require('../../assets/scenes/rome-band.jpg'),
+    accent: '#6E2F3E',
+    sky: '#A47791',
+    country: 'italy',
+  },
+  {
+    id: 'amalfi',
+    place: 'ამალფი',
+    image: require('../../assets/scenes/amalfi.jpg'),
+    band: require('../../assets/scenes/amalfi-band.jpg'),
+    accent: '#3E5A2A',
+    sky: '#6DACF3',
+    country: 'italy',
+  },
+  {
+    id: 'taormina',
+    place: 'ტაორმინა',
+    image: require('../../assets/scenes/taormina.jpg'),
+    band: require('../../assets/scenes/taormina-band.jpg'),
+    accent: '#6E2556',
+    sky: '#9FA3D8',
+    country: 'italy',
+  },
+];
+
+/**
+ * Journey stops that already have a painting, by what each painting shows.
+ * Add a stop here (and its JPEGs under assets/scenes) when its painting lands.
+ */
+export const STOP_PAINTINGS: Readonly<Record<string, string>> = {
+  tbilisi: 'family',
+  mtskheta: 'food',
+  ananuri: 'home',
+  kazbegi: 'weather',
+  tusheti: 'animals',
+  sighnaghi: 'plants',
+  katskhi: 'body',
+  zugdidi: 'numbers',
+  makhuntseti: 'landscape',
+  batumi: 'music',
+};
+
+const byId = new Map(SCENES.map((scene) => [scene.id, scene]));
+const scenes = new Map<string, Scene>();
+
+/**
+ * Scene for a journey stop, or for a historical chapter ID kept by an earned
+ * legacy postcard. Unknown IDs get a placeholder rather than a wrong painting.
+ */
+export function sceneFor(chapterId: string | null | undefined): Scene {
+  const id = chapterId ?? 'tbilisi';
+  const cached = scenes.get(id);
+  if (cached) return cached;
+  const painting = byId.get(id) ?? byId.get(STOP_PAINTINGS[id] ?? '');
+  const title = stopTitle(id);
+  const country = countryOf(id);
+  const scene: Scene = painting
+    ? // Stops are titled by content; legacy IDs keep their painting's place.
+      title
+      ? { ...painting, id, place: title }
+      : painting
+    : {
+        id,
+        place: title ?? id,
+        accent: country.accent,
+        sky: country.sky[1],
+        country: country.id,
+      };
+  scenes.set(id, scene);
+  return scene;
+}

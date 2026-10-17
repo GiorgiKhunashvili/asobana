@@ -9,14 +9,18 @@ import Animated, {
 } from 'react-native-reanimated';
 import { PrimaryButton, SecondaryButton } from '../../src/components/Buttons';
 import { CoinBadge, CoinGlyph } from '../../src/components/CoinBadge';
-import { Rosette } from '../../src/components/Rosette';
+import { Postcard } from '../../src/components/Postcard';
+import { BonusMeter } from '../../src/components/BonusMeter';
+import { VictoryLogo } from '../../src/components/Logo';
 import { Screen, TopBar } from '../../src/components/Screen';
 import { Display, Txt } from '../../src/components/Text';
 import { catalog } from '../../src/content/catalog';
 import { nextLevelId } from '../../src/engine/game';
+import { BONUS_GOAL, freeCellHints } from '../../src/engine/bonusRewards';
+import { selectPostcards } from '../../src/engine/postcards';
 import { routes, singleParam } from '../../src/navigation/routes';
 import { gameStore, useGameStore } from '../../src/state/gameStore';
-import { levelTone, palette, space } from '../../src/theme';
+import { countryOf, levelTone, onScene, palette, space } from '../../src/theme';
 
 /** Reward from the batch that completed this level, if that is how we got here. */
 function freshReward(levelId: string | null): number | null {
@@ -52,10 +56,27 @@ export default function Victory() {
   const level = catalog.levels[index];
   const next = nextLevelId(catalog, id);
   const progress = game.progress[id];
-  const emblem = Math.min(width * 0.78, 320);
+  const emblem = Math.min(width * 0.46, 190);
+  const chapterCard = selectPostcards(game, catalog).find(
+    (card) => card.chapterId === level?.chapterId,
+  );
+  const chapterEnd = !catalog.levels
+    .slice(index + 1)
+    .some((entry) => entry.chapterId === level?.chapterId);
+  const showCard = chapterEnd && chapterCard?.collected;
+  const nextChapter = catalog.levels.find(
+    (entry) => entry.id === next,
+  )?.chapterId;
+  const newCountry =
+    chapterEnd &&
+    nextChapter &&
+    countryOf(nextChapter) !== countryOf(level?.chapterId)
+      ? countryOf(nextChapter)
+      : null;
   return (
     <Screen
       tone={tone}
+      veil={0.15}
       glowY={0.3}
       header={
         <TopBar
@@ -69,31 +90,49 @@ export default function Victory() {
       }
       contentStyle={styles.content}
     >
-      <Animated.View
-        entering={ZoomIn.springify().damping(18).stiffness(120)}
-        style={styles.emblem}
-      >
-        <Rosette size={emblem} period={28} rays />
-      </Animated.View>
+      {showCard ? (
+        <View style={styles.postcard}>
+          <Txt variant="bodyStrong" color={palette.goldLight}>
+            {reward !== null
+              ? 'ახალი ბარათი შენს ალბომში!'
+              : 'ბარათი შენს ალბომშია'}
+          </Txt>
+          <Postcard
+            chapterId={chapterCard.chapterId}
+            number={chapterCard.number}
+            compact
+          />
+          <SecondaryButton
+            label="ბარათის ნახვა"
+            testID="victory-postcard"
+            onPress={() => router.push(routes.postcard(chapterCard.chapterId))}
+          />
+        </View>
+      ) : (
+        <View style={styles.emblem}>
+          <VictoryLogo size={emblem} accent={tone.scene.accent} />
+        </View>
+      )}
       <Animated.View
         entering={FadeInDown.delay(220).duration(500)}
         style={styles.title}
       >
-        <Display variant="eyebrow" color={palette.gold}>
+        <Display variant="eyebrow" color={palette.goldLight} style={onScene}>
           {`დონე ${index + 1}`}
         </Display>
         <Display
           variant="hero"
           color={palette.goldLight}
           testID="victory-title"
+          style={onScene}
         >
           გილოცავ!
         </Display>
-        <Txt variant="bodyStrong" style={styles.centered}>
+        <Txt variant="bodyStrong" style={[styles.centered, onScene]}>
           {`„${level?.title ?? ''}“ გავლილია`}
         </Txt>
         {Boolean(progress?.bonusWords.length) && (
-          <Txt variant="caption" color={palette.textMuted}>
+          <Txt variant="caption" style={onScene}>
             ბონუს სიტყვები: {progress?.bonusWords.length}
           </Txt>
         )}
@@ -111,10 +150,25 @@ export default function Victory() {
           </Txt>
         </Animated.View>
       )}
+      <BonusMeter
+        progress={game.bonusRewards.totalFound % BONUS_GOAL}
+        freeHints={freeCellHints(game)}
+        compact
+      />
       <Animated.View
         entering={FadeInUp.delay(760).duration(500)}
         style={styles.actions}
       >
+        {newCountry && (
+          <Txt
+            variant="bodyStrong"
+            color={palette.goldLight}
+            style={[styles.centered, onScene]}
+            testID="victory-new-country"
+          >
+            {`ახალი ქვეყანა: ${newCountry.name}!`}
+          </Txt>
+        )}
         {next ? (
           <PrimaryButton
             label="შემდეგი დონე"
@@ -129,14 +183,14 @@ export default function Victory() {
               color={palette.goldLight}
               style={styles.centered}
             >
-              ამ კრებულის ყველა დონე გავლილია.
+              მოგზაურობა დასრულდა — ყველა დონე გავლილია.
             </Txt>
           </Animated.View>
         )}
         <View style={styles.row}>
           <SecondaryButton
-            label="თავები"
-            icon="grid"
+            label="მოგზაურობა"
+            icon="route"
             testID="victory-chapters"
             style={styles.half}
             onPress={() => router.replace('/chapters')}
@@ -155,6 +209,13 @@ export default function Victory() {
 }
 
 const styles = StyleSheet.create({
+  postcard: {
+    width: '100%',
+    maxWidth: 400,
+    gap: space.sm,
+    alignItems: 'center',
+    marginBottom: space.xl,
+  },
   content: { justifyContent: 'center', alignItems: 'center', gap: space.lg },
   center: {
     flex: 1,

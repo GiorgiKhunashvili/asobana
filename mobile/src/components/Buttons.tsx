@@ -60,7 +60,8 @@ export function PrimaryButton({
   );
 }
 
-/** Enamel plate with a gold wire edge, for secondary choices. */
+/** Enamel plate with a gold wire edge, for secondary choices. `danger` marks
+ * actions that discard something (pomegranate edge and label). */
 export function SecondaryButton({
   label,
   icon,
@@ -69,7 +70,12 @@ export function SecondaryButton({
   testID,
   accessibilityHint,
   style,
-}: BaseProps & { readonly icon?: IconName; readonly style?: ViewStyle }) {
+  danger = false,
+}: BaseProps & {
+  readonly icon?: IconName;
+  readonly style?: ViewStyle;
+  readonly danger?: boolean;
+}) {
   return (
     <Pressable
       accessibilityRole="button"
@@ -81,13 +87,25 @@ export function SecondaryButton({
       testID={testID}
       style={({ pressed }) => [
         styles.secondary,
+        danger && styles.danger,
         pressed && styles.secondaryPressed,
         disabled && styles.disabled,
         style,
       ]}
     >
-      {icon && <Icon name={icon} size={20} color={palette.gold} />}
-      <Txt variant="label">{label}</Txt>
+      {icon && (
+        <Icon
+          name={icon}
+          size={20}
+          color={danger ? palette.pomegranateLight : palette.gold}
+        />
+      )}
+      <Txt
+        variant="label"
+        color={danger ? palette.pomegranateLight : palette.text}
+      >
+        {label}
+      </Txt>
     </Pressable>
   );
 }
@@ -169,14 +187,16 @@ const styles = StyleSheet.create({
     borderRadius: radius.card,
     borderWidth: 1.5,
     borderColor: palette.hairline,
-    backgroundColor: 'rgba(248, 240, 222, 0.06)',
+    // Frosted dusk, so the label reads over any part of a painting.
+    backgroundColor: 'rgba(18, 12, 36, 0.5)',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
     gap: 10,
     paddingHorizontal: 16,
   },
-  secondaryPressed: { backgroundColor: 'rgba(248, 240, 222, 0.14)' },
+  danger: { borderColor: palette.pomegranate },
+  secondaryPressed: { backgroundColor: 'rgba(18, 12, 36, 0.7)' },
   round: {
     alignItems: 'center',
     justifyContent: 'center',

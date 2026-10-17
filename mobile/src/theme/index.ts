@@ -4,6 +4,7 @@
  * the traced word is the wire, and a found word fills its cells with enamel.
  */
 import { catalog } from '../content/catalog';
+import { sceneFor, type Scene } from './scenes';
 
 export const palette = {
   gold: '#E3B65A',
@@ -11,6 +12,9 @@ export const palette = {
   goldDeep: '#9C6E1F',
   ivory: '#F8F0DE',
   ivoryShade: '#E2D2B0',
+  /** The letter wheel's face: ivory enamel a shade warmer than the cells. */
+  parchment: '#F4EAD3',
+  parchmentRing: 'rgba(156, 110, 31, 0.32)',
   ink: '#1B1838',
   pomegranate: '#C8334E',
   pomegranateLight: '#FF9AA9',
@@ -21,15 +25,28 @@ export const palette = {
   textMuted: 'rgba(248, 240, 222, 0.68)',
   hairline: 'rgba(227, 182, 90, 0.38)',
   scrim: 'rgba(5, 8, 22, 0.55)',
+  /** Dusk shade laid over paintings (as rgb, so screens can choose the opacity). */
+  dusk: '18, 12, 36',
 } as const;
 
-/** Each chapter is fired on its own enamel ground. Cycles for future chapters. */
+/** Keeps light text readable wherever it sits directly on a painting. */
+export const onScene = {
+  textShadowColor: 'rgba(18, 12, 36, 0.65)',
+  textShadowOffset: { width: 0, height: 1 },
+  textShadowRadius: 6,
+} as const;
+
+/**
+ * Each chapter has a painted Georgian scene and an enamel ground that shows
+ * while the painting decodes or where no painting fits (cards, fallbacks).
+ */
 export interface Tone {
   readonly ground: readonly [string, string];
   readonly raised: string;
   readonly glow: string;
+  readonly scene: Scene;
 }
-const TONES: readonly Tone[] = [
+const GROUNDS: readonly Omit<Tone, 'scene'>[] = [
   // ლაჟვარდი · lapis
   { ground: ['#1B3373', '#0A1433'], raised: '#24418E', glow: '#3A64C8' },
   // საფერავი · saperavi
@@ -40,11 +57,22 @@ const TONES: readonly Tone[] = [
   { ground: ['#5A3514', '#22130A'], raised: '#6E4420', glow: '#C07A2E' },
 ];
 
+const tones = new Map<string, Tone>();
+
+/** Stable per chapter, so memoised backdrops do not redraw on every render. */
 export function chapterTone(chapterId: string | null | undefined): Tone {
-  const index = catalog.chapters.findIndex(
-    (chapter) => chapter.id === chapterId,
+  const index = Math.max(
+    0,
+    catalog.chapters.findIndex((chapter) => chapter.id === chapterId),
   );
-  return TONES[Math.max(0, index) % TONES.length] ?? TONES[0]!;
+  const key = chapterId ?? `#${index}`;
+  let tone = tones.get(key);
+  if (!tone) {
+    const ground = GROUNDS[index % GROUNDS.length] ?? GROUNDS[0]!;
+    tone = { ...ground, scene: sceneFor(chapterId) };
+    tones.set(key, tone);
+  }
+  return tone;
 }
 
 export function levelTone(levelId: string | null | undefined): Tone {
@@ -74,3 +102,11 @@ export const motion = {
 } as const;
 
 export * from './typography';
+export { SCENES, STOP_PAINTINGS, sceneFor, type Scene } from './scenes';
+export {
+  COUNTRIES,
+  countryById,
+  countryOf,
+  stopTitle,
+  type Country,
+} from './journey';

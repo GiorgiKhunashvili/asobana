@@ -1,6 +1,8 @@
 import type { GameState, LevelPack, LevelProgress } from '../models/types';
 import { emptyProgress, isUnlocked, revealedCells } from '../engine/game';
 import { solutionCells, wordCells } from '../engine/grid';
+import { BONUS_GOAL } from '../engine/bonusRewards';
+import journey from '../../../content/journey-v13.json';
 import {
   array,
   boolean,
@@ -52,13 +54,29 @@ export function parseSnapshot(value: unknown, pack: LevelPack): GameState {
         'hintsUsed',
         0,
         // Reauthored boards may be smaller than the board these hints were used on.
-        pack.revision === 5
-          ? 914 // Revision 4 allowance plus at most 49 cells and five words.
-          : pack.revision === 4
-            ? 860
-            : pack.revision === 3
-              ? 430
-              : cells.size + level.words.length,
+        pack.revision === 13
+          ? 1250 // Preserve prior hint credits plus a full replacement board.
+          : pack.revision === 12
+            ? 1208 // Preserve revision 11 credits plus one board of new hints.
+            : pack.revision === 11
+              ? 1166 // Revision 10 allowance plus at most 7×5 cells and seven words.
+              : pack.revision === 10
+                ? 1124
+                : pack.revision === 9
+                  ? 1082 // Revision 8 allowance plus at most 7×5 cells and seven words.
+                  : pack.revision === 8
+                    ? 1040 // Revision 7 allowance plus at most 7×5 cells and seven words.
+                    : pack.revision === 7
+                      ? 998 // Revision 6 allowance plus at most 7×5 cells and seven words.
+                      : pack.revision === 6
+                        ? 956 // Revision 5 allowance plus at most 7×5 cells and seven words.
+                        : pack.revision === 5
+                          ? 914 // Revision 4 allowance plus at most 49 cells and five words.
+                          : pack.revision === 4
+                            ? 860
+                            : pack.revision === 3
+                              ? 430
+                              : cells.size + level.words.length,
       ),
       completed: boolean(saved.completed, 'completed'),
     };
@@ -74,12 +92,52 @@ export function parseSnapshot(value: unknown, pack: LevelPack): GameState {
     progress[id] = restored;
   }
   const settings = object(raw.settings, 'settings');
+  const recordedBonuses = Object.values(progress).reduce(
+    (sum, level) => sum + level.bonusWords.length,
+    0,
+  );
+  // Old snapshots receive credit once, before content migration retires any words.
+  const rewards =
+    raw.bonusRewards === undefined
+      ? { totalFound: recordedBonuses, hintsSpent: 0 }
+      : object(raw.bonusRewards, 'bonus rewards');
+  const totalFound = integer(
+    rewards.totalFound,
+    'total bonus finds',
+    recordedBonuses,
+  );
+  const hintsSpent = integer(
+    rewards.hintsSpent,
+    'spent bonus hints',
+    0,
+    Math.floor(totalFound / BONUS_GOAL),
+  );
+  const legacyPostcardChapterIds =
+    raw.legacyPostcardChapterIds === undefined
+      ? undefined
+      : array(raw.legacyPostcardChapterIds, 'legacy postcards').map((id) =>
+          string(id, 'legacy postcard ID'),
+        );
+  if (legacyPostcardChapterIds !== undefined) {
+    unique(legacyPostcardChapterIds, 'legacy postcards');
+    if (
+      pack.revision < 13 ||
+      legacyPostcardChapterIds.some(
+        (id) => !journey.legacyChapterIds.includes(id),
+      )
+    )
+      throw new ContentError('Unknown legacy postcard');
+  }
   const state: GameState = {
     schemaVersion: 1,
     packId: pack.id,
     contentRevision: pack.revision,
     currentLevelId: string(raw.currentLevelId, 'currentLevelId'),
     coins: integer(raw.coins, 'coins'),
+    bonusRewards: { totalFound, hintsSpent },
+    ...(legacyPostcardChapterIds === undefined
+      ? {}
+      : { legacyPostcardChapterIds }),
     progress,
     settings: {
       sound: boolean(settings.sound, 'sound'),

@@ -1,10 +1,56 @@
-# GeoWords engine ↔ presentation contract v1
+# Asobana engine ↔ presentation contract v1
 
 This is the handoff to Claude Code. Public contracts live in
 `mobile/src/models/types.ts`, `mobile/src/engine/index.ts`,
 `mobile/src/state/createGameStore.ts`, `mobile/src/components/useLetterWheel.ts`
 and `mobile/src/navigation/routes.ts`. These source types are authoritative.
 Claude's components (`docs/UI_DESIGN_SYSTEM.md`) build on these contracts.
+
+## Revision 13 journey content handoff
+
+The catalog has 240 levels in 48 stops. Exact chapter IDs, Georgian titles and
+ordering live in [`content/journey-v13.json`](../content/journey-v13.json); use
+that table for maps, artwork and chapter navigation. Five levels belong to each
+stop. Country/map presentation remains Claude's responsibility. Words stay
+Georgian throughout the journey; a destination does not constrain board vocabulary.
+Existing painting/caption registries still use the ten historical IDs and need
+Claude's new-stop integration; the content change does not supply 48 paintings.
+
+Level IDs `ka-001` through `ka-050` retain their ordinal positions; new levels run
+through `ka-240`. Continuing words retain IDs on the same board. Saves from
+revisions 1–12 retain completion, partial solved credits, coins, paid hints,
+settings and lifetime bonus rewards. Obsolete board bonus spellings are retired
+without subtracting already-earned rewards. A completed revision-12 campaign
+unlocks `ka-051` after migration.
+
+For revision 12, ordinal chapter groups map as follows:
+
+| Old chapter ID | New stop     | Levels |
+| -------------- | ------------ | ------ |
+| weather        | tbilisi      | 1–5    |
+| animals        | mtskheta     | 6–10   |
+| family         | ananuri      | 11–15  |
+| body           | kazbegi      | 16–20  |
+| plants         | tusheti      | 21–25  |
+| landscape      | sighnaghi    | 26–30  |
+| food           | david-gareja | 31–35  |
+| home           | uplistsikhe  | 36–40  |
+| numbers        | borjomi      | 41–45  |
+| music          | vardzia      | 46–50  |
+
+This is progress mapping by level position. Previously earned destination art
+keeps its original identity through optional durable
+`GameState.legacyPostcardChapterIds`. `selectPostcards` returns the 48 current
+cards (`legacy: false`), followed by earned historical cards (`legacy: true`).
+Legacy cards are already collected, never `next`, and use their original art IDs.
+Their `number` is their historical number, not a journey position. Use `chapterId`
+as the stable key and `legacy` when separating the collections. Do not relabel an
+old Kazbegi painting as Tbilisi simply because level progress maps to stop 1.
+
+Required spellings and accepted variants have a global minimum gap of 75 levels;
+bonuses do not affect this gap. The runtime still recognizes all eligible formable
+bonuses, with the existing meter and reward behavior. The new standard-Georgian
+policy removes reviewed nonstandard substitutions and `რული` from current play.
 
 ## Ownership and imports
 
@@ -195,6 +241,9 @@ one snapshot. `dispatch` queues commands, commits SQLite, then publishes state a
 events. A save failure rejects the promise, sets `error` and keeps the last committed
 state. A rejection never poisons later commands. Do not swallow errors without
 presenting `store.error`; success animations must wait for the published event batch.
+`reset()` goes through the same queue: it saves `initialState(pack)` with the player's
+current sound/haptics settings, then publishes it with an empty event batch. Settings
+offers it behind a confirmation; it is never triggered automatically.
 
 ## Letter-wheel gestures and visual customization
 

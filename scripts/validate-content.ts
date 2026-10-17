@@ -1,5 +1,9 @@
+import manifest from '../content/levels/discovery.v13.recipes.json';
+import { validateWide, printProjections } from '../mobile/src/content/wide';
 import { catalog, vocabulary } from '../mobile/src/content/catalog';
 import { initialState, transition } from '../mobile/src/engine/game';
+validateWide(catalog, vocabulary, manifest.familiarity);
+printProjections(catalog);
 let state = initialState(catalog);
 for (const level of catalog.levels) {
   state = transition(

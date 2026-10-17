@@ -1,0 +1,34 @@
+INITIAL GENERATION
+
+Use case: illustration-story.
+Create a polished illustrated game map of Georgia, the COUNTRY in the Caucasus, for a relaxing mobile word game. Output exactly 1536 x 1024 pixels, wide landscape 3:2.
+
+CRITICAL CAMERA: strict top-down overhead map, orthographic plan view, camera pointing straight down at the ground, like a game board lying flat on a table. The entire rectangular canvas is terrain and water. Absolutely no horizon, no sky, no distant landscape, no receding perspective, no panoramic scenic view. Tiny stylized relief mountain icons and miniature building icons are allowed, placed on the flat overhead terrain. Do not turn this into an oblique landscape illustration.
+
+STYLE: cheerful hand-painted fantasy mobile-game world map; bright but soft turquoise, meadow green, sage green, golden yellow, warm ochre and creamy white. Clean simple rounded shapes, restrained painterly texture, minimal small detail, clear silhouettes legible at phone size. Mountain ranges consist of small stylized relief peaks with snowy tops and a few pale blue glaciers; forests are spaced clusters of little round tree crowns seen from above; rivers are smooth blue ribbons. Sea is turquoise with small white wave marks along the coast. Only a few small soft cloud wisps seen from above. No sky anywhere.
+
+GEOGRAPHY AND COMPOSITION: Black Sea fills the leftmost approximately 22 percent of the canvas. Its irregular coastline runs from the top edge to the bottom edge on the left side, with connected land to its right. Greater Caucasus snowy mountain range extends horizontally across the full upper land area, from upper-left coast across to the upper-right edge; terrain and peaks touch the top edge so there is no sky strip. Mount Kazbek is the tallest relief peak, top center-right. Western lowlands and forests are fresh green. Eastern fields and vineyards are warm golden. Rocky hills and canyons follow the bottom of the land. One winding blue river follows a broad gentle course from the bottom-left land area, through the middle of the map, to the bottom-right edge; its bends leave room for the landmarks. Use clear open grassy and golden spaces between landmarks: this map is a background for future overlaid game roads and level buttons.
+
+EIGHT distinct SMALL cute landmark clusters, each separated by generous uncluttered terrain. Landmark icons remain miniature relative to the map, no oversized detailed towns:
+1. Svan stone towers at top left on the land, among the northwest mountains.
+2. A waterfall canyon left of center, in green forest.
+3. A white-and-red lighthouse at bottom left on the coast.
+4. A small domed stone church at the center.
+5. Gergeti Trinity Church at top center-right on a green hill directly below Mount Kazbek.
+6. Old Tbilisi in the center-right lower half, with a small cluster of colorful balcony houses and a fortress beside the river.
+7. A walled hilltop town with towers and neat vineyard patches at far right.
+8. Cave monasteries as dark openings and tiny warm stone details carved into a golden cliff at bottom center.
+
+The whole composition must read as an overhead world-map background, with generous open playable ground, distinct regions and compact landmarks. No elaborate microdetail. The sea continues out the left edge. Only a few small clouds, no thick cloud border or frame.
+
+STRICT EXCLUSIONS: no text, letters, labels, country borders, roads, paths, trails, dotted routes, pins, compass, frame, legend, watermark, people, game UI, level buttons. No road-like tan connecting lines. No horizon or sky.
+
+REVISION
+
+Redraw this map with ONE decisive change: change its camera and rendering into a strict 90-degree TOP-DOWN ORTHOGRAPHIC MOBILE GAME MAP with much simpler shapes. Keep the eight landmark positions, sea on the left, mountains across the top, green west, golden east, southern canyon and winding river arrangement.
+
+The provided image is too oblique and far too realistic and detailed. Make a genuinely overhead map lying flat. Look directly down at the roofs and tree crowns, NOT at building facades. No sloped panorama, no depth recession, no horizon, no sky. The whole canvas is terrain. This should read as a cheerful illustrated game board. Mountains are compact little simplified snowy mountain symbols on the overhead ground, not a dramatic wall of huge realistic mountains. Forests are little groups of round tree crowns. Grassland is smooth rounded painted color areas with almost no tiny scattered rocks or shrubs. Rivers are clean smooth turquoise-blue ribbons. Use bright soft pastel gouache colors, clean chunky shapes and gentle hand-painted texture. Everything easy to read at small phone-screen size. Landmark groups are SMALL and cute with generous broad empty grassland and golden ground between them for future overlaid level buttons.
+
+Eight landmark positions, preserve all: Svan towers upper left in mountains; waterfall canyon left of center; red and white lighthouse bottom-left coast; domed church center; tiny Gergeti church below tallest snowy Kazbek top center-right; small colorful-roofed Old Tbilisi and fortress beside river center-right lower half; walled vineyard town far right; small cave openings in golden cliff bottom center. Sea occupies the left fifth, coastline continuous from top to bottom, small white wave marks. Only a few tiny overhead clouds.
+
+1536 x 1024 landscape. STRICTLY no roads, paths, trails, tan connecting lines, text, labels, letters, borders, pins, compass, frame, legend, watermark, people or UI. No visible horizon or sky. Prioritize top-down camera and simple soft mobile-game art.

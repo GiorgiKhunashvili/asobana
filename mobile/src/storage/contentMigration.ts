@@ -3,6 +3,8 @@ import { DEFAULT_ECONOMY, revealedCells } from '../engine/game';
 import { solutionCells, wordCells } from '../engine/grid';
 import { ContentError, object } from '../engine/validation';
 import { parseSnapshot } from './snapshot';
+import journey from '../../../content/journey-v13.json';
+import { selectPostcards } from '../engine/postcards';
 
 /** Validate the exact old catalog before applying a supported content upgrade. */
 export function restoreContent(
@@ -12,7 +14,10 @@ export function restoreContent(
 ): { state: GameState; migrated: boolean } {
   const raw = object(value, 'save');
   if (raw.packId === pack.id && raw.contentRevision === pack.revision)
-    return { state: parseSnapshot(value, pack), migrated: false };
+    return {
+      state: parseSnapshot(value, pack),
+      migrated: raw.bonusRewards === undefined,
+    };
   const previous = previousPacks.find(
     (candidate) =>
       candidate.id === raw.packId && candidate.revision === raw.contentRevision,
@@ -22,7 +27,22 @@ export function restoreContent(
     previous.id === pack.id &&
     (([1, 2].includes(previous.revision) && pack.revision === 3) ||
       ([1, 2, 3].includes(previous.revision) && pack.revision === 4) ||
-      ([1, 2, 3, 4].includes(previous.revision) && pack.revision === 5))
+      ([1, 2, 3, 4].includes(previous.revision) && pack.revision === 5) ||
+      ([1, 2, 3, 4, 5].includes(previous.revision) && pack.revision === 6) ||
+      ([1, 2, 3, 4, 5, 6].includes(previous.revision) && pack.revision === 7) ||
+      ([1, 2, 3, 4, 5, 6, 7].includes(previous.revision) &&
+        pack.revision === 8) ||
+      ([1, 2, 3, 4, 5, 6, 7, 8].includes(previous.revision) &&
+        pack.revision === 9) ||
+      ([1, 2, 3, 4, 5, 6, 7, 8, 9].includes(previous.revision) &&
+        pack.revision === 10) ||
+      ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10].includes(previous.revision) &&
+        pack.revision === 11) ||
+      ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].includes(previous.revision) &&
+        pack.revision === 12) ||
+      (previous.revision >= 1 &&
+        previous.revision <= 12 &&
+        pack.revision === 13))
   )
     return {
       state: migrateTopics(parseSnapshot(value, previous), previous, pack),
@@ -106,7 +126,18 @@ function migrateTopics(
   pack: LevelPack,
 ): GameState {
   for (const [index, level] of previous.levels.entries()) {
-    if (pack.levels[index]?.id !== level.id)
+    if (
+      pack.levels[index]?.id !== level.id ||
+      (pack.revision === 13 &&
+        (pack.levels[index]?.chapterId !==
+          journey.chapters[Math.floor(index / 5)]?.id ||
+          (previous.revision >= 5 &&
+            level.chapterId !==
+              journey.legacyChapterIds[Math.floor(index / 5)]))) ||
+      (previous.revision >= 5 &&
+        pack.revision < 13 &&
+        pack.levels[index]?.chapterId !== level.chapterId)
+    )
       throw new ContentError('Incompatible content upgrade; save retained');
   }
   const progress: Record<string, LevelProgress> = {};
@@ -171,7 +202,28 @@ function migrateTopics(
     progress[id] = updated;
   }
   return parseSnapshot(
-    { ...state, contentRevision: pack.revision, coins, progress },
+    {
+      ...state,
+      contentRevision: pack.revision,
+      coins,
+      progress,
+      ...(pack.revision >= 13
+        ? {
+            legacyPostcardChapterIds: [
+              ...new Set([
+                ...(state.legacyPostcardChapterIds ?? []),
+                ...selectPostcards(state, previous)
+                  .filter(
+                    (card) =>
+                      card.collected &&
+                      journey.legacyChapterIds.includes(card.chapterId),
+                  )
+                  .map((card) => card.chapterId),
+              ]),
+            ],
+          }
+        : {}),
+    },
     pack,
   );
 }

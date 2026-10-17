@@ -1,4 +1,4 @@
-# GeoWords architecture
+# Asobana architecture
 
 ## Requirements baseline
 

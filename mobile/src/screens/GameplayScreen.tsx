@@ -14,11 +14,13 @@ import {
   SecondaryButton,
 } from '../components/Buttons';
 import { CoinBadge, CoinGlyph } from '../components/CoinBadge';
+import { BonusMeter } from '../components/BonusMeter';
 import { CrosswordBoard } from '../components/CrosswordBoard';
 import { Icon } from '../components/Icon';
-import { LetterWheel } from '../components/LetterWheel';
+import { LetterWheel, wheelSize } from '../components/LetterWheel';
 import { Screen, TopBar } from '../components/Screen';
 import { Txt } from '../components/Text';
+import { STRIP_HEIGHT } from '../components/WordStrip';
 import { catalog } from '../content/catalog';
 import { isUnlocked } from '../engine/game';
 import { selectGameplay } from '../engine/selectors';
@@ -26,13 +28,13 @@ import type { GameCommand, GameplayView } from '../models/types';
 import { routes } from '../navigation/routes';
 import { tileHaptic } from '../services/feedback';
 import { gameStore, useGameStore } from '../state/gameStore';
-import { levelTone, motion, palette, space } from '../theme';
+import { levelTone, motion, onScene, palette, space } from '../theme';
 import { boardMoment, celebrationLength, stripFeedback } from './presentEvents';
 
 const BAR = 60;
-const TOPIC = 48;
-const STATUS = 34;
-const STRIP = 72;
+/** Topic line plus the word-progress lozenges under it. */
+const TITLE = 50;
+const PROGRESS = 18;
 const MAX_CONTENT = 520;
 
 function send(command: GameCommand): void {
@@ -180,18 +182,19 @@ function GameLayout({
 }) {
   const { width, height } = useWindowDimensions();
   const insets = useSafeAreaInsets();
-  const content = Math.min(width - space.lg * 2, MAX_CONTENT);
-  const wheel = Math.round(Math.min(content - 40, height * 0.4, 330));
+  const content = Math.min(width - space.md * 2, MAX_CONTENT);
+  const wheel = wheelSize(content, width, height);
+  // The board takes every point the header, strip and wheel leave over.
   const boardHeight =
     height -
     insets.top -
     insets.bottom -
     BAR -
-    TOPIC -
-    STATUS -
-    STRIP -
+    TITLE -
+    STRIP_HEIGHT -
     wheel -
-    space.xl * 3;
+    space.sm -
+    space.xs * 2;
   // Saves take milliseconds; controls ignore presses meanwhile instead of dimming.
   const hint = (kind: 'cell' | 'word') => {
     if (!busy) send({ type: 'hint', levelId: model.levelId, kind });
@@ -213,15 +216,25 @@ function GameLayout({
       }
       contentStyle={styles.content}
     >
-      <Txt
-        accessibilityRole="header"
-        testID="level-topic"
-        variant="heading"
-        color={palette.goldLight}
-        style={styles.topic}
-      >
-        {model.title}
-      </Txt>
+      <View style={styles.title}>
+        <Txt
+          accessibilityRole="header"
+          testID="level-topic"
+          variant="heading"
+          numberOfLines={1}
+          style={[styles.topic, onScene]}
+        >
+          {model.title}
+        </Txt>
+        <Progress
+          found={model.foundWords}
+          total={model.totalWords}
+          bonus={model.bonusCount}
+          bonusMeter={model.bonusMeter}
+          freeHints={model.freeCellHints}
+          accent={tone.scene.accent}
+        />
+      </View>
       <View
         style={[styles.boardArea, { minHeight: Math.max(boardHeight, 120) }]}
       >
@@ -229,15 +242,11 @@ function GameLayout({
           cells={model.cells}
           grid={model.grid}
           maxWidth={content}
-          maxHeight={Math.max(boardHeight - space.md * 2, 120)}
+          maxHeight={Math.max(boardHeight, 120)}
           moment={moment}
+          accent={tone.scene.accent}
         />
       </View>
-      <Progress
-        found={model.foundWords}
-        total={model.totalWords}
-        bonus={model.bonusCount}
-      />
       {error && (
         <Animated.View entering={FadeInDown} style={styles.error}>
           <Txt
@@ -258,7 +267,7 @@ function GameLayout({
           entering={FadeIn.delay(celebrating ? 500 : 0).duration(motion.slow)}
           style={[styles.complete, { width: content }]}
         >
-          <Txt variant="bodyStrong" color={palette.goldLight}>
+          <Txt variant="bodyStrong" style={onScene}>
             დონე გავლილია
           </Txt>
           <PrimaryButton
@@ -276,6 +285,7 @@ function GameLayout({
             size={wheel}
             width={content}
             tone={tone}
+            accent={tone.scene.accent}
             disabled={busy}
             onSubmit={onSubmit}
             onTileEntered={tileHaptic}
@@ -298,12 +308,30 @@ function GameLayout({
               ),
               bottom: (
                 <RoundButton
-                  label={`ასოს მინიშნება, ${model.cellHintCost} მონეტა`}
+                  label={
+                    model.freeCellHints > 0
+                      ? `ასოს უფასო მინიშნება, დარჩენილია ${model.freeCellHints}`
+                      : `ასოს მინიშნება, ${model.cellHintCost} მონეტა`
+                  }
                   icon="hintLetter"
                   testID="hint-cell"
                   disabled={!model.canUseCellHint}
                   onPress={() => hint('cell')}
-                  badge={<Price amount={model.cellHintCost} />}
+                  badge={
+                    model.freeCellHints > 0 ? (
+                      <View style={[styles.price, styles.freePrice]}>
+                        <Txt
+                          variant="caption"
+                          style={styles.priceText}
+                          numberOfLines={1}
+                        >
+                          უფასო
+                        </Txt>
+                      </View>
+                    ) : (
+                      <Price amount={model.cellHintCost} />
+                    )
+                  }
                 />
               ),
             }}
@@ -325,55 +353,56 @@ function Price({ amount }: { amount: number }) {
   );
 }
 
-/** One enamel lozenge per crossword word; bonus words keep their own tally. */
+/** One lozenge per crossword word, filled in the scene accent once found. */
 function Progress({
   found,
   total,
   bonus,
+  bonusMeter,
+  freeHints,
+  accent,
 }: {
   found: number;
   total: number;
   bonus: number;
+  bonusMeter: number;
+  freeHints: number;
+  accent: string;
 }) {
   return (
-    <View
-      accessible
-      accessibilityLabel={`${found}/${total} სიტყვა · ბონუსი ${bonus}`}
-      testID="word-progress"
-      style={styles.progress}
-    >
-      <View style={styles.lozenges}>
+    <View testID="word-progress" style={styles.progress}>
+      <View
+        accessible
+        accessibilityLabel={`${found}/${total} სიტყვა · ბონუსი ${bonus}`}
+        style={styles.lozenges}
+      >
         {Array.from({ length: total }, (_, index) => (
           <View
             key={index}
-            style={[styles.lozenge, index < found && styles.lozengeFound]}
+            style={[
+              styles.lozenge,
+              index < found && { backgroundColor: accent },
+            ]}
           />
         ))}
       </View>
-      {bonus > 0 && (
-        <Animated.View entering={FadeIn} style={styles.bonus}>
-          <Icon name="star" size={14} color={palette.gold} />
-          <Txt variant="caption" color={palette.goldLight}>
-            ბონუსი {bonus}
-          </Txt>
-        </Animated.View>
-      )}
+      <BonusMeter progress={bonusMeter} freeHints={freeHints} compact />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  content: { alignItems: 'center', paddingBottom: space.md },
-  topic: {
-    alignSelf: 'stretch',
-    textAlign: 'center',
-    minHeight: TOPIC,
-    paddingVertical: space.sm,
+  content: {
+    alignItems: 'center',
+    paddingHorizontal: space.md,
+    paddingBottom: space.sm,
   },
+  title: { height: TITLE, alignSelf: 'stretch', alignItems: 'center' },
+  topic: { textAlign: 'center' },
   boardArea: {
     justifyContent: 'center',
     alignSelf: 'stretch',
-    paddingVertical: space.md,
+    paddingVertical: space.xs,
   },
   message: {
     flex: 1,
@@ -383,7 +412,7 @@ const styles = StyleSheet.create({
   },
   centerText: { textAlign: 'center' },
   progress: {
-    height: STATUS,
+    height: PROGRESS,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
@@ -391,15 +420,12 @@ const styles = StyleSheet.create({
   },
   lozenges: { flexDirection: 'row', gap: 7 },
   lozenge: {
-    width: 10,
-    height: 10,
+    width: 11,
+    height: 11,
     transform: [{ rotate: '45deg' }],
     borderWidth: 1.5,
-    borderColor: palette.gold,
-  },
-  lozengeFound: {
-    backgroundColor: palette.turquoise,
-    borderColor: palette.goldLight,
+    borderColor: palette.ivory,
+    backgroundColor: 'rgba(18, 12, 36, 0.3)',
   },
   bonus: { flexDirection: 'row', alignItems: 'center', gap: 4 },
   error: {
@@ -425,4 +451,5 @@ const styles = StyleSheet.create({
     borderColor: palette.gold,
   },
   priceText: { fontSize: 11, lineHeight: 15 },
+  freePrice: { width: 68, paddingHorizontal: 4, justifyContent: 'center' },
 });

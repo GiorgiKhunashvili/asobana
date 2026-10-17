@@ -9,7 +9,7 @@ import { catalog } from '../../src/content/catalog';
 import { selectLevels } from '../../src/engine/selectors';
 import { routes, singleParam } from '../../src/navigation/routes';
 import { useGameStore } from '../../src/state/gameStore';
-import { chapterTone, palette, space } from '../../src/theme';
+import { chapterTone, onScene, palette, space } from '../../src/theme';
 
 const MEDALLION = 76;
 
@@ -27,10 +27,10 @@ export default function Levels() {
     return (
       <Screen tone={tone} header={<TopBar />}>
         <View style={styles.missing}>
-          <Txt>ასეთი თავი არ არსებობს.</Txt>
+          <Txt>ასეთი ადგილი არ არსებობს.</Txt>
           <SecondaryButton
-            label="თავები"
-            icon="grid"
+            label="მოგზაურობა"
+            icon="route"
             onPress={() => router.replace('/chapters')}
           />
         </View>
@@ -42,8 +42,9 @@ export default function Levels() {
   return (
     <Screen
       tone={tone}
+      veil={0.2}
       header={
-        <TopBar eyebrow={`თავი ${chapterIndex + 1}`} title={chapter.title} />
+        <TopBar eyebrow={`ადგილი ${chapterIndex + 1}`} title={chapter.title} />
       }
       contentStyle={styles.content}
     >
@@ -72,7 +73,10 @@ export default function Levels() {
                 onPress={() => router.push(routes.game(level.id))}
                 style={({ pressed }) => [
                   styles.medallion,
-                  level.completed && styles.completed,
+                  level.completed && [
+                    styles.completed,
+                    { backgroundColor: tone.scene.accent },
+                  ],
                   current && styles.current,
                   !level.unlocked && styles.locked,
                   pressed && styles.pressed,
@@ -103,6 +107,7 @@ export default function Levels() {
               <Txt
                 variant="caption"
                 color={level.unlocked ? palette.text : palette.textMuted}
+                style={onScene}
                 numberOfLines={1}
               >
                 {title}
@@ -141,11 +146,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  completed: {
-    backgroundColor: palette.turquoise,
-    borderColor: palette.goldLight,
-  },
-  current: { borderColor: palette.pomegranate, borderWidth: 4 },
+  completed: { borderColor: palette.goldLight },
+  current: { borderColor: palette.goldLight, borderWidth: 4 },
   locked: {
     backgroundColor: 'rgba(5, 10, 30, 0.45)',
     borderColor: palette.hairline,

@@ -4,6 +4,13 @@ import { PrimaryButton, RoundButton } from '../src/components/Buttons';
 import { CrosswordBoard } from '../src/components/CrosswordBoard';
 import { LetterWheel } from '../src/components/LetterWheel';
 import { Display } from '../src/components/Text';
+import { BonusMeter } from '../src/components/BonusMeter';
+import Postcards from '../app/postcards';
+import { gameStore } from '../src/state/gameStore';
+import { reachLevel as reachCurrentLevel } from './helpers';
+import { router, useLocalSearchParams } from 'expo-router';
+import Victory from '../app/victory/[levelId]';
+import Home from '../app/index';
 import { GameplayScreen } from '../src/screens/GameplayScreen';
 import { initialState, transition } from '../src/engine/game';
 import { selectGameplay } from '../src/engine/selectors';
@@ -12,19 +19,30 @@ import {
   cellsSpelling,
   stripFeedback,
 } from '../src/screens/presentEvents';
-import { chapterTone, toMtavruli } from '../src/theme';
+import {
+  COUNTRIES,
+  SCENES,
+  chapterTone,
+  sceneFor,
+  toMtavruli,
+} from '../src/theme';
+import { catalog as journeyCatalog } from '../src/content/catalog';
+import { JourneyScreen } from '../src/screens/JourneyScreen';
 import { catalog, reachLevel, submit, tilesFor } from './legacyHelpers';
 
 // Animation and drawing are verified on the simulator; here they are inert.
 jest.mock('react-native-worklets', () =>
   require('react-native-worklets/lib/module/mock'),
 );
-jest.mock('react-native-reanimated', () =>
-  require('react-native-reanimated/mock'),
-);
+jest.mock('react-native-reanimated', () => ({
+  ...require('react-native-reanimated/mock'),
+  useReducedMotion: () => false,
+}));
 jest.mock('expo-router', () => ({
   router: { canGoBack: () => false, replace: jest.fn(), push: jest.fn() },
   useFocusEffect: jest.fn(),
+  useIsFocused: () => true,
+  useLocalSearchParams: jest.fn(() => ({})),
 }));
 jest.mock(
   'react-native-safe-area-context',
@@ -42,7 +60,10 @@ jest.mock('../src/state/gameStore', () => {
     dispatch: jest.fn(),
   };
   return {
-    gameStore: { getState: () => state },
+    gameStore: {
+      getState: () => state,
+      setState: (next: object) => Object.assign(state, next),
+    },
     useGameStore: (selector: (state: unknown) => unknown) => selector(state),
   };
 });
@@ -50,30 +71,67 @@ jest.mock('@shopify/react-native-skia', () => {
   const builder = {
     moveTo: () => builder,
     lineTo: () => builder,
+    setFillType: () => builder,
     detach: () => ({}),
   };
   const Nothing = () => null;
   return {
+    BlurMask: Nothing,
     Canvas: Nothing,
     Circle: Nothing,
+    FillType: { EvenOdd: 1 },
     Group: Nothing,
     LinearGradient: Nothing,
     Path: Nothing,
     RadialGradient: Nothing,
     Rect: Nothing,
-    Skia: { PathBuilder: { Make: () => builder } },
+    RoundedRect: Nothing,
+    Skia: {
+      PathBuilder: { Make: () => builder, MakeFromPath: () => builder },
+      Path: { MakeFromSVGString: () => ({}) },
+    },
     vec: (x: number, y: number) => ({ x, y }),
   };
 });
 
 const level = catalog.levels[0]!;
 
+test('bonus progress exposes its goal and earned free hints accessibly', async () => {
+  const screen = await render(<BonusMeter progress={9} freeHints={2} />);
+  expect(screen.getByRole('progressbar')).toHaveAccessibilityValue({
+    min: 0,
+    max: 10,
+    now: 9,
+  });
+  expect(screen.getByText('უფასო მინიშნებები: 2')).toBeTruthy();
+  await screen.rerender(<BonusMeter progress={0} freeHints={3} compact />);
+  expect(screen.getByRole('progressbar')).toHaveAccessibilityValue({ now: 0 });
+});
+
+test('album previews the next place and opens only earned postcards', async () => {
+  const before = gameStore.getState().game;
+  try {
+    gameStore.setState({ game: reachCurrentLevel(5) });
+    const screen = await render(<Postcards />);
+    expect(screen.getByText('1/48 ბარათი შეგროვებულია')).toBeTruthy();
+    expect(screen.getByText('შემდეგი: მცხეთა')).toBeTruthy();
+    expect(screen.queryByTestId('open-postcard-mtskheta')).toBeNull();
+    await fireEvent.press(screen.getByTestId('open-postcard-tbilisi'));
+    expect(router.push).toHaveBeenCalledWith({
+      pathname: '/postcards/[chapterId]',
+      params: { chapterId: 'tbilisi' },
+    });
+  } finally {
+    gameStore.setState({ game: before });
+  }
+});
+
 test('gameplay shows the Georgian topic heading above the hidden board', async () => {
   const screen = await render(<GameplayScreen levelId="ka-001" />);
   expect(screen.getByTestId('level-topic')).toHaveTextContent('დასაწყისი');
   expect(screen.getByLabelText('დონე 1')).toBeTruthy();
   expect(screen.queryByText('მზე')).toBeNull();
-  expect(screen.getByLabelText('0/4 სიტყვა · ბონუსი 0')).toBeTruthy();
+  expect(screen.getByLabelText('0/5 სიტყვა · ბონუსი 0')).toBeTruthy();
 });
 
 test('hidden cells expose no answers; committed words render in Georgian', async () => {
@@ -204,4 +262,89 @@ test('tap mode submits unique tile IDs in the order tapped', async () => {
   await fireEvent.press(screen.getByTestId(`tap-tile-${ids[0]}`));
   await fireEvent.press(screen.getByTestId('tap-submit'));
   expect(onSubmit).toHaveBeenCalledWith(ids);
+});
+
+test('journey countries cover every stop once, in travel order', () => {
+  expect(COUNTRIES.flatMap((country) => country.chapterIds)).toEqual(
+    journeyCatalog.chapters.map((chapter) => chapter.id),
+  );
+});
+
+test('every stop shows its own painting, and no two stops share one', () => {
+  const kazbegi = SCENES.find((scene) => scene.id === 'weather')!;
+  expect(sceneFor('kazbegi').image).toBe(kazbegi.image);
+  expect(sceneFor('kazbegi').place).toBe('ყაზბეგი');
+  expect(sceneFor('sighnaghi').place).toBe('სიღნაღი');
+  expect(sceneFor('cappadocia')).toMatchObject({
+    place: 'კაპადოკია',
+    country: 'turkey',
+  });
+  const images = journeyCatalog.chapters.map((chapter) => {
+    const scene = sceneFor(chapter.id);
+    expect(scene.image).toBeDefined();
+    expect(scene.band).toBeDefined();
+    expect(scene.place).toBe(chapter.title);
+    return JSON.stringify(scene.image);
+  });
+  expect(new Set(images).size).toBe(journeyCatalog.chapters.length);
+  // Earned legacy postcards keep their original painting and place.
+  expect(sceneFor('weather')).toBe(kazbegi);
+  // Anything unknown gets a drawn placeholder rather than another place's art.
+  expect(sceneFor('nowhere').image).toBeUndefined();
+});
+
+test('journey path shows progress, the country pill and the whole route', async () => {
+  const before = gameStore.getState().game;
+  try {
+    gameStore.setState({ game: reachCurrentLevel(17) });
+    const screen = await render(<JourneyScreen />);
+    expect(
+      screen.getByLabelText('საქართველო, 3 / 18 ადგილი. მოგზაურობის ნახვა'),
+    ).toBeTruthy();
+    expect(screen.getByLabelText('დონე 1, გავლილია')).toBeTruthy();
+    expect(screen.getByTestId('country-georgia')).toBeTruthy();
+    await fireEvent.press(screen.getByTestId('level-ka-002'));
+    expect(router.push).toHaveBeenCalledWith({
+      pathname: '/game/[levelId]',
+      params: { levelId: 'ka-002' },
+    });
+    await fireEvent.press(screen.getByTestId('path-postcard-tbilisi'));
+    expect(router.push).toHaveBeenCalledWith({
+      pathname: '/postcards/[chapterId]',
+      params: { chapterId: 'tbilisi' },
+    });
+    await fireEvent.press(screen.getByTestId('journey-pill'));
+    expect(screen.getByTestId('journey-sheet')).toBeTruthy();
+    expect(
+      screen.getByLabelText('საქართველო, 3 / 18 ადგილი, შენ აქ ხარ'),
+    ).toBeTruthy();
+    expect(screen.getByTestId('journey-country-turkey')).toBeDisabled();
+  } finally {
+    gameStore.setState({ game: before });
+  }
+});
+
+test('finishing the last stop in a country announces the next country', async () => {
+  const before = gameStore.getState().game;
+  try {
+    gameStore.setState({ game: reachCurrentLevel(90) });
+    jest.mocked(useLocalSearchParams).mockReturnValue({ levelId: 'ka-090' });
+    const screen = await render(<Victory />);
+    expect(screen.getByTestId('victory-new-country')).toHaveTextContent(
+      'ახალი ქვეყანა: თურქეთი!',
+    );
+    jest.mocked(useLocalSearchParams).mockReturnValue({ levelId: 'ka-089' });
+    await screen.rerender(<Victory />);
+    expect(screen.queryByTestId('victory-new-country')).toBeNull();
+    // Mid-stop wins show the animated logo; stop ends show the postcard.
+    expect(screen.getByTestId('victory-logo')).toBeTruthy();
+  } finally {
+    gameStore.setState({ game: before });
+  }
+});
+
+test('home shows the logo and reads the game name once', async () => {
+  const screen = await render(<Home />);
+  expect(screen.getByTestId('home-logo')).toBeTruthy();
+  expect(screen.getByRole('header', { name: 'ასობანა' })).toBeTruthy();
 });

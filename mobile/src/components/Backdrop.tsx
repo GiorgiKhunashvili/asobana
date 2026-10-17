@@ -8,24 +8,77 @@ import {
   vec,
 } from '@shopify/react-native-skia';
 import { memo, useMemo } from 'react';
-import { StyleSheet, useWindowDimensions } from 'react-native';
-import type { Tone } from '../theme';
+import { StyleSheet, useWindowDimensions, View } from 'react-native';
+import { PlaceArt } from './PlaceArt';
+import { palette, type Scene, type Tone } from '../theme';
 
 const CELL = 34;
 const star = (x: number, y: number, s: number) =>
   `M${x - s} ${y - s}h${2 * s}v${2 * s}h${-2 * s}z` +
   `M${x} ${y - s * 1.42}L${x + s * 1.42} ${y}L${x} ${y + s * 1.42}L${x - s * 1.42} ${y}z`;
+const dusk = (alpha: number) => `rgba(${palette.dusk}, ${alpha})`;
 
 /**
- * Enamel ground: a fired gradient, a soft kiln glow where play happens and a
- * faint lattice of gold-wire stars. Static; drawn once per size and tone.
+ * Chapter background. Normally the chapter's painted Georgian scene, with a soft
+ * dusk gradient under the top bar and above the bottom controls; `veil` darkens
+ * the whole painting for screens that are mostly text and cards.
  */
 export const Backdrop = memo(function Backdrop({
   tone,
   glowY = 0.62,
+  veil = 0,
 }: {
   readonly tone: Tone;
   readonly glowY?: number;
+  readonly veil?: number;
+}) {
+  return tone.scene ? (
+    <SceneBackdrop scene={tone.scene} veil={veil} />
+  ) : (
+    <EnamelBackdrop tone={tone} glowY={glowY} />
+  );
+});
+
+function SceneBackdrop({ scene, veil }: { scene: Scene; veil: number }) {
+  const { width, height } = useWindowDimensions();
+  return (
+    <View
+      pointerEvents="none"
+      accessibilityElementsHidden
+      importantForAccessibility="no-hide-descendants"
+      style={[StyleSheet.absoluteFill, { backgroundColor: scene.sky }]}
+    >
+      <PlaceArt scene={scene} variant="full" size={{ width, height }} />
+      <Canvas style={StyleSheet.absoluteFill}>
+        {veil > 0 && (
+          <Rect x={0} y={0} width={width} height={height} color={dusk(veil)} />
+        )}
+        <Rect x={0} y={0} width={width} height={height * 0.24}>
+          <LinearGradient
+            start={vec(0, 0)}
+            end={vec(0, height * 0.24)}
+            colors={[dusk(0.5), dusk(0)]}
+          />
+        </Rect>
+        <Rect x={0} y={height * 0.72} width={width} height={height * 0.28}>
+          <LinearGradient
+            start={vec(0, height * 0.72)}
+            end={vec(0, height)}
+            colors={[dusk(0), dusk(0.32)]}
+          />
+        </Rect>
+      </Canvas>
+    </View>
+  );
+}
+
+/** Enamel ground: gradient, kiln glow and a faint lattice of gold-wire stars. */
+export function EnamelBackdrop({
+  tone,
+  glowY,
+}: {
+  tone: Pick<Tone, 'ground' | 'glow'>;
+  glowY: number;
 }) {
   const { width, height } = useWindowDimensions();
   const lattice = useMemo(() => {
@@ -73,4 +126,4 @@ export const Backdrop = memo(function Backdrop({
       <Path path={lattice.stars} color="rgba(227, 182, 90, 0.11)" />
     </Canvas>
   );
-});
+}

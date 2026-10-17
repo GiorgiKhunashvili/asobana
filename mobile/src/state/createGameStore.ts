@@ -4,6 +4,7 @@ import type {
   GameEvent,
   GameState,
   LevelPack,
+  Transition,
 } from '../models/types';
 import { initialState, transition } from '../engine/game';
 import type { GameRepository } from '../storage/repository';
@@ -19,6 +20,8 @@ export interface GameStoreState {
   readonly eventBatch: EventBatch;
   initialize(): Promise<void>;
   dispatch(command: GameCommand): Promise<void>;
+  /** Start over at the first level with starting coins; sound/haptics settings stay. */
+  reset(): Promise<void>;
   clearError(): void;
 }
 export function createGameStore(
@@ -31,36 +34,9 @@ export function createGameStore(
   let initialization: Promise<void> | null = null;
   let queue: Promise<void> = Promise.resolve();
   let pending = 0;
-  const store = createStore<GameStoreState>((set, get) => ({
-    status: 'loading',
-    game: null,
-    busy: false,
-    error: null,
-    eventBatch: { sequence: 0, events: [] },
-    initialize() {
-      if (get().status === 'ready') return Promise.resolve();
-      if (initialization) return initialization;
-      set({ status: 'loading', error: null });
-      initialization = (async () => {
-        try {
-          repository = await getRepository();
-          const saved = await repository.load();
-          const game = saved?.state ?? initialState(pack);
-          revision = saved?.revision ?? (await repository.save(game, 0));
-          set({ game, status: 'ready' });
-        } catch (error) {
-          repository = null;
-          set({
-            status: 'error',
-            error: error instanceof Error ? error.message : String(error),
-          });
-        } finally {
-          initialization = null;
-        }
-      })();
-      return initialization;
-    },
-    dispatch(command) {
+  const store = createStore<GameStoreState>((set, get) => {
+    /** Every write is queued, committed to SQLite, and only then published. */
+    function commit(apply: (game: GameState) => Transition): Promise<void> {
       if (get().status !== 'ready')
         return Promise.reject(new Error('Game is not ready'));
       pending++;
@@ -69,7 +45,7 @@ export function createGameStore(
         try {
           const game = get().game;
           if (!repository || !game) throw new Error('Game is not ready');
-          const result = transition(game, command, pack);
+          const result = apply(game);
           if (result.state !== game)
             revision = await repository.save(result.state, revision);
           sequence++;
@@ -91,10 +67,49 @@ export function createGameStore(
       // Rejections reach the caller but never poison the queue for later commands.
       queue = work.catch(() => undefined);
       return work;
-    },
-    clearError() {
-      set({ error: null });
-    },
-  }));
+    }
+    return {
+      status: 'loading',
+      game: null,
+      busy: false,
+      error: null,
+      eventBatch: { sequence: 0, events: [] },
+      initialize() {
+        if (get().status === 'ready') return Promise.resolve();
+        if (initialization) return initialization;
+        set({ status: 'loading', error: null });
+        initialization = (async () => {
+          try {
+            repository = await getRepository();
+            const saved = await repository.load();
+            const game = saved?.state ?? initialState(pack);
+            revision = saved?.revision ?? (await repository.save(game, 0));
+            set({ game, status: 'ready' });
+          } catch (error) {
+            repository = null;
+            set({
+              status: 'error',
+              error: error instanceof Error ? error.message : String(error),
+            });
+          } finally {
+            initialization = null;
+          }
+        })();
+        return initialization;
+      },
+      dispatch(command) {
+        return commit((game) => transition(game, command, pack));
+      },
+      reset() {
+        return commit((game) => ({
+          state: { ...initialState(pack), settings: game.settings },
+          events: [],
+        }));
+      },
+      clearError() {
+        set({ error: null });
+      },
+    };
+  });
   return store;
 }

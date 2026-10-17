@@ -1,4 +1,4 @@
-name: GeoWords checks
+name: Asobana checks
 on:
   push:
   pull_request:

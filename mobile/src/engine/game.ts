@@ -11,6 +11,7 @@ import type {
 } from '../models/types';
 import { solutionCells, wordCells } from './grid';
 import { isGeorgianWord, normalizeWord } from './georgian';
+import { BONUS_GOAL, freeCellHints } from './bonusRewards';
 export const DEFAULT_ECONOMY: Economy = Object.freeze({
   initialCoins: 100,
   completionReward: 25,
@@ -39,6 +40,7 @@ export function initialState(
     contentRevision: pack.revision,
     currentLevelId: first.id,
     coins: economy.initialCoins,
+    bonusRewards: { totalFound: 0, hintsSpent: 0 },
     progress: {},
     settings: { sound: true, haptics: true },
   };
@@ -186,20 +188,35 @@ export function transition(
         [],
         economy,
       );
-    if (level.bonusWords.includes(word))
+    if (level.bonusWords.includes(word)) {
+      const totalFound = state.bonusRewards.totalFound + 1;
       return finish(
-        { ...state, coins: state.coins + economy.bonusReward },
+        {
+          ...state,
+          coins: state.coins + economy.bonusReward,
+          bonusRewards: { ...state.bonusRewards, totalFound },
+        },
         { ...progress, bonusWords: [...progress.bonusWords, word] },
         level,
         pack,
-        [{ type: 'bonus-found', word, reward: economy.bonusReward }],
+        [
+          { type: 'bonus-found', word, reward: economy.bonusReward },
+          ...(totalFound % BONUS_GOAL === 0
+            ? [{ type: 'bonus-hint-earned' as const }]
+            : []),
+        ],
         economy,
       );
+    }
     return reject(state, 'invalid-word', word);
   }
   if (progress.completed) return reject(state, 'level-complete');
-  const cost =
-    command.kind === 'cell' ? economy.cellHintCost : economy.wordHintCost;
+  const useFreeHint = command.kind === 'cell' && freeCellHints(state) > 0;
+  const cost = useFreeHint
+    ? 0
+    : command.kind === 'cell'
+      ? economy.cellHintCost
+      : economy.wordHintCost;
   if (
     !(command.kind === 'cell' ? level.hints.allowCell : level.hints.allowWord)
   )
@@ -224,7 +241,14 @@ export function transition(
           hintsUsed: progress.hintsUsed + 1,
         };
   return finish(
-    { ...state, coins: state.coins - cost },
+    {
+      ...state,
+      coins: state.coins - cost,
+      bonusRewards: {
+        ...state.bonusRewards,
+        hintsSpent: state.bonusRewards.hintsSpent + (useFreeHint ? 1 : 0),
+      },
+    },
     updated,
     level,
     pack,

@@ -1,4 +1,5 @@
 import { catalog, tilesFor } from './legacyHelpers';
+import { initialState } from '../src/engine/game';
 import { createGameStore } from '../src/state/createGameStore';
 import {
   createSqliteRepository,
@@ -87,6 +88,68 @@ test('initialization failure preserves data and permits retry', async () => {
     getRepository.mockResolvedValue(createSqliteRepository(db, catalog));
     await store.getState().initialize();
     expect(store.getState().status).toBe('ready');
+  } finally {
+    db.close();
+  }
+});
+test('reset waits for queued commands, keeps preferences and survives restart', async () => {
+  const db = new TestSqlite();
+  await migrateDatabase(db);
+  const repository = createSqliteRepository(db, catalog);
+  const store = createGameStore(catalog, async () => repository);
+  try {
+    await store.getState().initialize();
+    const level = catalog.levels[0]!;
+    const settings = { sound: false, haptics: true };
+    const queued = [
+      store.getState().dispatch({ type: 'settings', settings }),
+      store.getState().dispatch({
+        type: 'submit',
+        levelId: level.id,
+        tileIds: tilesFor(level, 'მზე'),
+      }),
+      store.getState().dispatch({
+        type: 'submit',
+        levelId: level.id,
+        tileIds: tilesFor(level, 'მე'),
+      }),
+    ];
+    await Promise.all([...queued, store.getState().reset()]);
+    expect(store.getState().game).toEqual({
+      ...initialState(catalog),
+      settings,
+    });
+    expect(store.getState().eventBatch.events).toEqual([]);
+    const restored = createGameStore(catalog, async () => repository);
+    await restored.getState().initialize();
+    expect(restored.getState().game).toEqual(store.getState().game);
+  } finally {
+    db.close();
+  }
+});
+test('a failed reset keeps committed progress', async () => {
+  const db = new TestSqlite();
+  await migrateDatabase(db);
+  const repository = createSqliteRepository(db, catalog);
+  const store = createGameStore(catalog, async () => repository);
+  try {
+    await store.getState().initialize();
+    const level = catalog.levels[0]!;
+    await store.getState().dispatch({
+      type: 'submit',
+      levelId: level.id,
+      tileIds: tilesFor(level, 'მზე'),
+    });
+    const before = store.getState().game;
+    jest
+      .spyOn(repository, 'save')
+      .mockRejectedValueOnce(new Error('Disk full'));
+    await expect(store.getState().reset()).rejects.toThrow('Disk full');
+    expect(store.getState().game).toBe(before);
+    expect(store.getState().error).toBe('Disk full');
+    const restored = createGameStore(catalog, async () => repository);
+    await restored.getState().initialize();
+    expect(restored.getState().game).toEqual(before);
   } finally {
     db.close();
   }

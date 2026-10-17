@@ -1,6 +1,6 @@
 # Expanded campaign — revision 4
 
-Historical reference: the active campaign is now [revision 5](DISCOVERY_CONTENT.md).
+Historical reference: the active campaign is now [revision 6](DISCOVERY_CONTENT.md).
 
 The 50-level campaign now has five levels per topic, broader vocabulary and a
 gentle-to-harder sequence within each topic. A new topic starts with an introductory

@@ -2,6 +2,7 @@ import { Canvas, Circle, Group, Path } from '@shopify/react-native-skia';
 import { useEffect, useRef } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 import Animated, {
+  interpolateColor,
   useAnimatedStyle,
   useSharedValue,
   withSequence,
@@ -80,7 +81,11 @@ export function CoinBadge({
   }, [coins, pulse, glow]);
   const animated = useAnimatedStyle(() => ({
     transform: [{ scale: pulse.get() }],
-    backgroundColor: `rgba(227, 182, 90, ${0.12 + glow.get() * 0.4})`,
+    backgroundColor: interpolateColor(
+      glow.get(),
+      [0, 1],
+      ['rgba(18, 12, 36, 0.5)', 'rgba(227, 182, 90, 0.6)'],
+    ),
   }));
   const content = (
     <Animated.View style={[styles.badge, animated]}>

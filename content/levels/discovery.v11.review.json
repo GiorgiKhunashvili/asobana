@@ -1,0 +1,7 @@
+{
+  "revision": 11,
+  "draftSha256": "aec2733ccd2f8f3c3fcf6ce14c05d2b73c1daf32d5234611d95f48125d0d6cb7",
+  "reviewedAt": "2026-10-16",
+  "reviewer": "Codex assistant word-sense, layout and progression review",
+  "scope": "50 rebuilt boards, 250 unique required spellings. Existing reference-checked dictionary senses; ordinary noun/name homographs retained per owner clarification. No policy-excluded pronouns, verbs/action forms or name-only entries in targets or bonuses. Target curation favors familiar nouns, adjectives and numbers, with no claim of native-speaker or corpus-frequency validation. Explicit 5–6-letter progression checks, connected wide layouts, minimum 36-point SE cells, chapter challenge/recovery waves and maximum 10-point upward transitions. Revision 11 reduces the wheel-size and unfamiliarity weights in editorial difficulty estimates; historical scores remain unchanged. Optional bonus spellings may recur. No TestFlight upload."
+}

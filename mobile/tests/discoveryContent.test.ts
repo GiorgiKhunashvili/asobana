@@ -1,28 +1,31 @@
-import dictionary from '../../content/dictionaries/discovery-ka.json';
-import oldDictionary from '../../content/dictionaries/expanded-ka.json';
-import manifest from '../../content/levels/discovery.v5.recipes.json';
+import dictionary from '../../content/dictionaries/discovery-v9-ka.json';
+import oldDictionary from '../../content/dictionaries/discovery-v8-ka.json';
+import manifest from '../../content/levels/discovery.v13.recipes.json';
 import { catalog, vocabulary } from '../src/content/catalog';
-import { validateDiscovery } from '../src/content/discovery';
+import { validateWide as validateDiscovery } from '../src/content/wide';
 import { canFormWord } from '../src/engine/georgian';
 import { initialState, isUnlocked, transition } from '../src/engine/game';
 import { selectGameplay } from '../src/engine/selectors';
 import { parseSnapshot } from '../src/storage/snapshot';
 import { reachLevel, submit } from './helpers';
 
-test('all 50 reviewed boards follow the small-wheel progression and contain useful extras', () => {
-  expect(catalog.revision).toBe(5);
+test('all 240 reviewed boards follow the small-wheel progression and contain useful extras', () => {
+  expect(catalog.revision).toBe(13);
   expect(() =>
     validateDiscovery(catalog, vocabulary, manifest.familiarity),
   ).not.toThrow();
-  const targets = new Set<string>();
+  const targets = new Map<string, number>();
   for (const [index, level] of catalog.levels.entries()) {
     expect(level.reviewStatus).toBe('prototype-reference-checked');
-    expect(level.tiles.length).toBeLessThanOrEqual(6);
-    if (index < 20) expect(level.tiles).toHaveLength(5);
-    if (index >= 30 && index < 40) expect(level.tiles).toHaveLength(6);
-    if (index >= 10) expect(level.words).toHaveLength(5);
+    expect(level.tiles.length).toBeLessThanOrEqual(index < 25 ? 6 : 7);
+    if (index < 5) expect(level.tiles).toHaveLength(5);
+    expect(level.words).toHaveLength(5);
     const answers = level.words.map((word) => word.answer);
-    answers.forEach((answer) => targets.add(answer));
+    answers.forEach((answer) => {
+      if (targets.has(answer))
+        expect(index - targets.get(answer)!).toBeGreaterThanOrEqual(75);
+      targets.set(answer, index);
+    });
     const available = level.tiles.map((tile) => tile.letter);
     expect(level.bonusWords).toEqual(
       [...vocabulary]
@@ -31,9 +34,8 @@ test('all 50 reviewed boards follow the small-wheel progression and contain usef
         )
         .sort(),
     );
-    expect(level.bonusWords.length).toBeGreaterThan(0);
   }
-  expect(targets.size).toBeGreaterThanOrEqual(140);
+  expect(targets.size).toBeGreaterThanOrEqual(375);
   // The first six-letter board introduces wheel size with familiar words.
   expect(
     catalog.levels.find((level) => level.tiles.length === 6)!.difficulty.tier,
@@ -77,17 +79,25 @@ test('all targets and bonuses work through the engine, reward once, unlock and r
 });
 
 test('a future target is accepted now as a bonus without solving the crossword', () => {
-  const level = catalog.levels[1]!;
-  expect(
+  const index = catalog.levels.findIndex((level, i) =>
+    level.bonusWords.some((bonus) =>
+      catalog.levels
+        .slice(i + 1)
+        .some((next) => next.words.some((word) => word.answer === bonus)),
+    ),
+  );
+  expect(index).toBeGreaterThanOrEqual(0);
+  const level = catalog.levels[index]!;
+  const bonus = level.bonusWords.find((candidate) =>
     catalog.levels
-      .slice(2)
-      .some((next) => next.words.some((word) => word.answer === 'თემა')),
-  ).toBe(true);
-  const state = reachLevel(1);
-  const result = submit(state, level, 'თემა');
+      .slice(index + 1)
+      .some((next) => next.words.some((word) => word.answer === candidate)),
+  )!;
+  const state = reachLevel(index);
+  const result = submit(state, level, bonus);
   expect(result.state.coins).toBe(state.coins + 3);
   expect(result.state.progress[level.id]?.solvedWordIds).toEqual([]);
-  expect(submit(result.state, level, 'თემა').state).toBe(result.state);
+  expect(submit(result.state, level, bonus).state).toBe(result.state);
 });
 
 test('stage regressions, missing bonus recognition and duplicate wheels fail release validation', () => {
@@ -105,11 +115,16 @@ test('stage regressions, missing bonus recognition and duplicate wheels fail rel
       manifest.familiarity,
     ),
   ).toThrow('stage');
+  const withBonus = catalog.levels.find(
+    (level) => level.bonusWords.length > 0,
+  )!;
   expect(() =>
     validateDiscovery(
       {
         ...catalog,
-        levels: [{ ...first, bonusWords: [] }, ...catalog.levels.slice(1)],
+        levels: catalog.levels.map((level) =>
+          level.id === withBonus.id ? { ...level, bonusWords: [] } : level,
+        ),
       },
       vocabulary,
       manifest.familiarity,
@@ -128,7 +143,7 @@ test('stage regressions, missing bonus recognition and duplicate wheels fail rel
       vocabulary,
       manifest.familiarity,
     ),
-  ).toThrow('Repeated');
+  ).toThrow('75-level gap');
   expect(() => validateDiscovery(catalog, vocabulary, {})).toThrow('familiar');
 });
 
@@ -138,7 +153,7 @@ test('reference expansion preserves all historical entries and exact source attr
   );
   for (const entry of oldDictionary.entries)
     expect(entries.get(entry.word)).toEqual(entry);
-  expect(dictionary.entries).toHaveLength(421);
+  expect(dictionary.entries.length).toBeGreaterThan(547);
   for (const entry of dictionary.entries) {
     expect(entry.sourceUrl).toContain(`oldid=${entry.sourceRevision}`);
     expect(entry.sourceRevision).toBeGreaterThan(0);

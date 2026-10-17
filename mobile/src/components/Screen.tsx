@@ -3,7 +3,7 @@ import { useMemo, type PropsWithChildren, type ReactNode } from 'react';
 import { ScrollView, StyleSheet, View, type ViewStyle } from 'react-native';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { palette, space, type Tone } from '../theme';
+import { onScene, palette, space, type Tone } from '../theme';
 import { Backdrop } from './Backdrop';
 import { RoundButton } from './Buttons';
 import { GestureScrollContext } from './GestureScrollContext';
@@ -19,16 +19,23 @@ export function Screen({
   children,
   contentStyle,
   glowY,
+  veil = 0,
 }: PropsWithChildren<{
   readonly tone: Tone;
   readonly header?: ReactNode;
   readonly contentStyle?: ViewStyle;
   readonly glowY?: number;
+  /** Darkens the painting for screens that are mostly text and cards (0–1). */
+  readonly veil?: number;
 }>) {
   const scrollGesture = useMemo(() => Gesture.Native(), []);
   return (
-    <View style={[styles.root, { backgroundColor: tone.ground[1] }]}>
-      <Backdrop tone={tone} {...(glowY === undefined ? {} : { glowY })} />
+    <View style={[styles.root, { backgroundColor: tone.scene.sky }]}>
+      <Backdrop
+        tone={tone}
+        veil={veil}
+        {...(glowY === undefined ? {} : { glowY })}
+      />
       <SafeAreaView
         style={styles.root}
         edges={['top', 'left', 'right', 'bottom']}
@@ -81,12 +88,17 @@ export function TopBar({
       </View>
       <View style={styles.center} accessibilityRole="header">
         {eyebrow && (
-          <Display variant="eyebrow" color={palette.gold} numberOfLines={1}>
+          <Display
+            variant="eyebrow"
+            color={palette.goldLight}
+            numberOfLines={1}
+            style={onScene}
+          >
             {eyebrow}
           </Display>
         )}
         {title && (
-          <Display variant="heading" numberOfLines={1}>
+          <Display variant="heading" numberOfLines={1} style={onScene}>
             {title}
           </Display>
         )}

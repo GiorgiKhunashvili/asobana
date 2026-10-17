@@ -1,12 +1,139 @@
 # Codex status
 
-Updated: 2026-10-15 (Asia/Tbilisi). **Milestone A prototype implemented.**
+Updated: 2026-10-17 (Asia/Tbilisi). **Milestone A prototype implemented.**
 Core gameplay and save/resume are verified in automated tests and native emulator
 flows. This is not a production-store release or a hardware performance sign-off.
 
-## Latest: 50-level discovery rebuild
+## Latest: revision 13 journey campaign (local; not uploaded)
 
-- Active revision 5: all 50 levels rebuilt, 5 physical tiles through level 20,
+- Builds 240 levels in the exact 48 journey stops, five answers per board. The
+  owner's 75-level repeat gap replaces campaign-wide uniqueness: 1,200 answer
+  slots use 589 distinct spellings, with the shortest actual gap exactly 75.
+- Expands the everyday target bank from 778 to 869: 95 approvals, minus four
+  newly excluded targets. Adds 79 reference entries and promotes 16 existing
+  dictionary words. Records 24 held candidates and individual source decisions.
+- Excludes six reviewed barbarisms and owner-excluded `რული` from targets,
+  variants and bonuses. Historical provenance and packs remain unchanged.
+- Includes 459 five-letter and 74 six-letter answer slots; longer answers start
+  at levels 3 and 18. Keeps original physical gates, 5/6/7-tile progression,
+  chapter challenge/recovery waves and a maximum ten-point upward score change.
+- Saves from revisions 1–12 retain earned progress and rewards. Original earned
+  postcards persist separately from the 48 current cards, including SQLite
+  restart; finishing the previous 50 levels unlocks level 51.
+- Validation: root check, 172 Jest / 84 Pytest tests, all 240 engine solves,
+  TypeScript, ESLint, Prettier, Ruff, Mypy and iOS export pass. No new native-device
+  playtest or TestFlight upload.
+- Claude's map, paintings and presentation integration remain pending. Existing
+  presentation still uses the historical art registry; see the
+  [handoff contract](INTEGRATION_CONTRACT.md#revision-13-journey-content-handoff).
+- [Full vocabulary review, sources and all 240 boards](VOCABULARY_REVIEW_V13.md).
+
+## Historical: revision 12 everyday-word review (TestFlight build 9 available)
+
+- Reviews every one of the previous 250 required answers. Moves 88 questionable
+  required words to bonus-only eligibility; reauthors boards with 250 unique
+  approved answers, 74 five-letter and 21 six-letter words.
+- Enforces a separate everyday-required allowlist in Python and TypeScript,
+  including accepted variants. Rare words remain optional bonuses; grammar and
+  name-only exclusions remain. All dictionary entries retain their provenance.
+- Keeps five tiles for levels 1–5 and six for 6–25; later levels use seven tiles
+  to fit everyday combinations. Target words remain at most six letters.
+- Migrates revisions 1–11 with rewards/progress intact. 161 Jest / 80 Pytest tests,
+  50 engine solves, static checks and iOS export pass. No new native device run.
+- Version **0.1.0 (9)** shipped to TestFlight on 2026-10-16; Apple confirms
+  **VALID / IN_BETA_TESTING**. See [release details](TESTFLIGHT.md).
+- [Full word-by-word review](VOCABULARY_REVIEW_V12.md).
+
+## Historical: revision 11 longer-word campaign (local; not uploaded)
+
+- Rebuilds all 50 level recipes with 250 unique answers, including 59 five-letter
+  and 19 six-letter words. Longer words begin at levels 3 and 18 respectively;
+  every level from 26 has at least two. Existing grammar/name policy remains.
+- Enforces actual word-length progression alongside connected, readable layouts
+  and chapter challenge/recovery waves; keeps historical packs immutable.
+- Migrates revisions 1–10, including current TestFlight level-25 saves, with
+  completion, solved credits, hints, coins, postcards and bonus rewards intact.
+- Validation: 154 Jest / 78 Pytest tests, all 50 engine solves, TypeScript,
+  ESLint, Prettier, Ruff, Mypy and iOS export. No new native run or TestFlight upload.
+- [Campaign notes](DISCOVERY_CONTENT.md) and [level/sense review](LEVELS_V11.md).
+
+## Historical: revision 10 pacing, postcards and bonus rewards
+
+- Reorders all 50 reviewed boards into challenge/recovery chapter waves while
+  preserving all 250 unique required answers and the 1,202-word playable pool.
+  Largest estimated upward difficulty jump falls from 39 to 7 points.
+- Adds an offline destination postcard album using all ten existing paintings,
+  chapter-completion rewards, next-destination previews and full-card views.
+- Every ten bonus finds earns a persistent free letter hint, spent before coins.
+  Existing per-word coins remain. Old saves receive credit for recorded bonuses;
+  all prior content revisions migrate with progress and paid hints preserved.
+- Validation: 148 Jest tests, 76 Pytest tests, all 50 engine solves, TypeScript,
+  ESLint, Prettier, Ruff, strict Mypy and iOS export pass.
+- Isolated iPhone 17 native flow passes bonus reward/consumption, chapter
+  postcard unlock, full-card navigation and album collection.
+- Shipped to TestFlight as **0.1.0 (8)** on 2026-10-16. Apple confirms
+  **VALID / IN_BETA_TESTING**. See [release details](TESTFLIGHT.md).
+
+## Historical: revision 9 expands ordinary vocabulary and excludes name-only entries
+
+- Adds 686 reference-checked noun/adjective senses: 1,233 reference entries,
+  1,202 playable words. Historical entries are preserved with exact source links.
+- Blocks known name-only spellings while retaining ordinary meanings of name
+  homographs, per owner clarification. Pronouns, finite verbs and seven verbal
+  action forms are excluded from active targets, variants and bonuses.
+- Refreshes eight boards with 23 new required spellings; all 250 required answers
+  across 50 boards remain unique. All eligible formable bonuses remain accepted.
+- Preserves revisions 1–8 and migrates saved progress, coins and paid hints to 9.
+- Validation: 137 Jest tests, 75 Pytest tests, TypeScript, ESLint, Prettier, Ruff,
+  strict Mypy, all 50 engine solves and iOS bundle export pass.
+- Source change only; no TestFlight build/upload for revision 9.
+
+## Historical: revision 8 removes conjugated verbs and repeated required answers
+
+- Adds 126 individually reference-checked noun/adjective/adverb senses, preserving
+  the original 421 entries: 547 total, 523 eligible after category exclusions.
+- Rebuilds 50 boards with five answers each and **250 unique required spellings**.
+  Five/six tile wheels and wide phone layouts remain; optional bonuses continue
+  to recognize all eligible formable words.
+- Excludes seven conjugated verb forms, including `იდო` and `არის`, from all
+  answers, accepted variants and bonuses. Pronoun exclusions remain.
+- Preserves historical revisions 1–7 and migrates saves with earned credits intact.
+- Validation: 131 Jest tests, 73 Pytest tests, TypeScript, ESLint, Prettier, Ruff,
+  strict Mypy and all 50 engine solves pass. iOS bundle export succeeds.
+- Source change only; no new TestFlight build/upload for revision 8.
+
+## Historical: revision 7 excludes pronouns
+
+- Excludes pronouns from active targets, accepted variants and bonus words using
+  the shared `content/dictionaries/word-policy.json`; 404 eligible dictionary words.
+- Keeps 50 levels and 252 targets (150 distinct). Fourteen replacement layouts,
+  36 unchanged layouts; existing wheel sizes, identities and repetition limits.
+- Historical revisions 1–6 remain immutable and migrate to 7 with earned coins,
+  completed boards, solved-word credits and paid hints preserved.
+- Shipped to TestFlight as 0.1.0 (7).
+
+## Latest: revision 6 wide crossword campaign
+
+- All 50 boards use six or seven columns, connected crossings and tight bounds;
+  target count is five or six, with zero two-letter targets. 252 answer slots,
+  153 distinct targets and 154 bonus opportunities from the unchanged dictionary.
+- All boards reach 100% iPhone 17 / Pro Max width in the supplied continuous model;
+  unchanged renderer rounding gives 98.94% on iPhone 17. Minimum SE cell is 41 pt.
+- Revisions 1–5 upgrade to 6 while retaining coins, completion and partial/hint
+  credits. IDs/order stay stable. Digest-bound explicit promotion reproduces the
+  reviewed pack byte-for-byte; ordinary generation still exports drafts.
+- `npm run check` passes: 116 Jest tests / 14 suites, all 50 engine solves and
+  TypeScript/ESLint/Prettier. 67 Pytest tests, Ruff and strict Mypy pass.
+- Claude-owned components/screens/theme/app files remain unchanged from the start
+  of this rebuild. Existing user changes remain in the working tree.
+- Native screenshot evidence and the 12 stale historical Maestro flows are recorded
+  in [mobile/e2e/README.md](../mobile/e2e/README.md). No new Android-native run.
+- No new TestFlight build/upload. Full comparison, constraints, recipes and device
+  projections: [DISCOVERY_CONTENT.md](DISCOVERY_CONTENT.md).
+
+## Historical: revision 5 discovery rebuild
+
+- Revision 5: all 50 levels rebuilt, 5 physical tiles through level 20,
   gradual 5–6-tile stages after that, and no seven/eight-tile wheels.
 - Four introductory boards have four answers; the other 46 have five. Mixed
   vocabulary provides 246 answer slots, 151 distinct targets, 50 distinct wheels,

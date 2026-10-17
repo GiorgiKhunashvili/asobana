@@ -1,11 +1,9 @@
 import {
+  BlurMask,
   Canvas,
   Circle,
-  Group,
   Path,
-  RadialGradient,
   Skia,
-  vec,
 } from '@shopify/react-native-skia';
 import { useCallback, useMemo, useState, type ReactNode } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
@@ -19,45 +17,50 @@ import Animated, {
   type SharedValue,
 } from 'react-native-reanimated';
 import type { WheelSelection, WheelTile } from '../engine/wheel';
-import type { LetterTile } from '../models/types';
-import {
-  chapterTone,
-  fonts,
-  letterLift,
-  motion,
-  palette,
-  type Tone,
-} from '../theme';
+import { fonts, letterLift, motion, palette, type Tone } from '../theme';
 import { RoundButton } from './Buttons';
-import { Icon, STAR8 } from './Icon';
+import { Icon } from './Icon';
 import { useLetterWheel, type LetterWheelProps } from './useLetterWheel';
 import { WordStrip, type StripFeedback } from './WordStrip';
 
 export interface LetterWheelViewProps extends LetterWheelProps {
-  /** Enamel ground of the current chapter; defaults to the first chapter's. */
+  /** Kept for API compatibility; the light wheel reads the same on every ground. */
   readonly tone?: Tone;
   /** Width of the whole control area; the disc is `size` and sits centered. */
   readonly width?: number;
   readonly feedback?: StripFeedback | null;
   readonly idleHint?: string | null;
-  /** Controls for the free corners left of the disc (e.g. hints). */
+  /** Found-word colour for the strip; usually the chapter scene's accent. */
+  readonly accent?: string;
+  /** Controls beside the disc on the left (e.g. hints). */
   readonly leading?: { readonly top?: ReactNode; readonly bottom?: ReactNode };
 }
 
-const SELECTED_SCALE = 1.13;
+/** Wheel diameter for a screen: about two thirds of its width, never so small
+ * that the adapter's touch circles drop below 44 pt (radius = 9% of size). */
+export function wheelSize(content: number, width: number, height: number) {
+  return Math.round(
+    Math.max(245, Math.min(300, content * 0.7, width * 0.66, height * 0.31)),
+  );
+}
+
+const SELECTED_SCALE = 1.06;
+/** The selection disc is drawn this much larger than the touch circle. */
+const HALO = 4;
+const HUB = 52;
 const shuffleTransition = LinearTransition.springify()
   .damping(17)
   .stiffness(170);
 
 /**
- * Cloisonné letter wheel. Gold wire partitions run from the center to each
- * letter; tracing draws a molten gold wire between letters. Input recognition
- * is the Codex-owned `useLetterWheel` adapter; only appearance lives here.
+ * Letter wheel: an ivory enamel medallion with large ink letters, the clearest
+ * thing on the screen. Tracing draws a pomegranate cord between chosen letters.
+ * Input recognition is the Codex-owned `useLetterWheel` adapter; only
+ * appearance lives here.
  */
 export function LetterWheel(props: LetterWheelViewProps) {
   const { tiles, size, leading } = props;
-  const tone = props.tone ?? chapterTone(null);
-  // Room beside the disc for the corner controls.
+  // Room beside the disc for the side controls.
   const width = props.width ?? size + 120;
   const disabled = Boolean(props.disabled);
   const [tapMode, setTapMode] = useState(false);
@@ -70,8 +73,11 @@ export function LetterWheel(props: LetterWheelViewProps) {
     ...(props.onTileEntered ? { onTileEntered: props.onTileEntered } : {}),
   });
   const { selection, pointer, layout } = wheel;
+  const fontSize = Math.round(size * 0.15);
+  // One calm colour per scene for the cord, chosen letters and found cells.
+  const accent = props.accent ?? palette.pomegranate;
 
-  const wire = useDerivedValue(() => {
+  const cord = useDerivedValue(() => {
     const path = Skia.PathBuilder.Make();
     const ids = selection.get().tileIds;
     ids.forEach((id, index) => {
@@ -84,7 +90,7 @@ export function LetterWheel(props: LetterWheelViewProps) {
       path.lineTo(pointer.get().x, pointer.get().y);
     return path.detach();
   }, [layout]);
-  const tapWire = useMemo(() => {
+  const tapCord = useMemo(() => {
     const path = Skia.PathBuilder.Make();
     tapIds.forEach((id, index) => {
       const tile = layout.find((candidate) => candidate.id === id);
@@ -96,20 +102,19 @@ export function LetterWheel(props: LetterWheelViewProps) {
   }, [tapIds, layout]);
   const tipX = useDerivedValue(() => pointer.get().x);
   const tipY = useDerivedValue(() => pointer.get().y);
-  const tipOpacity = useDerivedValue(() =>
-    selection.get().active ? withTiming(1, { duration: 80 }) : 0,
-  );
+  const tipOpacity = useDerivedValue(() => (selection.get().active ? 1 : 0));
 
+  const { onSubmit, onTileEntered } = props;
   const submitTaps = useCallback(() => {
-    props.onSubmit(tapIds);
+    onSubmit(tapIds);
     setTapIds([]);
-  }, [props, tapIds]);
+  }, [onSubmit, tapIds]);
   const tapLetter = useCallback(
     (id: string) => {
       setTapIds((ids) => (ids.includes(id) ? ids : [...ids, id]));
-      props.onTileEntered?.(id);
+      onTileEntered?.(id);
     },
-    [props],
+    [onTileEntered],
   );
   const letters = useMemo(
     () =>
@@ -119,7 +124,6 @@ export function LetterWheel(props: LetterWheelViewProps) {
     [tapMode, tapIds, tiles, wheel.preview],
   );
   const center = size / 2;
-  const hub = size * 0.15;
 
   return (
     <View style={{ width, alignItems: 'center' }}>
@@ -129,8 +133,11 @@ export function LetterWheel(props: LetterWheelViewProps) {
         idleHint={
           tapMode ? 'შეეხე ასოებს თანმიმდევრობით' : (props.idleHint ?? null)
         }
-        width={Math.min(width, size + 40)}
-        {...(tapMode ? { onClear: () => setTapIds([]) } : {})}
+        width={width}
+        {...(props.accent ? { accent: props.accent } : {})}
+        {...(tapMode
+          ? { onClear: () => setTapIds([]), onSubmit: submitTaps }
+          : {})}
       />
       <View style={{ width, height: size }}>
         <View
@@ -139,29 +146,13 @@ export function LetterWheel(props: LetterWheelViewProps) {
             { left: (width - size) / 2, width: size, height: size },
           ]}
         >
-          <Plate size={size} tone={tone} layout={layout} hub={hub} />
+          <Plate size={size} />
           <Canvas pointerEvents="none" style={StyleSheet.absoluteFill}>
             <Path
-              path={tapMode ? tapWire : wire}
-              color={palette.goldDeep}
+              path={tapMode ? tapCord : cord}
+              color={accent}
               style="stroke"
-              strokeWidth={11}
-              strokeCap="round"
-              strokeJoin="round"
-            />
-            <Path
-              path={tapMode ? tapWire : wire}
-              color={palette.gold}
-              style="stroke"
-              strokeWidth={6.5}
-              strokeCap="round"
-              strokeJoin="round"
-            />
-            <Path
-              path={tapMode ? tapWire : wire}
-              color={palette.goldLight}
-              style="stroke"
-              strokeWidth={2}
+              strokeWidth={9}
               strokeCap="round"
               strokeJoin="round"
             />
@@ -170,79 +161,44 @@ export function LetterWheel(props: LetterWheelViewProps) {
                 cx={tipX}
                 cy={tipY}
                 r={7}
-                color={palette.goldLight}
+                color={accent}
                 opacity={tipOpacity}
               />
             )}
           </Canvas>
           {tapMode ? (
-            <>
-              {layout.map((tile) => (
-                <TapTile
-                  key={tile.id}
-                  tile={tile}
-                  index={tiles.findIndex((source) => source.id === tile.id)}
-                  selected={tapIds.includes(tile.id)}
-                  disabled={disabled}
-                  onPress={tapLetter}
-                />
-              ))}
-              <Pressable
-                accessibilityRole="button"
-                accessibilityLabel="შემოწმება"
-                accessibilityState={{ disabled: disabled || tapIds.length < 2 }}
-                disabled={disabled || tapIds.length < 2}
-                onPress={submitTaps}
-                testID="tap-submit"
-                style={({ pressed }) => [
-                  styles.submit,
-                  {
-                    left: center - hub,
-                    top: center - hub,
-                    width: hub * 2,
-                    height: hub * 2,
-                    borderRadius: hub,
-                  },
-                  tapIds.length < 2 && styles.submitIdle,
-                  pressed && styles.submitPressed,
-                ]}
-              >
-                <Icon
-                  name="check"
-                  size={hub}
-                  color={tapIds.length < 2 ? palette.textMuted : palette.ivory}
-                  strokeWidth={2.6}
-                />
-              </Pressable>
-            </>
+            layout.map((tile) => (
+              <TapTile
+                key={tile.id}
+                tile={tile}
+                fontSize={fontSize}
+                accent={accent}
+                index={tiles.findIndex((source) => source.id === tile.id)}
+                selected={tapIds.includes(tile.id)}
+                disabled={disabled}
+                onPress={tapLetter}
+              />
+            ))
           ) : (
             <GestureDetector gesture={wheel.gesture}>
               <View testID="letter-wheel" style={StyleSheet.absoluteFill}>
                 {layout.map((tile) => (
-                  <WheelTileView
+                  <WheelLetter
                     key={tile.id}
                     tile={tile}
+                    fontSize={fontSize}
+                    accent={accent}
                     selection={selection}
                   />
                 ))}
               </View>
             </GestureDetector>
           )}
-        </View>
-        {leading?.top && (
-          <View style={[styles.corner, styles.top, styles.left]}>
-            {leading.top}
-          </View>
-        )}
-        {leading?.bottom && (
-          <View style={[styles.corner, styles.bottom, styles.left]}>
-            {leading.bottom}
-          </View>
-        )}
-        <View style={[styles.corner, styles.top, styles.right]}>
-          <RoundButton
-            label="ასოების არევა"
-            icon="shuffle"
+          {/* Above the gesture view, so a tap on the hub never starts a trace. */}
+          <Pressable
+            accessibilityRole="button"
+            accessibilityLabel="ასოების არევა"
+            hitSlop={4}
             testID="shuffle"
             onPress={() => {
               // Ignored while disabled (a save in flight) without dimming the control.
@@ -250,9 +206,26 @@ export function LetterWheel(props: LetterWheelViewProps) {
               setTapIds([]);
               wheel.shuffle();
             }}
-          />
+            style={({ pressed }) => [
+              styles.hub,
+              { left: center - HUB / 2, top: center - HUB / 2 },
+              pressed && styles.hubPressed,
+            ]}
+          >
+            <Icon name="shuffle" size={24} color="rgba(27, 24, 56, 0.6)" />
+          </Pressable>
         </View>
-        <View style={[styles.corner, styles.bottom, styles.right]}>
+        {leading?.top && (
+          <View style={[styles.side, styles.top, styles.left]}>
+            {leading.top}
+          </View>
+        )}
+        {leading?.bottom && (
+          <View style={[styles.side, styles.bottom, styles.left]}>
+            {leading.bottom}
+          </View>
+        )}
+        <View style={[styles.side, styles.bottom, styles.right]}>
           <RoundButton
             label={tapMode ? 'ბორბლით შეყვანა' : 'შეხებით შეყვანა'}
             accessibilityHint={
@@ -275,114 +248,91 @@ export function LetterWheel(props: LetterWheelViewProps) {
   );
 }
 
-/** Static enamel plate: rim wires, partitions to each letter and the hub star. */
-function Plate({
-  size,
-  tone,
-  layout,
-  hub,
-}: {
-  size: number;
-  tone: Tone;
-  layout: readonly WheelTile[];
-  hub: number;
-}) {
-  const c = size / 2;
-  const partitions = useMemo(
-    () =>
-      layout
-        .map((tile) => {
-          const dx = tile.x - c;
-          const dy = tile.y - c;
-          const length = Math.hypot(dx, dy) || 1;
-          const ux = dx / length;
-          const uy = dy / length;
-          const end = length - tile.radius - 5;
-          return `M${c + ux * (hub + 4)} ${c + uy * (hub + 4)}L${c + ux * end} ${c + uy * end}`;
-        })
-        .join(''),
-    [layout, c, hub],
-  );
-  const star = hub * 0.9;
+/** Room around the disc for its soft shadow on the painting. */
+const SHADOW = 16;
+
+/** Static medallion: ivory enamel face, gold rim wire and a fine inner ring. */
+function Plate({ size }: { size: number }) {
+  const c = size / 2 + SHADOW;
   return (
-    <Canvas pointerEvents="none" style={StyleSheet.absoluteFill}>
-      <Circle cx={c} cy={c} r={c - 1}>
-        <RadialGradient
-          c={vec(c, c * 0.8)}
-          r={c * 1.1}
-          colors={[tone.raised, tone.ground[1]]}
-        />
+    <Canvas
+      pointerEvents="none"
+      style={{
+        position: 'absolute',
+        left: -SHADOW,
+        top: -SHADOW,
+        width: size + SHADOW * 2,
+        height: size + SHADOW * 2,
+      }}
+    >
+      <Circle cx={c} cy={c + 4} r={size / 2 - 4} color="rgba(40, 22, 30, 0.35)">
+        <BlurMask blur={10} style="normal" />
       </Circle>
       <Circle
         cx={c}
         cy={c}
-        r={c - 2}
-        color={palette.gold}
-        style="stroke"
-        strokeWidth={2.5}
+        r={size / 2 - 2}
+        color={palette.parchment}
+        opacity={0.9}
       />
       <Circle
         cx={c}
         cy={c}
-        r={c - 8}
-        color="rgba(227, 182, 90, 0.45)"
+        r={size / 2 - 2}
+        color={palette.gold}
         style="stroke"
-        strokeWidth={1}
+        strokeWidth={4}
       />
-      <Path
-        path={partitions}
-        color="rgba(227, 182, 90, 0.42)"
+      <Circle
+        cx={c}
+        cy={c}
+        r={size / 2 - 11}
+        color={palette.parchmentRing}
         style="stroke"
         strokeWidth={1.2}
       />
-      <Circle
-        cx={c}
-        cy={c}
-        r={hub}
-        color="rgba(227, 182, 90, 0.55)"
-        style="stroke"
-        strokeWidth={1.4}
-      />
-      <Group
-        transform={[
-          { translateX: c - star / 2 },
-          { translateY: c - star / 2 },
-          { scale: star / 24 },
-        ]}
-      >
-        <Path path={STAR8} color={palette.gold} opacity={0.75} />
-      </Group>
     </Canvas>
   );
 }
 
-function tileFrame(tile: WheelTile) {
+/** Visual circle around a letter, centred on the adapter's touch circle. */
+function halo(tile: WheelTile) {
+  const r = tile.radius + HALO;
   return {
-    left: tile.x - tile.radius,
-    top: tile.y - tile.radius,
-    width: tile.radius * 2,
-    height: tile.radius * 2,
-    borderRadius: tile.radius,
+    left: tile.x - r,
+    top: tile.y - r,
+    width: r * 2,
+    height: r * 2,
+    borderRadius: r,
   };
 }
 
-function WheelTileView({
+function letterStyle(tile: WheelTile, fontSize: number) {
+  return {
+    fontSize,
+    lineHeight: (tile.radius + HALO) * 2,
+    ...letterLift(fontSize),
+  };
+}
+
+function WheelLetter({
   tile,
+  fontSize,
+  accent,
   selection,
 }: {
   tile: WheelTile;
+  fontSize: number;
+  accent: string;
   selection: SharedValue<WheelSelection>;
 }) {
+  const clear = `${accent}00`;
   const face = useAnimatedStyle(() => {
     const selected = selection.get().tileIds.includes(tile.id);
     return {
-      backgroundColor: withTiming(
-        selected ? palette.pomegranate : palette.ivory,
-        {
-          duration: motion.fast,
-        },
-      ),
-      borderColor: selected ? palette.goldLight : palette.gold,
+      backgroundColor: withTiming(selected ? accent : clear, {
+        duration: motion.fast,
+      }),
       transform: [
         { scale: withSpring(selected ? SELECTED_SCALE : 1, motion.spring) },
       ],
@@ -397,11 +347,11 @@ function WheelTileView({
     <Animated.View
       pointerEvents="none"
       layout={shuffleTransition}
-      style={[styles.tile, tileFrame(tile), face]}
+      style={[styles.letterSlot, halo(tile), face]}
     >
       <Animated.Text
         maxFontSizeMultiplier={1}
-        style={[styles.letter, letterSize(tile), ink]}
+        style={[styles.letter, letterStyle(tile, fontSize), ink]}
       >
         {tile.letter}
       </Animated.Text>
@@ -411,12 +361,16 @@ function WheelTileView({
 
 function TapTile({
   tile,
+  fontSize,
+  accent,
   index,
   selected,
   disabled,
   onPress,
 }: {
-  tile: WheelTile & LetterTile;
+  tile: WheelTile;
+  fontSize: number;
+  accent: string;
   index: number;
   selected: boolean;
   disabled: boolean;
@@ -425,7 +379,7 @@ function TapTile({
   return (
     <Animated.View
       layout={shuffleTransition}
-      style={[styles.tapSlot, tileFrame(tile)]}
+      style={[styles.letterSlot, halo(tile)]}
     >
       <Pressable
         accessibilityRole="button"
@@ -435,17 +389,16 @@ function TapTile({
         onPress={() => onPress(tile.id)}
         testID={`tap-tile-${tile.id}`}
         style={[
-          styles.tile,
           styles.tapFace,
-          { borderRadius: tile.radius },
-          selected && styles.tileSelected,
+          { borderRadius: tile.radius + HALO },
+          selected && [styles.tapSelected, { backgroundColor: accent }],
         ]}
       >
         <Animated.Text
           maxFontSizeMultiplier={1}
           style={[
             styles.letter,
-            letterSize(tile),
+            letterStyle(tile, fontSize),
             { color: selected ? palette.ivory : palette.ink },
           ]}
         >
@@ -456,27 +409,20 @@ function TapTile({
   );
 }
 
-const letterSize = (tile: WheelTile) => {
-  const fontSize = Math.round(tile.radius * 1.08);
-  // The face has a 2pt border on each side; centre within the inner box.
-  return { fontSize, lineHeight: tile.radius * 2 - 4, ...letterLift(fontSize) };
-};
-
 const styles = StyleSheet.create({
   disc: { position: 'absolute', top: 0 },
-  tile: {
+  letterSlot: {
     position: 'absolute',
     alignItems: 'center',
     justifyContent: 'center',
-    borderWidth: 2,
-    borderColor: palette.gold,
-    backgroundColor: palette.ivory,
   },
-  tapSlot: { position: 'absolute' },
-  tapFace: { position: 'relative', flex: 1 },
-  tileSelected: {
-    backgroundColor: palette.pomegranate,
-    borderColor: palette.goldLight,
+  tapFace: {
+    flex: 1,
+    alignSelf: 'stretch',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  tapSelected: {
     transform: [{ scale: SELECTED_SCALE }],
   },
   letter: {
@@ -484,19 +430,21 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     includeFontPadding: false,
   },
-  submit: {
+  hub: {
     position: 'absolute',
+    width: HUB,
+    height: HUB,
+    borderRadius: HUB / 2,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: palette.pomegranate,
-    borderWidth: 2,
-    borderColor: palette.goldLight,
+    backgroundColor: 'rgba(27, 24, 56, 0.05)',
+    borderWidth: 1.2,
+    borderColor: 'rgba(27, 24, 56, 0.16)',
   },
-  submitIdle: { backgroundColor: palette.ink, borderColor: palette.hairline },
-  submitPressed: { transform: [{ scale: 0.92 }] },
-  corner: { position: 'absolute' },
-  top: { top: 2 },
-  bottom: { bottom: 14 },
+  hubPressed: { transform: [{ scale: 0.92 }] },
+  side: { position: 'absolute' },
+  top: { top: 8 },
+  bottom: { bottom: 18 },
   left: { left: 0 },
   right: { right: 0 },
 });

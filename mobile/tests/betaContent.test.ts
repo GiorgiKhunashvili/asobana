@@ -1,4 +1,5 @@
-import { previousCatalogs, vocabulary } from '../src/content/catalog';
+import dictionary from '../../content/dictionaries/beta-ka.json';
+import { previousCatalogs } from '../src/content/catalog';
 import { initialState, isUnlocked, transition } from '../src/engine/game';
 import { selectChapters, selectGameplay } from '../src/engine/selectors';
 import { parseSnapshot } from '../src/storage/snapshot';
@@ -6,6 +7,7 @@ import { tilesFor, submit as send } from './helpers';
 import type { GameState, Level } from '../src/models/types';
 
 const catalog = previousCatalogs[1]!;
+const vocabulary = new Set(dictionary.entries.map((entry) => entry.word));
 const submit = (state: GameState, level: Level, word: string) =>
   send(state, level, word, catalog);
 

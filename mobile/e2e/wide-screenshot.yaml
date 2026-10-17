@@ -1,0 +1,23 @@
+# Revision 6; Expo Go's first-launch instructions must already be dismissed.
+# Seed a validated test save at the desired level on an isolated simulator first.
+# Required environment: LEVEL_NUMBER and SCREENSHOT (relative filename without .png).
+# Metro must serve this checkout at IPv4 localhost:8086.
+appId: host.exp.Exponent
+---
+- openLink: exp://127.0.0.1:8086
+- tapOn:
+    text: 'Open'
+    optional: true
+- extendedWaitUntil:
+    visible:
+      id: home-continue
+    timeout: 60000
+- tapOn:
+    id: home-continue
+- extendedWaitUntil:
+    visible:
+      id: word-progress
+    timeout: 15000
+- assertVisible: 'დონე ${LEVEL_NUMBER}'
+- assertVisible: '0/5 სიტყვა · ბონუსი 0'
+- takeScreenshot: '${SCREENSHOT}'

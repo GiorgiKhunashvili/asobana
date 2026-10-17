@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { AccessibilityInfo, StyleSheet, View } from 'react-native';
+import { AccessibilityInfo, Pressable, StyleSheet, View } from 'react-native';
 import Animated, {
   FadeIn,
   FadeOut,
@@ -11,6 +11,7 @@ import Animated, {
 } from 'react-native-reanimated';
 import { fonts, letterLift, motion, palette } from '../theme';
 import { RoundButton } from './Buttons';
+import { Icon } from './Icon';
 import { Txt } from './Text';
 
 export type StripFeedback =
@@ -21,6 +22,9 @@ export type StripFeedback =
       readonly caption?: string;
     }
   | { readonly key: number; readonly kind: 'notice'; readonly caption: string };
+
+/** Fixed height, so the wheel below never shifts while words come and go. */
+export const STRIP_HEIGHT = 52;
 
 /** How long an outcome stays bright before it settles into a quiet record. */
 const BRIGHT_MS = 1600;
@@ -53,12 +57,18 @@ export function WordStrip({
   idleHint,
   width,
   onClear,
+  onSubmit,
+  accent = palette.turquoise,
 }: {
   readonly letters: readonly string[];
   readonly feedback: StripFeedback | null;
   readonly idleHint: string | null;
   readonly width: number;
+  /** Tap mode: clear and submit buttons flank the letters while some are chosen. */
   readonly onClear?: () => void;
+  readonly onSubmit?: () => void;
+  /** Found-word chips use the board's found-cell colour. */
+  readonly accent?: string;
 }) {
   const [settledKey, setSettledKey] = useState<number | null>(null);
   useEffect(() => {
@@ -76,7 +86,7 @@ export function WordStrip({
       : (idleHint ?? '');
   return (
     <View style={[styles.strip, { width }]}>
-      {/* The clear button stays a sibling so assistive tech can reach it. */}
+      {/* Buttons stay siblings of the labelled preview so assistive tech can reach them. */}
       <View
         testID="selection-preview"
         accessible
@@ -88,7 +98,8 @@ export function WordStrip({
           <Chips
             letters={letters}
             kind="tracing"
-            width={width - (onClear ? 64 : 0)}
+            width={width - (onClear ? 104 : 0)}
+            max={30}
           />
         ) : feedback ? (
           <Outcome
@@ -96,17 +107,19 @@ export function WordStrip({
             feedback={feedback}
             settled={feedback.key === settledKey}
             width={width}
+            accent={accent}
           />
         ) : idleHint ? (
-          <Animated.View entering={FadeIn.duration(motion.base)}>
-            <Txt variant="label" color={palette.textMuted}>
-              {idleHint}
-            </Txt>
+          <Animated.View
+            entering={FadeIn.duration(motion.base)}
+            style={styles.pill}
+          >
+            <Txt variant="label">{idleHint}</Txt>
           </Animated.View>
         ) : null}
       </View>
       {tracing && onClear && (
-        <View style={styles.clear}>
+        <View style={[styles.side, styles.left]}>
           <RoundButton
             label="გასუფთავება"
             icon="close"
@@ -114,6 +127,32 @@ export function WordStrip({
             onPress={onClear}
             testID="tap-clear"
           />
+        </View>
+      )}
+      {tracing && onSubmit && (
+        <View style={[styles.side, styles.right]}>
+          <Pressable
+            accessibilityRole="button"
+            accessibilityLabel="შემოწმება"
+            accessibilityState={{ disabled: letters.length < 2 }}
+            disabled={letters.length < 2}
+            hitSlop={4}
+            onPress={onSubmit}
+            testID="tap-submit"
+            style={({ pressed }) => [
+              styles.submit,
+              { backgroundColor: accent },
+              letters.length < 2 && styles.submitIdle,
+              pressed && styles.pressed,
+            ]}
+          >
+            <Icon
+              name="check"
+              size={22}
+              color={letters.length < 2 ? palette.textMuted : palette.ivory}
+              strokeWidth={2.6}
+            />
+          </Pressable>
         </View>
       )}
     </View>
@@ -124,10 +163,12 @@ function Outcome({
   feedback,
   settled,
   width,
+  accent,
 }: {
   feedback: StripFeedback;
   settled: boolean;
   width: number;
+  accent: string;
 }) {
   const shake = useSharedValue(0);
   const dim = useSharedValue(1);
@@ -156,13 +197,19 @@ function Outcome({
           letters={Array.from(feedback.word)}
           kind={feedback.kind}
           width={width}
+          max={feedback.caption ? 26 : 30}
+          accent={accent}
         />
       )}
       {feedback.caption && (
-        <Animated.View entering={FadeIn.delay(120).duration(motion.base)}>
+        <Animated.View
+          entering={FadeIn.delay(120).duration(motion.base)}
+          style={styles.pill}
+        >
           <Txt
             variant={feedback.kind === 'notice' ? 'label' : 'caption'}
             color={feedback.kind === 'bonus' ? palette.goldLight : palette.text}
+            style={feedback.kind === 'notice' ? undefined : styles.caption}
           >
             {feedback.caption}
           </Txt>
@@ -176,16 +223,21 @@ function Chips({
   letters,
   kind,
   width,
+  max,
+  accent = palette.turquoise,
 }: {
   letters: readonly string[];
   kind: 'tracing' | 'found' | 'bonus' | 'duplicate' | 'invalid';
   width: number;
+  max: number;
+  accent?: string;
 }) {
   const size = Math.max(
-    22,
-    Math.min(36, Math.floor((width - 4 * letters.length) / letters.length)),
+    20,
+    Math.min(max, Math.floor((width - 4 * letters.length) / letters.length)),
   );
-  const fill = kind === 'tracing' ? palette.ivory : CHIP[kind];
+  const fill =
+    kind === 'tracing' ? palette.ivory : kind === 'found' ? accent : CHIP[kind];
   const color = kind === 'tracing' ? palette.ink : CHIP_TEXT[kind];
   return (
     <View style={styles.chips}>
@@ -210,7 +262,7 @@ function Chips({
               {
                 color,
                 fontSize: Math.round(size * 0.58),
-                lineHeight: size + 1,
+                lineHeight: size + 4,
               },
               letterLift(Math.round(size * 0.58)),
             ]}
@@ -225,18 +277,25 @@ function Chips({
 
 const styles = StyleSheet.create({
   strip: {
-    height: 72,
+    height: STRIP_HEIGHT,
     alignSelf: 'center',
     alignItems: 'center',
     justifyContent: 'center',
   },
   content: { alignSelf: 'stretch', alignItems: 'center' },
-  outcome: { alignItems: 'center', gap: 4 },
+  outcome: { alignItems: 'center', gap: 2 },
+  caption: { fontSize: 12, lineHeight: 16 },
+  // Soft dusk backing so short text reads over any part of a painting.
+  pill: {
+    paddingHorizontal: 12,
+    paddingVertical: 2,
+    borderRadius: 999,
+    backgroundColor: 'rgba(18, 12, 36, 0.42)',
+  },
   chips: { flexDirection: 'row', gap: 4 },
+  // Flat, like the crossword tiles.
   chip: {
-    borderRadius: 7,
-    borderWidth: 1.5,
-    borderColor: palette.gold,
+    borderRadius: 8,
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -246,5 +305,19 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     includeFontPadding: false,
   },
-  clear: { position: 'absolute', right: 0, top: 16 },
+  side: { position: 'absolute', top: (STRIP_HEIGHT - 40) / 2 },
+  left: { left: 0 },
+  right: { right: 0 },
+  submit: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: palette.pomegranate,
+    borderWidth: 1.5,
+    borderColor: palette.goldLight,
+  },
+  submitIdle: { backgroundColor: palette.ink, borderColor: palette.hairline },
+  pressed: { transform: [{ scale: 0.92 }] },
 });

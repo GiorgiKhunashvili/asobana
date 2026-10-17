@@ -1,5 +1,9 @@
 /** URLs carry IDs only. Screens must validate IDs against the loaded catalog. */
 export const routes = {
+  postcard: (chapterId: string) => ({
+    pathname: '/postcards/[chapterId]' as const,
+    params: { chapterId },
+  }),
   game: (levelId: string) => ({
     pathname: '/game/[levelId]' as const,
     params: { levelId },

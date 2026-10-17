@@ -79,7 +79,9 @@ export function stripFeedback(batch: EventBatch): StripFeedback | null {
       key,
       kind: 'bonus',
       word: bonus.word,
-      caption: `ბონუს სიტყვა +${bonus.reward}`,
+      caption: find(batch.events, 'bonus-hint-earned')
+        ? 'ასოს უფასო მინიშნება მიიღე!'
+        : `ბონუს სიტყვა +${bonus.reward}`,
     };
   const found = find(batch.events, 'word-found');
   if (found)

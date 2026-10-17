@@ -1,0 +1,7 @@
+{
+  "revision": 10,
+  "draftSha256": "c8ee675ae896d3ebb6648a99fd452cad83fbcade3af9935d92e4ccf5be93d829",
+  "reviewedAt": "2026-10-16",
+  "reviewer": "Codex assistant pacing and layout review",
+  "scope": "Reordered the 50 reviewed revision 9 boards into chapter difficulty waves. All 250 unique required words, layouts, tile multiplicities and bonus lists are preserved by source-board comparison. Revisited familiarity estimates for ordinary and less familiar senses. Every chapter peaks at its third board, followed by a recovery at least two score points lower; upward jumps never exceed ten points. Six tiles still begin at level 22. Five-tile recovery now occurs at level 29, with six tiles for the final chapters. Scores are editorial estimates, not player-calibrated difficulty. Historical saves migrate with solved credits, hints, coins and lifetime bonus progress retained."
+}
