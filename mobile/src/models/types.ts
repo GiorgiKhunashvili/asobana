@@ -62,6 +62,8 @@ export interface GameState {
   };
   readonly progress: Readonly<Record<string, LevelProgress>>;
   readonly settings: Settings;
+  /** The first-time board tutorial was finished or skipped. */
+  readonly tutorialSeen: boolean;
 }
 export interface Economy {
   readonly initialCoins: number;
@@ -82,7 +84,8 @@ export type GameCommand =
       readonly levelId: string;
       readonly kind: 'cell' | 'word';
     }
-  | { readonly type: 'settings'; readonly settings: Settings };
+  | { readonly type: 'settings'; readonly settings: Settings }
+  | { readonly type: 'tutorial'; readonly seen: boolean };
 export type RejectionReason =
   | 'invalid-word'
   | 'duplicate-word'

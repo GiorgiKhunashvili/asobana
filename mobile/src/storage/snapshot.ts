@@ -143,6 +143,16 @@ export function parseSnapshot(value: unknown, pack: LevelPack): GameState {
       sound: boolean(settings.sound, 'sound'),
       haptics: boolean(settings.haptics, 'haptics'),
     },
+    // Saves from before the tutorial: anyone who has found a word knows the wheel.
+    tutorialSeen:
+      raw.tutorialSeen === undefined
+        ? Object.values(progress).some(
+            (level) =>
+              level.completed ||
+              level.solvedWordIds.length > 0 ||
+              level.bonusWords.length > 0,
+          )
+        : boolean(raw.tutorialSeen, 'tutorialSeen'),
   };
   if (!isUnlocked(state, pack, state.currentLevelId))
     throw new ContentError('Saved current level is locked');

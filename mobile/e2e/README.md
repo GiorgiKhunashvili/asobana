@@ -1,3 +1,31 @@
+# First-time tutorial — 2026-10-17
+
+`tutorial.yaml` needs a save that has not seen the tutorial. On 2026-10-17 it
+passed on the isolated **GeoWords Journey QA** simulator (iPhone 17, iOS 26.5,
+Expo Go 57.0.9) with Metro serving this checkout on port 8092:
+
+```sh
+maestro --device SIMULATOR_UUID test --test-output-dir artifacts/tutorial/maestro \
+  -e PORT=8092 mobile/e2e/tutorial.yaml
+```
+
+The save was a fresh `initialState` written into that simulator's
+`geowords.db` (as a TEXT payload; a BLOB fails to load with a JSON parse
+error). The flow opened level 1 from the path. It stepped through all four
+coach marks and finished. After a cold restart, level 1 opened without the
+tutorial. Settings' "სწავლების ჩვენება" showed it again, and skip closed it.
+Screenshots of each step are in the git-ignored `artifacts/tutorial/`
+(`tutorial-0-path` to `tutorial-6-settings`).
+
+Before that, the same simulator still held its revision-10 QA save (level 5,
+230 coins, 10 bonus finds). On launch it upgraded to revision 13. Level 5's
+board opened without the tutorial, because the save has progress. Settings then
+showed step 1 over level 5 (`migrated-*.png`). That check was a one-off flow
+and is not committed. The QA save was put back afterwards. The steps' VoiceOver
+labels were matched through the accessibility tree; VoiceOver itself, Android
+and smaller phones were not run. Expo Go's blue developer-tools button is
+visible in the screenshots.
+
 # Navigation change — 2026-10-17
 
 The home screen is gone: the app opens on the journey path. Flows that tapped

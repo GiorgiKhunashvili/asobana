@@ -16,7 +16,8 @@ export function restoreContent(
   if (raw.packId === pack.id && raw.contentRevision === pack.revision)
     return {
       state: parseSnapshot(value, pack),
-      migrated: raw.bonusRewards === undefined,
+      migrated:
+        raw.bonusRewards === undefined || raw.tutorialSeen === undefined,
     };
   const previous = previousPacks.find(
     (candidate) =>

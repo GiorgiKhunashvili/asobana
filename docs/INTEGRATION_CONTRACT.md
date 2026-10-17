@@ -158,7 +158,8 @@ never in a component. The store currently uses the default configuration.
 ## Saved game and progression
 
 `GameState` contains `schemaVersion`, `packId`, `contentRevision`,
-`currentLevelId`, `coins`, `settings`, and `progress` keyed by level ID.
+`currentLevelId`, `coins`, `settings`, `tutorialSeen` and `progress` keyed by
+level ID.
 Each `LevelProgress` has `solvedWordIds`, `revealedCellIds`, `bonusWords`,
 `hintsUsed` and `completed`. Missing entries mean untouched levels.
 
@@ -168,6 +169,15 @@ include completion, so replay never earns a second completion reward. Completed
 levels remain viewable. Coins are nonnegative integers. `parseSnapshot` validates
 restoration against the exact catalog. Bad or newer saves surface a load error and
 remain on disk. SQLite schema migrations are separate from content/save migrations.
+
+`tutorialSeen` records that the first-time board tutorial was finished or skipped.
+New games start with `false`; the `{ type: 'tutorial', seen }` command sets it
+through the normal queued commit, and repeating the same value writes nothing.
+Snapshots from before the field get `true` when any level has a solved word, a
+bonus word or a completion, otherwise `false`; like missing bonus counters, the
+filled-in field is written back once on load. Content migrations carry it across,
+and `reset()` returns it to `false` with the rest of `initialState`. The save
+schema version stays 1; older builds ignore the field.
 
 ## UI-facing models and callbacks
 

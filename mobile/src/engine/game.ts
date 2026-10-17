@@ -43,6 +43,7 @@ export function initialState(
     bonusRewards: { totalFound: 0, hintsSpent: 0 },
     progress: {},
     settings: { sound: true, haptics: true },
+    tutorialSeen: false,
   };
 }
 export function isUnlocked(
@@ -143,6 +144,14 @@ export function transition(
     return {
       state: { ...state, settings: { ...command.settings } },
       events: [{ type: 'settings-changed' }],
+    };
+  if (command.type === 'tutorial')
+    return {
+      state:
+        state.tutorialSeen === command.seen
+          ? state
+          : { ...state, tutorialSeen: command.seen },
+      events: [],
     };
   const level = pack.levels.find((level) => level.id === command.levelId);
   if (!level || !isUnlocked(state, pack, command.levelId))

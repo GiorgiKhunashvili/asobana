@@ -1,0 +1,78 @@
+# First-time tutorial (2026-10-17). Needs a fresh save (or one that has not
+# seen the tutorial) on an isolated simulator with Expo Go's first-launch
+# instructions dismissed. iPhone 17 portrait (402x874 pt).
+# Metro must serve this checkout at IPv4 localhost:${PORT}.
+appId: host.exp.Exponent
+---
+- openLink: exp://127.0.0.1:${PORT}
+- tapOn:
+    text: 'Open'
+    optional: true
+- extendedWaitUntil:
+    visible:
+      id: path-current
+    timeout: 60000
+- takeScreenshot: tutorial-0-path
+- tapOn:
+    id: path-current
+- extendedWaitUntil:
+    visible:
+      id: tutorial-card
+    timeout: 15000
+- assertVisible: 'ნაბიჯი 1 / 4. შეაერთე ასოები'
+- takeScreenshot: tutorial-1-wheel
+- tapOn:
+    id: tutorial-next
+- assertVisible: 'ნაბიჯი 2 / 4. მინიშნებები'
+- takeScreenshot: tutorial-2-hints
+- tapOn:
+    id: tutorial-next
+- assertVisible: 'ნაბიჯი 3 / 4. შეხებით შეყვანა'
+- takeScreenshot: tutorial-3-input
+- tapOn:
+    id: tutorial-next
+- assertVisible: 'ნაბიჯი 4 / 4. ბონუს სიტყვები'
+- takeScreenshot: tutorial-4-bonus
+- tapOn:
+    id: tutorial-next
+- assertNotVisible:
+    id: tutorial-card
+- assertVisible:
+    id: letter-wheel
+# Saved as seen: after a cold restart the board opens without it.
+- stopApp
+- openLink: exp://127.0.0.1:${PORT}
+- extendedWaitUntil:
+    visible:
+      id: path-current
+    timeout: 60000
+- tapOn:
+    id: path-current
+- extendedWaitUntil:
+    visible:
+      id: letter-wheel
+    timeout: 15000
+- waitForAnimationToEnd
+- assertNotVisible:
+    id: tutorial-card
+- takeScreenshot: tutorial-5-seen
+# Settings shows it again on the current level; skip ends it.
+- tapOn:
+    id: back
+- tapOn:
+    id: tab-settings
+- assertVisible: 'როგორ ვითამაშოთ'
+- takeScreenshot: tutorial-6-settings
+- tapOn:
+    id: show-tutorial
+- extendedWaitUntil:
+    visible:
+      id: tutorial-card
+    timeout: 15000
+- assertVisible: 'ნაბიჯი 1 / 4. შეაერთე ასოები'
+- tapOn:
+    id: tutorial-skip
+- assertNotVisible:
+    id: tutorial-card
+- assertVisible:
+    id: letter-wheel

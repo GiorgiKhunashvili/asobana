@@ -5,7 +5,13 @@ import {
   Path,
   Skia,
 } from '@shopify/react-native-skia';
-import { useCallback, useMemo, useState, type ReactNode } from 'react';
+import {
+  useCallback,
+  useMemo,
+  useState,
+  type ReactNode,
+  type RefObject,
+} from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 import { GestureDetector } from 'react-native-gesture-handler';
 import Animated, {
@@ -34,6 +40,13 @@ export interface LetterWheelViewProps extends LetterWheelProps {
   readonly accent?: string;
   /** Controls beside the disc on the left (e.g. hints). */
   readonly leading?: { readonly top?: ReactNode; readonly bottom?: ReactNode };
+  /** Handles on the disc and side controls, for the tutorial's rings. */
+  readonly anchors?: {
+    readonly disc?: RefObject<View | null>;
+    readonly inputMode?: RefObject<View | null>;
+    readonly leadingTop?: RefObject<View | null>;
+    readonly leadingBottom?: RefObject<View | null>;
+  };
 }
 
 /** Wheel diameter for a screen: about two thirds of its width, never so small
@@ -141,6 +154,8 @@ export function LetterWheel(props: LetterWheelViewProps) {
       />
       <View style={{ width, height: size }}>
         <View
+          ref={props.anchors?.disc}
+          collapsable={false}
           style={[
             styles.disc,
             { left: (width - size) / 2, width: size, height: size },
@@ -216,16 +231,28 @@ export function LetterWheel(props: LetterWheelViewProps) {
           </Pressable>
         </View>
         {leading?.top && (
-          <View style={[styles.side, styles.top, styles.left]}>
+          <View
+            ref={props.anchors?.leadingTop}
+            collapsable={false}
+            style={[styles.side, styles.top, styles.left]}
+          >
             {leading.top}
           </View>
         )}
         {leading?.bottom && (
-          <View style={[styles.side, styles.bottom, styles.left]}>
+          <View
+            ref={props.anchors?.leadingBottom}
+            collapsable={false}
+            style={[styles.side, styles.bottom, styles.left]}
+          >
             {leading.bottom}
           </View>
         )}
-        <View style={[styles.side, styles.bottom, styles.right]}>
+        <View
+          ref={props.anchors?.inputMode}
+          collapsable={false}
+          style={[styles.side, styles.bottom, styles.right]}
+        >
           <RoundButton
             label={tapMode ? 'ბორბლით შეყვანა' : 'შეხებით შეყვანა'}
             accessibilityHint={

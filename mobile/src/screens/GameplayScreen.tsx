@@ -1,5 +1,12 @@
 import { router, useFocusEffect } from 'expo-router';
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import {
+  createRef,
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+  type RefObject,
+} from 'react';
 import {
   ActivityIndicator,
   StyleSheet,
@@ -13,6 +20,7 @@ import {
   RoundButton,
   SecondaryButton,
 } from '../components/Buttons';
+import { CoachMarks } from '../components/CoachMarks';
 import { CoinBadge, CoinGlyph } from '../components/CoinBadge';
 import { BonusMeter } from '../components/BonusMeter';
 import { CrosswordBoard } from '../components/CrosswordBoard';
@@ -38,12 +46,15 @@ import {
 } from '../theme';
 import { nextUnfinished } from './nextLevel';
 import { boardMoment, celebrationLength, stripFeedback } from './presentEvents';
+import { tutorialSteps, type TutorialAnchor } from './tutorial';
 
 const BAR = 60;
 /** Topic line plus the word-progress lozenges under it. */
 const TITLE = 50;
 const PROGRESS = 18;
 const MAX_CONTENT = 520;
+/** The tutorial waits for the screen to finish sliding in, so its rings land on the controls. */
+const TUTORIAL_DELAY = 600;
 
 function send(command: GameCommand): void {
   // The store keeps `error` set for failed saves; the screen renders it.
@@ -163,6 +174,7 @@ export function GameplayScreen({ levelId }: { levelId: string | null }) {
       feedback={feedback}
       celebrating={celebration !== null}
       next={game ? nextUnfinished(game) : null}
+      tutorial={game?.tutorialSeen === false}
       onSubmit={submit}
     />
   );
@@ -178,6 +190,7 @@ function GameLayout({
   feedback,
   celebrating,
   next,
+  tutorial,
   onSubmit,
 }: {
   model: GameplayView;
@@ -190,6 +203,8 @@ function GameLayout({
   celebrating: boolean;
   /** Where "continue" leads when a finished level is opened to look back. */
   next: ReturnType<typeof nextUnfinished>;
+  /** The save has not recorded the first-time tutorial as seen. */
+  tutorial: boolean;
   onSubmit: (tileIds: readonly string[]) => void;
 }) {
   const { width, height } = useWindowDimensions();
@@ -211,6 +226,8 @@ function GameLayout({
   const hint = (kind: 'cell' | 'word') => {
     if (!busy) send({ type: 'hint', levelId: model.levelId, kind });
   };
+  const coaching = useTutorial(tutorial && !model.completed && !celebrating);
+  const [{ anchors, steps }] = useState(createTutorial);
   return (
     <Screen
       tone={tone}
@@ -245,6 +262,7 @@ function GameLayout({
           bonusMeter={model.bonusMeter}
           freeHints={model.freeCellHints}
           accent={tone.scene.accent}
+          bonusRef={anchors.bonus}
         />
       </View>
       <View
@@ -334,6 +352,12 @@ function GameLayout({
                 ? 'შეაერთე ასოები'
                 : null
             }
+            anchors={{
+              disc: anchors.wheel,
+              inputMode: anchors.inputMode,
+              leadingTop: anchors.wordHint,
+              leadingBottom: anchors.cellHint,
+            }}
             leading={{
               top: (
                 <RoundButton
@@ -377,8 +401,52 @@ function GameLayout({
           />
         </Animated.View>
       )}
+      {coaching.active && <CoachMarks steps={steps} onDone={coaching.finish} />}
     </Screen>
   );
+}
+
+/** Handles on the controls the tutorial rings, and its steps pointing at them. */
+function createTutorial() {
+  const anchors = {
+    wheel: createRef<View>(),
+    wordHint: createRef<View>(),
+    cellHint: createRef<View>(),
+    inputMode: createRef<View>(),
+    bonus: createRef<View>(),
+  };
+  const targets: Record<TutorialAnchor, RefObject<View | null>[]> = {
+    wheel: [anchors.wheel],
+    hints: [anchors.wordHint, anchors.cellHint],
+    inputMode: [anchors.inputMode],
+    bonus: [anchors.bonus],
+  };
+  return {
+    anchors,
+    steps: tutorialSteps().map((step) => ({
+      ...step,
+      targets: targets[step.anchor],
+    })),
+  };
+}
+
+/**
+ * First-time coach marks: they start once the board is idle and end for good
+ * when finished or skipped. The overlay closes at once, even if the save fails.
+ */
+function useTutorial(pending: boolean) {
+  const [ready, setReady] = useState(false);
+  const [closed, setClosed] = useState(false);
+  useEffect(() => {
+    if (!pending) return;
+    const timer = setTimeout(() => setReady(true), TUTORIAL_DELAY);
+    return () => clearTimeout(timer);
+  }, [pending]);
+  const finish = useCallback(() => {
+    setClosed(true);
+    send({ type: 'tutorial', seen: true });
+  }, []);
+  return { active: pending && ready && !closed, finish };
 }
 
 function Price({ amount }: { amount: number }) {
@@ -400,6 +468,7 @@ function Progress({
   bonusMeter,
   freeHints,
   accent,
+  bonusRef,
 }: {
   found: number;
   total: number;
@@ -407,6 +476,7 @@ function Progress({
   bonusMeter: number;
   freeHints: number;
   accent: string;
+  bonusRef: RefObject<View | null>;
 }) {
   return (
     <View testID="word-progress" style={styles.progress}>
@@ -425,7 +495,9 @@ function Progress({
           />
         ))}
       </View>
-      <BonusMeter progress={bonusMeter} freeHints={freeHints} compact />
+      <View ref={bonusRef} collapsable={false}>
+        <BonusMeter progress={bonusMeter} freeHints={freeHints} compact />
+      </View>
     </View>
   );
 }

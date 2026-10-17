@@ -15,8 +15,9 @@ import { StudioCredit } from '../../src/components/StudioCredit';
 import { Txt } from '../../src/components/Text';
 import { DEFAULT_ECONOMY } from '../../src/engine/game';
 import type { Settings as GameSettings } from '../../src/models/types';
+import { routes } from '../../src/navigation/routes';
 import { gameStore, useGameStore } from '../../src/state/gameStore';
-import { progressTone } from '../../src/screens/nextLevel';
+import { nextUnfinished, progressTone } from '../../src/screens/nextLevel';
 import { palette, space } from '../../src/theme';
 
 const OPTIONS: readonly {
@@ -65,11 +66,22 @@ function confirmReset() {
   );
 }
 
+/** Clear the saved flag, then open the player's level, where the steps run again. */
+function showTutorial(levelId: string) {
+  gameStore
+    .getState()
+    .dispatch({ type: 'tutorial', seen: false })
+    .then(() => router.push(routes.game(levelId)))
+    // A failed save keeps the old state; the screen shows `error`.
+    .catch(() => undefined);
+}
+
 export default function Settings() {
   const game = useGameStore((state) => state.game);
   const busy = useGameStore((state) => state.busy);
   const error = useGameStore((state) => state.error);
   if (!game) return null;
+  const next = nextUnfinished(game);
   return (
     <Screen
       veil={0.55}
@@ -114,6 +126,26 @@ export default function Settings() {
             </CardRow>
           </View>
         ))}
+      </Card>
+      <Card>
+        <CardRow>
+          <Icon name="wheel" size={24} color={palette.gold} />
+          <View style={styles.text}>
+            <Txt variant="bodyStrong">როგორ ვითამაშოთ</Txt>
+            <Txt variant="caption" color={palette.textMuted}>
+              {next
+                ? 'ოთხი მოკლე ნაბიჯი შენს მიმდინარე დონეზე.'
+                : 'ყველა დონე გავლილია.'}
+            </Txt>
+          </View>
+        </CardRow>
+        <SecondaryButton
+          label="სწავლების ჩვენება"
+          icon="play"
+          disabled={busy || !next}
+          testID="show-tutorial"
+          onPress={() => next && showTutorial(next.id)}
+        />
       </Card>
       <Card>
         <CardRow>

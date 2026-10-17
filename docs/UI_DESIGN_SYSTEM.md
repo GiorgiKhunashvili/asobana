@@ -182,6 +182,29 @@ The owner chose one structure: launch lockup, then the path as the main screen.
   "ყაზბეგი · 3/5". Content titles are numbered placeholders ("აღმოჩენა 18") and
   are not shown on the path, above the board or on victory.
 
+### First-time tutorial (2026-10-17)
+
+Four coach marks over the real board (`src/components/CoachMarks.tsx`, copy in
+`src/screens/tutorial.ts`). The approved Georgian copy has not been reviewed by
+a native speaker. Prices come from `DEFAULT_ECONOMY`.
+
+- **When:** on an unsolved board while the save's `tutorialSeen` is false (for a
+  new player, level 1), 600 ms after the screen opens so the rings measure the
+  controls at rest. Never on a solved board, which has no wheel.
+- **Steps:** the wheel and shuffle hub; both hint buttons with their prices; the
+  tap-input toggle; the bonus meter. The screen dims around a gold pill ring and
+  an ivory card sits on the side with more room. "გამოტოვება" ends it on any
+  step; "შემდეგი", then "დავიწყოთ". Finishing or skipping saves it as seen and
+  closes the overlay at once, even if the save fails.
+- **Again:** Settings → "როგორ ვითამაშოთ" → "სწავლების ჩვენება" clears the flag
+  and opens the player's next unfinished level. It is disabled once all 240
+  levels are done.
+- **Path:** the existing "დაწყება" bubble over the current coin already points
+  new players at level 1, so the tutorial adds nothing to the path.
+- **Accessibility:** the steps run in a `Modal` (VoiceOver stays on the card).
+  Each step's heading reads "ნაბიჯი 1 / 4. …" and receives focus. The veil and
+  ring are hidden from assistive technology. Steps only fade.
+
 ### Stop paintings and placeholders
 
 `src/theme/journey.ts` groups the 48 stop IDs from `content/journey-v13.json`
@@ -315,7 +338,7 @@ gates rules or persistence. Reanimated respects the system reduce-motion setting
 Buttons expose roles, names (with prices for hints) and disabled/selected states.
 Cells read "რიგი 1, სვეტი 3, ე" or "ცარიელი"; hidden answers never reach the UI.
 Outcomes are announced and stay readable in the strip. Tap mode (corner toggle)
-is the non-gesture input. Controls do not dim during sub-second saves; they
+is the non-gesture input; the first-time tutorial points it out. Controls do not dim during sub-second saves; they
 ignore presses instead. Minimum targets are 44–54 pt.
 
 ## Verification (2026-10-14)

@@ -65,7 +65,8 @@ jest.mock('../src/state/gameStore', () => {
   const { initialState } = require('../src/engine/game');
   const { catalog } = require('../src/content/catalog');
   const state = {
-    game: initialState(catalog),
+    // The first-time tutorial has its own suite (tutorial.test.tsx).
+    game: { ...initialState(catalog), tutorialSeen: true },
     busy: false,
     error: null,
     eventBatch: { sequence: 0, events: [] },
