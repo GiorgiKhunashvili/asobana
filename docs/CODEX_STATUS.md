@@ -4,6 +4,74 @@ Updated: 2026-10-17 (Asia/Tbilisi). **Milestone A prototype implemented.**
 Core gameplay and save/resume are verified in automated tests and native emulator
 flows. This is not a production-store release or a hardware performance sign-off.
 
+## 2026-10-19: Optional "×2" ad on the level-complete screen
+
+- The victory screen shows a gold `▶ ×2` pill beside a reward just earned on the
+  board. Watching its demo ad pays the level's 20 completion coins again, once
+  per level; the pill then becomes `✓ ×2` and the reward reads `+40`. "Next
+  level" remains the primary button. Reopened levels, unfinished levels and
+  builds without ads show no offer. A waiting press can be cancelled and is
+  cancelled by leaving the screen.
+- A second controller from `createRewardedAds` serves this placement; the
+  presented ad is bound to its level, so a save-only retry pays the same level.
+  `claimLevelDouble` records the receipt, the balance and the level in the new
+  optional `doubledRewardLevelIds` save field in one SQLite transaction. Existing
+  saves load unchanged; no database or save-schema migration was needed.
+- Tests cover the offer appearing only after a fresh completion, no award from a
+  press or a closed ad without the earned event, one doubling per level across
+  duplicate callbacks, other ads, restart, reopening and a content upgrade, a
+  rolled-back failed write, and cancellation on leaving or pressing cancel.
+
+## 2026-10-19: Direct rewarded ads from hint buttons
+
+- Unaffordable hints keep their own letter/word icon; only the price pill under
+  the button turns gold and reads `▶ +75` with a coin (`↻ +75` when a reward save
+  needs retrying). The owner picked this pill over a corner sticker and a speech
+  bubble on 2026-10-19, replacing the first gold play button with floating
+  `რეკლამა +75` text. A brief bounce and pill pop draw attention when the offer
+  appears; reduced-motion preferences suppress them. Affordable/free hints keep their
+  normal behavior. The coins screen remains available from the balance badge.
+- One watch press presents from the puzzle, waiting for a preload if necessary.
+  There is no coins-page detour or second watch press. Cancelling, navigating,
+  changing levels or backgrounding while loading cancels that presentation intent.
+  Timeout/error cannot cause a later surprise ad. Earned-save retries reuse the
+  existing claim. Watching still does not buy a hint automatically.
+- Root check passed: 314 tests across 40 suites, TypeScript, ESLint, all 295
+  campaign solves and formatting. Both platform Metro exports passed. Native
+  iPhone 17 / iOS 26.5 test: at zero coins, one word-hint press opened Google's
+  demo ad, returned to the same unsolved board with 75 coins, and a separate
+  hint purchase deducted 50, leaving 25. Evidence is in ignored
+  `artifacts/admob-direct-hints-2026-10-19/`. This used the isolated QA save;
+  the user's active simulator save was not edited. Android native, physical
+  devices and smaller-screen visual QA remain unverified for this UI change.
+
+## 2026-10-19: Initial AdMob demo rewarded ads (local; not uploaded)
+
+- Optional Google demo rewarded ads on the coins screen; unaffordable hints open
+  the same offer. A completed reward grants 75 coins and never buys a hint
+  automatically. Existing balances, progress and bonus rewards remain intact.
+- Database version 3 adds persistent unique claim receipts. The receipt and coin
+  balance commit in one SQLite transaction; duplicate claims do not credit again.
+  A failed save retries the same earned claim without another ad. Pending claims
+  are in memory until committed; this is not server-side reward recovery.
+- Validation: TypeScript, ESLint, all 308 Jest tests in 40 suites, all 295 campaign
+  solves and Prettier passed. The first root check flagged two formatting files;
+  those were formatted and the formatting check passed. The final UI changes
+  also passed the focused 23-test presentation suite.
+- Both iOS and Android Metro exports succeeded. Xcode 26.6 built the native iOS
+  simulator app successfully with the AdMob SDK. Physical-device and Android
+  native runtime testing remain pending. No EAS build or TestFlight upload.
+- Native smoke passed on an isolated iPhone 17 simulator, iOS 26.5: the coins
+  screen loaded Google's "Test mode" ad, an explicit tap presented it, the
+  earned event changed 200 coins to 275, and dismissal showed the saved reward.
+  Stop/launch restored 275 coins. SQLite contained one claim receipt and revision 2. Logs, screenshots and the successful Maestro finish flow are in ignored
+  `artifacts/admob-test-2026-10-19/`. Existing simulator/player saves were untouched.
+  Early dismissal, storage failure and insufficient-hint flows have automated
+  controller/SQLite/UI coverage; they were not all replayed against native ads.
+- Google sample app IDs and demo rewarded units require no AdMob account. Expo Go
+  cannot show these native ads; use the development build. Live IDs, consent and
+  privacy disclosures remain separate work before production monetization.
+
 ## Latest: revision 13 journey campaign (local; not uploaded)
 
 - Builds 240 levels in the exact 48 journey stops, five answers per board. The

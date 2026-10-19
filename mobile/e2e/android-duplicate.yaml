@@ -7,4 +7,4 @@ appId: host.exp.Exponent
     duration: 700
 - assertVisible: 'მე, უკვე ნაპოვნია'
 - assertVisible: '1/2 სიტყვა · ბონუსი 0'
-- assertVisible: '100 მონეტა'
+- assertVisible: '200 მონეტა'

@@ -1,0 +1,254 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-19",
+  "status": "owner-review-completed",
+  "activeContentRevision": 23,
+  "replacesReview": "docs/VOCABULARY_REPLACEMENTS_01.json",
+  "rejectedProposalWords": [
+    "გონი",
+    "მასივი",
+    "მორიგი",
+    "ტემბრი",
+    "უვიზო",
+    "კამარა"
+  ],
+  "candidateCount": 6,
+  "scope": "Six replacements within the pending 29-word proposal. All active dictionaries and 295 boards remain unchanged. The original 29 removals remain recorded. The other 23 proposals are retained without inferring additional approval.",
+  "sourceAttribution": "Wiktionary contributors, fixed-revision source links and short adapted glosses under CC BY-SA 4.0. Georgian explanatory dictionary at ganmarteba.ge, Linguistic Technologies Group: source links/content hashes and short editorial glosses; no full definitions reproduced.",
+  "limitations": [
+    "Each candidate has a local draft with four already approved partners, excluding the 29 requested removals.",
+    "Drafts pass five-answer, seven-tile, two-long-answer, connected-layout, shape and density checks; they do not establish full campaign compatibility or repetition improvement.",
+    "No native-speaker review is claimed; owner approval is pending."
+  ],
+  "entries": [
+    {
+      "reviewId": "R2-01",
+      "replacesProposal": "გონი",
+      "word": "ვატი",
+      "letters": 4,
+      "proposedMeaning": "watt; unit of power",
+      "partOfSpeech": "noun",
+      "form": "singular or mass noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ვატი&oldid=84098467",
+      "sourceChecked": "Previously checked fixed-revision source record revisited 2026-10-19",
+      "sourceContentSha256": null,
+      "supplementalSource": {
+        "sourceRevision": 84098467,
+        "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ვატი&oldid=84098467",
+        "blocks": [
+          {
+            "pos": "Noun",
+            "definitions": ["[[watt]]"]
+          }
+        ]
+      },
+      "ownerDecision": "required-eligible",
+      "editorialDecision": "Proposed familiar sense for owner review; draft-only, not added to active vocabulary. No plural, pronoun, conjugated verb, action noun, name-only or nonstandard sense is proposed.",
+      "draftExample": {
+        "words": ["ავი", "ვატი", "სვავი", "ტყავი", "ყვავი"],
+        "wheel": "ავვისტყ",
+        "seed": 14,
+        "transpose": true,
+        "unusedPartners": ["ყვავი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5142857142857142
+      },
+      "testedDraftCount": 15
+    },
+    {
+      "reviewId": "R2-02",
+      "replacesProposal": "მასივი",
+      "word": "გრუნტი",
+      "letters": 6,
+      "proposedMeaning": "ground, soil or foundation material",
+      "partOfSpeech": "noun",
+      "form": "singular or mass noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%92%E1%83%A0%E1%83%A3%E1%83%9C%E1%83%A2%E1%83%98",
+      "sourceChecked": "2026-10-19",
+      "sourceContentSha256": "919261f220f7579d1a86afc1fef632e119396a9c59ce100dec0f9c111b827ca4",
+      "supplementalSource": {
+        "sourceRevision": 84097983,
+        "sourceUrl": "https://en.wiktionary.org/w/index.php?title=გრუნტი&oldid=84097983",
+        "blocks": [
+          {
+            "pos": "Noun",
+            "definitions": ["[[ground]], [[soil]], [[bottom]]"]
+          }
+        ]
+      },
+      "ownerDecision": "required-eligible",
+      "editorialDecision": "Proposed familiar sense for owner review; draft-only, not added to active vocabulary. No plural, pronoun, conjugated verb, action noun, name-only or nonstandard sense is proposed.",
+      "draftExample": {
+        "words": ["აუტი", "გრუნტი", "ტურა", "უნარი", "ურნა"],
+        "wheel": "აგინრტუ",
+        "seed": 14,
+        "transpose": false,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5142857142857142
+      },
+      "testedDraftCount": 2
+    },
+    {
+      "reviewId": "R2-03",
+      "replacesProposal": "მორიგი",
+      "word": "სამბო",
+      "letters": 5,
+      "proposedMeaning": "sambo; wrestling sport",
+      "partOfSpeech": "noun",
+      "form": "singular or mass noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%A1%E1%83%90%E1%83%9B%E1%83%91%E1%83%9D",
+      "sourceChecked": "2026-10-19",
+      "sourceContentSha256": "bf40a47eb38055288106763d40fa15089488b5cd73cac01f6ac7381d12a7d07b",
+      "supplementalSource": {
+        "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%A1%E1%83%90%E1%83%9B%E1%83%91%E1%83%9D",
+        "sourceRevision": null,
+        "sourceContentSha256": "bf40a47eb38055288106763d40fa15089488b5cd73cac01f6ac7381d12a7d07b",
+        "blocks": [
+          {
+            "pos": "Noun",
+            "definitions": ["sambo wrestling"]
+          }
+        ]
+      },
+      "ownerDecision": "required-eligible",
+      "editorialDecision": "Proposed familiar sense for owner review; draft-only, not added to active vocabulary. No plural, pronoun, conjugated verb, action noun, name-only or nonstandard sense is proposed.",
+      "draftExample": {
+        "words": ["ასო", "ომი", "სამბო", "საცობი", "ცომი"],
+        "wheel": "აბიმოსც",
+        "seed": 7,
+        "transpose": false,
+        "unusedPartners": ["საცობი"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.5666666666666667
+      },
+      "testedDraftCount": 15
+    },
+    {
+      "reviewId": "R2-04",
+      "replacesProposal": "ტემბრი",
+      "word": "ტრიუკი",
+      "letters": 6,
+      "proposedMeaning": "acrobatic stunt",
+      "partOfSpeech": "noun",
+      "form": "singular or mass noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%A2%E1%83%A0%E1%83%98%E1%83%A3%E1%83%99%E1%83%98",
+      "sourceChecked": "2026-10-19",
+      "sourceContentSha256": "268cbecf60b35d89a463b4214d29bb9dcc9d5e63211a53612bb0c1a3c9dcf52e",
+      "supplementalSource": {
+        "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%A2%E1%83%A0%E1%83%98%E1%83%A3%E1%83%99%E1%83%98",
+        "sourceRevision": null,
+        "sourceContentSha256": "268cbecf60b35d89a463b4214d29bb9dcc9d5e63211a53612bb0c1a3c9dcf52e",
+        "blocks": [
+          {
+            "pos": "Noun",
+            "definitions": ["stunt"]
+          }
+        ]
+      },
+      "ownerDecision": "required-eligible",
+      "editorialDecision": "Proposed familiar sense for owner review; draft-only, not added to active vocabulary. No plural, pronoun, conjugated verb, action noun, name-only or nonstandard sense is proposed.",
+      "draftExample": {
+        "words": ["ვირი", "კივი", "კიტრი", "კრივი", "ტრიუკი"],
+        "wheel": "ვიიკრტუ",
+        "seed": 2,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5428571428571428
+      },
+      "testedDraftCount": 6
+    },
+    {
+      "reviewId": "R2-05",
+      "replacesProposal": "უვიზო",
+      "word": "შტოში",
+      "letters": 5,
+      "proposedMeaning": "cranberry",
+      "partOfSpeech": "noun",
+      "form": "singular or mass noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%A8%E1%83%A2%E1%83%9D%E1%83%A8%E1%83%98",
+      "sourceChecked": "2026-10-19",
+      "sourceContentSha256": "c8a9f7d534114fcd7f0bde8f6eca3f1e55416d6fe7854ea54625574b23d91e23",
+      "supplementalSource": {
+        "sourceRevision": 85691645,
+        "sourceUrl": "https://en.wiktionary.org/w/index.php?title=შტოში&oldid=85691645",
+        "blocks": [
+          {
+            "pos": "Noun",
+            "definitions": ["[[cranberry]]"]
+          }
+        ]
+      },
+      "ownerDecision": "exclude-all-play",
+      "editorialDecision": "Owner requested a different word on 2026-10-19. Do not add or propose again as unseen.",
+      "draftExample": {
+        "words": ["ბატი", "შობა", "შტაბი", "შტო", "შტოში"],
+        "wheel": "აბიოტშშ",
+        "seed": 5,
+        "transpose": false,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857142857142857
+      },
+      "testedDraftCount": 27
+    },
+    {
+      "reviewId": "R2-06",
+      "replacesProposal": "კამარა",
+      "word": "ურყევი",
+      "letters": 6,
+      "proposedMeaning": "steadfast, firm",
+      "partOfSpeech": "adjective",
+      "form": "lexical adjective meaning steadfast; not a conjugated verb or action noun",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%A0%E1%83%A7%E1%83%94%E1%83%95%E1%83%98",
+      "sourceChecked": "2026-10-19",
+      "sourceContentSha256": "c682ff760941b4ac4c3db2f295ccb1935ea109d37b3894bd0ad0194bb49e7b92",
+      "supplementalSource": {
+        "sourceRevision": 84091171,
+        "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ურყევი&oldid=84091171",
+        "blocks": [
+          {
+            "pos": "Adjective",
+            "definitions": [
+              "[[unshakable]], [[steadfast]], [[steady]]",
+              "{{lb|ka|figurative}} [[solid]], [[unyielding]]"
+            ]
+          }
+        ]
+      },
+      "ownerDecision": "required-eligible",
+      "editorialDecision": "Proposed familiar sense for owner review; draft-only, not added to active vocabulary. No plural, pronoun, conjugated verb, action noun, name-only or nonstandard sense is proposed.",
+      "draftExample": {
+        "words": ["ერი", "ნერვი", "ურყევი", "ყრუ", "ყურე"],
+        "wheel": "ევინრუყ",
+        "seed": 7,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.5666666666666667
+      },
+      "testedDraftCount": 37
+    }
+  ],
+  "followupReview": "docs/VOCABULARY_REPLACEMENTS_03.json",
+  "finalReview": "docs/VOCABULARY_REPLACEMENTS_APPROVED_01.json"
+}

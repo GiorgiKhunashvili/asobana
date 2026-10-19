@@ -8,12 +8,12 @@ appId: host.exp.Exponent
     visible: 'ოჯახი'
     timeout: 30000
 - assertVisible: '0/2 სიტყვა · ბონუსი 0'
-- assertVisible: '125 მონეტა'
+- assertVisible: '220 მონეტა'
 - swipe:
     start: 50%, 51%
     end: 73%, 56%
     duration: 700
 - assertVisible: 'დე, ეს სიტყვა აქ არ არის'
 - assertVisible: '0/2 სიტყვა · ბონუსი 0'
-- assertVisible: '125 მონეტა'
+- assertVisible: '220 მონეტა'
 - takeScreenshot: artifacts/android-restart-restored

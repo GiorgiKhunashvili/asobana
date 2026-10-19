@@ -2,20 +2,22 @@
 
 Offline Georgian crossword prototype for iOS and Android. Connect wheel letters,
 find target and bonus words, spend coins on hints, complete levels and resume from
-local SQLite. Content revision 13 has 240 wide, connected, mixed-topic puzzles
-across 48 journey stops, with five answers per board and five to seven wheel tiles.
+local SQLite. Content revision 26 has 295 wide, connected, mixed-topic puzzles
+across 59 journey stops, with five answers per board and five to seven wheel tiles.
 Required spellings and accepted variants may repeat only at least 75 levels apart;
-there are no two-letter targets. The reference dictionary has 1,312 entries /
-1,274 eligible words, while the separate everyday-target allowlist has 869 words.
+there are no two-letter targets. The reference dictionary has 1,970 entries /
+1,838 eligible words, while the separate everyday-target allowlist has 1,720 non-plural words.
 Pronouns, excluded verbs/action forms, name-only entries, reviewed barbarisms and
-owner-excluded `რული` cannot appear as targets or bonuses. Valid rare words remain
-optional bonuses; every eligible formable extra is recognized.
+owner-excluded words cannot appear as targets or bonuses. Valid rare words remain
+optional bonuses; verified plural nouns are also bonus-only, never required
+answers or variants. Every eligible formable extra is recognized. Campaign
+selection prioritizes using more distinct approved words to reduce repetition.
 See [the campaign rules](docs/DISCOVERY_CONTENT.md) and
-[the vocabulary review and all 240 boards](docs/VOCABULARY_REVIEW_V13.md).
+[the vocabulary review and all 295 boards](docs/VOCABULARY_REVIEW_V26.md).
 Five-letter answers begin at level 3 and six-letter answers at level 18; every
-board from level 26 has at least two longer answers. Claude owns the new journey
-map, destination paintings and screen integration; the content uses the exact
-48 stop IDs in `content/journey-v13.json`.
+board from level 26 has at least two longer answers. The journey map, destination
+paintings and screen integration use the exact 59 stop IDs in
+`content/journey-v23.json`. Malta, Tunisia and Spain extend the original Italy route.
 Each chapter builds toward a challenge and follows it with a gentler board.
 Completing a chapter collects its illustrated destination postcard in the travel
 album. Every ten bonus finds earns a free letter hint, carried across levels and
@@ -28,24 +30,30 @@ Georgian fonts ([design system](docs/UI_DESIGN_SYSTEM.md)). The game is named
 
 - Node.js 22.13+ (22 LTS recommended) and npm.
 - Python 3.12+; generator tooling uses Python 3.13 with [uv](https://docs.astral.sh/uv/).
-- Expo Go compatible with SDK 57, or a development build, on iOS/Android.
+- An SDK 57 development build on iOS/Android for AdMob test ads. Gameplay also
+  works in compatible Expo Go, where ads are shown as unavailable.
 - Xcode/iOS simulator or Android SDK/emulator for local native testing.
 
 Selected stack: Expo SDK 57, React Native 0.86.3, React 19.2.3, strict TypeScript,
 Expo Router, Skia, Gesture Handler, Reanimated/Worklets, Zustand and Expo SQLite.
 Native versions were installed from SDK 57's compatibility map using `expo install`.
-The npm lockfile pins the complete tree. No backend or online services are required.
+The npm lockfile pins the complete tree. Gameplay needs no backend; optional
+AdMob demo ads require internet. No AdMob registration is needed for the demo IDs.
 
 ## Install and play
 
 ```sh
 npm ci
+npm run ios
+# Or npm run android. The first run builds the native development client.
+# For subsequent runs with that client installed:
 npm start
-# Press i for the iOS simulator or a for Android, or scan in compatible Expo Go.
 ```
 
-`npm run ios` and `npm run android` also start Expo and open the selected platform.
-If localhost resolves to IPv6 while Expo Go requests 127.0.0.1, use:
+`npm run ios` and `npm run android` build and open the native development client.
+Rebuild after adding native packages or changing AdMob app IDs. To use Expo Go
+for gameplay only, run `npx expo start --go` from `mobile`. If localhost resolves
+to IPv6 while the client requests 127.0.0.1, use:
 
 ```sh
 cd mobile
@@ -59,7 +67,17 @@ tap mode: tap letters in order, then the check in the wheel's hub; ✕ clears.
 Find every crossword word to unlock the next level. Bonuses are optional. Hints
 reveal a cell or word and deduct the displayed price. Progress and settings commit
 before success feedback, so force-close/reopen resumes the last committed state.
-The coin screen is informational; there are no purchases or ads.
+The coins screen offers an optional AdMob demo ad for 75 coins. An unaffordable
+hint keeps its icon and its price pill turns gold (`▶ +75`); tapping it opens the ad
+directly on the board, without visiting the coins screen. Ads preload when coins
+are low, and a pending watch can be cancelled. Watching an ad never purchases a
+hint automatically.
+The level-complete screen offers an optional gold `▶ ×2` pill beside a reward
+just earned: watching its ad pays the level's 20 completion coins again (40 in
+total), once per level. Continuing to the next level stays the primary action.
+Rewards commit once per claim, including after restart. There are no purchases.
+See [AdMob native testing](docs/NATIVE_TEST_CHECKLIST.md#admob-demo-ads) for setup,
+failure cases and the remaining production requirements.
 
 ## Tests and checks
 

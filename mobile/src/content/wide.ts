@@ -1,4 +1,4 @@
-import journey from '../../../content/journey-v13.json';
+import { journeyForRevision } from './journey';
 import type { Level, LevelPack } from '../models/types';
 import { solutionCells } from '../engine/grid';
 import { ContentError, parsePack } from '../engine/validation';
@@ -6,6 +6,7 @@ import { validateDiscovery } from './discovery';
 import {
   requiredWordsForRevision,
   excludedWordsForRevision,
+  excludedRequiredWordsForRevision,
 } from './wordPolicy';
 
 export const BOARD_AREAS = {
@@ -46,11 +47,15 @@ export function validateWide(
   const everydayRequiredWords = requiredWordsForRevision(pack.revision);
   if (
     pack.id !== 'geowords-prototype' ||
-    ![6, 7, 8, 9, 10, 11, 12, 13].includes(pack.revision)
+    ![
+      6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24,
+      25, 26,
+    ].includes(pack.revision)
   )
     throw new ContentError(
-      'Wide campaign requires stable pack identity and revision 6, 7, 8, 9, 10, 11, 12 or 13',
+      'Wide campaign requires stable pack identity and revision 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 or 26',
     );
+  const journey = journeyForRevision(pack.revision);
   const chapterIds = [
     'weather',
     'animals',
@@ -92,6 +97,19 @@ export function validateWide(
   )
     throw new ContentError(
       'Pronouns, verb/action forms, name-only entries, barbarisms and owner exclusions are excluded from targets and bonuses',
+    );
+  const requiredExcluded = excludedRequiredWordsForRevision(pack.revision);
+  if (
+    pack.levels.some((level) =>
+      level.words.some((word) =>
+        [word.answer, ...word.acceptedAnswers].some((answer) =>
+          requiredExcluded.has(answer),
+        ),
+      ),
+    )
+  )
+    throw new ContentError(
+      'Plural nouns and owner-reserved words are bonus-only, never required answers or variants',
     );
   validateDiscovery(pack, vocabulary, familiarity);
   if (pack.revision >= 10) {

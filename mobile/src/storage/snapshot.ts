@@ -54,29 +54,50 @@ export function parseSnapshot(value: unknown, pack: LevelPack): GameState {
         'hintsUsed',
         0,
         // Reauthored boards may be smaller than the board these hints were used on.
-        pack.revision === 13
-          ? 1250 // Preserve prior hint credits plus a full replacement board.
-          : pack.revision === 12
-            ? 1208 // Preserve revision 11 credits plus one board of new hints.
-            : pack.revision === 11
-              ? 1166 // Revision 10 allowance plus at most 7×5 cells and seven words.
-              : pack.revision === 10
-                ? 1124
-                : pack.revision === 9
-                  ? 1082 // Revision 8 allowance plus at most 7×5 cells and seven words.
-                  : pack.revision === 8
-                    ? 1040 // Revision 7 allowance plus at most 7×5 cells and seven words.
-                    : pack.revision === 7
-                      ? 998 // Revision 6 allowance plus at most 7×5 cells and seven words.
-                      : pack.revision === 6
-                        ? 956 // Revision 5 allowance plus at most 7×5 cells and seven words.
-                        : pack.revision === 5
-                          ? 914 // Revision 4 allowance plus at most 49 cells and five words.
-                          : pack.revision === 4
-                            ? 860
-                            : pack.revision === 3
-                              ? 430
-                              : cells.size + level.words.length,
+        pack.revision >= 26
+          ? 1670 // Preserve revision 25 credits plus a full replacement board.
+          : pack.revision >= 25
+            ? 1628 // Preserve revision 24 credits plus a full replacement board.
+            : pack.revision >= 24
+              ? 1586 // Preserve revision 23 credits plus a full replacement board.
+              : pack.revision >= 20
+                ? 1544 // Preserve revision 19 credits plus a full replacement board.
+                : pack.revision === 19
+                  ? 1502 // Preserve revision 18 credits plus a full replacement board.
+                  : pack.revision === 18
+                    ? 1460 // Preserve revision 17 credits plus a full replacement board.
+                    : pack.revision === 17
+                      ? 1418 // Preserve revision 16 credits plus a full replacement board.
+                      : pack.revision === 16
+                        ? 1376 // Preserve revision 15 credits plus a full replacement board.
+                        : pack.revision === 15
+                          ? 1334 // Preserve revision 14 credits plus a full replacement board.
+                          : pack.revision === 14
+                            ? 1292 // Preserve revision 13 credits plus a full replacement board.
+                            : pack.revision === 13
+                              ? 1250 // Preserve prior hint credits plus a full replacement board.
+                              : pack.revision === 12
+                                ? 1208 // Preserve revision 11 credits plus one board of new hints.
+                                : pack.revision === 11
+                                  ? 1166 // Revision 10 allowance plus at most 7×5 cells and seven words.
+                                  : pack.revision === 10
+                                    ? 1124
+                                    : pack.revision === 9
+                                      ? 1082 // Revision 8 allowance plus at most 7×5 cells and seven words.
+                                      : pack.revision === 8
+                                        ? 1040 // Revision 7 allowance plus at most 7×5 cells and seven words.
+                                        : pack.revision === 7
+                                          ? 998 // Revision 6 allowance plus at most 7×5 cells and seven words.
+                                          : pack.revision === 6
+                                            ? 956 // Revision 5 allowance plus at most 7×5 cells and seven words.
+                                            : pack.revision === 5
+                                              ? 914 // Revision 4 allowance plus at most 49 cells and five words.
+                                              : pack.revision === 4
+                                                ? 860
+                                                : pack.revision === 3
+                                                  ? 430
+                                                  : cells.size +
+                                                    level.words.length,
       ),
       completed: boolean(saved.completed, 'completed'),
     };
@@ -128,6 +149,18 @@ export function parseSnapshot(value: unknown, pack: LevelPack): GameState {
     )
       throw new ContentError('Unknown legacy postcard');
   }
+  const doubledRewardLevelIds =
+    raw.doubledRewardLevelIds === undefined
+      ? undefined
+      : array(raw.doubledRewardLevelIds, 'doubled rewards').map((id) =>
+          string(id, 'doubled reward level ID'),
+        );
+  if (doubledRewardLevelIds !== undefined) {
+    unique(doubledRewardLevelIds, 'doubled rewards');
+    // Only a finished level's completion reward can have been doubled.
+    if (doubledRewardLevelIds.some((id) => !progress[id]?.completed))
+      throw new ContentError('Doubled reward for an unfinished level');
+  }
   const state: GameState = {
     schemaVersion: 1,
     packId: pack.id,
@@ -153,6 +186,7 @@ export function parseSnapshot(value: unknown, pack: LevelPack): GameState {
               level.bonusWords.length > 0,
           )
         : boolean(raw.tutorialSeen, 'tutorialSeen'),
+    ...(doubledRewardLevelIds === undefined ? {} : { doubledRewardLevelIds }),
   };
   if (!isUnlocked(state, pack, state.currentLevelId))
     throw new ContentError('Saved current level is locked');

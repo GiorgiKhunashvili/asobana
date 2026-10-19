@@ -3,7 +3,7 @@ import { DEFAULT_ECONOMY, revealedCells } from '../engine/game';
 import { solutionCells, wordCells } from '../engine/grid';
 import { ContentError, object } from '../engine/validation';
 import { parseSnapshot } from './snapshot';
-import journey from '../../../content/journey-v13.json';
+import { journeyForRevision } from '../content/journey';
 import { selectPostcards } from '../engine/postcards';
 
 /** Validate the exact old catalog before applying a supported content upgrade. */
@@ -43,7 +43,46 @@ export function restoreContent(
         pack.revision === 12) ||
       (previous.revision >= 1 &&
         previous.revision <= 12 &&
-        pack.revision === 13))
+        pack.revision === 13) ||
+      (previous.revision >= 1 &&
+        previous.revision <= 13 &&
+        pack.revision === 14) ||
+      (previous.revision >= 1 &&
+        previous.revision <= 14 &&
+        pack.revision === 15) ||
+      (previous.revision >= 1 &&
+        previous.revision <= 15 &&
+        pack.revision === 16) ||
+      (previous.revision >= 1 &&
+        previous.revision <= 16 &&
+        pack.revision === 17) ||
+      (previous.revision >= 1 &&
+        previous.revision <= 17 &&
+        pack.revision === 18) ||
+      (previous.revision >= 1 &&
+        previous.revision <= 18 &&
+        pack.revision === 19) ||
+      (previous.revision >= 1 &&
+        previous.revision <= 19 &&
+        pack.revision === 20) ||
+      (previous.revision >= 1 &&
+        previous.revision <= 20 &&
+        pack.revision === 21) ||
+      (previous.revision >= 1 &&
+        previous.revision <= 21 &&
+        pack.revision === 22) ||
+      (previous.revision >= 1 &&
+        previous.revision <= 22 &&
+        pack.revision === 23) ||
+      (previous.revision >= 1 &&
+        previous.revision <= 23 &&
+        pack.revision === 24) ||
+      (previous.revision >= 1 &&
+        previous.revision <= 24 &&
+        pack.revision === 25) ||
+      (previous.revision >= 1 &&
+        previous.revision <= 25 &&
+        pack.revision === 26))
   )
     return {
       state: migrateTopics(parseSnapshot(value, previous), previous, pack),
@@ -126,15 +165,19 @@ function migrateTopics(
   previous: LevelPack,
   pack: LevelPack,
 ): GameState {
+  const journey = journeyForRevision(pack.revision);
   for (const [index, level] of previous.levels.entries()) {
     if (
       pack.levels[index]?.id !== level.id ||
-      (pack.revision === 13 &&
+      (pack.revision >= 13 &&
         (pack.levels[index]?.chapterId !==
           journey.chapters[Math.floor(index / 5)]?.id ||
           (previous.revision >= 5 &&
+            previous.revision < 13 &&
             level.chapterId !==
-              journey.legacyChapterIds[Math.floor(index / 5)]))) ||
+              journey.legacyChapterIds[Math.floor(index / 5)]) ||
+          (previous.revision >= 13 &&
+            pack.levels[index]?.chapterId !== level.chapterId))) ||
       (previous.revision >= 5 &&
         pack.revision < 13 &&
         pack.levels[index]?.chapterId !== level.chapterId)

@@ -64,6 +64,8 @@ export interface GameState {
   readonly settings: Settings;
   /** The first-time board tutorial was finished or skipped. */
   readonly tutorialSeen: boolean;
+  /** Completed levels whose reward a watched ad already doubled (once per level). */
+  readonly doubledRewardLevelIds?: readonly string[];
 }
 export interface Economy {
   readonly initialCoins: number;
@@ -162,6 +164,8 @@ export interface GameplayView {
   readonly nextLevelId: string | null;
   readonly canUseCellHint: boolean;
   readonly canUseWordHint: boolean;
+  readonly canGetCoinsForCellHint: boolean;
+  readonly canGetCoinsForWordHint: boolean;
   readonly cellHintCost: number;
   readonly wordHintCost: number;
 }

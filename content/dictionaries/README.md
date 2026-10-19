@@ -14,7 +14,7 @@ No fake words, automated dictionary guesses or bulk dictionary imports are bundl
 The historical four crossword layouts are manually authored and mechanically validated.
 They remain as revision 1 fixtures. Revisions 2 and 3 are also retained for save
 migration; revision 4 is also retained. The active campaign is
-[revision 13](../../docs/DISCOVERY_CONTENT.md).
+[revision 26](../../docs/DISCOVERY_CONTENT.md).
 
 `beta-ka.json` records 147 selected reference-checked words with exact Wiktionary
 source revision URLs and short glosses, under the same CC BY-SA 4.0 terms. Source
@@ -160,3 +160,194 @@ The owner approved a global minimum repeat gap of 75 levels, including accepted
 variants. The journey therefore needs 1,200 answer slots, rather than 1,200 unique
 spellings. Bonuses do not reset the gap. See [the full revision-13 review](../../docs/VOCABULARY_REVIEW_V13.md)
 for individual sources, final campaign contents, pacing and actual check results.
+
+## Non-plural required vocabulary — revision 14
+
+The owner’s 2026-10-18 rule demotes the 38 individually verified plural nouns to
+**optional bonuses only**. `everyday-targets-v14.json` retains **831 non-plural
+approvals** and records every demotion, singular lemma and unchanged source link
+in `pluralReview`. `word-policy.json` stores these as revision-scoped
+`requiredExcludedCategories`, separate from exclusions from all gameplay. Python
+and TypeScript enforce the same list for answers and variants; suffixes alone do
+not establish grammatical number. This explicit list is not a complete classifier.
+
+`discovery-v13-ka.json` is unchanged: **1,312 reference entries / 1,274 playable**.
+Verified plurals and valid rare words remain recognizable bonuses. Historical
+revision-13 targets and approvals are immutable for migration. No new dictionary
+entries or frequency ranks were added. Existing editorial familiarity judgments
+are retained; no owner/native-speaker review is claimed.
+
+The campaign search prioritizes distinct required spellings within all existing
+spacing, pacing, progression and layout rules. Exact usage, unused approvals and
+limitations appear in [the revision-14 review](../../docs/VOCABULARY_REVIEW_V14.md).
+The owner can review [all 831 words](../../docs/VOCABULARY_OWNER_REVIEW_V14.md); blank
+decision fields mean pending owner review.
+
+Revision 15 records the owner’s review of the 152 unused revision-14 approvals.
+Twelve explicitly removed spellings are excluded from every gameplay role; the
+remaining 140 are owner-approved for required use under the existing rules.
+`everyday-targets-v15.json` retains all individual meanings/source provenance and
+records the review scope. There are 819 required approvals and 1,262 playable
+reference spellings. No new dictionary entries were added. Historical files and
+plural bonus eligibility remain unchanged. See [the current review](../../docs/VOCABULARY_REVIEW_V15.md).
+
+Revision 16 applies the owner’s full-pool decisions: 53 further spellings are
+excluded from all gameplay roles. Of 372 reviewed bonus spellings, exactly 325
+are promoted to required eligibility and 47 remain bonus-only. The required
+allowlist has 1,091 entries (766 retained plus 325 promoted); the unchanged
+reference dictionary has 1,209 playable spellings, including 118 bonus-only.
+The ten earlier approvals are included in the 325. Per-word meanings and source
+URLs are retained in `everyday-targets-v16.json`; no fresh dictionary ingestion
+or source verification is claimed. Historical dictionaries and allowlists are
+unchanged. See [the exact campaign audit](../../docs/VOCABULARY_REVIEW_V16.md).
+
+## Revision 17: owner-approved expansion batch 02
+
+`discovery-v17-ka.json` retains all 1,312 previous reference entries exactly and
+adds 130 individually checked noun/adjective senses explicitly approved by the
+owner from `docs/VOCABULARY_EXPANSION_BATCH_02.json`. Each addition records its
+Wiktionary URL, fixed revision ID, part of speech and concise gloss; source checks
+were completed on 2026-10-18 when preparing the batch. Attribution remains to
+Wiktionary contributors under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/);
+the brief glosses are adaptations, not independent native-speaker validation.
+Historical entry attribution and other source terms remain unchanged.
+
+The reference now contains 1,442 entries; existing all-play exclusions leave
+1,339 playable words. `everyday-targets-v17.json` contains 1,221 required approvals
+(1,091 retained + 130 new), with 118 additional bonus-only words. All plurals,
+47 owner-reserved bonus spellings and prior exclusions retain their policy status.
+The approved goal of 1,500 needs 279 more individually reviewed additions.
+Historical dictionaries and allowlists are immutable for save migration.
+
+## Revision 18: expansion batch 03 approval and exclusions
+
+`discovery-v18-ka.json` preserves all 1,442 prior reference entries exactly and
+adds 131 owner-approved senses from the 140-word batch 03 review. The nine rejected
+proposals (`ბიძია`, `გვიანი`, `დედიკო`, `მამიკო`, `მუშაკი`, `უკანა`, `წლიური`,
+`ხანი`, `ჯერი`) are not ingested and are excluded from every gameplay role through
+`owner-expansion-batch-03` from revision 18. Individual source URLs, fixed revision
+IDs, concise glosses, parts of speech and supplemental sense checks are retained.
+Sources were checked on 2026-10-18 when preparing the batch. Wiktionary adaptations
+retain contributor attribution and CC BY-SA 4.0 terms; supplemental explanatory
+dictionary text is not reproduced. No fresh native-speaker review is claimed.
+
+The new reference has 1,573 entries / 1,470 eligible playable words. The main
+allowlist has 1,352 approvals, with 118 additional bonus-only spellings. Earlier
+plural and owner reservations remain unchanged. Another 148 approvals reach the
+1,500-word goal. Historical dictionaries and allowlists remain immutable.
+
+## Revision 19: expansion batch 04
+
+The owner approved 129 of the 148 proposals in `VOCABULARY_EXPANSION_BATCH_04.json`.
+The other 19 spellings are excluded from required answers, variants and bonuses
+through `owner-expansion-batch-04`, starting with revision 19. The reference keeps
+all 1,573 previous entries exactly and adds only the 129 approved senses, for
+1,702 entries / 1,599 playable words. The main allowlist has 1,481 words; the 118
+additional bonus-only spellings retain their status. Another 19 approvals reach
+1,500. Historical dictionaries and allowlists remain immutable.
+
+Source verification was completed on 2026-10-18 for the review batch. Wiktionary
+entries retain fixed-revision links, contributor attribution and CC BY-SA 4.0
+terms. For entries verified at ganmarteba.ge (Linguistic Technologies Group),
+the URL, access-date context and source-content SHA-256 are retained; the short
+English glosses are editorial wording and no full explanatory definitions are
+reproduced. Historical attributions and source terms remain unchanged. No fresh
+native-speaker review is claimed. The owner approval applies to the recorded
+ordinary noun/adjective senses only.
+
+## Revision 20: expansion batch 05
+
+The owner approved 88 of the 100 proposals in `VOCABULARY_EXPANSION_BATCH_05.json`.
+The other 12 spellings are excluded from required answers, variants and bonuses
+through `owner-expansion-batch-05`, starting with revision 20. The reference keeps
+all 1,702 previous entries exactly and adds only the 88 approved senses, for
+1,790 entries / 1,687 playable words. The main allowlist has 1,569 words; the 118
+additional bonus-only spellings retain their status. Another 231 approvals reach
+1,800. Historical dictionaries and allowlists remain immutable.
+
+Source verification was completed on 2026-10-18 for the review batch. Wiktionary
+entries retain fixed-revision links, contributor attribution and CC BY-SA 4.0
+terms. For entries verified at ganmarteba.ge (Linguistic Technologies Group),
+the URL, access-date context and source-content SHA-256 are retained; the short
+English glosses are editorial wording and no full explanatory definitions are
+reproduced. Historical attributions and source terms remain unchanged. No fresh
+native-speaker review is claimed. The owner approval applies to the recorded
+ordinary noun/adjective senses only.
+
+## Revision 21: Malta uses existing approved vocabulary
+
+The Malta extension adds ten levels but no dictionary entries or editorial
+approvals. It reuses `discovery-v20-ka.json`, `everyday-targets-v20.json` and every
+existing word-policy decision. Counts remain 1,790 reference entries, 1,687 eligible
+words and 1,569 required-eligible words. No duplicate revision-21 dictionary files
+are needed. The current usage review is `docs/VOCABULARY_OWNER_REVIEW_V21.md`.
+
+## Revision 22: Tunisia uses existing approved vocabulary
+
+The 15-level Tunisia extension adds no dictionary entries or editorial approvals.
+It reuses `discovery-v20-ka.json`, `everyday-targets-v20.json` and all existing policy
+decisions. Counts remain 1,790 reference entries, 1,687 eligible words and 1,569
+main words. No duplicate revision-22 dictionaries are needed. The current full
+usage list is `docs/VOCABULARY_OWNER_REVIEW_V22.md`: 1,126 required words used,
+443 unused, including 30 newly used by Tunisia.
+
+## Revision 23: Spain uses existing approved vocabulary
+
+The 30-level Spain extension changes no dictionary entries, approvals or exclusions.
+It uses the revision-20 reference and allowlist: 1,790 entries, 1,687 playable words,
+1,569 main approvals and 118 additional bonus-only spellings. Plurals remain bonus-only.
+The current list is `docs/VOCABULARY_OWNER_REVIEW_V23.md`: 1,187 required words used,
+382 unused, including 61 newly used by Spain. Another 231 approvals would reach 1,800.
+
+## Revision 24: owner-approved replacements
+
+`discovery-v24-ka.json` preserves all 1,790 previous entries and adds the 29
+source-checked, owner-approved senses in `docs/VOCABULARY_REPLACEMENTS_APPROVED_01.json`.
+Its 1,819 reference entries yield 1,687 eligible spellings after policy exclusions.
+`everyday-targets-v24.json` removes exactly 29 prior approvals and adds exactly
+29 replacements, keeping 1,569 main words and the same 118 bonus-only words.
+The final choice is კოკა (traditional clay jug); unselected options are unapproved.
+The 29 removals and eight rejected proposals are excluded in all gameplay roles
+from v24, while historical data remains unchanged for save migration.
+
+Each new entry retains its checked URL, date, short adapted meaning and source
+provenance. Wiktionary contributor attribution and CC BY-SA 4.0 terms remain;
+ganmarteba.ge sources retain content hashes and short editorial glosses rather
+than full copied definitions. Source checking is not automatic word approval:
+the recorded owner review authorizes these individual senses. Current usage and
+all words are in `docs/VOCABULARY_OWNER_REVIEW_V24.md`.
+
+## Revision 25: owner-reviewed expansion batch 06
+
+`discovery-v25-ka.json` preserves all 1,819 previous reference entries unchanged
+and adds the 76 approved senses in `docs/VOCABULARY_EXPANSION_BATCH_06.json`.
+Its 1,895 reference entries yield 1,763 eligible spellings. The 1,645 entries in
+`everyday-targets-v25.json` retain every prior approval and add exactly those 76.
+The same 118 words remain bonus-only. `owner-expansion-batch-06` excludes all 24
+rejected spellings from every gameplay role beginning with v25. Historical files
+stay immutable; do not present any batch-six word as an unseen proposal again.
+
+Each addition retains its checked source URL/date, part of speech, approved sense
+and available revision/content-hash provenance. Wiktionary contributor attribution
+and CC BY-SA 4.0 terms remain. Georgian explanatory dictionary, University of
+Georgia synonym dictionary, CSS social-sciences dictionary and NPLG dictionary
+links support short editorial glosses; full definitions are not copied. Source
+checking alone is not approval: the individual owner decisions authorize these
+senses. Current usage is in `docs/VOCABULARY_OWNER_REVIEW_V25.md`.
+
+## Revision 26: owner-reviewed expansion batch 07
+
+`discovery-v26-ka.json` preserves all 1,895 previous reference entries unchanged
+and adds the 75 approved senses in `docs/VOCABULARY_EXPANSION_BATCH_07.json`.
+Its 1,970 reference entries yield 1,838 eligible spellings. The 1,720 entries in
+`everyday-targets-v26.json` retain every prior approval and add exactly those 75.
+The same 118 words remain bonus-only. `owner-expansion-batch-07` excludes all 25
+rejected spellings from every gameplay role beginning with v26. Historical files
+stay immutable; do not present any batch-seven word as an unseen proposal again.
+
+Each addition retains its checked source URL/date, part of speech, approved sense
+and available revision/content-hash provenance. Wiktionary contributor attribution
+and CC BY-SA 4.0 terms remain. Georgian explanatory dictionary links support short
+editorial glosses; full definitions are not copied. Source checking alone is not
+approval: individual owner decisions authorize these senses. Current usage is in
+`docs/VOCABULARY_OWNER_REVIEW_V26.md`.

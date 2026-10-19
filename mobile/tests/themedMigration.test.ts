@@ -58,7 +58,7 @@ describe.each(previousCatalogs)(
         expect(revealedCells(level, current).size).toBeGreaterThan(0);
         expect(upgraded.settings).toEqual(state.settings);
         expect(upgraded.coins).toBe(
-          state.coins + (current.completed && !saved.completed ? 25 : 0),
+          state.coins + (current.completed && !saved.completed ? 20 : 0),
         );
         expect(parseSnapshot(upgraded, catalog)).toEqual(upgraded);
       }
@@ -112,7 +112,7 @@ test('completion credits from a longer old board pay once and hints survive smal
   expect(state.progress[old.id]?.completed).toBe(false);
   const upgraded = restoreContent(state, target, previousCatalogs).state;
   expect(upgraded.progress[old.id]?.completed).toBe(true);
-  expect(upgraded.coins).toBe(state.coins + 25);
+  expect(upgraded.coins).toBe(state.coins + 20);
   expect(restoreContent(upgraded, target, previousCatalogs).state.coins).toBe(
     upgraded.coins,
   );

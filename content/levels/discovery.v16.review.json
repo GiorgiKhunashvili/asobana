@@ -1,0 +1,7 @@
+{
+  "revision": 16,
+  "draftSha256": "4aef34914119983051d6fb0dff807e2190d4af100f20cefb3a4bbed9260d6939",
+  "reviewedAt": "2026-10-18",
+  "reviewer": "Codex assistant audit against explicit owner vocabulary decisions and existing reference provenance",
+  "scope": "All 865 distinct required spellings and 1200 canonical-only answer slots checked against the exact 1091-word allowlist, recorded senses and source URLs. Exactly 325 of the reviewed 372 bonus spellings are owner-approved for required use; the other 47 remain bonus-only. All 53 new owner exclusions are absent from required answers, variants and bonuses. Plural and other historical exclusions remain enforced. All 240 boards pass unchanged layout, pacing, progression and 75-level gap gates. No fresh source verification, native-device test or global optimality claim. Historical revisions 1–15 retained. See docs/VOCABULARY_REVIEW_V16.md."
+}

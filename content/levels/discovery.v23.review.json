@@ -1,0 +1,7 @@
+{
+  "revision": 23,
+  "draftSha256": "ebede623bac2e990edc35c7e5b25360f138ff77ff5c809a041346964ae15c92d",
+  "reviewedAt": "2026-10-18",
+  "reviewer": "Codex assistant audit of the owner-authorized Spain extension using previously approved vocabulary",
+  "scope": "All 1475 required slots and canonical-only variants checked against the existing 1569-word revision-20 allowlist and all exclusions. First 265 boards preserved exactly; all 150 appended answers source-matched, individually audited, and distinct within Spain. 61 previously unused approved spellings enter required play. Every eligible formable bonus is retained. All 295 boards pass unchanged 75-level gap, layout, density, phone-size, wheel, length and chapter pacing gates. Barcelona 266–270, Valencia 271–275, Madrid 276–280, Granada 281–285, Cordoba 286–290, Seville 291–295. Historical content and dictionaries unchanged. No global-optimum or native-device-testing claim. See docs/VOCABULARY_REVIEW_V23.md."
+}

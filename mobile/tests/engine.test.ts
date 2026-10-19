@@ -97,17 +97,17 @@ describe('rules', () => {
     state = submit(state, first, 'მზე').state;
     const completed = submit(state, first, 'მე');
     state = completed.state;
-    expect(state.coins).toBe(125);
+    expect(state.coins).toBe(220);
     expect(state.progress[first.id]?.completed).toBe(true);
     expect(isUnlocked(state, catalog, family.id)).toBe(true);
     expect(isUnlocked(state, catalog, home.id)).toBe(false);
     expect(completed.events).toContainEqual({
       type: 'level-completed',
       levelId: first.id,
-      reward: 25,
+      reward: 20,
       nextLevelId: family.id,
     });
-    expect(submit(state, first, 'მე').state.coins).toBe(125);
+    expect(submit(state, first, 'მე').state.coins).toBe(220);
     const opened = transition(
       state,
       { type: 'open-level', levelId: family.id },
@@ -133,7 +133,7 @@ describe('rules', () => {
       { type: 'hint', levelId: first.id, kind: 'cell' },
       catalog,
     ).state;
-    expect(state.coins).toBe(85);
+    expect(state.coins).toBe(180);
     expect(state.progress[first.id]?.revealedCellIds).toEqual(['0:0']);
     expect(state.progress[first.id]?.hintsUsed).toBe(1);
     state = transition(
@@ -141,13 +141,13 @@ describe('rules', () => {
       { type: 'hint', levelId: first.id, kind: 'word' },
       catalog,
     ).state;
-    expect(state.coins).toBe(45);
+    expect(state.coins).toBe(130);
     state = transition(
       state,
       { type: 'hint', levelId: first.id, kind: 'cell' },
       catalog,
     ).state;
-    expect(state.coins).toBe(55);
+    expect(state.coins).toBe(130);
     expect(state.progress[first.id]?.completed).toBe(true);
     expect(state.progress[first.id]?.hintsUsed).toBe(3);
     expect(
@@ -159,7 +159,7 @@ describe('rules', () => {
     ).toBe(state);
   });
   test('hint cannot spend below zero or bypass content restrictions', () => {
-    const state = { ...initialState(catalog), coins: 14 };
+    const state = { ...initialState(catalog), coins: 19 };
     expect(selectGameplay(state, catalog).canUseCellHint).toBe(false);
     expect(
       transition(

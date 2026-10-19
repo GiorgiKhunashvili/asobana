@@ -204,15 +204,15 @@ describe('tutorial on the board', () => {
 
 test('the copy names the hint prices and bonus reward from the economy', () => {
   const [, hints, , bonus] = tutorialSteps();
-  expect(hints?.body).toContain('ერთ ასოს გახსნის — 15 მონეტა');
-  expect(hints?.body).toContain('მთელ სიტყვას გახსნის — 40 მონეტა');
+  expect(hints?.body).toContain('ერთ ასოს გახსნის — 20 მონეტა');
+  expect(hints?.body).toContain('მთელ სიტყვას გახსნის — 50 მონეტა');
   expect(bonus?.body).toContain('თითო ბონუს სიტყვა 3 მონეტაა, ყოველი 10 კი');
   const dearer = tutorialSteps({
     ...DEFAULT_ECONOMY,
-    cellHintCost: 20,
+    cellHintCost: 30,
     wordHintCost: 55,
   });
-  expect(dearer[1]?.body).toContain('20 მონეტა');
+  expect(dearer[1]?.body).toContain('30 მონეტა');
   expect(dearer[1]?.body).toContain('55 მონეტა');
   expect(tutorialSteps().map((step) => step.anchor)).toEqual([
     'wheel',
@@ -274,8 +274,27 @@ describe('save', () => {
     const level = catalog.levels[0]!;
     const oneWord = submit(fresh, level, level.words[0]!.answer).state;
     expect(parseSnapshot(strip(oneWord), catalog).tutorialSeen).toBe(true);
-    const bonusOnly = submit(fresh, level, level.bonusWords[0]!).state;
-    expect(parseSnapshot(strip(bonusOnly), catalog).tutorialSeen).toBe(true);
+    // A real bonus-bearing board placed first isolates bonus discovery from
+    // the progress required to unlock that board in the current campaign.
+    const bonusTemplate = catalog.levels.find(
+      (entry) => entry.bonusWords.length,
+    )!;
+    const bonusLevel = {
+      ...bonusTemplate,
+      id: level.id,
+      chapterId: level.chapterId,
+    };
+    const bonusPack = {
+      ...catalog,
+      levels: [bonusLevel, ...catalog.levels.slice(1)],
+    };
+    const bonusOnly = submit(
+      initialState(bonusPack),
+      bonusLevel,
+      bonusLevel.bonusWords[0]!,
+      bonusPack,
+    ).state;
+    expect(parseSnapshot(strip(bonusOnly), bonusPack).tutorialSeen).toBe(true);
     expect(parseSnapshot(strip(reachLevel(12)), catalog).tutorialSeen).toBe(
       true,
     );
@@ -298,7 +317,7 @@ describe('save', () => {
   });
 
   test('content upgrades keep coins and progress and carry the flag across', () => {
-    const v12 = previousCatalogs[previousCatalogs.length - 1]!;
+    const v12 = previousCatalogs.find((pack) => pack.revision === 12)!;
     expect(v12.revision).toBe(12);
     const played = reachLevel(3, v12);
     const { tutorialSeen: _, ...old } = played;

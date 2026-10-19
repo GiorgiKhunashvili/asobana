@@ -1,5 +1,5 @@
 import { discoveryDifficulty } from '../src/content/discovery';
-import manifest from '../../content/levels/discovery.v13.recipes.json';
+import manifest from '../../content/levels/discovery.v26.recipes.json';
 import { catalog, previousCatalogs, vocabulary } from '../src/content/catalog';
 import { projectBoard, validateWide } from '../src/content/wide';
 import { solutionCells } from '../src/engine/grid';
@@ -11,7 +11,7 @@ test('the journey preserves historical level IDs in order while assigning the ne
   expect(catalog.levels.slice(0, 50).map((level) => level.id)).toEqual(
     previous.levels.map((level) => level.id),
   );
-  expect(catalog.chapters).toHaveLength(48);
+  expect(catalog.chapters).toHaveLength(59);
   expect(catalog.chapters[0]!.id).toBe('tbilisi');
 });
 
@@ -123,9 +123,16 @@ test('a separated word cannot pass the wide release gate', () => {
 });
 
 test('a two-letter answer cannot be smuggled in as a registered accidental run', () => {
-  const base = catalog.levels.find((level) =>
-    level.words.some((word) => word.answer === 'აბი'),
+  // Shortening a target lowers its difficulty by two. Keep chapter pacing valid
+  // so the fixture reaches the target-length gate rather than a pacing error.
+  const base = catalog.levels.find(
+    (level, index) =>
+      index % 5 !== 2 &&
+      (catalog.levels[index + 1]?.difficulty.score ?? 0) <=
+        level.difficulty.score + 8 &&
+      level.words.some((word) => word.answer === 'აბი'),
   )!;
+  expect(base).toBeDefined();
   const words = base.words.map((word) =>
     word.answer === 'აბი'
       ? { ...word, answer: 'ია', acceptedAnswers: ['ია'] }

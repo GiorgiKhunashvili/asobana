@@ -16,6 +16,6 @@ test('every journey stop has its own short postcard caption', () => {
     expect(caption!.length).toBeLessThanOrEqual(64);
     return caption;
   });
-  expect(captions).toHaveLength(48);
+  expect(captions).toHaveLength(59);
   expect(new Set(captions).size).toBe(captions.length);
 });

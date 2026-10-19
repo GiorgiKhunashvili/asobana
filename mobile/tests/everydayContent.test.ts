@@ -1,6 +1,7 @@
 import review from '../../content/dictionaries/everyday-targets-v12.json';
+import ownerReview from '../../content/dictionaries/everyday-targets-v16.json';
 import oldManifest from '../../content/levels/discovery.v11.recipes.json';
-import manifest from '../../content/levels/discovery.v13.recipes.json';
+import manifest from '../../content/levels/discovery.v26.recipes.json';
 import {
   catalog,
   previousCatalogs,
@@ -10,6 +11,8 @@ import {
 import {
   everydayRequiredWords,
   excludedWords,
+  excludedRequiredWordsForRevision,
+  requiredWordsForRevision,
 } from '../src/content/wordPolicy';
 import { validateWide } from '../src/content/wide';
 import { hitTest, layoutWheel } from '../src/engine/wheel';
@@ -30,9 +33,13 @@ test('every previous answer has an explicit review and every new answer is appro
     .map((entry) => entry.word);
   expect(demoted).toHaveLength(88);
   for (const word of [...demoted, 'ურცი', 'რაზა', 'თელა']) {
-    expect(everydayRequiredWords.has(word)).toBe(false);
+    expect(requiredWordsForRevision(12).has(word)).toBe(false);
+    if (everydayRequiredWords.has(word))
+      expect(ownerReview.ownerReview.approvedBonusWords).toContain(word);
     expect(vocabulary.has(word)).toBe(!excludedWords.has(word));
   }
+  for (const word of ['ურცი', 'რაზა', 'თელა'])
+    expect(everydayRequiredWords.has(word)).toBe(false);
   for (const word of everydayRequiredWords) {
     expect(vocabulary.has(word)).toBe(true);
     expect(excludedWords.has(word)).toBe(false);
@@ -40,7 +47,7 @@ test('every previous answer has an explicit review and every new answer is appro
   const answers = catalog.levels.flatMap((level) =>
     level.words.flatMap((word) => word.acceptedAnswers),
   );
-  expect(answers).toHaveLength(1200);
+  expect(answers).toHaveLength(1475);
   expect(new Set(answers).size).toBeGreaterThanOrEqual(375);
   expect(answers.every((answer) => everydayRequiredWords.has(answer))).toBe(
     true,
@@ -57,12 +64,18 @@ test('every previous answer has an explicit review and every new answer is appro
 
 test('rare valid words earn optional bonus rewards but cannot become required variants', () => {
   const index = catalog.levels.findIndex((level) =>
-    level.bonusWords.some((word) => !everydayRequiredWords.has(word)),
+    level.bonusWords.some(
+      (word) =>
+        !everydayRequiredWords.has(word) &&
+        !excludedRequiredWordsForRevision(catalog.revision).has(word),
+    ),
   );
   expect(index).toBeGreaterThanOrEqual(0);
   const level = catalog.levels[index]!;
   const bonus = level.bonusWords.find(
-    (word) => !everydayRequiredWords.has(word),
+    (word) =>
+      !everydayRequiredWords.has(word) &&
+      !excludedRequiredWordsForRevision(catalog.revision).has(word),
   )!;
   const before = reachLevel(index);
   const result = submit(before, level, bonus);

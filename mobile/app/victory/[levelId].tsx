@@ -1,6 +1,6 @@
 import { router, useLocalSearchParams } from 'expo-router';
 import { useState } from 'react';
-import { StyleSheet, View, useWindowDimensions } from 'react-native';
+import { Pressable, StyleSheet, View, useWindowDimensions } from 'react-native';
 import Animated, {
   FadeIn,
   FadeInDown,
@@ -9,13 +9,20 @@ import Animated, {
 } from 'react-native-reanimated';
 import { PrimaryButton, SecondaryButton } from '../../src/components/Buttons';
 import { CoinBadge, CoinGlyph } from '../../src/components/CoinBadge';
+import {
+  DoubleRewardButton,
+  DoubledRewardTag,
+} from '../../src/components/DoubleRewardButton';
 import { PlaceFact } from '../../src/components/PlaceFact';
 import { Postcard } from '../../src/components/Postcard';
 import { BonusMeter } from '../../src/components/BonusMeter';
 import { VictoryLogo } from '../../src/components/Logo';
 import { Screen, TopBar } from '../../src/components/Screen';
 import { Display, Txt } from '../../src/components/Text';
+import { levelDoubleMessages } from '../../src/ads/messages';
+import { useLevelRewardAd } from '../../src/ads/useLevelRewardAd';
 import { catalog } from '../../src/content/catalog';
+import { LEVEL_DOUBLE_COINS } from '../../src/engine/adRewards';
 import { BONUS_GOAL, freeCellHints } from '../../src/engine/bonusRewards';
 import { selectPostcards } from '../../src/engine/postcards';
 import { routes, singleParam, toJourney } from '../../src/navigation/routes';
@@ -45,6 +52,15 @@ export default function Victory() {
   const id = singleParam(params.levelId);
   const game = useGameStore((state) => state.game);
   const [reward] = useState(() => freshReward(id));
+  const doubled = Boolean(id && game?.doubledRewardLevelIds?.includes(id));
+  // The optional ×2 ad accompanies a reward just earned on the board, never a
+  // reopened level, and pays once per level (the save enforces it too).
+  const offerDouble =
+    reward !== null &&
+    reward > 0 &&
+    !doubled &&
+    Boolean(id && game?.progress[id]?.completed);
+  const ad = useLevelRewardAd(offerDouble, id ?? '');
   const { width } = useWindowDimensions();
   const tone = levelTone(id);
   if (!game || !id || !game.progress[id]?.completed)
@@ -66,6 +82,7 @@ export default function Victory() {
   const nextLevel = nextUnfinished(game);
   const next = nextLevel?.id ?? null;
   const progress = game.progress[id];
+  const shownReward = (reward ?? 0) + (doubled ? LEVEL_DOUBLE_COINS : 0);
   const emblem = Math.min(width * 0.46, 190);
   const chapterCard = selectPostcards(game, catalog).find(
     (card) => card.chapterId === level?.chapterId,
@@ -151,16 +168,63 @@ export default function Victory() {
       {reward !== null && reward > 0 && (
         <Animated.View
           entering={ZoomIn.delay(520).springify().damping(15)}
-          accessible
-          accessibilityLabel={`ჯილდო ${reward} მონეტა`}
-          style={styles.reward}
+          style={styles.rewardRow}
         >
-          <CoinGlyph size={26} />
-          <Txt variant="number" color={palette.ink} style={styles.rewardText}>
-            +{reward}
-          </Txt>
+          <View
+            accessible
+            accessibilityLabel={`ჯილდო ${shownReward} მონეტა`}
+            style={styles.reward}
+          >
+            <CoinGlyph size={26} />
+            <Txt variant="number" color={palette.ink} style={styles.rewardText}>
+              +{shownReward}
+            </Txt>
+          </View>
+          {doubled ? (
+            <Animated.View entering={ZoomIn.springify().damping(12)}>
+              <DoubledRewardTag />
+            </Animated.View>
+          ) : (
+            offerDouble &&
+            ad.status !== 'unavailable' && (
+              <DoubleRewardButton
+                retrySave={ad.status === 'save-error'}
+                waiting={ad.pending}
+                disabled={ad.blocked}
+                onPress={() => {
+                  if (!ad.blocked) void ad.watch();
+                }}
+              />
+            )
+          )}
         </Animated.View>
       )}
+      {offerDouble &&
+        ad.engaged &&
+        ad.mine &&
+        !['showing', 'ready'].includes(ad.status) && (
+          <View style={styles.adNotice} testID="victory-double-notice">
+            <Txt
+              variant="caption"
+              accessibilityLiveRegion="polite"
+              style={[styles.centered, onScene]}
+            >
+              {levelDoubleMessages[ad.status]}
+            </Txt>
+            {ad.pending && (
+              <Pressable
+                accessibilityRole="button"
+                onPress={ad.cancel}
+                hitSlop={space.md}
+                testID="victory-double-cancel"
+              >
+                <Txt variant="label" color={palette.goldLight} style={onScene}>
+                  გაუქმება
+                </Txt>
+              </Pressable>
+            )}
+          </View>
+        )}
       {arrival && (
         <Animated.View
           entering={FadeIn.delay(600).duration(500)}
@@ -236,6 +300,17 @@ const styles = StyleSheet.create({
   fact: { width: '100%', maxWidth: 400 },
   emblem: { marginTop: -space.xl },
   title: { alignItems: 'center', gap: space.xs, marginTop: -space.xl },
+  rewardRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: space.md,
+  },
+  adNotice: {
+    alignItems: 'center',
+    gap: space.xs,
+    marginTop: -space.sm,
+    paddingHorizontal: space.lg,
+  },
   reward: {
     flexDirection: 'row',
     alignItems: 'center',

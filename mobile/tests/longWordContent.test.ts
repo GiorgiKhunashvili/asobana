@@ -1,4 +1,4 @@
-import manifest from '../../content/levels/discovery.v13.recipes.json';
+import manifest from '../../content/levels/discovery.v26.recipes.json';
 import { catalog, previousCatalogs, vocabulary } from '../src/content/catalog';
 import { validateWide, validateWordLengths } from '../src/content/wide';
 import { transition } from '../src/engine/game';
@@ -117,7 +117,7 @@ test.each([10, 11])(
       const repo = createSqliteRepository(db, catalog, previousCatalogs);
       const upgraded = (await repo.load())!;
       const state = upgraded.state;
-      expect(state.contentRevision).toBe(13);
+      expect(state.contentRevision).toBe(catalog.revision);
       expect(state.progress['ka-001']!.hintsUsed).toBe(hintLimit);
       expect(state.currentLevelId).toBe('ka-025');
       expect(state.coins).toBe(old.coins);

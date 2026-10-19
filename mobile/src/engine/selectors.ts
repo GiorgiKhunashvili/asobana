@@ -52,6 +52,15 @@ export function selectGameplay(
       !progress.completed &&
       level.hints.allowWord &&
       state.coins >= economy.wordHintCost,
+    canGetCoinsForCellHint:
+      !progress.completed &&
+      level.hints.allowCell &&
+      freeCellHints(state) === 0 &&
+      state.coins < economy.cellHintCost,
+    canGetCoinsForWordHint:
+      !progress.completed &&
+      level.hints.allowWord &&
+      state.coins < economy.wordHintCost,
     cellHintCost: freeCellHints(state) > 0 ? 0 : economy.cellHintCost,
     wordHintCost: economy.wordHintCost,
   };

@@ -1,0 +1,7 @@
+{
+  "revision": 25,
+  "draftSha256": "c52c8a13d24de7d99f0d314f749cd279f86c777483e613efff843e21764c2e15",
+  "reviewedAt": "2026-10-19",
+  "reviewer": "Codex assistant policy/provenance audit following owner vocabulary review",
+  "scope": "All 1475 required slots and canonical-only variants checked against the 1645-word owner-approved allowlist and source-linked senses; all eligible formable bonuses verified. Exact 76 approved batch-six senses added, all 24 rejections excluded from every gameplay role. All 295 boards pass unchanged gates. 1210 distinct required words, 265 repeated slots; 50 new approvals used. Historical content hashes unchanged. Bounded search, no global optimum or native-device playtest claim. See docs/VOCABULARY_REVIEW_V25.md."
+}

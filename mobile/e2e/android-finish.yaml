@@ -12,7 +12,7 @@ appId: host.exp.Exponent
     id: tap-tile-tile-3
 - tapOn:
     id: tap-submit
-- assertVisible: '125 მონეტა'
+- assertVisible: '220 მონეტა'
 # Completion fires the board, then hands off to the victory screen by itself.
 - extendedWaitUntil:
     visible:
@@ -22,5 +22,5 @@ appId: host.exp.Exponent
     id: victory-next
 - assertVisible: 'ოჯახი'
 - assertVisible: '0/2 სიტყვა · ბონუსი 0'
-- assertVisible: '125 მონეტა'
+- assertVisible: '220 მონეტა'
 - runFlow: android-restart.yaml

@@ -1,4 +1,4 @@
-import manifest from '../../content/levels/discovery.v13.recipes.json';
+import manifest from '../../content/levels/discovery.v26.recipes.json';
 import { catalog, previousCatalogs, vocabulary } from '../src/content/catalog';
 import { validateWide } from '../src/content/wide';
 import { excludedWords } from '../src/content/wordPolicy';
@@ -91,7 +91,7 @@ test('a shipped v6 save migrates once, retaining paid hints and coins from a ret
     const repo = createSqliteRepository(db, catalog, previousCatalogs);
     const migrated = (await repo.load())!;
     expect(migrated.revision).toBe(2);
-    expect(migrated.state.contentRevision).toBe(13);
+    expect(migrated.state.contentRevision).toBe(catalog.revision);
     expect(migrated.state.currentLevelId).toBe(old.currentLevelId);
     expect(migrated.state.coins).toBe(old.coins);
     expect(migrated.state.progress['ka-001']!.completed).toBe(true);

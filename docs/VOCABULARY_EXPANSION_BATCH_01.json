@@ -1,0 +1,3632 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-18",
+  "status": "resolved-by-owner-full-bonus-review",
+  "approvedVocabularyGoal": 1500,
+  "activeRevision": 15,
+  "activeApprovedCount": 819,
+  "previouslyOwnerApprovedForNextRevision": [
+    {
+      "word": "ნამი",
+      "gloss": "dew, morning dew",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ნამი&oldid=91716533",
+      "ownerDecision": "required-eligible"
+    },
+    {
+      "word": "ნალი",
+      "gloss": "horseshoe",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ნალი&oldid=84117544",
+      "ownerDecision": "required-eligible"
+    },
+    {
+      "word": "თიხა",
+      "gloss": "clay",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=თიხა&oldid=87990423",
+      "ownerDecision": "required-eligible"
+    },
+    {
+      "word": "ლორი",
+      "gloss": "ham",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ლორი&oldid=84116556",
+      "ownerDecision": "required-eligible"
+    },
+    {
+      "word": "ბოლოკი",
+      "gloss": "radish",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბოლოკი&oldid=91412000",
+      "ownerDecision": "required-eligible"
+    },
+    {
+      "word": "მგელი",
+      "gloss": "wolf",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მგელი&oldid=92197078",
+      "ownerDecision": "required-eligible"
+    },
+    {
+      "word": "ბგერა",
+      "gloss": "sound",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბგერა&oldid=88996488",
+      "ownerDecision": "required-eligible"
+    },
+    {
+      "word": "დოლი",
+      "gloss": "drum",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=დოლი&oldid=88002790",
+      "ownerDecision": "required-eligible"
+    },
+    {
+      "word": "კაუჭი",
+      "gloss": "hook",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კაუჭი&oldid=88081762",
+      "ownerDecision": "required-eligible"
+    },
+    {
+      "word": "იდაყვი",
+      "gloss": "elbow",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=იდაყვი&oldid=90005976",
+      "ownerDecision": "required-eligible"
+    }
+  ],
+  "approvedIncludingPendingRebuild": 829,
+  "candidateCount": 135,
+  "countsByLength": {
+    "3": 4,
+    "4": 51,
+    "5": 42,
+    "6": 38
+  },
+  "ifAllApprovedCount": 964,
+  "remainingToGoalIfAllApproved": 536,
+  "scope": "New required-answer approvals from the existing reference/bonus dictionary. No active allowlist or campaign changes.",
+  "selection": "Individually selected non-plural noun senses, prioritizing five/six-letter answers and usable crossings. Every candidate has a regenerated draft with four already-approved companions.",
+  "limitations": [
+    "Dictionary attestation does not establish everyday familiarity; owner review remains pending.",
+    "Draft examples validate individual boards, not campaign placement, global wheel uniqueness, pacing, six-letter quotas or the 75-level gap.",
+    "No guarantee that all approved candidates can appear in the next campaign or that 1500 approvals eliminate repetition."
+  ],
+  "sourceAttribution": "Existing discovery-v13-ka.json entries; individual fixed-revision Wiktionary links below. See content/dictionaries/README.md for licensing and provenance.",
+  "entries": [
+    {
+      "number": 1,
+      "word": "აბზაცი",
+      "letters": 6,
+      "proposedMeaning": "paragraph",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=აბზაცი&oldid=91914485",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["აბზაცი", "აბი", "აზრი", "ბაზა", "ბრაზი"],
+        "wheel": "ააბზირც",
+        "seed": 7,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.5667,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 2,
+      "word": "აბჯარი",
+      "letters": 6,
+      "proposedMeaning": "armor",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=აბჯარი&oldid=89915412",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["აბჯარი", "ბაზა", "ბზარი", "იჯარა", "ჯაზი"],
+        "wheel": "ააბზირჯ",
+        "seed": 2,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6333,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 3,
+      "word": "აკვანი",
+      "letters": 6,
+      "proposedMeaning": "cradle",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=აკვანი&oldid=85048814",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["აკვანი", "ნავი", "ყავა", "ყანა", "ყინვა"],
+        "wheel": "აავიკნყ",
+        "seed": 6,
+        "transpose": false,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 4,
+      "word": "აკნე",
+      "letters": 4,
+      "proposedMeaning": "acne",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=აკნე&oldid=84112400",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["აკნე", "ალი", "მელანი", "ნაკლი", "ნალი"],
+        "wheel": "აეიკლმნ",
+        "seed": 5,
+        "transpose": false,
+        "unusedPartners": ["ნალი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["კენკრა"]
+    },
+    {
+      "number": 5,
+      "word": "ალიონი",
+      "letters": 6,
+      "proposedMeaning": "dawn",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ალიონი&oldid=84112474",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ალი", "ალიონი", "იოლი", "ლიმონი", "ნალი"],
+        "wheel": "აიილმნო",
+        "seed": 8,
+        "transpose": false,
+        "unusedPartners": ["ლიმონი", "ნალი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5429,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["ლიმონი"]
+    },
+    {
+      "number": 6,
+      "word": "ამწე",
+      "letters": 4,
+      "proposedMeaning": "crane",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ამწე&oldid=33588412",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ამწე", "მიწა", "ნამი", "წვენი", "წვიმა"],
+        "wheel": "აევიმნწ",
+        "seed": 14,
+        "transpose": true,
+        "unusedPartners": ["ნამი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 7,
+      "word": "ანძა",
+      "letters": 4,
+      "proposedMeaning": "mast",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ანძა&oldid=84097365",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ანძა", "გალია", "განძი", "ნალი", "ძალა"],
+        "wheel": "ააგილნძ",
+        "seed": 8,
+        "transpose": false,
+        "unusedPartners": ["ნალი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 8,
+      "word": "არენა",
+      "letters": 5,
+      "proposedMeaning": "arena",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=არენა&oldid=84097397",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["არენა", "არმია", "ერი", "მანერა", "ნამი"],
+        "wheel": "ააეიმნრ",
+        "seed": 1,
+        "transpose": true,
+        "unusedPartners": ["მანერა", "ნამი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5429,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["მანერა"]
+    },
+    {
+      "number": 9,
+      "word": "არფა",
+      "letters": 4,
+      "proposedMeaning": "harp",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=არფა&oldid=93122307",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["არფა", "მარტო", "ტაფა", "ტომარა", "ფორმა"],
+        "wheel": "აამორტფ",
+        "seed": 8,
+        "transpose": false,
+        "unusedPartners": ["ტომარა"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5429,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["კამერა", "ტომარა"]
+    },
+    {
+      "number": 10,
+      "word": "ასთმა",
+      "letters": 5,
+      "proposedMeaning": "asthma",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ასთმა&oldid=84097441",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ასანთი", "ასთმა", "თასი", "თასმა", "ნამი"],
+        "wheel": "აათიმნს",
+        "seed": 7,
+        "transpose": true,
+        "unusedPartners": ["ასანთი", "ნამი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5429,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["ასანთი"]
+    },
+    {
+      "number": 11,
+      "word": "ატლასი",
+      "letters": 6,
+      "proposedMeaning": "atlas",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ატლასი&oldid=84097471",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ალი", "ასი", "ატლასი", "საღი", "ტალღა"],
+        "wheel": "ააილსტღ",
+        "seed": 13,
+        "transpose": true,
+        "unusedPartners": ["ტალღა"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.5667,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["ტალღა"]
+    },
+    {
+      "number": 12,
+      "word": "აფრა",
+      "letters": 4,
+      "proposedMeaning": "sail",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=აფრა&oldid=84113118",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["აფრა", "კამერა", "კაფე", "კეფა", "ფერმა"],
+        "wheel": "ააეკმრფ",
+        "seed": 13,
+        "transpose": false,
+        "unusedPartners": ["კამერა"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["კამერა"]
+    },
+    {
+      "number": 13,
+      "word": "ბალახი",
+      "letters": 6,
+      "proposedMeaning": "grass",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბალახი&oldid=85585178",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ათი", "ბალახი", "თიხა", "თხა", "ხალათი"],
+        "wheel": "ააბთილხ",
+        "seed": 3,
+        "transpose": true,
+        "unusedPartners": ["თიხა"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 14,
+      "word": "ბალეტი",
+      "letters": 6,
+      "proposedMeaning": "ballet",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბალეტი&oldid=84097557",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ბალეტი", "ბალი", "კაბელი", "კიბე", "კლიტე"],
+        "wheel": "აბეიკლტ",
+        "seed": 14,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6333,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 15,
+      "word": "ბალთა",
+      "letters": 5,
+      "proposedMeaning": "buckle",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბალთა&oldid=84097562",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ალი", "ბალთა", "ბალი", "თიხა", "ხალათი"],
+        "wheel": "ააბთილხ",
+        "seed": 16,
+        "transpose": true,
+        "unusedPartners": ["თიხა"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 16,
+      "word": "ბაქანი",
+      "letters": 6,
+      "proposedMeaning": "platform",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბაქანი&oldid=84113388",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["აბანო", "ბანქო", "ბაქანი", "ბინა", "ობი"],
+        "wheel": "ააბინოქ",
+        "seed": 12,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6333,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 17,
+      "word": "ბაწარი",
+      "letters": 6,
+      "proposedMeaning": "string, cord",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბაწარი&oldid=92228016",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["აბი", "არმია", "ბაწარი", "ბრმა", "წარბი"],
+        "wheel": "ააბიმრწ",
+        "seed": 10,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5429,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 18,
+      "word": "ბელი",
+      "letters": 4,
+      "proposedMeaning": "bear cub",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბელი&oldid=91740617",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ბელი", "გველი", "გლუვი", "გუბე", "გული"],
+        "wheel": "ბგევილუ",
+        "seed": 9,
+        "transpose": true,
+        "unusedPartners": ["გუბე"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["ბალიში", "გუბე"]
+    },
+    {
+      "number": 19,
+      "word": "ბეღურა",
+      "letters": 6,
+      "proposedMeaning": "sparrow",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბეღურა&oldid=84757232",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ბაღი", "ბერი", "ბეღურა", "ბურღი", "ღრუ"],
+        "wheel": "აბეირუღ",
+        "seed": 6,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 20,
+      "word": "ბეჭი",
+      "letters": 4,
+      "proposedMeaning": "shoulder blade",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბეჭი&oldid=89438383",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["აბი", "ბარგი", "ბგერა", "ბეჭი", "გარე"],
+        "wheel": "აბგეირჭ",
+        "seed": 9,
+        "transpose": false,
+        "unusedPartners": ["ბგერა"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 21,
+      "word": "ბზა",
+      "letters": 3,
+      "proposedMeaning": "box tree",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბზა&oldid=84113487",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ბაბუა", "ბაზა", "ბამბა", "ბზა", "მზა"],
+        "wheel": "ააბბზმუ",
+        "seed": 3,
+        "transpose": false,
+        "unusedPartners": ["ბაბუა", "ბამბა"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4571,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": [
+        "ანბანი",
+        "ბაბუა",
+        "ბამბა",
+        "ბანანი",
+        "გუბე"
+      ]
+    },
+    {
+      "number": 22,
+      "word": "ბზიკი",
+      "letters": 5,
+      "proposedMeaning": "wasp",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბზიკი&oldid=84113490",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["აბი", "ალი", "ბალი", "ბზიკი", "კბილი"],
+        "wheel": "აბზიიკლ",
+        "seed": 9,
+        "transpose": false,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4571,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 23,
+      "word": "ბინდი",
+      "letters": 5,
+      "proposedMeaning": "twilight",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბინდი&oldid=85068323",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["აბი", "ბინდი", "მინა", "ნადიმი", "ნამი"],
+        "wheel": "აბდიიმნ",
+        "seed": 3,
+        "transpose": false,
+        "unusedPartners": ["ნამი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 24,
+      "word": "ბირთვი",
+      "letters": 6,
+      "proposedMeaning": "core",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბირთვი&oldid=84113525",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ბევრი", "ბირთვი", "ერთი", "ერი", "თვე"],
+        "wheel": "ბევთიირ",
+        "seed": 9,
+        "transpose": false,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 25,
+      "word": "ბმული",
+      "letters": 5,
+      "proposedMeaning": "link",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბმული&oldid=84113566",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ბმული", "გემი", "გუბე", "მგელი", "უმი"],
+        "wheel": "ბგეილმუ",
+        "seed": 5,
+        "transpose": true,
+        "unusedPartners": ["გუბე", "მგელი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["გუბე"]
+    },
+    {
+      "number": 26,
+      "word": "ბოლქვი",
+      "letters": 6,
+      "proposedMeaning": "bulb",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბოლქვი&oldid=84097704",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["აბი", "ალი", "ბალი", "ბოლქვი", "ქვაბი"],
+        "wheel": "აბვილოქ",
+        "seed": 7,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.5667,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 27,
+      "word": "ბორანი",
+      "letters": 6,
+      "proposedMeaning": "ferry",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბორანი&oldid=84097707",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["აბი", "ალი", "ბორანი", "ბრალი", "ლორი"],
+        "wheel": "აბილნორ",
+        "seed": 8,
+        "transpose": false,
+        "unusedPartners": ["ლორი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 28,
+      "word": "ბოსელი",
+      "letters": 6,
+      "proposedMeaning": "cowshed",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბოსელი&oldid=84097715",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ბოთლი", "ბოსელი", "თესლი", "ობი", "სითბო"],
+        "wheel": "ბეთილოს",
+        "seed": 5,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5714,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 29,
+      "word": "გარსი",
+      "letters": 5,
+      "proposedMeaning": "shell",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=გარსი&oldid=84097862",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["აბი", "ბარგი", "ბგერა", "გარე", "გარსი"],
+        "wheel": "აბგეირს",
+        "seed": 2,
+        "transpose": true,
+        "unusedPartners": ["ბგერა"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 30,
+      "word": "გერბი",
+      "letters": 5,
+      "proposedMeaning": "coat of arms",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=გერბი&oldid=90290436",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["აგური", "ბგერა", "გარე", "გერბი", "გუბე"],
+        "wheel": "აბგეირუ",
+        "seed": 16,
+        "transpose": true,
+        "unusedPartners": ["ბგერა", "გუბე"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5429,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["გუბე"]
+    },
+    {
+      "number": 31,
+      "word": "გვალვა",
+      "letters": 6,
+      "proposedMeaning": "drought",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=გვალვა&oldid=92490376",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ალი", "გალია", "გვალვა", "ვალი", "ვილა"],
+        "wheel": "ააგვვილ",
+        "seed": 4,
+        "transpose": false,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 32,
+      "word": "დაბა",
+      "letters": 4,
+      "proposedMeaning": "small town",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=დაბა&oldid=91727678",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["აბი", "დაბა", "მაგია", "მაგიდა", "მადა"],
+        "wheel": "ააბგდიმ",
+        "seed": 1,
+        "transpose": true,
+        "unusedPartners": ["მაგიდა"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.5667,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["ბამბა", "მაგიდა", "ნაკადი"]
+    },
+    {
+      "number": 33,
+      "word": "დალაქი",
+      "letters": 6,
+      "proposedMeaning": "barber",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=დალაქი&oldid=85046705",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ალი", "დალაქი", "დილა", "ქალაქი", "ქილა"],
+        "wheel": "აადილქქ",
+        "seed": 12,
+        "transpose": true,
+        "unusedPartners": ["ქალაქი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5429,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["ქალაქი"]
+    },
+    {
+      "number": 34,
+      "word": "დაფნა",
+      "letters": 5,
+      "proposedMeaning": "laurel",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=დაფნა&oldid=84114442",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["დანა", "დაფა", "დაფნა", "პანდა", "პაპა"],
+        "wheel": "აადნპპფ",
+        "seed": 1,
+        "transpose": false,
+        "unusedPartners": ["პანდა", "პაპა"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["პანდა", "პაპა"]
+    },
+    {
+      "number": 35,
+      "word": "დუეტი",
+      "letters": 5,
+      "proposedMeaning": "duet",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=დუეტი&oldid=84098278",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["აბი", "ბადე", "ბუდე", "დიეტა", "დუეტი"],
+        "wheel": "აბდეიტუ",
+        "seed": 12,
+        "transpose": true,
+        "unusedPartners": ["ბუდე"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["ბუდე"]
+    },
+    {
+      "number": 36,
+      "word": "ეშვი",
+      "letters": 4,
+      "proposedMeaning": "fang",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ეშვი&oldid=84114997",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ერი", "ეშვი", "მტერი", "მტვერი", "ტირე"],
+        "wheel": "ევიმრტშ",
+        "seed": 2,
+        "transpose": true,
+        "unusedPartners": ["მტვერი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["ვეშაპი", "თეფში", "მტვერი", "შვიდი"]
+    },
+    {
+      "number": 37,
+      "word": "ვაკე",
+      "letters": 4,
+      "proposedMeaning": "plain, plane",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ვაკე&oldid=84098446",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ენა", "ვაკე", "კევი", "კვანძი", "ნაძვი"],
+        "wheel": "აევიკნძ",
+        "seed": 8,
+        "transpose": false,
+        "unusedPartners": ["კვანძი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["კვანძი"]
+    },
+    {
+      "number": 38,
+      "word": "ველი",
+      "letters": 4,
+      "proposedMeaning": "field",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ველი&oldid=91740713",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["გველი", "გლუვი", "გუბე", "გული", "ველი"],
+        "wheel": "ბგევილუ",
+        "seed": 11,
+        "transpose": false,
+        "unusedPartners": ["გუბე"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["გუბე"]
+    },
+    {
+      "number": 39,
+      "word": "ვენა",
+      "letters": 4,
+      "proposedMeaning": "vein",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ვენა&oldid=85017282",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ენა", "ვენა", "ნამი", "წვენი", "წვიმა"],
+        "wheel": "აევიმნწ",
+        "seed": 4,
+        "transpose": false,
+        "unusedPartners": ["ნამი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["კვანძი"]
+    },
+    {
+      "number": 40,
+      "word": "ვირთხა",
+      "letters": 6,
+      "proposedMeaning": "rat",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ვირთხა&oldid=84115189",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["არხი", "დათვი", "ვირთხა", "თიხა", "ხარი"],
+        "wheel": "ადვთირხ",
+        "seed": 1,
+        "transpose": false,
+        "unusedPartners": ["თიხა"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 41,
+      "word": "ზვავი",
+      "letters": 5,
+      "proposedMeaning": "avalanche",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ზვავი&oldid=84115331",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["აბი", "ავზი", "ბავშვი", "ვიზა", "ზვავი"],
+        "wheel": "აბვვზიშ",
+        "seed": 4,
+        "transpose": false,
+        "unusedPartners": ["ბავშვი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["ბავშვი", "ჩვევა"]
+    },
+    {
+      "number": 42,
+      "word": "ზმნა",
+      "letters": 4,
+      "proposedMeaning": "verb",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ზმნა&oldid=92945166",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ზმნა", "ლინზა", "მაშინ", "ნალი", "ნამი"],
+        "wheel": "აზილმნშ",
+        "seed": 3,
+        "transpose": true,
+        "unusedPartners": ["ნალი", "ნამი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 43,
+      "word": "თავლა",
+      "letters": 5,
+      "proposedMeaning": "stable",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=თავლა&oldid=85073944",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ახლა", "თავლა", "თიხა", "ხალათი", "ხალი"],
+        "wheel": "აავთილხ",
+        "seed": 16,
+        "transpose": false,
+        "unusedPartners": ["თიხა"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 44,
+      "word": "თაღი",
+      "letters": 4,
+      "proposedMeaning": "arch",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=თაღი&oldid=92422626",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ასი", "თარიღი", "თაღი", "ისარი", "საღი"],
+        "wheel": "ათიირსღ",
+        "seed": 15,
+        "transpose": false,
+        "unusedPartners": ["თარიღი"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["ასანთი", "თარიღი"]
+    },
+    {
+      "number": 45,
+      "word": "თახვი",
+      "letters": 5,
+      "proposedMeaning": "beaver",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=თახვი&oldid=89977530",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["თახვი", "თვალი", "თიხა", "ნავი", "ნალი"],
+        "wheel": "ავთილნხ",
+        "seed": 6,
+        "transpose": true,
+        "unusedPartners": ["თიხა", "ნალი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 46,
+      "word": "თერძი",
+      "letters": 5,
+      "proposedMeaning": "tailor",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=თერძი&oldid=84103313",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ერთი", "ერი", "თერძი", "თეფში", "ფერი"],
+        "wheel": "ეთირფშძ",
+        "seed": 12,
+        "transpose": false,
+        "unusedPartners": ["თეფში"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["თეფში"]
+    },
+    {
+      "number": 47,
+      "word": "თეძო",
+      "letters": 4,
+      "proposedMeaning": "hip, thigh",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=თეძო&oldid=84098694",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ეზო", "ზევით", "თევზი", "თეძო", "თვე"],
+        "wheel": "ევზთიოძ",
+        "seed": 3,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4571,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 48,
+      "word": "თივა",
+      "letters": 4,
+      "proposedMeaning": "hay",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=თივა&oldid=84115648",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["დათვი", "თავი", "თივა", "შავი", "შვიდი"],
+        "wheel": "ადვთიიშ",
+        "seed": 2,
+        "transpose": true,
+        "unusedPartners": ["შვიდი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["შვიდი"]
+    },
+    {
+      "number": 49,
+      "word": "თითი",
+      "letters": 4,
+      "proposedMeaning": "finger",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=თითი&oldid=84115653",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ერთი", "თეთრი", "თითი", "ირემი", "მითი"],
+        "wheel": "ეთთიიმრ",
+        "seed": 2,
+        "transpose": false,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 50,
+      "word": "თოხი",
+      "letters": 4,
+      "proposedMeaning": "hoe",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=თოხი&oldid=88091343",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ათი", "თიხა", "თოხი", "თოჯინა", "ოთახი"],
+        "wheel": "ათინოხჯ",
+        "seed": 10,
+        "transpose": false,
+        "unusedPartners": ["თიხა", "თოჯინა"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["თოჯინა"]
+    },
+    {
+      "number": 51,
+      "word": "იარა",
+      "letters": 4,
+      "proposedMeaning": "wound",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=იარა&oldid=84115754",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ათი", "თარიღი", "იარა", "იარაღი", "ღია"],
+        "wheel": "აათიირღ",
+        "seed": 13,
+        "transpose": false,
+        "unusedPartners": ["თარიღი", "იარაღი"],
+        "grid": {
+          "rows": 4,
+          "columns": 7
+        },
+        "density": 0.6071,
+        "iPhoneSECellPoints": 46.71
+      },
+      "previouslyUnusedActivePartners": [
+        "გიტარა",
+        "თარიღი",
+        "იარაღი",
+        "იატაკი",
+        "მაგიდა",
+        "მანერა"
+      ]
+    },
+    {
+      "number": 52,
+      "word": "იღლია",
+      "letters": 5,
+      "proposedMeaning": "armpit",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=იღლია&oldid=84115945",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["იღლია", "ლაიმი", "ნალი", "ნამი", "ღილი"],
+        "wheel": "აიილმნღ",
+        "seed": 7,
+        "transpose": false,
+        "unusedPartners": ["ნალი", "ნამი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 53,
+      "word": "კამეჩი",
+      "letters": 6,
+      "proposedMeaning": "buffalo",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კამეჩი&oldid=84116010",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["იდეა", "კამეჩი", "კიდე", "მედია", "ჩაი"],
+        "wheel": "ადეიკმჩ",
+        "seed": 10,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 54,
+      "word": "კანჭი",
+      "letters": 5,
+      "proposedMeaning": "shin",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კანჭი&oldid=84116024",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["კანჭი", "კაუჭი", "ნაკლი", "ნალი", "უკან"],
+        "wheel": "აიკლნუჭ",
+        "seed": 14,
+        "transpose": true,
+        "unusedPartners": ["კაუჭი", "ნალი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5429,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 55,
+      "word": "კერა",
+      "letters": 4,
+      "proposedMeaning": "hearth",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კერა&oldid=91649986",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ენა", "კენკრა", "კერა", "კურკა", "რუკა"],
+        "wheel": "აეკკნრუ",
+        "seed": 2,
+        "transpose": true,
+        "unusedPartners": ["კენკრა"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["კამერა", "კარატე", "კენკრა"]
+    },
+    {
+      "number": 56,
+      "word": "კეცი",
+      "letters": 4,
+      "proposedMeaning": "ketsi, earthenware frying pan (usually from clay)",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კეცი&oldid=84116112",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ალი", "ეკალი", "კეცი", "ნაკლი", "ნელა"],
+        "wheel": "აეიკლნც",
+        "seed": 2,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 57,
+      "word": "კვირტი",
+      "letters": 6,
+      "proposedMeaning": "bud",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კვირტი&oldid=84116143",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["კარტი", "კვირტი", "კივი", "კიტრი", "რვა"],
+        "wheel": "ავიიკრტ",
+        "seed": 3,
+        "transpose": false,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5429,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 58,
+      "word": "კვიცი",
+      "letters": 5,
+      "proposedMeaning": "foal",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კვიცი&oldid=91715232",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["კვიცი", "კივი", "ფიცი", "ფიჭვი", "ცივი"],
+        "wheel": "ვიიკფცჭ",
+        "seed": 3,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 59,
+      "word": "კლანჭი",
+      "letters": 6,
+      "proposedMeaning": "claw",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კლანჭი&oldid=84104695",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ალი", "კაუჭი", "კლანჭი", "ნალი", "ჭკუა"],
+        "wheel": "აიკლნუჭ",
+        "seed": 11,
+        "transpose": false,
+        "unusedPartners": ["კაუჭი", "ნალი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 60,
+      "word": "კოდალა",
+      "letters": 6,
+      "proposedMeaning": "woodpecker",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კოდალა&oldid=87900485",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ალი", "დოლი", "კალია", "კოალა", "კოდალა"],
+        "wheel": "აადიკლო",
+        "seed": 1,
+        "transpose": false,
+        "unusedPartners": ["დოლი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5429,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 61,
+      "word": "კოკორი",
+      "letters": 6,
+      "proposedMeaning": "flower bud",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კოკორი&oldid=88091590",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["კოკორი", "კოშკი", "ორი", "როკი", "შოკი"],
+        "wheel": "იკკოორშ",
+        "seed": 16,
+        "transpose": false,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 62,
+      "word": "კონა",
+      "letters": 4,
+      "proposedMeaning": "bundle",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კონა&oldid=84099233",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ალი", "კანონი", "კონა", "ნაკლი", "ნალი"],
+        "wheel": "აიკლნნო",
+        "seed": 3,
+        "transpose": true,
+        "unusedPartners": ["კანონი", "ნალი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["კანონი"]
+    },
+    {
+      "number": 63,
+      "word": "კონუსი",
+      "letters": 6,
+      "proposedMeaning": "cone",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კონუსი&oldid=84099277",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["კონუსი", "კუნთი", "სიო", "სუნი", "უთო"],
+        "wheel": "თიკნოსუ",
+        "seed": 7,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 64,
+      "word": "კორპი",
+      "letters": 5,
+      "proposedMeaning": "cork",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "bonus-only",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კორპი&oldid=84099310",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["კორპი", "ლორი", "პარკი", "პაროლი", "როკი"],
+        "wheel": "აიკლოპრ",
+        "seed": 5,
+        "transpose": false,
+        "unusedPartners": ["ლორი", "პაროლი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5429,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["პაროლი"]
+    },
+    {
+      "number": 65,
+      "word": "კრავი",
+      "letters": 5,
+      "proposedMeaning": "lamb",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კრავი&oldid=84116326",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["არწივი", "ვირი", "კარი", "კვირა", "კრავი"],
+        "wheel": "ავიიკრწ",
+        "seed": 10,
+        "transpose": true,
+        "unusedPartners": ["არწივი"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6333,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["ავტორი", "არწივი"]
+    },
+    {
+      "number": 66,
+      "word": "კრუხი",
+      "letters": 5,
+      "proposedMeaning": "broody hen",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კრუხი&oldid=84099373",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ერთი", "ერი", "კრუხი", "კუთხე", "ხუთი"],
+        "wheel": "ეთიკრუხ",
+        "seed": 6,
+        "transpose": false,
+        "unusedPartners": ["კუთხე"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.5667,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["კუთხე", "უცხო"]
+    },
+    {
+      "number": 67,
+      "word": "კუნძი",
+      "letters": 5,
+      "proposedMeaning": "stump",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კუნძი&oldid=84116386",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["კვანძი", "კუნძი", "ნავი", "უკან", "ძია"],
+        "wheel": "ავიკნუძ",
+        "seed": 7,
+        "transpose": true,
+        "unusedPartners": ["კვანძი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["კვანძი"]
+    },
+    {
+      "number": 68,
+      "word": "კუპატი",
+      "letters": 6,
+      "proposedMeaning": "kupati sausage",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კუპატი&oldid=84096710",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["კანი", "კნუტი", "კუპატი", "პიტნა", "ტანი"],
+        "wheel": "აიკნპტუ",
+        "seed": 5,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5429,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 69,
+      "word": "ლავა",
+      "letters": 4,
+      "proposedMeaning": "lava",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ლავა&oldid=84099414",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["გალია", "გვიან", "ლავა", "ნავი", "ნალი"],
+        "wheel": "ააგვილნ",
+        "seed": 6,
+        "transpose": true,
+        "unusedPartners": ["ნალი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 70,
+      "word": "ლაზერი",
+      "letters": 6,
+      "proposedMeaning": "laser",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ლაზერი&oldid=84116416",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ენა", "ლაზერი", "ლინზა", "ნალი", "ნელა"],
+        "wheel": "აეზილნრ",
+        "seed": 11,
+        "transpose": true,
+        "unusedPartners": ["ნალი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 71,
+      "word": "ლოდი",
+      "letters": 4,
+      "proposedMeaning": "block, rubble",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ლოდი&oldid=84099538",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ალი", "დოლი", "ლოდი", "ნარდი", "რადიო"],
+        "wheel": "ადილნორ",
+        "seed": 2,
+        "transpose": true,
+        "unusedPartners": ["დოლი"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.5333,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 72,
+      "word": "მაზლი",
+      "letters": 5,
+      "proposedMeaning": "husband's brother",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მაზლი&oldid=84608836",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ლინზა", "მაზლი", "ნალი", "ნამი", "ჯამი"],
+        "wheel": "აზილმნჯ",
+        "seed": 6,
+        "transpose": true,
+        "unusedPartners": ["ნალი", "ნამი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 73,
+      "word": "მალა",
+      "letters": 4,
+      "proposedMeaning": "vertebra",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მალა&oldid=91725189",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ალი", "კალამი", "კალია", "მალა", "ნალი"],
+        "wheel": "ააიკლმნ",
+        "seed": 15,
+        "transpose": false,
+        "unusedPartners": ["კალამი", "ნალი"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["კალამი"]
+    },
+    {
+      "number": 74,
+      "word": "მერი",
+      "letters": 4,
+      "proposedMeaning": "mayor",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მერი&oldid=84099841",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["არმია", "ენა", "მანერა", "მერი", "ნამი"],
+        "wheel": "ააეიმნრ",
+        "seed": 5,
+        "transpose": false,
+        "unusedPartners": ["მანერა", "ნამი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["მანერა", "მტვერი", "პრემია"]
+    },
+    {
+      "number": 75,
+      "word": "მორი",
+      "letters": 4,
+      "proposedMeaning": "log, timber",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მორი&oldid=92479633",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ლიმონი", "ლორი", "მორი", "ნიორი", "როლი"],
+        "wheel": "იილმნორ",
+        "seed": 1,
+        "transpose": false,
+        "unusedPartners": ["ლიმონი", "ლორი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5429,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["ლიმონი", "უფრო"]
+    },
+    {
+      "number": 76,
+      "word": "მძივი",
+      "letters": 5,
+      "proposedMeaning": "bead",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მძივი&oldid=84100240",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["მძივი", "ნავი", "ნამი", "ნაძვი", "ძია"],
+        "wheel": "ავიიმნძ",
+        "seed": 16,
+        "transpose": true,
+        "unusedPartners": ["ნამი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 77,
+      "word": "ნაკერი",
+      "letters": 6,
+      "proposedMeaning": "stitch",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ნაკერი&oldid=44505182",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ენა", "ერი", "კენჭი", "ნაკერი", "ნაჭერი"],
+        "wheel": "აეიკნრჭ",
+        "seed": 16,
+        "transpose": true,
+        "unusedPartners": ["ნაჭერი"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6333,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["კენკრა", "ნაჭერი"]
+    },
+    {
+      "number": 78,
+      "word": "ნალექი",
+      "letters": 6,
+      "proposedMeaning": "precipitation",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ნალექი&oldid=84117542",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ეკალი", "ენა", "ნალექი", "ნალი", "ნელა"],
+        "wheel": "აეიკლნქ",
+        "seed": 7,
+        "transpose": false,
+        "unusedPartners": ["ნალი"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.5667,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 79,
+      "word": "ნახირი",
+      "letters": 6,
+      "proposedMeaning": "cattle herd",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ნახირი&oldid=84117611",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["მინა", "მხარი", "ნამი", "ნახირი", "ხარი"],
+        "wheel": "აიიმნრხ",
+        "seed": 5,
+        "transpose": false,
+        "unusedPartners": ["ნამი"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6333,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 80,
+      "word": "ნოხი",
+      "letters": 4,
+      "proposedMeaning": "rug",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ნოხი&oldid=84100426",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["თიხა", "თოჯინა", "თხა", "ნოხი", "ოთახი"],
+        "wheel": "ათინოხჯ",
+        "seed": 15,
+        "transpose": false,
+        "unusedPartners": ["თიხა", "თოჯინა"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["თოჯინა"]
+    },
+    {
+      "number": 81,
+      "word": "ნუკრი",
+      "letters": 5,
+      "proposedMeaning": "fawn",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ნუკრი&oldid=84100428",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["კილო", "კლოუნი", "ლორი", "ნუკრი", "ორი"],
+        "wheel": "იკლნორუ",
+        "seed": 2,
+        "transpose": true,
+        "unusedPartners": ["ლორი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 82,
+      "word": "ოვალი",
+      "letters": 5,
+      "proposedMeaning": "oval",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ოვალი&oldid=84100444",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ალი", "დოლი", "ნალი", "ოდნავ", "ოვალი"],
+        "wheel": "ადვილნო",
+        "seed": 1,
+        "transpose": true,
+        "unusedPartners": ["დოლი", "ნალი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 83,
+      "word": "ოსპი",
+      "letters": 4,
+      "proposedMeaning": "lentil",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ოსპი&oldid=81817269",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ასო", "ლორი", "ოსპი", "პაროლი", "სპილო"],
+        "wheel": "აილოპრს",
+        "seed": 7,
+        "transpose": true,
+        "unusedPartners": ["ლორი", "პაროლი"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["პაროლი"]
+    },
+    {
+      "number": 84,
+      "word": "პანელი",
+      "letters": 6,
+      "proposedMeaning": "panel",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=პანელი&oldid=84100554",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ალი", "ენა", "ნაკლი", "ნალი", "პანელი"],
+        "wheel": "აეიკლნპ",
+        "seed": 2,
+        "transpose": false,
+        "unusedPartners": ["ნალი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 85,
+      "word": "პარიკი",
+      "letters": 6,
+      "proposedMeaning": "wig",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=პარიკი&oldid=84209336",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["კარტი", "კიტრი", "პარიკი", "პიკი", "პირი"],
+        "wheel": "აიიკპრტ",
+        "seed": 12,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5429,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 86,
+      "word": "რაფა",
+      "letters": 4,
+      "proposedMeaning": "windowsill",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=რაფა&oldid=92486505",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["დანა", "დაფა", "პანდა", "რაფა", "ფარდა"],
+        "wheel": "აადნპრფ",
+        "seed": 1,
+        "transpose": true,
+        "unusedPartners": ["პანდა"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["პანდა"]
+    },
+    {
+      "number": 87,
+      "word": "რგოლი",
+      "letters": 5,
+      "proposedMeaning": "ring",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=რგოლი&oldid=84118289",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["დოლი", "ლორი", "რგოლი", "ჯილდო", "ჯოგი"],
+        "wheel": "გდილორჯ",
+        "seed": 3,
+        "transpose": false,
+        "unusedPartners": ["დოლი", "ლორი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 88,
+      "word": "რკალი",
+      "letters": 5,
+      "proposedMeaning": "hoop, ring",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=რკალი&oldid=91716432",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ალი", "ნალი", "ნამი", "რკალი", "რკინა"],
+        "wheel": "აიკლმნრ",
+        "seed": 9,
+        "transpose": true,
+        "unusedPartners": ["ნალი", "ნამი"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.5667,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 89,
+      "word": "რკო",
+      "letters": 3,
+      "proposedMeaning": "acorn",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=რკო&oldid=89438384",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["კილო", "პარკი", "პაროლი", "რკო", "როლი"],
+        "wheel": "აიკლოპრ",
+        "seed": 4,
+        "transpose": true,
+        "unusedPartners": ["პაროლი"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["პაროლი"]
+    },
+    {
+      "number": 90,
+      "word": "რქა",
+      "letters": 3,
+      "proposedMeaning": "horn, antler",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=რქა&oldid=88003264",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["აქეთ", "ბგერა", "გარე", "გარეთ", "რქა"],
+        "wheel": "აბგეთრქ",
+        "seed": 13,
+        "transpose": true,
+        "unusedPartners": ["ბგერა"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 91,
+      "word": "რძალი",
+      "letters": 5,
+      "proposedMeaning": "daughter-in-law; sister-in-law",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=რძალი&oldid=91716433",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ალი", "ლორი", "ორი", "პაროლი", "რძალი"],
+        "wheel": "აილოპრძ",
+        "seed": 15,
+        "transpose": true,
+        "unusedPartners": ["ლორი", "პაროლი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["პაროლი"]
+    },
+    {
+      "number": 92,
+      "word": "საბელი",
+      "letters": 6,
+      "proposedMeaning": "leash",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=საბელი&oldid=84118453",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ბალი", "საბელი", "სია", "წაბლი", "წელი"],
+        "wheel": "აბეილსწ",
+        "seed": 11,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 93,
+      "word": "საცერი",
+      "letters": 6,
+      "proposedMeaning": "sieve",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=საცერი&oldid=84118875",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ასე", "კასრი", "კაცი", "სარკე", "საცერი"],
+        "wheel": "აეიკრსც",
+        "seed": 14,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 94,
+      "word": "სკივრი",
+      "letters": 6,
+      "proposedMeaning": "chest",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=სკივრი&oldid=84101617",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ისარი", "კასრი", "კვირა", "რვა", "სკივრი"],
+        "wheel": "ავიიკრს",
+        "seed": 13,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5429,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 95,
+      "word": "სორო",
+      "letters": 4,
+      "proposedMeaning": "burrow",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=სორო&oldid=88091310",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ბოლი", "ლობიო", "ლორი", "ობოლი", "სორო"],
+        "wheel": "ბილოორს",
+        "seed": 2,
+        "transpose": true,
+        "unusedPartners": ["ლორი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 96,
+      "word": "ტარი",
+      "letters": 4,
+      "proposedMeaning": "handle",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ტარი&oldid=91725865",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["აბი", "ავტორი", "ბატი", "ორბიტა", "ტარი"],
+        "wheel": "აბვიორტ",
+        "seed": 12,
+        "transpose": true,
+        "unusedPartners": ["ავტორი", "ორბიტა"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["ავტორი", "გიტარა", "იატაკი", "ორბიტა"]
+    },
+    {
+      "number": 97,
+      "word": "ტახტი",
+      "letters": 5,
+      "proposedMeaning": "ottoman bench",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ტახტი&oldid=84101822",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["თიხა", "თხა", "იახტა", "ტახტი", "ხატი"],
+        "wheel": "აათიტტხ",
+        "seed": 4,
+        "transpose": true,
+        "unusedPartners": ["თიხა"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 98,
+      "word": "ტენი",
+      "letters": 4,
+      "proposedMeaning": "moisture",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ტენი&oldid=92014085",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ენოტი", "მინა", "მონეტა", "ნამი", "ტენი"],
+        "wheel": "აეიმნოტ",
+        "seed": 1,
+        "transpose": false,
+        "unusedPartners": ["მონეტა", "ნამი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["თონე", "მონეტა", "ფუნტი"]
+    },
+    {
+      "number": 99,
+      "word": "ტილო",
+      "letters": 4,
+      "proposedMeaning": "canvas, linen",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ტილო&oldid=84101866",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ლიფტი", "ორი", "როლი", "ტილო", "ფილტრი"],
+        "wheel": "იილორტფ",
+        "seed": 8,
+        "transpose": false,
+        "unusedPartners": ["ფილტრი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["ორბიტა", "ფილტრი"]
+    },
+    {
+      "number": 100,
+      "word": "ტიტა",
+      "letters": 4,
+      "proposedMeaning": "tulip",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ტიტა&oldid=81818591",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ასი", "პასტა", "სია", "სტატია", "ტიტა"],
+        "wheel": "ააიპსტტ",
+        "seed": 2,
+        "transpose": false,
+        "unusedPartners": ["პასტა"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.5667,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["ავტორი", "ორბიტა", "პასტა"]
+    },
+    {
+      "number": 101,
+      "word": "ტუმბო",
+      "letters": 5,
+      "proposedMeaning": "pump",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ტუმბო&oldid=84101965",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ბუშტი", "ობი", "ომი", "ტომი", "ტუმბო"],
+        "wheel": "ბიმოტუშ",
+        "seed": 4,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.5333,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 102,
+      "word": "ტურა",
+      "letters": 4,
+      "proposedMeaning": "jackal",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ტურა&oldid=91715083",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["კარტი", "კაუჭი", "რუკა", "ტურა", "ჭკუა"],
+        "wheel": "აიკრტუჭ",
+        "seed": 13,
+        "transpose": true,
+        "unusedPartners": ["კაუჭი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["ფუნტი"]
+    },
+    {
+      "number": 103,
+      "word": "ფარა",
+      "letters": 4,
+      "proposedMeaning": "flock",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ფარა&oldid=84119773",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["დანა", "დაფა", "პანდა", "ფარა", "ფარდა"],
+        "wheel": "აადნპრფ",
+        "seed": 2,
+        "transpose": false,
+        "unusedPartners": ["პანდა"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["პანდა"]
+    },
+    {
+      "number": 104,
+      "word": "ფლეიტა",
+      "letters": 6,
+      "proposedMeaning": "flute",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ფლეიტა&oldid=92228066",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ეკალი", "კაფე", "კეტი", "კლიტე", "ფლეიტა"],
+        "wheel": "აეიკლტფ",
+        "seed": 4,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6333,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 105,
+      "word": "ფრანი",
+      "letters": 5,
+      "proposedMeaning": "kite",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ფრანი&oldid=84119947",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ნალი", "ნამი", "ფარი", "ფირმა", "ფრანი"],
+        "wheel": "აილმნრფ",
+        "seed": 5,
+        "transpose": true,
+        "unusedPartners": ["ნალი", "ნამი"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 106,
+      "word": "ფსკერი",
+      "letters": 6,
+      "proposedMeaning": "bottom",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ფსკერი&oldid=84119972",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ისე", "ისევ", "კევი", "ფესვი", "ფსკერი"],
+        "wheel": "ევიკრსფ",
+        "seed": 1,
+        "transpose": false,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 107,
+      "word": "ქადა",
+      "letters": 4,
+      "proposedMeaning": "sweet pastry",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ქადა&oldid=91650192",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["აჩმა", "დრამა", "მადა", "ქადა", "ჩქარა"],
+        "wheel": "აადმრქჩ",
+        "seed": 10,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 108,
+      "word": "ქერი",
+      "letters": 4,
+      "proposedMeaning": "barley",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ქერი&oldid=87901504",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["იქვე", "მეტრი", "მტვერი", "ტირე", "ქერი"],
+        "wheel": "ევიმრტქ",
+        "seed": 11,
+        "transpose": false,
+        "unusedPartners": ["მტვერი"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["მტვერი", "სკვერი", "ქვევრი"]
+    },
+    {
+      "number": 109,
+      "word": "ქორი",
+      "letters": 4,
+      "proposedMeaning": "goshawk",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ქორი&oldid=92251688",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ნიორი", "ორი", "ქინძი", "ქორი", "ძირი"],
+        "wheel": "იინორქძ",
+        "seed": 8,
+        "transpose": true,
+        "unusedPartners": ["ქინძი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["ქინძი", "ჩარჩო"]
+    },
+    {
+      "number": 110,
+      "word": "ქურა",
+      "letters": 4,
+      "proposedMeaning": "stove, furnace",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ქურა&oldid=91715085",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ბუჩქი", "ქარი", "ქირა", "ქურა", "ჩქარი"],
+        "wheel": "აბირუქჩ",
+        "seed": 2,
+        "transpose": true,
+        "unusedPartners": ["ბუჩქი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["ბუჩქი"]
+    },
+    {
+      "number": 111,
+      "word": "ღერო",
+      "letters": 4,
+      "proposedMeaning": "blade, haulm, stalk, stem",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ღერო&oldid=87901541",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["მარტო", "მეტრო", "ღამე", "ღერო", "ღრმა"],
+        "wheel": "აემორტღ",
+        "seed": 3,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 112,
+      "word": "ღვედი",
+      "letters": 5,
+      "proposedMeaning": "belt, strap",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ღვედი&oldid=84120218",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["დევი", "დოლი", "დღე", "ვიდეო", "ღვედი"],
+        "wheel": "დევილოღ",
+        "seed": 2,
+        "transpose": false,
+        "unusedPartners": ["დოლი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["დღეს"]
+    },
+    {
+      "number": 113,
+      "word": "ღუზა",
+      "letters": 4,
+      "proposedMeaning": "anchor",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ღუზა&oldid=87788040",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["აზრი", "ბუზი", "ბურღი", "ზღარბი", "ღუზა"],
+        "wheel": "აბზირუღ",
+        "seed": 10,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 114,
+      "word": "ყოჩი",
+      "letters": 4,
+      "proposedMeaning": "ram",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ყოჩი&oldid=84120367",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ბოლი", "ბოლო", "ლობიო", "ობოლი", "ყოჩი"],
+        "wheel": "ბილოოყჩ",
+        "seed": 10,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 115,
+      "word": "ყურე",
+      "letters": 4,
+      "proposedMeaning": "bay, bight",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ყურე&oldid=84102567",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["მუხა", "მხარე", "ყრუ", "ყურე", "ხურმა"],
+        "wheel": "აემრუყხ",
+        "seed": 3,
+        "transpose": false,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4571,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 116,
+      "word": "შაშვი",
+      "letters": 5,
+      "proposedMeaning": "thrush",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=შაშვი&oldid=84757236",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["იგავი", "შავი", "შაშვი", "შიგ", "შიში"],
+        "wheel": "აგვიიშშ",
+        "seed": 9,
+        "transpose": false,
+        "unusedPartners": ["შიში"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["შეშა", "შიში"]
+    },
+    {
+      "number": 117,
+      "word": "შველი",
+      "letters": 5,
+      "proposedMeaning": "roe deer",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=შველი&oldid=91741270",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ალი", "ელვა", "ვაშლი", "შეშა", "შველი"],
+        "wheel": "აევილშშ",
+        "seed": 8,
+        "transpose": true,
+        "unusedPartners": ["შეშა"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["ვეშაპი", "შეშა"]
+    },
+    {
+      "number": 118,
+      "word": "შვრია",
+      "letters": 5,
+      "proposedMeaning": "oats",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=შვრია&oldid=88155749",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ვარდი", "ვირი", "რვა", "შვიდი", "შვრია"],
+        "wheel": "ადვიირშ",
+        "seed": 7,
+        "transpose": false,
+        "unusedPartners": ["შვიდი"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.5667,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["ავტორი", "შვიდი"]
+    },
+    {
+      "number": 119,
+      "word": "შრე",
+      "letters": 3,
+      "proposedMeaning": "stratum, layer",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=შრე&oldid=84102672",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ერთი", "ერი", "თეთრი", "თეფში", "შრე"],
+        "wheel": "ეთთირფშ",
+        "seed": 8,
+        "transpose": false,
+        "unusedPartners": ["თეფში"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4571,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["თეფში", "მტვერი"]
+    },
+    {
+      "number": 120,
+      "word": "შუბი",
+      "letters": 4,
+      "proposedMeaning": "spear",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=შუბი&oldid=84120602",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ბალი", "ბალიში", "შუა", "შუბი", "შუბლი"],
+        "wheel": "აბიილუშ",
+        "seed": 5,
+        "transpose": true,
+        "unusedPartners": ["ბალიში"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.5667,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["ბალიში"]
+    },
+    {
+      "number": 121,
+      "word": "ჩვარი",
+      "letters": 5,
+      "proposedMeaning": "rag",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ჩვარი&oldid=84102722",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["არწივი", "რვა", "ჩაი", "ჩვარი", "ჩირი"],
+        "wheel": "ავიირჩწ",
+        "seed": 7,
+        "transpose": true,
+        "unusedPartners": ["არწივი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4571,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["ავტორი", "არწივი", "ჩარჩო", "ჩვევა"]
+    },
+    {
+      "number": 122,
+      "word": "ჩლიქი",
+      "letters": 5,
+      "proposedMeaning": "hoof",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ჩლიქი&oldid=92229616",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["თხილი", "იქით", "ჩიხი", "ჩლიქი", "ხილი"],
+        "wheel": "თიილქჩხ",
+        "seed": 14,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 123,
+      "word": "ცენტრი",
+      "letters": 6,
+      "proposedMeaning": "center",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ცენტრი&oldid=91464748",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ერი", "ტერფი", "ფენი", "ფერი", "ცენტრი"],
+        "wheel": "ეინრტფც",
+        "seed": 16,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 124,
+      "word": "ცვილი",
+      "letters": 5,
+      "proposedMeaning": "wax",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ცვილი&oldid=84757548",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ვირი", "ჩვილი", "ჩირი", "ცვილი", "ცივი"],
+        "wheel": "ვიილრჩც",
+        "seed": 6,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 125,
+      "word": "ცილა",
+      "letters": 4,
+      "proposedMeaning": "protein",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ცილა&oldid=84120818",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ალი", "აქცია", "ლაქა", "ქალაქი", "ცილა"],
+        "wheel": "ააილქქც",
+        "seed": 3,
+        "transpose": false,
+        "unusedPartners": ["ქალაქი"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.5667,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["ქალაქი"]
+    },
+    {
+      "number": 126,
+      "word": "ცხვარი",
+      "letters": 6,
+      "proposedMeaning": "sheep",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ცხვარი&oldid=92419538",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["კაცი", "კვირა", "ცხვარი", "ცხრა", "ხარი"],
+        "wheel": "ავიკრცხ",
+        "seed": 3,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 127,
+      "word": "ცხვირი",
+      "letters": 6,
+      "proposedMeaning": "nose",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ცხვირი&oldid=87995521",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ვირი", "იხვი", "ცივი", "ცხვირი", "ძვირი"],
+        "wheel": "ვიირცძხ",
+        "seed": 7,
+        "transpose": false,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 4,
+          "columns": 7
+        },
+        "density": 0.6429,
+        "iPhoneSECellPoints": 46.71
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 128,
+      "word": "ძაბრი",
+      "letters": 5,
+      "proposedMeaning": "funnel",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ძაბრი&oldid=84120916",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ბალი", "ბიძა", "ბრალი", "ნალი", "ძაბრი"],
+        "wheel": "აბილნრძ",
+        "seed": 11,
+        "transpose": true,
+        "unusedPartners": ["ნალი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 129,
+      "word": "წავი",
+      "letters": 4,
+      "proposedMeaning": "otter",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=წავი&oldid=87797873",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["გვიან", "იგავი", "ნავი", "წავი", "წიგნი"],
+        "wheel": "აგვიინწ",
+        "seed": 8,
+        "transpose": false,
+        "unusedPartners": ["წიგნი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["ამბავი", "არწივი", "ძუნწი", "წიგნი"]
+    },
+    {
+      "number": 130,
+      "word": "ჭალა",
+      "letters": 4,
+      "proposedMeaning": "floodplain; riverside grove",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ჭალა&oldid=92391673",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ალი", "კალია", "კაუჭი", "ჭალა", "ჭკუა"],
+        "wheel": "ააიკლუჭ",
+        "seed": 2,
+        "transpose": false,
+        "unusedPartners": ["კაუჭი"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.5667,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": ["კალამი"]
+    },
+    {
+      "number": 131,
+      "word": "ხავსი",
+      "letters": 5,
+      "proposedMeaning": "moss",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ხავსი&oldid=88004014",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["ასი", "დათვი", "თასი", "თიხა", "ხავსი"],
+        "wheel": "ადვთისხ",
+        "seed": 6,
+        "transpose": true,
+        "unusedPartners": ["თიხა"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 132,
+      "word": "ჯართი",
+      "letters": 5,
+      "proposedMeaning": "scrap",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ჯართი&oldid=89067419",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["თათი", "თიხა", "თხა", "ხარჯი", "ჯართი"],
+        "wheel": "ათთირხჯ",
+        "seed": 3,
+        "transpose": true,
+        "unusedPartners": ["თიხა"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 133,
+      "word": "ჯიხვი",
+      "letters": 5,
+      "proposedMeaning": "Caucasian mountain goat",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ჯიხვი&oldid=84121441",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["იხვი", "ჩვილი", "ჩიხი", "ხილი", "ჯიხვი"],
+        "wheel": "ვიილჩხჯ",
+        "seed": 3,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 134,
+      "word": "ჯორი",
+      "letters": 4,
+      "proposedMeaning": "mule",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ჯორი&oldid=84121454",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["დოლი", "ლორი", "ლურჯი", "ჯილდო", "ჯორი"],
+        "wheel": "დილორუჯ",
+        "seed": 7,
+        "transpose": false,
+        "unusedPartners": ["დოლი", "ლორი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    },
+    {
+      "number": 135,
+      "word": "ჰავა",
+      "letters": 4,
+      "proposedMeaning": "climate",
+      "partOfSpeech": "noun",
+      "formReview": "Singular, mass or collective noun sense; no plural target proposed.",
+      "ownerDecision": "required-eligible",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ჰავა&oldid=84121476",
+      "referenceReviewStatus": "prototype-reference-checked",
+      "editorialDecision": "Propose for owner familiarity review; not approved for required use yet.",
+      "draftExample": {
+        "words": ["იჯარა", "რვა", "ჯარი", "ჯვარი", "ჰავა"],
+        "wheel": "აავირჯჰ",
+        "seed": 1,
+        "transpose": false,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "previouslyUnusedActivePartners": []
+    }
+  ],
+  "subsequentOwnerReview": {
+    "status": "Expansion deferred until current vocabulary review is complete",
+    "excludedExistingWordCount": 53,
+    "remainingExistingApprovals": 766,
+    "approvedIncludingPendingRebuild": 776,
+    "ifAll135CandidatesLaterApproved": 911,
+    "remainingTo1500IfAll135LaterApproved": 589,
+    "note": "Original batch counts above are the historical baseline before these exclusions. No pending candidates have been approved.",
+    "policyCategory": "owner-full-pool-review",
+    "effectiveFromRevision": 16
+  },
+  "resolution": {
+    "revision": 16,
+    "approvedRequiredCount": 1091,
+    "bonusOnlyFromReviewed372": 47,
+    "promotedFromReviewed372": 325,
+    "remainingTo1500": 409,
+    "note": "All 135 candidates were included in the later 372-word review; that explicit owner decision supersedes the pending status and historical counts above."
+  }
+}

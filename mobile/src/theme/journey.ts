@@ -2,7 +2,7 @@ import { catalog } from '../content/catalog';
 
 /**
  * Countries of the journey, in travel order. Presentation only: content owns
- * the 48 stops (see content/journey-v13.json); this groups them for the path,
+ * the 59 stops (see content/journey-v23.json); this groups them for the path,
  * dividers and the journey overview, and colours stops that have no painting.
  */
 export interface Country {
@@ -116,6 +116,40 @@ export const COUNTRIES: readonly Country[] = [
     accent: '#7A3E2A',
     sky: ['#9A6278', '#F6C08A'],
     hills: ['#C2B07A', '#A99A62', '#6E6A44'],
+  },
+  {
+    id: 'malta',
+    name: 'მალტა',
+    route: 'ვალეტიდან მდინამდე',
+    chapterIds: ['valletta', 'mdina'],
+    accent: '#275E69',
+    sky: ['#859AC8', '#ECC39C'],
+    hills: ['#C8AD79', '#A38B68', '#64735B'],
+  },
+  {
+    id: 'tunisia',
+    name: 'ტუნისი',
+    route: 'კართაგენიდან ელ-ჯემამდე',
+    chapterIds: ['carthage', 'sidi-bou-said', 'el-jem'],
+    accent: '#846038',
+    sky: ['#9BACC6', '#EBC9A5'],
+    hills: ['#CCA36D', '#AF8456', '#7F7554'],
+  },
+  {
+    id: 'spain',
+    name: 'ესპანეთი',
+    route: 'ბარსელონიდან სევილიამდე',
+    chapterIds: [
+      'barcelona',
+      'valencia',
+      'madrid',
+      'granada',
+      'cordoba',
+      'seville',
+    ],
+    accent: '#8D4A3F',
+    sky: ['#9D9DC4', '#F0C5A1'],
+    hills: ['#C99970', '#A77760', '#63765D'],
   },
 ];
 

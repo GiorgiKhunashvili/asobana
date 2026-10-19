@@ -151,9 +151,87 @@ Rejected actions preserve the state reference. Completion reward is paid once.
 Fully visible crossing words are completed automatically. Cell hints remain saved;
 solved words reveal their full cells. Bonuses earn a configurable reward once per
 level before completion. The last level's next ID is `null`.
-`DEFAULT_ECONOMY` is 100 initial coins, 25 completion reward, 3 bonus reward,
-15 cell hint and 40 word hint. Product changes belong in the economy configuration,
+`DEFAULT_ECONOMY` is 200 initial coins, 20 completion reward, 3 bonus reward,
+20 cell hint and 50 word hint. Product changes belong in the economy configuration,
 never in a component. The store currently uses the default configuration.
+
+The owner approved these prices on 2026-10-19. Every ten bonus words still earns
+one free letter hint. The 200-coin starting balance applies only to a new game or
+an explicit reset: existing saves retain their exact balance and all progress,
+paid hints, bonus credits and postcards. No economy migration or content revision
+is needed; future rewards and purchases use the current prices without repricing
+past actions. Optional AdMob demo ads now award 75 coins through a separate,
+persisted claim; gameplay commands cannot directly grant ad coins. The
+level-complete screen's optional ad pays `LEVEL_DOUBLE_COINS` (the completion
+reward, 20) once per finished level through the same kind of claim.
+
+`mobile/tests/economy.test.ts` covers new-game/reset balances, exact affordability
+boundaries, unchanged existing balances (including zero), and old-price saves
+from revisions 25 and 26 through real SQLite close/reopen. It checks retained
+paid hints, free bonus hints, completed stops, partial progress and postcards,
+then verifies that future purchases use the new prices and survive another restart.
+
+### Rewarded demo ads
+
+`src/ads/rewardedAds.ts` owns one controller shared across screen mounts. The coins
+screen loads a demo ad and requires an explicit watch press. An unaffordable hint
+keeps its letter/word icon while its price pill turns gold and reads `▶ +75` with
+a coin (`↻ +75` for a save-only retry); the spoken label names the ad, the reward
+and the hint price. It bounces once on becoming unaffordable (respecting reduced
+motion). That press
+calls `watch(signal)` directly from gameplay: a ready ad presents immediately;
+otherwise it waits for loading without requiring another press or navigation.
+`useHintRewardedAd` preloads when coins are low and cancels a pending watch on
+navigation, a level change, backgrounding or explicit cancellation. A timeout or
+error never schedules a later surprise ad. Failed earned saves offer save-only
+retry. A free bonus hint still works directly, and the reward never auto-buys a
+hint. Content-disabled hints and completed levels remain unavailable.
+
+Only `EARNED_REWARD` calls `gameStore.claimAdReward(claimId)`. One UUID belongs to
+one presentation; retries reuse that UUID, while another ad receives a new UUID.
+The fixed reward is `REWARDED_AD_COINS = 75`, independent of Google's demo reward
+payload. Closing early, loading, showing or a timeout alone grants nothing.
+
+Database version 3 adds `rewarded_ad_claims` without changing existing snapshots.
+`GameRepository.claimAdReward` reads the latest saved game and inserts the unique
+receipt plus the updated coin balance in one exclusive SQLite transaction. A
+duplicate returns the current saved state without another credit or revision
+bump. A failed write rolls back both changes. The store serializes claims with
+game commands and publishes balances only after commit. Receipts are retained
+through content upgrades and explicit game resets.
+
+The shared controller survives navigation away and offers a save-only retry after
+a storage failure. This is client-side deduplication, not server-side fraud
+verification. A reward not committed before process termination cannot be
+recovered from AdMob by this client alone; pending failed claims are in memory.
+Production reward recovery/verification requires a separately designed server
+flow. Demo ads use Google's sample app IDs and `TestIds.REWARDED` exclusively;
+live ads, UMP configuration, ATT decisions and store privacy disclosures are a
+separate rollout. See the native checklist for build and manual verification steps.
+
+### Level-complete "×2" ad
+
+`src/ads/levelRewardAds.ts` owns a second controller from the same
+`createRewardedAds`, so the coin and doubling placements never show or retry each
+other's rewards. Its target is a level ID, bound when the ad is presented: the
+earned claim and any save-only retry pay for that level even if the player has
+moved on. The snapshot carries that `target` once an ad has been presented.
+
+The victory screen shows a gold `▶ ×2` pill (`↻ ×2` for a save-only retry) beside
+the reward only when it was reached by finishing the level on the board (the
+`level-completed` event in the latest batch), the level is completed and not yet
+doubled, and ads are available. Reopening a finished level shows no offer.
+`useLevelRewardAd` preloads while the offer is visible; one press calls
+`watch(signal, levelId)`. A waiting press shows a cancel control and is cancelled
+by leaving the screen or backgrounding. "Next level" stays the primary button.
+After the claim commits, the pill becomes a `✓ ×2` tag and the reward reads +40.
+
+Only `EARNED_REWARD` calls `gameStore.claimLevelDouble(levelId, claimId)`.
+`GameRepository.claimLevelDouble` shares the receipt transaction above: it pays
+`LEVEL_DOUBLE_COINS` and appends the level to `doubledRewardLevelIds` only if the
+receipt is new, the level is completed and not already listed. Otherwise it
+returns the saved state with `granted: false` and records no receipt. Duplicate
+callbacks, a second ad, restarts and reopening never pay a level twice.
 
 ## Saved game and progression
 
@@ -178,6 +256,13 @@ bonus word or a completion, otherwise `false`; like missing bonus counters, the
 filled-in field is written back once on load. Content migrations carry it across,
 and `reset()` returns it to `false` with the rest of `initialState`. The save
 schema version stays 1; older builds ignore the field.
+
+Optional `doubledRewardLevelIds` lists completed levels whose reward a watched
+ad already doubled. It is absent until the first doubling, so existing snapshots
+load unchanged without a write-back or database migration. `parseSnapshot`
+rejects duplicates and IDs that are not completed levels. Content migrations
+carry it across (level IDs are stable), and `reset()` clears it with the rest of
+the game; receipts from before a reset still cannot pay again.
 
 ## UI-facing models and callbacks
 
@@ -311,7 +396,8 @@ found. Drive coin text from the committed model, not incremental animation arith
 Animation duration never gates rules or persistence. Cancel screen-local effects on
 unmount. Haptics and bundled synthesized sounds are handled in `services/feedback.ts`;
 UI animations may subscribe independently. Platform effects failing must not affect
-coins/progression. No ads, purchases, authentication or analytics SDKs are installed.
+coins/progression. The AdMob SDK supplies optional demo rewarded ads; purchases,
+authentication and analytics SDKs are not installed.
 
 ## Navigation contracts
 
@@ -337,3 +423,220 @@ Run `npm run check` and Python checks in the README after changing integrations.
 The UI cannot be considered native-verified based on component mocks alone. Preserve
 Georgian font coverage, offline assets, safe areas, accessible button roles, readable
 errors and minimum 44-point touch targets when changing presentation.
+
+## Revision 14: non-plural campaign and lower repetition
+
+The active catalog imports `discovery.v14.json` and its matching recipes. All
+240 ordinal level IDs, the pack ID, 48 stop definitions and save identifiers remain
+stable. Revision 13 is appended to `previousCatalogs` using its exact revision-13
+vocabulary; it is not revalidated under the new plural policy. Direct upgrades
+from revisions 1–13 preserve completed levels, partial solved credits, coins,
+paid hints, bonus rewards, settings, and original/journey postcards. Revision-13
+journey chapter IDs are checked against the same positions during migration.
+
+A plural formerly required on a partially solved board retains a solved-word
+credit after replacement. Valid plurals remain bonuses; a bonus cannot solve a
+target or pay twice on one board. Continuing answers keep their revision-13 word
+IDs at the same level. Paid-hint compatibility is 1,292 (1,250 plus 42).
+
+Plural decisions are explicit and revision-scoped in `word-policy.json`; both
+Python and TypeScript reject them in required answers and variants. The reference
+dictionary and journey definitions keep their v13 filenames because they are
+unchanged. See the [campaign review](VOCABULARY_REVIEW_V14.md) for measured coverage,
+validation and limitations, and [the full owner list](VOCABULARY_OWNER_REVIEW_V14.md)
+for pending vocabulary review. No native-device test or upload is implied.
+
+## Revision 15: owner vocabulary review
+
+The active catalog imports `discovery.v15.json` with matching recipes. The exact
+revision-14 pack is appended to `previousCatalogs`, validated against revision-14
+vocabulary. Revisions 1–14 migrate directly to revision 15 while preserving
+completion, solved credits, paid hints, coins, settings, postcards and lifetime
+bonus rewards, including after SQLite restart. Continuing words keep IDs on the
+same level. The hint compatibility bound is 1,334 (1,292 plus 42).
+
+The twelve explicit owner exclusions start at revision 15 and apply to every
+gameplay role. None appeared as required answers or bonuses in the revision-14
+campaign, but future generation and runtime validation must still reject them.
+The other 140 words from the unused list remain owner-approved for required use;
+all inherited rules, including plural bonus-only treatment and the 75-level gap,
+remain enforced. See [the current review](VOCABULARY_REVIEW_V15.md) for exact
+coverage results and [the owner list](VOCABULARY_OWNER_REVIEW_V15.md) for review
+status. Historical revision-14 files are unchanged.
+
+## Revision 16: owner-reviewed bonus promotions
+
+The active catalog imports `discovery.v16.json` and matching recipes. Exactly 325
+of the owner-reviewed 372 bonus spellings become required-eligible; the other 47
+remain bonus-only, including accepted variants. The 53 full-pool removals are
+excluded from all roles. The allowlist has 1,091 words and the playable vocabulary
+has 1,209, with 118 bonus-only spellings. The 240 boards use 865 distinct answers;
+335 of 1,200 answer slots are repeats, always at least 75 levels apart.
+
+Revisions 1–15 migrate directly to revision 16 with historical packs intact.
+Completion, partial solved credits, coins, paid hints, postcards and lifetime bonus
+rewards survive restart. Revision 16 accepts up to 1,376 historical hint credits,
+including revision 15’s 1,334 plus one replacement board. The first five-letter
+answer remains at level 3, the first six-letter answer at level 18. Existing
+journey IDs, rendering dimensions, wheel sizes and progression rules are unchanged.
+
+## Revision 17 expansion compatibility
+
+The active catalog and recipes use revision 17, with `discovery-v17-ka.json` for
+its vocabulary. Revisions 13–16 continue using their exact revision-13 reference
+dictionary; older revisions retain their previous source. The new reference adds
+exactly 130 owner-approved noun/adjective senses, giving 1,339 playable words and
+a required allowlist of 1,221. Every previous exclusion and bonus-only reservation
+remains enforced. Historical revision 16 is included in `previousCatalogs`.
+
+Migration from revisions 1–16 preserves completed levels, partial solved credits,
+coins, paid hints, settings, postcards and lifetime bonus rewards through SQLite
+restart. The revision-17 hint ceiling is 1,418, retaining revision 16's 1,376 plus
+a full replacement board. The campaign still has 240 levels in 48 stops; the
+1,500-word goal does not authorize a level-count change. Exact coverage, audit
+and validation results are recorded in `VOCABULARY_REVIEW_V17.md`.
+
+## Revision 18 expansion compatibility
+
+The active catalog and recipes use revision 18 and `discovery-v18-ka.json`.
+Revision 17 retains its revision-17 reference, revisions 13–16 retain revision 13,
+and earlier catalogs keep their historical vocabulary. Batch 03 adds exactly
+131 approved spellings; nine rejected spellings are excluded from all roles.
+The active required allowlist contains 1,352 words and the playable pool 1,470.
+All earlier exclusions and bonus-only restrictions remain enforced.
+
+Revision 17 joins `previousCatalogs`; migration supports revisions 1–17 while
+retaining completion, partial solved credits, coins, paid hints, postcards and
+lifetime bonus rewards across SQLite restart. The hint compatibility bound is
+1,460 (the prior 1,418 plus a replacement board). The campaign remains at 240
+levels and 48 stops. See `VOCABULARY_REVIEW_V18.md` for exact results and checks.
+
+## Revision 19 expansion compatibility
+
+The active catalog uses `discovery.v19.json`, its matching recipes and
+`discovery-v19-ka.json`. Revision 18 is retained in `previousCatalogs` with its
+original vocabulary. Python and TypeScript select the revision-19 allowlist and
+enforce all 19 new owner exclusions for targets, variants and bonuses.
+
+Exactly 129 new approved senses bring the main pool to 1,481. Campaign coverage
+is 1036 distinct words across 1,200 answer slots; repeated slots total 164.
+All 240 levels and 48 stops, policy checks, progression and pacing gates remain.
+Migration accepts revisions 1–18 and preserves completed and partial progress,
+coins, paid hints, postcards and lifetime bonus rewards, including restart.
+Revision 19 permits up to 1,502 historical hint credits per level (revision 18's
+1,460 plus one replacement board); historical bounds are unchanged. See
+`VOCABULARY_REVIEW_V19.md` for measured results, verification and limitations.
+
+## Revision 20 expansion compatibility
+
+The active catalog uses `discovery.v20.json`, its matching recipes and
+`discovery-v20-ka.json`. Revision 19 is retained in `previousCatalogs` with its
+original vocabulary. Python and TypeScript select the revision-20 allowlist and
+enforce all 12 new owner exclusions for targets, variants and bonuses.
+
+Exactly 88 new approved senses bring the main pool to 1,569. Campaign coverage
+is 1069 distinct words across 1,200 answer slots; repeated slots total 131.
+All 240 levels and 48 stops, policy checks, progression and pacing gates remain.
+Migration accepts revisions 1–19 and preserves completed and partial progress,
+coins, paid hints, postcards and lifetime bonus rewards, including restart.
+Revision 20 permits up to 1,544 historical hint credits per level (revision 19's
+1,502 plus one replacement board); historical bounds are unchanged. See
+`VOCABULARY_REVIEW_V20.md` for measured results, verification and limitations.
+
+## Revision 21: append Malta
+
+The active catalog is `discovery.v21.json` with matching recipes and review digest.
+It reuses the revision-20 vocabulary and allowlist and adds `journey-v21.json`:
+Valletta 241–245 and Mdina 246–250 after Taormina. All original 240 levels, word IDs,
+bonus words, chapter IDs and layouts remain unchanged. Historical validation uses
+`journey-v13.json` for revisions 13–20; revision 21 requires exactly 250 levels and
+50 stops. Shared grammar, gap, progression, pacing and screen-fit gates are unchanged.
+
+Migration accepts revisions 1–20 and preserves completed and partial progress,
+coins, hints, bonus counters, settings and postcards through restart. The hint
+bound remains 1,544. Completing level 240 unlocks level 241, and the two new
+postcards are earned after levels 245 and 250. Malta is registered in `COUNTRIES`;
+Valletta and Mdina each have a bundled portrait, card strip, caption and an
+owner-approved fact. See `MALTA_ARTWORK.md` for assets and generation prompts and
+`VOCABULARY_REVIEW_V21.md` for measured vocabulary use and validation.
+
+## Revision 22: append Tunisia
+
+The active catalog is `discovery.v22.json` with matching recipes and reviewed digest.
+It reuses the revision-20 vocabulary and allowlist. `journey-v22.json` adds Carthage
+251–255, Sidi Bou Said 256–260 and El Jem 261–265 after Malta, for 265 boards and
+53 stops. All first 250 boards, word IDs, bonuses, chapter IDs and layouts remain
+unchanged. Historical validation uses the 240-level route for revisions 13–20
+and `journey-v21.json` for revision 21. Shared policy and release gates are unchanged.
+
+Migration accepts revisions 1–21 and retains completed and partial progress,
+coins, paid hints, bonus counters, settings and postcards through SQLite restart.
+The hint ceiling remains 1,544. Completing level 250 unlocks 251; the new postcards
+are earned after levels 255, 260 and 265. Tunisia is registered in `COUNTRIES`;
+each of its three stops has a bundled portrait, card strip, caption and approved
+fact. See `TUNISIA_ARTWORK.md` and `VOCABULARY_REVIEW_V22.md` for assets, prompts,
+vocabulary usage and validation results.
+
+## Revision 23: append Spain
+
+The active catalog is `discovery.v23.json`, with matching deterministic recipes and
+reviewed digest. It reuses revision-20 vocabulary. `journey-v23.json` appends six stops:
+Barcelona 266–270, Valencia 271–275, Madrid 276–280, Granada 281–285, Córdoba 286–290
+and Seville 291–295. All first 265 boards and 53 chapters match revision 22 exactly.
+Runtime and generator select the appropriate historical route by revision.
+
+Migration accepts revisions 1–22 and preserves completed and partial solved credits,
+coins, paid hints, bonus rewards, settings and postcards across restart. The hint
+compatibility ceiling remains 1,544. Completing 265 unlocks 266; the new levels
+unlock sequentially and award postcards at 270, 275, 280, 285, 290 and 295.
+Spain is registered in `COUNTRIES`; all six stops have a portrait, card crop, caption
+and owner-approved fact. Tests cover partial and complete v22 upgrades, restart,
+all new levels, asset loading, vocabulary rules and the global 75-level repeat gap.
+See `VOCABULARY_REVIEW_V23.md` and `SPAIN_ARTWORK.md` for measured results and assets.
+
+## Revision 24: replace owner-rejected vocabulary
+
+The active catalog, recipes and reviewed digest are `discovery.v24.*`; vocabulary
+uses `discovery-v24-ka.json` and `everyday-targets-v24.json`. The route, 295 levels,
+59 chapter identities, artwork and approved facts remain unchanged. Rebuilding
+may change existing boards; historical packs through v23 remain immutable.
+The main pool stays at 1,569 after 29 removals and 29 approved additions.
+
+Migrate saves from revisions 1–23 with completed levels, partial solved credits,
+paid hints, coins, settings, postcards and lifetime bonus rewards preserved.
+The snapshot hint-credit ceiling is 1,586 (previous 1,544 plus a replacement
+board's cell capacity). The v23 partial/complete migration regression includes
+removed answers, the historical ceiling, a subsequent paid hint and SQLite reload.
+See `VOCABULARY_REVIEW_V24.md` for measured results and validation.
+
+## Revision 25: approved batch-six expansion
+
+The active pack, recipes and reviewed digest are `discovery.v25.*`; vocabulary
+uses `discovery-v25-ka.json` and `everyday-targets-v25.json`. Exactly 76 approved
+senses expand the main pool to 1,645; all 24 rejected proposals are excluded from
+required answers, variants and bonuses. The 295 levels, 59 chapter identities,
+route `journey-v23.json`, facts and artwork are unchanged; answer sets are rebuilt
+to increase distinct coverage. Historical packs through v24 remain immutable.
+
+Migration accepts revisions 1–24 and preserves completed boards, partial solved
+credits, paid hints, coins, settings, postcards and lifetime bonus rewards across
+restart. The hint-credit ceiling is 1,628 (previous 1,586 plus one board's cell
+capacity). The v24 partial/complete SQLite regression covers changed answers,
+historical maximum hint credits, a subsequent paid hint and reload. See
+`VOCABULARY_REVIEW_V25.md` for actual repetition measurements and validation.
+
+## Revision 26: approved batch-seven expansion
+
+The active pack, recipes and reviewed digest are `discovery.v26.*`; vocabulary
+uses `discovery-v26-ka.json` and `everyday-targets-v26.json`. Exactly 75 approved
+senses expand the main pool to 1,720; all 25 rejected proposals are excluded from
+required answers, variants and bonuses. The 295 levels, 59 chapter identities,
+route `journey-v23.json`, facts and artwork remain; answer sets are rebuilt
+to increase distinct coverage. Historical packs through v25 remain immutable.
+
+Migration accepts revisions 1–25 and preserves completed boards, partial solved
+credits, paid hints, coins, settings, postcards and lifetime bonus rewards across
+restart. The hint-credit ceiling is 1,670 (previous 1,628 plus one board's cell
+capacity). The v25 partial/complete SQLite regression covers changed answers,
+historical maximum hint credits, a subsequent paid hint and reload. See
+`VOCABULARY_REVIEW_V26.md` for actual repetition measurements and validation.

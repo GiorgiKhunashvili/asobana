@@ -1,6 +1,6 @@
 import dictionary from '../../content/dictionaries/discovery-v9-ka.json';
 import oldDictionary from '../../content/dictionaries/discovery-v8-ka.json';
-import manifest from '../../content/levels/discovery.v13.recipes.json';
+import manifest from '../../content/levels/discovery.v26.recipes.json';
 import { catalog, vocabulary } from '../src/content/catalog';
 import { validateWide as validateDiscovery } from '../src/content/wide';
 import { canFormWord } from '../src/engine/georgian';
@@ -9,8 +9,8 @@ import { selectGameplay } from '../src/engine/selectors';
 import { parseSnapshot } from '../src/storage/snapshot';
 import { reachLevel, submit } from './helpers';
 
-test('all 240 reviewed boards follow the small-wheel progression and contain useful extras', () => {
-  expect(catalog.revision).toBe(13);
+test('all 295 reviewed boards follow the small-wheel progression and contain useful extras', () => {
+  expect(catalog.revision).toBe(26);
   expect(() =>
     validateDiscovery(catalog, vocabulary, manifest.familiarity),
   ).not.toThrow();
@@ -72,7 +72,7 @@ test('all targets and bonuses work through the engine, reward once, unlock and r
     }
     expect(completions).toBe(1);
     expect(state.progress[level.id]?.completed).toBe(true);
-    expect(state.coins).toBe(100 + (index + 1) * 25 + bonuses * 3);
+    expect(state.coins).toBe(200 + (index + 1) * 20 + bonuses * 3);
     expect(submit(state, level, level.words[0]!.answer).state).toBe(state);
   }
   expect(selectGameplay(state, catalog).nextLevelId).toBeNull();

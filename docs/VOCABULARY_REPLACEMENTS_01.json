@@ -1,0 +1,1132 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-19",
+  "status": "owner-review-completed",
+  "activeContentRevision": 23,
+  "mainWordCountBefore": 1569,
+  "ownerRemovalDecision": {
+    "confirmedWords": [
+      "აკრი",
+      "არია",
+      "ბოლქვი",
+      "ბუკი",
+      "ბუტკო",
+      "გობი",
+      "დარაბა",
+      "ზნე",
+      "თექა",
+      "კავი",
+      "კალა",
+      "კანოე",
+      "კირი",
+      "კომლი",
+      "კოჭა",
+      "კუპრი",
+      "მურა",
+      "მუსი",
+      "ოსპი",
+      "პაპი",
+      "ტენი",
+      "ურდო",
+      "ფეტვი",
+      "ფისი",
+      "ქალა",
+      "ქარვა",
+      "ჩუმად",
+      "ცური",
+      "წავი"
+    ],
+    "count": 29,
+    "requiredOccurrences": 43,
+    "usedSpellings": 27,
+    "scope": "Exclude from required answers, variants and bonuses in the next content revision after replacement review. Active campaign and historical packs remain unchanged during this proposal.",
+    "skippedAtOwnerRequest": ["კოლო", "სურმა"]
+  },
+  "candidateCount": 29,
+  "mainCountIfAllApproved": 1569,
+  "bonusOnlyWordsUnchanged": 118,
+  "candidatesWithUnusedPartners": 11,
+  "distinctUnusedPartnersInExamples": 11,
+  "sourceAttribution": "Wiktionary contributors, fixed-revision source links and short adapted glosses under CC BY-SA 4.0. Georgian explanatory dictionary at ganmarteba.ge, Linguistic Technologies Group: source links/content hashes and short editorial glosses; no full definitions reproduced.",
+  "limitations": [
+    "Proposals are not approved vocabulary.",
+    "All draft boards have five answers, seven tiles, at least two five/six-letter answers, valid connected crossings and the existing landscape density and size shape. Their other four words remain approved after the 29 removals.",
+    "Drafts establish local fit only. The eventual full 295-level rebuild must enforce 75-level spacing, unique wheels, six-letter stop coverage and peak/recovery pacing.",
+    "These are replacements for the vocabulary pool, not guaranteed one-to-one substitutions in existing boards.",
+    "The remaining 118 bonus-only spellings are not eligible for required crossword answers. Main-list words may be optional bonuses on boards where they are not required."
+  ],
+  "entries": [
+    {
+      "reviewId": "R01",
+      "word": "არეალი",
+      "letters": 6,
+      "proposedMeaning": "area, range",
+      "partOfSpeech": "noun",
+      "form": "singular or mass noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%90%E1%83%A0%E1%83%94%E1%83%90%E1%83%9A%E1%83%98",
+      "sourceChecked": "2026-10-19",
+      "sourceContentSha256": "a2c69b0690ce30bca9d8fc947d09b1996041091414f2307fcb407d31ae7530bc",
+      "supplementalSource": {
+        "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%90%E1%83%A0%E1%83%94%E1%83%90%E1%83%9A%E1%83%98",
+        "sourceRevision": null,
+        "sourceContentSha256": "a2c69b0690ce30bca9d8fc947d09b1996041091414f2307fcb407d31ae7530bc",
+        "blocks": [
+          {
+            "pos": "Noun",
+            "definitions": ["area, range"]
+          }
+        ]
+      },
+      "ownerDecision": "required-eligible",
+      "editorialDecision": "Proposed familiar non-plural sense for owner review; not added to the dictionary or required allowlist. Excludes verbal action forms and previously reviewed spellings. Source evidence and a valid local draft support suitability; no native-speaker sign-off or whole-campaign fit is claimed.",
+      "draftExample": {
+        "words": ["არეალი", "გალია", "ერა", "ერი", "ლიგა"],
+        "wheel": "ააგეილრ",
+        "seed": 13,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.5666666666666667
+      },
+      "testedDraftCount": 18
+    },
+    {
+      "reviewId": "R02",
+      "word": "აუდიტი",
+      "letters": 6,
+      "proposedMeaning": "financial audit",
+      "partOfSpeech": "noun",
+      "form": "singular or mass noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%90%E1%83%A3%E1%83%93%E1%83%98%E1%83%A2%E1%83%98",
+      "sourceChecked": "2026-10-19",
+      "sourceContentSha256": "85826ca4e6c4a36250a0ce3c3fca6ef2ae24faccc25eeba392845a17eacf1c3d",
+      "supplementalSource": {
+        "sourceRevision": 84113104,
+        "sourceUrl": "https://en.wiktionary.org/w/index.php?title=აუდიტი&oldid=84113104",
+        "blocks": [
+          {
+            "pos": "Noun",
+            "definitions": ["[[audit]]"]
+          }
+        ]
+      },
+      "ownerDecision": "required-eligible",
+      "editorialDecision": "Proposed familiar non-plural sense for owner review; not added to the dictionary or required allowlist. Excludes verbal action forms and previously reviewed spellings. Source evidence and a valid local draft support suitability; no native-speaker sign-off or whole-campaign fit is claimed.",
+      "draftExample": {
+        "words": ["აუდიტი", "ბაიტი", "ბატი", "ტაბუ", "ტბა"],
+        "wheel": "აბდიიტუ",
+        "seed": 4,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.5666666666666667
+      },
+      "testedDraftCount": 3
+    },
+    {
+      "reviewId": "R03",
+      "word": "ბელადი",
+      "letters": 6,
+      "proposedMeaning": "leader, chief",
+      "partOfSpeech": "noun",
+      "form": "singular or mass noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%91%E1%83%94%E1%83%9A%E1%83%90%E1%83%93%E1%83%98",
+      "sourceChecked": "2026-10-19",
+      "sourceContentSha256": "8f318a7bce6926fd21f53468fd2226a87c514b8a9d2aa8a1e3d0b136ce2952ac",
+      "supplementalSource": {
+        "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%91%E1%83%94%E1%83%9A%E1%83%90%E1%83%93%E1%83%98",
+        "sourceRevision": null,
+        "sourceContentSha256": "8f318a7bce6926fd21f53468fd2226a87c514b8a9d2aa8a1e3d0b136ce2952ac",
+        "blocks": [
+          {
+            "pos": "Noun",
+            "definitions": ["leader, chief"]
+          }
+        ]
+      },
+      "ownerDecision": "required-eligible",
+      "editorialDecision": "Proposed familiar non-plural sense for owner review; not added to the dictionary or required allowlist. Excludes verbal action forms and previously reviewed spellings. Source evidence and a valid local draft support suitability; no native-speaker sign-off or whole-campaign fit is claimed.",
+      "draftExample": {
+        "words": ["ალი", "ბადე", "ბალი", "ბელადი", "პლედი"],
+        "wheel": "აბდეილპ",
+        "seed": 6,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6
+      },
+      "testedDraftCount": 12
+    },
+    {
+      "reviewId": "R04",
+      "word": "ბიტი",
+      "letters": 4,
+      "proposedMeaning": "bit; unit of digital information",
+      "partOfSpeech": "noun",
+      "form": "singular or mass noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%91%E1%83%98%E1%83%A2%E1%83%98",
+      "sourceChecked": "2026-10-19",
+      "sourceContentSha256": "fa66f3f468e695ccf7af40ecb732686454d0d8ab6922787b405d02638a395fd5",
+      "supplementalSource": {
+        "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%91%E1%83%98%E1%83%A2%E1%83%98",
+        "sourceRevision": null,
+        "sourceContentSha256": "fa66f3f468e695ccf7af40ecb732686454d0d8ab6922787b405d02638a395fd5",
+        "blocks": [
+          {
+            "pos": "Noun",
+            "definitions": ["bit (unit of information)"]
+          }
+        ]
+      },
+      "ownerDecision": "required-eligible",
+      "editorialDecision": "Proposed familiar non-plural sense for owner review; not added to the dictionary or required allowlist. Excludes verbal action forms and previously reviewed spellings. Source evidence and a valid local draft support suitability; no native-speaker sign-off or whole-campaign fit is claimed.",
+      "draftExample": {
+        "words": ["ბიტი", "ბუშტი", "შუბი", "ჯიუტი", "ჯიში"],
+        "wheel": "ბიიტუშჯ",
+        "seed": 7,
+        "transpose": true,
+        "unusedPartners": ["ჯიუტი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5142857142857142
+      },
+      "testedDraftCount": 8
+    },
+    {
+      "reviewId": "R05",
+      "word": "ბიუსტი",
+      "letters": 6,
+      "proposedMeaning": "sculpture of a head and upper chest",
+      "partOfSpeech": "noun",
+      "form": "singular or mass noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%91%E1%83%98%E1%83%A3%E1%83%A1%E1%83%A2%E1%83%98",
+      "sourceChecked": "2026-10-19",
+      "sourceContentSha256": "186f66c54166cfea719e7feba80a9f6823b0eb04d3297aa32d2ed788af9b0e43",
+      "supplementalSource": {
+        "sourceRevision": 84097690,
+        "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბიუსტი&oldid=84097690",
+        "blocks": [
+          {
+            "pos": "Noun",
+            "definitions": ["[[bust]]"]
+          }
+        ]
+      },
+      "ownerDecision": "required-eligible",
+      "editorialDecision": "Proposed familiar non-plural sense for owner review; not added to the dictionary or required allowlist. Excludes verbal action forms and previously reviewed spellings. Source evidence and a valid local draft support suitability; no native-speaker sign-off or whole-campaign fit is claimed.",
+      "draftExample": {
+        "words": ["აუტი", "ბაიტი", "ბიუსტი", "ტაბუ", "ტბა"],
+        "wheel": "აბიისტუ",
+        "seed": 5,
+        "transpose": false,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857142857142857
+      },
+      "testedDraftCount": 13
+    },
+    {
+      "reviewId": "R06",
+      "word": "გენია",
+      "letters": 5,
+      "proposedMeaning": "exceptional creative talent",
+      "partOfSpeech": "noun",
+      "form": "singular or mass noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%92%E1%83%94%E1%83%9C%E1%83%98%E1%83%90",
+      "sourceChecked": "2026-10-19",
+      "sourceContentSha256": "6d3958ae415f9ba93ca08499291bfacb9f703d7a4f98747e16f8b31b5c7842b4",
+      "supplementalSource": {
+        "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%92%E1%83%94%E1%83%9C%E1%83%98%E1%83%90",
+        "sourceRevision": null,
+        "sourceContentSha256": "6d3958ae415f9ba93ca08499291bfacb9f703d7a4f98747e16f8b31b5c7842b4",
+        "blocks": [
+          {
+            "pos": "Noun",
+            "definitions": ["genius, exceptional talent"]
+          }
+        ]
+      },
+      "ownerDecision": "required-eligible",
+      "editorialDecision": "Proposed familiar non-plural sense for owner review; not added to the dictionary or required allowlist. Excludes verbal action forms and previously reviewed spellings. Source evidence and a valid local draft support suitability; no native-speaker sign-off or whole-campaign fit is claimed.",
+      "draftExample": {
+        "words": ["გენი", "გენია", "ენა", "საგანი", "სიგანე"],
+        "wheel": "ააგეინს",
+        "seed": 6,
+        "transpose": false,
+        "unusedPartners": ["საგანი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5714285714285714
+      },
+      "testedDraftCount": 35
+    },
+    {
+      "reviewId": "R07",
+      "word": "გონი",
+      "letters": 4,
+      "proposedMeaning": "consciousness, awareness",
+      "partOfSpeech": "noun",
+      "form": "singular or mass noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%92%E1%83%9D%E1%83%9C%E1%83%98",
+      "sourceChecked": "2026-10-19",
+      "sourceContentSha256": "9a7da51868a45b8b96de6d357fd892abb73cefda9d156e854f24725ce9af6056",
+      "supplementalSource": {
+        "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%92%E1%83%9D%E1%83%9C%E1%83%98",
+        "sourceRevision": null,
+        "sourceContentSha256": "9a7da51868a45b8b96de6d357fd892abb73cefda9d156e854f24725ce9af6056",
+        "blocks": [
+          {
+            "pos": "Noun",
+            "definitions": ["consciousness"]
+          }
+        ]
+      },
+      "ownerDecision": "exclude-all-play",
+      "editorialDecision": "Owner requested a different word on 2026-10-19. Do not add this proposal to the main list or offer it again as unseen.",
+      "draftExample": {
+        "words": ["გონი", "ფონი", "ფუნჯი", "ჯგუფი", "ჯოგი"],
+        "wheel": "გინოუფჯ",
+        "seed": 6,
+        "transpose": true,
+        "unusedPartners": ["ფუნჯი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5142857142857142
+      },
+      "testedDraftCount": 11
+    },
+    {
+      "reviewId": "R08",
+      "word": "დემონი",
+      "letters": 6,
+      "proposedMeaning": "demon, evil spirit",
+      "partOfSpeech": "noun",
+      "form": "singular or mass noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%93%E1%83%94%E1%83%9B%E1%83%9D%E1%83%9C%E1%83%98",
+      "sourceChecked": "2026-10-19",
+      "sourceContentSha256": "bf52a30e0344a4ebda15e3a0b70eb1f8458b16aad8069c43c97ef4919065ef36",
+      "supplementalSource": {
+        "sourceRevision": 84098127,
+        "sourceUrl": "https://en.wiktionary.org/w/index.php?title=დემონი&oldid=84098127",
+        "blocks": [
+          {
+            "pos": "Noun",
+            "definitions": ["[[daemon]], [[demon]], [[felon]]"]
+          }
+        ]
+      },
+      "ownerDecision": "required-eligible",
+      "editorialDecision": "Proposed familiar non-plural sense for owner review; not added to the dictionary or required allowlist. Excludes verbal action forms and previously reviewed spellings. Source evidence and a valid local draft support suitability; no native-speaker sign-off or whole-campaign fit is claimed.",
+      "draftExample": {
+        "words": ["დემონი", "დენი", "დონე", "ენოტი", "ომი"],
+        "wheel": "დეიმნოტ",
+        "seed": 1,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5142857142857142
+      },
+      "testedDraftCount": 12
+    },
+    {
+      "reviewId": "R09",
+      "word": "ვოკალი",
+      "letters": 6,
+      "proposedMeaning": "vocals",
+      "partOfSpeech": "noun",
+      "form": "singular or mass noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ვოკალი&oldid=68812036",
+      "sourceChecked": "2026-10-18; existing fixed-revision source record revisited on 2026-10-19",
+      "sourceContentSha256": null,
+      "supplementalSource": {
+        "sourceRevision": 68812036,
+        "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ვოკალი&oldid=68812036",
+        "blocks": [
+          {
+            "pos": "Noun",
+            "definitions": ["[[vocal]]"]
+          }
+        ]
+      },
+      "ownerDecision": "required-eligible",
+      "editorialDecision": "Proposed familiar non-plural sense for owner review; not added to the dictionary or required allowlist. Excludes verbal action forms and previously reviewed spellings. Source evidence and a valid local draft support suitability; no native-speaker sign-off or whole-campaign fit is claimed.",
+      "draftExample": {
+        "words": ["ვილა", "ვოკალი", "კოჭი", "ოვალი", "ჭავლი"],
+        "wheel": "ავიკლოჭ",
+        "seed": 12,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5714285714285714
+      },
+      "testedDraftCount": 24,
+      "sourceNote": "The Georgian explanatory dictionary did not supply an exact entry; the recorded Wiktionary lemma and sense support this proposal."
+    },
+    {
+      "reviewId": "R10",
+      "word": "კამარა",
+      "letters": 6,
+      "proposedMeaning": "architectural vault or arch",
+      "partOfSpeech": "noun",
+      "form": "singular or mass noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%99%E1%83%90%E1%83%9B%E1%83%90%E1%83%A0%E1%83%90",
+      "sourceChecked": "2026-10-19",
+      "sourceContentSha256": "a3af1e7291c00b9f494c738de63d13c92b5270c5ed6a3b9057d637ef329d9a6b",
+      "supplementalSource": {
+        "sourceRevision": 84116006,
+        "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კამარა&oldid=84116006",
+        "blocks": [
+          {
+            "pos": "Noun",
+            "definitions": ["[[arc]], [[arch]], [[vault]]"]
+          }
+        ]
+      },
+      "ownerDecision": "exclude-all-play",
+      "editorialDecision": "Owner requested a different word on 2026-10-19. Do not add this proposal to the main list or offer it again as unseen.",
+      "draftExample": {
+        "words": ["დრამა", "კამა", "კამარა", "მადა", "მარკა"],
+        "wheel": "ააადკმრ",
+        "seed": 9,
+        "transpose": false,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5714285714285714
+      },
+      "testedDraftCount": 5
+    },
+    {
+      "reviewId": "R11",
+      "word": "კაცური",
+      "letters": 6,
+      "proposedMeaning": "honorable, decent",
+      "partOfSpeech": "adjective",
+      "form": "adjective lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%99%E1%83%90%E1%83%AA%E1%83%A3%E1%83%A0%E1%83%98",
+      "sourceChecked": "2026-10-19",
+      "sourceContentSha256": "86952333c903f6f940593cf79d276006b3fe8c824da99bcce8b16c90450b6fd9",
+      "supplementalSource": {
+        "sourceRevision": 84116068,
+        "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კაცური&oldid=84116068",
+        "blocks": [
+          {
+            "pos": "Adjective",
+            "definitions": ["[[manly]], [[masculine]]"]
+          }
+        ]
+      },
+      "ownerDecision": "required-eligible",
+      "editorialDecision": "Proposed familiar non-plural sense for owner review; not added to the dictionary or required allowlist. Excludes verbal action forms and previously reviewed spellings. Source evidence and a valid local draft support suitability; no native-speaker sign-off or whole-campaign fit is claimed.",
+      "draftExample": {
+        "words": ["კარი", "კაცი", "კაცური", "კურკა", "ცრუ"],
+        "wheel": "აიკკრუც",
+        "seed": 1,
+        "transpose": false,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6
+      },
+      "testedDraftCount": 2
+    },
+    {
+      "reviewId": "R12",
+      "word": "მადლი",
+      "letters": 5,
+      "proposedMeaning": "kindness, grace",
+      "partOfSpeech": "noun",
+      "form": "singular or mass noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%9B%E1%83%90%E1%83%93%E1%83%9A%E1%83%98",
+      "sourceChecked": "2026-10-19",
+      "sourceContentSha256": "37b8e1861c97abfba2a7de1ebb30462bdcd87b0aefcd6554559e217fb25ac2f6",
+      "supplementalSource": {
+        "sourceRevision": 87248502,
+        "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მადლი&oldid=87248502",
+        "blocks": [
+          {
+            "pos": "Noun",
+            "definitions": [
+              "[[virtue]], [[charity]], [[goodness]]",
+              "{{lb|ka|dated|religious}} [[grace]], [[mercy]]",
+              "god-given [[talent]]",
+              "[[gratitude]]"
+            ]
+          }
+        ]
+      },
+      "ownerDecision": "required-eligible",
+      "editorialDecision": "Proposed familiar non-plural sense for owner review; not added to the dictionary or required allowlist. Excludes verbal action forms and previously reviewed spellings. Source evidence and a valid local draft support suitability; no native-speaker sign-off or whole-campaign fit is claimed.",
+      "draftExample": {
+        "words": ["ადგილი", "ალი", "ლაიმი", "მადლი", "მილი"],
+        "wheel": "აგდიილმ",
+        "seed": 14,
+        "transpose": false,
+        "unusedPartners": ["ადგილი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5142857142857142
+      },
+      "testedDraftCount": 14
+    },
+    {
+      "reviewId": "R13",
+      "word": "მაიორი",
+      "letters": 6,
+      "proposedMeaning": "major; military rank",
+      "partOfSpeech": "noun",
+      "form": "singular or mass noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%9B%E1%83%90%E1%83%98%E1%83%9D%E1%83%A0%E1%83%98",
+      "sourceChecked": "2026-10-19",
+      "sourceContentSha256": "03bef8f3c5c99e9d33aafd6acc1caf515ec9bf8a0d4751a2e46ab3965cb15f8d",
+      "supplementalSource": {
+        "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%9B%E1%83%90%E1%83%98%E1%83%9D%E1%83%A0%E1%83%98",
+        "sourceRevision": null,
+        "sourceContentSha256": "03bef8f3c5c99e9d33aafd6acc1caf515ec9bf8a0d4751a2e46ab3965cb15f8d",
+        "blocks": [
+          {
+            "pos": "Noun",
+            "definitions": ["major (military rank)"]
+          }
+        ]
+      },
+      "ownerDecision": "required-eligible",
+      "editorialDecision": "Proposed familiar non-plural sense for owner review; not added to the dictionary or required allowlist. Excludes verbal action forms and previously reviewed spellings. Source evidence and a valid local draft support suitability; no native-speaker sign-off or whole-campaign fit is claimed.",
+      "draftExample": {
+        "words": ["ლაიმი", "ლომი", "მაიორი", "მორალი", "ომი"],
+        "wheel": "აიილმორ",
+        "seed": 8,
+        "transpose": false,
+        "unusedPartners": ["მორალი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5428571428571428
+      },
+      "testedDraftCount": 14
+    },
+    {
+      "reviewId": "R14",
+      "word": "მასივი",
+      "letters": 6,
+      "proposedMeaning": "large tract or continuous area",
+      "partOfSpeech": "noun",
+      "form": "singular or mass noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%9B%E1%83%90%E1%83%A1%E1%83%98%E1%83%95%E1%83%98",
+      "sourceChecked": "2026-10-19",
+      "sourceContentSha256": "cb3ea70e0846c73d12dea96c36023056aab9564819bee2cdead9ee2c2332994b",
+      "supplementalSource": {
+        "sourceRevision": 44095705,
+        "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მასივი&oldid=44095705",
+        "blocks": [
+          {
+            "pos": "Noun",
+            "definitions": ["[[massif]]", "{{lb|ka|programming}} [[array]]"]
+          }
+        ]
+      },
+      "ownerDecision": "exclude-all-play",
+      "editorialDecision": "Owner requested a different word on 2026-10-19. Do not add this proposal to the main list or offer it again as unseen.",
+      "draftExample": {
+        "words": ["ავი", "კივი", "მაისი", "მასივი", "სკამი"],
+        "wheel": "ავიიკმს",
+        "seed": 3,
+        "transpose": false,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6333333333333333
+      },
+      "testedDraftCount": 23
+    },
+    {
+      "reviewId": "R15",
+      "word": "მორიგი",
+      "letters": 6,
+      "proposedMeaning": "next, subsequent",
+      "partOfSpeech": "adjective",
+      "form": "adjective lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%9B%E1%83%9D%E1%83%A0%E1%83%98%E1%83%92%E1%83%98",
+      "sourceChecked": "2026-10-19",
+      "sourceContentSha256": "8f47bb0068c0014d534d5d7ed85f6576843267396e6ce92c8be49657fcfa9a43",
+      "supplementalSource": {
+        "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%9B%E1%83%9D%E1%83%A0%E1%83%98%E1%83%92%E1%83%98",
+        "sourceRevision": null,
+        "sourceContentSha256": "8f47bb0068c0014d534d5d7ed85f6576843267396e6ce92c8be49657fcfa9a43",
+        "blocks": [
+          {
+            "pos": "Adjective",
+            "definitions": ["next, subsequent"]
+          }
+        ]
+      },
+      "ownerDecision": "exclude-all-play",
+      "editorialDecision": "Owner requested a different word on 2026-10-19. Do not add this proposal to the main list or offer it again as unseen.",
+      "draftExample": {
+        "words": ["გმირი", "მორი", "მორიგე", "მორიგი", "ომი"],
+        "wheel": "გეიიმორ",
+        "seed": 7,
+        "transpose": false,
+        "unusedPartners": ["მორიგე"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5714285714285714
+      },
+      "testedDraftCount": 25
+    },
+    {
+      "reviewId": "R16",
+      "word": "ნუსხა",
+      "letters": 5,
+      "proposedMeaning": "list",
+      "partOfSpeech": "noun",
+      "form": "singular or mass noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%9C%E1%83%A3%E1%83%A1%E1%83%AE%E1%83%90",
+      "sourceChecked": "2026-10-19",
+      "sourceContentSha256": "54cbc48f5f1d4c94d5d7f7edbdc9e2f18b74bf7488ede9e8cd15562bb86ced74",
+      "supplementalSource": {
+        "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%9C%E1%83%A3%E1%83%A1%E1%83%AE%E1%83%90",
+        "sourceRevision": null,
+        "sourceContentSha256": "54cbc48f5f1d4c94d5d7f7edbdc9e2f18b74bf7488ede9e8cd15562bb86ced74",
+        "blocks": [
+          {
+            "pos": "Noun",
+            "definitions": ["list"]
+          }
+        ]
+      },
+      "ownerDecision": "required-eligible",
+      "editorialDecision": "Proposed familiar non-plural sense for owner review; not added to the dictionary or required allowlist. Excludes verbal action forms and previously reviewed spellings. Source evidence and a valid local draft support suitability; no native-speaker sign-off or whole-campaign fit is claimed.",
+      "draftExample": {
+        "words": ["მონა", "მუხა", "ნუსხა", "სუნამო", "ხმა"],
+        "wheel": "ამნოსუხ",
+        "seed": 10,
+        "transpose": false,
+        "unusedPartners": ["სუნამო"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5142857142857142
+      },
+      "testedDraftCount": 18
+    },
+    {
+      "reviewId": "R17",
+      "word": "პოკერი",
+      "letters": 6,
+      "proposedMeaning": "poker; card game",
+      "partOfSpeech": "noun",
+      "form": "singular or mass noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=პოკერი&oldid=84100777",
+      "sourceChecked": "2026-10-18; existing fixed-revision source record revisited on 2026-10-19",
+      "sourceContentSha256": null,
+      "supplementalSource": {
+        "sourceRevision": 84100777,
+        "sourceUrl": "https://en.wiktionary.org/w/index.php?title=პოკერი&oldid=84100777",
+        "blocks": [
+          {
+            "pos": "Noun",
+            "definitions": ["[[poker]]"]
+          }
+        ]
+      },
+      "ownerDecision": "required-eligible",
+      "editorialDecision": "Proposed familiar non-plural sense for owner review; not added to the dictionary or required allowlist. Excludes verbal action forms and previously reviewed spellings. Source evidence and a valid local draft support suitability; no native-speaker sign-off or whole-campaign fit is claimed.",
+      "draftExample": {
+        "words": ["კერძი", "კერძო", "პოკერი", "რკო", "როკი"],
+        "wheel": "ეიკოპრძ",
+        "seed": 4,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5428571428571428
+      },
+      "testedDraftCount": 11,
+      "sourceNote": "The Georgian explanatory dictionary did not supply an exact entry; the recorded Wiktionary lemma and sense support this proposal."
+    },
+    {
+      "reviewId": "R18",
+      "word": "საველე",
+      "letters": 6,
+      "proposedMeaning": "field-related",
+      "partOfSpeech": "adjective",
+      "form": "adjective lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%A1%E1%83%90%E1%83%95%E1%83%94%E1%83%9A%E1%83%94",
+      "sourceChecked": "2026-10-19",
+      "sourceContentSha256": "9123ae75348778b5e362e55c0becf07cb99fdb54d7e667b846f041d9ec29f9f5",
+      "supplementalSource": {
+        "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%A1%E1%83%90%E1%83%95%E1%83%94%E1%83%9A%E1%83%94",
+        "sourceRevision": null,
+        "sourceContentSha256": "9123ae75348778b5e362e55c0becf07cb99fdb54d7e667b846f041d9ec29f9f5",
+        "blocks": [
+          {
+            "pos": "Adjective",
+            "definitions": ["field-related"]
+          }
+        ]
+      },
+      "ownerDecision": "required-eligible",
+      "editorialDecision": "Proposed familiar non-plural sense for owner review; not added to the dictionary or required allowlist. Excludes verbal action forms and previously reviewed spellings. Source evidence and a valid local draft support suitability; no native-speaker sign-off or whole-campaign fit is claimed.",
+      "draftExample": {
+        "words": ["ავი", "ალი", "ვალსი", "საველე", "სველი"],
+        "wheel": "აეევილს",
+        "seed": 14,
+        "transpose": false,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5142857142857142
+      },
+      "testedDraftCount": 14
+    },
+    {
+      "reviewId": "R19",
+      "word": "საკმაო",
+      "letters": 6,
+      "proposedMeaning": "sufficient",
+      "partOfSpeech": "adjective",
+      "form": "adjective lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%A1%E1%83%90%E1%83%99%E1%83%9B%E1%83%90%E1%83%9D",
+      "sourceChecked": "2026-10-19",
+      "sourceContentSha256": "8d97626d7ab3252fbd6cfa016e62cb490457b7ce95e6347cb58349509238f1b0",
+      "supplementalSource": {
+        "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%A1%E1%83%90%E1%83%99%E1%83%9B%E1%83%90%E1%83%9D",
+        "sourceRevision": null,
+        "sourceContentSha256": "8d97626d7ab3252fbd6cfa016e62cb490457b7ce95e6347cb58349509238f1b0",
+        "blocks": [
+          {
+            "pos": "Adjective",
+            "definitions": ["sufficient"]
+          }
+        ]
+      },
+      "ownerDecision": "required-eligible",
+      "editorialDecision": "Proposed familiar non-plural sense for owner review; not added to the dictionary or required allowlist. Excludes verbal action forms and previously reviewed spellings. Source evidence and a valid local draft support suitability; no native-speaker sign-off or whole-campaign fit is claimed.",
+      "draftExample": {
+        "words": ["ასაკი", "კომა", "ომი", "საკმაო", "სკამი"],
+        "wheel": "ააიკმოს",
+        "seed": 1,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6
+      },
+      "testedDraftCount": 16
+    },
+    {
+      "reviewId": "R20",
+      "word": "საძილე",
+      "letters": 6,
+      "proposedMeaning": "for sleeping; as in sleeping bag",
+      "partOfSpeech": "adjective",
+      "form": "adjective lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%A1%E1%83%90%E1%83%AB%E1%83%98%E1%83%9A%E1%83%94",
+      "sourceChecked": "2026-10-19",
+      "sourceContentSha256": "dec47b99837322ea2608fc05078342538e7045f53f34cde65fd61961b3c8dc6e",
+      "supplementalSource": {
+        "sourceRevision": 84118880,
+        "sourceUrl": "https://en.wiktionary.org/w/index.php?title=საძილე&oldid=84118880",
+        "blocks": [
+          {
+            "pos": "Adjective",
+            "definitions": [
+              "used for sleeping",
+              "[[sleeping]] (used to produce sleep)"
+            ]
+          }
+        ]
+      },
+      "ownerDecision": "required-eligible",
+      "editorialDecision": "Proposed familiar non-plural sense for owner review; not added to the dictionary or required allowlist. Excludes verbal action forms and previously reviewed spellings. Source evidence and a valid local draft support suitability; no native-speaker sign-off or whole-campaign fit is claimed.",
+      "draftExample": {
+        "words": ["ბალი", "საბელი", "საძილე", "სილა", "სიძე"],
+        "wheel": "აბეილსძ",
+        "seed": 13,
+        "transpose": false,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5428571428571428
+      },
+      "testedDraftCount": 19
+    },
+    {
+      "reviewId": "R21",
+      "word": "სტაჟი",
+      "letters": 5,
+      "proposedMeaning": "length of work experience",
+      "partOfSpeech": "noun",
+      "form": "singular or mass noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%A1%E1%83%A2%E1%83%90%E1%83%9F%E1%83%98",
+      "sourceChecked": "2026-10-19",
+      "sourceContentSha256": "724a9ecf27178f866cf563553941f8ff842f38f07e062ecaf14b5d79508d14c7",
+      "supplementalSource": {
+        "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%A1%E1%83%A2%E1%83%90%E1%83%9F%E1%83%98",
+        "sourceRevision": null,
+        "sourceContentSha256": "724a9ecf27178f866cf563553941f8ff842f38f07e062ecaf14b5d79508d14c7",
+        "blocks": [
+          {
+            "pos": "Noun",
+            "definitions": ["length of service"]
+          }
+        ]
+      },
+      "ownerDecision": "required-eligible",
+      "editorialDecision": "Proposed familiar non-plural sense for owner review; not added to the dictionary or required allowlist. Excludes verbal action forms and previously reviewed spellings. Source evidence and a valid local draft support suitability; no native-speaker sign-off or whole-campaign fit is claimed.",
+      "draftExample": {
+        "words": ["აუტი", "დასი", "სია", "სტაჟი", "სტუდია"],
+        "wheel": "ადიჟსტუ",
+        "seed": 1,
+        "transpose": false,
+        "unusedPartners": ["სტუდია"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5142857142857142
+      },
+      "testedDraftCount": 21
+    },
+    {
+      "reviewId": "R22",
+      "word": "სტარტი",
+      "letters": 6,
+      "proposedMeaning": "starting point of a race",
+      "partOfSpeech": "noun",
+      "form": "singular or mass noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%A1%E1%83%A2%E1%83%90%E1%83%A0%E1%83%A2%E1%83%98",
+      "sourceChecked": "2026-10-19",
+      "sourceContentSha256": "28046c0dde2a5d16a09bba70d1658e499a05e5e82bf608f96f720d34623c8dac",
+      "supplementalSource": {
+        "sourceRevision": 84119240,
+        "sourceUrl": "https://en.wiktionary.org/w/index.php?title=სტარტი&oldid=84119240",
+        "blocks": [
+          {
+            "pos": "Noun",
+            "definitions": ["[[start]]"]
+          }
+        ]
+      },
+      "ownerDecision": "required-eligible",
+      "editorialDecision": "Proposed familiar non-plural sense for owner review; not added to the dictionary or required allowlist. Excludes verbal action forms and previously reviewed spellings. Source evidence and a valid local draft support suitability; no native-speaker sign-off or whole-campaign fit is claimed.",
+      "draftExample": {
+        "words": ["არსი", "ისარი", "სარი", "სია", "სტარტი"],
+        "wheel": "აიირსტტ",
+        "seed": 10,
+        "transpose": false,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.5666666666666667
+      },
+      "testedDraftCount": 11
+    },
+    {
+      "reviewId": "R23",
+      "word": "ტემბრი",
+      "letters": 6,
+      "proposedMeaning": "tone quality of a voice or instrument",
+      "partOfSpeech": "noun",
+      "form": "singular or mass noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%A2%E1%83%94%E1%83%9B%E1%83%91%E1%83%A0%E1%83%98",
+      "sourceChecked": "2026-10-19",
+      "sourceContentSha256": "5f412e3309cee7a9a7388b0eda431fd9192f78ea2235e17d928f541797e4b669",
+      "supplementalSource": {
+        "sourceRevision": 84101835,
+        "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ტემბრი&oldid=84101835",
+        "blocks": [
+          {
+            "pos": "Noun",
+            "definitions": ["[[timbre]]"]
+          }
+        ]
+      },
+      "ownerDecision": "exclude-all-play",
+      "editorialDecision": "Owner requested a different word on 2026-10-19. Do not add this proposal to the main list or offer it again as unseen.",
+      "draftExample": {
+        "words": ["ბერეტი", "ერი", "მტერი", "ტემბრი", "ტირე"],
+        "wheel": "ბეეიმრტ",
+        "seed": 11,
+        "transpose": true,
+        "unusedPartners": ["ბერეტი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5714285714285714
+      },
+      "testedDraftCount": 27
+    },
+    {
+      "reviewId": "R24",
+      "word": "უვიზო",
+      "letters": 5,
+      "proposedMeaning": "visa-free",
+      "partOfSpeech": "adjective",
+      "form": "adjective lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=უვიზო&oldid=85113396",
+      "sourceChecked": "2026-10-18; existing fixed-revision source record revisited on 2026-10-19",
+      "sourceContentSha256": null,
+      "supplementalSource": {
+        "sourceRevision": 85113396,
+        "sourceUrl": "https://en.wiktionary.org/w/index.php?title=უვიზო&oldid=85113396",
+        "blocks": [
+          {
+            "pos": "Adjective",
+            "definitions": ["[[visa-free]]"]
+          }
+        ]
+      },
+      "ownerDecision": "exclude-all-play",
+      "editorialDecision": "Owner requested a different word on 2026-10-19. Do not add this proposal to the main list or offer it again as unseen.",
+      "draftExample": {
+        "words": ["აუზი", "დოზა", "ზავი", "უდავო", "უვიზო"],
+        "wheel": "ადვზიოუ",
+        "seed": 15,
+        "transpose": true,
+        "unusedPartners": ["უდავო"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5142857142857142
+      },
+      "testedDraftCount": 13,
+      "sourceNote": "The Georgian explanatory dictionary did not supply an exact entry; the recorded Wiktionary lemma and sense support this proposal."
+    },
+    {
+      "reviewId": "R25",
+      "word": "უქმე",
+      "letters": 4,
+      "proposedMeaning": "non-working; as in a day off",
+      "partOfSpeech": "adjective",
+      "form": "adjective lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%A5%E1%83%9B%E1%83%94",
+      "sourceChecked": "2026-10-19",
+      "sourceContentSha256": "cfc3225e4bddfb6248710f85a6f4e925bc4535fb5729727f8ecce9c98fa222a5",
+      "supplementalSource": {
+        "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%A5%E1%83%9B%E1%83%94",
+        "sourceRevision": null,
+        "sourceContentSha256": "cfc3225e4bddfb6248710f85a6f4e925bc4535fb5729727f8ecce9c98fa222a5",
+        "blocks": [
+          {
+            "pos": "Adjective",
+            "definitions": ["non-working (day)"]
+          }
+        ]
+      },
+      "ownerDecision": "required-eligible",
+      "editorialDecision": "Proposed familiar non-plural sense for owner review; not added to the dictionary or required allowlist. Excludes verbal action forms and previously reviewed spellings. Source evidence and a valid local draft support suitability; no native-speaker sign-off or whole-campaign fit is claimed.",
+      "draftExample": {
+        "words": ["მზე", "მუზა", "საუზმე", "საქმე", "უქმე"],
+        "wheel": "აეზმსუქ",
+        "seed": 16,
+        "transpose": false,
+        "unusedPartners": ["საუზმე"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.5666666666666667
+      },
+      "testedDraftCount": 18
+    },
+    {
+      "reviewId": "R26",
+      "word": "ქალური",
+      "letters": 6,
+      "proposedMeaning": "feminine",
+      "partOfSpeech": "adjective",
+      "form": "adjective lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%A5%E1%83%90%E1%83%9A%E1%83%A3%E1%83%A0%E1%83%98",
+      "sourceChecked": "2026-10-19",
+      "sourceContentSha256": "8d3d997f368e7013fcd38dacda8a31b279b49faf1f1e556dfca7ce05e281b7eb",
+      "supplementalSource": {
+        "sourceRevision": 84120015,
+        "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ქალური&oldid=84120015",
+        "blocks": [
+          {
+            "pos": "Adjective",
+            "definitions": [
+              "[[womanly]], [[feminine]], [[womanish]], [[womanlike]]"
+            ]
+          }
+        ]
+      },
+      "ownerDecision": "required-eligible",
+      "editorialDecision": "Proposed familiar non-plural sense for owner review; not added to the dictionary or required allowlist. Excludes verbal action forms and previously reviewed spellings. Source evidence and a valid local draft support suitability; no native-speaker sign-off or whole-campaign fit is claimed.",
+      "draftExample": {
+        "words": ["არსი", "სილა", "სრული", "სული", "ქალური"],
+        "wheel": "აილრსუქ",
+        "seed": 1,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6333333333333333
+      },
+      "testedDraftCount": 8
+    },
+    {
+      "reviewId": "R27",
+      "word": "შტორმი",
+      "letters": 6,
+      "proposedMeaning": "storm at sea",
+      "partOfSpeech": "noun",
+      "form": "singular or mass noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%A8%E1%83%A2%E1%83%9D%E1%83%A0%E1%83%9B%E1%83%98",
+      "sourceChecked": "2026-10-19",
+      "sourceContentSha256": "42de70cb8ff660d7350502e5a3a51fa9f318f883503e7e1014de611de4413413",
+      "supplementalSource": {
+        "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%A8%E1%83%A2%E1%83%9D%E1%83%A0%E1%83%9B%E1%83%98",
+        "sourceRevision": null,
+        "sourceContentSha256": "42de70cb8ff660d7350502e5a3a51fa9f318f883503e7e1014de611de4413413",
+        "blocks": [
+          {
+            "pos": "Noun",
+            "definitions": ["storm at sea"]
+          }
+        ]
+      },
+      "ownerDecision": "required-eligible",
+      "editorialDecision": "Proposed familiar non-plural sense for owner review; not added to the dictionary or required allowlist. Excludes verbal action forms and previously reviewed spellings. Source evidence and a valid local draft support suitability; no native-speaker sign-off or whole-campaign fit is claimed.",
+      "draftExample": {
+        "words": ["პორტი", "რომი", "შორი", "შტო", "შტორმი"],
+        "wheel": "იმოპრტშ",
+        "seed": 7,
+        "transpose": false,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5142857142857142
+      },
+      "testedDraftCount": 17
+    },
+    {
+      "reviewId": "R28",
+      "word": "ჯაგარი",
+      "letters": 6,
+      "proposedMeaning": "bristle, coarse hair",
+      "partOfSpeech": "noun",
+      "form": "singular or mass noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%AF%E1%83%90%E1%83%92%E1%83%90%E1%83%A0%E1%83%98",
+      "sourceChecked": "2026-10-19",
+      "sourceContentSha256": "ae49b3a2b53a588907ffa8769d367fa63e3877076ab396cea1b6320afff05557",
+      "supplementalSource": {
+        "sourceRevision": 84103055,
+        "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ჯაგარი&oldid=84103055",
+        "blocks": [
+          {
+            "pos": "Noun",
+            "definitions": ["[[bristle]]", "[[stubble]]  (slightly humorous)"]
+          }
+        ]
+      },
+      "ownerDecision": "required-eligible",
+      "editorialDecision": "Proposed familiar non-plural sense for owner review; not added to the dictionary or required allowlist. Excludes verbal action forms and previously reviewed spellings. Source evidence and a valid local draft support suitability; no native-speaker sign-off or whole-campaign fit is claimed.",
+      "draftExample": {
+        "words": ["გრამი", "იჯარა", "მაგია", "მაჯა", "ჯაგარი"],
+        "wheel": "ააგიმრჯ",
+        "seed": 3,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.6
+      },
+      "testedDraftCount": 7
+    },
+    {
+      "reviewId": "R29",
+      "word": "ჯებირი",
+      "letters": 6,
+      "proposedMeaning": "embankment holding back water",
+      "partOfSpeech": "noun",
+      "form": "singular or mass noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%AF%E1%83%94%E1%83%91%E1%83%98%E1%83%A0%E1%83%98",
+      "sourceChecked": "2026-10-19",
+      "sourceContentSha256": "fcf0a26b46d9cb2acaa5b40990ccf8cef8e4aa782e4dcde72685ac76fb815761",
+      "supplementalSource": {
+        "sourceRevision": 84121406,
+        "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ჯებირი&oldid=84121406",
+        "blocks": [
+          {
+            "pos": "Noun",
+            "definitions": ["[[jetty]], [[levee]]"]
+          }
+        ]
+      },
+      "ownerDecision": "required-eligible",
+      "editorialDecision": "Proposed familiar non-plural sense for owner review; not added to the dictionary or required allowlist. Excludes verbal action forms and previously reviewed spellings. Source evidence and a valid local draft support suitability; no native-speaker sign-off or whole-campaign fit is claimed.",
+      "draftExample": {
+        "words": ["ბერი", "ერი", "ირემი", "მერი", "ჯებირი"],
+        "wheel": "ბეიიმრჯ",
+        "seed": 6,
+        "transpose": false,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6
+      },
+      "testedDraftCount": 9
+    }
+  ],
+  "followupReview": "docs/VOCABULARY_REPLACEMENTS_02.json",
+  "finalReview": "docs/VOCABULARY_REPLACEMENTS_APPROVED_01.json"
+}

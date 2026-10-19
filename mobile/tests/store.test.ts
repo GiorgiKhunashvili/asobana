@@ -34,7 +34,7 @@ test('queued commands commit once; a new store resumes with rewards/unlocks', as
         tileIds: tilesFor(level, 'მე'),
       }),
     ]);
-    expect(store.getState().game?.coins).toBe(125);
+    expect(store.getState().game?.coins).toBe(220);
     expect(store.getState().busy).toBe(false);
     const restored = createGameStore(catalog, async () => repository);
     await restored.getState().initialize();

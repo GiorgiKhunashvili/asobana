@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-19",
+  "status": "owner-review-completed",
+  "activeContentRevision": 23,
+  "replacesReview": "docs/VOCABULARY_REPLACEMENTS_02.json",
+  "rejectedProposalWords": ["შტოში"],
+  "candidateCount": 1,
+  "scope": "One replacement within the pending 29-word proposal; live dictionaries and campaign remain unchanged. No additional approvals inferred.",
+  "sourceAttribution": "Wiktionary contributors, fixed-revision source links and short adapted glosses under CC BY-SA 4.0. Georgian explanatory dictionary at ganmarteba.ge, Linguistic Technologies Group: source links/content hashes and short editorial glosses; no full definitions reproduced.",
+  "limitations": [
+    "Each candidate has a local draft with four already approved partners, excluding the 29 requested removals.",
+    "Drafts pass five-answer, seven-tile, two-long-answer, connected-layout, shape and density checks; they do not establish full campaign compatibility or repetition improvement.",
+    "No native-speaker review is claimed; owner approval is pending."
+  ],
+  "entries": [
+    {
+      "reviewId": "R3-01",
+      "replacesProposal": "შტოში",
+      "word": "კახელი",
+      "letters": 6,
+      "proposedMeaning": "Kakhetian; a person from Kakheti",
+      "partOfSpeech": "noun",
+      "form": "singular demonym, not a personal name",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კახელი&oldid=84116074",
+      "supplementalSource": {
+        "sourceRevision": 84116074,
+        "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კახელი&oldid=84116074",
+        "blocks": [
+          {
+            "pos": "Noun",
+            "definitions": ["someone from [[Kakheti]], Kakhetian person"]
+          }
+        ]
+      },
+      "sourceChecked": "Existing fixed-revision record revisited 2026-10-19",
+      "ownerDecision": "exclude-all-play",
+      "editorialDecision": "Owner declined and asked for multiple alternatives on 2026-10-19.",
+      "draftExample": {
+        "words": ["ეკალი", "კახელი", "კეხი", "ლაღი", "ღია"],
+        "wheel": "აეიკლღხ",
+        "seed": 5,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6
+      },
+      "testedDraftCount": 12
+    }
+  ],
+  "followupReview": "docs/VOCABULARY_REPLACEMENTS_04.json",
+  "finalReview": "docs/VOCABULARY_REPLACEMENTS_APPROVED_01.json"
+}

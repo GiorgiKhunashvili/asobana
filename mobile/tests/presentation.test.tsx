@@ -1,14 +1,20 @@
-import { fireEvent, render } from '@testing-library/react-native';
+import { act, fireEvent, render } from '@testing-library/react-native';
 import { View } from 'react-native';
 import { PrimaryButton, RoundButton } from '../src/components/Buttons';
 import { CrosswordBoard } from '../src/components/CrosswordBoard';
 import { LetterWheel } from '../src/components/LetterWheel';
 import { Display } from '../src/components/Text';
 import { BonusMeter } from '../src/components/BonusMeter';
+import Coins from '../app/coins';
+import { rewardedAds, useRewardedAd } from '../src/ads/rewardedAds';
+import {
+  levelRewardAds,
+  useLevelRewardAdSnapshot,
+} from '../src/ads/levelRewardAds';
 import Postcards from '../app/(tabs)/album';
 import { gameStore } from '../src/state/gameStore';
 import { reachLevel as reachCurrentLevel } from './helpers';
-import { router, useLocalSearchParams } from 'expo-router';
+import { router, useIsFocused, useLocalSearchParams } from 'expo-router';
 import Victory from '../app/victory/[levelId]';
 import { GameplayScreen } from '../src/screens/GameplayScreen';
 import { initialState, transition } from '../src/engine/game';
@@ -50,7 +56,7 @@ jest.mock('expo-router', () => ({
     dismissTo: jest.fn(),
   },
   useFocusEffect: jest.fn(),
-  useIsFocused: () => true,
+  useIsFocused: jest.fn(() => true),
   useLocalSearchParams: jest.fn(() => ({})),
 }));
 jest.mock(
@@ -61,6 +67,24 @@ jest.mock('../src/services/feedback', () => ({
   tileHaptic: jest.fn(),
   blockedHaptic: jest.fn(),
 }));
+jest.mock('../src/ads/rewardedAds', () => ({
+  rewardedAds: {
+    load: jest.fn().mockResolvedValue(undefined),
+    show: jest.fn().mockResolvedValue(undefined),
+    watch: jest.fn().mockResolvedValue(undefined),
+    retryReward: jest.fn().mockResolvedValue(undefined),
+  },
+  useRewardedAd: jest.fn(() => ({ status: 'ready' })),
+}));
+jest.mock('../src/ads/levelRewardAds', () => ({
+  levelRewardAds: {
+    load: jest.fn().mockResolvedValue(undefined),
+    show: jest.fn().mockResolvedValue(undefined),
+    watch: jest.fn().mockResolvedValue(undefined),
+    retryReward: jest.fn().mockResolvedValue(undefined),
+  },
+  useLevelRewardAdSnapshot: jest.fn(() => ({ status: 'ready' })),
+}));
 jest.mock('../src/state/gameStore', () => {
   const { initialState } = require('../src/engine/game');
   const { catalog } = require('../src/content/catalog');
@@ -68,6 +92,7 @@ jest.mock('../src/state/gameStore', () => {
     // The first-time tutorial has its own suite (tutorial.test.tsx).
     game: { ...initialState(catalog), tutorialSeen: true },
     busy: false,
+    status: 'ready',
     error: null,
     eventBatch: { sequence: 0, events: [] },
     dispatch: jest.fn(),
@@ -130,7 +155,7 @@ test('album previews the next place and opens only earned postcards', async () =
   try {
     gameStore.setState({ game: reachCurrentLevel(5) });
     const screen = await render(<Postcards />);
-    expect(screen.getByText('1/48 ბარათი შეგროვებულია')).toBeTruthy();
+    expect(screen.getByText('1/59 ბარათი შეგროვებულია')).toBeTruthy();
     expect(screen.getByText('შემდეგი: მცხეთა')).toBeTruthy();
     expect(screen.queryByTestId('open-postcard-mtskheta')).toBeNull();
     await fireEvent.press(screen.getByTestId('open-postcard-tbilisi'));
@@ -150,6 +175,151 @@ test('gameplay shows the Georgian topic heading above the hidden board', async (
   expect(screen.getByLabelText('დონე 1')).toBeTruthy();
   expect(screen.queryByText('მზე')).toBeNull();
   expect(screen.getByLabelText('0/5 სიტყვა · ბონუსი 0')).toBeTruthy();
+});
+
+test('low-balance hints clearly offer an ad and watch directly without navigating or buying a hint', async () => {
+  const before = gameStore.getState().game;
+  try {
+    gameStore.setState({
+      game: { ...initialState(journeyCatalog), coins: 0, tutorialSeen: true },
+    });
+    const screen = await render(<GameplayScreen levelId="ka-001" />);
+    expect(screen.getByTestId('hint-word')).not.toBeDisabled();
+    expect(screen.getByTestId('hint-cell')).not.toBeDisabled();
+    expect(screen.getAllByText('+75')).toHaveLength(2);
+    expect(screen.getByTestId('hint-word').props.accessibilityHint).toBe(
+      'რეკლამა გაიხსნება აქვე; მინიშნებას შემდეგ ცალკე აირჩევ',
+    );
+    expect(rewardedAds.load).toHaveBeenCalledTimes(1);
+    expect(rewardedAds.watch).not.toHaveBeenCalled();
+    await act(async () => {
+      fireEvent.press(screen.getByTestId('hint-word'));
+    });
+    await act(async () => {
+      fireEvent.press(screen.getByTestId('hint-cell'));
+    });
+    expect(router.push).not.toHaveBeenCalled();
+    expect(gameStore.getState().dispatch).not.toHaveBeenCalled();
+    expect(rewardedAds.watch).toHaveBeenCalledTimes(2);
+    gameStore.setState({ game: { ...gameStore.getState().game!, coins: 75 } });
+    await screen.rerender(<GameplayScreen levelId="ka-001" />);
+    expect(screen.queryByText('+75')).toBeNull();
+    expect(gameStore.getState().dispatch).not.toHaveBeenCalled();
+  } finally {
+    gameStore.setState({ game: before });
+  }
+});
+
+test('affordable and free hints still perform the hint action without an ad', async () => {
+  const before = gameStore.getState().game;
+  const dispatch = jest
+    .mocked(gameStore.getState().dispatch)
+    .mockResolvedValue(undefined);
+  try {
+    gameStore.setState({
+      game: { ...initialState(journeyCatalog), coins: 30, tutorialSeen: true },
+    });
+    const screen = await render(<GameplayScreen levelId="ka-001" />);
+    expect(screen.getAllByText('+75')).toHaveLength(1);
+    await fireEvent.press(screen.getByTestId('hint-cell'));
+    expect(dispatch).toHaveBeenCalledWith({
+      type: 'hint',
+      levelId: 'ka-001',
+      kind: 'cell',
+    });
+    gameStore.setState({
+      game: {
+        ...gameStore.getState().game!,
+        coins: 0,
+        bonusRewards: { totalFound: 10, hintsSpent: 0 },
+      },
+    });
+    await screen.rerender(<GameplayScreen levelId="ka-001" />);
+    await fireEvent.press(screen.getByTestId('hint-cell'));
+    expect(dispatch).toHaveBeenCalledTimes(2);
+    expect(rewardedAds.watch).not.toHaveBeenCalled();
+  } finally {
+    gameStore.setState({ game: before });
+  }
+});
+
+test('a pending hint ad cancels on navigation and offers a save-only retry after storage failure', async () => {
+  const before = gameStore.getState().game;
+  let signal: AbortSignal | undefined;
+  jest.mocked(rewardedAds.watch).mockImplementationOnce(
+    (next) =>
+      new Promise<void>((resolve) => {
+        signal = next;
+        next.addEventListener('abort', () => resolve());
+      }),
+  );
+  jest.mocked(useRewardedAd).mockReturnValue({ status: 'loading' });
+  try {
+    gameStore.setState({
+      game: { ...initialState(journeyCatalog), coins: 0, tutorialSeen: true },
+    });
+    const screen = await render(<GameplayScreen levelId="ka-001" />);
+    await fireEvent.press(screen.getByTestId('hint-word'));
+    expect(screen.getByTestId('hint-word')).toBeDisabled();
+    expect(screen.getByTestId('hint-ad-dismiss')).toBeTruthy();
+    jest.mocked(useIsFocused).mockReturnValue(false);
+    await screen.rerender(<GameplayScreen levelId="ka-001" />);
+    expect(signal?.aborted).toBe(true);
+    expect(screen.queryByTestId('hint-ad-notice')).toBeNull();
+    jest.mocked(useIsFocused).mockReturnValue(true);
+    jest.mocked(useRewardedAd).mockReturnValue({ status: 'save-error' });
+    await screen.rerender(<GameplayScreen levelId="ka-001" />);
+    await fireEvent.press(screen.getByTestId('hint-word'));
+    expect(rewardedAds.retryReward).toHaveBeenCalledTimes(1);
+    expect(rewardedAds.watch).toHaveBeenCalledTimes(1);
+    await act(async () => {});
+  } finally {
+    gameStore.setState({ game: before });
+    jest.mocked(useIsFocused).mockReturnValue(true);
+    jest.mocked(useRewardedAd).mockReturnValue({ status: 'ready' });
+  }
+});
+
+test('coins screen shows the 75-coin offer and requires an explicit watch press', async () => {
+  const before = gameStore.getState().game;
+  gameStore.setState({ game: { ...initialState(journeyCatalog), coins: 0 } });
+  jest.mocked(useLocalSearchParams).mockReturnValue({ reason: 'hint' });
+  try {
+    const screen = await render(<Coins />);
+    expect(screen.getByText(/მინიშნებისთვის მონეტები არ გყოფნის/)).toBeTruthy();
+    expect(
+      screen.getByRole('button', { name: 'ნახე რეკლამა · +75 მონეტა' }),
+    ).toBeTruthy();
+    expect(rewardedAds.load).toHaveBeenCalledTimes(1);
+    expect(rewardedAds.show).not.toHaveBeenCalled();
+    await fireEvent.press(screen.getByTestId('rewarded-ad'));
+    expect(rewardedAds.show).toHaveBeenCalledTimes(1);
+    gameStore.setState({
+      game: { ...initialState(journeyCatalog), coins: 75 },
+    });
+    await screen.rerender(<Coins />);
+    expect(screen.queryByText(/მინიშნებისთვის მონეტები არ გყოფნის/)).toBeNull();
+  } finally {
+    gameStore.setState({ game: before });
+    jest.mocked(useLocalSearchParams).mockReturnValue({});
+  }
+});
+
+test('the coin offer disables pending ads and retries an earned save without showing another ad', async () => {
+  jest.mocked(useRewardedAd).mockReturnValue({ status: 'saving' });
+  try {
+    const screen = await render(<Coins />);
+    expect(screen.getByTestId('rewarded-ad')).toBeDisabled();
+    await fireEvent.press(screen.getByTestId('rewarded-ad'));
+    expect(rewardedAds.show).not.toHaveBeenCalled();
+    jest.mocked(useRewardedAd).mockReturnValue({ status: 'save-error' });
+    await screen.rerender(<Coins />);
+    await fireEvent.press(screen.getByTestId('rewarded-ad'));
+    expect(rewardedAds.retryReward).toHaveBeenCalledTimes(1);
+    expect(rewardedAds.show).not.toHaveBeenCalled();
+  } finally {
+    jest.mocked(useRewardedAd).mockReturnValue({ status: 'ready' });
+  }
 });
 
 test('hidden cells expose no answers; committed words render in Georgian', async () => {
@@ -536,4 +706,132 @@ test("the fact greets a place's first win and stays on its stamped postcard", as
   );
   await card.rerender(<StampedPostcard chapterId="weather" number={1} />);
   expect(card.queryByTestId('place-fact')).toBeNull();
+});
+
+/** The victory screen as reached straight from finishing `levelId` on the board. */
+function justFinished(levelId: string, game = reachCurrentLevel(3)) {
+  gameStore.setState({
+    game,
+    eventBatch: {
+      sequence: 1,
+      events: [
+        { type: 'level-completed', levelId, reward: 20, nextLevelId: null },
+      ],
+    },
+  });
+  jest.mocked(useLocalSearchParams).mockReturnValue({ levelId });
+}
+
+describe('the optional ×2 ad on the victory screen', () => {
+  let before: ReturnType<typeof gameStore.getState>['game'];
+  beforeEach(() => {
+    before = gameStore.getState().game;
+  });
+  afterEach(() => {
+    gameStore.setState({
+      game: before,
+      eventBatch: { sequence: 0, events: [] },
+    });
+    jest.mocked(useLocalSearchParams).mockReturnValue({});
+    jest.mocked(useIsFocused).mockReturnValue(true);
+    jest.mocked(useLevelRewardAdSnapshot).mockReturnValue({ status: 'ready' });
+  });
+
+  test('appears beside a just-earned reward and presents only on its press', async () => {
+    justFinished('ka-003');
+    const coins = gameStore.getState().game!.coins;
+    const screen = await render(<Victory />);
+    expect(screen.getByLabelText('ჯილდო 20 მონეტა')).toBeTruthy();
+    const offer = screen.getByTestId('victory-double');
+    expect(offer.props.accessibilityLabel).toBe(
+      'ნახე რეკლამა და გააორმაგე ჯილდო: +20 მონეტა',
+    );
+    // Moving on stays the primary action; nothing plays by itself.
+    expect(screen.getByTestId('victory-next')).toBeTruthy();
+    expect(levelRewardAds.load).toHaveBeenCalledTimes(1);
+    expect(levelRewardAds.watch).not.toHaveBeenCalled();
+    await act(async () => {
+      fireEvent.press(offer);
+    });
+    expect(levelRewardAds.watch).toHaveBeenCalledTimes(1);
+    expect(jest.mocked(levelRewardAds.watch).mock.calls[0]![1]).toBe('ka-003');
+    // The press itself pays nothing: only the SDK's earned event can.
+    expect(gameStore.getState().game!.coins).toBe(coins);
+    expect(gameStore.getState().dispatch).not.toHaveBeenCalled();
+  });
+
+  test('is absent when reopening a finished level, before finishing, and without ads', async () => {
+    gameStore.setState({ game: reachCurrentLevel(3) });
+    jest.mocked(useLocalSearchParams).mockReturnValue({ levelId: 'ka-003' });
+    const screen = await render(<Victory />);
+    expect(screen.queryByTestId('victory-double')).toBeNull();
+    jest.mocked(useLocalSearchParams).mockReturnValue({ levelId: 'ka-004' });
+    await screen.rerender(<Victory />);
+    expect(screen.getByText('ჯერ ეს დონე გაიარე.')).toBeTruthy();
+    expect(screen.queryByTestId('victory-double')).toBeNull();
+    expect(levelRewardAds.load).not.toHaveBeenCalled();
+    await screen.unmount();
+    justFinished('ka-003');
+    jest
+      .mocked(useLevelRewardAdSnapshot)
+      .mockReturnValue({ status: 'unavailable' });
+    const expoGo = await render(<Victory />);
+    expect(expoGo.getByLabelText('ჯილდო 20 მონეტა')).toBeTruthy();
+    expect(expoGo.queryByTestId('victory-double')).toBeNull();
+  });
+
+  test('a doubled level shows its 40 coins and never offers a second ad', async () => {
+    justFinished('ka-003', {
+      ...reachCurrentLevel(3),
+      doubledRewardLevelIds: ['ka-003'],
+    });
+    const screen = await render(<Victory />);
+    expect(screen.getByLabelText('ჯილდო 40 მონეტა')).toBeTruthy();
+    expect(screen.getByTestId('victory-doubled')).toBeTruthy();
+    expect(screen.queryByTestId('victory-double')).toBeNull();
+    expect(levelRewardAds.load).not.toHaveBeenCalled();
+  });
+
+  test('leaving the screen or cancelling drops a waiting ad; a failed save retries without one', async () => {
+    const signals: AbortSignal[] = [];
+    jest.mocked(levelRewardAds.watch).mockImplementation(
+      (signal) =>
+        new Promise<void>((resolve) => {
+          signals.push(signal);
+          signal.addEventListener('abort', () => resolve());
+        }),
+    );
+    jest
+      .mocked(useLevelRewardAdSnapshot)
+      .mockReturnValue({ status: 'loading' });
+    try {
+      justFinished('ka-003');
+      const screen = await render(<Victory />);
+      await fireEvent.press(screen.getByTestId('victory-double'));
+      expect(screen.getByTestId('victory-double')).toBeDisabled();
+      expect(screen.getByTestId('victory-double-notice')).toHaveTextContent(
+        /რეკლამა იტვირთება/,
+      );
+      await fireEvent.press(screen.getByTestId('victory-double-cancel'));
+      expect(signals[0]?.aborted).toBe(true);
+      expect(screen.queryByTestId('victory-double-notice')).toBeNull();
+      await fireEvent.press(screen.getByTestId('victory-double'));
+      // Next level / journey navigation unfocuses the screen.
+      jest.mocked(useIsFocused).mockReturnValue(false);
+      await screen.rerender(<Victory />);
+      expect(signals[1]?.aborted).toBe(true);
+      jest.mocked(useIsFocused).mockReturnValue(true);
+      jest
+        .mocked(useLevelRewardAdSnapshot)
+        .mockReturnValue({ status: 'save-error', target: 'ka-003' });
+      await screen.rerender(<Victory />);
+      await act(async () => {
+        fireEvent.press(screen.getByTestId('victory-double'));
+      });
+      expect(levelRewardAds.retryReward).toHaveBeenCalledTimes(1);
+      expect(levelRewardAds.watch).toHaveBeenCalledTimes(2);
+    } finally {
+      jest.mocked(levelRewardAds.watch).mockResolvedValue(undefined);
+    }
+  });
 });

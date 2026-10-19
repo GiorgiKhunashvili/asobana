@@ -1,0 +1,7 @@
+{
+  "revision": 17,
+  "draftSha256": "1fa6db10f64e2d851a243788157acdf3bfc337b73e6405cd3889cda87b184295",
+  "reviewedAt": "2026-10-18",
+  "reviewer": "Codex assistant audit against explicit owner approval of expansion batch 02 and existing vocabulary decisions",
+  "scope": "All 953 distinct required spellings and 1200 canonical-only answer slots checked against the exact 1221-word allowlist, recorded meanings and source URLs. Exactly 130 new entries preserve the individually source-checked and owner-approved senses from expansion batch 02. Every prior exclusion, plural restriction and reserved bonus spelling remains enforced. All eligible formable extra words are bonuses. All 240 boards pass unchanged layout, pacing, progression and 75-level gap gates. Historical revisions 1–16 retained. Bounded optimization, no global optimality or native-device testing claim. See docs/VOCABULARY_REVIEW_V17.md."
+}

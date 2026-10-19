@@ -15,7 +15,32 @@ ROOT = Path(__file__).resolve().parents[1]
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
-        "--revision", type=int, choices=(6, 7, 8, 9, 10, 11, 12, 13), default=13
+        "--revision",
+        type=int,
+        choices=(
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+        ),
+        default=26,
     )
     parser.add_argument("--output", type=Path)
     parser.add_argument(
@@ -34,12 +59,31 @@ def main() -> None:
             ).read_text(encoding="utf-8")
         ),
     )
+    reference_revision = (
+        26
+        if args.revision >= 26
+        else 25
+        if args.revision >= 25
+        else 24
+        if args.revision >= 24
+        else 20
+        if args.revision >= 20
+        else 19
+        if args.revision >= 19
+        else 18
+        if args.revision >= 18
+        else 17
+        if args.revision >= 17
+        else 13
+        if args.revision >= 13
+        else min(args.revision, 9)
+    )
     vocabulary = {
         entry.word
         for entry in load_vocabulary(
             ROOT
             / (
-                f"content/dictionaries/discovery-v{13 if args.revision >= 13 else min(args.revision, 9)}-ka.json"
+                f"content/dictionaries/discovery-v{reference_revision}-ka.json"
                 if args.revision >= 8
                 else "content/dictionaries/discovery-ka.json"
             ),

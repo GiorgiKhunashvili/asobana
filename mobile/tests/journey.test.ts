@@ -192,7 +192,7 @@ test('postcards unlock at chapter completion, with the next destination previewe
       word.answer,
     ).state;
   const album = selectPostcards(parseSnapshot(complete, catalog), catalog);
-  expect(album.filter((card) => card.collected)).toHaveLength(48);
+  expect(album.filter((card) => card.collected)).toHaveLength(59);
   expect(album.some((card) => card.next)).toBe(false);
 });
 

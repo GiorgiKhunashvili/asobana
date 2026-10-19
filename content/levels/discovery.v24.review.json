@@ -1,0 +1,7 @@
+{
+  "revision": 24,
+  "draftSha256": "2453914917b468e7dd1ec3c0e570a692a62605b16ae09a75306beed50eebb741",
+  "reviewedAt": "2026-10-19",
+  "reviewer": "Codex assistant policy/provenance audit following owner vocabulary review",
+  "scope": "All 1475 required slots and canonical-only variants checked against the 1569-word owner-approved allowlist and source-linked senses; all eligible formable bonuses verified. Exact 29 deletions and 8 rejected proposals excluded from every gameplay role; 29 approved additions include კოკა. All 295 boards pass unchanged gates. 1165 distinct required words, 310 repeated slots; 17 new approvals used. Historical content hashes unchanged. Bounded search, no global optimum or native-device playtest claim. See docs/VOCABULARY_REVIEW_V24.md."
+}

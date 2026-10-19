@@ -1,5 +1,81 @@
 # Asobana TestFlight
 
+## Rewarded demo ads beta — 2026-10-19 (uploaded, Apple processing)
+
+**Asobana 0.1.0 (13)** was built locally with Xcode 26.6 and uploaded to App
+Store Connect at the owner's request. **No Expo cloud build credits were used:**
+`eas build --local` ran the native build on this Mac and EAS Submit uploaded the
+signed IPA. Build numbering advanced from 12 to 13. EAS Submit reported the upload
+complete; Apple's processing was not confirmed when this was written.
+
+New since build 12, all from the working tree (uncommitted changes included):
+
+- content revision 26: 295 levels rebuilt on 1,720 approved required words
+  (owner replacement review, expansion batches 06 and 07); saves from revisions
+  1–25 migrate;
+- the owner-approved economy: 200 starting coins, 20 per level, 20 per letter
+  hint, 50 per word hint (existing balances kept);
+- optional Google AdMob **demo** rewarded ads: +75 coins on the coins screen and
+  on unaffordable hint buttons (gold `▶ +75` pill);
+- the optional `▶ ×2` ad on the level-complete screen (+20 once per level).
+
+Ads use Google's sample app ID and `TestIds.REWARDED` only, so testers see
+"Test mode" ads; there is no ATT prompt, consent flow or live ad unit.
+
+- [Submission](https://expo.dev/accounts/gkhunashvili/projects/geowords/submissions/ee2c02ab-a183-46c1-85d3-3e13d8e5795d).
+- [TestFlight](https://appstoreconnect.apple.com/apps/6822637685/testflight/ios).
+- IPA check: Asobana 0.1.0 (13), bundle `dev.geowords.prototype`, iOS 16.4
+  minimum, `SplashScreen` launch storyboard, `GADApplicationIdentifier` set to
+  Google's sample iOS app ID, `GoogleMobileAdsResources.bundle`, no tracking
+  usage description, 118 scene JPEGs; the embedded Hermes bundle contains the
+  level-doubling code. Size: 41,813,636 bytes; SHA-256:
+  `799df991a359aa08136c8995a2a539bacb73c361d2d903768fbeddf2682d6e3f`.
+- Expo doctor exited non-zero during the build (the known SDK patch-version
+  warning); it did not stop the build.
+- Preflight: root check (324 app tests in 41 suites, all 295 levels solved,
+  TypeScript/ESLint/formatting) and generator checks (146 tests, Ruff, formatting,
+  Mypy) passed. The production build itself bundled the JS; no separate
+  `expo export` was run. Demo ads and the ×2 offer were tried in the development
+  build on an iPhone 17 simulator; this IPA has not been installed on a device.
+- Evidence (git-ignored): `artifacts/asobana-2026-10-19-ads.ipa`,
+  `artifacts/asobana-2026-10-19-local-build.log`,
+  `artifacts/asobana-2026-10-19-submit.log`.
+
+## Spain campaign beta — 2026-10-18 (uploaded, Apple processing)
+
+**Asobana 0.1.0 (12)** was built locally with Xcode 26.6 and successfully uploaded
+to App Store Connect at the owner's explicit request. **No Expo cloud build credits
+were used.** `eas build --local` orchestrated the native build on this Mac; the
+existing credentials service supplied signing and EAS Submit uploaded the signed
+IPA. Build numbering advanced from 11 to 12. The upload completed successfully;
+Apple's completed processing was not yet confirmed at the final status check.
+The status endpoint still listed build 11 as the latest available internal build.
+
+This release includes content revision 23: **295 levels / 59 journey stops**, the
+new Malta, Tunisia and Spain destinations and artwork, the latest approved singular
+vocabulary, repetition optimizations and the owner-selected branding. All existing
+save identifiers are preserved; migration supports content revisions 1–22.
+Existing uncommitted project changes were included and preserved.
+
+- [TestFlight](https://appstoreconnect.apple.com/apps/6822637685/testflight/ios).
+- [Submission](https://expo.dev/accounts/gkhunashvili/projects/geowords/submissions/d3bb208f-001e-431f-8c96-a6b1ce98262a).
+- Verified 312 source/content/asset files against the isolated build copy. Only
+  temporary package run scripts changed during native prebuild; gameplay, content,
+  vocabulary and artwork matched. All workspace source hashes remained unchanged.
+- IPA inspection confirmed Asobana, version 0.1.0 (12), bundle
+  `dev.geowords.prototype`, iOS 16.4 minimum, the launch storyboard, embedded
+  offline Hermes bundle, 118 scene JPEGs and four Georgian fonts. All 22 new-country
+  JPEGs match their source assets exactly. No microphone/background-audio keys.
+- IPA size: **39,715,005 bytes**; SHA-256:
+  `7a30dd8823e7236893ec25f92ac4883c1131a5f27778bca4eb9d68530b6b11a8`.
+- Preflight passed: root check with 264 app tests, all 295 levels solved,
+  TypeScript/ESLint/formatting; 140 generator tests, Ruff and Mypy; iOS export.
+  This release has not been installed or playtested on a physical device.
+- Local evidence (git-ignored): `artifacts/asobana-v23.ipa`,
+  `artifacts/testflight-v23-local-build.log`, `artifacts/testflight-v23-submit.log`,
+  `artifacts/testflight-v23-source-checks.json`, `artifacts/testflight-v23-ipa-info.json`
+  and `artifacts/apple-testflight-v23-status.json`.
+
 ## Branding update — 2026-10-17
 
 The product name is **Asobana** (**ასობანა** in the Georgian interface).
@@ -222,10 +298,14 @@ bundle identifier, signing credentials and TestFlight destination.
 
 ## Subsequent uploads
 
-Run from `mobile/`:
+Use the local build flow while the owner's Expo cloud build quota is exhausted.
+Run from `mobile/`; `--local` is required and no cloud build should be scheduled.
+The CLI retrieves the existing signing credentials and build number, then Xcode
+compiles on this Mac. EAS Submit only uploads the resulting IPA.
 
 ```sh
-eas build --platform ios --profile production --auto-submit
+PATH="/opt/homebrew/bin:$PATH" eas build --platform ios --profile production --local --non-interactive --output ../artifacts/asobana-next.ipa
+eas submit --platform ios --profile production --path ../artifacts/asobana-next.ipa --non-interactive --wait
 ```
 
 To submit an already built artifact, use its exact build ID:

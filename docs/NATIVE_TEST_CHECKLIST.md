@@ -1,8 +1,74 @@
 # Native verification checklist
 
-Use a development build or compatible SDK 57 Expo Go. Keep runtime test results
+Use a development build for AdMob ads; compatible SDK 57 Expo Go supports gameplay
+with an unavailable-ad message. Keep runtime test results
 separate from Jest mocks and static bundle exports. Record platform/runtime, steps,
 expected result and screenshot/log evidence in `CODEX_STATUS.md`.
+
+## AdMob demo ads
+
+No AdMob account is needed for this test configuration. Google supplies the
+[demo ad units](https://developers.google.com/admob/ios/test-ads) and sample app
+IDs in the [iOS](https://developers.google.com/admob/ios/quick-start) and
+[Android](https://developers.google.com/admob/android/quick-start) setup guides.
+The demo earns in-game coins but produces no advertising revenue.
+
+The installed native integration is `react-native-google-mobile-ads` 17.3.1.
+It cannot run in Expo Go. From the repository root:
+
+```sh
+npm ci
+npm run ios
+# Or npm run android with the Android SDK/emulator available.
+```
+
+These commands create/build a local development client. Local iOS simulator
+testing needs Xcode but does not require AdMob registration or a paid Apple
+Developer membership. A physical iPhone build requires the appropriate signing.
+An EAS `development` profile is also configured; no EAS build or TestFlight
+upload is implied by this implementation.
+
+Verify on the native development build:
+
+1. Open the coins screen. Wait for the ad to load; it must not open automatically.
+2. Tap “ნახე რეკლამა · +75 მონეტა”. Confirm Google's test-ad label, complete its
+   reward action, and dismiss. The balance increases by exactly 75 after saving.
+3. Restart the app. The same balance and prior progress must remain. Watch a
+   second ad: it can earn a separate 75-coin reward.
+4. Close an ad before earning its reward. No coins are added. Repeated presses
+   while loading/showing/saving must not present multiple ads.
+5. In an isolated test save, spend below the displayed hint cost. The affected
+   button keeps its hint icon and its price pill turns gold, reading `▶ +75` with a
+   coin, with one brief bounce. Press it: the ad opens from gameplay without a coins-page
+   detour or another watch press. If loading, wait or cancel. Leaving the board
+   or backgrounding during that wait must prevent a later presentation. Returning
+   after earning does not auto-buy a hint; another explicit hint press buys it at
+   the displayed price. With 30 coins only the 50-coin hint should offer an ad.
+6. A free bonus letter hint works at zero coins without opening the ad offer.
+7. Test offline/no-fill and a failed presentation. The screen permits returning
+   to gameplay and retrying later. No completion or progression depends on ads.
+8. A failed save shows a save-only retry. It must reuse the earned claim and
+   must not ask the player to watch another ad. Automated SQLite tests inject
+   this failure and prove both the coin update and receipt roll back together.
+9. Finish a level on the board. The victory screen shows the `+20` reward with a
+   gold `▶ ×2` pill beside it; no ad opens by itself and "შემდეგი დონე" stays
+   the primary button. Press the pill and complete the demo ad: the reward reads
+   `+40`, the pill becomes `✓ ×2`, and the balance rises by exactly 20 more.
+   Closing the ad early adds nothing. Restart, reopen that finished level from
+   the path and continue to its victory screen: no `×2` offer appears. Press the
+   pill while the ad is still loading, then tap "შემდეგი დონე": no ad may appear
+   later on the next board.
+
+The demo-only adapter requests non-personalized ads, sets the maximum content
+rating to G, and does not ask for tracking permission or collect targeting data.
+It is not a production consent implementation. Before live ads, create an
+[AdMob account](https://admob.google.com/), register each platform, configure
+rewarded units, implement required consent/privacy choices and disclosures, and
+review age/audience settings. Replace the sample app IDs and test units only as
+part of that rollout. Do not publish this demo configuration as live monetization.
+
+The older smoke flows below target historical prototype boards and Expo Go;
+they are not the acceptance test for native AdMob behavior.
 
 ## Core acceptance
 
@@ -47,7 +113,8 @@ background/foreground and multi-touch cancellation, fast swipes, frame timing an
 memory on iOS/Android hardware. Verify release-build cold startup in airplane mode;
 Expo Go's dev server connection is not an offline startup test. Run a signed native
 build, migration tests with previously shipped data and dependency advisory review
-before store distribution. The prototype ships no payment or ad services.
+before store distribution. The current build includes demo rewarded ads; live
+monetization and payments remain unconfigured.
 
 ## Recorded smoke-flow sequence
 
@@ -61,7 +128,7 @@ For the tested Pixel 10 Pro emulator:
 
 The flows address controls by `testID` (`home-continue`, `input-mode`,
 `tap-tile-<tileId>`, `tap-submit`, `hint-cell`, `victory-next`, …) and read results
-from accessible labels such as `100 მონეტა`, `1/2 სიტყვა · ბონუსი 0` and the word
+from accessible labels such as `200 მონეტა`, `1/2 სიტყვა · ბონუსი 0` and the word
 strip's `მე, უკვე ნაპოვნია`. A completed level hands off to the victory screen on
 its own, so flows wait for `victory-title` instead of tapping a button. On fresh
 Expo Go installs the startup/restart flows accept the system "Open" prompt and

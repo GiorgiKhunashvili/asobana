@@ -1,0 +1,193 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-19",
+  "status": "owner-review-completed",
+  "candidateCount": 7,
+  "slotsToFill": 1,
+  "rejectedProposalWords": ["კახელი"],
+  "scope": "Seven alternatives for the single slot originally proposed as შტოში, then კახელი. This does not request adding all seven. Other pending proposals and the 29 original removals are unchanged.",
+  "sourceAttribution": "Wiktionary contributors, fixed-revision source links and short adapted glosses under CC BY-SA 4.0. Georgian explanatory dictionary at ganmarteba.ge, Linguistic Technologies Group: source links/content hashes and short editorial glosses; no full definitions reproduced.",
+  "limitations": [
+    "Each candidate has a local draft with four already approved partners, excluding the 29 requested removals.",
+    "Drafts pass five-answer, seven-tile, two-long-answer, connected-layout, shape and density checks; they do not establish full campaign compatibility or repetition improvement.",
+    "The owner selected კოკა on 2026-10-19; the other six options are not approved. No native-speaker review beyond the recorded owner selection is claimed."
+  ],
+  "entries": [
+    {
+      "reviewId": "OPTION-01",
+      "word": "ენძელა",
+      "letters": 6,
+      "proposedMeaning": "early spring flower",
+      "partOfSpeech": "noun",
+      "sourceUrl": "https://www.ganmarteba.ge/word/ენძელა",
+      "sourceChecked": "2026-10-19",
+      "ownerDecision": "not-selected-unapproved",
+      "draftExample": {
+        "words": ["ენძელა", "ნალი", "ძელი", "ძია", "ძნელი"],
+        "wheel": "აეეილნძ",
+        "seed": 8,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6
+      },
+      "testedDraftCount": 11,
+      "editorialDecision": "Alternative for the one remaining replacement slot; owner to assess familiarity and choose. No active vocabulary change or campaign-wide fit claim."
+    },
+    {
+      "reviewId": "OPTION-02",
+      "word": "კოკა",
+      "letters": 4,
+      "proposedMeaning": "traditional clay jug",
+      "partOfSpeech": "noun",
+      "sourceUrl": "https://www.ganmarteba.ge/word/კოკა",
+      "sourceChecked": "2026-10-19",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["კაკალი", "კაკაო", "კალია", "კილო", "კოკა"],
+        "wheel": "ააიკკლო",
+        "seed": 1,
+        "transpose": true,
+        "unusedPartners": ["კაკალი"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6333333333333333
+      },
+      "testedDraftCount": 10,
+      "editorialDecision": "Alternative for the one remaining replacement slot; owner to assess familiarity and choose. No active vocabulary change or campaign-wide fit claim."
+    },
+    {
+      "reviewId": "OPTION-03",
+      "word": "ხემსი",
+      "letters": 5,
+      "proposedMeaning": "snack, small meal",
+      "partOfSpeech": "noun",
+      "sourceUrl": "https://www.ganmarteba.ge/word/ხემსი",
+      "sourceChecked": "2026-10-19",
+      "ownerDecision": "not-selected-unapproved",
+      "draftExample": {
+        "words": ["მხეცი", "სიმი", "ციხე", "ცხიმი", "ხემსი"],
+        "wheel": "ეიიმსცხ",
+        "seed": 12,
+        "transpose": false,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6333333333333333
+      },
+      "testedDraftCount": 17,
+      "editorialDecision": "Alternative for the one remaining replacement slot; owner to assess familiarity and choose. No active vocabulary change or campaign-wide fit claim."
+    },
+    {
+      "reviewId": "OPTION-04",
+      "word": "მდარე",
+      "letters": 5,
+      "proposedMeaning": "low-quality, inferior",
+      "partOfSpeech": "adjective",
+      "sourceUrl": "https://www.ganmarteba.ge/word/მდარე",
+      "sourceChecked": "2026-10-19",
+      "ownerDecision": "not-selected-unapproved",
+      "draftExample": {
+        "words": ["ადრე", "ამპერი", "ერა", "მდარე", "მედია"],
+        "wheel": "ადეიმპრ",
+        "seed": 8,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6
+      },
+      "testedDraftCount": 17,
+      "editorialDecision": "Alternative for the one remaining replacement slot; owner to assess familiarity and choose. No active vocabulary change or campaign-wide fit claim."
+    },
+    {
+      "reviewId": "OPTION-05",
+      "word": "სენი",
+      "letters": 4,
+      "proposedMeaning": "illness, disease",
+      "partOfSpeech": "noun",
+      "sourceUrl": "https://www.ganmarteba.ge/word/სენი",
+      "sourceChecked": "2026-10-19",
+      "ownerDecision": "not-selected-unapproved",
+      "draftExample": {
+        "words": ["ასლი", "პანელი", "პენსია", "სენი", "სპა"],
+        "wheel": "აეილნპს",
+        "seed": 5,
+        "transpose": true,
+        "unusedPartners": ["პანელი", "პენსია"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5142857142857142
+      },
+      "testedDraftCount": 23,
+      "editorialDecision": "Alternative for the one remaining replacement slot; owner to assess familiarity and choose. No active vocabulary change or campaign-wide fit claim."
+    },
+    {
+      "reviewId": "OPTION-06",
+      "word": "ქარაფი",
+      "letters": 6,
+      "proposedMeaning": "cliff overlooking a precipice",
+      "partOfSpeech": "noun",
+      "sourceUrl": "https://www.ganmarteba.ge/word/ქარაფი",
+      "sourceChecked": "2026-10-19",
+      "ownerDecision": "not-selected-unapproved",
+      "draftExample": {
+        "words": ["იჯარა", "რაფა", "ფარა", "ქარაფი", "ჯარი"],
+        "wheel": "ააირფქჯ",
+        "seed": 5,
+        "transpose": false,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 4,
+          "columns": 7
+        },
+        "density": 0.6428571428571429
+      },
+      "testedDraftCount": 11,
+      "editorialDecision": "Alternative for the one remaining replacement slot; owner to assess familiarity and choose. No active vocabulary change or campaign-wide fit claim."
+    },
+    {
+      "reviewId": "OPTION-07",
+      "word": "შრატი",
+      "letters": 5,
+      "proposedMeaning": "whey; liquid remaining after cheesemaking",
+      "partOfSpeech": "noun",
+      "sourceUrl": "https://www.ganmarteba.ge/word/შრატი",
+      "sourceChecked": "2026-10-19",
+      "ownerDecision": "not-selected-unapproved",
+      "draftExample": {
+        "words": ["თეატრი", "ტაში", "ტირე", "შრატი", "შრე"],
+        "wheel": "აეთირტშ",
+        "seed": 5,
+        "transpose": false,
+        "unusedPartners": ["თეატრი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5142857142857142
+      },
+      "testedDraftCount": 23,
+      "editorialDecision": "Alternative for the one remaining replacement slot; owner to assess familiarity and choose. No active vocabulary change or campaign-wide fit claim."
+    }
+  ],
+  "editorialOmissions": [
+    {
+      "word": "ხეირი",
+      "reason": "Not presented: explanatory source labels it a verbal noun; avoided under the action-form rule."
+    }
+  ],
+  "finalReview": "docs/VOCABULARY_REPLACEMENTS_APPROVED_01.json",
+  "selectedWord": "კოკა"
+}

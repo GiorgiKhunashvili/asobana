@@ -1,0 +1,7 @@
+{
+  "revision": 21,
+  "draftSha256": "1e375626ce1084384ba026cd1eb0ee1615da9f7feed561d12bafe2080fce3ff0",
+  "reviewedAt": "2026-10-18",
+  "reviewer": "Codex assistant audit of the owner-authorized Malta extension using previously approved vocabulary",
+  "scope": "All 1250 required slots and canonical-only variants checked against the existing 1569-word revision-20 allowlist and all exclusions. First 240 boards preserved exactly; all 50 appended answers source-matched, individually audited, and distinct within Malta. 27 previously unused approved spellings enter required play. Every eligible formable bonus is retained. All 250 boards pass unchanged 75-level gap, layout, density, phone-size, wheel, length and chapter pacing gates. Valletta 241–245, Mdina 246–250. Historical content and dictionaries unchanged. No global-optimum or native-device-testing claim. See docs/VOCABULARY_REVIEW_V21.md."
+}

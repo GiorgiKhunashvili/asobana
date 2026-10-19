@@ -87,7 +87,7 @@ test('the full themed campaign solves, rewards once, and restores valid snapshot
     }
     expect(completions).toBe(1);
     expect(state.progress[level.id]?.completed).toBe(true);
-    expect(state.coins).toBe(100 + (index + 1) * 25 + bonusCount * 3);
+    expect(state.coins).toBe(200 + (index + 1) * 20 + bonusCount * 3);
     expect(submit(state, level, level.words[0]!.answer, catalog).state).toBe(
       state,
     );

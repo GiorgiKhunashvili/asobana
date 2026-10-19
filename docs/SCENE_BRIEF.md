@@ -125,3 +125,27 @@ Serene painterly digital illustration of the Black Sea coast of Adjara at dusk i
 - Optionally add a very slow cloud drift.
 - Keep the current enamel background as the fallback.
 - Compress the images for the offline bundle and check every chapter on iPhone and iPad simulators.
+
+## Malta extension — 2026-10-18
+
+For the owner-requested revision-21 expansion, Codex generated and integrated two
+new destination backgrounds: Valletta and Mdina. This new request includes app
+integration, beyond the original ten-scene handoff above. The matching master,
+bundled-file paths, visual checks and exact prompts are in [MALTA_ARTWORK.md](MALTA_ARTWORK.md).
+
+## Tunisia extension — 2026-10-18
+
+The owner requested generation and integration of backgrounds for the revision-22
+extension: Carthage, Sidi Bou Said and El Jem. Each has a portrait master and bundled
+full-screen and postcard JPEGs. Exact prompts, saved paths and visual review are in
+[TUNISIA_ARTWORK.md](TUNISIA_ARTWORK.md). Existing destination artwork is preserved.
+
+## Spain extension — 2026-10-18
+
+The owner requested six generated backgrounds for the 30-level revision-23 extension:
+Barcelona's Sagrada Família, Valencia's City of Arts and Sciences, Madrid's Royal
+Palace, Granada's Alhambra, Córdoba's Roman Bridge and Mosque–Cathedral, and Seville's
+Plaza de España. Each has a quiet portrait background and a cropped postcard strip.
+They follow the existing atmospheric painterly direction. See [SPAIN_ARTWORK.md](SPAIN_ARTWORK.md)
+for exact prompts, asset paths, cropping choices and validation. All six accompanying
+facts were source-checked and owner-approved; see [PLACE_FACTS.md](PLACE_FACTS.md).

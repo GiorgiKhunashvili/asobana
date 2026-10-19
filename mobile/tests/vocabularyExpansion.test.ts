@@ -1,6 +1,6 @@
 import dictionary from '../../content/dictionaries/discovery-v9-ka.json';
 import oldDictionary from '../../content/dictionaries/discovery-v8-ka.json';
-import manifest from '../../content/levels/discovery.v13.recipes.json';
+import manifest from '../../content/levels/discovery.v26.recipes.json';
 import { catalog, previousCatalogs, vocabulary } from '../src/content/catalog';
 import { validateWide } from '../src/content/wide';
 import {
@@ -21,7 +21,7 @@ test('expanded ordinary senses are reviewed and used in the campaign', () => {
     (entry) => !historical.has(entry.word),
   );
   expect(additions).toHaveLength(686);
-  expect(vocabulary.size).toBe(1274);
+  expect(vocabulary.size).toBe(1838);
   for (const entry of additions) {
     expect(['noun', 'adjective']).toContain(
       'partOfSpeech' in entry ? entry.partOfSpeech : undefined,
@@ -119,7 +119,7 @@ test('revision 8 save migrates a removed action answer and paid hint exactly onc
     await createSqliteRepository(db, previous).save(old, 0);
     const repo = createSqliteRepository(db, catalog, previousCatalogs);
     const upgraded = (await repo.load())!;
-    expect(upgraded.state.contentRevision).toBe(13);
+    expect(upgraded.state.contentRevision).toBe(catalog.revision);
     expect(upgraded.state.coins).toBe(old.coins);
     expect(upgraded.state.currentLevelId).toBe(old.currentLevelId);
     expect(upgraded.state.settings).toEqual(old.settings);

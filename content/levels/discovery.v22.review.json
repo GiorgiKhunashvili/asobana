@@ -1,0 +1,7 @@
+{
+  "revision": 22,
+  "draftSha256": "cb3ba06ac9c5ec53c648e58b9caa9550ac9b6c5132d121fa79bfaab6e0edfff8",
+  "reviewedAt": "2026-10-18",
+  "reviewer": "Codex assistant audit of the owner-authorized Tunisia extension using previously approved vocabulary",
+  "scope": "All 1325 required slots and canonical-only variants checked against the existing 1569-word revision-20 allowlist and all exclusions. First 250 boards preserved exactly; all 75 appended answers source-matched, individually audited, and distinct within Tunisia. 30 previously unused approved spellings enter required play. Every eligible formable bonus is retained. All 265 boards pass unchanged 75-level gap, layout, density, phone-size, wheel, length and chapter pacing gates. Carthage 251–255, Sidi Bou Said 256–260, El Jem 261–265. Historical content and dictionaries unchanged. No global-optimum or native-device-testing claim. See docs/VOCABULARY_REVIEW_V22.md."
+}

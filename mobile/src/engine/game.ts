@@ -13,11 +13,11 @@ import { solutionCells, wordCells } from './grid';
 import { isGeorgianWord, normalizeWord } from './georgian';
 import { BONUS_GOAL, freeCellHints } from './bonusRewards';
 export const DEFAULT_ECONOMY: Economy = Object.freeze({
-  initialCoins: 100,
-  completionReward: 25,
+  initialCoins: 200,
+  completionReward: 20,
   bonusReward: 3,
-  cellHintCost: 15,
-  wordHintCost: 40,
+  cellHintCost: 20,
+  wordHintCost: 50,
 });
 export function emptyProgress(): LevelProgress {
   return {

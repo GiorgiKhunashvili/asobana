@@ -19,7 +19,7 @@ appId: host.exp.Exponent
     timeout: 60000
 - assertVisible:
     id: tab-journey
-- assertVisible: '100 მონეტა'
+- assertVisible: '200 მონეტა'
 - takeScreenshot: artifacts/ios-journey
 - tapOn:
     id: path-current

@@ -1,5 +1,5 @@
-import journey from '../../content/journey-v13.json';
-import manifest from '../../content/levels/discovery.v13.recipes.json';
+import journey from '../../content/journey-v23.json';
+import manifest from '../../content/levels/discovery.v26.recipes.json';
 import { catalog, previousCatalogs, vocabulary } from '../src/content/catalog';
 import { validateRequiredGap } from '../src/content/discovery';
 import { validateWide } from '../src/content/wide';
@@ -13,9 +13,9 @@ import {
 import { reachLevel, submit } from './helpers';
 import { TestSqlite } from './sqliteAdapter';
 
-test('journey contains 48 exact stops, 240 boards and a global 75-level cooldown', () => {
+test('journey contains 59 exact stops, 295 boards and a global 75-level cooldown', () => {
   expect(catalog.chapters).toEqual(journey.chapters);
-  expect(catalog.levels).toHaveLength(240);
+  expect(catalog.levels).toHaveLength(295);
   const seen = new Map<string, number>();
   let repeats = 0;
   for (const [index, level] of catalog.levels.entries()) {
@@ -109,7 +109,7 @@ test.each(['partial', 'complete'] as const)(
         previousCatalogs,
       ).load())!;
       const state = upgraded.state;
-      expect(state.contentRevision).toBe(13);
+      expect(state.contentRevision).toBe(catalog.revision);
       expect(state.currentLevelId).toBe(old.currentLevelId);
       expect(state.coins).toBe(old.coins);
       expect(state.settings).toEqual(old.settings);
@@ -203,13 +203,21 @@ test('excluded spellings cannot return as targets, variants or bonuses', () => {
     expect(vocabulary.has(rare)).toBe(true);
 });
 
-test('continuing answers retain their word IDs on the same level', () => {
-  const previous = previousCatalogs.find((pack) => pack.revision === 12)!;
-  for (const [index, level] of previous.levels.entries())
-    for (const word of level.words) {
-      const next = catalog.levels[index]!.words.find(
-        (candidate) => candidate.answer === word.answer,
-      );
-      if (next) expect(next.id).toBe(word.id);
-    }
-});
+test.each([13, 14])(
+  'continuing answers retain IDs from v%i to its successor',
+  (revision) => {
+    const previous = previousCatalogs.find(
+      (pack) => pack.revision === revision,
+    )!;
+    const successor = [catalog, ...previousCatalogs].find(
+      (pack) => pack.revision === revision + 1,
+    )!;
+    for (const [index, level] of previous.levels.entries())
+      for (const word of level.words) {
+        const next = successor.levels[index]!.words.find(
+          (candidate) => candidate.answer === word.answer,
+        );
+        if (next) expect(next.id).toBe(word.id);
+      }
+  },
+);

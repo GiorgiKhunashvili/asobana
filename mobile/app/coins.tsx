@@ -1,6 +1,8 @@
 import { StyleSheet, View } from 'react-native';
+import { useLocalSearchParams } from 'expo-router';
 import { Card, CardRow } from '../src/components/Card';
 import { BonusMeter } from '../src/components/BonusMeter';
+import { RewardedAdCard } from '../src/components/RewardedAdCard';
 import { CoinGlyph } from '../src/components/CoinBadge';
 import { Icon, type IconName } from '../src/components/Icon';
 import { Screen, TopBar } from '../src/components/Screen';
@@ -32,10 +34,20 @@ function Line({
   );
 }
 
-/** What coins are for. A shop takes this place once there is something to buy. */
+/** Earn optional test-ad coins and review the game's rewards and hint prices. */
 export default function Coins() {
+  const { reason, hint } = useLocalSearchParams<{
+    reason?: string;
+    hint?: string;
+  }>();
   const game = useGameStore((state) => state.game);
   const coins = useGameStore((state) => state.game?.coins ?? 0);
+  const hintCost =
+    hint === 'cell'
+      ? game && freeCellHints(game) > 0
+        ? 0
+        : DEFAULT_ECONOMY.cellHintCost
+      : DEFAULT_ECONOMY.wordHintCost;
   return (
     <Screen
       veil={0.55}
@@ -53,6 +65,13 @@ export default function Coins() {
           {coins}
         </Txt>
       </View>
+      {reason === 'hint' && coins < hintCost && (
+        <Txt accessibilityRole="alert" style={styles.note}>
+          მინიშნებისთვის მონეტები არ გყოფნის. შეგიძლია ნახო რეკლამა ან გააგრძელო
+          თამაში.
+        </Txt>
+      )}
+      <RewardedAdCard />
       <Card>
         <Display variant="eyebrow" color={palette.gold}>
           ჯილდოები
@@ -92,7 +111,8 @@ export default function Coins() {
         />
       </Card>
       <Txt variant="caption" color={palette.textMuted} style={styles.note}>
-        მონეტები მხოლოდ თამაშით გროვდება. შესყიდვები ამ ვერსიაში არ არის.
+        მონეტები თამაშით და სურვილისამებრ რეკლამის ნახვით გროვდება. შესყიდვები
+        ამ ვერსიაში არ არის.
       </Txt>
     </Screen>
   );

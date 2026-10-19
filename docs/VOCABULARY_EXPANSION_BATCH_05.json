@@ -1,0 +1,2848 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-18",
+  "status": "owner-reviewed",
+  "approvedBaseline": 1481,
+  "approvedGoal": 1800,
+  "candidateCount": 100,
+  "countsByLength": {
+    "4": 12,
+    "5": 49,
+    "6": 39
+  },
+  "scope": "Owner approved 88 individually reviewed candidates and rejected 12. Approved senses enter revision 20; rejected spellings are excluded from all gameplay roles.",
+  "sourceAttribution": "Wiktionary contributors: fixed-revision links and concise adapted glosses under CC BY-SA 4.0. Georgian explanatory dictionary at ganmarteba.ge (Linguistic Technologies Group): source URL and content hash where used; concise editorial English glosses only, no full definitions reproduced. Previously verified fixed revisions were revisited in local source records. See content/dictionaries/README.md.",
+  "selection": "Prioritize source-checked familiar noun/adjective senses with valid boards containing currently unused approved partners. Every candidate has a regenerated connected five-answer draft with four already approved words, seven tiles, two or more five/six-letter answers, valid crossings, density and phone-size checks.",
+  "candidatesWithUnusedApprovedPartners": 83,
+  "distinctUnusedApprovedPartners": 135,
+  "unusedApprovedBaseline": 445,
+  "limitations": [
+    "Individual draft examples do not prove that all candidate boards or their unused companions can fit together under the whole-campaign 75-level gap, unique-wheel and pacing rules.",
+    "Partner counts are compatible options, not a forecast of newly used words or repetition reduction.",
+    "The search is bounded; candidates without an unused companion in the saved examples are not declared unable to help one.",
+    "Frequency data was discovery evidence only; no native-speaker review is claimed."
+  ],
+  "entries": [
+    {
+      "reviewId": "G001",
+      "word": "ანონსი",
+      "letters": 6,
+      "proposedMeaning": "announcement",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ანონსი&oldid=84097349",
+      "sourceRevision": 84097349,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ანონსი", "ასო", "სალონი", "სილა", "სიო"],
+        "wheel": "აილნნოს",
+        "seed": 2,
+        "transpose": false,
+        "unusedPartners": ["სალონი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["სალონი"]
+    },
+    {
+      "reviewId": "G002",
+      "word": "აქტი",
+      "letters": 4,
+      "proposedMeaning": "official document",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%90%E1%83%A5%E1%83%A2%E1%83%98",
+      "sourceRevision": null,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner rejected this spelling; excluded from required answers, variants and bonuses starting at revision 20.",
+      "ownerDecision": "excluded",
+      "draftExample": {
+        "words": ["აქტი", "აქცია", "ტაფა", "ფაქტი", "ქაფი"],
+        "wheel": "ააიტფქც",
+        "seed": 1,
+        "transpose": false,
+        "unusedPartners": ["აქცია"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["აქცია", "დუეტი", "სტიქია", "ფიფქი"],
+      "sourceContentSha256": "8ea2b35e7b47106cf17ca6da80863cce1294b822b0fc848822af193ca07695ba",
+      "senseNote": "Official document sense only; not an action-form proposal."
+    },
+    {
+      "reviewId": "G003",
+      "word": "ბაგა",
+      "letters": 4,
+      "proposedMeaning": "manger, feeding trough",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბაგა&oldid=92454280",
+      "sourceRevision": 92454280,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner rejected this spelling; excluded from required answers, variants and bonuses starting at revision 20.",
+      "ownerDecision": "excluded",
+      "draftExample": {
+        "words": ["აბი", "ადათი", "ბაგა", "ბადაგი", "დაბა"],
+        "wheel": "ააბგდთი",
+        "seed": 1,
+        "transpose": true,
+        "unusedPartners": ["ბადაგი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["არსება", "ბადაგი", "ბალახი"]
+    },
+    {
+      "reviewId": "G004",
+      "word": "ბანერი",
+      "letters": 6,
+      "proposedMeaning": "advertising banner",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%91%E1%83%90%E1%83%9C%E1%83%94%E1%83%A0%E1%83%98",
+      "sourceRevision": null,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["აბი", "ბანერი", "ბებია", "ბინა", "ნება"],
+        "wheel": "აბბეინრ",
+        "seed": 14,
+        "transpose": false,
+        "unusedPartners": ["ბებია"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["ბებია", "ჰაერი"],
+      "sourceContentSha256": "1630b7939f192288bbb98ad702e98583e3437ef06a9853556d567dae19e23655"
+    },
+    {
+      "reviewId": "G005",
+      "word": "ბაღჩა",
+      "letters": 5,
+      "proposedMeaning": "small garden",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბაღჩა&oldid=84915794",
+      "sourceRevision": 84915794,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["აბი", "ბაღი", "ბაღჩა", "ყაჩაღი", "ყბა"],
+        "wheel": "ააბიღყჩ",
+        "seed": 1,
+        "transpose": true,
+        "unusedPartners": ["ყაჩაღი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["ყაჩაღი"]
+    },
+    {
+      "reviewId": "G006",
+      "word": "ბრენდი",
+      "letters": 6,
+      "proposedMeaning": "brand",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ბრენდი&oldid=92336216",
+      "sourceRevision": 92336216,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ბენდი", "ბერი", "ბრენდი", "კიბე", "კიდე"],
+        "wheel": "ბდეიკნრ",
+        "seed": 6,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": []
+    },
+    {
+      "reviewId": "G007",
+      "word": "გერი",
+      "letters": 4,
+      "proposedMeaning": "stepchild",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=გერი&oldid=92197067",
+      "sourceRevision": 92197067,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["გემო", "გერი", "გმირი", "მორიგე", "რიგი"],
+        "wheel": "გეიიმორ",
+        "seed": 4,
+        "transpose": true,
+        "unusedPartners": ["გმირი", "მორიგე"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["გმირი", "მორიგე", "მშიერი"]
+    },
+    {
+      "reviewId": "G008",
+      "word": "გორაკი",
+      "letters": 6,
+      "proposedMeaning": "hillock",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=გორაკი&oldid=85057574",
+      "sourceRevision": 85057574,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["აკრი", "გორაკი", "იოგა", "რგოლი", "რკალი"],
+        "wheel": "აგიკლორ",
+        "seed": 7,
+        "transpose": false,
+        "unusedPartners": ["რგოლი", "რკალი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5714,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["რგოლი", "რკალი"],
+      "supplementalSourceUrl": "https://www.ganmarteba.ge/word/%E1%83%92%E1%83%9D%E1%83%A0%E1%83%90%E1%83%99%E1%83%98"
+    },
+    {
+      "reviewId": "G009",
+      "word": "გრაფა",
+      "letters": 5,
+      "proposedMeaning": "field in a form",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%92%E1%83%A0%E1%83%90%E1%83%A4%E1%83%90",
+      "sourceRevision": null,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["აფთარი", "გრაფა", "ფარა", "ფარი", "ფრთა"],
+        "wheel": "ააგთირფ",
+        "seed": 3,
+        "transpose": false,
+        "unusedPartners": ["აფთარი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["აფთარი"],
+      "sourceContentSha256": "276acf6c378a498f3f140e339ecaec169dcbcbe5e3a1eeb1289b80cc0f38327b"
+    },
+    {
+      "reviewId": "G010",
+      "word": "გუნდა",
+      "letters": 5,
+      "proposedMeaning": "ball, snowball",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=გუნდა&oldid=87601776",
+      "sourceRevision": 87601776,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["გაზი", "გზა", "გუნდა", "გუნდი", "ნაზი"],
+        "wheel": "აგდზინუ",
+        "seed": 2,
+        "transpose": false,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.5333,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": []
+    },
+    {
+      "reviewId": "G011",
+      "word": "გუფთა",
+      "letters": 5,
+      "proposedMeaning": "meatball dish",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=გუფთა&oldid=77583955",
+      "sourceRevision": 77583955,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["გული", "გუფთა", "თაფლი", "ლიგა", "ფული"],
+        "wheel": "აგთილუფ",
+        "seed": 3,
+        "transpose": false,
+        "unusedPartners": ["თაფლი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["თაფლი"],
+      "senseNote": "Use the cited Georgian singular/mass/collective lemma; plural-looking English glosses or dictionary examples do not make this a plural noun form."
+    },
+    {
+      "reviewId": "G012",
+      "word": "დარაბა",
+      "letters": 6,
+      "proposedMeaning": "window shutter",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=დარაბა&oldid=85046584",
+      "sourceRevision": 85046584,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ადრე", "ბადე", "ბარდა", "დარაბა", "ერა"],
+        "wheel": "აააბდერ",
+        "seed": 9,
+        "transpose": false,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": []
+    },
+    {
+      "reviewId": "G013",
+      "word": "დასტა",
+      "letters": 5,
+      "proposedMeaning": "stack, bundle",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=დასტა&oldid=84098058",
+      "sourceRevision": 84098058,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ატლასი", "დასი", "დასტა", "სია", "სტადია"],
+        "wheel": "აადილსტ",
+        "seed": 5,
+        "transpose": false,
+        "unusedPartners": ["ატლასი", "სტადია"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5714,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": [
+        "ატლასი",
+        "პასტა",
+        "სტადია",
+        "სტუდია",
+        "ფასადი"
+      ]
+    },
+    {
+      "reviewId": "G014",
+      "word": "დიზელი",
+      "letters": 6,
+      "proposedMeaning": "diesel",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=დიზელი&oldid=84098181",
+      "sourceRevision": 84098181,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["დიზელი", "ზეიმი", "იმედი", "მზე", "მილი"],
+        "wheel": "დეზიილმ",
+        "seed": 5,
+        "transpose": false,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": []
+    },
+    {
+      "reviewId": "G015",
+      "word": "დილერი",
+      "letters": 6,
+      "proposedMeaning": "dealer",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=დილერი&oldid=84098185",
+      "sourceRevision": 84098185,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["დილერი", "დღე", "ერი", "ლიდერი", "ღილი"],
+        "wheel": "დეიილრღ",
+        "seed": 1,
+        "transpose": true,
+        "unusedPartners": ["ლიდერი"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["ლიდერი"]
+    },
+    {
+      "reviewId": "G016",
+      "word": "დისკო",
+      "letters": 5,
+      "proposedMeaning": "disco music",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=დისკო&oldid=84098211",
+      "sourceRevision": 84098211,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["დისკო", "კოდი", "კომოდი", "სიო", "სოკო"],
+        "wheel": "დიკმოოს",
+        "seed": 1,
+        "transpose": false,
+        "unusedPartners": ["კომოდი", "სოკო"],
+        "grid": {
+          "rows": 4,
+          "columns": 7
+        },
+        "density": 0.6071,
+        "iPhoneSECellPoints": 46.71
+      },
+      "currentlyUnusedApprovedPartners": ["კომოდი", "კოშკი", "სოკო", "ფოკუსი"]
+    },
+    {
+      "reviewId": "G017",
+      "word": "დომენი",
+      "letters": 6,
+      "proposedMeaning": "internet domain",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=დომენი&oldid=89623216",
+      "sourceRevision": 89623216,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner rejected this spelling; excluded from required answers, variants and bonuses starting at revision 20.",
+      "ownerDecision": "excluded",
+      "draftExample": {
+        "words": ["დენი", "დომენი", "ლომი", "მდელო", "ომი"],
+        "wheel": "დეილმნო",
+        "seed": 1,
+        "transpose": false,
+        "unusedPartners": ["მდელო"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["მდელო"]
+    },
+    {
+      "reviewId": "G018",
+      "word": "დომინო",
+      "letters": 6,
+      "proposedMeaning": "domino game",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=დომინო&oldid=84098244",
+      "sourceRevision": 84098244,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["დომინო", "დრო", "დრონი", "ომი", "რომი"],
+        "wheel": "დიმნოორ",
+        "seed": 2,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.5333,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": [],
+      "senseNote": "Use the cited Georgian singular/mass/collective lemma; plural-looking English glosses or dictionary examples do not make this a plural noun form."
+    },
+    {
+      "reviewId": "G019",
+      "word": "დუღაბი",
+      "letters": 6,
+      "proposedMeaning": "mortar (building material)",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%93%E1%83%A3%E1%83%A6%E1%83%90%E1%83%91%E1%83%98",
+      "sourceRevision": null,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner rejected this spelling; excluded from required answers, variants and bonuses starting at revision 20.",
+      "ownerDecision": "excluded",
+      "draftExample": {
+        "words": ["აბი", "ბანი", "დუღაბი", "ნაღდი", "ღია"],
+        "wheel": "აბდინუღ",
+        "seed": 3,
+        "transpose": true,
+        "unusedPartners": ["ნაღდი"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.5667,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["ნაღდი"],
+      "sourceContentSha256": "43d5e890b69cddb136189b272eb7b11a28071e12056074134ae01e7ef5e273d2"
+    },
+    {
+      "reviewId": "G020",
+      "word": "ელიტა",
+      "letters": 5,
+      "proposedMeaning": "elite",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%94%E1%83%9A%E1%83%98%E1%83%A2%E1%83%90",
+      "sourceRevision": null,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ალი", "დედალი", "დეტალი", "ელიტა", "იდეა"],
+        "wheel": "ადდეილტ",
+        "seed": 10,
+        "transpose": true,
+        "unusedPartners": ["დედალი", "დეტალი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5714,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": [
+        "დედალი",
+        "დეტალი",
+        "დუეტი",
+        "თაფლი",
+        "ფლეიტა"
+      ],
+      "sourceContentSha256": "9195afe9e740c3a7dd364561e9f8510e0ea1e3eb116409f05461d95079922df0"
+    },
+    {
+      "reviewId": "G021",
+      "word": "ეჟვანი",
+      "letters": 6,
+      "proposedMeaning": "small jingling bell",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%94%E1%83%9F%E1%83%95%E1%83%90%E1%83%9C%E1%83%98",
+      "sourceRevision": null,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner rejected this spelling; excluded from required answers, variants and bonuses starting at revision 20.",
+      "ownerDecision": "excluded",
+      "draftExample": {
+        "words": ["გვიან", "ენა", "ეჟვანი", "ვაჟი", "ჟანგი"],
+        "wheel": "აგევინჟ",
+        "seed": 6,
+        "transpose": true,
+        "unusedPartners": ["ჟანგი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["მჟავე", "ჟანგი"],
+      "sourceContentSha256": "69f103e3bd5eb6c6b7ffe5be277ec00b00588148443471e9327bfc13e00ecf73",
+      "senseNote": "Use the cited Georgian singular/mass/collective lemma; plural-looking English glosses or dictionary examples do not make this a plural noun form."
+    },
+    {
+      "reviewId": "G022",
+      "word": "ვეგანი",
+      "letters": 6,
+      "proposedMeaning": "vegan",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ვეგანი&oldid=85113988",
+      "sourceRevision": 85113988,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ავი", "ენა", "ვეგანი", "ვენა", "ნაგავი"],
+        "wheel": "ააგევინ",
+        "seed": 10,
+        "transpose": true,
+        "unusedPartners": ["ნაგავი"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["ნაგავი", "ჟანგი", "სიგანე"]
+    },
+    {
+      "reviewId": "G023",
+      "word": "ზოლი",
+      "letters": 4,
+      "proposedMeaning": "stripe",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%96%E1%83%9D%E1%83%9A%E1%83%98",
+      "sourceRevision": null,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ალი", "ალიონი", "ზოლი", "ლინზა", "ნაზი"],
+        "wheel": "აზიილნო",
+        "seed": 5,
+        "transpose": true,
+        "unusedPartners": ["ალიონი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["ალიონი", "პოლუსი"],
+      "sourceContentSha256": "e74e2bb48a4e5aba79fa9e19cbff7c67d471d4d658482d6ec2818c92c5ee580c"
+    },
+    {
+      "reviewId": "G024",
+      "word": "ზომბი",
+      "letters": 5,
+      "proposedMeaning": "zombie",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ზომბი&oldid=87234661",
+      "sourceRevision": 87234661,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ალბომი", "ბალი", "ზომა", "ზომბი", "ომი"],
+        "wheel": "აბზილმო",
+        "seed": 1,
+        "transpose": false,
+        "unusedPartners": ["ალბომი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["ალბომი"]
+    },
+    {
+      "reviewId": "G025",
+      "word": "კლიპი",
+      "letters": 5,
+      "proposedMeaning": "music video",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%99%E1%83%9A%E1%83%98%E1%83%9E%E1%83%98",
+      "sourceRevision": null,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["აკრი", "ალი", "კლიპი", "პარკი", "რკალი"],
+        "wheel": "აიიკლპრ",
+        "seed": 1,
+        "transpose": true,
+        "unusedPartners": ["რკალი"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["პილოტი", "რკალი"],
+      "sourceContentSha256": "56ecd6fe3d870e2d38923921c44973f32bb9acdbf8a45242f5f1457a830f740c"
+    },
+    {
+      "reviewId": "G026",
+      "word": "კლიშე",
+      "letters": 5,
+      "proposedMeaning": "cliché",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კლიშე&oldid=84099154",
+      "sourceRevision": 84099154,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ბუკი", "კიბე", "კლიშე", "უბე", "შუბლი"],
+        "wheel": "ბეიკლუშ",
+        "seed": 1,
+        "transpose": false,
+        "unusedPartners": ["შუბლი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["შუბლი"]
+    },
+    {
+      "reviewId": "G027",
+      "word": "კლონი",
+      "letters": 5,
+      "proposedMeaning": "clone",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კლონი&oldid=84099156",
+      "sourceRevision": 84099156,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ალი", "კანი", "კლონი", "კოლონა", "კონა"],
+        "wheel": "აიკლნოო",
+        "seed": 4,
+        "transpose": false,
+        "unusedPartners": ["კოლონა"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.5667,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["კოლონა", "კოშკი", "კუპონი"]
+    },
+    {
+      "reviewId": "G028",
+      "word": "კოხტა",
+      "letters": 5,
+      "proposedMeaning": "neat, attractive",
+      "partOfSpeech": "adjective",
+      "form": "lexical adjective, not a plural noun",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=კოხტა&oldid=75374694",
+      "sourceRevision": 75374694,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ბუტკო", "კოხტა", "კუბო", "ტაბუ", "ტბა"],
+        "wheel": "აბკოტუხ",
+        "seed": 3,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.5667,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": [],
+      "supplementalSourceUrl": "https://www.ganmarteba.ge/word/%E1%83%99%E1%83%9D%E1%83%AE%E1%83%A2%E1%83%90"
+    },
+    {
+      "reviewId": "G029",
+      "word": "ლაქი",
+      "letters": 4,
+      "proposedMeaning": "varnish",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%9A%E1%83%90%E1%83%A5%E1%83%98",
+      "sourceRevision": null,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner rejected this spelling; excluded from required answers, variants and bonuses starting at revision 20.",
+      "ownerDecision": "excluded",
+      "draftExample": {
+        "words": ["აქცია", "დაქალი", "ლაქი", "ქილა", "ცილა"],
+        "wheel": "აადილქც",
+        "seed": 5,
+        "transpose": true,
+        "unusedPartners": ["აქცია", "დაქალი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5429,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": [
+        "აქცია",
+        "დაქალი",
+        "ლექცია",
+        "ქალაქი"
+      ],
+      "sourceContentSha256": "feee3778cc3ebf620278cbd9530d65f4c615006783645a8bafebbc7200cd00d5"
+    },
+    {
+      "reviewId": "G030",
+      "word": "ლაჩარი",
+      "letters": 6,
+      "proposedMeaning": "cowardly",
+      "partOfSpeech": "adjective",
+      "form": "lexical adjective, not a plural noun",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ლაჩარი&oldid=91726049",
+      "sourceRevision": 91726049,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ალი", "კალია", "ლაჩარი", "რკალი", "ჩალა"],
+        "wheel": "ააიკლრჩ",
+        "seed": 2,
+        "transpose": false,
+        "unusedPartners": ["რკალი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["რკალი"]
+    },
+    {
+      "reviewId": "G031",
+      "word": "მარაო",
+      "letters": 5,
+      "proposedMeaning": "hand fan",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მარაო&oldid=92945174",
+      "sourceRevision": 92945174,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["მარაო", "მარკა", "მარტო", "რკო", "ტომარა"],
+        "wheel": "ააკმორტ",
+        "seed": 3,
+        "transpose": false,
+        "unusedPartners": ["ტომარა"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5714,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["მუყაო", "ტომარა", "ღამურა"],
+      "supplementalSourceUrl": "https://www.ganmarteba.ge/word/%E1%83%9B%E1%83%90%E1%83%A0%E1%83%90%E1%83%9D"
+    },
+    {
+      "reviewId": "G032",
+      "word": "მასრა",
+      "letters": 5,
+      "proposedMeaning": "spool",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%9B%E1%83%90%E1%83%A1%E1%83%A0%E1%83%90",
+      "sourceRevision": null,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["არსება", "ბრმა", "ერა", "მასა", "მასრა"],
+        "wheel": "ააბემრს",
+        "seed": 9,
+        "transpose": false,
+        "unusedPartners": ["არსება"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["არსება", "მსაჯი", "ღამურა"],
+      "sourceContentSha256": "5aa4182e2dde982029f807a3d7d84b1baa80736bb90e7df3bcf7d545b8cee6c7",
+      "senseNote": "Singular spool sense; not the predominantly plural clothing-accessory sense."
+    },
+    {
+      "reviewId": "G033",
+      "word": "მატლი",
+      "letters": 5,
+      "proposedMeaning": "maggot, larva",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მატლი&oldid=84099718",
+      "sourceRevision": 84099718,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ლაღი", "მატლი", "მაღალი", "ტალღა", "ღია"],
+        "wheel": "ააილმტღ",
+        "seed": 6,
+        "transpose": true,
+        "unusedPartners": ["მაღალი", "ტალღა"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["ატლასი", "მატყლი", "მაღალი", "ტალღა"]
+    },
+    {
+      "reviewId": "G034",
+      "word": "მატჩი",
+      "letters": 5,
+      "proposedMeaning": "sports match",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%9B%E1%83%90%E1%83%A2%E1%83%A9%E1%83%98",
+      "sourceRevision": null,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ატამი", "აჩმა", "მატჩი", "მჩატე", "ჩაი"],
+        "wheel": "ააეიმტჩ",
+        "seed": 6,
+        "transpose": true,
+        "unusedPartners": ["მჩატე"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["მჩატე", "ყოჩი"],
+      "sourceContentSha256": "07de3ebf562f8799df1efca514ec79196625e3c89096330c5f2013b3a8c6c7fa"
+    },
+    {
+      "reviewId": "G035",
+      "word": "მაუსი",
+      "letters": 5,
+      "proposedMeaning": "computer mouse",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მაუსი&oldid=84116767",
+      "sourceRevision": 84116767,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["მაუსი", "მინუსი", "ნამუსი", "სიმი", "უმი"],
+        "wheel": "აიიმნსუ",
+        "seed": 16,
+        "transpose": false,
+        "unusedPartners": ["მინუსი", "ნამუსი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5714,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": [
+        "მინუსი",
+        "მსაჯი",
+        "ნამუსი",
+        "სუნამო",
+        "ჯუჯა"
+      ],
+      "supplementalSourceUrl": "https://www.ganmarteba.ge/word/მაუსი",
+      "senseNote": "Established computer-device noun verified in the Georgian explanatory dictionary; not approved merely because of colloquial frequency."
+    },
+    {
+      "reviewId": "G036",
+      "word": "მაჩვი",
+      "letters": 5,
+      "proposedMeaning": "badger",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მაჩვი&oldid=84116792",
+      "sourceRevision": 84116792,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ავი", "აჩმა", "ვაჟი", "მაჩვი", "მჟავა"],
+        "wheel": "აავიმჟჩ",
+        "seed": 1,
+        "transpose": true,
+        "unusedPartners": ["მჟავა"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["მჟავა", "მჟავე", "ხახვი", "ხვალ"]
+    },
+    {
+      "reviewId": "G037",
+      "word": "მერია",
+      "letters": 5,
+      "proposedMeaning": "city administration",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%9B%E1%83%94%E1%83%A0%E1%83%98%E1%83%90",
+      "sourceRevision": null,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ამპერი", "მერია", "პაპი", "პრემია", "რეპი"],
+        "wheel": "აეიმპპრ",
+        "seed": 12,
+        "transpose": false,
+        "unusedPartners": ["ამპერი", "პაპი", "პრემია"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5714,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["ამპერი", "პაპი", "პრემია", "ჰაერი"],
+      "sourceContentSha256": "ffac21595ed2c9e29aea161cd12df15d95c02a2b130febdb17ee682f46c838c2"
+    },
+    {
+      "reviewId": "G038",
+      "word": "მეწაღე",
+      "letters": 6,
+      "proposedMeaning": "shoemaker",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მეწაღე&oldid=84099917",
+      "sourceRevision": 84099917,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ერა", "მეწაღე", "მწარე", "ღამე", "ღრმა"],
+        "wheel": "აეემრღწ",
+        "seed": 2,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": []
+    },
+    {
+      "reviewId": "G039",
+      "word": "მიჯნა",
+      "letters": 5,
+      "proposedMeaning": "boundary",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მიჯნა&oldid=85056051",
+      "sourceRevision": 85056051,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ანემია", "მენჯი", "მინა", "მიჯნა", "ჯანი"],
+        "wheel": "ააეიმნჯ",
+        "seed": 5,
+        "transpose": false,
+        "unusedPartners": ["ანემია", "მენჯი"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6333,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["ანემია", "მენჯი", "მსაჯი"]
+    },
+    {
+      "reviewId": "G040",
+      "word": "მოდული",
+      "letters": 6,
+      "proposedMeaning": "module",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=მოდული&oldid=84100046",
+      "sourceRevision": 84100046,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["დუელი", "ლუდი", "მდელო", "მოდული", "ომი"],
+        "wheel": "დეილმოუ",
+        "seed": 7,
+        "transpose": false,
+        "unusedPartners": ["მდელო"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["მდელო"]
+    },
+    {
+      "reviewId": "G041",
+      "word": "მუჭა",
+      "letters": 4,
+      "proposedMeaning": "handful",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%9B%E1%83%A3%E1%83%AD%E1%83%90",
+      "sourceRevision": null,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["კაუჭი", "ლუკმა", "მუჭა", "უმი", "ჭკუა"],
+        "wheel": "აიკლმუჭ",
+        "seed": 2,
+        "transpose": true,
+        "unusedPartners": ["ლუკმა"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["ლუკმა", "მამული"],
+      "sourceContentSha256": "2aaa3b5527ec2e8a81c5acfdf7fa128dd5ef08eb75f8c5883d1daf6b7b92bcc3"
+    },
+    {
+      "reviewId": "G042",
+      "word": "ნადირი",
+      "letters": 6,
+      "proposedMeaning": "wild animal",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ნადირი&oldid=84117507",
+      "sourceRevision": 84117507,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["დარგი", "დარი", "ნადირი", "რაინდი", "რიგი"],
+        "wheel": "აგდიინრ",
+        "seed": 8,
+        "transpose": false,
+        "unusedPartners": ["რაინდი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.6,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["ნაღდი", "რაინდი"]
+    },
+    {
+      "reviewId": "G043",
+      "word": "ნაზუქი",
+      "letters": 6,
+      "proposedMeaning": "sweet spiced bread",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ნაზუქი&oldid=93365246",
+      "sourceRevision": 93365246,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["აბი", "აუზი", "ბზა", "ნაზუქი", "უბანი"],
+        "wheel": "აბზინუქ",
+        "seed": 1,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": [],
+      "senseNote": "Use the cited Georgian singular/mass/collective lemma; plural-looking English glosses or dictionary examples do not make this a plural noun form."
+    },
+    {
+      "reviewId": "G044",
+      "word": "ნაფოტი",
+      "letters": 6,
+      "proposedMeaning": "wood chip",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ნაფოტი&oldid=84100314",
+      "sourceRevision": 84100314,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["იოგა", "ნაფოტი", "ტანგო", "ტანი", "ფონი"],
+        "wheel": "აგინოტფ",
+        "seed": 8,
+        "transpose": false,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5429,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": []
+    },
+    {
+      "reviewId": "G045",
+      "word": "ნაყინი",
+      "letters": 6,
+      "proposedMeaning": "ice cream",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ნაყინი&oldid=84117582",
+      "sourceRevision": 84117582,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ავი", "ნავი", "ნაყინი", "ნიავი", "ყინვა"],
+        "wheel": "ავიინნყ",
+        "seed": 8,
+        "transpose": false,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5429,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": [],
+      "senseNote": "Use the cited Georgian singular/mass/collective lemma; plural-looking English glosses or dictionary examples do not make this a plural noun form."
+    },
+    {
+      "reviewId": "G046",
+      "word": "ნესტი",
+      "letters": 5,
+      "proposedMeaning": "dampness",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%9C%E1%83%94%E1%83%A1%E1%83%A2%E1%83%98",
+      "sourceRevision": null,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["დასი", "იდეა", "ნესტი", "სადენი", "ტანი"],
+        "wheel": "ადეინსტ",
+        "seed": 1,
+        "transpose": true,
+        "unusedPartners": ["სადენი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5429,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": [
+        "ბეტონი",
+        "ჟესტი",
+        "სადენი",
+        "საკეტი"
+      ],
+      "sourceContentSha256": "b96c59b8c0f41045ebf92b923b9d2ad98bbec0f26b9012c5707e97a9eb688fdc"
+    },
+    {
+      "reviewId": "G047",
+      "word": "ნესტო",
+      "letters": 5,
+      "proposedMeaning": "nostril",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ნესტო&oldid=90329906",
+      "sourceRevision": 90329906,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ასო", "ენა", "მონა", "მონეტა", "ნესტო"],
+        "wheel": "აემნოსტ",
+        "seed": 3,
+        "transpose": false,
+        "unusedPartners": ["მონეტა"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.5667,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["ბეტონი", "მონეტა", "ჟესტი"]
+    },
+    {
+      "reviewId": "G048",
+      "word": "პალატა",
+      "letters": 6,
+      "proposedMeaning": "hospital ward",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=პალატა&oldid=85068638",
+      "sourceRevision": 85068638,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ლამა", "ლამპა", "მალა", "პალატა", "პალმა"],
+        "wheel": "ააალმპტ",
+        "seed": 13,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6333,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": []
+    },
+    {
+      "reviewId": "G049",
+      "word": "პარტია",
+      "letters": 6,
+      "proposedMeaning": "political party",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=პარტია&oldid=88896345",
+      "sourceRevision": 88896345,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["არსი", "პარტია", "პასტა", "სია", "ტარი"],
+        "wheel": "ააიპრსტ",
+        "seed": 4,
+        "transpose": true,
+        "unusedPartners": ["პასტა"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["პასტა"]
+    },
+    {
+      "reviewId": "G050",
+      "word": "პეშვი",
+      "letters": 5,
+      "proposedMeaning": "cupped hand",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%9E%E1%83%94%E1%83%A8%E1%83%95%E1%83%98",
+      "sourceRevision": null,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ავი", "ეშვი", "ვაკე", "ვეშაპი", "პეშვი"],
+        "wheel": "აევიკპშ",
+        "seed": 16,
+        "transpose": false,
+        "unusedPartners": ["ვეშაპი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["ვეშაპი"],
+      "sourceContentSha256": "8843e9bf36835d5ed0a54374c894133eb82f8a24fc8649e7eec55a1cc6864a3e"
+    },
+    {
+      "reviewId": "G051",
+      "word": "პლაჟი",
+      "letters": 5,
+      "proposedMeaning": "beach",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=პლაჟი&oldid=75423986",
+      "sourceRevision": 75423986,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ალი", "ლიგა", "ნალი", "პლაჟი", "ჟანგი"],
+        "wheel": "აგილნპჟ",
+        "seed": 6,
+        "transpose": false,
+        "unusedPartners": ["ჟანგი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["პანელი", "პედალი", "ჟანგი", "რკალი"]
+    },
+    {
+      "reviewId": "G052",
+      "word": "პულტი",
+      "letters": 5,
+      "proposedMeaning": "remote control",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=პულტი&oldid=84118223",
+      "sourceRevision": 84118223,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["პლუსი", "პოლუსი", "პულტი", "სიო", "სპილო"],
+        "wheel": "ილოპსტუ",
+        "seed": 6,
+        "transpose": false,
+        "unusedPartners": ["პოლუსი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5429,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["პოლუსი"],
+      "supplementalSourceUrl": "https://www.ganmarteba.ge/word/%E1%83%9E%E1%83%A3%E1%83%9A%E1%83%A2%E1%83%98"
+    },
+    {
+      "reviewId": "G053",
+      "word": "პწკარი",
+      "letters": 6,
+      "proposedMeaning": "line of text",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%9E%E1%83%AC%E1%83%99%E1%83%90%E1%83%A0%E1%83%98",
+      "sourceRevision": null,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner rejected this spelling; excluded from required answers, variants and bonuses starting at revision 20.",
+      "ownerDecision": "excluded",
+      "draftExample": {
+        "words": ["აკრი", "ლირა", "პარკი", "პწკარი", "რკალი"],
+        "wheel": "აიკლპრწ",
+        "seed": 4,
+        "transpose": true,
+        "unusedPartners": ["რკალი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5714,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["რკალი"],
+      "sourceContentSha256": "eb06e6551e1f4f7dc1f5ab67450f45e7b5a513a41a0f0224c4147a256876d21c"
+    },
+    {
+      "reviewId": "G054",
+      "word": "რანგი",
+      "letters": 5,
+      "proposedMeaning": "rank",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%A0%E1%83%90%E1%83%9C%E1%83%92%E1%83%98",
+      "sourceRevision": null,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["გიდი", "ნარდი", "რაინდი", "რანგი", "რიგი"],
+        "wheel": "აგდიინრ",
+        "seed": 8,
+        "transpose": true,
+        "unusedPartners": ["რაინდი"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6333,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["ჟანგი", "რაინდი"],
+      "sourceContentSha256": "b22b329fee8cdab00fe4d885f5a09e9da68786d3eeaf742b778841aa260f4f29"
+    },
+    {
+      "reviewId": "G055",
+      "word": "რასა",
+      "letters": 4,
+      "proposedMeaning": "race (human group)",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=რასა&oldid=68803154",
+      "sourceRevision": 68803154,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ერა", "კარატე", "კერა", "რაკეტა", "რასა"],
+        "wheel": "ააეკრსტ",
+        "seed": 11,
+        "transpose": false,
+        "unusedPartners": ["კარატე", "რაკეტა"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6333,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": [
+        "არსება",
+        "კარატე",
+        "პასტა",
+        "რაკეტა",
+        "სალარო"
+      ]
+    },
+    {
+      "reviewId": "G056",
+      "word": "რინგი",
+      "letters": 5,
+      "proposedMeaning": "boxing ring",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=რინგი&oldid=84118328",
+      "sourceRevision": 84118328,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["გმირი", "მწირი", "რიგი", "რინგი", "წიგნი"],
+        "wheel": "გიიმნრწ",
+        "seed": 3,
+        "transpose": true,
+        "unusedPartners": ["გმირი", "მწირი", "წიგნი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5714,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["გმირი", "მწირი", "რაინდი", "წიგნი"]
+    },
+    {
+      "reviewId": "G057",
+      "word": "საამო",
+      "letters": 5,
+      "proposedMeaning": "pleasant",
+      "partOfSpeech": "adjective",
+      "form": "lexical adjective, not a plural noun",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%A1%E1%83%90%E1%83%90%E1%83%9B%E1%83%9D",
+      "sourceRevision": null,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ასო", "ზომა", "მზა", "საამო", "საღამო"],
+        "wheel": "ააზმოსღ",
+        "seed": 1,
+        "transpose": true,
+        "unusedPartners": ["საღამო"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.5667,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["კაკაო", "პასტა", "საღამო"],
+      "sourceContentSha256": "fc9bbdec53ba933e0caaf9e6f85354570502fcd586040f02fdc9c514c73fba45"
+    },
+    {
+      "reviewId": "G058",
+      "word": "სადავე",
+      "letters": 6,
+      "proposedMeaning": "rein",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=სადავე&oldid=92479636",
+      "sourceRevision": 92479636,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ავად", "დაბა", "დავა", "სადავე", "სევდა"],
+        "wheel": "ააბდევს",
+        "seed": 3,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": []
+    },
+    {
+      "reviewId": "G059",
+      "word": "სათუთი",
+      "letters": 6,
+      "proposedMeaning": "delicate, tender",
+      "partOfSpeech": "adjective",
+      "form": "lexical adjective, not a plural noun",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=სათუთი&oldid=90049130",
+      "sourceRevision": 90049130,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["თითი", "თუთა", "თუთია", "სათუთი", "სია"],
+        "wheel": "ათთიისუ",
+        "seed": 3,
+        "transpose": true,
+        "unusedPartners": ["თითი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["თითი"]
+    },
+    {
+      "reviewId": "G060",
+      "word": "სამარე",
+      "letters": 6,
+      "proposedMeaning": "grave",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=სამარე&oldid=84101196",
+      "sourceRevision": 84101196,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ერა", "კამერა", "მარკა", "მასა", "სამარე"],
+        "wheel": "ააეკმრს",
+        "seed": 2,
+        "transpose": true,
+        "unusedPartners": ["კამერა"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5714,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["კამერა"]
+    },
+    {
+      "reviewId": "G061",
+      "word": "სამთო",
+      "letters": 5,
+      "proposedMeaning": "mountain-related",
+      "partOfSpeech": "adjective",
+      "form": "lexical adjective, not a plural noun",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%A1%E1%83%90%E1%83%9B%E1%83%97%E1%83%9D",
+      "sourceRevision": null,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner rejected this spelling; excluded from required answers, variants and bonuses starting at revision 20.",
+      "ownerDecision": "excluded",
+      "draftExample": {
+        "words": ["ასო", "თემა", "თმა", "საერთო", "სამთო"],
+        "wheel": "აეთმორს",
+        "seed": 1,
+        "transpose": false,
+        "unusedPartners": ["საერთო"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4571,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["მუყაო", "საერთო", "სამეფო"],
+      "sourceContentSha256": "0af6d17e58c1cd28db02e40cbe299fb373fb802e9a91dd7817cf3de7390d0c98"
+    },
+    {
+      "reviewId": "G062",
+      "word": "საყელო",
+      "letters": 6,
+      "proposedMeaning": "collar",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=საყელო&oldid=84118856",
+      "sourceRevision": 84118856,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ალოე", "ასო", "ლოყა", "საყელო", "სკოლა"],
+        "wheel": "აეკლოსყ",
+        "seed": 16,
+        "transpose": true,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": []
+    },
+    {
+      "reviewId": "G063",
+      "word": "სინჯი",
+      "letters": 5,
+      "proposedMeaning": "sample",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=სინჯი&oldid=84119065",
+      "sourceRevision": 84119065,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["მაისი", "მსაჯი", "ნამი", "სიმი", "სინჯი"],
+        "wheel": "აიიმნსჯ",
+        "seed": 1,
+        "transpose": true,
+        "unusedPartners": ["მსაჯი"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6333,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["მსაჯი", "ფუნჯი"]
+    },
+    {
+      "reviewId": "G064",
+      "word": "სიროფი",
+      "letters": 6,
+      "proposedMeaning": "syrup",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=სიროფი&oldid=84101529",
+      "sourceRevision": 84101529,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ოფისი", "რეისი", "სიროფი", "სფერო", "ფრე"],
+        "wheel": "ეიიორსფ",
+        "seed": 4,
+        "transpose": false,
+        "unusedPartners": ["სფერო"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6333,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["სორო", "სფერო"]
+    },
+    {
+      "reviewId": "G065",
+      "word": "სპაზმი",
+      "letters": 6,
+      "proposedMeaning": "spasm",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%A1%E1%83%9E%E1%83%90%E1%83%96%E1%83%9B%E1%83%98",
+      "sourceRevision": null,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["მსაჯი", "სპა", "სპაზმი", "ჯაზი", "ჯამი"],
+        "wheel": "აზიმპსჯ",
+        "seed": 6,
+        "transpose": true,
+        "unusedPartners": ["მსაჯი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["მსაჯი"],
+      "sourceContentSha256": "70b55c62552be00c37c8084d310089454c04d4156a2eee99e6ae7e71d80a9cc4"
+    },
+    {
+      "reviewId": "G066",
+      "word": "სტენდი",
+      "letters": 6,
+      "proposedMeaning": "display board",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%A1%E1%83%A2%E1%83%94%E1%83%9C%E1%83%93%E1%83%98",
+      "sourceRevision": null,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["დიეტა", "იდეა", "სადენი", "სია", "სტენდი"],
+        "wheel": "ადეინსტ",
+        "seed": 9,
+        "transpose": false,
+        "unusedPartners": ["სადენი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5714,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["სადენი"],
+      "sourceContentSha256": "d3f29810286ecd987de185a46eb8128479441a1f1a2253fc0a9e5a98be7c6499"
+    },
+    {
+      "reviewId": "G067",
+      "word": "სტროფი",
+      "letters": 6,
+      "proposedMeaning": "stanza",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=სტროფი&oldid=84101728",
+      "sourceRevision": 84101728,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["სიო", "სტროფი", "სფერო", "ტრიო", "ფრე"],
+        "wheel": "ეიორსტფ",
+        "seed": 2,
+        "transpose": true,
+        "unusedPartners": ["სფერო"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["სფერო"]
+    },
+    {
+      "reviewId": "G068",
+      "word": "ტაბლო",
+      "letters": 5,
+      "proposedMeaning": "scoreboard",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ტაბლო&oldid=84101780",
+      "sourceRevision": 84101780,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ალოე", "ტაბლო", "ტბა", "ხბო", "ხელობა"],
+        "wheel": "აბელოტხ",
+        "seed": 16,
+        "transpose": true,
+        "unusedPartners": ["ხელობა"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["ბიცოლა", "უბრალო", "შობა", "ხელობა"]
+    },
+    {
+      "reviewId": "G069",
+      "word": "ტაიმი",
+      "letters": 5,
+      "proposedMeaning": "half of a sports match",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%A2%E1%83%90%E1%83%98%E1%83%9B%E1%83%98",
+      "sourceRevision": null,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["მაისი", "სია", "სტიქია", "ტაიმი", "ტაქსი"],
+        "wheel": "აიიმსტქ",
+        "seed": 2,
+        "transpose": false,
+        "unusedPartners": ["სტიქია"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5429,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["მსაჯი", "სტიქია"],
+      "sourceContentSha256": "7e1b2f6a2eab0460cd4ddff8fd088125674fd07b26894fe7b31d3998daa24b42"
+    },
+    {
+      "reviewId": "G070",
+      "word": "ტარო",
+      "letters": 4,
+      "proposedMeaning": "corncob",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ტარო&oldid=84101809",
+      "sourceRevision": 84101809,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ერა", "კომეტა", "მეტრო", "რკო", "ტარო"],
+        "wheel": "აეკმორტ",
+        "seed": 2,
+        "transpose": true,
+        "unusedPartners": ["კომეტა", "მეტრო"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.5667,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["კომეტა", "მეტრო", "მჩატე"]
+    },
+    {
+      "reviewId": "G071",
+      "word": "ტენტი",
+      "letters": 5,
+      "proposedMeaning": "awning",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ტენტი&oldid=84101841",
+      "sourceRevision": 84101841,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ენა", "ნატეხი", "ტახტი", "ტენტი", "ხატი"],
+        "wheel": "აეინტტხ",
+        "seed": 2,
+        "transpose": true,
+        "unusedPartners": ["ნატეხი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5429,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["ნატეხი"]
+    },
+    {
+      "reviewId": "G072",
+      "word": "ტესტი",
+      "letters": 5,
+      "proposedMeaning": "test, exam questions",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%A2%E1%83%94%E1%83%A1%E1%83%A2%E1%83%98",
+      "sourceRevision": null,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["კეტი", "საკეტი", "სია", "ტესტი", "ტიტა"],
+        "wheel": "აეიკსტტ",
+        "seed": 16,
+        "transpose": false,
+        "unusedPartners": ["საკეტი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["ოსტატი", "საკეტი", "ტექსტი"],
+      "sourceContentSha256": "76b67dbb9f84462b2a26072791258312276e2a2121872125a87ef30ddb2bcc5a"
+    },
+    {
+      "reviewId": "G073",
+      "word": "ტივი",
+      "letters": 4,
+      "proposedMeaning": "raft",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ტივი&oldid=92420946",
+      "sourceRevision": 92420946,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ვირი", "კირი", "კიტრი", "ტვირთი", "ტივი"],
+        "wheel": "ვთიიკრტ",
+        "seed": 6,
+        "transpose": false,
+        "unusedPartners": ["ტვირთი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": [
+        "მოტივი",
+        "სვიტრი",
+        "ტვირთი",
+        "ფილტვი"
+      ]
+    },
+    {
+      "reviewId": "G074",
+      "word": "ტირიფი",
+      "letters": 6,
+      "proposedMeaning": "willow",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ტირიფი&oldid=92251684",
+      "sourceRevision": 92251684,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner rejected this spelling; excluded from required answers, variants and bonuses starting at revision 20.",
+      "ownerDecision": "excluded",
+      "draftExample": {
+        "words": ["ერი", "ტერფი", "ტირე", "ტირიფი", "ფერი"],
+        "wheel": "ეიიირტფ",
+        "seed": 11,
+        "transpose": false,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": []
+    },
+    {
+      "reviewId": "G075",
+      "word": "ტიტრი",
+      "letters": 5,
+      "proposedMeaning": "caption",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ტიტრი&oldid=84101877",
+      "sourceRevision": 84101877,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["კვირტი", "კივი", "კიტრი", "კრივი", "ტიტრი"],
+        "wheel": "ვიიკრტტ",
+        "seed": 2,
+        "transpose": false,
+        "unusedPartners": ["კვირტი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5714,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["კვირტი"]
+    },
+    {
+      "reviewId": "G076",
+      "word": "ტურნე",
+      "letters": 5,
+      "proposedMeaning": "tour",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ტურნე&oldid=84103454",
+      "sourceRevision": 84103454,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["დენი", "დუეტი", "ერი", "ტენი", "ტურნე"],
+        "wheel": "დეინრტუ",
+        "seed": 1,
+        "transpose": true,
+        "unusedPartners": ["დუეტი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4571,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["დუეტი", "ფუნტი"]
+    },
+    {
+      "reviewId": "G077",
+      "word": "ურიკა",
+      "letters": 5,
+      "proposedMeaning": "handcart",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ურიკა&oldid=84096954",
+      "sourceRevision": 84096954,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["აკრი", "ალი", "ლუკმა", "რკალი", "ურიკა"],
+        "wheel": "აიკლმრუ",
+        "seed": 1,
+        "transpose": true,
+        "unusedPartners": ["ლუკმა", "რკალი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["ლუკმა", "რკალი"]
+    },
+    {
+      "reviewId": "G078",
+      "word": "უხვი",
+      "letters": 4,
+      "proposedMeaning": "abundant",
+      "partOfSpeech": "adjective",
+      "form": "lexical adjective, not a plural noun",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=უხვი&oldid=84091205",
+      "sourceRevision": 84091205,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ავი", "ვაშლი", "ულვაში", "უხვი", "ხვალ"],
+        "wheel": "ავილუშხ",
+        "seed": 1,
+        "transpose": false,
+        "unusedPartners": ["ულვაში", "ხვალ"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": [
+        "რიცხვი",
+        "ულვაში",
+        "ცხვირი",
+        "ხახვი",
+        "ხვალ",
+        "ჯიხვი",
+        "ჯიხური"
+      ]
+    },
+    {
+      "reviewId": "G079",
+      "word": "ფაფარი",
+      "letters": 6,
+      "proposedMeaning": "mane",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ფაფარი&oldid=84102170",
+      "sourceRevision": 84102170,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["აზრი", "ფაზა", "ფარა", "ფაფარი", "ფრაზა"],
+        "wheel": "ააზირფფ",
+        "seed": 2,
+        "transpose": false,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": []
+    },
+    {
+      "reviewId": "G080",
+      "word": "ფიალა",
+      "letters": 5,
+      "proposedMeaning": "drinking bowl",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%A4%E1%83%98%E1%83%90%E1%83%9A%E1%83%90",
+      "sourceRevision": null,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["აფთარი", "აფრა", "თაფლი", "ფარა", "ფიალა"],
+        "wheel": "აათილრფ",
+        "seed": 1,
+        "transpose": false,
+        "unusedPartners": ["აფთარი", "თაფლი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5429,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["აფთარი", "თაფლი", "ტალღა"],
+      "sourceContentSha256": "78361c847cda2d2afa878e18a8b91f0c1d73600d4219b1a4820b31c363decd52",
+      "senseNote": "Use the cited Georgian singular/mass/collective lemma; plural-looking English glosses or dictionary examples do not make this a plural noun form."
+    },
+    {
+      "reviewId": "G081",
+      "word": "ფლანგი",
+      "letters": 6,
+      "proposedMeaning": "flank",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%A4%E1%83%9A%E1%83%90%E1%83%9C%E1%83%92%E1%83%98",
+      "sourceRevision": null,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner rejected this spelling; excluded from required answers, variants and bonuses starting at revision 20.",
+      "ownerDecision": "excluded",
+      "draftExample": {
+        "words": ["თაფლი", "ლიგა", "ნალი", "ფილა", "ფლანგი"],
+        "wheel": "აგთილნფ",
+        "seed": 1,
+        "transpose": false,
+        "unusedPartners": ["თაფლი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["თაფლი"],
+      "sourceContentSha256": "5875cd71d2563b653eb4ebe1298c6513f28a3bc8201ea90006987651f90efac4"
+    },
+    {
+      "reviewId": "G082",
+      "word": "ფლორა",
+      "letters": 5,
+      "proposedMeaning": "plant life, flora",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ფლორა&oldid=84102277",
+      "sourceRevision": 84102277,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ალფა", "ასო", "რაფა", "სალარო", "ფლორა"],
+        "wheel": "აალორსფ",
+        "seed": 4,
+        "transpose": false,
+        "unusedPartners": ["სალარო"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["თაფლი", "სალარო", "სფერო"],
+      "senseNote": "Plant-life noun sense only, not a human-name-only entry."
+    },
+    {
+      "reviewId": "G083",
+      "word": "ფორუმი",
+      "letters": 6,
+      "proposedMeaning": "forum",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ფორუმი&oldid=68804865",
+      "sourceRevision": 68804865,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["იუმორი", "ომი", "რომი", "უმი", "ფორუმი"],
+        "wheel": "იიმორუფ",
+        "seed": 2,
+        "transpose": false,
+        "unusedPartners": ["იუმორი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["იუმორი"]
+    },
+    {
+      "reviewId": "G084",
+      "word": "ქანჩი",
+      "letters": 5,
+      "proposedMeaning": "nut (fastener)",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ქანჩი&oldid=78853155",
+      "sourceRevision": 78853155,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ალი", "ელჩი", "ენა", "ნალექი", "ქანჩი"],
+        "wheel": "აეილნქჩ",
+        "seed": 3,
+        "transpose": false,
+        "unusedPartners": ["ნალექი"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.5667,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["ნალექი", "ჩლიქი"]
+    },
+    {
+      "reviewId": "G085",
+      "word": "ქისა",
+      "letters": 4,
+      "proposedMeaning": "purse",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ქისა&oldid=82308419",
+      "sourceRevision": 82308419,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["აბი", "საბაბი", "სია", "ქაბაბი", "ქისა"],
+        "wheel": "ააბბისქ",
+        "seed": 12,
+        "transpose": true,
+        "unusedPartners": ["საბაბი", "ქაბაბი"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": [
+        "აქცია",
+        "ლექცია",
+        "საბაბი",
+        "საცავი",
+        "სექცია",
+        "სვავი",
+        "სტიქია",
+        "ქაბაბი",
+        "ყვავი"
+      ]
+    },
+    {
+      "reviewId": "G086",
+      "word": "ქოჩორი",
+      "letters": 6,
+      "proposedMeaning": "tuft of hair",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ქოჩორი&oldid=84120158",
+      "sourceRevision": 84120158,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ოქრო", "რქა", "ქოჩორი", "ჩაი", "ჩქარი"],
+        "wheel": "აიოორქჩ",
+        "seed": 8,
+        "transpose": false,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": [],
+      "supplementalSourceUrl": "https://www.ganmarteba.ge/word/%E1%83%A5%E1%83%9D%E1%83%A9%E1%83%9D%E1%83%A0%E1%83%98",
+      "senseNote": "Use the cited Georgian singular/mass/collective lemma; plural-looking English glosses or dictionary examples do not make this a plural noun form."
+    },
+    {
+      "reviewId": "G087",
+      "word": "ღილაკი",
+      "letters": 6,
+      "proposedMeaning": "push-button",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%A6%E1%83%98%E1%83%9A%E1%83%90%E1%83%99%E1%83%98",
+      "sourceRevision": null,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["აკრი", "ლაღი", "ლირა", "რკალი", "ღილაკი"],
+        "wheel": "აიიკლრღ",
+        "seed": 1,
+        "transpose": true,
+        "unusedPartners": ["რკალი"],
+        "grid": {
+          "rows": 4,
+          "columns": 7
+        },
+        "density": 0.6429,
+        "iPhoneSECellPoints": 46.71
+      },
+      "currentlyUnusedApprovedPartners": ["რკალი"],
+      "sourceContentSha256": "5003f1b03b57f6efdc249c277648552179151645005b8342cd0e047ead28ebaf"
+    },
+    {
+      "reviewId": "G088",
+      "word": "ყანჩა",
+      "letters": 5,
+      "proposedMeaning": "heron",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ყანჩა&oldid=89131695",
+      "sourceRevision": 89131695,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner rejected this spelling; excluded from required answers, variants and bonuses starting at revision 20.",
+      "ownerDecision": "excluded",
+      "draftExample": {
+        "words": ["თანხა", "თხა", "ყანა", "ყანჩა", "ჩანთა"],
+        "wheel": "აათნყჩხ",
+        "seed": 4,
+        "transpose": false,
+        "unusedPartners": ["თანხა"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["თანხა", "ყაჩაღი"]
+    },
+    {
+      "reviewId": "G089",
+      "word": "ყულფი",
+      "letters": 5,
+      "proposedMeaning": "loop, noose",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%A7%E1%83%A3%E1%83%9A%E1%83%A4%E1%83%98",
+      "sourceRevision": null,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner rejected this spelling; excluded from required answers, variants and bonuses starting at revision 20.",
+      "ownerDecision": "excluded",
+      "draftExample": {
+        "words": ["ალი", "დილა", "ფილა", "ფულადი", "ყულფი"],
+        "wheel": "ადილუფყ",
+        "seed": 2,
+        "transpose": true,
+        "unusedPartners": ["ფულადი"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.5667,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["თაფლი", "ულუფა", "ფულადი"],
+      "sourceContentSha256": "3b8b2e12eb817732c0b0d25d40cff5abf654796b40c95ad9938d92dceab2337e"
+    },
+    {
+      "reviewId": "G090",
+      "word": "შაში",
+      "letters": 4,
+      "proposedMeaning": "checkers game",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=შაში&oldid=84096882",
+      "sourceRevision": 84096882,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ავი", "ვეშაპი", "შაშვი", "შაში", "შეშა"],
+        "wheel": "აევიპშშ",
+        "seed": 9,
+        "transpose": false,
+        "unusedPartners": ["ვეშაპი"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.5667,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": [
+        "ვეშაპი",
+        "ულვაში",
+        "ხახვი",
+        "ხვალ",
+        "ხშირი"
+      ],
+      "supplementalSourceUrl": "https://www.ganmarteba.ge/word/%E1%83%A8%E1%83%90%E1%83%A8%E1%83%98",
+      "senseNote": "Use the cited Georgian singular/mass/collective lemma; plural-looking English glosses or dictionary examples do not make this a plural noun form."
+    },
+    {
+      "reviewId": "G091",
+      "word": "შინდი",
+      "letters": 5,
+      "proposedMeaning": "cornelian cherry",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=შინდი&oldid=87901604",
+      "sourceRevision": 87901604,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["დივანი", "ნიავი", "ნიშა", "შავი", "შინდი"],
+        "wheel": "ადვიინშ",
+        "seed": 8,
+        "transpose": true,
+        "unusedPartners": ["დივანი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5429,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["დივანი"]
+    },
+    {
+      "reviewId": "G092",
+      "word": "შოშია",
+      "letters": 5,
+      "proposedMeaning": "starling",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=შოშია&oldid=88091349",
+      "sourceRevision": 88091349,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ტაში", "შობა", "შოშია", "შტაბი", "შტო"],
+        "wheel": "აბიოტშშ",
+        "seed": 6,
+        "transpose": false,
+        "unusedPartners": ["შობა"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4857,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["შობა"]
+    },
+    {
+      "reviewId": "G093",
+      "word": "წითური",
+      "letters": 6,
+      "proposedMeaning": "red-haired",
+      "partOfSpeech": "adjective",
+      "form": "lexical adjective, not a plural noun",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=წითური&oldid=84091676",
+      "sourceRevision": 84091676,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["მითი", "მური", "მწირი", "უმი", "წითური"],
+        "wheel": "თიიმრუწ",
+        "seed": 4,
+        "transpose": true,
+        "unusedPartners": ["მწირი"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.5667,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["მწირი"]
+    },
+    {
+      "reviewId": "G094",
+      "word": "წნეხი",
+      "letters": 5,
+      "proposedMeaning": "press; pressure",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%AC%E1%83%9C%E1%83%94%E1%83%AE%E1%83%98",
+      "sourceRevision": null,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ვენა", "ვენახი", "ნავი", "წნეხი", "ხევი"],
+        "wheel": "აევინწხ",
+        "seed": 3,
+        "transpose": true,
+        "unusedPartners": ["ვენახი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["ვენახი", "ხუნდი"],
+      "sourceContentSha256": "25c74720e74251bb890e1121d40f3378e6d7b51f93ff1c7674c84ddc5cb2fa9d"
+    },
+    {
+      "reviewId": "G095",
+      "word": "ჭრილი",
+      "letters": 5,
+      "proposedMeaning": "incision, cross-section",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ჭრილი&oldid=84121173",
+      "sourceRevision": 84121173,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["გმირი", "გრილი", "მილი", "ჭირი", "ჭრილი"],
+        "wheel": "გიილმრჭ",
+        "seed": 4,
+        "transpose": true,
+        "unusedPartners": ["გმირი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5429,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["გმირი", "რგოლი", "წერილი"],
+      "senseNote": "Result noun: incision or cross-section, not the verbal act of cutting."
+    },
+    {
+      "reviewId": "G096",
+      "word": "ხოხობი",
+      "letters": 6,
+      "proposedMeaning": "pheasant",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ხოხობი&oldid=87901860",
+      "sourceRevision": 87901860,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ბოლო", "ლობიო", "ობი", "ობოლი", "ხოხობი"],
+        "wheel": "ბილოოხხ",
+        "seed": 2,
+        "transpose": false,
+        "unusedPartners": [],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5143,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": []
+    },
+    {
+      "reviewId": "G097",
+      "word": "ხრეში",
+      "letters": 5,
+      "proposedMeaning": "gravel",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ხრეში&oldid=84103042",
+      "sourceRevision": 84103042,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ერი", "მერი", "მშიერი", "ხრეში", "ხშირი"],
+        "wheel": "ეიიმრშხ",
+        "seed": 15,
+        "transpose": true,
+        "unusedPartners": ["მშიერი", "ხშირი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5429,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["მშიერი", "ხერხი", "ხშირი"],
+      "senseNote": "Use the cited Georgian singular/mass/collective lemma; plural-looking English glosses or dictionary examples do not make this a plural noun form."
+    },
+    {
+      "reviewId": "G098",
+      "word": "ჰამაკი",
+      "letters": 6,
+      "proposedMeaning": "hammock",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://en.wiktionary.org/w/index.php?title=ჰამაკი&oldid=84121484",
+      "sourceRevision": 84121484,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["თმა", "კამა", "კამათი", "მთა", "ჰამაკი"],
+        "wheel": "აათიკმჰ",
+        "seed": 6,
+        "transpose": true,
+        "unusedPartners": ["კამათი"],
+        "grid": {
+          "rows": 5,
+          "columns": 6
+        },
+        "density": 0.6,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["კამათი"]
+    },
+    {
+      "reviewId": "G099",
+      "word": "ჰანგი",
+      "letters": 5,
+      "proposedMeaning": "tune, melody",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%B0%E1%83%90%E1%83%9C%E1%83%92%E1%83%98",
+      "sourceRevision": null,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ავი", "გვიან", "ნაგავი", "ჰავა", "ჰანგი"],
+        "wheel": "ააგვინჰ",
+        "seed": 15,
+        "transpose": false,
+        "unusedPartners": ["ნაგავი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.5429,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["ნაგავი", "ჟანგი", "ჰაერი"],
+      "sourceContentSha256": "6f070bee94cd4650b666ef9daab4da0db6a5204495605b26479ddbc1017ac9b0"
+    },
+    {
+      "reviewId": "G100",
+      "word": "ჰოკეი",
+      "letters": 5,
+      "proposedMeaning": "hockey",
+      "partOfSpeech": "noun",
+      "form": "singular or mass/collective noun lemma",
+      "sourceUrl": "https://www.ganmarteba.ge/word/%E1%83%B0%E1%83%9D%E1%83%99%E1%83%94%E1%83%98",
+      "sourceRevision": null,
+      "sourceChecked": "2026-10-18",
+      "editorialDecision": "Owner approved the recorded source-checked noun/adjective sense for required eligibility in revision 20, subject to all campaign rules.",
+      "ownerDecision": "required-eligible",
+      "draftExample": {
+        "words": ["ერა", "ერი", "კარი", "ჰაერი", "ჰოკეი"],
+        "wheel": "აეიკორჰ",
+        "seed": 1,
+        "transpose": true,
+        "unusedPartners": ["ჰაერი"],
+        "grid": {
+          "rows": 5,
+          "columns": 7
+        },
+        "density": 0.4571,
+        "iPhoneSECellPoints": 41.6
+      },
+      "currentlyUnusedApprovedPartners": ["ბეკონი", "ჯოკერი", "ჰაერი", "ჰერცი"],
+      "sourceContentSha256": "b6d8b8e7e1f3feb23a55d83f9de0c517d18c05089f1b16d2ca6a907ebf489a1f",
+      "senseNote": "Use the cited Georgian singular/mass/collective lemma; plural-looking English glosses or dictionary examples do not make this a plural noun form."
+    }
+  ],
+  "ownerReviewedAt": "2026-10-18",
+  "approvedCount": 88,
+  "excludedCount": 12,
+  "activeRevisionAfterApproval": 20,
+  "approvedCountAfterReview": 1569,
+  "remainingTo1800": 231
+}

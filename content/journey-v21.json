@@ -1,0 +1,220 @@
+{
+  "revision": 21,
+  "levelCount": 250,
+  "answersPerLevel": 5,
+  "minRequiredGap": 75,
+  "chapters": [
+    {
+      "id": "tbilisi",
+      "title": "თბილისი"
+    },
+    {
+      "id": "mtskheta",
+      "title": "მცხეთა"
+    },
+    {
+      "id": "ananuri",
+      "title": "ანანური"
+    },
+    {
+      "id": "kazbegi",
+      "title": "ყაზბეგი"
+    },
+    {
+      "id": "tusheti",
+      "title": "თუშეთი"
+    },
+    {
+      "id": "sighnaghi",
+      "title": "სიღნაღი"
+    },
+    {
+      "id": "david-gareja",
+      "title": "დავით გარეჯი"
+    },
+    {
+      "id": "uplistsikhe",
+      "title": "უფლისციხე"
+    },
+    {
+      "id": "borjomi",
+      "title": "ბორჯომი"
+    },
+    {
+      "id": "vardzia",
+      "title": "ვარძია"
+    },
+    {
+      "id": "katskhi",
+      "title": "კაცხის სვეტი"
+    },
+    {
+      "id": "racha",
+      "title": "რაჭა"
+    },
+    {
+      "id": "kutaisi-gelati",
+      "title": "ქუთაისი და გელათი"
+    },
+    {
+      "id": "svaneti",
+      "title": "სვანეთი"
+    },
+    {
+      "id": "martvili",
+      "title": "მარტვილის კანიონი"
+    },
+    {
+      "id": "zugdidi",
+      "title": "ზუგდიდი"
+    },
+    {
+      "id": "makhuntseti",
+      "title": "მახუნცეთი"
+    },
+    {
+      "id": "batumi",
+      "title": "ბათუმი"
+    },
+    {
+      "id": "tao-klarjeti",
+      "title": "ტაო-კლარჯეთი"
+    },
+    {
+      "id": "sumela",
+      "title": "სუმელა"
+    },
+    {
+      "id": "cappadocia",
+      "title": "კაპადოკია"
+    },
+    {
+      "id": "pamukkale",
+      "title": "პამუკალე"
+    },
+    {
+      "id": "ephesus",
+      "title": "ეფესო"
+    },
+    {
+      "id": "istanbul",
+      "title": "სტამბოლი"
+    },
+    {
+      "id": "plovdiv",
+      "title": "პლოვდივი"
+    },
+    {
+      "id": "petritsoni",
+      "title": "პეტრიწონი"
+    },
+    {
+      "id": "rila",
+      "title": "რილა"
+    },
+    {
+      "id": "thessaloniki",
+      "title": "თესალონიკი"
+    },
+    {
+      "id": "iviron-athos",
+      "title": "ივერონი, ათონი"
+    },
+    {
+      "id": "meteora",
+      "title": "მეტეორა"
+    },
+    {
+      "id": "volos-iolcos",
+      "title": "ვოლოსი"
+    },
+    {
+      "id": "delphi",
+      "title": "დელფო"
+    },
+    {
+      "id": "athens",
+      "title": "ათენი"
+    },
+    {
+      "id": "santorini",
+      "title": "სანტორინი"
+    },
+    {
+      "id": "corfu",
+      "title": "კორფუ"
+    },
+    {
+      "id": "butrint",
+      "title": "ბუტრინტი"
+    },
+    {
+      "id": "gjirokaster",
+      "title": "გიროკასტრა"
+    },
+    {
+      "id": "berat",
+      "title": "ბერატი"
+    },
+    {
+      "id": "ohrid",
+      "title": "ოჰრიდი"
+    },
+    {
+      "id": "kotor",
+      "title": "კოტორი"
+    },
+    {
+      "id": "dubrovnik",
+      "title": "დუბროვნიკი"
+    },
+    {
+      "id": "split",
+      "title": "სპლიტი"
+    },
+    {
+      "id": "plitvice",
+      "title": "პლიტვიცე"
+    },
+    {
+      "id": "venice",
+      "title": "ვენეცია"
+    },
+    {
+      "id": "florence",
+      "title": "ფლორენცია"
+    },
+    {
+      "id": "rome",
+      "title": "რომი"
+    },
+    {
+      "id": "amalfi",
+      "title": "ამალფი"
+    },
+    {
+      "id": "taormina",
+      "title": "ტაორმინა"
+    },
+    {
+      "id": "valletta",
+      "title": "ვალეტა"
+    },
+    {
+      "id": "mdina",
+      "title": "მდინა"
+    }
+  ],
+  "legacyChapterIds": [
+    "weather",
+    "animals",
+    "family",
+    "body",
+    "plants",
+    "landscape",
+    "food",
+    "home",
+    "numbers",
+    "music"
+  ]
+}

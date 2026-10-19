@@ -15,13 +15,12 @@ import {
 } from 'react-native';
 import Animated, { FadeIn, FadeInDown, FadeOut } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import {
-  PrimaryButton,
-  RoundButton,
-  SecondaryButton,
-} from '../components/Buttons';
+import { PrimaryButton, SecondaryButton } from '../components/Buttons';
+import { useHintRewardedAd } from '../ads/useHintRewardedAd';
+import { rewardedAdMessages } from '../ads/messages';
+import { HintAdButton } from '../components/HintAdButton';
 import { CoachMarks } from '../components/CoachMarks';
-import { CoinBadge, CoinGlyph } from '../components/CoinBadge';
+import { CoinBadge } from '../components/CoinBadge';
 import { BonusMeter } from '../components/BonusMeter';
 import { CrosswordBoard } from '../components/CrosswordBoard';
 import { Icon } from '../components/Icon';
@@ -208,6 +207,10 @@ function GameLayout({
   onSubmit: (tileIds: readonly string[]) => void;
 }) {
   const { width, height } = useWindowDimensions();
+  const ad = useHintRewardedAd(
+    model.canGetCoinsForCellHint || model.canGetCoinsForWordHint,
+    model.levelId,
+  );
   const insets = useSafeAreaInsets();
   const content = Math.min(width - space.md * 2, MAX_CONTENT);
   const wheel = wheelSize(content, width, height);
@@ -224,7 +227,16 @@ function GameLayout({
     space.xs * 2;
   // Saves take milliseconds; controls ignore presses meanwhile instead of dimming.
   const hint = (kind: 'cell' | 'word') => {
-    if (!busy) send({ type: 'hint', levelId: model.levelId, kind });
+    if (busy) return;
+    if (
+      kind === 'cell'
+        ? model.canGetCoinsForCellHint
+        : model.canGetCoinsForWordHint
+    ) {
+      if (!ad.blocked) void ad.watch();
+      return;
+    }
+    send({ type: 'hint', levelId: model.levelId, kind });
   };
   const coaching = useTutorial(tutorial && !model.completed && !celebrating);
   const [{ anchors, steps }] = useState(createTutorial);
@@ -276,6 +288,30 @@ function GameLayout({
           moment={moment}
           accent={tone.scene.accent}
         />
+        {ad.engaged && ad.status !== 'showing' && ad.status !== 'ready' && (
+          <View style={styles.adNotice} testID="hint-ad-notice">
+            <Txt variant="caption" accessibilityLiveRegion="polite">
+              {rewardedAdMessages[ad.status]}
+            </Txt>
+            {ad.pending || ad.status === 'saving' ? (
+              <ActivityIndicator color={palette.gold} />
+            ) : null}
+            {ad.status === 'save-error' && (
+              <SecondaryButton
+                label="შენახვა ხელახლა"
+                onPress={() => void ad.watch()}
+                testID="hint-ad-retry"
+              />
+            )}
+            {ad.status !== 'saving' && (
+              <SecondaryButton
+                label={ad.pending ? 'გაუქმება' : 'დახურვა'}
+                onPress={ad.cancel}
+                testID="hint-ad-dismiss"
+              />
+            )}
+          </View>
+        )}
       </View>
       {error && (
         <Animated.View entering={FadeInDown} style={styles.error}>
@@ -360,41 +396,30 @@ function GameLayout({
             }}
             leading={{
               top: (
-                <RoundButton
-                  label={`სიტყვის მინიშნება, ${model.wordHintCost} მონეტა`}
-                  icon="hintWord"
-                  testID="hint-word"
-                  disabled={!model.canUseWordHint}
+                <HintAdButton
+                  kind="word"
+                  cost={model.wordHintCost}
+                  offerAd={model.canGetCoinsForWordHint}
+                  retrySave={ad.status === 'save-error'}
+                  disabled={
+                    (!model.canUseWordHint && !model.canGetCoinsForWordHint) ||
+                    (model.canGetCoinsForWordHint && ad.blocked)
+                  }
                   onPress={() => hint('word')}
-                  badge={<Price amount={model.wordHintCost} />}
                 />
               ),
               bottom: (
-                <RoundButton
-                  label={
-                    model.freeCellHints > 0
-                      ? `ასოს უფასო მინიშნება, დარჩენილია ${model.freeCellHints}`
-                      : `ასოს მინიშნება, ${model.cellHintCost} მონეტა`
+                <HintAdButton
+                  kind="cell"
+                  cost={model.cellHintCost}
+                  freeHints={model.freeCellHints}
+                  offerAd={model.canGetCoinsForCellHint}
+                  retrySave={ad.status === 'save-error'}
+                  disabled={
+                    (!model.canUseCellHint && !model.canGetCoinsForCellHint) ||
+                    (model.canGetCoinsForCellHint && ad.blocked)
                   }
-                  icon="hintLetter"
-                  testID="hint-cell"
-                  disabled={!model.canUseCellHint}
                   onPress={() => hint('cell')}
-                  badge={
-                    model.freeCellHints > 0 ? (
-                      <View style={[styles.price, styles.freePrice]}>
-                        <Txt
-                          variant="caption"
-                          style={styles.priceText}
-                          numberOfLines={1}
-                        >
-                          უფასო
-                        </Txt>
-                      </View>
-                    ) : (
-                      <Price amount={model.cellHintCost} />
-                    )
-                  }
                 />
               ),
             }}
@@ -447,17 +472,6 @@ function useTutorial(pending: boolean) {
     send({ type: 'tutorial', seen: true });
   }, []);
   return { active: pending && ready && !closed, finish };
-}
-
-function Price({ amount }: { amount: number }) {
-  return (
-    <View style={styles.price}>
-      <CoinGlyph size={12} />
-      <Txt variant="caption" style={styles.priceText}>
-        {amount}
-      </Txt>
-    </View>
-  );
 }
 
 /** One lozenge per crossword word, filled in the scene accent once found. */
@@ -550,17 +564,16 @@ const styles = StyleSheet.create({
   },
   complete: { alignItems: 'center', gap: space.lg, paddingTop: space.xl },
   wide: { alignSelf: 'stretch' },
-  price: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 3,
-    paddingHorizontal: 7,
-    paddingVertical: 1,
-    borderRadius: 999,
+  adNotice: {
+    position: 'absolute',
+    bottom: 8,
+    left: 8,
+    right: 8,
     backgroundColor: palette.ink,
-    borderWidth: 1,
     borderColor: palette.gold,
+    borderWidth: 1,
+    borderRadius: 12,
+    padding: space.md,
+    gap: space.sm,
   },
-  priceText: { fontSize: 11, lineHeight: 15 },
-  freePrice: { width: 68, paddingHorizontal: 4, justifyContent: 'center' },
 });

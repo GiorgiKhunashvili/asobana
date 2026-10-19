@@ -20,6 +20,10 @@ export interface GameStoreState {
   readonly eventBatch: EventBatch;
   initialize(): Promise<void>;
   dispatch(command: GameCommand): Promise<void>;
+  /** Called only for the ad SDK's earned-reward callback; SQLite deduplicates it. */
+  claimAdReward(claimId: string): Promise<void>;
+  /** The victory screen's ad: pays a finished level's reward once more, once. */
+  claimLevelDouble(levelId: string, claimId: string): Promise<void>;
   /** Start over at the first level with starting coins; sound/haptics settings stay. */
   reset(): Promise<void>;
   clearError(): void;
@@ -36,24 +40,14 @@ export function createGameStore(
   let pending = 0;
   const store = createStore<GameStoreState>((set, get) => {
     /** Every write is queued, committed to SQLite, and only then published. */
-    function commit(apply: (game: GameState) => Transition): Promise<void> {
+    function enqueue(action: () => Promise<void>): Promise<void> {
       if (get().status !== 'ready')
         return Promise.reject(new Error('Game is not ready'));
       pending++;
       set({ busy: true });
       const work = queue.then(async () => {
         try {
-          const game = get().game;
-          if (!repository || !game) throw new Error('Game is not ready');
-          const result = apply(game);
-          if (result.state !== game)
-            revision = await repository.save(result.state, revision);
-          sequence++;
-          set({
-            game: result.state,
-            error: null,
-            eventBatch: { sequence, events: result.events },
-          });
+          await action();
         } catch (error) {
           set({
             error: error instanceof Error ? error.message : String(error),
@@ -67,6 +61,21 @@ export function createGameStore(
       // Rejections reach the caller but never poison the queue for later commands.
       queue = work.catch(() => undefined);
       return work;
+    }
+    function commit(apply: (game: GameState) => Transition): Promise<void> {
+      return enqueue(async () => {
+        const game = get().game;
+        if (!repository || !game) throw new Error('Game is not ready');
+        const result = apply(game);
+        if (result.state !== game)
+          revision = await repository.save(result.state, revision);
+        sequence++;
+        set({
+          game: result.state,
+          error: null,
+          eventBatch: { sequence, events: result.events },
+        });
+      });
     }
     return {
       status: 'loading',
@@ -99,6 +108,23 @@ export function createGameStore(
       },
       dispatch(command) {
         return commit((game) => transition(game, command, pack));
+      },
+      claimAdReward(claimId) {
+        return enqueue(async () => {
+          if (!repository) throw new Error('Game is not ready');
+          const saved = await repository.claimAdReward(claimId);
+          revision = saved.revision;
+          // No success UI or balance is published before the transaction commits.
+          set({ game: saved.state, error: null });
+        });
+      },
+      claimLevelDouble(levelId, claimId) {
+        return enqueue(async () => {
+          if (!repository) throw new Error('Game is not ready');
+          const saved = await repository.claimLevelDouble(levelId, claimId);
+          revision = saved.revision;
+          set({ game: saved.state, error: null });
+        });
       },
       reset() {
         return commit((game) => ({

@@ -1,0 +1,7 @@
+{
+  "revision": 14,
+  "draftSha256": "e0cb6184687460ff4ffe17ae1d820467190f1d026da33b3d20d4d41351420ca3",
+  "reviewedAt": "2026-10-18",
+  "reviewer": "Codex assistant inherited-approval, grammatical-role and exact-draft audit",
+  "scope": "All 679 distinct required spellings and all 1,200 canonical-only answer slots checked against retained individual revision-13 everyday approvals, selected glosses and source provenance. All 38 explicitly verified plurals are excluded from targets and variants, retained as eligible bonuses. No new word approvals or dictionary entries. All 240 boards pass Python release gates, including global 75-level spacing, long-answer progression, chapter pacing, exact tile counts, unique wheels and phone layouts. Bounded coverage search improves on revision 13; global optimality is not claimed. The full 831-word owner review remains pending. Historical packs are immutable. This is not fresh source verification, native-speaker review, device playtesting or a TestFlight release. See docs/VOCABULARY_REVIEW_V14.md."
+}

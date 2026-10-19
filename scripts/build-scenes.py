@@ -44,6 +44,20 @@ CHAPTERS = [
 ]
 # The landmark and horizon sit roughly between 38% and 64% of the height.
 BAND = (0.38, 0.64)
+# Individual landmark crops for the expanded route.
+STOP_BANDS = {
+    "valletta": (0.42, 0.68),
+    "mdina": (0.46, 0.72),
+    "carthage": (0.46, 0.72),
+    "sidi-bou-said": (0.59, 0.85),
+    "el-jem": (0.54, 0.80),
+    "barcelona": (0.35, 0.61),
+    "valencia": (0.51, 0.77),
+    "madrid": (0.45, 0.71),
+    "granada": (0.45, 0.71),
+    "cordoba": (0.44, 0.70),
+    "seville": (0.48, 0.74),
+}
 
 
 def save(image: Image.Image, path: Path, quality: int) -> None:
@@ -62,7 +76,7 @@ def build(master: Image.Image, name: str, force: bool) -> None:
     ):
         return
     save(master, OUT / f"{name}.jpg", 80)
-    top, bottom = (round(master.height * edge) for edge in BAND)
+    top, bottom = (round(master.height * edge) for edge in STOP_BANDS.get(name, BAND))
     save(master.crop((0, top, master.width, bottom)), OUT / f"{name}-band.jpg", 78)
 
 

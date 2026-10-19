@@ -1,0 +1,7 @@
+{
+  "revision": 15,
+  "draftSha256": "0efd6e34b208acb225fe376a0f01be7b9efef77ba3c1d24bfc5f91cf5888f803",
+  "reviewedAt": "2026-10-18",
+  "reviewer": "Codex assistant audit of exact draft against inherited editorial and explicit owner decisions",
+  "scope": "All 680 distinct required spellings and 1,200 canonical-only answer slots audited against retained individual approvals, recorded meanings and source provenance. Newly used words belong to the 140 words explicitly approved by the owner after reviewing the 152 unused v14 words. All 12 owner exclusions are absent from targets, variants and bonuses. All 38 verified plurals remain target-ineligible and bonus-eligible. All 240 boards pass the unchanged Python release gates. No new vocabulary, fresh source verification, full-pool owner sign-off, native-device testing or TestFlight release is claimed. Bounded coverage improvement; global optimality is not proven. Historical revisions 1–14 remain immutable. See docs/VOCABULARY_REVIEW_V15.md."
+}

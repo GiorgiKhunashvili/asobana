@@ -1,4 +1,393 @@
-# Journey campaign — revision 13
+# Journey campaign — revision 26: approved vocabulary expansion
+
+[Batch 07](VOCABULARY_EXPANSION_BATCH_07.md) adds **75 approved senses** and excludes
+the **25 owner-rejected spellings** from required answers, variants and bonuses.
+The main pool grows **1,645 → 1,720**; 80 more approvals would reach 1,800. The
+reference has 1,970 entries / 1,838 eligible words, including the same 118 bonus-only
+words. Every earlier word-selection, layout, progression and pacing rule remains.
+
+The rebuilt **295 levels / 59 stops / 1,475 slots** use **1,233 distinct
+required words**, up from 1,210. Repeated slots fall **265 → 242**:
+**23 fewer (8.7%)**. The campaign uses 31 new
+approvals and 47 previously unused existing words. There
+are 487 unused main approvals. Every recurrence is at least 75 levels
+apart. This is the best bounded search result, not proof of global optimality.
+See [all boards and measurements](VOCABULARY_REVIEW_V26.md) and
+[the complete current word list](VOCABULARY_OWNER_REVIEW_V26.md).
+
+Current pack, recipes, reference and allowlist use v26; the route remains
+`content/journey-v23.json`. Rebuild with `scripts/rebuild-wide-content.py --revision 26`
+(the default), inspect the draft and promote only against its reviewed digest.
+Historical JSON remains immutable. Save migration supports revisions 1–25 with a
+1,670 historical hint-credit ceiling and preserves earned progress across restart.
+
+Validation passed: 285 app tests, 146 Python tests, all 295 boards solved,
+TypeScript/lint/format checks, Ruff/mypy and a local iOS export. See the linked
+review for detailed results and limitations.
+
+---
+
+# Historical revision 25: approved vocabulary expansion
+
+[Batch 06](VOCABULARY_EXPANSION_BATCH_06.md) adds **76 approved senses** and excludes
+the **24 owner-rejected spellings** from required answers, variants and bonuses.
+The main pool grows **1,569 → 1,645**; 155 more approvals would reach 1,800. The
+reference has 1,895 entries / 1,763 eligible words, including the same 118 bonus-only
+words. Every earlier word-selection, layout, progression and pacing rule remains.
+
+The rebuilt **295 levels / 59 stops / 1,475 slots** use **1,210 distinct
+required words**, up from 1,165. Repeated slots fall **310 → 265**:
+**45 fewer (14.5%)**. The campaign uses 50 new
+approvals and 61 previously unused existing words. There
+are 435 unused main approvals. Every recurrence is at least 75 levels
+apart. This is the best bounded search result, not proof of global optimality.
+See [all boards and measurements](VOCABULARY_REVIEW_V25.md) and
+[the complete current word list](VOCABULARY_OWNER_REVIEW_V25.md).
+
+Current pack, recipes, reference and allowlist use v25; the route remains
+`content/journey-v23.json`. Rebuild with `scripts/rebuild-wide-content.py --revision 25`
+(the default), inspect the draft and promote only against its reviewed digest.
+Historical JSON remains immutable. Save migration supports revisions 1–24 with a
+1,628 historical hint-credit ceiling and preserves earned progress across restart.
+
+Batch 07 was subsequently reviewed and incorporated in revision 26 above.
+
+---
+
+# Historical revision 24: owner vocabulary replacements
+
+The [final review](VOCABULARY_REPLACEMENTS_APPROVED_01.json) removes 29 words from
+all play and adds 29 approved replacements, ending with **კოკა**. Eight rejected
+proposals are also excluded. The owner explicitly skipped the absent კოლო and სურმა.
+The pool stays at **1,569 main words / 118 additional bonus-only words**; the
+reference has **1,819 entries / 1,687 eligible words**. All earlier rules remain.
+
+The rebuilt **295 levels / 59 stops / 1,475 slots** use **1,165 distinct
+words**, compared with 1,187 before. Repeated slots increase **288 → 310**,
+and unused main words increase **382 → 404**. The best bounded search
+uses **17 of the 29 additions**, including კოკა. Removing useful short
+connectors reduces the available combinations; this update does not improve repetition.
+See [all boards and measured results](VOCABULARY_REVIEW_V24.md) and
+[the complete word list](VOCABULARY_OWNER_REVIEW_V24.md).
+
+Current vocabulary and pack files use v24; the unchanged route remains
+`content/journey-v23.json`. Rebuild with `scripts/rebuild-wide-content.py --revision 24`
+(the default), inspect the draft and promote only against its reviewed digest.
+Historical JSON remains immutable. Migration supports revisions 1–23 with a 1,586
+hint-credit ceiling, preserving earned progress and rewards across restart.
+
+Batch 06 was subsequently reviewed and incorporated in revision 25 above.
+
+---
+
+# Historical revision 23: Spain
+
+The owner authorized **30 levels after Tunisia**, taking the campaign to
+**295 levels / 59 stops / 1,475 required slots**. Spain visits Barcelona (266–270),
+Valencia (271–275), Madrid (276–280), Granada (281–285), Córdoba (286–290) and
+Seville (291–295). The first 265 boards remain identical to revision 22.
+
+Spain uses **61 previously unused approved words**: unused approvals fall
+**443 → 382**, and distinct required words rise **1,126 → 1,187**. Its 150 answers
+are distinct within Spain; 89 reuse earlier answers at least 75 levels apart.
+Of those reuses, 63 are second occurrences and 26 are third occurrences. None is
+a fourth. Appending levels increases repeated slots from 199 to 288; earlier
+repetition is unchanged. Every vocabulary, plural, bonus-only, layout, progression,
+pacing and repetition-gap rule remains enforced.
+
+The 31,141-board candidate pool has a 61-unused-word coverage ceiling for 30 boards;
+the selected campaign reaches it. This is an optimum within the searched pool,
+not a proof over every possible crossword. See [the review, 61 newly used words
+and all 295 boards](VOCABULARY_REVIEW_V23.md), [the full vocabulary list](VOCABULARY_OWNER_REVIEW_V23.md)
+and [six generated backgrounds and exact prompts](SPAIN_ARTWORK.md).
+All six source-checked facts were owner-approved on 2026-10-18.
+
+The current route is `content/journey-v23.json`. The main allowlist remains at
+1,569 words; 231 further approvals would reach 1,800. Dictionaries remain revision 20. Historical JSON is immutable. Both validators select 240 levels for revisions
+13–20, 250 for v21, 265 for v22 and 295 for v23. Rebuild with
+`scripts/rebuild-wide-content.py --revision 23` (the default), audit the draft,
+then promote against the exact digest in `discovery.v23.review.json`.
+Migration supports revisions 1–22, preserving progress, hints, coins, rewards,
+settings and postcards through restart. The hint compatibility ceiling remains
+1,544. Actual check results and limitations are recorded in the review.
+
+---
+
+# Historical revision 22: Tunisia
+
+The owner authorized 15 levels after Malta: **Carthage (კართაგენი), 251–255**,
+**Sidi Bou Said (სიდი ბუ საიდი), 256–260**, and **El Jem (ელ-ჯემი), 261–265**.
+The campaign now has **265 levels / 53 stops / 1,325 required answer slots**.
+All first 250 boards remain identical to revision 21. Every vocabulary, plural,
+bonus-only, layout, length, pacing and campaign-wide 75-level gap rule is preserved.
+
+The 75 new slots use **30 previously unused approved words** and **45 words that
+appeared once earlier**. No answer repeats within Tunisia; no word gains a third
+occurrence. Unused approvals fall **473 → 443**, and distinct required words rise
+**1,096 → 1,126**. Each new stop brings ten unused words into play. Adding these
+levels raises repeated appearances beyond first use from 154 to 199; the earlier
+campaign is unchanged. The nearest Tunisia reuse is 78 levels away.
+
+See [the campaign review, newly used words and all 265 boards](VOCABULARY_REVIEW_V22.md),
+[the full vocabulary list](VOCABULARY_OWNER_REVIEW_V22.md), and
+[the three generated backgrounds and exact prompts](TUNISIA_ARTWORK.md).
+The main allowlist remains at 1,569 words; 231 more approvals would reach 1,800.
+
+The current route is `content/journey-v22.json`. Historical JSON remains immutable.
+Generator and runtime select route size by revision: 240 levels through v20,
+250 in v21, and 265 in v22. Rebuild with `scripts/rebuild-wide-content.py --revision 22`
+(the default), audit every required answer and variant, then promote against the
+exact digest in `discovery.v22.review.json`. The reference and allowlist remain
+revision 20. Migration supports revisions 1–21 and preserves all existing progress,
+rewards and postcards across restart. The hint compatibility ceiling remains 1,544.
+Actual validation results are recorded in the review. No native-device or TestFlight
+validation is implied by an iOS bundle export.
+
+---
+
+# Historical revision 21: Malta
+
+The owner authorized ten levels after Italy: **Valletta (ვალეტა), 241–245**,
+then **Mdina (მდინა), 246–250**. There are now **250 levels / 50 journey stops**.
+The first 240 boards remain identical to revision 20. All vocabulary, plural,
+bonus-only, layout, length, pacing and 75-level gap rules remain enforced.
+
+The 50 new answer slots use **27 previously unused approved words** and
+**23 previously used words**, with no repeats within Malta. Unused approvals
+fall from 500 to **473**. The full campaign contains **1096
+distinct required spellings** and 154 repeated appearances
+beyond first use. The original 131 repeats remain unchanged; expansion adds
+23 repeats. No new words are approved or inserted into the dictionaries.
+
+See [the campaign review, new words and all 250 boards](VOCABULARY_REVIEW_V21.md),
+[the current full vocabulary](VOCABULARY_OWNER_REVIEW_V21.md), and
+[the Malta artwork and exact prompts](MALTA_ARTWORK.md). The main allowlist remains
+at 1,569 words; 231 more approvals would reach the owner's 1,800-word goal.
+
+The current route is `content/journey-v21.json`; historical routes and packs remain
+immutable. Both runtime and generator select the route by content revision.
+Rebuild with `scripts/rebuild-wide-content.py --revision 21` (default), audit the
+exact draft, then promote only against `discovery.v21.review.json`. Revision 21
+uses the unchanged revision-20 reference and allowlist. Save migration supports
+revisions 1–20; the hint compatibility bound stays 1,544 because old boards are
+unchanged. All validation results are recorded in the review.
+
+---
+
+# Historical revision 20: expansion batch 05
+
+The owner approved **88 of 100 words in expansion batch 05** and rejected 12.
+The rejected spellings are excluded from required answers, variants and bonuses
+from revision 20. The main pool grows from **1,481 to 1,569 words**; **231 further
+approvals** are needed to reach 1,800. The reference contains 1,790 entries /
+1,687 playable words, including 118 additional bonus-only spellings.
+
+The rebuilt 240 levels use **1069 distinct required words**, up from 1036.
+Repeated slots after first appearance decrease from **164 to 131 (20.12% fewer)**.
+The campaign uses 45 of the 88 new approvals; 43 remain unused.
+There are 500 unused approved words overall. See
+[the exact campaign review](VOCABULARY_REVIEW_V20.md) and
+[the full main and bonus list](VOCABULARY_OWNER_REVIEW_V20.md).
+
+All vocabulary, plural, bonus-only, 75-level gap, length/wheel progression,
+connected-layout, density, phone-size and chapter-pacing rules remain enforced.
+Optimization is bounded and does not establish the global minimum repetition.
+
+Use `scripts/rebuild-wide-content.py --revision 20` (default), review the exact
+draft, then promote only against `discovery.v20.review.json`. Historical revisions
+1–19 remain unchanged. Save migration preserves completed levels, partial solved
+credits, coins, paid hints, postcards and lifetime bonus rewards through restart.
+The hint compatibility bound is 1,544. Validation results are recorded in the review.
+
+---
+
+# Historical revision 19: expansion batch 04
+
+The owner approved **129 of 148 words in expansion batch 04** and rejected 19.
+The rejected spellings are excluded from required answers, variants and bonuses
+from revision 19. The main pool grows from **1,352 to 1,481 words**; **319 further
+approvals** are needed to reach the owner’s updated target of 1,800. The reference contains 1,702 entries /
+1,599 playable words, including 118 additional bonus-only spellings.
+
+The rebuilt 240 levels use **1036 distinct required words**, up from 995.
+Repeated slots after first appearance decrease from **205 to 164 (20.00% fewer)**.
+The campaign uses 51 of the 129 new approvals; 78 remain unused.
+There are 445 unused approved words overall. See
+[the exact campaign review](VOCABULARY_REVIEW_V19.md) and
+[the full main and bonus list](VOCABULARY_OWNER_REVIEW_V19.md).
+
+All vocabulary, plural, bonus-only, 75-level gap, length/wheel progression,
+connected-layout, density, phone-size and chapter-pacing rules remain enforced.
+Optimization is bounded and does not establish the global minimum repetition.
+
+Use `scripts/rebuild-wide-content.py --revision 19` (default), review the exact
+draft, then promote only against `discovery.v19.review.json`. Historical revisions
+1–18 remain unchanged. Save migration preserves completed levels, partial solved
+credits, coins, paid hints, postcards and lifetime bonus rewards through restart.
+The hint compatibility bound is 1,502. Validation results are recorded in the review.
+
+---
+
+# Historical revision 18: expansion batch 03
+
+The owner approved **131 of 140 words in expansion batch 03** and rejected
+`ბიძია`, `გვიანი`, `დედიკო`, `მამიკო`, `მუშაკი`, `უკანა`, `წლიური`, `ხანი`
+and `ჯერი`. The rejected spellings are excluded from required answers, variants
+and bonuses from revision 18. The 131 approved senses bring the main pool to
+**1,352 words**, with **148 more approvals** needed to reach 1,500. The reference
+contains 1,573 entries / 1,470 playable words, including 118 bonus-only spellings.
+
+The rebuilt 240 levels use **995 distinct required words**, up from 953.
+Repeated answer slots fall from **247 to 205 (17.00% fewer)**.
+The campaign uses 65 of the 131 new approvals; 66 remain eligible but
+unused. There are 357 unused approved words overall. Exact counts, frequencies,
+all unused approvals and all boards appear in
+[the campaign review](VOCABULARY_REVIEW_V18.md); the
+[full vocabulary list](VOCABULARY_OWNER_REVIEW_V18.md) includes main and bonus words.
+
+Every existing vocabulary, plural, bonus-only, 75-level gap, length/wheel progression,
+connected-layout, density, phone-size and chapter-pacing rule remains enforced.
+Optimization is bounded and does not prove a global minimum repetition.
+
+Use `scripts/rebuild-wide-content.py --revision 18` (default), review the exact
+draft, then promote only against `discovery.v18.review.json`. Historical revisions
+1–17 remain unchanged. Save migration retains completed levels, partial solved
+credits, coins, paid hints, postcards and lifetime bonus rewards after restart.
+The hint compatibility bound is 1,460. Actual validation results appear in the review.
+
+---
+
+# Historical revision 17: expansion batch 02
+
+The owner approved all **130 words from expansion batch 02**. They are added to
+the reference dictionary and main allowlist, bringing the required pool from
+1,091 to **1,221 words**, with **279 more approvals** needed to reach 1,500.
+The reference has 1,442 entries / 1,339 playable words, including 118 bonus-only.
+All existing exclusions and plural/bonus-only reservations remain enforced.
+
+The rebuilt 240 levels use **953 distinct required words**, up from 865.
+Repeated answer slots fall from **335 to 247 (26.27% fewer)**.
+The campaign uses 73 of the 130 new approvals; 57 remain eligible but
+unused. Overall 268 approved words remain unused. Exact frequencies, every
+unused approval, sources and all 240 boards appear in
+[the campaign review](VOCABULARY_REVIEW_V17.md); the
+[full vocabulary list](VOCABULARY_OWNER_REVIEW_V17.md) includes main and bonus-only words.
+
+The 75-level minimum repeat gap, five-answer boards, length/wheel progression,
+connected crossings, density, phone sizes and chapter pacing remain enforced.
+Optimization is bounded, not a proof of the global minimum repetition.
+
+Use `scripts/rebuild-wide-content.py --revision 17`, inspect the exact
+draft and promote only against `discovery.v17.review.json`. Historical revisions
+1–16 are unchanged. Migration preserves completed levels, partial solved credits,
+coins, paid hints, postcards and lifetime bonus rewards after restart. The hint
+compatibility bound is 1,418. See the campaign review for actual validation results.
+
+The 1,500-word goal allows exploring more levels: 300 levels require 1,500 answer
+slots and are the theoretical zero-repeat ceiling if all words can fit. This is
+not a feasibility guarantee. Adding levels increases repetition pressure; this
+revision retains 240 levels and 48 journey stops as requested by the rulebook.
+
+---
+
+# Historical revision 16: owner bonus-word promotion
+
+The owner approved **325 of 372 reviewed bonus words** for required use and reserved
+**47 as bonus-only**. Together with 766 retained approvals after the owner’s 53
+all-play exclusions, the required pool now contains **1,091 words**. The ten earlier
+approvals are included in the 325. The reference dictionary is unchanged, with
+1,209 playable spellings including 118 bonus-only words.
+
+The rebuilt 240-level campaign uses **865 distinct required words**, up from 680.
+Repeated answer slots drop from **520 to 335 (35.58% fewer)**. Of the promoted words,
+256 appear as required answers; 69 remain eligible but unused. There are 226 unused
+approvals overall. See [the exact campaign review](VOCABULARY_REVIEW_V16.md) and
+[the current full vocabulary list](VOCABULARY_OWNER_REVIEW_V16.md).
+
+All vocabulary, plural, 75-level repeat-gap, progression, pacing, crossing and
+phone-layout rules remain enforced. Search is bounded, not proof of maximum
+coverage. The 1,500-word planning goal still needs 409 additional approvals.
+
+Use `scripts/rebuild-wide-content.py --revision 16`, inspect the exact
+draft and promote only against `discovery.v16.review.json`. Historical revisions
+1–15 remain immutable. Save migration retains completed levels, partial solved
+credits, coins, paid hints, postcards and lifetime bonus rewards after restart.
+The hint compatibility bound is 1,376. Validation results are recorded in the
+campaign review; no native-device test or TestFlight upload is implied.
+
+---
+
+# Historical revision 15: owner unused-word review
+
+The owner reviewed the 152 unused revision-14 words on 2026-10-18. Twelve
+spellings are now excluded from required answers, accepted variants and bonuses:
+`ბალონი`, `ბაჟე`, `გარაჟი`, `ზუსტად`, `კარგად`, `კასეტი`, `უცებ`, `ფანარი`,
+`შიგნით`, `ძალიან`, `ხშირად`, `ჯიპი`. The other 140 words are explicitly
+owner-approved for required use under all existing rules. No new dictionary
+entries were added. The target bank contains **819 non-plural approvals**.
+
+The rebuilt campaign uses **680 distinct required words** across 1,200
+slots, compared with 679 in revision 14. Repeated slots decrease from 521 to
+**520**. This is a small net gain from a bounded search, not a proven maximum.
+There are 6 newly used spellings, 5 retired spellings and 139 unused approvals.
+The exact frequency distribution and limitations are in
+[the campaign review](VOCABULARY_REVIEW_V15.md).
+
+All rules in [AGENTS.md](../AGENTS.md) remain enforced: plural nouns are bonus-only,
+required repeats must be at least 75 levels apart, and all 240 levels / 48 stops,
+length quotas, wheel progression, pacing, crossing and phone-layout gates remain.
+The unchanged dictionary and journey definitions retain v13 filenames. The
+[819-word owner review list](VOCABULARY_OWNER_REVIEW_V15.md) records the 140 owner
+approvals separately from inherited assistant approvals. It does not claim that
+the owner reviewed the entire pool.
+
+Use `scripts/rebuild-wide-content.py --revision 15` (default), inspect the exact
+draft, and promote only against `discovery.v15.review.json`. Historical revisions
+1–14 remain immutable. Migration retains completion, partial solved credits,
+coins, paid hints, settings, postcards and lifetime bonus rewards after restart.
+The hint compatibility bound is 1,334. See the review for completed validation;
+no native-device test or TestFlight upload is implied.
+
+---
+
+# Historical revision 14: non-plural campaign
+
+The owner’s 2026-10-18 rule makes **plural nouns bonus-only**: they cannot be
+required answers or accepted variants. The 38 individually documented plurals
+remain in the reference dictionary, eligible for every formable bonus. The target
+allowlist now contains **831 non-plural approvals**. This retains approved nouns,
+adjectives, numbers and everyday adverbs; it does not mean nouns only.
+
+**Reducing repetition is the primary optimization objective within every existing
+rule.** Maximize distinct required spellings first, then reduce heavily repeated
+words and prefer longer gaps. Do not weaken the 75-level minimum, use rare filler,
+or substitute unreviewed words. The owner is willing to review the entire word
+pool and help expand it. Willingness is not vocabulary approval.
+
+The campaign still has **240 levels, 48 stops and 1,200 required answer slots**.
+Wheel progression, five/six-letter quotas, connected readable crossings, phone
+cell sizes, unique wheels, bonus rewards, postcards and challenge/recovery pacing
+remain enforced in Python and TypeScript. The unchanged stop definitions and
+reference dictionary retain their revision-13 filenames.
+
+See [the exact campaign results and every board](VOCABULARY_REVIEW_V14.md) and
+[all 831 approvals for owner review](VOCABULARY_OWNER_REVIEW_V14.md). The latter
+lists meanings, source links, usage and blank owner-decision fields; no owner or
+native-speaker review is claimed. No new dictionary words were added in revision 14.
+
+Rebuild: `scripts/rebuild-wide-content.py --revision 14`. Promotion
+requires the exact inspected draft digest in `discovery.v14.review.json`.
+Revisions 1–13 remain immutable and migrate with completion, partial solved
+credits, coins, paid hints, settings, journey/legacy postcards and lifetime bonus
+rewards preserved across restart. Revision 14 permits 1,292 historical/paid hint
+credits per board, retaining revision 13’s 1,250 plus a replacement board.
+
+Automated results and search limitations appear in the revision-14 review. This
+content rebuild is local; no native-device test or TestFlight upload is claimed.
+
+---
+
+# Historical revision 13: journey campaign
 
 The campaign now contains 240 levels in 48 stops, using the exact order and titles
 in [`content/journey-v13.json`](../content/journey-v13.json). Each board has five
@@ -25,7 +414,7 @@ is a peak, the fourth recovers by at least two points, and upward transitions
 are capped at ten points. Later play repeats these waves rather than increasing
 obscurity. Difficulty scores still need player validation.
 
-Rebuild: `scripts/rebuild-wide-content.py --revision 13` (default). Promotion
+Rebuild: `scripts/rebuild-wide-content.py --revision 13`. Promotion
 requires the exact reviewed draft SHA-256 in `discovery.v13.review.json`.
 Historical packs remain immutable. The same level IDs retain ordinal completion
 and partial credits, while old destination postcards retain their original IDs

@@ -1,0 +1,7 @@
+{
+  "revision": 20,
+  "draftSha256": "d33b4eba176bfb56b15b1d43afa6ba28324c34810c02b6613d0d2c3c7654f818",
+  "reviewedAt": "2026-10-18",
+  "reviewer": "Codex assistant audit against explicit owner approval of 88 batch-five words and rejection of twelve",
+  "scope": "All 1069 distinct required spellings and 1200 canonical-only slots checked against the exact 1569-word allowlist, recorded meanings and source URLs. Exactly 88 new entries preserve owner-approved source-checked senses from expansion batch 05. All twelve rejected proposals are absent in every role and excluded by policy. Every earlier exclusion and plural/bonus-only reservation remains enforced. All eligible formable extras are recognized. All 240 boards pass unchanged layout, pacing, progression and 75-level gap gates. Historical revisions 1–19 retained. Bounded optimization; no global-optimality or native-device-test claim. See docs/VOCABULARY_REVIEW_V20.md."
+}

@@ -1,4 +1,4 @@
-import journey from '../../../content/journey-v13.json';
+import { journeyForRevision, MIN_REQUIRED_GAP } from './journey';
 import type { Level, LevelPack } from '../models/types';
 import { canFormWord } from '../engine/georgian';
 import { ContentError } from '../engine/validation';
@@ -33,6 +33,7 @@ export function validateDiscovery(
   vocabulary: ReadonlySet<string>,
   familiarity: Readonly<Record<string, number>>,
 ): void {
+  const journey = journeyForRevision(pack.revision);
   const count = pack.revision >= 13 ? journey.levelCount : 50;
   if (pack.levels.length !== count || pack.chapters.length !== count / 5)
     throw new ContentError(
@@ -197,7 +198,7 @@ export function validateRequiredGap(
   }
   for (const answer of board) {
     const previous = lastRequired.get(answer);
-    if (previous !== undefined && index - previous < journey.minRequiredGap)
+    if (previous !== undefined && index - previous < MIN_REQUIRED_GAP)
       throw new ContentError('Required answer repeats inside the 75-level gap');
   }
   for (const answer of board) lastRequired.set(answer, index);

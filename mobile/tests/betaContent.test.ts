@@ -62,7 +62,7 @@ test('new players solve all 50 levels with one reward per completion and valid s
     }
     expect(rewards).toBe(1);
     expect(state.progress[level.id]?.completed).toBe(true);
-    expect(state.coins).toBe(100 + 25 * (index + 1));
+    expect(state.coins).toBe(200 + 20 * (index + 1));
     expect(submit(state, level, level.words[0]!.answer).state).toBe(state);
   }
   expect(selectGameplay(state, catalog).nextLevelId).toBeNull();

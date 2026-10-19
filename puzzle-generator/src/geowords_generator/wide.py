@@ -3,12 +3,16 @@
 import math
 from typing import NotRequired, TypedDict
 
-from .discovery import JOURNEY, discovery_difficulty, validate_discovery
+from .discovery import discovery_difficulty, journey_for_revision, validate_discovery
 from .generator import generate_level
 from .models import ChapterJSON, GridJSON, PackJSON, Placement
 from .validation import validate_pack
 from .vocabulary import can_form_word
-from .word_policy import playable_vocabulary, required_vocabulary
+from .word_policy import (
+    excluded_required_words,
+    playable_vocabulary,
+    required_vocabulary,
+)
 
 BOARD_AREAS = {
     "iPhone SE": (351, 224),
@@ -84,22 +88,48 @@ def validate_wide(
         11,
         12,
         13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
     ):
         raise ValueError(
             "Wide campaign requires stable pack identity "
-            "and revision 6, 7, 8, 9, 10, 11, 12 or 13"
+            "and revision 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, "
+            "19, 20, 21, 22, 23, 24, 25 or 26"
         )
     if pack["revision"] >= 7:
         vocabulary = playable_vocabulary(vocabulary, revision=pack["revision"])
+    journey = journey_for_revision(pack["revision"])
     expected = (
-        tuple(c["id"] for c in JOURNEY["chapters"])
+        tuple(c["id"] for c in journey["chapters"])
         if pack["revision"] >= 13
         else CHAPTER_IDS
     )
     if tuple(chapter["id"] for chapter in pack["chapters"]) != expected:
         raise ValueError("Chapter IDs/order changed")
-    if pack["revision"] >= 13 and pack["chapters"] != JOURNEY["chapters"]:
+    if pack["revision"] >= 13 and pack["chapters"] != journey["chapters"]:
         raise ValueError("Journey chapter titles changed")
+    required_excluded = excluded_required_words(revision=pack["revision"])
+    if any(
+        answer in required_excluded
+        for level in pack["levels"]
+        for word in level["words"]
+        for answer in [word["answer"], *word["acceptedAnswers"]]
+    ):
+        raise ValueError(
+            "Plural nouns and owner-reserved words are bonus-only, "
+            "never required answers or variants"
+        )
     validate_discovery(pack, vocabulary, familiarity)
     if pack["revision"] >= 10:
         for start in range(0, len(pack["levels"]), 5):

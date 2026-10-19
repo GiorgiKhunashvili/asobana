@@ -1,4 +1,4 @@
-import manifest from '../../content/levels/discovery.v13.recipes.json';
+import manifest from '../../content/levels/discovery.v26.recipes.json';
 import { catalog, previousCatalogs, vocabulary } from '../src/content/catalog';
 import { validateWide } from '../src/content/wide';
 import { canFormWord } from '../src/engine/georgian';
@@ -50,7 +50,6 @@ test('required spellings only recur after the global 75-level gap', () => {
         last.set(answer, index);
       }
   expect(last.size).toBeGreaterThanOrEqual(375);
-  expect(last.size).toBeLessThan(1200);
   const first = catalog.levels[0]!;
   const second = catalog.levels[1]!;
   expect(() =>

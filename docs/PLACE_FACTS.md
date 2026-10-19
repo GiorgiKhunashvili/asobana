@@ -94,3 +94,43 @@ on the postcard page, written on a note under the stamp.
 | რომი      | ტრადიციით, ტრევის შადრევანში მონეტას აგდებენ, რომ რომში კვლავ დაბრუნდნენ.      | By tradition, people throw a coin into the Trevi Fountain to return to Rome.                     | [Wikipedia](https://en.wikipedia.org/wiki/Trevi_Fountain)          |                                                                                                     |
 | ამალფი    | ამალფი ოდესღაც ხმელთაშუა ზღვაზე გავლენიანი საზღვაო რესპუბლიკის დედაქალაქი იყო. | Amalfi was once the capital of a maritime republic that was a major Mediterranean trading power. | [Wikipedia](https://en.wikipedia.org/wiki/Amalfi)                  | Replaces limoncello: made all over southern Italy, a liqueur, and the caption already shows lemons. |
 | ტაორმინა  | ტაორმინიდან ჩანს ეტნა — მსოფლიოს ერთ-ერთი ყველაზე აქტიური ვულკანი.             | From Taormina you can see Etna, one of the world's most active volcanoes.                        | [Visit Sicily](https://www.visitsicily.info/en/localita/taormina/) |                                                                                                     |
+
+## Malta expansion — approved 2026-10-18
+
+The owner explicitly approved both Georgian facts in this chat on 2026-10-18.
+The assistant read the linked pages (not only search snippets) before requesting
+approval. No independent native-speaker review is claimed.
+
+| Stop   | Fact                              | English                          | Source                                             |
+| ------ | --------------------------------- | -------------------------------- | -------------------------------------------------- |
+| ვალეტა | ვალეტა მალტის დედაქალაქია.        | Valletta is Malta's capital.     | [Valletta](https://en.wikipedia.org/wiki/Valletta) |
+| მდინა  | მდინას „მდუმარე ქალაქს“ უწოდებენ. | Mdina is called the Silent City. | [Mdina](https://en.wikipedia.org/wiki/Mdina)       |
+
+## Tunisia expansion — approved 2026-10-18
+
+The owner explicitly approved all three Georgian facts in this chat on 2026-10-18.
+The assistant read each linked source page before requesting approval. No
+independent native-speaker review is claimed.
+
+| Stop          | Fact                                         | English                                    | Source                                                                                                  |
+| ------------- | -------------------------------------------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------------- |
+| კართაგენი     | კართაგენი ფინიკიელებმა დააარსეს.             | Carthage was founded by the Phoenicians.   | [UNESCO](https://whc.unesco.org/en/list/37/)                                                            |
+| სიდი ბუ საიდი | სიდი ბუ საიდი ზღვისპირა ფერდობზე მდებარეობს. | Sidi Bou Said is on a hillside by the sea. | [Tunisia Tourist Office](https://www.discovertunisia.com/en/discover/around-carthage-and-sidi-bou-said) |
+| ელ-ჯემი       | ელ-ჯემში რომაული ამფითეატრია შემორჩენილი.    | A Roman amphitheatre survives in El Jem.   | [UNESCO](https://whc.unesco.org/en/list/38/)                                                            |
+
+## Spain expansion — approved 2026-10-18
+
+The owner explicitly approved all six Georgian facts in this chat on 2026-10-18.
+Each linked source page was read before requesting approval. No independent
+native-speaker review is claimed. The Barcelona wording does not credit Gaudi
+with the original design or claim the whole basilica is complete. Valencia refers
+to the region; the source locates the dish’s origin in l’Albufera.
+
+| Stop      | Fact                                                       | English                                                      | Source                                                                         |
+| --------- | ---------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| ბარსელონა | საგრადა ფამილიას პროექტზე ანტონი გაუდი მუშაობდა.           | Antoni Gaudi worked on the Sagrada Familia project.          | [source](https://sagradafamilia.org/en/history-of-the-temple)                  |
+| ვალენსია  | პაელია ვალენსიის რეგიონში წარმოიშვა.                       | Paella originated in the Valencia region.                    | [source](https://blog.visitvalencia.com/en/paella-valenciana)                  |
+| მადრიდი   | მადრიდი ესპანეთის დედაქალაქია.                             | Madrid is the capital of Spain.                              | [source](https://www.spain.info/en/destination/madrid/)                        |
+| გრანადა   | გრანადის ალჰამბრა იუნესკოს მსოფლიო მემკვიდრეობის ძეგლია.   | Granada’s Alhambra is a UNESCO World Heritage monument.      | [source](https://whc.unesco.org/en/list/314/)                                  |
+| კორდობა   | კორდობის ძველ მეჩეთში დღეს კათედრალია.                     | Cordoba’s former mosque now contains a cathedral.            | [source](https://www.mezquita-catedraldecordoba.es/en/cultos/espacio-sagrado/) |
+| სევილია   | სევილიის ესპანეთის მოედანი 1929 წლის გამოფენისთვის აშენდა. | Seville’s Plaza de Espana was built for the 1929 exposition. | [source](https://www.spain.info/es/lugares-interes/plaza-espana-sevilla/)      |

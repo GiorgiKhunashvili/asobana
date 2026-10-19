@@ -10,9 +10,42 @@ from .models import ChapterJSON, DifficultyJSON, LevelJSON, PackJSON, WordJSON
 from .validation import validate_pack
 from .vocabulary import can_form_word
 
-JOURNEY = json.loads(
+
+class JourneyManifest(TypedDict):
+    revision: int
+    levelCount: int
+    answersPerLevel: int
+    minRequiredGap: int
+    chapters: list[ChapterJSON]
+    legacyChapterIds: list[str]
+
+
+JOURNEY: JourneyManifest = json.loads(
     (Path(__file__).resolve().parents[3] / "content/journey-v13.json").read_text()
 )
+
+
+MALTA_JOURNEY: JourneyManifest = json.loads(
+    (Path(__file__).resolve().parents[3] / "content/journey-v21.json").read_text()
+)
+
+
+TUNISIA_JOURNEY: JourneyManifest = json.loads(
+    (Path(__file__).resolve().parents[3] / "content/journey-v22.json").read_text()
+)
+
+
+SPAIN_JOURNEY: JourneyManifest = json.loads(
+    (Path(__file__).resolve().parents[3] / "content/journey-v23.json").read_text()
+)
+
+
+def journey_for_revision(revision: int) -> JourneyManifest:
+    if revision >= 23:
+        return SPAIN_JOURNEY
+    if revision >= 22:
+        return TUNISIA_JOURNEY
+    return MALTA_JOURNEY if revision >= 21 else JOURNEY
 
 
 class DiscoveryRecipe(TypedDict):
@@ -57,7 +90,7 @@ def validate_discovery(
     pack: PackJSON, vocabulary: set[str], familiarity: dict[str, int]
 ) -> None:
     journey = pack["revision"] >= 13
-    count = JOURNEY["levelCount"] if journey else 50
+    count = journey_for_revision(pack["revision"])["levelCount"] if journey else 50
     if len(pack["levels"]) != count or len(pack["chapters"]) != count // 5:
         raise ValueError(f"Discovery requires {count} levels in {count // 5} chapters")
     wheels: set[str] = set()
