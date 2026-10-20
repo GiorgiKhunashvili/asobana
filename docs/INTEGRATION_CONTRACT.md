@@ -205,9 +205,23 @@ a storage failure. This is client-side deduplication, not server-side fraud
 verification. A reward not committed before process termination cannot be
 recovered from AdMob by this client alone; pending failed claims are in memory.
 Production reward recovery/verification requires a separately designed server
-flow. Demo ads use Google's sample app IDs and `TestIds.REWARDED` exclusively;
+flow. Demo ads use Google's sample app IDs, `TestIds.REWARDED` and `TestIds.BANNER`;
 live ads, UMP configuration, ATT decisions and store privacy disclosures are a
 separate rollout. See the native checklist for build and manual verification steps.
+
+### Gameplay test banner
+
+`GameBannerAd` uses a fixed 320×50 Google demo banner in `Screen`'s optional footer,
+outside the scroll view and letter-wheel gesture area. The 76-point footer reserves
+space before loading, with a divider, 17 points above the creative and 8 below.
+Gameplay subtracts that space from the board budget without reducing the wheel or
+hint touch targets. The footer stays inside the bottom safe area. Loading, failures
+and offline/unsupported builds keep the same space so controls do not jump.
+
+The banner is unmounted while the route is unfocused, the app is inactive, the
+tutorial is visible or a hint rewarded ad is showing. Returning mounts a fresh
+banner; there is no manual refresh timer. `nativeAdsSdk` guards Expo Go/web and
+shares initialization with rewarded ads. Banners never call reward or save APIs.
 
 ### Level-complete "×2" ad
 

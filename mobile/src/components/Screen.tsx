@@ -16,6 +16,7 @@ import { Display } from './Text';
 export function Screen({
   tone,
   header,
+  footer,
   children,
   contentStyle,
   glowY,
@@ -24,6 +25,8 @@ export function Screen({
 }: PropsWithChildren<{
   readonly tone: Tone;
   readonly header?: ReactNode;
+  /** Fixed safe-area footer, outside the scrolling/gesture content. */
+  readonly footer?: ReactNode;
   readonly contentStyle?: ViewStyle;
   readonly glowY?: number;
   /** Darkens the painting for screens that are mostly text and cards (0–1). */
@@ -56,6 +59,7 @@ export function Screen({
             </ScrollView>
           </GestureDetector>
         </GestureScrollContext.Provider>
+        {footer}
       </SafeAreaView>
     </View>
   );

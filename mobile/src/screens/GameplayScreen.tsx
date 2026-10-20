@@ -19,6 +19,7 @@ import { PrimaryButton, SecondaryButton } from '../components/Buttons';
 import { useHintRewardedAd } from '../ads/useHintRewardedAd';
 import { rewardedAdMessages } from '../ads/messages';
 import { HintAdButton } from '../components/HintAdButton';
+import { GameBannerAd, GAME_BANNER_HEIGHT } from '../components/GameBannerAd';
 import { CoachMarks } from '../components/CoachMarks';
 import { CoinBadge } from '../components/CoinBadge';
 import { BonusMeter } from '../components/BonusMeter';
@@ -219,6 +220,7 @@ function GameLayout({
     height -
     insets.top -
     insets.bottom -
+    GAME_BANNER_HEIGHT -
     BAR -
     TITLE -
     STRIP_HEIGHT -
@@ -256,6 +258,9 @@ function GameLayout({
         />
       }
       contentStyle={styles.content}
+      footer={
+        <GameBannerAd visible={!coaching.active && ad.status !== 'showing'} />
+      }
     >
       <View style={styles.title}>
         <Txt

@@ -59,6 +59,22 @@ Verify on the native development build:
    pill while the ad is still loading, then tap "შემდეგი დონე": no ad may appear
    later on the next board.
 
+10. On gameplay, confirm the 320×50 banner says **Test mode** below the wheel.
+    Check a 375×667 iPhone SE and a larger iPhone: both hints and the whole wheel
+    must remain reachable, with a divider and gap above the banner. Buy each hint
+    and enter a word with the banner visible. Navigate away and background the
+    app; the banner must unmount. Loading/failure must not move the controls.
+    Coach marks and a showing hint rewarded ad suppress the banner while retaining
+    its footer space. Expo Go/web show a quiet fallback, not a native-module crash.
+
+Banner verification on 2026-10-20: Google test banners rendered on the iPhone 17
+and 375×667 iPhone SE simulators. Both hint purchases worked on both sizes
+(200 → 180 → 130 coins); tap-word entry worked on the iPhone 17 and wheel dragging
+worked on the SE. Leaving gameplay removed the banner. Screenshots are in
+`artifacts/banner-test-2026-10-20/`. Typecheck, lint, formatting, all 327 tests
+across 42 suites, and an iOS Metro export passed. This was simulator testing,
+not a physical-device test or TestFlight upload.
+
 The demo-only adapter requests non-personalized ads, sets the maximum content
 rating to G, and does not ask for tracking permission or collect targeting data.
 It is not a production consent implementation. Before live ads, create an

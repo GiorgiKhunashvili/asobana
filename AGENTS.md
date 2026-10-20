@@ -198,6 +198,11 @@ as the canonical rulebook; tool-specific instruction files should point here.
 
 ## Economy and saves
 
+- The owner approved a **test banner at the bottom of the game screen** on
+  2026-10-20. Use Google's demo banner only, in a reserved footer separated from
+  the letter wheel and hint buttons. Preserve their touch targets and existing
+  saves; this experiment does not authorize live ads.
+
 - The owner approved the economy on 2026-10-19: **200 starting coins**, **20 coins
   per completed level**, **20 coins per letter hint** and **50 coins per word hint**.
   Keep the **3-coin bonus-word reward** and **one free letter hint per ten bonus
@@ -272,6 +277,13 @@ grammar classifier: new vocabulary still needs the editorial review above.
    Do not describe an export as a native-device test or a TestFlight upload.
    Building or uploading to TestFlight requires the user's request for that release;
    content editing alone does not authorize an upload.
+
+## Simulator cleanup
+
+- When finished working, shut down **all running simulators** and quit the
+  Simulator app, including simulators that were already open before the task.
+  The owner explicitly requested this on 2026-10-20. Preserve installed apps and
+  saves; shutting down does not authorize erasing simulator data.
 
 When the owner changes these rules, update this file and the relevant enforced
 policies/tests together. Update the current-file pointers when a new revision lands.
