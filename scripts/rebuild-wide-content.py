@@ -41,8 +41,9 @@ def main() -> None:
             26,
             27,
             28,
+            29,
         ),
-        default=28,
+        default=29,
     )
     parser.add_argument("--output", type=Path)
     parser.add_argument(
@@ -62,7 +63,9 @@ def main() -> None:
         ),
     )
     reference_revision = (
-        28
+        29
+        if args.revision >= 29
+        else 28
         if args.revision >= 28
         else 27
         if args.revision >= 27

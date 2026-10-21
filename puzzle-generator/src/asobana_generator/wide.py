@@ -110,11 +110,12 @@ def validate_wide(
         26,
         27,
         28,
+        29,
     ):
         raise ValueError(
             "Wide campaign requires stable pack identity "
             "and revision 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, "
-            "19, 20, 21, 22, 23, 24, 25, 26, 27 or 28"
+            "19, 20, 21, 22, 23, 24, 25, 26, 27, 28 or 29"
         )
     if pack["revision"] >= 7:
         vocabulary = playable_vocabulary(vocabulary, revision=pack["revision"])

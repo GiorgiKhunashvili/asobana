@@ -155,7 +155,7 @@ test('album previews the next place and opens only earned postcards', async () =
   try {
     gameStore.setState({ game: reachCurrentLevel(5) });
     const screen = await render(<Postcards />);
-    expect(screen.getByText('1/69 ბარათი შეგროვებულია')).toBeTruthy();
+    expect(screen.getByText('1/100 ბარათი შეგროვებულია')).toBeTruthy();
     expect(screen.getByText('შემდეგი: მცხეთა')).toBeTruthy();
     expect(screen.queryByTestId('open-postcard-mtskheta')).toBeNull();
     await fireEvent.press(screen.getByTestId('open-postcard-tbilisi'));

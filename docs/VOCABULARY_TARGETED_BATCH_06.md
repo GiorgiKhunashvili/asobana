@@ -1,5 +1,7 @@
 # Everyday vocabulary review — batch 06
 
+**Integration update:** All approved entries in this batch are included in revision 29 (500 levels); its rejected spellings are excluded from revision 29. The pending-integration descriptions below record the earlier review stage.
+
 **Owner reviewed: 35 approved and 15 rejected.** Total approvals are **2,195**, including 120 awaiting integration. Active revision 28 retains 2,075 approvals and 345 levels.
 
 Rejected: ბებერა, გვიმრა, დიდედა, კოჟიჟი, მჟაუნა, მუსონი, ნუშურა, პონჩო, პლუში, როკერი, სიშორე, სიშავე, სიიაფე, სინელე, შიფონი. All other batch entries are approved. The owner confirmed that removal `მუსიონი` meant `მუსონი`.

@@ -2,7 +2,10 @@ import fs from 'node:fs';
 import path from 'node:path';
 import journey from '../../content/journey-v28.json';
 import manifest from '../../content/levels/discovery.v28.recipes.json';
-import { catalog, vocabulary, previousCatalogs } from '../src/content/catalog';
+import {
+  previousCatalogs,
+  vocabularyForRevision,
+} from '../src/content/catalog';
 import { validateWide } from '../src/content/wide';
 import { requiredWordsForRevision } from '../src/content/wordPolicy';
 import { isUnlocked, nextLevelId, transition } from '../src/engine/game';
@@ -15,6 +18,8 @@ import { COUNTRIES, sceneFor } from '../src/theme';
 import { reachLevel, submit } from './helpers';
 import { TestSqlite } from './sqliteAdapter';
 
+const catalog = previousCatalogs.find((pack) => pack.revision === 28)!;
+const vocabulary = vocabularyForRevision(28);
 const previous = previousCatalogs.find((pack) => pack.revision === 27)!;
 
 test('Portugal and Morocco appends ten painted stops and the targeted approvals', () => {
@@ -39,7 +44,11 @@ test('Portugal and Morocco appends ten painted stops and the targeted approvals'
     'ait-ben-haddou',
     'marrakech',
   ]);
-  expect(COUNTRIES.slice(-2).flatMap((c) => c.chapterIds)).toEqual([
+  expect(
+    COUNTRIES.filter((c) => ['portugal', 'morocco'].includes(c.id)).flatMap(
+      (c) => c.chapterIds,
+    ),
+  ).toEqual([
     'lagos',
     'lisbon',
     'sintra',

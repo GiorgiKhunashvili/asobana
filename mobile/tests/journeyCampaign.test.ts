@@ -1,5 +1,5 @@
-import journey from '../../content/journey-v28.json';
-import manifest from '../../content/levels/discovery.v28.recipes.json';
+import journey from '../../content/journey-v29.json';
+import manifest from '../../content/levels/discovery.v29.recipes.json';
 import { catalog, previousCatalogs, vocabulary } from '../src/content/catalog';
 import { validateRequiredGap } from '../src/content/discovery';
 import { validateWide } from '../src/content/wide';
@@ -13,9 +13,9 @@ import {
 import { reachLevel, submit } from './helpers';
 import { TestSqlite } from './sqliteAdapter';
 
-test('journey contains 69 exact stops, 345 boards and a global 75-level cooldown', () => {
+test('journey contains 100 exact stops, 500 boards and a global 75-level cooldown', () => {
   expect(catalog.chapters).toEqual(journey.chapters);
-  expect(catalog.levels).toHaveLength(345);
+  expect(catalog.levels).toHaveLength(500);
   const seen = new Map<string, number>();
   let repeats = 0;
   for (const [index, level] of catalog.levels.entries()) {

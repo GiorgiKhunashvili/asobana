@@ -1,3 +1,5 @@
+import centralEuropeVocabulary from '../../../content/dictionaries/discovery-v29-ka.json';
+import rawTargetedPack from '../../../content/levels/discovery.v28.json';
 import targetedVocabulary from '../../../content/dictionaries/discovery-v28-ka.json';
 import rawOctoberPack from '../../../content/levels/discovery.v27.json';
 import octoberVocabulary from '../../../content/dictionaries/discovery-v27-ka.json';
@@ -5,7 +7,7 @@ import rawBatchSevenPack from '../../../content/levels/discovery.v26.json';
 import batchSevenVocabulary from '../../../content/dictionaries/discovery-v26-ka.json';
 import batchSixVocabulary from '../../../content/dictionaries/discovery-v25-ka.json';
 import replacementVocabulary from '../../../content/dictionaries/discovery-v24-ka.json';
-import rawPack from '../../../content/levels/discovery.v28.json';
+import rawPack from '../../../content/levels/discovery.v29.json';
 import rawBatchSixPack from '../../../content/levels/discovery.v25.json';
 import rawReplacementPack from '../../../content/levels/discovery.v24.json';
 import rawSpainPack from '../../../content/levels/discovery.v23.json';
@@ -30,7 +32,7 @@ import rawDiscoveryPack from '../../../content/levels/discovery.v5.json';
 import rawExpandedPack from '../../../content/levels/themed.v4.json';
 import rawThemedPack from '../../../content/levels/themed.v3.json';
 import rawBetaPack from '../../../content/levels/beta.v2.json';
-import manifest from '../../../content/levels/discovery.v28.recipes.json';
+import manifest from '../../../content/levels/discovery.v29.recipes.json';
 import rawVocabulary from '../../../content/dictionaries/discovery-v9-ka.json';
 import batchFiveVocabulary from '../../../content/dictionaries/discovery-v20-ka.json';
 import batchFourVocabulary from '../../../content/dictionaries/discovery-v19-ka.json';
@@ -47,27 +49,29 @@ const historicalVocabulary: ReadonlySet<string> = new Set(
 export function vocabularyForRevision(revision: number): ReadonlySet<string> {
   const excluded = excludedWordsForRevision(revision);
   const entries =
-    revision >= 28
-      ? targetedVocabulary.entries
-      : revision >= 27
-        ? octoberVocabulary.entries
-        : revision >= 26
-          ? batchSevenVocabulary.entries
-          : revision >= 25
-            ? batchSixVocabulary.entries
-            : revision >= 24
-              ? replacementVocabulary.entries
-              : revision >= 20
-                ? batchFiveVocabulary.entries
-                : revision >= 19
-                  ? batchFourVocabulary.entries
-                  : revision >= 18
-                    ? batchThreeVocabulary.entries
-                    : revision >= 17
-                      ? expandedVocabulary.entries
-                      : revision >= 13
-                        ? journeyVocabulary.entries
-                        : rawVocabulary.entries;
+    revision >= 29
+      ? centralEuropeVocabulary.entries
+      : revision >= 28
+        ? targetedVocabulary.entries
+        : revision >= 27
+          ? octoberVocabulary.entries
+          : revision >= 26
+            ? batchSevenVocabulary.entries
+            : revision >= 25
+              ? batchSixVocabulary.entries
+              : revision >= 24
+                ? replacementVocabulary.entries
+                : revision >= 20
+                  ? batchFiveVocabulary.entries
+                  : revision >= 19
+                    ? batchFourVocabulary.entries
+                    : revision >= 18
+                      ? batchThreeVocabulary.entries
+                      : revision >= 17
+                        ? expandedVocabulary.entries
+                        : revision >= 13
+                          ? journeyVocabulary.entries
+                          : rawVocabulary.entries;
   return new Set(
     entries.map((entry) => entry.word).filter((word) => !excluded.has(word)),
   );
@@ -104,4 +108,5 @@ export const previousCatalogs = [
   parsePack(rawBatchSixPack, vocabularyForRevision(25)),
   parsePack(rawBatchSevenPack, vocabularyForRevision(26)),
   parsePack(rawOctoberPack, vocabularyForRevision(27)),
+  parsePack(rawTargetedPack, vocabularyForRevision(28)),
 ];

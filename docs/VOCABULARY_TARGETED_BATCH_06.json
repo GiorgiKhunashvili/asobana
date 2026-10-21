@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "date": "2026-10-20",
-  "status": "owner-reviewed-pending-integration",
+  "status": "owner-reviewed-integrated",
   "activeRevisionUnchanged": 28,
   "activeApprovedPool": 2075,
   "approvedPoolBefore": 2160,
@@ -1094,5 +1094,7 @@
   ],
   "rejectedCount": 15,
   "approvedPoolAfter": 2195,
-  "reviewNote": "Owner rejected 15 and approved the other 35. Owner explicitly confirmed that მუსიონი meant მუსონი. All decisions await content integration; preserve active revision 28."
+  "reviewNote": "Owner rejected 15 and approved the other 35. Owner explicitly confirmed that მუსიონი meant მუსონი. All decisions await content integration; preserve active revision 28.",
+  "integratedRevision": 29,
+  "integrationNote": "All approved senses integrated in revision 29 (500-level rebuild) on 2026-10-21; rejected spellings are excluded from revision 29. Earlier pending-integration notes describe the review stage."
 }

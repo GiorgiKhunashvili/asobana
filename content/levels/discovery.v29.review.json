@@ -1,0 +1,7 @@
+{
+  "revision": 29,
+  "draftSha256": "9081ed3b89a446bed70a7dec0205d713ca282ee6cf4c1df9378c2662a5c80e2f",
+  "reviewedAt": "2026-10-21",
+  "reviewer": "Claude (assistant) policy/provenance audit following owner approval of the 500-level rebuild, the 2,318-word pool, the 31 destinations, captions and facts",
+  "scope": "All 2,500 required slots and canonical-only variants checked against 2,318 individual approvals; all formable eligible bonuses verified against 2,436 eligible spellings; 99 owner rejections excluded from every role. All 500 boards rebuilt with today's rules (5/6/7 tiles, at most 5 rows, 36 pt iPhone SE) using the bound-aware layout mode. 1954 distinct targets, 546 repeated slots (21.84%), minimum gap 75. Variety: no reused answer triples, unique wheels and answer sets, at most five shared tiles within ten levels, five grid patterns per stop, no identical adjacent patterns. Levels 1-345 keep their IDs and stop IDs; 495 of the 500 boards are new. See docs/VOCABULARY_REVIEW_V29.md. No optimality or physical-device playtest claim."
+}

@@ -996,6 +996,175 @@
       "sources": [
         "docs/VOCABULARY_EXPANSION_REVIEW_2026_10_20.json"
       ]
+    },
+    {
+      "id": "owner-targeted-batch-04",
+      "sinceRevision": 29,
+      "reason": "Owner rejected these spellings in targeted batch 04; excluded from required answers, variants and bonuses from revision 29. Historical packs are unchanged.",
+      "words": [
+        "დამბა",
+        "თმიანი",
+        "კოტიტა",
+        "მილაკი",
+        "ტაქტი",
+        "ტრასა",
+        "ტყიანი",
+        "უმიზნო",
+        "ქაჩალი"
+      ],
+      "sources": [
+        "docs/VOCABULARY_TARGETED_BATCH_04.json"
+      ]
+    },
+    {
+      "id": "owner-targeted-batch-05",
+      "sinceRevision": 29,
+      "reason": "Owner rejected these spellings in targeted batch 05; excluded from required answers, variants and bonuses from revision 29. Historical packs are unchanged. The owner additionally excluded უტყუო, which was not a batch entry.",
+      "words": [
+        "ათმაგი",
+        "ასმაგი",
+        "მეათე",
+        "მეორე",
+        "მერვე",
+        "მესერი",
+        "პაწაწა",
+        "უდენო",
+        "უსუნო",
+        "უტყეო",
+        "უტყუო",
+        "უფრთო",
+        "უფულო",
+        "უშუქო",
+        "უძვლო",
+        "წაბლა",
+        "ხუჭუჭი"
+      ],
+      "sources": [
+        "docs/VOCABULARY_TARGETED_BATCH_05.json"
+      ]
+    },
+    {
+      "id": "owner-targeted-batch-06",
+      "sinceRevision": 29,
+      "reason": "Owner rejected these spellings in targeted batch 06; excluded from required answers, variants and bonuses from revision 29. Historical packs are unchanged.",
+      "words": [
+        "ბებერა",
+        "გვიმრა",
+        "დიდედა",
+        "კოჟიჟი",
+        "მჟაუნა",
+        "მუსონი",
+        "ნუშურა",
+        "პლუში",
+        "პონჩო",
+        "როკერი",
+        "სიიაფე",
+        "სინელე",
+        "სიშავე",
+        "სიშორე",
+        "შიფონი"
+      ],
+      "sources": [
+        "docs/VOCABULARY_TARGETED_BATCH_06.json"
+      ]
+    },
+    {
+      "id": "owner-targeted-batch-08",
+      "sinceRevision": 29,
+      "reason": "Owner rejected these spellings in targeted batch 08; excluded from required answers, variants and bonuses from revision 29. Historical packs are unchanged. The owner explicitly excluded both უფარო and უფუარი.",
+      "words": [
+        "ანგინა",
+        "ბლანკი",
+        "გონიო",
+        "გრძივი",
+        "ზიარი",
+        "კაბარე",
+        "კლერკი",
+        "კორომი",
+        "კუბური",
+        "ლეჩაქი",
+        "მაჟორი",
+        "მითური",
+        "მიწური",
+        "ნათალი",
+        "ნაღარა",
+        "ნაყენი",
+        "ობლობა",
+        "სამხრე",
+        "სპორა",
+        "უსიერი",
+        "უუნარო",
+        "უფარო",
+        "უფეხო",
+        "უფუარი",
+        "უქმი",
+        "ფასონი",
+        "ღიაობა",
+        "შლეგი",
+        "ძუძუ"
+      ],
+      "sources": [
+        "docs/VOCABULARY_TARGETED_BATCH_08.json"
+      ]
+    },
+    {
+      "id": "owner-targeted-batch-09",
+      "sinceRevision": 29,
+      "reason": "Owner rejected these spellings in targeted batch 09; excluded from required answers, variants and bonuses from revision 29. Historical packs are unchanged.",
+      "words": [
+        "ბადია",
+        "ბრა",
+        "იქაური",
+        "კარე",
+        "ორიანი",
+        "ფინიკი",
+        "ქანთრი"
+      ],
+      "sources": [
+        "docs/VOCABULARY_TARGETED_BATCH_09.json"
+      ]
+    },
+    {
+      "id": "owner-targeted-batch-10",
+      "sinceRevision": 29,
+      "reason": "Owner rejected these spellings in targeted batch 10; excluded from required answers, variants and bonuses from revision 29. Historical packs are unchanged.",
+      "words": [
+        "ეტიუდი",
+        "რიზოტო",
+        "როლური",
+        "ტოფუ",
+        "წერითი",
+        "ჯამური"
+      ],
+      "sources": [
+        "docs/VOCABULARY_TARGETED_BATCH_10.json"
+      ]
+    },
+    {
+      "id": "owner-targeted-batch-11",
+      "sinceRevision": 29,
+      "reason": "Owner rejected these spellings in targeted batch 11; excluded from required answers, variants and bonuses from revision 29. Historical packs are unchanged.",
+      "words": [
+        "ბაგეტი",
+        "ბრი",
+        "თათარა",
+        "კეფალი",
+        "ლემური",
+        "მაკაკა",
+        "მაფინი",
+        "ნუტრია",
+        "ოლადი",
+        "პაპაია",
+        "პესტო",
+        "რუსეთი",
+        "ფეტა",
+        "ფსტა",
+        "ჩანახი",
+        "ციცარი"
+      ],
+      "sources": [
+        "docs/VOCABULARY_TARGETED_BATCH_11.json"
+      ]
     }
   ],
   "requiredExcludedCategories": [

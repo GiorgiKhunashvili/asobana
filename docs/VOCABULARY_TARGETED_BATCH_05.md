@@ -1,5 +1,7 @@
 # Everyday vocabulary review — batch 05
 
+**Integration update:** All approved entries in this batch are included in revision 29 (500 levels); its rejected spellings are excluded from revision 29. The pending-integration descriptions below record the earlier review stage.
+
 **Owner reviewed: 34 approved and 16 rejected batch entries.** The additional spelling `უტყუო`, which was not in this batch or the approved pool, is also excluded. Total approvals are **2,160**, including 85 awaiting integration. Active revision 28 retains 2,075 approvals and 345 levels.
 
 Rejected: მესერი, ხუჭუჭი, პაწაწა, მეორე, მერვე, მეათე, ათმაგი, ასმაგი, უშუქო, უდენო, უსუნო, უფრთო, უტყუო, უფულო, უტყეო, წაბლა, უძვლო. All other batch entries are approved.

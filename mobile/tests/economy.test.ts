@@ -111,7 +111,11 @@ test.each([catalog, previousCatalogs.find((pack) => pack.revision === 25)!])(
       // Buy a letter at the former price before earning any free hint credits.
       oldAction({ type: 'hint', levelId: old.currentLevelId, kind: 'cell' });
       expect(old.coins).toBe(85);
-      for (const level of previous.levels.slice(0, 10)) {
+      // Whole stops whose bonus words earn at least two free letters.
+      let played = 0;
+      for (let total = 0; played % 5 !== 0 || total < 20; played++)
+        total += previous.levels[played]!.bonusWords.length;
+      for (const level of previous.levels.slice(0, played)) {
         oldAction({ type: 'open-level', levelId: level.id });
         for (const bonus of level.bonusWords)
           oldAction({
@@ -127,7 +131,7 @@ test.each([catalog, previousCatalogs.find((pack) => pack.revision === 25)!])(
               tileIds: tilesFor(level, word.answer),
             });
       }
-      const partial = previous.levels[10]!;
+      const partial = previous.levels[played]!;
       oldAction({ type: 'open-level', levelId: partial.id });
       oldAction({ type: 'hint', levelId: partial.id, kind: 'word' });
       expect(freeCellHints(old)).toBeGreaterThan(1);
@@ -138,13 +142,13 @@ test.each([catalog, previousCatalogs.find((pack) => pack.revision === 25)!])(
       });
       oldAction({ type: 'tutorial', seen: true });
       expect(old.coins).toBe(
-        100 + 10 * 25 + old.bonusRewards.totalFound * 3 - 15 - 40,
+        100 + played * 25 + old.bonusRewards.totalFound * 3 - 15 - 40,
       );
       expect(old.progress[partial.id]?.completed).toBe(false);
       const postcards = selectPostcards(old, previous).filter(
         (card) => card.collected,
       );
-      expect(postcards).toHaveLength(2);
+      expect(postcards).toHaveLength(played / 5);
       await createSqliteRepository(db, previous).save(old, 0);
 
       db.close();
@@ -173,7 +177,7 @@ test.each([catalog, previousCatalogs.find((pack) => pack.revision === 25)!])(
       expect(
         selectPostcards(loaded, catalog).filter((card) => card.collected),
       ).toEqual(postcards);
-      for (const level of catalog.levels.slice(0, 10))
+      for (const level of catalog.levels.slice(0, played))
         expect(loaded.progress[level.id]?.completed).toBe(true);
       if (previous.revision === catalog.revision) expect(loaded).toEqual(old);
 

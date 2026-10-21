@@ -1,5 +1,7 @@
 # Everyday targeted vocabulary — batch 04
 
+**Integration update:** All approved entries in this batch are included in revision 29 (500 levels); its rejected spellings are excluded from revision 29. The pending-integration descriptions below record the earlier review stage.
+
 **Owner reviewed: 41 approved, nine rejected.** With the previous ten approvals, total approvals are **2,126**. All 51 additions await integration; playable revision 28 still has 2,075 approvals and 661 unused words.
 
 Rejected: დამბა, ტაქტი, ტრასა, თმიანი, კოტიტა, ტყიანი, უმიზნო, ქაჩალი, მილაკი. All other entries below are approved.

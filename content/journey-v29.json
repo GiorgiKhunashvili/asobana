@@ -1,0 +1,420 @@
+{
+  "revision": 29,
+  "levelCount": 500,
+  "answersPerLevel": 5,
+  "minRequiredGap": 75,
+  "chapters": [
+    {
+      "id": "tbilisi",
+      "title": "თბილისი"
+    },
+    {
+      "id": "mtskheta",
+      "title": "მცხეთა"
+    },
+    {
+      "id": "ananuri",
+      "title": "ანანური"
+    },
+    {
+      "id": "kazbegi",
+      "title": "ყაზბეგი"
+    },
+    {
+      "id": "tusheti",
+      "title": "თუშეთი"
+    },
+    {
+      "id": "sighnaghi",
+      "title": "სიღნაღი"
+    },
+    {
+      "id": "david-gareja",
+      "title": "დავით გარეჯი"
+    },
+    {
+      "id": "uplistsikhe",
+      "title": "უფლისციხე"
+    },
+    {
+      "id": "borjomi",
+      "title": "ბორჯომი"
+    },
+    {
+      "id": "vardzia",
+      "title": "ვარძია"
+    },
+    {
+      "id": "katskhi",
+      "title": "კაცხის სვეტი"
+    },
+    {
+      "id": "racha",
+      "title": "რაჭა"
+    },
+    {
+      "id": "kutaisi-gelati",
+      "title": "ქუთაისი და გელათი"
+    },
+    {
+      "id": "svaneti",
+      "title": "სვანეთი"
+    },
+    {
+      "id": "martvili",
+      "title": "მარტვილის კანიონი"
+    },
+    {
+      "id": "zugdidi",
+      "title": "ზუგდიდი"
+    },
+    {
+      "id": "makhuntseti",
+      "title": "მახუნცეთი"
+    },
+    {
+      "id": "batumi",
+      "title": "ბათუმი"
+    },
+    {
+      "id": "tao-klarjeti",
+      "title": "ტაო-კლარჯეთი"
+    },
+    {
+      "id": "sumela",
+      "title": "სუმელა"
+    },
+    {
+      "id": "cappadocia",
+      "title": "კაპადოკია"
+    },
+    {
+      "id": "pamukkale",
+      "title": "პამუკალე"
+    },
+    {
+      "id": "ephesus",
+      "title": "ეფესო"
+    },
+    {
+      "id": "istanbul",
+      "title": "სტამბოლი"
+    },
+    {
+      "id": "plovdiv",
+      "title": "პლოვდივი"
+    },
+    {
+      "id": "petritsoni",
+      "title": "პეტრიწონი"
+    },
+    {
+      "id": "rila",
+      "title": "რილა"
+    },
+    {
+      "id": "thessaloniki",
+      "title": "თესალონიკი"
+    },
+    {
+      "id": "iviron-athos",
+      "title": "ივერონი, ათონი"
+    },
+    {
+      "id": "meteora",
+      "title": "მეტეორა"
+    },
+    {
+      "id": "volos-iolcos",
+      "title": "ვოლოსი"
+    },
+    {
+      "id": "delphi",
+      "title": "დელფო"
+    },
+    {
+      "id": "athens",
+      "title": "ათენი"
+    },
+    {
+      "id": "santorini",
+      "title": "სანტორინი"
+    },
+    {
+      "id": "corfu",
+      "title": "კორფუ"
+    },
+    {
+      "id": "butrint",
+      "title": "ბუტრინტი"
+    },
+    {
+      "id": "gjirokaster",
+      "title": "გიროკასტრა"
+    },
+    {
+      "id": "berat",
+      "title": "ბერატი"
+    },
+    {
+      "id": "ohrid",
+      "title": "ოჰრიდი"
+    },
+    {
+      "id": "kotor",
+      "title": "კოტორი"
+    },
+    {
+      "id": "dubrovnik",
+      "title": "დუბროვნიკი"
+    },
+    {
+      "id": "split",
+      "title": "სპლიტი"
+    },
+    {
+      "id": "plitvice",
+      "title": "პლიტვიცე"
+    },
+    {
+      "id": "venice",
+      "title": "ვენეცია"
+    },
+    {
+      "id": "florence",
+      "title": "ფლორენცია"
+    },
+    {
+      "id": "rome",
+      "title": "რომი"
+    },
+    {
+      "id": "amalfi",
+      "title": "ამალფი"
+    },
+    {
+      "id": "taormina",
+      "title": "ტაორმინა"
+    },
+    {
+      "id": "valletta",
+      "title": "ვალეტა"
+    },
+    {
+      "id": "mdina",
+      "title": "მდინა"
+    },
+    {
+      "id": "carthage",
+      "title": "კართაგენი"
+    },
+    {
+      "id": "sidi-bou-said",
+      "title": "სიდი ბუ საიდი"
+    },
+    {
+      "id": "el-jem",
+      "title": "ელ-ჯემი"
+    },
+    {
+      "id": "barcelona",
+      "title": "ბარსელონა"
+    },
+    {
+      "id": "valencia",
+      "title": "ვალენსია"
+    },
+    {
+      "id": "madrid",
+      "title": "მადრიდი"
+    },
+    {
+      "id": "granada",
+      "title": "გრანადა"
+    },
+    {
+      "id": "cordoba",
+      "title": "კორდობა"
+    },
+    {
+      "id": "seville",
+      "title": "სევილია"
+    },
+    {
+      "id": "lagos",
+      "title": "ლაგუში"
+    },
+    {
+      "id": "lisbon",
+      "title": "ლისაბონი"
+    },
+    {
+      "id": "sintra",
+      "title": "სინტრა"
+    },
+    {
+      "id": "porto",
+      "title": "პორტუ"
+    },
+    {
+      "id": "tangier",
+      "title": "ტანჟერი"
+    },
+    {
+      "id": "chefchaouen",
+      "title": "შეფშაუენი"
+    },
+    {
+      "id": "fez",
+      "title": "ფესი"
+    },
+    {
+      "id": "merzouga",
+      "title": "მერზუგა"
+    },
+    {
+      "id": "ait-ben-haddou",
+      "title": "აით-ბენ-ჰადუ"
+    },
+    {
+      "id": "marrakech",
+      "title": "მარაკეში"
+    },
+    {
+      "id": "carcassonne",
+      "title": "კარკასონი"
+    },
+    {
+      "id": "avignon",
+      "title": "ავინიონი"
+    },
+    {
+      "id": "marseille",
+      "title": "მარსელი"
+    },
+    {
+      "id": "provence",
+      "title": "პროვანსი"
+    },
+    {
+      "id": "nice",
+      "title": "ნიცა"
+    },
+    {
+      "id": "mont-blanc",
+      "title": "მონბლანი"
+    },
+    {
+      "id": "lyon",
+      "title": "ლიონი"
+    },
+    {
+      "id": "chambord",
+      "title": "შამბორი"
+    },
+    {
+      "id": "mont-saint-michel",
+      "title": "მონ-სენ-მიშელი"
+    },
+    {
+      "id": "etretat",
+      "title": "ეტრეტა"
+    },
+    {
+      "id": "versailles",
+      "title": "ვერსალი"
+    },
+    {
+      "id": "paris",
+      "title": "პარიზი"
+    },
+    {
+      "id": "geneva",
+      "title": "ჟენევა"
+    },
+    {
+      "id": "montreux",
+      "title": "მონტრე"
+    },
+    {
+      "id": "matterhorn",
+      "title": "მატერჰორნი"
+    },
+    {
+      "id": "lucerne",
+      "title": "ლუცერნი"
+    },
+    {
+      "id": "black-forest",
+      "title": "შვარცვალდი"
+    },
+    {
+      "id": "heidelberg",
+      "title": "ჰაიდელბერგი"
+    },
+    {
+      "id": "rhine-valley",
+      "title": "რაინის ხეობა"
+    },
+    {
+      "id": "cologne",
+      "title": "კიოლნი"
+    },
+    {
+      "id": "hamburg",
+      "title": "ჰამბურგი"
+    },
+    {
+      "id": "berlin",
+      "title": "ბერლინი"
+    },
+    {
+      "id": "dresden",
+      "title": "დრეზდენი"
+    },
+    {
+      "id": "rothenburg",
+      "title": "როტენბურგი"
+    },
+    {
+      "id": "munich",
+      "title": "მიუნხენი"
+    },
+    {
+      "id": "neuschwanstein",
+      "title": "ნოიშვანშტაინი"
+    },
+    {
+      "id": "innsbruck",
+      "title": "ინსბრუკი"
+    },
+    {
+      "id": "salzburg",
+      "title": "ზალცბურგი"
+    },
+    {
+      "id": "hallstatt",
+      "title": "ჰალშტატი"
+    },
+    {
+      "id": "melk",
+      "title": "მელკი"
+    },
+    {
+      "id": "vienna",
+      "title": "ვენა"
+    }
+  ],
+  "legacyChapterIds": [
+    "weather",
+    "animals",
+    "family",
+    "body",
+    "plants",
+    "landscape",
+    "food",
+    "home",
+    "numbers",
+    "music"
+  ]
+}

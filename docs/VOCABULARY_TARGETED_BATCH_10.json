@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "date": "2026-10-20",
-  "status": "owner-reviewed-pending-integration",
+  "status": "owner-reviewed-integrated",
   "activeRevisionUnchanged": 28,
   "activeApprovedPool": 2075,
   "approvedPoolBefore": 2285,
@@ -399,5 +399,7 @@
   "rejectedWords": ["ტოფუ", "ეტიუდი", "რიზოტო", "როლური", "წერითი", "ჯამური"],
   "rejectedCount": 6,
   "approvedPoolAfter": 2299,
-  "reviewNote": "Owner rejected six listed spellings and approved the other 14. Exclude rejected spellings from new required answers, variants and bonuses; preserve historical packs. Next proposals should focus on animals, foods and popular countries. Active revision 28 is unchanged."
+  "reviewNote": "Owner rejected six listed spellings and approved the other 14. Exclude rejected spellings from new required answers, variants and bonuses; preserve historical packs. Next proposals should focus on animals, foods and popular countries. Active revision 28 is unchanged.",
+  "integratedRevision": 29,
+  "integrationNote": "All approved senses integrated in revision 29 (500-level rebuild) on 2026-10-21; rejected spellings are excluded from revision 29. Earlier pending-integration notes describe the review stage."
 }

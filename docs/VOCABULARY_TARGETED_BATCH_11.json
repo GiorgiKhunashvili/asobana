@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "date": "2026-10-20",
-  "status": "owner-reviewed-pending-integration",
+  "status": "owner-reviewed-integrated",
   "activeRevisionUnchanged": 28,
   "activeApprovedPool": 2075,
   "approvedPoolBefore": 2299,
@@ -747,5 +747,7 @@
   ],
   "rejectedCount": 16,
   "approvedPoolAfter": 2318,
-  "reviewNote": "Owner kept only the country candidates and excluded Russia (რუსეთი): 19 approved countries; all five animal and ten food candidates plus რუსეთი rejected. These decisions await content integration; active revision 28 remains unchanged."
+  "reviewNote": "Owner kept only the country candidates and excluded Russia (რუსეთი): 19 approved countries; all five animal and ten food candidates plus რუსეთი rejected. These decisions await content integration; active revision 28 remains unchanged.",
+  "integratedRevision": 29,
+  "integrationNote": "All approved senses integrated in revision 29 (500-level rebuild) on 2026-10-21; rejected spellings are excluded from revision 29. Earlier pending-integration notes describe the review stage."
 }

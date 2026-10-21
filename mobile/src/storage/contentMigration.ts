@@ -88,7 +88,10 @@ export function restoreContent(
         pack.revision === 27) ||
       (previous.revision >= 1 &&
         previous.revision <= 27 &&
-        pack.revision === 28))
+        pack.revision === 28) ||
+      (previous.revision >= 1 &&
+        previous.revision <= 28 &&
+        pack.revision === 29))
   )
     return {
       state: migrateTopics(parseSnapshot(value, previous), previous, pack),

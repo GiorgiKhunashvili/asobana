@@ -2,7 +2,7 @@ import { catalog } from '../content/catalog';
 
 /**
  * Countries of the journey, in travel order. Presentation only: content owns
- * the 69 stops (see content/journey-v28.json); this groups them for the path,
+ * the 100 stops (see content/journey-v29.json); this groups them for the path,
  * dividers and the journey overview, and colours stops that have no painting.
  */
 export interface Country {
@@ -175,6 +175,66 @@ export const COUNTRIES: readonly Country[] = [
     accent: '#855037',
     sky: ['#B4A0B8', '#EDBE93'],
     hills: ['#D3A474', '#AD7656', '#76544C'],
+  },
+  {
+    id: 'france',
+    name: 'საფრანგეთი',
+    route: 'კარკასონიდან პარიზამდე',
+    chapterIds: [
+      'carcassonne',
+      'avignon',
+      'marseille',
+      'provence',
+      'nice',
+      'mont-blanc',
+      'lyon',
+      'chambord',
+      'mont-saint-michel',
+      'etretat',
+      'versailles',
+      'paris',
+    ],
+    accent: '#3E4A7A',
+    sky: ['#8E9CC8', '#F2C49A'],
+    hills: ['#B9A27A', '#8C9A6E', '#56684F'],
+  },
+  {
+    id: 'switzerland',
+    name: 'შვეიცარია',
+    route: 'ჟენევიდან ლუცერნამდე',
+    chapterIds: ['geneva', 'montreux', 'matterhorn', 'lucerne'],
+    accent: '#2E5A6E',
+    sky: ['#7FA3C8', '#F0D2A8'],
+    hills: ['#A9B9A0', '#6F8F78', '#3F5A52'],
+  },
+  {
+    id: 'germany',
+    name: 'გერმანია',
+    route: 'შვარცვალდიდან ნოიშვანშტაინამდე',
+    chapterIds: [
+      'black-forest',
+      'heidelberg',
+      'rhine-valley',
+      'cologne',
+      'hamburg',
+      'berlin',
+      'dresden',
+      'rothenburg',
+      'munich',
+      'neuschwanstein',
+    ],
+    accent: '#5A3E35',
+    sky: ['#8C8FB8', '#EFC08F'],
+    hills: ['#9AA27A', '#6E7E5A', '#47553F'],
+  },
+  {
+    id: 'austria',
+    name: 'ავსტრია',
+    route: 'ინსბრუკიდან ვენამდე',
+    chapterIds: ['innsbruck', 'salzburg', 'hallstatt', 'melk', 'vienna'],
+    accent: '#6B4A2E',
+    sky: ['#93A6C9', '#F1CB9D'],
+    hills: ['#C2B07E', '#8EA07A', '#55704F'],
   },
 ];
 

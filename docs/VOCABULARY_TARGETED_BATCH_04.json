@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "date": "2026-10-20",
-  "status": "owner-reviewed-pending-integration",
+  "status": "owner-reviewed-integrated",
   "activeRevisionUnchanged": 28,
   "activeApprovedPool": 2075,
   "approvedPoolBefore": 2085,
@@ -1407,5 +1407,7 @@
   ],
   "rejectedCount": 9,
   "approvedPoolAfter": 2126,
-  "ownerFeedback": "Approve the remaining 41 candidates; remove the nine listed spellings. Combine these with the previous ten approvals for an isolated generation/capacity experiment. No promotion or new destinations requested."
+  "ownerFeedback": "Approve the remaining 41 candidates; remove the nine listed spellings. Combine these with the previous ten approvals for an isolated generation/capacity experiment. No promotion or new destinations requested.",
+  "integratedRevision": 29,
+  "integrationNote": "All approved senses integrated in revision 29 (500-level rebuild) on 2026-10-21; rejected spellings are excluded from revision 29. Earlier pending-integration notes describe the review stage."
 }

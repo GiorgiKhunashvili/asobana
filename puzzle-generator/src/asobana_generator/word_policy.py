@@ -34,7 +34,9 @@ def required_vocabulary(vocabulary: set[str], *, revision: int) -> set[str]:
     if revision < 12:
         return allowed
     review_revision = (
-        28
+        29
+        if revision >= 29
+        else 28
         if revision >= 28
         else 27
         if revision >= 27

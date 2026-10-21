@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "date": "2026-10-20",
-  "status": "owner-reviewed-pending-integration",
+  "status": "owner-reviewed-integrated",
   "activeRevisionUnchanged": 28,
   "candidateCount": 100,
   "countsByLength": {
@@ -2303,5 +2303,7 @@
   "totalNewExclusions": 29,
   "approvedPoolAfter": 2267,
   "pendingIntegrationCount": 192,
-  "reviewNote": "Owner rejected 28 batch words and approved the remaining 72. For typed უფარო, owner explicitly requested deleting both უფარო and batch word უფუარი. None of these additions is integrated into active revision 28."
+  "reviewNote": "Owner rejected 28 batch words and approved the remaining 72. For typed უფარო, owner explicitly requested deleting both უფარო and batch word უფუარი. None of these additions is integrated into active revision 28.",
+  "integratedRevision": 29,
+  "integrationNote": "All approved senses integrated in revision 29 (500-level rebuild) on 2026-10-21; rejected spellings are excluded from revision 29. Earlier pending-integration notes describe the review stage."
 }

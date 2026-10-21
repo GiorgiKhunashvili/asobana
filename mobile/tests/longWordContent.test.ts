@@ -1,4 +1,4 @@
-import manifest from '../../content/levels/discovery.v28.recipes.json';
+import manifest from '../../content/levels/discovery.v29.recipes.json';
 import { catalog, previousCatalogs, vocabulary } from '../src/content/catalog';
 import { validateWide, validateWordLengths } from '../src/content/wide';
 import { transition } from '../src/engine/game';

@@ -1,7 +1,7 @@
 import review from '../../content/dictionaries/everyday-targets-v12.json';
 import ownerReview from '../../content/dictionaries/everyday-targets-v16.json';
 import oldManifest from '../../content/levels/discovery.v11.recipes.json';
-import manifest from '../../content/levels/discovery.v28.recipes.json';
+import manifest from '../../content/levels/discovery.v29.recipes.json';
 import {
   catalog,
   previousCatalogs,
@@ -47,7 +47,7 @@ test('every previous answer has an explicit review and every new answer is appro
   const answers = catalog.levels.flatMap((level) =>
     level.words.flatMap((word) => word.acceptedAnswers),
   );
-  expect(answers).toHaveLength(1725);
+  expect(answers).toHaveLength(2500);
   expect(new Set(answers).size).toBeGreaterThanOrEqual(375);
   expect(answers.every((answer) => everydayRequiredWords.has(answer))).toBe(
     true,

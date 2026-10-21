@@ -196,6 +196,12 @@ as the canonical rulebook; tool-specific instruction files should point here.
   integration**; active revision 28 retains 2,075. Do not propose any of these
   35 reviewed spellings again as new. No new campaign or runtime policy is applied
   by this review; integrate country eligibility in a future content revision.
+  **Revision 29 (2026-10-21) integrates all 243 approvals** from targeted batches
+  03–06 and 08–11, including the 19 country names: **2,318 required approvals** and
+  2,436 eligible spellings. The 97 rejected batch spellings plus `უტყუო` and `უფარო`
+  are excluded from required answers, variants and bonuses from revision 29 through
+  the `owner-targeted-batch-*` categories in `word-policy.json`. The "awaiting
+  integration" notes above describe the review stage.
   [Expansion batch 02](docs/VOCABULARY_EXPANSION_BATCH_02.json) contains 130 entirely
   new source-checked words with draft-board examples. The owner approved all 130
   for the main word list; revision 17 adds their recorded noun/adjective senses
@@ -331,7 +337,21 @@ as the canonical rulebook; tool-specific instruction files should point here.
   this is not a device playtest. The experiment remains unbundled and unapproved
   for production application.
 
-- Maintain **345 levels in 69 journey stops, with five required answers each: 1,725
+- The owner approved **revision 29** on 2026-10-21: rebuild all 500 levels under
+  today's rules (5 / 6 / 7 tiles, at most five rows, 36 pt iPhone SE cells) using
+  every approved word, and append 31 stops after Marrakech. **France**: Carcassonne (კარკასონი) 346–350, Avignon (ავინიონი) 351–355, Marseille (მარსელი) 356–360, Provence (პროვანსი) 361–365, Nice (ნიცა) 366–370, Mont Blanc (მონბლანი) 371–375, Lyon (ლიონი) 376–380, Chambord (შამბორი) 381–385, Mont-Saint-Michel (მონ-სენ-მიშელი) 386–390, Étretat (ეტრეტა) 391–395, Versailles (ვერსალი) 396–400, Paris (პარიზი) 401–405; **Switzerland**: Geneva (ჟენევა) 406–410, Montreux (მონტრე) 411–415, Matterhorn (მატერჰორნი) 416–420, Lucerne (ლუცერნი) 421–425; **Germany**: Black Forest (შვარცვალდი) 426–430, Heidelberg (ჰაიდელბერგი) 431–435, Rhine Valley (რაინის ხეობა) 436–440, Cologne (კიოლნი) 441–445, Hamburg (ჰამბურგი) 446–450, Berlin (ბერლინი) 451–455, Dresden (დრეზდენი) 456–460, Rothenburg (როტენბურგი) 461–465, Munich (მიუნხენი) 466–470, Neuschwanstein (ნოიშვანშტაინი) 471–475; **Austria**: Innsbruck (ინსბრუკი) 476–480, Salzburg (ზალცბურგი) 481–485, Hallstatt (ჰალშტატი) 486–490, Melk (მელკი) 491–495, Vienna (ვენა) 496–500.
+  Levels 1–345 keep their level IDs and stop IDs, but their boards are rebuilt; saves
+  migrate by level ID with progress, coins, paid hints, bonus credits, doubled rewards,
+  receipts and postcards intact. Recipes use the opt-in bound-aware layout
+  (`"layout": "bounded-v1"` with row/column limits); recipes without it use the
+  unchanged greedy generator, so every historical pack rebuilds byte-identically.
+  The 2,500 slots use **1,954 distinct words (21.84% repeated slots)**,
+  minimum gap 75. Each new stop has its own background, postcard crop, owner-approved
+  Georgian caption and source-checked fact; provenance and prompts are in
+  [CENTRAL_EUROPE_ARTWORK.md](docs/CENTRAL_EUROPE_ARTWORK.md). The current route is
+  `content/journey-v29.json`; historical routes and packs remain immutable.
+
+- Maintain **500 levels in 100 journey stops, with five required answers each: 2,500
   answer slots, with the 75-level repetition gap**.
   Required answers have 3–6 Georgian letters; no two-letter targets.
 - Provide actual five- and six-letter answers, not just larger letter wheels.
@@ -339,9 +359,9 @@ as the canonical rulebook; tool-specific instruction files should point here.
   least one answer of five or six letters, and every level from 26 needs at least two.
 - Six-letter answers start in levels 16–25, with at least four boards containing one
   in levels 16–25, eight in levels 26–40, and seven in levels 41–50. Every five-level stop from level 51 onward needs at least one six-letter board.
-  The journey pack introduces five-letter words at level 3 and six-letter words at 18.
+  The journey pack introduces five-letter words at level 3 and six-letter words at 16.
 - Preserve the gradual wheel progression: five tiles for levels 1–5, six for 6–25,
-  seven for 26–345 in the journey pack. Seven tiles do not permit seven-letter targets.
+  seven for 26–500 in the journey pack. Seven tiles do not permit seven-letter targets.
 - Preserve chapter challenge/recovery pacing: the third board is the chapter peak,
   the fourth is at least two difficulty points lower, and upward transitions are at
   most ten points. Difficulty estimates do not substitute for playtesting.
@@ -391,15 +411,17 @@ as the canonical rulebook; tool-specific instruction files should point here.
 
 ## Sources of truth
 
-Read these before editing content; current filenames below describe revision 28:
+Read these before editing content; current filenames below describe revision 29:
 
 - [Grammar and name exclusions](content/dictionaries/word-policy.json).
-- [Required-word allowlist and individual previous-word decisions](content/dictionaries/everyday-targets-v28.json).
-- [Reference dictionary](content/dictionaries/discovery-v28-ka.json) and
+- [Required-word allowlist and individual previous-word decisions](content/dictionaries/everyday-targets-v29.json).
+- [Reference dictionary](content/dictionaries/discovery-v29-ka.json) and
   [provenance/licensing](content/dictionaries/README.md).
-- [Journey vocabulary review and all 345 boards](docs/VOCABULARY_REVIEW_V28.md).
-- [Full vocabulary list for owner review](docs/VOCABULARY_OWNER_REVIEW_V28.md).
-- [Current journey manifest](content/journey-v28.json).
+- [Journey vocabulary review and all 500 boards](docs/VOCABULARY_REVIEW_V29.md).
+- [Full vocabulary list for owner review](docs/VOCABULARY_OWNER_REVIEW_V29.md).
+- [Current journey manifest](content/journey-v29.json).
+- [Central Europe artwork and generation prompts](docs/CENTRAL_EUROPE_ARTWORK.md).
+- [Portugal and Morocco artwork and generation prompts](docs/PORTUGAL_MOROCCO_ARTWORK.md).
 - [Spain artwork and generation prompts](docs/SPAIN_ARTWORK.md).
 - [Tunisia artwork and generation prompts](docs/TUNISIA_ARTWORK.md).
 - [Malta artwork and generation prompts](docs/MALTA_ARTWORK.md).
@@ -430,7 +452,7 @@ grammar classifier: new vocabulary still needs the editorial review above.
    `uv run pytest`, `uv run ruff check .`, `uv run ruff format --check .` and
    `uv run mypy src` from `puzzle-generator`. Include meaningful coverage of vocabulary
    exclusions, rare bonuses, the 75-level gap, length progression, deterministic
-   rebuilding and save migration. Solve all 345 levels via `npm run validate:content`
+   rebuilding and save migration. Solve all 500 levels via `npm run validate:content`
    (also included in `npm run check`). For bundled mobile content changes, verify an
    iOS export from `mobile` with `npx expo export --platform ios`.
 5. Update the review and content documentation with actual results and limitations.

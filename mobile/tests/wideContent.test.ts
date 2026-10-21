@@ -1,5 +1,5 @@
 import { discoveryDifficulty } from '../src/content/discovery';
-import manifest from '../../content/levels/discovery.v28.recipes.json';
+import manifest from '../../content/levels/discovery.v29.recipes.json';
 import { catalog, previousCatalogs, vocabulary } from '../src/content/catalog';
 import { projectBoard, validateWide } from '../src/content/wide';
 import { solutionCells } from '../src/engine/grid';
@@ -11,7 +11,7 @@ test('the journey preserves historical level IDs in order while assigning the ne
   expect(catalog.levels.slice(0, 50).map((level) => level.id)).toEqual(
     previous.levels.map((level) => level.id),
   );
-  expect(catalog.chapters).toHaveLength(69);
+  expect(catalog.chapters).toHaveLength(100);
   expect(catalog.chapters[0]!.id).toBe('tbilisi');
 });
 

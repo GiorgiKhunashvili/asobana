@@ -1,4 +1,43 @@
-# Journey campaign — revision 28: Portugal and Morocco
+# Journey campaign — revision 29: rebuilt 500-level route with Central Europe
+
+On 2026-10-21 the owner approved rebuilding all 500 levels under today's rules and
+appending 31 stops (levels 346–500): France (Carcassonne to Paris, 12 stops),
+Switzerland (Geneva to Lucerne, 4), Germany (Black Forest to Neuschwanstein, 10) and
+Austria (Innsbruck to Vienna, 5). The route now has **500 levels / 100 stops**.
+
+Revision 29 integrates all **243 approvals** from targeted batches 03–06 and 08–11
+(including 19 country names): **2,318 required words** and **2,436 eligible
+spellings**. The 99 owner rejections from those reviews are excluded from every role.
+The 2,500 slots use **1,954 distinct words** with **546 repeated slots
+(21.84%)**, minimum gap 75, median 171.5; no word appears more than
+7 times. Rules are unchanged: 5 tiles in levels 1–5, 6 in 6–25 and 7 from 26;
+at most five rows (36 pt iPhone SE cells); five 3–6-letter answers per board; stop
+pacing; density 35–65%. The variety checks also hold: no reused answer triples,
+at most five shared tiles within ten levels, five grid patterns per stop and no
+identical adjacent patterns.
+
+Boards were planned for the whole campaign at once and laid out with the opt-in
+bound-aware mode (`"layout": "bounded-v1"`, see "Reproduction and review"). Levels
+1–345 keep their level IDs and stop IDs, but 495 of all 500 boards are new.
+Migration keeps progress by level ID: completed levels stay completed, solved words
+transfer by spelling and then by count, paid letters move to the rebuilt board,
+and coins, bonus credits, doubled rewards, receipts and postcards are preserved.
+Bonus words average 6.3 per level (7.4 in revision 28): using more distinct
+required words turns some former bonuses into answers.
+
+Thirty-one generated paintings and postcard crops are bundled, with owner-approved
+Georgian captions and source-checked place facts. See
+[artwork and exact prompts](CENTRAL_EUROPE_ARTWORK.md),
+[all 500 boards and audit](VOCABULARY_REVIEW_V29.md),
+[the complete approved pool](VOCABULARY_OWNER_REVIEW_V29.md) and
+[the planning comparison](CAMPAIGN_500_FULL_REBUILD_RESULTS.md).
+The current manifest is `content/journey-v29.json`; the deterministic rebuild
+script defaults to revision 29 and requires the reviewed SHA-256
+(`9081ed3b89a446bed70a7dec0205d713ca282ee6cf4c1df9378c2662a5c80e2f`) to promote. No TestFlight upload is included.
+
+Validation on 2026-10-21: `npm run check` passes (typecheck, lint, 45 suites / 345 tests, content validation solving all 500 levels with 2,436 eligible words, formatting); `uv run pytest` (166 passed), `ruff check`, `ruff format --check` and `mypy src` are clean; `npx expo export --platform ios` succeeds with all 200 scene JPEGs bundled. The export is not a native-device test, and difficulty remains an estimate until playtested.
+
+# Historical revision 28: Portugal and Morocco
 
 The owner approved adding the ten proposed destinations and exact validated
 50-level extension on 2026-10-20. The active route now has **345 levels / 69 stops**:

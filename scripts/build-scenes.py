@@ -67,6 +67,37 @@ STOP_BANDS = {
     "merzouga": (0.48, 0.74),
     "ait-ben-haddou": (0.48, 0.74),
     "marrakech": (0.38, 0.64),
+    "carcassonne": (0.5, 0.76),
+    "avignon": (0.44, 0.7),
+    "marseille": (0.41, 0.67),
+    "provence": (0.48, 0.74),
+    "nice": (0.46, 0.72),
+    "mont-blanc": (0.45, 0.71),
+    "lyon": (0.31, 0.57),
+    "chambord": (0.43, 0.69),
+    "mont-saint-michel": (0.4, 0.66),
+    "etretat": (0.44, 0.7),
+    "versailles": (0.48, 0.74),
+    "paris": (0.42, 0.68),
+    "geneva": (0.48, 0.74),
+    "montreux": (0.5, 0.76),
+    "matterhorn": (0.4, 0.66),
+    "lucerne": (0.4, 0.66),
+    "black-forest": (0.48, 0.74),
+    "heidelberg": (0.41, 0.67),
+    "rhine-valley": (0.38, 0.64),
+    "cologne": (0.41, 0.67),
+    "hamburg": (0.48, 0.74),
+    "berlin": (0.48, 0.74),
+    "dresden": (0.42, 0.68),
+    "rothenburg": (0.36, 0.62),
+    "munich": (0.4, 0.66),
+    "neuschwanstein": (0.48, 0.74),
+    "innsbruck": (0.5, 0.76),
+    "salzburg": (0.39, 0.65),
+    "hallstatt": (0.46, 0.72),
+    "melk": (0.37, 0.63),
+    "vienna": (0.45, 0.71),
 
 }
 
@@ -76,7 +107,7 @@ def save(image: Image.Image, path: Path, quality: int) -> None:
     print(f"{path.relative_to(ROOT)}  {path.stat().st_size // 1024} KB")
 
 
-STOP = re.compile(r"^\d{2}-(?P<id>[a-z]+(?:-[a-z]+)*)\.png$")
+STOP = re.compile(r"^\d{2,3}-(?P<id>[a-z]+(?:-[a-z]+)*)\.png$")
 
 
 def build(master: Image.Image, name: str, force: bool) -> None:

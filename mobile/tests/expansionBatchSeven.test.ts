@@ -1,5 +1,5 @@
 import batch from '../../docs/VOCABULARY_EXPANSION_BATCH_07.json';
-import manifest from '../../content/levels/discovery.v28.recipes.json';
+import manifest from '../../content/levels/discovery.v29.recipes.json';
 import {
   catalog,
   previousCatalogs,
@@ -58,7 +58,7 @@ test('batch seven adds exactly the 75 approved senses and preserves the 118 bonu
   const after = new Set(
     catalog.levels.flatMap((l) => l.words.map((w) => w.answer)),
   );
-  expect(catalog.levels).toHaveLength(345);
+  expect(catalog.levels).toHaveLength(500);
   expect(catalog.chapters.slice(0, old.chapters.length)).toEqual(old.chapters);
   expect(after.size).toBeGreaterThan(before.size);
 });
@@ -155,7 +155,7 @@ test.each(['partial', 'complete'] as const)(
       await createSqliteRepository(db, previous).save(old, 0);
       const repo = createSqliteRepository(db, catalog, previousCatalogs);
       const upgraded = (await repo.load())!;
-      expect(upgraded.state.contentRevision).toBe(28);
+      expect(upgraded.state.contentRevision).toBe(29);
       expect(upgraded.state.progress['ka-001']!.hintsUsed).toBe(1628);
       expect(upgraded.state.coins).toBe(old.coins);
       expect(upgraded.state.currentLevelId).toBe(old.currentLevelId);

@@ -2,22 +2,23 @@
 
 Offline Georgian crossword prototype for iOS and Android. Connect wheel letters,
 find target and bonus words, spend coins on hints, complete levels and resume from
-local SQLite. Content revision 28 has 345 wide, connected, mixed-topic puzzles
-across 69 journey stops, with five answers per board and five to seven wheel tiles.
+local SQLite. Content revision 29 has 500 wide, connected, mixed-topic puzzles
+across 100 journey stops, with five answers per board and five to seven wheel tiles.
 Required spellings and accepted variants may repeat only at least 75 levels apart;
-there are no two-letter targets. The reference dictionary has 2,325 entries /
-2,193 eligible words, while the separate everyday-target allowlist has 2,075 non-plural words.
+there are no two-letter targets. The reference dictionary has 2,568 entries /
+2,436 eligible words, while the separate everyday-target allowlist has 2,318 non-plural words.
 Pronouns, excluded verbs/action forms, name-only entries, reviewed barbarisms and
 owner-excluded words cannot appear as targets or bonuses. Valid rare words remain
 optional bonuses; verified plural nouns are also bonus-only, never required
 answers or variants. Every eligible formable extra is recognized. Campaign
 selection prioritizes using more distinct approved words to reduce repetition.
 See [the campaign rules](docs/DISCOVERY_CONTENT.md) and
-[the vocabulary review and all 345 boards](docs/VOCABULARY_REVIEW_V28.md).
-Five-letter answers begin at level 3 and six-letter answers at level 18; every
+[the vocabulary review and all 500 boards](docs/VOCABULARY_REVIEW_V29.md).
+Five-letter answers begin at level 3 and six-letter answers at level 16; every
 board from level 26 has at least two longer answers. The journey map, destination
-paintings and screen integration use the exact 69 stop IDs in
-`content/journey-v28.json`. Malta, Tunisia, Spain, Portugal and Morocco extend the original Italy route.
+paintings and screen integration use the exact 100 stop IDs in
+`content/journey-v29.json`. Malta, Tunisia, Spain, Portugal, Morocco, France, Switzerland,
+Germany and Austria extend the original Italy route.
 Each chapter builds toward a challenge and follows it with a gentler board.
 Completing a chapter collects its illustrated destination postcard in the travel
 album. Every ten bonus finds earns a free letter hint, carried across levels and

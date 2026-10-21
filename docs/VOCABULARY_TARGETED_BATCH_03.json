@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "date": "2026-10-20",
-  "status": "owner-reviewed-pending-integration",
+  "status": "owner-reviewed-integrated",
   "activeRevisionUnchanged": 28,
   "approvedPoolBefore": 2075,
   "candidateCount": 50,
@@ -1341,5 +1341,7 @@
   ],
   "unapprovedCount": 40,
   "approvedPoolAfter": 2085,
-  "ownerFeedback": "The owner found the batch too uncommon and requested 50 more everyday candidates. Only the ten explicitly listed words are approved. Other candidates remain unapproved for required use; this does not introduce a global bonus exclusion."
+  "ownerFeedback": "The owner found the batch too uncommon and requested 50 more everyday candidates. Only the ten explicitly listed words are approved. Other candidates remain unapproved for required use; this does not introduce a global bonus exclusion.",
+  "integratedRevision": 29,
+  "integrationNote": "All approved senses integrated in revision 29 (500-level rebuild) on 2026-10-21; rejected spellings are excluded from revision 29. Earlier pending-integration notes describe the review stage."
 }

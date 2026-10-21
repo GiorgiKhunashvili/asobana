@@ -1,3 +1,4 @@
+import centralEuropeReview from '../../../content/dictionaries/everyday-targets-v29.json';
 import targetedReview from '../../../content/dictionaries/everyday-targets-v28.json';
 import octoberReview from '../../../content/dictionaries/everyday-targets-v27.json';
 import batchSevenReview from '../../../content/dictionaries/everyday-targets-v26.json';
@@ -25,7 +26,7 @@ export function excludedWordsForRevision(
   );
 }
 
-export const excludedWords = excludedWordsForRevision(28);
+export const excludedWords = excludedWordsForRevision(29);
 
 /** Target-only exclusions never remove valid optional bonus spellings. */
 export function excludedRequiredWordsForRevision(
@@ -45,33 +46,35 @@ export function requiredWordsForRevision(
   const excluded = excludedWordsForRevision(revision);
   const requiredExcluded = excludedRequiredWordsForRevision(revision);
   const review =
-    revision >= 28
-      ? targetedReview
-      : revision >= 27
-        ? octoberReview
-        : revision >= 26
-          ? batchSevenReview
-          : revision >= 25
-            ? batchSixReview
-            : revision >= 24
-              ? replacementReview
-              : revision >= 20
-                ? batchFiveReview
-                : revision >= 19
-                  ? batchFourReview
-                  : revision >= 18
-                    ? batchThreeReview
-                    : revision >= 17
-                      ? expansionReview
-                      : revision >= 16
-                        ? expandedOwnerReview
-                        : revision >= 15
-                          ? ownerReview
-                          : revision >= 14
-                            ? singularReview
-                            : revision >= 13
-                              ? journeyReview
-                              : everydayReview;
+    revision >= 29
+      ? centralEuropeReview
+      : revision >= 28
+        ? targetedReview
+        : revision >= 27
+          ? octoberReview
+          : revision >= 26
+            ? batchSevenReview
+            : revision >= 25
+              ? batchSixReview
+              : revision >= 24
+                ? replacementReview
+                : revision >= 20
+                  ? batchFiveReview
+                  : revision >= 19
+                    ? batchFourReview
+                    : revision >= 18
+                      ? batchThreeReview
+                      : revision >= 17
+                        ? expansionReview
+                        : revision >= 16
+                          ? expandedOwnerReview
+                          : revision >= 15
+                            ? ownerReview
+                            : revision >= 14
+                              ? singularReview
+                              : revision >= 13
+                                ? journeyReview
+                                : everydayReview;
   return new Set(
     review.entries
       .map((entry) => entry.word)
@@ -79,4 +82,4 @@ export function requiredWordsForRevision(
   );
 }
 
-export const everydayRequiredWords = requiredWordsForRevision(28);
+export const everydayRequiredWords = requiredWordsForRevision(29);

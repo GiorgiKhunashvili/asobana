@@ -1,5 +1,7 @@
 # Targeted vocabulary review — batch 03
 
+**Integration update:** All approved entries in this batch are included in revision 29 (500 levels); its rejected spellings are excluded from revision 29. The pending-integration descriptions below record the earlier review stage.
+
 **Owner reviewed: 10 approved, 40 unapproved.** Total approvals now number **2,085**, including these ten awaiting integration. Playable revision 28 retains 2,075 required words and 661 unused approvals.
 
 Approved: გნომი, დაღი, ზორბა, ლახტი, ტლაპო, უბიწო, ქნარი, ქეჩა, ცვარი, ძგიდე.
