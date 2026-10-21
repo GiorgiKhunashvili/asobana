@@ -1,6 +1,53 @@
 # Asobana TestFlight
 
-## Bundle ID change — 2026-10-20 (not yet built)
+## Revision 29 beta — 2026-10-21 (uploaded, Apple processing)
+
+**Asobana 0.1.0 (2)** is the first upload to the new App Store Connect app
+**`6825282360`** (bundle `ge.spilogames.asobana`). It was built locally with
+Xcode 26.6 (`eas build --local`, no Expo cloud build credits) from master
+`e2bbd70`. EAS remote build numbers are per bundle ID: a first attempt, blocked
+before compiling because the new bundle ID had no credentials yet, reserved
+number 1, so this is build 2.
+
+The non-interactive `eas submit` could not link an App Store Connect API key to
+the new app ("cannot be set up in --non-interactive mode"). The owner then ran
+`eas submit` interactively from `mobile/`, reused the team's existing API key and
+reported the submission done. Apple's processing was not confirmed when this was
+written.
+
+New since build 13 (old record):
+
+- content revision 29: all 500 levels rebuilt under today's rules (5/6/7 tiles,
+  at most five rows, 36 pt iPhone SE cells) with 2,318 approved words; 1,954
+  distinct required words, 21.84% repeated slots, minimum gap 75;
+- 31 new stops at levels 346–500 (France 12, Switzerland 4, Germany 10,
+  Austria 5) with paintings, postcards, owner-approved captions and facts;
+- revisions 27 and 28 (Portugal and Morocco) and the separated test banner,
+  which were not in build 13 either.
+
+Because this is a new app record, testers install it separately and start with
+a fresh save; the old GeoWords record keeps builds 1–13.
+
+- IPA check: Asobana 0.1.0 (2), bundle `ge.spilogames.asobana`, iOS 16.4
+  minimum, `GADApplicationIdentifier` set to Google's sample iOS app ID (demo
+  ads only), 200 scene JPEGs; the Hermes bundle contains revision 29 (level
+  `ka-500`, the new stop IDs). Size: 56,065,720 bytes; SHA-256:
+  `635f30ea5aa120091b13ae2106b878fff7032cb63ccb3e63bd0197ec4be27f88`.
+- Preflight: root check (345 app tests in 45 suites, all 500 levels solved,
+  TypeScript/ESLint/formatting), generator checks (166 tests, Ruff, formatting,
+  Mypy) and `expo export --platform ios` passed. This IPA has not been installed
+  on a device.
+- Evidence (git-ignored): `artifacts/asobana-2026-10-21-rev29.ipa`,
+  `artifacts/asobana-2026-10-21-rev29-build.log`,
+  `artifacts/asobana-2026-10-21-rev29-submit.log` (the failed non-interactive
+  attempt).
+
+## Bundle ID change — 2026-10-20 (done 2026-10-21)
+
+Done on 2026-10-21: the owner set up the production credentials (new App Store
+provisioning profile, existing distribution certificate) and created the App
+Store Connect app `6825282360`, now `submit.production.ios.ascAppId` in
+`mobile/eas.json`. The original notes follow.
 
 The owner moved the app to **`ge.spilogames.asobana`** (iOS bundle ID and
 Android package; URL scheme `asobana`). Apple does not let an App Store app
