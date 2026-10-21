@@ -1,0 +1,561 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-20",
+  "status": "owner-reviewed-pending-integration",
+  "activeRevisionUnchanged": 28,
+  "activeApprovedPool": 2075,
+  "approvedPoolBefore": 2267,
+  "pendingIntegrationCount": 210,
+  "candidateCount": 25,
+  "countsByLength": {
+    "3": 1,
+    "4": 5,
+    "5": 8,
+    "6": 11
+  },
+  "purpose": "Smaller familiarity-focused batch after targeted batch 08; prioritize ordinary objects, food, animals, clothing and descriptive adjectives.",
+  "method": "Exclude exact previously recorded Georgian spellings from all content/dictionaries/*.json and docs/VOCABULARY*.json, including all 100 batch-08 words and the additional literal exclusion უფარო. Check selected senses individually against sources. Newer loanwords checked against language references rather than accepted on colloquial frequency alone.",
+  "previouslyRecordedSpellings": 4660,
+  "previousReviewOverlap": 0,
+  "limitations": "Owner review complete: 18 approved and seven rejected. No boards generated or repetition change measured. No active dictionary, policy, pack or save changes.",
+  "sourceAttribution": "Georgian explanatory dictionary/Linguistic Technologies Group; Dictionary.ge; University of Georgia synonym dictionary; NPLG material-culture dictionary; Wiktionary and Wikipedia contributors (CC BY-SA 4.0 for adapted entries). Brief adapted English glosses only. Individual source URLs, available revisions and hashes retained.",
+  "entries": [
+    {
+      "id": "T09-001",
+      "word": "ბრა",
+      "length": 3,
+      "proposedMeaning": "wall-mounted lamp",
+      "partOfSpeech": "noun",
+      "sourceChecked": "2026-10-20",
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed familiar everyday sense; owner familiarity review remains pending. No automatic approval from dictionary membership.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; no proper-name-only or plural sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%91%E1%83%A0%E1%83%90",
+          "kind": "Georgian explanatory dictionary",
+          "sha256": "32f082c71158d715654f2de098709dab4594a89f5c73b34305456fe2ec513eaa"
+        },
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%91%E1%83%A0%E1%83%90?oldid=84097722",
+          "kind": "Wiktionary Georgian entry",
+          "revisionId": 84097722,
+          "sha256": "ad0d1819c190576c7b1050cf66853ce01bae4856f149d62a6f8b90c6fac96931",
+          "license": "CC BY-SA 4.0"
+        }
+      ]
+    },
+    {
+      "id": "T09-002",
+      "word": "კარე",
+      "length": 4,
+      "proposedMeaning": "bob haircut",
+      "partOfSpeech": "noun",
+      "sourceChecked": "2026-10-20",
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed familiar everyday sense; owner familiarity review remains pending. No automatic approval from dictionary membership.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; no proper-name-only or plural sense proposed.",
+      "sources": [
+        {
+          "url": "https://dictionary.ge/en/search/bob/",
+          "kind": "Dictionary.ge English–Georgian dictionary",
+          "sha256": "755828f8c969512e3f82a5ab954790a9e707851969e537db3ed354e7418706b8",
+          "lookup": "bob"
+        }
+      ]
+    },
+    {
+      "id": "T09-003",
+      "word": "სუში",
+      "length": 4,
+      "proposedMeaning": "sushi",
+      "partOfSpeech": "noun",
+      "sourceChecked": "2026-10-20",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed familiar everyday sense; owner familiarity review remains pending. No automatic approval from dictionary membership.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; no proper-name-only or plural sense proposed.",
+      "sources": [
+        {
+          "url": "https://dictionary.ge/en/search/sushi/",
+          "kind": "Dictionary.ge English–Georgian dictionary",
+          "sha256": "ea48d4f95131f79b0fca1e36ac225ab72f076493db7a6baaf38b258d4a18f91f",
+          "lookup": "sushi"
+        }
+      ]
+    },
+    {
+      "id": "T09-004",
+      "word": "ტატუ",
+      "length": 4,
+      "proposedMeaning": "tattoo (the design)",
+      "partOfSpeech": "noun",
+      "sourceChecked": "2026-10-20",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed familiar everyday sense; owner familiarity review remains pending. No automatic approval from dictionary membership.",
+      "senseNotes": "Concrete design on skin, not the act of tattooing. Standard noun translation recorded by Dictionary.ge.",
+      "sources": [
+        {
+          "url": "https://dictionary.ge/en/search/tattoo/",
+          "kind": "Dictionary.ge English–Georgian dictionary",
+          "sha256": "9ae1ca3c4e5d631cd1f9c771d11d041ec7065a2b46a9e61612cfbc2ce584b1c7",
+          "lookup": "tattoo"
+        }
+      ]
+    },
+    {
+      "id": "T09-005",
+      "word": "ტახი",
+      "length": 4,
+      "proposedMeaning": "boar",
+      "partOfSpeech": "noun",
+      "sourceChecked": "2026-10-20",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed familiar everyday sense; owner familiarity review remains pending. No automatic approval from dictionary membership.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; no proper-name-only or plural sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A2%E1%83%90%E1%83%AE%E1%83%98",
+          "kind": "Georgian explanatory dictionary",
+          "sha256": "389c5a3327c025da17f2c2fae20efdd8742b99306c977df305c0d0f6dc62d101"
+        }
+      ]
+    },
+    {
+      "id": "T09-006",
+      "word": "ჭუკი",
+      "length": 4,
+      "proposedMeaning": "turkey chick",
+      "partOfSpeech": "noun",
+      "sourceChecked": "2026-10-20",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed familiar everyday sense; owner familiarity review remains pending. No automatic approval from dictionary membership.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; no proper-name-only or plural sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%AD%E1%83%A3%E1%83%99%E1%83%98",
+          "kind": "Georgian explanatory dictionary",
+          "sha256": "f2519d086ff2faa55e21f6c2ff06601bbcb7c7855918e8dd1c0a4969363c9491"
+        }
+      ]
+    },
+    {
+      "id": "T09-007",
+      "word": "ბადია",
+      "length": 5,
+      "proposedMeaning": "large deep bowl",
+      "partOfSpeech": "noun",
+      "sourceChecked": "2026-10-20",
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed familiar everyday sense; owner familiarity review remains pending. No automatic approval from dictionary membership.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; no proper-name-only or plural sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.nplg.gov.ge/gwdict/index.php?a=term&d=39&t=421",
+          "kind": "NPLG material-culture dictionary",
+          "checkedVia": "primary-source web search text",
+          "proposedSense": "large deep bowl"
+        }
+      ]
+    },
+    {
+      "id": "T09-008",
+      "word": "ბანჯო",
+      "length": 5,
+      "proposedMeaning": "banjo",
+      "partOfSpeech": "noun",
+      "sourceChecked": "2026-10-20",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed familiar everyday sense; owner familiarity review remains pending. No automatic approval from dictionary membership.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; no proper-name-only or plural sense proposed.",
+      "sources": [
+        {
+          "url": "https://dictionary.ge/en/search/banjo/",
+          "kind": "Dictionary.ge English–Georgian dictionary",
+          "sha256": "a21f74d893f12c64c0d41b928197c1462210d61685c0f44582877237a11cbb4f",
+          "lookup": "banjo"
+        }
+      ]
+    },
+    {
+      "id": "T09-009",
+      "word": "ბრიჯი",
+      "length": 5,
+      "proposedMeaning": "breeches; cropped trousers",
+      "partOfSpeech": "noun",
+      "sourceChecked": "2026-10-20",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed familiar everyday sense; owner familiarity review remains pending. No automatic approval from dictionary membership.",
+      "senseNotes": "Singular clothing noun; plural ბრიჯები is not proposed.",
+      "sources": [
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%91%E1%83%A0%E1%83%98%E1%83%AF%E1%83%98?oldid=84097736",
+          "kind": "Wiktionary Georgian entry",
+          "revisionId": 84097736,
+          "sha256": "437a9c45b524adbfee3e4e91786606bd1980c9db681374cfebed2bbd9ee46946",
+          "license": "CC BY-SA 4.0"
+        }
+      ]
+    },
+    {
+      "id": "T09-010",
+      "word": "ბრუნი",
+      "length": 5,
+      "proposedMeaning": "one complete revolution",
+      "partOfSpeech": "noun",
+      "sourceChecked": "2026-10-20",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed familiar everyday sense; owner familiarity review remains pending. No automatic approval from dictionary membership.",
+      "senseNotes": "Discrete noun: one complete revolution, not the verbal action ბრუნვა.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%91%E1%83%A0%E1%83%A3%E1%83%9C%E1%83%98",
+          "kind": "Georgian explanatory dictionary",
+          "sha256": "43d396bed11df4dc4d006e694a2a2c354833f24b37fa7b728be5da530658fbde"
+        },
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%91%E1%83%A0%E1%83%A3%E1%83%9C%E1%83%98?oldid=84097746",
+          "kind": "Wiktionary Georgian entry",
+          "revisionId": 84097746,
+          "sha256": "d7a87ea45382561cb6ff353940e8fd89bbbca60c001995807dda0c62fea43132",
+          "license": "CC BY-SA 4.0"
+        }
+      ]
+    },
+    {
+      "id": "T09-011",
+      "word": "ნინძა",
+      "length": 5,
+      "proposedMeaning": "ninja",
+      "partOfSpeech": "noun",
+      "sourceChecked": "2026-10-20",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed familiar everyday sense; owner familiarity review remains pending. No automatic approval from dictionary membership.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; no proper-name-only or plural sense proposed.",
+      "sources": [
+        {
+          "url": "https://ka.wikipedia.org/w/index.php?oldid=4461903",
+          "kind": "Georgian encyclopedia entry",
+          "revisionId": 4461903,
+          "sha256": "e3a9ac996e7630266acea96740f580d3547cce1b50810dfaa6eef348808065e2",
+          "license": "CC BY-SA 4.0"
+        }
+      ]
+    },
+    {
+      "id": "T09-012",
+      "word": "რეტრო",
+      "length": 5,
+      "proposedMeaning": "retro; in an older style",
+      "partOfSpeech": "adjective",
+      "sourceChecked": "2026-10-20",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed familiar everyday sense; owner familiarity review remains pending. No automatic approval from dictionary membership.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; no proper-name-only or plural sense proposed.",
+      "sources": [
+        {
+          "url": "https://dictionary.ge/en/search/retro/",
+          "kind": "Dictionary.ge English–Georgian dictionary",
+          "sha256": "d069552fbfdcc71a115159dd432432fe52060e41f2ebeb1d52f33b3dcec74f69",
+          "lookup": "retro"
+        }
+      ]
+    },
+    {
+      "id": "T09-013",
+      "word": "როდეო",
+      "length": 5,
+      "proposedMeaning": "rodeo",
+      "partOfSpeech": "noun",
+      "sourceChecked": "2026-10-20",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed familiar everyday sense; owner familiarity review remains pending. No automatic approval from dictionary membership.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; no proper-name-only or plural sense proposed.",
+      "sources": [
+        {
+          "url": "https://dictionary.ge/en/search/rodeo/",
+          "kind": "Dictionary.ge English–Georgian dictionary",
+          "sha256": "75ef18f3bdcaa7bcf66a8c9aca6946a10030747ebbe867c820ae09f7da38cd7a",
+          "lookup": "rodeo"
+        }
+      ]
+    },
+    {
+      "id": "T09-014",
+      "word": "ჰასკი",
+      "length": 5,
+      "proposedMeaning": "husky dog",
+      "partOfSpeech": "noun",
+      "sourceChecked": "2026-10-20",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed familiar everyday sense; owner familiarity review remains pending. No automatic approval from dictionary membership.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; no proper-name-only or plural sense proposed.",
+      "sources": [
+        {
+          "url": "https://ka.wikipedia.org/w/index.php?oldid=4785710",
+          "kind": "Georgian encyclopedia entry",
+          "revisionId": 4785710,
+          "sha256": "2832fb2aeb62df7c3d9412c7f56f94d95ebf2b74bd4fa07224b75bd2c4de2877",
+          "license": "CC BY-SA 4.0"
+        }
+      ]
+    },
+    {
+      "id": "T09-015",
+      "word": "თეჯირი",
+      "length": 6,
+      "proposedMeaning": "folding room screen",
+      "partOfSpeech": "noun",
+      "sourceChecked": "2026-10-20",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed familiar everyday sense; owner familiarity review remains pending. No automatic approval from dictionary membership.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; no proper-name-only or plural sense proposed.",
+      "sources": [
+        {
+          "url": "https://dlab.ug.edu.ge/synonym/detail/19384/%E1%83%97%E1%83%94%E1%83%AF%E1%83%98%E1%83%A0%E1%83%98",
+          "kind": "University of Georgia synonym dictionary",
+          "checkedVia": "primary-source web search text",
+          "proposedSense": "folding partition"
+        }
+      ]
+    },
+    {
+      "id": "T09-016",
+      "word": "იქაური",
+      "length": 6,
+      "proposedMeaning": "from that place",
+      "partOfSpeech": "adjective",
+      "sourceChecked": "2026-10-20",
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed familiar everyday sense; owner familiarity review remains pending. No automatic approval from dictionary membership.",
+      "senseNotes": "Relational adjective (from that place), not a personal pronoun.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%98%E1%83%A5%E1%83%90%E1%83%A3%E1%83%A0%E1%83%98",
+          "kind": "Georgian explanatory dictionary",
+          "sha256": "f474b5deb80b7218ba7eb3cce6c62844e90bfb936c42b820260c3f932d7c7d45"
+        }
+      ]
+    },
+    {
+      "id": "T09-017",
+      "word": "მდნარი",
+      "length": 6,
+      "proposedMeaning": "melted; molten",
+      "partOfSpeech": "adjective",
+      "sourceChecked": "2026-10-20",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed familiar everyday sense; owner familiarity review remains pending. No automatic approval from dictionary membership.",
+      "senseNotes": "Established material-state adjective; not a conjugated verb.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%9B%E1%83%93%E1%83%9C%E1%83%90%E1%83%A0%E1%83%98",
+          "kind": "Georgian explanatory dictionary",
+          "sha256": "92d5c91e0d9cd1d9f65ee0d5e4ae5a14eea0c5615eb13d6b2e5bafe114ffbe41"
+        }
+      ]
+    },
+    {
+      "id": "T09-018",
+      "word": "მზარდი",
+      "length": 6,
+      "proposedMeaning": "growing; increasing",
+      "partOfSpeech": "adjective",
+      "sourceChecked": "2026-10-20",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed familiar everyday sense; owner familiarity review remains pending. No automatic approval from dictionary membership.",
+      "senseNotes": "Established descriptive adjective; not a conjugated verb.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%9B%E1%83%96%E1%83%90%E1%83%A0%E1%83%93%E1%83%98",
+          "kind": "Georgian explanatory dictionary",
+          "sha256": "81eb2a83ee9ecec7d880bfb5ce0cdf2c35599409747bdf17f8bac4c3f4eeb3ba"
+        }
+      ]
+    },
+    {
+      "id": "T09-019",
+      "word": "მცოდნე",
+      "length": 6,
+      "proposedMeaning": "knowledgeable",
+      "partOfSpeech": "adjective",
+      "sourceChecked": "2026-10-20",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed familiar everyday sense; owner familiarity review remains pending. No automatic approval from dictionary membership.",
+      "senseNotes": "Established knowledgeable adjective; not a conjugated verb.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%9B%E1%83%AA%E1%83%9D%E1%83%93%E1%83%9C%E1%83%94",
+          "kind": "Georgian explanatory dictionary",
+          "sha256": "d59012e5e2980b18ecc54dcdb43b90ae1e09f0f2cdfa3f92fef1cfe98d933d59"
+        },
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%9B%E1%83%AA%E1%83%9D%E1%83%93%E1%83%9C%E1%83%94?oldid=84103178",
+          "kind": "Wiktionary Georgian entry",
+          "revisionId": 84103178,
+          "sha256": "e500022fcc7166b135a2c52b4fa9ecc1e572d2fa445776d383dc522d80154ccb",
+          "license": "CC BY-SA 4.0"
+        }
+      ]
+    },
+    {
+      "id": "T09-020",
+      "word": "ორიანი",
+      "length": 6,
+      "proposedMeaning": "the number two; a mark of two",
+      "partOfSpeech": "noun",
+      "sourceChecked": "2026-10-20",
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed familiar everyday sense; owner familiarity review remains pending. No automatic approval from dictionary membership.",
+      "senseNotes": "Singular numeral/grade noun, not a plural form.",
+      "sources": [
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%9D%E1%83%A0%E1%83%98%E1%83%90%E1%83%9C%E1%83%98?oldid=84090738",
+          "kind": "Wiktionary Georgian entry",
+          "revisionId": 84090738,
+          "sha256": "56dbe11b608ef2a697b330a3f8704296f47b82d724593976f3b4617bf5b29d57",
+          "license": "CC BY-SA 4.0"
+        }
+      ]
+    },
+    {
+      "id": "T09-021",
+      "word": "რწმენა",
+      "length": 6,
+      "proposedMeaning": "faith; belief",
+      "partOfSpeech": "noun",
+      "sourceChecked": "2026-10-20",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed familiar everyday sense; owner familiarity review remains pending. No automatic approval from dictionary membership.",
+      "senseNotes": "Belief/creed noun sense 2, not a conjugated verb or the act of believing.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A0%E1%83%AC%E1%83%9B%E1%83%94%E1%83%9C%E1%83%90",
+          "kind": "Georgian explanatory dictionary",
+          "sha256": "1b33d437e053cb92dae14c8d5c2dc3f2001df4b249bcda9c2fb16dd738be2b85"
+        },
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%A0%E1%83%AC%E1%83%9B%E1%83%94%E1%83%9C%E1%83%90?oldid=84118413",
+          "kind": "Wiktionary Georgian entry",
+          "revisionId": 84118413,
+          "sha256": "492a4dc5951943e3e6938612cd0f338f50490a44934ccf3c73b600e872ad87b8",
+          "license": "CC BY-SA 4.0"
+        }
+      ]
+    },
+    {
+      "id": "T09-022",
+      "word": "სკაუტი",
+      "length": 6,
+      "proposedMeaning": "scout",
+      "partOfSpeech": "noun",
+      "sourceChecked": "2026-10-20",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed familiar everyday sense; owner familiarity review remains pending. No automatic approval from dictionary membership.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; no proper-name-only or plural sense proposed.",
+      "sources": [
+        {
+          "url": "https://dictionary.ge/en/search/scout/",
+          "kind": "Dictionary.ge English–Georgian dictionary",
+          "sha256": "eae144543877d8879ce767c8fc1478a8241a150b9e3b74e422a83c56f032fe50",
+          "lookup": "scout"
+        }
+      ]
+    },
+    {
+      "id": "T09-023",
+      "word": "ტყუილი",
+      "length": 6,
+      "proposedMeaning": "false; untrue",
+      "partOfSpeech": "adjective",
+      "sourceChecked": "2026-10-20",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed familiar everyday sense; owner familiarity review remains pending. No automatic approval from dictionary membership.",
+      "senseNotes": "False/untrue adjective sense, as in false information; exclude the act-of-lying sense.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A2%E1%83%A7%E1%83%A3%E1%83%98%E1%83%9A%E1%83%98",
+          "kind": "Georgian explanatory dictionary",
+          "sha256": "bc37f53305bb982a210a2f73c97ba23596312731a4bd80779f1e708dbc4e9763"
+        },
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%A2%E1%83%A7%E1%83%A3%E1%83%98%E1%83%9A%E1%83%98?oldid=84119502",
+          "kind": "Wiktionary Georgian entry",
+          "revisionId": 84119502,
+          "sha256": "93997ea10542dad9dd908304080467fa5b65740154cd2721521d3f8d03d1dbd8",
+          "license": "CC BY-SA 4.0"
+        }
+      ]
+    },
+    {
+      "id": "T09-024",
+      "word": "ფინიკი",
+      "length": 6,
+      "proposedMeaning": "date fruit",
+      "partOfSpeech": "noun",
+      "sourceChecked": "2026-10-20",
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed familiar everyday sense; owner familiarity review remains pending. No automatic approval from dictionary membership.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; no proper-name-only or plural sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A4%E1%83%98%E1%83%9C%E1%83%98%E1%83%99%E1%83%98",
+          "kind": "Georgian explanatory dictionary",
+          "sha256": "4792ab7e311322a21671dbf06be7190863251e8b97d07d31d0f413781cdbaf86"
+        }
+      ]
+    },
+    {
+      "id": "T09-025",
+      "word": "ქანთრი",
+      "length": 6,
+      "proposedMeaning": "country music",
+      "partOfSpeech": "noun",
+      "sourceChecked": "2026-10-20",
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed familiar everyday sense; owner familiarity review remains pending. No automatic approval from dictionary membership.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; no proper-name-only or plural sense proposed.",
+      "sources": [
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%A5%E1%83%90%E1%83%9C%E1%83%97%E1%83%A0%E1%83%98?oldid=85541603",
+          "kind": "Wiktionary Georgian entry",
+          "revisionId": 85541603,
+          "sha256": "f3e5ddb3879183bfb4302ff69304c22e19ae142275aab93214280eb4ee819fdb",
+          "license": "CC BY-SA 4.0"
+        }
+      ]
+    }
+  ],
+  "approvedWords": [
+    "სუში",
+    "ტატუ",
+    "ტახი",
+    "ჭუკი",
+    "ბანჯო",
+    "ბრიჯი",
+    "ბრუნი",
+    "ნინძა",
+    "რეტრო",
+    "როდეო",
+    "ჰასკი",
+    "თეჯირი",
+    "მდნარი",
+    "მზარდი",
+    "მცოდნე",
+    "რწმენა",
+    "სკაუტი",
+    "ტყუილი"
+  ],
+  "approvedCount": 18,
+  "rejectedWords": [
+    "ბრა",
+    "კარე",
+    "ბადია",
+    "იქაური",
+    "ორიანი",
+    "ფინიკი",
+    "ქანთრი"
+  ],
+  "rejectedCount": 7,
+  "approvedPoolAfter": 2285,
+  "reviewNote": "Owner rejected seven listed spellings and approved the other 18. Exclude rejected spellings from new required answers, variants and bonuses; preserve historical packs. Active revision 28 is unchanged."
+}

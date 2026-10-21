@@ -6,11 +6,11 @@ from typing import cast
 import pytest
 from jsonschema import Draft202012Validator
 
-from geowords_generator.models import PackJSON
-from geowords_generator.pacing import apply_difficulty, validate_pacing
-from geowords_generator.topics import TopicManifest, rebuild_topics
-from geowords_generator.validation import validate_pack
-from geowords_generator.vocabulary import load_vocabulary
+from asobana_generator.models import PackJSON
+from asobana_generator.pacing import apply_difficulty, validate_pacing
+from asobana_generator.topics import TopicManifest, rebuild_topics
+from asobana_generator.validation import validate_pack
+from asobana_generator.vocabulary import load_vocabulary
 
 ROOT = Path(__file__).resolve().parents[2]
 MANIFEST = cast(

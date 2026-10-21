@@ -1,0 +1,791 @@
+{
+  "date": "2026-10-20",
+  "status": "isolated six-row draft; breaks the production 36 pt iPhone SE cell rule; needs an owner decision; not applied",
+  "activeRevisionUnchanged": 28,
+  "activeLevelsUnchanged": 345,
+  "approvedVocabulary": 2195,
+  "variants": {
+    "six-rows-78-tiles": {
+      "levels": 500,
+      "requiredSlots": 2500,
+      "distinctRequiredWords": 1932,
+      "unusedApprovedWords": 263,
+      "repeatedSlots": 568,
+      "lifetimeRepetitionPercent": 22.72,
+      "frequencyHistogram": {
+        "1": 1395,
+        "2": 507,
+        "3": 29,
+        "4": 1
+      },
+      "maximumAppearances": 4,
+      "minimumGap": 75,
+      "medianGap": 222.0,
+      "rolling100MeanRepetitionPercent": 0.27281795511221946,
+      "rolling100MaximumRepetitionPercent": 2.4,
+      "last100RepetitionPercent": 0.0,
+      "distinctGridShapes": 474,
+      "extensionAdjacentIdenticalGridShapes": 0,
+      "extensionNearWheelPairsWithin10": 0,
+      "extensionMaximumSharedAnswersWithEarlierBoard": 1,
+      "extensionBoardsReusingAnyAnswerPair": 0,
+      "extensionRepeatedPairOccurrences": 0,
+      "extensionBoardsReusingAnyAnswerTriple": 0,
+      "extensionRepeatedTripleOccurrences": 0,
+      "newDistinctWordsIntroduced": 518,
+      "extensionAnswerLengthMix": {
+        "3": 12,
+        "4": 149,
+        "5": 158,
+        "6": 456
+      },
+      "extensionNewWordLengthMix": {
+        "3": 0,
+        "4": 12,
+        "5": 77,
+        "6": 429
+      },
+      "extensionBoardsBySixLetterAnswers": {
+        "1": 11,
+        "2": 36,
+        "3": 63,
+        "4": 41,
+        "5": 4
+      },
+      "extensionSixLetterAnswersRunningDown": 175,
+      "extensionGridSizes": {
+        "5 × 6": 3,
+        "5 × 7": 24,
+        "6 × 7": 128
+      },
+      "extensionSixRowBoards": 128,
+      "extensionWheelSizes": {
+        "8": 155
+      },
+      "extensionDensity": [0.452, 0.633],
+      "extensionDifficultyMean": 85.65161290322581,
+      "extensionDifficultyRange": [78, 92],
+      "extensionMinimumSeCell": 34.0,
+      "extensionMinimumIphone17Cell": 50.57142857142857,
+      "lengthBreakdown": [
+        {
+          "length": 3,
+          "occurrences": 139,
+          "distinct": 62,
+          "repeatedOccurrences": 77,
+          "unusedApproved": 0
+        },
+        {
+          "length": 4,
+          "occurrences": 834,
+          "distinct": 501,
+          "repeatedOccurrences": 333,
+          "unusedApproved": 3
+        },
+        {
+          "length": 5,
+          "occurrences": 845,
+          "distinct": 714,
+          "repeatedOccurrences": 131,
+          "unusedApproved": 19
+        },
+        {
+          "length": 6,
+          "occurrences": 682,
+          "distinct": 655,
+          "repeatedOccurrences": 27,
+          "unusedApproved": 241
+        }
+      ],
+      "draftSha256": "50d127433276bdaafbd67cbc1550bed8b5d7c262e857b61993f5bc17cc898475",
+      "frontier": {
+        "levels": 500,
+        "distinct": 1932,
+        "repetitionPercent": 22.72,
+        "maximumUses": 4,
+        "solverStatus": "OPTIMAL"
+      }
+    },
+    "six-rows-7-tiles": {
+      "levels": 500,
+      "requiredSlots": 2500,
+      "distinctRequiredWords": 1748,
+      "unusedApprovedWords": 447,
+      "repeatedSlots": 752,
+      "lifetimeRepetitionPercent": 30.08,
+      "frequencyHistogram": {
+        "1": 1111,
+        "2": 523,
+        "3": 113,
+        "4": 1
+      },
+      "maximumAppearances": 4,
+      "minimumGap": 75,
+      "medianGap": 209.0,
+      "rolling100MeanRepetitionPercent": 0.29526184538653366,
+      "rolling100MaximumRepetitionPercent": 2.4,
+      "last100RepetitionPercent": 0.0,
+      "distinctGridShapes": 482,
+      "extensionAdjacentIdenticalGridShapes": 0,
+      "extensionNearWheelPairsWithin10": 0,
+      "extensionMaximumSharedAnswersWithEarlierBoard": 1,
+      "extensionBoardsReusingAnyAnswerPair": 0,
+      "extensionRepeatedPairOccurrences": 0,
+      "extensionBoardsReusingAnyAnswerTriple": 0,
+      "extensionRepeatedTripleOccurrences": 0,
+      "newDistinctWordsIntroduced": 334,
+      "extensionAnswerLengthMix": {
+        "3": 30,
+        "4": 256,
+        "5": 199,
+        "6": 290
+      },
+      "extensionNewWordLengthMix": {
+        "3": 0,
+        "4": 8,
+        "5": 58,
+        "6": 268
+      },
+      "extensionBoardsBySixLetterAnswers": {
+        "0": 5,
+        "1": 44,
+        "2": 75,
+        "3": 28,
+        "4": 3
+      },
+      "extensionSixLetterAnswersRunningDown": 103,
+      "extensionGridSizes": {
+        "4 × 7": 1,
+        "5 × 6": 8,
+        "5 × 7": 45,
+        "6 × 7": 101
+      },
+      "extensionSixRowBoards": 101,
+      "extensionWheelSizes": {
+        "7": 155
+      },
+      "extensionDensity": [0.452, 0.643],
+      "extensionDifficultyMean": 73.6,
+      "extensionDifficultyRange": [66, 80],
+      "extensionMinimumSeCell": 34.0,
+      "extensionMinimumIphone17Cell": 50.57142857142857,
+      "lengthBreakdown": [
+        {
+          "length": 3,
+          "occurrences": 157,
+          "distinct": 62,
+          "repeatedOccurrences": 95,
+          "unusedApproved": 0
+        },
+        {
+          "length": 4,
+          "occurrences": 941,
+          "distinct": 497,
+          "repeatedOccurrences": 444,
+          "unusedApproved": 7
+        },
+        {
+          "length": 5,
+          "occurrences": 886,
+          "distinct": 695,
+          "repeatedOccurrences": 191,
+          "unusedApproved": 38
+        },
+        {
+          "length": 6,
+          "occurrences": 516,
+          "distinct": 494,
+          "repeatedOccurrences": 22,
+          "unusedApproved": 402
+        }
+      ],
+      "draftSha256": "2925ca68b0d9385e463eab612ca7de6abaf02e3f640e7d5cdb16f74aed48a96d",
+      "frontier": {
+        "levels": 500,
+        "distinct": 1748,
+        "repetitionPercent": 30.08,
+        "maximumUses": 4,
+        "solverStatus": "OPTIMAL"
+      }
+    },
+    "five-rows-78-tiles": {
+      "levels": 500,
+      "requiredSlots": 2500,
+      "distinctRequiredWords": 1834,
+      "unusedApprovedWords": 361,
+      "repeatedSlots": 666,
+      "lifetimeRepetitionPercent": 26.64,
+      "frequencyHistogram": {
+        "1": 1222,
+        "2": 559,
+        "3": 52,
+        "4": 1
+      },
+      "maximumAppearances": 4,
+      "minimumGap": 75,
+      "medianGap": 217.0,
+      "rolling100MeanRepetitionPercent": 0.286284289276808,
+      "rolling100MaximumRepetitionPercent": 2.4,
+      "last100RepetitionPercent": 0.0,
+      "distinctGridShapes": 436,
+      "extensionAdjacentIdenticalGridShapes": 0,
+      "extensionNearWheelPairsWithin10": 0,
+      "extensionMaximumSharedAnswersWithEarlierBoard": 1,
+      "extensionBoardsReusingAnyAnswerPair": 0,
+      "extensionRepeatedPairOccurrences": 0,
+      "extensionBoardsReusingAnyAnswerTriple": 0,
+      "extensionRepeatedTripleOccurrences": 0,
+      "newDistinctWordsIntroduced": 420,
+      "extensionAnswerLengthMix": {
+        "3": 29,
+        "4": 200,
+        "5": 224,
+        "6": 322
+      },
+      "extensionNewWordLengthMix": {
+        "3": 0,
+        "4": 14,
+        "5": 88,
+        "6": 318
+      },
+      "extensionBoardsBySixLetterAnswers": {
+        "0": 2,
+        "1": 25,
+        "2": 87,
+        "3": 41
+      },
+      "extensionSixLetterAnswersRunningDown": 0,
+      "extensionGridSizes": {
+        "5 × 6": 7,
+        "5 × 7": 148
+      },
+      "extensionSixRowBoards": 0,
+      "extensionWheelSizes": {
+        "8": 155
+      },
+      "extensionDensity": [0.514, 0.633],
+      "extensionDifficultyMean": 82.8,
+      "extensionDifficultyRange": [76, 88],
+      "extensionMinimumSeCell": 41.6,
+      "extensionMinimumIphone17Cell": 50.57142857142857,
+      "lengthBreakdown": [
+        {
+          "length": 3,
+          "occurrences": 156,
+          "distinct": 62,
+          "repeatedOccurrences": 94,
+          "unusedApproved": 0
+        },
+        {
+          "length": 4,
+          "occurrences": 885,
+          "distinct": 503,
+          "repeatedOccurrences": 382,
+          "unusedApproved": 1
+        },
+        {
+          "length": 5,
+          "occurrences": 911,
+          "distinct": 725,
+          "repeatedOccurrences": 186,
+          "unusedApproved": 8
+        },
+        {
+          "length": 6,
+          "occurrences": 548,
+          "distinct": 544,
+          "repeatedOccurrences": 4,
+          "unusedApproved": 352
+        }
+      ],
+      "draftSha256": "e9049900dd86e87ed582a0d5d1df0f4e5c160e680f25390ac9e749f8766a4202",
+      "frontier": {
+        "levels": 500,
+        "distinct": 1834,
+        "repetitionPercent": 26.64,
+        "maximumUses": 4,
+        "solverStatus": "OPTIMAL"
+      }
+    },
+    "five-rows-7-tiles": {
+      "levels": 500,
+      "requiredSlots": 2500,
+      "distinctRequiredWords": 1680,
+      "unusedApprovedWords": 515,
+      "repeatedSlots": 820,
+      "lifetimeRepetitionPercent": 32.8,
+      "frequencyHistogram": {
+        "1": 975,
+        "2": 592,
+        "3": 111,
+        "4": 2
+      },
+      "maximumAppearances": 4,
+      "minimumGap": 75,
+      "medianGap": 211.5,
+      "rolling100MeanRepetitionPercent": 0.3271820448877806,
+      "rolling100MaximumRepetitionPercent": 2.4,
+      "last100RepetitionPercent": 0.0,
+      "distinctGridShapes": 463,
+      "extensionAdjacentIdenticalGridShapes": 0,
+      "extensionNearWheelPairsWithin10": 0,
+      "extensionMaximumSharedAnswersWithEarlierBoard": 1,
+      "extensionBoardsReusingAnyAnswerPair": 0,
+      "extensionRepeatedPairOccurrences": 0,
+      "extensionBoardsReusingAnyAnswerTriple": 0,
+      "extensionRepeatedTripleOccurrences": 0,
+      "newDistinctWordsIntroduced": 266,
+      "extensionAnswerLengthMix": {
+        "3": 43,
+        "4": 268,
+        "5": 259,
+        "6": 205
+      },
+      "extensionNewWordLengthMix": {
+        "3": 0,
+        "4": 8,
+        "5": 63,
+        "6": 195
+      },
+      "extensionBoardsBySixLetterAnswers": {
+        "0": 18,
+        "1": 75,
+        "2": 56,
+        "3": 6
+      },
+      "extensionSixLetterAnswersRunningDown": 0,
+      "extensionGridSizes": {
+        "5 × 6": 17,
+        "5 × 7": 138
+      },
+      "extensionSixRowBoards": 0,
+      "extensionWheelSizes": {
+        "7": 155
+      },
+      "extensionDensity": [0.486, 0.633],
+      "extensionDifficultyMean": 71.84516129032258,
+      "extensionDifficultyRange": [64, 78],
+      "extensionMinimumSeCell": 41.6,
+      "extensionMinimumIphone17Cell": 50.57142857142857,
+      "lengthBreakdown": [
+        {
+          "length": 3,
+          "occurrences": 170,
+          "distinct": 62,
+          "repeatedOccurrences": 108,
+          "unusedApproved": 0
+        },
+        {
+          "length": 4,
+          "occurrences": 953,
+          "distinct": 497,
+          "repeatedOccurrences": 456,
+          "unusedApproved": 7
+        },
+        {
+          "length": 5,
+          "occurrences": 946,
+          "distinct": 700,
+          "repeatedOccurrences": 246,
+          "unusedApproved": 33
+        },
+        {
+          "length": 6,
+          "occurrences": 431,
+          "distinct": 421,
+          "repeatedOccurrences": 10,
+          "unusedApproved": 475
+        }
+      ],
+      "draftSha256": "456db2d7ec8e6bc7fbf0a76061fba55e4cae1ecafaa179d3c9e449c96f9f72db",
+      "frontier": {
+        "levels": 500,
+        "distinct": 1680,
+        "repetitionPercent": 32.8,
+        "maximumUses": 4,
+        "solverStatus": "OPTIMAL"
+      }
+    }
+  },
+  "references": {
+    "sevenTileGreedyDraft": {
+      "levels": 500,
+      "requiredSlots": 2500,
+      "distinctRequiredWords": 1610,
+      "unusedApprovedWords": 585,
+      "repeatedSlots": 890,
+      "lifetimeRepetitionPercent": 35.6,
+      "frequencyHistogram": {
+        "1": 891,
+        "2": 551,
+        "3": 165,
+        "4": 3
+      },
+      "maximumAppearances": 4,
+      "minimumGap": 75,
+      "medianGap": 209.0,
+      "rolling100MeanRepetitionPercent": 0.32867830423940153,
+      "rolling100MaximumRepetitionPercent": 2.4,
+      "last100RepetitionPercent": 0.2,
+      "distinctGridShapes": 473,
+      "extensionAdjacentIdenticalGridShapes": 0,
+      "extensionNearWheelPairsWithin10": 0,
+      "extensionMaximumSharedAnswersWithEarlierBoard": 1,
+      "extensionBoardsReusingAnyAnswerPair": 0,
+      "extensionRepeatedPairOccurrences": 0,
+      "extensionBoardsReusingAnyAnswerTriple": 0,
+      "extensionRepeatedTripleOccurrences": 0,
+      "newDistinctWordsIntroduced": 196,
+      "extensionAnswerLengthMix": {
+        "3": 50,
+        "4": 320,
+        "5": 275,
+        "6": 130
+      },
+      "extensionNewWordLengthMix": {
+        "3": 0,
+        "4": 11,
+        "5": 62,
+        "6": 123
+      },
+      "extensionBoardsBySixLetterAnswers": {
+        "0": 49,
+        "1": 83,
+        "2": 22,
+        "3": 1
+      },
+      "extensionSixLetterAnswersRunningDown": 0,
+      "extensionGridSizes": {
+        "4 × 7": 2,
+        "5 × 6": 38,
+        "5 × 7": 115
+      },
+      "extensionSixRowBoards": 0,
+      "extensionWheelSizes": {
+        "7": 155
+      },
+      "extensionDensity": [0.486, 0.643],
+      "extensionDifficultyMean": 69.6258064516129,
+      "extensionDifficultyRange": [64, 76],
+      "extensionMinimumSeCell": 41.6,
+      "extensionMinimumIphone17Cell": 50.57142857142857,
+      "lengthBreakdown": [
+        {
+          "length": 3,
+          "occurrences": 177,
+          "distinct": 62,
+          "repeatedOccurrences": 115,
+          "unusedApproved": 0
+        },
+        {
+          "length": 4,
+          "occurrences": 1005,
+          "distinct": 500,
+          "repeatedOccurrences": 505,
+          "unusedApproved": 4
+        },
+        {
+          "length": 5,
+          "occurrences": 962,
+          "distinct": 699,
+          "repeatedOccurrences": 263,
+          "unusedApproved": 34
+        },
+        {
+          "length": 6,
+          "occurrences": 356,
+          "distinct": 349,
+          "repeatedOccurrences": 7,
+          "unusedApproved": 547
+        }
+      ]
+    },
+    "eightTileGreedyDraft": {
+      "levels": 500,
+      "requiredSlots": 2500,
+      "distinctRequiredWords": 1666,
+      "unusedApprovedWords": 529,
+      "repeatedSlots": 834,
+      "lifetimeRepetitionPercent": 33.36,
+      "frequencyHistogram": {
+        "1": 965,
+        "2": 574,
+        "3": 121,
+        "4": 6
+      },
+      "maximumAppearances": 4,
+      "minimumGap": 75,
+      "medianGap": 215.0,
+      "rolling100MeanRepetitionPercent": 0.4079800498753117,
+      "rolling100MaximumRepetitionPercent": 2.4,
+      "last100RepetitionPercent": 0.0,
+      "distinctGridShapes": 468,
+      "extensionAdjacentIdenticalGridShapes": 0,
+      "extensionNearWheelPairsWithin10": 0,
+      "extensionMaximumSharedAnswersWithEarlierBoard": 1,
+      "extensionBoardsReusingAnyAnswerPair": 0,
+      "extensionRepeatedPairOccurrences": 0,
+      "extensionBoardsReusingAnyAnswerTriple": 0,
+      "extensionRepeatedTripleOccurrences": 0,
+      "newDistinctWordsIntroduced": 252,
+      "extensionAnswerLengthMix": {
+        "3": 48,
+        "4": 299,
+        "5": 264,
+        "6": 164
+      },
+      "extensionNewWordLengthMix": {
+        "3": 0,
+        "4": 13,
+        "5": 80,
+        "6": 159
+      },
+      "extensionBoardsBySixLetterAnswers": {
+        "0": 39,
+        "1": 77,
+        "2": 30,
+        "3": 9
+      },
+      "extensionSixLetterAnswersRunningDown": 0,
+      "extensionGridSizes": {
+        "5 × 6": 39,
+        "5 × 7": 116
+      },
+      "extensionSixRowBoards": 0,
+      "extensionWheelSizes": {
+        "7": 100,
+        "8": 55
+      },
+      "extensionDensity": [0.486, 0.633],
+      "extensionDifficultyMean": 73.35483870967742,
+      "extensionDifficultyRange": [64, 86],
+      "extensionMinimumSeCell": 41.6,
+      "extensionMinimumIphone17Cell": 50.57142857142857,
+      "lengthBreakdown": [
+        {
+          "length": 3,
+          "occurrences": 175,
+          "distinct": 62,
+          "repeatedOccurrences": 113,
+          "unusedApproved": 0
+        },
+        {
+          "length": 4,
+          "occurrences": 984,
+          "distinct": 502,
+          "repeatedOccurrences": 482,
+          "unusedApproved": 2
+        },
+        {
+          "length": 5,
+          "occurrences": 951,
+          "distinct": 717,
+          "repeatedOccurrences": 234,
+          "unusedApproved": 16
+        },
+        {
+          "length": 6,
+          "occurrences": 390,
+          "distinct": 385,
+          "repeatedOccurrences": 5,
+          "unusedApproved": 511
+        }
+      ]
+    }
+  },
+  "parentFiveRowBoundAwareEstimates": {
+    "7or8Tiles": 30.24,
+    "7TilesOnly": 33.08
+  },
+  "selectionSensitivity": {
+    "six-rows-78-tiles": {
+      "full": 22.72,
+      "randomNinetyPercentPoolSubsamples": [22.64, 22.84, 22.72]
+    },
+    "six-rows-7-tiles": {
+      "full": 30.08,
+      "randomNinetyPercentPoolSubsamples": [30.32, 30.28, 30.2]
+    },
+    "five-rows-78-tiles": {
+      "full": 26.64,
+      "randomNinetyPercentPoolSubsamples": [26.76, 26.52, 26.72]
+    },
+    "five-rows-7-tiles": {
+      "full": 32.8,
+      "randomNinetyPercentPoolSubsamples": [32.56, 32.48, 32.56]
+    }
+  },
+  "baseLast50DifficultyMean": 69.56,
+  "baseDifficultyMaximum": 76,
+  "boardGeometry": {
+    "basis": "Unmodified projectBoard content model (board areas: iPhone SE 351 × 224 pt, iPhone 17 378 × 335 pt, iPhone 17 Pro Max 416 × 392 pt; 4 pt gaps).",
+    "sizes": [
+      {
+        "rows": 5,
+        "columns": 6,
+        "iPhone SE": {
+          "cell": 41.6,
+          "renderedCell": 41,
+          "widthPercent": 76.8
+        },
+        "iPhone 17": {
+          "cell": 59.67,
+          "renderedCell": 59,
+          "widthPercent": 100
+        },
+        "iPhone 17 Pro Max": {
+          "cell": 66,
+          "renderedCell": 66,
+          "widthPercent": 100
+        }
+      },
+      {
+        "rows": 5,
+        "columns": 7,
+        "iPhone SE": {
+          "cell": 41.6,
+          "renderedCell": 41,
+          "widthPercent": 89.8
+        },
+        "iPhone 17": {
+          "cell": 50.57,
+          "renderedCell": 50,
+          "widthPercent": 100
+        },
+        "iPhone 17 Pro Max": {
+          "cell": 56,
+          "renderedCell": 56,
+          "widthPercent": 100
+        }
+      },
+      {
+        "rows": 6,
+        "columns": 7,
+        "iPhone SE": {
+          "cell": 34,
+          "renderedCell": 34,
+          "widthPercent": 74.6
+        },
+        "iPhone 17": {
+          "cell": 50.57,
+          "renderedCell": 50,
+          "widthPercent": 100
+        },
+        "iPhone 17 Pro Max": {
+          "cell": 56,
+          "renderedCell": 56,
+          "widthPercent": 100
+        }
+      }
+    ],
+    "limitation": "Content projection only; not a device render, screenshot or playtest."
+  },
+  "searchStats": [
+    {
+      "mode": "five",
+      "workers": 6,
+      "timeLimitSeconds": 3000.0,
+      "eligibleWords": 2195,
+      "initialUnused": 781,
+      "pairUnionWheelCount": 167255,
+      "wheelsWithUnusedVocabulary": 115481,
+      "visitedWheelCount": 115481,
+      "totals": {
+        "combinations": 112059248,
+        "tried": 2925472,
+        "noLayout": 1370635,
+        "found5": 1554837
+      },
+      "candidatesFiveRows": 1554837,
+      "candidatesNeedSixRows": 0,
+      "byTiles": {
+        "8": 1424574,
+        "7": 130263
+      },
+      "seconds": 2078,
+      "method": "Exact 7- and 8-tile two-word unions involving an unused approval, richest unused vocabulary first; per wheel, rank all valid five-answer combinations by unused words then six-letter answers; try up to 40 and keep up to 20. Five-row control: combinations with more than three six-letter answers are skipped (cannot fit) and each tried combination gets a bound-aware 5 × 7 layout search; partial layouts outside the box or failing valid_layout are pruned with backtracking (20,000-node budget)."
+    },
+    {
+      "mode": "six",
+      "workers": 6,
+      "timeLimitSeconds": 3000.0,
+      "eligibleWords": 2195,
+      "initialUnused": 781,
+      "pairUnionWheelCount": 167255,
+      "wheelsWithUnusedVocabulary": 115481,
+      "visitedWheelCount": 115481,
+      "totals": {
+        "combinations": 112177571,
+        "tried": 2076976,
+        "noLayout": 78169,
+        "found6": 758754,
+        "found5": 1240053
+      },
+      "candidatesFiveRows": 1240053,
+      "candidatesNeedSixRows": 758754,
+      "byTiles": {
+        "8": 1850051,
+        "7": 148756
+      },
+      "seconds": 2132,
+      "method": "Exact 7- and 8-tile two-word unions involving an unused approval, richest unused vocabulary first; per wheel, rank all valid five-answer combinations by unused words then six-letter answers; try up to 40 and keep up to 20. Each tried combination gets a bound-aware 5 × 7 layout search, then 6 × 7 only if 5 rows fail (four or more six-letter answers go straight to 6 × 7); partial layouts outside the box or failing valid_layout are pruned with backtracking (20,000-node budget)."
+    }
+  ],
+  "productionFilesVerifiedUnchanged": 210,
+  "validatorChanges": [
+    {
+      "file": "puzzle-generator/src/asobana_generator/discovery.py",
+      "originalSnippet": "((5,) if index < 5 else (6,) if index < 25 else (7,))",
+      "trialSnippet": "((5,) if index < 5 else (6,) if index < 25 else (7,) if index < 345 else (7, 8))",
+      "reason": "Owner-authorized 7-or-8-tile exception only at levels 346–500 (same as the eight-tile trial).",
+      "originalSha256": "7d1bddb0894ed19cd22335b772bf98ee37043a6625a474643820a69aa2208b7e",
+      "trialSha256": "e140d81ff807ccaba83d3a3be2c275db3892d748840fe7ea82ca706ce4860a8b"
+    },
+    {
+      "file": "mobile/src/content/discovery.ts",
+      "originalSnippet": "          : index < 25\n            ? [6]\n            : [7]",
+      "trialSnippet": "          : index < 25\n            ? [6]\n            : index < 345\n              ? [7]\n              : [7, 8]",
+      "reason": "Owner-authorized 7-or-8-tile exception only at levels 346–500 (same as the eight-tile trial).",
+      "originalSha256": "bc32f6dac8d79c2eb4a2001130fd216d4a68179880014abbdf9a612a573ada73",
+      "trialSha256": "d872d86fa8f430d511c1e343fc494fef8ecc6e93590b291f8b2086db629f7ed3"
+    },
+    {
+      "file": "puzzle-generator/src/asobana_generator/wide.py",
+      "originalSnippet": "if project_board(grid, \"iPhone SE\")[\"cell\"] < 36:",
+      "trialSnippet": "if project_board(grid, \"iPhone SE\")[\"cell\"] < (34 if index >= 345 else 36):",
+      "reason": "Six-row trial only at levels 346–500: a 6 × 7 board projects to 34.0 pt cells on iPhone SE, below the production 36 pt minimum. floor(7 / 1.15) = 6 already allows six rows by aspect ratio, so the ratio check is unchanged (six-column boards stay at five rows); only the SE threshold moves from 36 to 34 pt for those levels.",
+      "originalSha256": "8fea75e59d7a863c3e431f3a1d8bd0076a5b68aba92582110ad8765d41a861b0",
+      "trialSha256": "c2968ea47a144fe1e4b68819a5a5037240d55e9b954ac2ffa09954eb41684734"
+    },
+    {
+      "file": "mobile/src/content/wide.ts",
+      "originalSnippet": "if (projectBoard(level.grid, 'iPhone SE').cell < 36)",
+      "trialSnippet": "if (projectBoard(level.grid, 'iPhone SE').cell < (index >= 345 ? 34 : 36))",
+      "reason": "Six-row trial only at levels 346–500: a 6 × 7 board projects to 34.0 pt cells on iPhone SE, below the production 36 pt minimum. floor(7 / 1.15) = 6 already allows six rows by aspect ratio, so the ratio check is unchanged (six-column boards stay at five rows); only the SE threshold moves from 36 to 34 pt for those levels.",
+      "originalSha256": "c18af0b01c1bdf38db8dc8cb577f48f7649d3f826d36f958d0bf0f989c71073b",
+      "trialSha256": "287f45a7acecf3f7cfa13f98f0e501e3f74e0c0e857a606122d6ba8c71ac32be"
+    },
+    {
+      "file": "puzzle-generator/src/asobana_generator/wide.py",
+      "originalSnippet": "from .discovery import discovery_difficulty",
+      "trialSnippet": "from .bounded import generate_bounded_level\nfrom .discovery import discovery_difficulty",
+      "reason": "Rebuild bound-aware recipes (marked with maxRows) through the trial-only bounded layout search; all other recipes use the unchanged greedy generate_level.",
+      "originalSha256": "8fea75e59d7a863c3e431f3a1d8bd0076a5b68aba92582110ad8765d41a861b0",
+      "trialSha256": "c2968ea47a144fe1e4b68819a5a5037240d55e9b954ac2ffa09954eb41684734"
+    },
+    {
+      "file": "puzzle-generator/src/asobana_generator/wide.py",
+      "originalSnippet": "        level = generate_level(\n            source,\n            seed=recipe[\"seed\"],\n            level_id=recipe[\"id\"],\n            chapter_id=manifest[\"chapters\"][index // 5][\"id\"],\n            max_words=len(recipe[\"targets\"]),\n            max_tiles=len(recipe[\"wheel\"]),\n        ).level",
+      "trialSnippet": "        if \"maxRows\" in recipe:\n            level = generate_bounded_level(\n                source,\n                seed=recipe[\"seed\"],\n                level_id=recipe[\"id\"],\n                chapter_id=manifest[\"chapters\"][index // 5][\"id\"],\n                max_rows=recipe[\"maxRows\"],  # type: ignore[typeddict-item]\n                max_columns=7,\n                min_columns=6,\n                max_tiles=len(recipe[\"wheel\"]),\n            ).level\n        else:\n            level = generate_level(\n                source,\n                seed=recipe[\"seed\"],\n                level_id=recipe[\"id\"],\n                chapter_id=manifest[\"chapters\"][index // 5][\"id\"],\n                max_words=len(recipe[\"targets\"]),\n                max_tiles=len(recipe[\"wheel\"]),\n            ).level",
+      "reason": "Rebuild bound-aware recipes (marked with maxRows) through the trial-only bounded layout search; all other recipes use the unchanged greedy generate_level.",
+      "originalSha256": "8fea75e59d7a863c3e431f3a1d8bd0076a5b68aba92582110ad8765d41a861b0",
+      "trialSha256": "c2968ea47a144fe1e4b68819a5a5037240d55e9b954ac2ffa09954eb41684734"
+    },
+    {
+      "file": "puzzle-generator/src/asobana_generator/bounded.py",
+      "added": true,
+      "trialSha256": "f5119074318fb4ce75095382258846b964a77a55980494c045310e0964640077",
+      "reason": "Trial-only bound-aware layout search: prunes partial layouts beyond the allowed rows/columns or failing valid_layout and backtracks."
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-import manifest from '../../content/levels/discovery.v26.recipes.json';
+import manifest from '../../content/levels/discovery.v28.recipes.json';
 import { catalog, previousCatalogs, vocabulary } from '../src/content/catalog';
 import { validateWide } from '../src/content/wide';
 import { canFormWord } from '../src/engine/georgian';

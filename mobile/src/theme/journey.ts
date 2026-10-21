@@ -2,7 +2,7 @@ import { catalog } from '../content/catalog';
 
 /**
  * Countries of the journey, in travel order. Presentation only: content owns
- * the 59 stops (see content/journey-v23.json); this groups them for the path,
+ * the 69 stops (see content/journey-v28.json); this groups them for the path,
  * dividers and the journey overview, and colours stops that have no painting.
  */
 export interface Country {
@@ -150,6 +150,31 @@ export const COUNTRIES: readonly Country[] = [
     accent: '#8D4A3F',
     sky: ['#9D9DC4', '#F0C5A1'],
     hills: ['#C99970', '#A77760', '#63765D'],
+  },
+  {
+    id: 'portugal',
+    name: 'პორტუგალია',
+    route: 'ლაგუშიდან პორტუმდე',
+    chapterIds: ['lagos', 'lisbon', 'sintra', 'porto'],
+    accent: '#285F69',
+    sky: ['#91ABC3', '#F0C9A4'],
+    hills: ['#CCAE80', '#8E9B7A', '#526C65'],
+  },
+  {
+    id: 'morocco',
+    name: 'მაროკო',
+    route: 'ტანჟერიდან მარაკეშამდე',
+    chapterIds: [
+      'tangier',
+      'chefchaouen',
+      'fez',
+      'merzouga',
+      'ait-ben-haddou',
+      'marrakech',
+    ],
+    accent: '#855037',
+    sky: ['#B4A0B8', '#EDBE93'],
+    hills: ['#D3A474', '#AD7656', '#76544C'],
   },
 ];
 

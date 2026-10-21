@@ -1,0 +1,403 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-20",
+  "status": "owner-reviewed-pending-integration",
+  "activeRevisionUnchanged": 28,
+  "activeApprovedPool": 2075,
+  "approvedPoolBefore": 2285,
+  "pendingIntegrationCount": 224,
+  "candidateCount": 20,
+  "countsByLength": {
+    "4": 3,
+    "5": 3,
+    "6": 14
+  },
+  "previouslyRecordedSpellings": 4685,
+  "previousReviewOverlap": 0,
+  "method": "Compare exact Georgian spellings with all dictionary and vocabulary review JSON files, including skipped and rejected batches. Individually inspect the intended noun/adjective sense in language or educational sources.",
+  "limitations": "Owner review complete: 14 approved and six rejected. No boards generated or repetition change measured. No active dictionary, policy, pack or save changes.",
+  "sourceAttribution": "Georgian explanatory dictionary/Linguistic Technologies Group; Dictionary.ge; University of Georgia synonym dictionary; NPLG dictionaries; ena.ge educational vocabulary; techdict.ge. Brief adapted English glosses; source links and available page hashes retained.",
+  "entries": [
+    {
+      "word": "სეტი",
+      "length": 4,
+      "proposedMeaning": "set in tennis",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-20",
+      "editorialDecision": "Candidate for owner familiarity review; dictionary attestation is not automatic approval.",
+      "senseNotes": "Singular noun or descriptive adjective sense only; no plural, conjugated verb or proper-name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.nplg.gov.ge/wikidict/index.php/ჩოგბურთი",
+          "kind": "Primary dictionary or educational reference",
+          "checkedVia": "Web source text inspected on 2026-10-20"
+        }
+      ],
+      "id": "T10-001"
+    },
+    {
+      "word": "ტოფუ",
+      "length": 4,
+      "proposedMeaning": "tofu",
+      "partOfSpeech": "noun",
+      "ownerDecision": "rejected",
+      "sourceChecked": "2026-10-20",
+      "editorialDecision": "Candidate for owner familiarity review; dictionary attestation is not automatic approval.",
+      "senseNotes": "Singular noun or descriptive adjective sense only; no plural, conjugated verb or proper-name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://dictionary.ge/en/search/tofu/",
+          "kind": "Dictionary.ge English–Georgian dictionary",
+          "sha256": "cd7fc314981c39dd87255364122944b7a209bd07caa14e69c277f755e2310b77"
+        }
+      ],
+      "id": "T10-002"
+    },
+    {
+      "word": "ჰიტი",
+      "length": 4,
+      "proposedMeaning": "hit song or popular success",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-20",
+      "editorialDecision": "Candidate for owner familiarity review; dictionary attestation is not automatic approval.",
+      "senseNotes": "Standard ჰიტი spelling: university synonym dictionary and Dictionary.ge example; school orthographic dictionary rejects ხიტი in favour of ჰიტი.",
+      "sources": [
+        {
+          "url": "https://dlab.ug.edu.ge/synonym/detail/8862/ტრიუმფი",
+          "kind": "Primary dictionary or educational reference",
+          "checkedVia": "Web source text inspected on 2026-10-20"
+        }
+      ],
+      "id": "T10-003"
+    },
+    {
+      "word": "კექსი",
+      "length": 5,
+      "proposedMeaning": "plain cake",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-20",
+      "editorialDecision": "Candidate for owner familiarity review; dictionary attestation is not automatic approval.",
+      "senseNotes": "Singular noun or descriptive adjective sense only; no plural, conjugated verb or proper-name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%99%E1%83%94%E1%83%A5%E1%83%A1%E1%83%98",
+          "kind": "Georgian explanatory dictionary",
+          "sha256": "15e16808dec1ba57e2f221814a1e6dc542804115a9f7f30866e5d1db2460c425"
+        }
+      ],
+      "id": "T10-004"
+    },
+    {
+      "word": "სპრეი",
+      "length": 5,
+      "proposedMeaning": "aerosol spray can",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-20",
+      "editorialDecision": "Candidate for owner familiarity review; dictionary attestation is not automatic approval.",
+      "senseNotes": "Concrete aerosol container sense attested under spray can; not the spraying action.",
+      "sources": [
+        {
+          "url": "https://dictionary.ge/en/search/spray/",
+          "kind": "Dictionary.ge English–Georgian dictionary",
+          "sha256": "2b8e06c48215ccc7658f192ece23a3b86eb2387eab5d4d557036b5f7342d717a"
+        }
+      ],
+      "id": "T10-005"
+    },
+    {
+      "word": "წრედი",
+      "length": 5,
+      "proposedMeaning": "electrical circuit",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-20",
+      "editorialDecision": "Candidate for owner familiarity review; dictionary attestation is not automatic approval.",
+      "senseNotes": "Singular noun or descriptive adjective sense only; no plural, conjugated verb or proper-name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://dictionary.ge/en/search/circuit/",
+          "kind": "Dictionary.ge English–Georgian dictionary",
+          "sha256": "7f52cbb5b3388924a08841fb979c0b3453e7197227a98430185556c873f08e90"
+        }
+      ],
+      "id": "T10-006"
+    },
+    {
+      "word": "დაცული",
+      "length": 6,
+      "proposedMeaning": "protected",
+      "partOfSpeech": "adjective",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-20",
+      "editorialDecision": "Candidate for owner familiarity review; dictionary attestation is not automatic approval.",
+      "senseNotes": "Established descriptive participial adjective, not a conjugated verb or verbal action noun.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%93%E1%83%90%E1%83%AA%E1%83%A3%E1%83%9A%E1%83%98",
+          "kind": "Georgian explanatory dictionary",
+          "sha256": "bf391f23ad762dacc67397a33e8c33116b3471bf8ee9b5ed5a3a516763f5a414"
+        }
+      ],
+      "id": "T10-007"
+    },
+    {
+      "word": "ეტიუდი",
+      "length": 6,
+      "proposedMeaning": "short musical study or art sketch",
+      "partOfSpeech": "noun",
+      "ownerDecision": "rejected",
+      "sourceChecked": "2026-10-20",
+      "editorialDecision": "Candidate for owner familiarity review; dictionary attestation is not automatic approval.",
+      "senseNotes": "Singular noun or descriptive adjective sense only; no plural, conjugated verb or proper-name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%94%E1%83%A2%E1%83%98%E1%83%A3%E1%83%93%E1%83%98",
+          "kind": "Georgian explanatory dictionary",
+          "sha256": "7b6a2e029f73e896ec6c75bd565934ce76699c92118d7cc8ece2f5a6e7baf460"
+        }
+      ],
+      "id": "T10-008"
+    },
+    {
+      "word": "ზრდადი",
+      "length": 6,
+      "proposedMeaning": "increasing",
+      "partOfSpeech": "adjective",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-20",
+      "editorialDecision": "Candidate for owner familiarity review; dictionary attestation is not automatic approval.",
+      "senseNotes": "Singular noun or descriptive adjective sense only; no plural, conjugated verb or proper-name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%96%E1%83%A0%E1%83%93%E1%83%90%E1%83%93%E1%83%98",
+          "kind": "Georgian explanatory dictionary",
+          "sha256": "67d2fccb77984b7d7ee94161b7d2f82c1bffa8f7a9f0b779a80d7c588ddac3e9"
+        }
+      ],
+      "id": "T10-009"
+    },
+    {
+      "word": "კაიაკი",
+      "length": 6,
+      "proposedMeaning": "kayak",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-20",
+      "editorialDecision": "Candidate for owner familiarity review; dictionary attestation is not automatic approval.",
+      "senseNotes": "Singular noun or descriptive adjective sense only; no plural, conjugated verb or proper-name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://dictionary.ge/en/search/kayak/",
+          "kind": "Dictionary.ge English–Georgian dictionary",
+          "sha256": "5249c07df3d63aa132e1fcabad5a3bb83a2cd3b8f7da498da863341d3f4dbb2d"
+        }
+      ],
+      "id": "T10-010"
+    },
+    {
+      "word": "მწველი",
+      "length": 6,
+      "proposedMeaning": "scorching",
+      "partOfSpeech": "adjective",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-20",
+      "editorialDecision": "Candidate for owner familiarity review; dictionary attestation is not automatic approval.",
+      "senseNotes": "Established descriptive participial adjective, not a conjugated verb or verbal action noun.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%9B%E1%83%AC%E1%83%95%E1%83%94%E1%83%9A%E1%83%98",
+          "kind": "Georgian explanatory dictionary",
+          "sha256": "420432292b42747e08df62ed519a816ab6322f766db5953d0be2e167b71c9337"
+        }
+      ],
+      "id": "T10-011"
+    },
+    {
+      "word": "რიზოტო",
+      "length": 6,
+      "proposedMeaning": "risotto",
+      "partOfSpeech": "noun",
+      "ownerDecision": "rejected",
+      "sourceChecked": "2026-10-20",
+      "editorialDecision": "Candidate for owner familiarity review; dictionary attestation is not automatic approval.",
+      "senseNotes": "Singular noun or descriptive adjective sense only; no plural, conjugated verb or proper-name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://dictionary.ge/en/search/risotto/",
+          "kind": "Dictionary.ge English–Georgian dictionary",
+          "sha256": "58dd4cea42c63a6a2acd1d8de9a008d3d4c29372fecba2d699bc36a2a9615ff3"
+        }
+      ],
+      "id": "T10-012"
+    },
+    {
+      "word": "როლური",
+      "length": 6,
+      "proposedMeaning": "relating to a role, as in role-playing",
+      "partOfSpeech": "adjective",
+      "ownerDecision": "rejected",
+      "sourceChecked": "2026-10-20",
+      "editorialDecision": "Candidate for owner familiarity review; dictionary attestation is not automatic approval.",
+      "senseNotes": "Singular noun or descriptive adjective sense only; no plural, conjugated verb or proper-name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.nplg.gov.ge/gwdict/index.php?a=term&d=6&t=16704",
+          "kind": "Primary dictionary or educational reference",
+          "checkedVia": "Web source text inspected on 2026-10-20"
+        }
+      ],
+      "id": "T10-013"
+    },
+    {
+      "word": "საღეჭი",
+      "length": 6,
+      "proposedMeaning": "chewing gum",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-20",
+      "editorialDecision": "Candidate for owner familiarity review; dictionary attestation is not automatic approval.",
+      "senseNotes": "Concrete chewing-gum noun sense, marked colloquial by the university dictionary; not the act of chewing.",
+      "sources": [
+        {
+          "url": "https://dlab.ug.edu.ge/synonym/detail/13060/საღეჭი",
+          "kind": "Primary dictionary or educational reference",
+          "checkedVia": "Web source text inspected on 2026-10-20"
+        }
+      ],
+      "id": "T10-014"
+    },
+    {
+      "word": "ტატამი",
+      "length": 6,
+      "proposedMeaning": "tatami mat",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-20",
+      "editorialDecision": "Candidate for owner familiarity review; dictionary attestation is not automatic approval.",
+      "senseNotes": "Singular noun or descriptive adjective sense only; no plural, conjugated verb or proper-name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://dictionary.ge/en/search/tatami/",
+          "kind": "Dictionary.ge English–Georgian dictionary",
+          "sha256": "16491efcc375bbd478a014421f3cfa9dcc0eb3c5a7533459ef8b4f66a4fa6410"
+        }
+      ],
+      "id": "T10-015"
+    },
+    {
+      "word": "უბნელი",
+      "length": 6,
+      "proposedMeaning": "person from the same neighbourhood",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-20",
+      "editorialDecision": "Candidate for owner familiarity review; dictionary attestation is not automatic approval.",
+      "senseNotes": "Singular noun or descriptive adjective sense only; no plural, conjugated verb or proper-name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://ena.ge/elearning/131/__6.html",
+          "kind": "Primary dictionary or educational reference",
+          "checkedVia": "Web source text inspected on 2026-10-20"
+        }
+      ],
+      "id": "T10-016"
+    },
+    {
+      "word": "ყოფილი",
+      "length": 6,
+      "proposedMeaning": "former",
+      "partOfSpeech": "adjective",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-20",
+      "editorialDecision": "Candidate for owner familiarity review; dictionary attestation is not automatic approval.",
+      "senseNotes": "Established descriptive participial adjective, not a conjugated verb or verbal action noun.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A7%E1%83%9D%E1%83%A4%E1%83%98%E1%83%9A%E1%83%98",
+          "kind": "Georgian explanatory dictionary",
+          "sha256": "e98eece2b221862037ca378c5aaee99edc7341a79fb6115e2dc3fb4ab8c2feb3"
+        }
+      ],
+      "id": "T10-017"
+    },
+    {
+      "word": "ცხაური",
+      "length": 6,
+      "proposedMeaning": "grille or lattice",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-20",
+      "editorialDecision": "Candidate for owner familiarity review; dictionary attestation is not automatic approval.",
+      "senseNotes": "Singular noun or descriptive adjective sense only; no plural, conjugated verb or proper-name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.nplg.gov.ge/gwdict/index.php?a=term&d=16&t=5531",
+          "kind": "Primary dictionary or educational reference",
+          "checkedVia": "Web source text inspected on 2026-10-20"
+        }
+      ],
+      "id": "T10-018"
+    },
+    {
+      "word": "წერითი",
+      "length": 6,
+      "proposedMeaning": "written, as in a written exam",
+      "partOfSpeech": "adjective",
+      "ownerDecision": "rejected",
+      "sourceChecked": "2026-10-20",
+      "editorialDecision": "Candidate for owner familiarity review; dictionary attestation is not automatic approval.",
+      "senseNotes": "Singular noun or descriptive adjective sense only; no plural, conjugated verb or proper-name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%AC%E1%83%94%E1%83%A0%E1%83%98%E1%83%97%E1%83%98",
+          "kind": "Georgian explanatory dictionary",
+          "sha256": "c6a3e55a684ed83c46e2d9a3533e2cde5418f3ab6310a5d40f8be938401d5c5a"
+        }
+      ],
+      "id": "T10-019"
+    },
+    {
+      "word": "ჯამური",
+      "length": 6,
+      "proposedMeaning": "total or combined",
+      "partOfSpeech": "adjective",
+      "ownerDecision": "rejected",
+      "sourceChecked": "2026-10-20",
+      "editorialDecision": "Candidate for owner familiarity review; dictionary attestation is not automatic approval.",
+      "senseNotes": "Singular noun or descriptive adjective sense only; no plural, conjugated verb or proper-name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://techdict.ge/ka/letter/ka-ჯ/",
+          "kind": "Primary dictionary or educational reference",
+          "checkedVia": "Web source text inspected on 2026-10-20"
+        }
+      ],
+      "id": "T10-020"
+    }
+  ],
+  "approvedWords": [
+    "სეტი",
+    "ჰიტი",
+    "კექსი",
+    "სპრეი",
+    "წრედი",
+    "დაცული",
+    "ზრდადი",
+    "კაიაკი",
+    "მწველი",
+    "საღეჭი",
+    "ტატამი",
+    "უბნელი",
+    "ყოფილი",
+    "ცხაური"
+  ],
+  "approvedCount": 14,
+  "rejectedWords": ["ტოფუ", "ეტიუდი", "რიზოტო", "როლური", "წერითი", "ჯამური"],
+  "rejectedCount": 6,
+  "approvedPoolAfter": 2299,
+  "reviewNote": "Owner rejected six listed spellings and approved the other 14. Exclude rejected spellings from new required answers, variants and bonuses; preserve historical packs. Next proposals should focus on animals, foods and popular countries. Active revision 28 is unchanged."
+}

@@ -61,11 +61,21 @@ export const destinationCaptions: Readonly<Record<string, string>> = {
   granada: 'ალჰამბრის კედლებს მთების ფონზე მზე ათბობს.',
   cordoba: 'ქვის ხიდის თაღები მდინარეში ირეკლება.',
   seville: 'მოედნის თაღებს ფერადი კერამიკის ხიდი ამშვენებს.',
+  lagos: 'ოქროსფერი კლდეები ფირუზისფერ ზღვას გადაჰყურებს.',
+  lisbon: 'ყვითელი ტრამვაი ფერად სახლებს შორის მიუყვება ქუჩას.',
+  sintra: 'ფერადი სასახლე ტყიანი ბორცვის თავზე აღმართულა.',
+  porto: 'მდინარეზე ხიდი და ფერადი სახლები ირეკლება.',
+  tangier: 'თეთრი სახლების მიღმა ლურჯი ზღვა გადაშლილა.',
+  chefchaouen: 'ლურჯ ქუჩებს ყვავილები და მთების სილუეტები ამშვენებს.',
+  fez: 'ლურჯი კარიბჭის თაღი ძველ ქალაქში გვიხმობს.',
+  merzouga: 'უდაბნოს ქვიშას ჩამავალი მზე ოქროსფრად ანათებს.',
+  'ait-ben-haddou': 'თიხის კოშკებსა და კედლებს საღამოს მზე ათბობს.',
+  marrakech: 'საღამოს მოედანს ფარნების თბილი შუქი ეფინება.',
 };
 
 /**
- * One "იცოდი?" fact per journey stop, keyed by stop ID. Each was checked
- * against a source and approved by the owner; see docs/PLACE_FACTS.md.
+ * One "იცოდი?" fact per journey stop, keyed by stop ID. Source-checked facts accompany the owner-authorized destinations. Individual
+ * approval history and sources are recorded in docs/PLACE_FACTS.md.
  */
 export const placeFacts: Readonly<Record<string, string>> = {
   tbilisi: 'ქალაქს სახელი თბილი გოგირდის წყაროების გამო დაერქვა.',
@@ -142,4 +152,14 @@ export const placeFacts: Readonly<Record<string, string>> = {
   granada: 'გრანადის ალჰამბრა იუნესკოს მსოფლიო მემკვიდრეობის ძეგლია.',
   cordoba: 'კორდობის ძველ მეჩეთში დღეს კათედრალია.',
   seville: 'სევილიის ესპანეთის მოედანი 1929 წლის გამოფენისთვის აშენდა.',
+  lagos: 'ლაგუშთან პონტა-და-პიედადის სანაპირო კლდეებია.',
+  lisbon: 'ლისაბონი პორტუგალიის დედაქალაქია.',
+  sintra: 'პენას სასახლე სინტრის მთებში მდებარეობს.',
+  porto: 'პორტუ მდინარე დორუს ნაპირზე მდებარეობს.',
+  tangier: 'ტანჟერიდან გიბრალტარის სრუტე ჩანს.',
+  chefchaouen: 'შეფშაუენი ლურჯად შეღებილი სახლებითაა ცნობილი.',
+  fez: 'ფესის ძველი ქალაქი იუნესკოს მსოფლიო მემკვიდრეობის ძეგლია.',
+  merzouga: 'მერზუგასთან ერგ-შების ქვიშის დიუნებია.',
+  'ait-ben-haddou': 'აით-ბენ-ჰადუ თიხის არქიტექტურითაა ცნობილი.',
+  marrakech: 'ჯემა-ელ-ფნა მარაკეშის ცნობილი მოედანია.',
 };

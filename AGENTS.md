@@ -8,8 +8,16 @@ as the canonical rulebook; tool-specific instruction files should point here.
 ## Product name
 
 - The game is **Asobana**, displayed as **ასობანა** in the Georgian interface.
-  GeoWords was the working name. Preserve existing bundle, project, content-pack
-  and storage identifiers when updating branding so installs and saves carry over.
+  GeoWords was the working name. On 2026-10-20 the owner moved the app to the
+  bundle ID / Android package **`ge.spilogames.asobana`** and URL scheme
+  `asobana`, replacing `dev.geowords.prototype`. That is a new App Store app:
+  installs and saves of the old ID do not carry over, and TestFlight builds
+  0.1.0 (1)–(13) stay under the old App Store Connect record. Developer names
+  follow the brand (`asobana_generator`, `@asobana/mobile`, save file
+  `asobana.db`). By the owner's choice the Expo project slug stays `geowords`
+  (renaming needs a new EAS project) and the internal content-pack ID stays
+  `geowords-prototype` (it is in every save and frozen pack). Preserve these
+  identifiers from now on so installs and saves carry over.
 - The owner selected logo concept **01**: the navy-and-gold connected **A**.
   Vector masters and advertising exports live in `mobile/assets/branding/`;
   `scripts/build-branding.cjs` generates them and the app icon.
@@ -58,17 +66,136 @@ as the canonical rulebook; tool-specific instruction files should point here.
   words may recur freely; they do not reset this gap and must not award twice on
   one board. This owner decision supersedes the no-repetition language in
   `artifacts/codex-journey-campaign-prompt.md` and historical documents.
-- **Reducing repetition is the primary campaign optimization objective**, within
-  all vocabulary, 75-level gap, progression, layout and pacing rules. Maximize
-  distinct required spellings across the campaign first, then reduce words used
-  three/four times and prefer longer repeat gaps. Search unused approved words and
-  new wheels/crossings before reusing convenient words. The owner is willing to
-  review the full 800+ word pool and help expand it; prepare an explicit review
-  list when needed. Willingness to review is not approval of unreviewed additions.
-- The owner’s vocabulary expansion goal is **1,800 individually approved required
+- **Board variety is the primary objective for the owner-authorized 500-level
+  experiment**, superseding lifetime repetition minimization on 2026-10-20.
+  Keep the campaign-wide **75-level required-answer/variant gap**, approved
+  vocabulary, unique wheels, five answers, length progression, layout and pacing
+  rules. Prioritize different word combinations, avoid repeatedly grouping the
+  same words, vary wheel compositions and grid shapes, and distribute word reuse.
+  Report lifetime repetition as a descriptive metric, not a campaign-size cap.
+  Still prefer unused approved words when other variety measures are comparable.
+  The owner authorized a **draft test only** using the 2,195 approvals, excluding
+  skipped batch 07. Preserve the current 345 boards for this append-only trial,
+  show frequency counts and percentages, and obtain the owner's choice before
+  applying new levels. The active campaign remains at 345 levels.
+  [The 500-level result](docs/CAMPAIGN_500_VARIETY_RESULTS.md) passes both runtime
+  validators and an all-board solve. It has 1,610 distinct required words, 35.6%
+  lifetime repeated slots, at most four appearances per word, median repeat gap
+  209 and minimum 75. None of the 155 added boards reuses an earlier answer pair.
+  It remains an isolated draft; no destinations or production integration are approved.
+- The owner’s vocabulary expansion goal is **2,000 individually approved required
   words**. This is a planning target, not a guarantee of zero campaign repetition
-  or permission to relax any rule. Revision 26 contains **1,720 required approvals**;
-  another 80 approvals are needed to reach the target.
+  or permission to relax any rule. Revision 27 contains **1,997 required approvals** (277 additions since revision 26),
+  which was three below the target when generated. The subsequent targeted review
+  adds 78 approvals across two batches, reaching **2,075**; the 2,000-word planning target is met.
+  On 2026-10-20 the owner authorized the earlier generation trial at 1,997.
+  [The complete October 20 review](docs/VOCABULARY_EXPANSION_REVIEW_2026_10_20.json)
+  records the approved senses, 93 explicit exclusions and 41 unapproved alternatives.
+  Do not propose these reviewed spellings as unseen candidates. Preserve `კრიჭა`:
+  the owner explicitly excluded only `კროჭა`. Replace `თიკანი` with `ციკანი`,
+  `კალათი` with the already-approved `კალათა`, and `ნეკი` with `ნეკა`.
+  Both `მენჯი` and `მუნჯი` are approved; `მენჯი` was already in revision 26.
+  On 2026-10-20 the owner approved applying the exact 295-board trial as revision 27.
+  That revision-27 campaign uses 1,281 distinct required words, 194 repeated slots
+  (13.15%) and leaves 716 approvals unused. The 93 explicit exclusions apply from
+  revision 27 through `owner-oct20-expansion`; the 41 unselected alternatives remain
+  unapproved. Historical revision 26 stays immutable. The draft-only baseline-format
+  trial in `artifacts/vocabulary-trial-1997/` must never replace published revision 26.
+  The owner also authorized extension capacity experiments under all existing rules;
+  the owner subsequently selected and authorized the 50-level Portugal/Morocco extension in revision 28.
+  [Targeted batch 01](docs/VOCABULARY_TARGETED_BATCH_01.json) records **54 approved
+  senses and 46 unapproved alternatives** from 100 candidates. The exact 54-word
+  approval list is canonical; preserve the source-linked senses, including the
+  explicitly approved literary-labelled `აისი`. These 54 are integrated in revision 28; historical revision 27 retains 1,997 approvals and 295 boards.
+  Unselected alternatives are not explicit all-gameplay exclusions and must not be
+  presented again as unseen candidates. This review does not authorize treating
+  independent example boards as a validated campaign extension.
+  [Targeted batch 02](docs/VOCABULARY_TARGETED_BATCH_02.json) records **24 approved
+  senses and 26 unapproved alternatives**. Preserve the individual approved senses,
+  including source-labelled literary `დაისი` and historical `ხარკი`. Together the
+  targeted batches add 78 approvals, bringing the total to 2,075; all 78 are integrated in revision 28. Unselected words are not explicit all-gameplay exclusions.
+  The owner approved applying the validated 50-level extension with Portugal and
+  Morocco, backgrounds and postcards on 2026-10-20. Revision 28 contains 2,075
+  required approvals, 345 boards and 1,414 distinct answers (18.03% repeated slots).
+  [Targeted batch 03](docs/VOCABULARY_TARGETED_BATCH_03.json) records **10 approved
+  senses**: `გნომი`, `დაღი`, `ზორბა`, `ლახტი`, `ტლაპო`, `უბიწო`, `ქნარი`,
+  `ქეჩა`, `ცვარი` and `ძგიდე`. These await integration; total approvals are
+  **2,085** after that review, while active revision 28 retains 2,075. The other 40 candidates
+  remain unapproved for required use and must not be proposed again as new.
+  The owner found this batch too uncommon: future proposals must prioritize
+  familiar everyday vocabulary over short spelling or convenient board fit.
+  [Targeted batch 04](docs/VOCABULARY_TARGETED_BATCH_04.json) records **41 approved
+  senses and nine rejected spellings**: `დამბა`, `ტაქტი`, `ტრასა`, `თმიანი`,
+  `კოტიტა`, `ტყიანი`, `უმიზნო`, `ქაჩალი` and `მილაკი`. Exclude these nine
+  from new required answers, variants and bonuses; preserve historical content.
+  Together with batch 03, **51 approved additions** await integration, bringing
+  total approvals to **2,126**. The owner authorized an isolated append-only
+  generation experiment to measure additional levels and repetition under all
+  existing rules. This does not authorize promoting a new campaign or destinations.
+  [Targeted batch 05](docs/VOCABULARY_TARGETED_BATCH_05.json) records **34 approved
+  senses and 16 rejected batch spellings**: `მესერი`, `ხუჭუჭი`, `პაწაწა`,
+  `მეორე`, `მერვე`, `მეათე`, `ათმაგი`, `ასმაგი`, `უშუქო`, `უდენო`,
+  `უსუნო`, `უფრთო`, `უფულო`, `უტყეო`, `წაბლა` and `უძვლო`.
+  The owner additionally excludes `უტყუო`, which was not in that batch or the
+  approved pool. Exclude all 17 from new required answers, variants and bonuses.
+  Total approvals are **2,160**, including **85 awaiting integration**; active
+  revision 28 remains unchanged. Do not propose any reviewed spelling again as new.
+  [Targeted batch 06](docs/VOCABULARY_TARGETED_BATCH_06.json) records **35 approved
+  senses and 15 rejected spellings**: `ბებერა`, `გვიმრა`, `დიდედა`, `კოჟიჟი`,
+  `მჟაუნა`, `მუსონი`, `ნუშურა`, `პონჩო`, `პლუში`, `როკერი`, `სიშორე`,
+  `სიშავე`, `სიიაფე`, `სინელე` and `შიფონი`. The owner explicitly confirmed
+  that the typed removal `მუსიონი` meant `მუსონი`. Exclude these 15 from new
+  required answers, variants and bonuses. Total approvals are **2,195**, including
+  **120 awaiting integration**; active revision 28 remains unchanged. Prioritize
+  familiar short words in subsequent reviews; never substitute obscure filler.
+  [Targeted batch 07](docs/VOCABULARY_TARGETED_BATCH_07.json) was **skipped in full**
+  by the owner. All 50 remain unapproved; do not propose them again as unseen.
+  Skipping is not an explicit all-gameplay exclusion. The next capacity trial uses
+  only the **120 approved additions from targeted batches 03–06** (2,195 total).
+  [The isolated 2,195-word trial](docs/CAMPAIGN_EXTENSION_TRIAL_2195.json) validates
+  20 extra levels at **19.78% repetition** (365 total; +1.75 percentage points).
+  Ten extra levels stay within one percentage point; 50 reach 22.73%. These are
+  bounded-search results, not capacity limits or approval to apply an extension.
+  Active revision 28 remains at 345 levels; all production content is unchanged.
+  [Targeted batch 08](docs/VOCABULARY_TARGETED_BATCH_08.json) records **72 approved
+  senses and 28 rejected batch spellings**: `გონიო`, `ზიარი`, `სპორა`, `უფეხო`,
+  `უქმი`, `შლეგი`, `ძუძუ`, `ანგინა`, `ბლანკი`, `გრძივი`, `კაბარე`,
+  `კლერკი`, `კორომი`, `კუბური`, `ლეჩაქი`, `მაჟორი`, `მითური`, `მიწური`,
+  `ნათალი`, `ნაღარა`, `ნაყენი`, `ობლობა`, `სამხრე`, `უსიერი`, `უუნარო`,
+  `უფუარი`, `ფასონი` and `ღიაობა`. The owner explicitly requested excluding
+  **both `უფარო` and `უფუარი`**, so there are 29 new exclusions in total.
+  Exclude all 29 from new required answers, variants and bonuses; preserve
+  historical packs. Total approvals are **2,267**, including **192 awaiting
+  integration**; active revision 28 remains unchanged. Do not propose any of the
+  100 reviewed batch spellings again as new. Continue prioritizing everyday
+  vocabulary, with individually verified senses and owner review.
+  [Targeted batch 09](docs/VOCABULARY_TARGETED_BATCH_09.json) records **18 approved
+  senses and seven rejected spellings**: `ბრა`, `კარე`, `ბადია`, `იქაური`,
+  `ორიანი`, `ფინიკი` and `ქანთრი`. Exclude these seven from new required
+  answers, variants and bonuses; preserve historical packs. Total approvals are
+  **2,285**, including **210 awaiting integration**; active revision 28 remains
+  unchanged. Do not propose any of these 25 reviewed spellings again as new.
+  [Targeted batch 10](docs/VOCABULARY_TARGETED_BATCH_10.json) records **14 approved
+  senses and six rejected spellings**: `ტოფუ`, `ეტიუდი`, `რიზოტო`, `როლური`,
+  `წერითი` and `ჯამური`. Exclude these six from new required answers, variants
+  and bonuses; preserve historical packs. Total approvals are **2,299**, including
+  **224 awaiting integration**; active revision 28 remains unchanged. Do not
+  propose any of these 20 reviewed spellings again as new. The owner requested
+  animal names, food names and popular country names for the next review. Country
+  names may be proposed for individual approval within the 3–6-letter limit;
+  this category request does not approve individual countries or change runtime policy.
+  [Targeted batch 11](docs/VOCABULARY_TARGETED_BATCH_11.json) records **19 approved
+  country names**. The owner kept only countries and rejected `რუსეთი` (Russia),
+  plus all five animal and ten food candidates: `ლემური`, `მაკაკა`, `ციცარი`,
+  `ნუტრია`, `კეფალი`, `თათარა`, `ჩანახი`, `ფსტა`, `ბაგეტი`, `ბრი`,
+  `ფეტა`, `მაფინი`, `პაპაია`, `ოლადი` and `პესტო`. Exclude these 16
+  spellings from new required answers, variants and bonuses; preserve historical
+  packs. The exact 19 country spellings in the JSON are individually approved
+  for required use, subject to all other rules; this does not approve other
+  proper names. Total unique approvals are **2,318**, including **243 awaiting
+  integration**; active revision 28 retains 2,075. Do not propose any of these
+  35 reviewed spellings again as new. No new campaign or runtime policy is applied
+  by this review; integrate country eligibility in a future content revision.
   [Expansion batch 02](docs/VOCABULARY_EXPANSION_BATCH_02.json) contains 130 entirely
   new source-checked words with draft-board examples. The owner approved all 130
   for the main word list; revision 17 adds their recorded noun/adjective senses
@@ -172,11 +299,39 @@ as the canonical rulebook; tool-specific instruction files should point here.
   276–280**, **Granada (გრანადა), 281–285**, **Córdoba (კორდობა), 286–290**, and
   **Seville (სევილია), 291–295**, after Tunisia. Revision 23 retains all first
   265 boards exactly as revision 22. Maximize previously unused approved words
-  across the 150 new slots while preserving every other rule. The current route is
+  across the 150 new slots while preserving every other rule. That revision records the route in
   `content/journey-v23.json`; historical manifests remain immutable. Each Spain
   stop has its own generated background, postcard and owner-approved fact.
 
-- Maintain **295 levels in 59 journey stops, with five required answers each: 1,475
+- The owner approved Portugal and Morocco on 2026-10-20: append **Lagos (ლაგუში),
+  296–300; Lisbon (ლისაბონი), 301–305; Sintra (სინტრა), 306–310; Porto (პორტუ),
+  311–315; Tangier (ტანჟერი), 316–320; Chefchaouen (შეფშაუენი), 321–325;
+  Fez (ფესი), 326–330; Merzouga (მერზუგა), 331–335; Aït Ben Haddou
+  (აით-ბენ-ჰადუ), 336–340; Marrakech (მარაკეში), 341–345**. Revision 28
+  uses the exact selected 50-board trial. Preserve the first 295 required boards,
+  tiles, layouts, IDs and difficulty; expand eligible bonus recognition with the
+  78 targeted approvals. The current route is `content/journey-v28.json`.
+  Historical routes and packs remain immutable. Each stop has its own background,
+  postcard crop, Georgian caption and source-checked fact; provenance and prompts
+  are in [PORTUGAL_MOROCCO_ARTWORK.md](docs/PORTUGAL_MOROCCO_ARTWORK.md).
+  Existing saves, coins, hints, bonus credits and postcards must migrate intact.
+
+- The owner authorized a separate **eight-tile draft experiment** on 2026-10-20.
+  Preserve levels 1–345 and compare a 500-level campaign allowing seven or eight
+  tiles only at levels 346–500 with the prior seven-tile draft. Keep exactly five
+  approved 3–6-letter answers, the global 75-level gap, existing layout/pacing
+  and variety checks. Adjust only copied trial validators for the authorized
+  later wheel-size exception; check wheel touch geometry and report results
+  before any production application. Active revision 28 remains unchanged.
+  [The eight-tile result](docs/CAMPAIGN_500_EIGHT_TILE_RESULTS.md) validates 500
+  levels with 55 eight-tile additions and 100 seven-tile additions. It uses 1,666
+  distinct words at 33.36% lifetime repetition versus 1,610 and 35.6% in the
+  seven-tile variety draft. The minimum gap is 75, median 215 and maximum four
+  appearances per word. Phone wheel geometry passes at the existing minimum size;
+  this is not a device playtest. The experiment remains unbundled and unapproved
+  for production application.
+
+- Maintain **345 levels in 69 journey stops, with five required answers each: 1,725
   answer slots, with the 75-level repetition gap**.
   Required answers have 3–6 Georgian letters; no two-letter targets.
 - Provide actual five- and six-letter answers, not just larger letter wheels.
@@ -186,7 +341,7 @@ as the canonical rulebook; tool-specific instruction files should point here.
   in levels 16–25, eight in levels 26–40, and seven in levels 41–50. Every five-level stop from level 51 onward needs at least one six-letter board.
   The journey pack introduces five-letter words at level 3 and six-letter words at 18.
 - Preserve the gradual wheel progression: five tiles for levels 1–5, six for 6–25,
-  seven for 26–295 in the journey pack. Seven tiles do not permit seven-letter targets.
+  seven for 26–345 in the journey pack. Seven tiles do not permit seven-letter targets.
 - Preserve chapter challenge/recovery pacing: the third board is the chapter peak,
   the fourth is at least two difficulty points lower, and upward transitions are at
   most ten points. Difficulty estimates do not substitute for playtesting.
@@ -197,6 +352,11 @@ as the canonical rulebook; tool-specific instruction files should point here.
   never block completion. Preserve the bonus meter, rewards and destination postcards.
 
 ## Economy and saves
+
+- On 2026-10-20 the owner waived existing-player-progress preservation as a
+  requirement for applying the approved revision-27 draft. This permits a content
+  reset if needed, but does not request erasing saves. The existing migration path
+  remains usable; no new save system or reset behavior is required for this release.
 
 - The owner approved a **test banner at the bottom of the game screen** on
   2026-10-20. Use Google's demo banner only, in a reserved footer separated from
@@ -231,22 +391,22 @@ as the canonical rulebook; tool-specific instruction files should point here.
 
 ## Sources of truth
 
-Read these before editing content; current filenames below describe revision 26:
+Read these before editing content; current filenames below describe revision 28:
 
 - [Grammar and name exclusions](content/dictionaries/word-policy.json).
-- [Required-word allowlist and individual previous-word decisions](content/dictionaries/everyday-targets-v26.json).
-- [Reference dictionary](content/dictionaries/discovery-v26-ka.json) and
+- [Required-word allowlist and individual previous-word decisions](content/dictionaries/everyday-targets-v28.json).
+- [Reference dictionary](content/dictionaries/discovery-v28-ka.json) and
   [provenance/licensing](content/dictionaries/README.md).
-- [Journey vocabulary review and all 295 boards](docs/VOCABULARY_REVIEW_V26.md).
-- [Full vocabulary list for owner review](docs/VOCABULARY_OWNER_REVIEW_V26.md).
-- [Current journey manifest](content/journey-v23.json).
+- [Journey vocabulary review and all 345 boards](docs/VOCABULARY_REVIEW_V28.md).
+- [Full vocabulary list for owner review](docs/VOCABULARY_OWNER_REVIEW_V28.md).
+- [Current journey manifest](content/journey-v28.json).
 - [Spain artwork and generation prompts](docs/SPAIN_ARTWORK.md).
 - [Tunisia artwork and generation prompts](docs/TUNISIA_ARTWORK.md).
 - [Malta artwork and generation prompts](docs/MALTA_ARTWORK.md).
 - [Campaign rules and revision history](docs/DISCOVERY_CONTENT.md).
 - [Active catalog and historical packs](mobile/src/content/catalog.ts).
-- [Python word policy](puzzle-generator/src/geowords_generator/word_policy.py),
-  [Python release gates](puzzle-generator/src/geowords_generator/wide.py),
+- [Python word policy](puzzle-generator/src/asobana_generator/word_policy.py),
+  [Python release gates](puzzle-generator/src/asobana_generator/wide.py),
   [TypeScript word policy](mobile/src/content/wordPolicy.ts) and
   [TypeScript release gates](mobile/src/content/wide.ts).
 
@@ -270,7 +430,7 @@ grammar classifier: new vocabulary still needs the editorial review above.
    `uv run pytest`, `uv run ruff check .`, `uv run ruff format --check .` and
    `uv run mypy src` from `puzzle-generator`. Include meaningful coverage of vocabulary
    exclusions, rare bonuses, the 75-level gap, length progression, deterministic
-   rebuilding and save migration. Solve all 295 levels via `npm run validate:content`
+   rebuilding and save migration. Solve all 345 levels via `npm run validate:content`
    (also included in `npm run check`). For bundled mobile content changes, verify an
    iOS export from `mobile` with `npx expo export --platform ios`.
 5. Update the review and content documentation with actual results and limitations.

@@ -6,8 +6,8 @@ import json
 from pathlib import Path
 from typing import cast
 
-from geowords_generator.vocabulary import load_vocabulary
-from geowords_generator.wide import WideManifest, print_projections, rebuild_wide
+from asobana_generator.vocabulary import load_vocabulary
+from asobana_generator.wide import WideManifest, print_projections, rebuild_wide
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -39,8 +39,10 @@ def main() -> None:
             24,
             25,
             26,
+            27,
+            28,
         ),
-        default=26,
+        default=28,
     )
     parser.add_argument("--output", type=Path)
     parser.add_argument(
@@ -60,7 +62,11 @@ def main() -> None:
         ),
     )
     reference_revision = (
-        26
+        28
+        if args.revision >= 28
+        else 27
+        if args.revision >= 27
+        else 26
         if args.revision >= 26
         else 25
         if args.revision >= 25

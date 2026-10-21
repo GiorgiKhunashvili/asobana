@@ -6,10 +6,10 @@ from typing import cast
 
 import pytest
 
-from geowords_generator.discovery import JOURNEY, validate_required_gap
-from geowords_generator.models import PackJSON
-from geowords_generator.wide import WideManifest, rebuild_wide, validate_wide
-from geowords_generator.word_policy import playable_vocabulary
+from asobana_generator.discovery import JOURNEY, validate_required_gap
+from asobana_generator.models import PackJSON
+from asobana_generator.wide import WideManifest, rebuild_wide, validate_wide
+from asobana_generator.word_policy import playable_vocabulary
 
 ROOT = Path(__file__).resolve().parents[2]
 

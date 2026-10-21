@@ -1,0 +1,2307 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-20",
+  "status": "owner-reviewed-pending-integration",
+  "activeRevisionUnchanged": 28,
+  "candidateCount": 100,
+  "countsByLength": {
+    "4": 9,
+    "5": 23,
+    "6": 68
+  },
+  "method": "Downloaded Bumbeishvili and Crubadan plain-text lists and both Georgian FrequencyWords files. Removed exact Georgian strings recorded in every content/dictionaries JSON and docs/VOCABULARY*.json, including approvals, rejected alternatives, skipped proposals and historical references. Individually checked proposed senses; no new word is approved.",
+  "previouslyRecordedSpellings": 4559,
+  "rawUnseenShortStrings": 37445,
+  "rawUnseenByLength": {
+    "3": 1818,
+    "4": 5263,
+    "5": 11993,
+    "6": 18371
+  },
+  "frequencyWarning": "Downloaded subtitle frequency files contain many apparently garbled Georgian-letter strings; their frequency counts were not used to rank everyday familiarity. All selected words also occur in Bumbeishvili or Crubadan.",
+  "limitations": "Owner review is complete: 72 approved, 28 rejected, plus უფარო explicitly excluded. No new boards generated, capacity/repetition improvement not measured, and active revision 28 remains unchanged. Some source pages returned HTTP 410 to download; primary-source indexed text was inspected via web search as recorded.",
+  "attribution": "Discovery sources: Dato Bumbeishvili (MIT), Kevin Scannell/Crubadan (CC BY 4.0), hermitdave FrequencyWords/OpenSubtitles (CC BY-SA 4.0). Definition checks: Georgian explanatory dictionary/Linguistic Technologies Group; Wiktionary contributors (CC BY-SA 4.0); NPLG dictionaries; ena.ge; Dictionary.ge; Ilia State University Georgian Sign Language Dictionary. Short adapted English glosses only; source rights remain with their publishers. Download URLs and SHA-256 records are in artifacts/vocabulary-targeted-08/downloads.json.",
+  "entries": [
+    {
+      "id": "T08-001",
+      "word": "ბუტია",
+      "length": 5,
+      "proposedMeaning": "easily offended; sulky",
+      "partOfSpeech": "adjective",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%91%E1%83%A3%E1%83%A2%E1%83%98%E1%83%90",
+          "sha256": "05ed2d40f19aed1139b52aeb50509c618e71bd00f04d0ed3f781ee5646fb5a0a",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-002",
+      "word": "ბუღი",
+      "length": 4,
+      "proposedMeaning": "cloud of dust or heat haze",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%91%E1%83%A3%E1%83%A6%E1%83%98",
+          "sha256": "018216a681f1bce0f8e602f239f3c691b4e8bae063fd581c31e499c49abea5fc",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-003",
+      "word": "გეტო",
+      "length": 4,
+      "proposedMeaning": "segregated urban district",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt", "crubadan.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%92%E1%83%94%E1%83%A2%E1%83%9D",
+          "sha256": "79318509b855ecf0c678fb4067b8ec568421b2b052671d2c886a10e35a07454c",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        },
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%92%E1%83%94%E1%83%A2%E1%83%9D?oldid=84097896",
+          "revisionId": 84097896,
+          "sha256": "21c8b0df83bace7cf43ca430e2258cb1b6ea6f8ab6330e9d8e3b7d6c7e2d6639",
+          "kind": "Wiktionary Georgian entry",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-004",
+      "word": "გონიო",
+      "length": 5,
+      "proposedMeaning": "set square",
+      "partOfSpeech": "noun",
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Measuring tool (set square), not the place name.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%92%E1%83%9D%E1%83%9C%E1%83%98%E1%83%9D",
+          "sha256": "e8c03ba647903153cfb4be4a59e41b5db208e2e6fc690c1da30e53ffd4a34241",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        },
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%92%E1%83%9D%E1%83%9C%E1%83%98%E1%83%9D?oldid=91570718",
+          "revisionId": 91570718,
+          "sha256": "da985d280cfdcc712e7bb23c31b11908c5980d10c0704bc93f372b1566d48a9c",
+          "kind": "Wiktionary Georgian entry",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-005",
+      "word": "დარდი",
+      "length": 5,
+      "proposedMeaning": "worry; sorrow",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Emotional-state noun (worry/sorrow), not an action or conjugated verb.",
+      "discoveredIn": ["bumbeishvili.txt", "ka_full.txt", "ka_50k.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%93%E1%83%90%E1%83%A0%E1%83%93%E1%83%98",
+          "sha256": "9ea3a0e423158a012f16a17a6122836ad9e58c272fd72f0cd73a86fe01581c79",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        },
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%93%E1%83%90%E1%83%A0%E1%83%93%E1%83%98?oldid=88393929",
+          "revisionId": 88393929,
+          "sha256": "4f32fff0ba5b0464717157eefd82617f2e731b781ebe0b8399ba1c7b0499b5a6",
+          "kind": "Wiktionary Georgian entry",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-006",
+      "word": "დუბლი",
+      "length": 5,
+      "proposedMeaning": "another take of a film scene",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["crubadan.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%93%E1%83%A3%E1%83%91%E1%83%9A%E1%83%98",
+          "sha256": "4239583e90a971b33a67974974cd2b2bbfa77b47fe88d97f383ae94e6219268e",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-007",
+      "word": "დუჟი",
+      "length": 4,
+      "proposedMeaning": "froth at the mouth",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%93%E1%83%A3%E1%83%9F%E1%83%98",
+          "sha256": "98526b66c5830e41a4d2cac75c29cf2b0ce6b534593dc5cc20990099bd8a07e8",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-008",
+      "word": "ეპოსი",
+      "length": 5,
+      "proposedMeaning": "epic literature",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%94%E1%83%9E%E1%83%9D%E1%83%A1%E1%83%98",
+          "sha256": "385103ebed14ad622ed63b7b319e5af836274a5ca60fd251fcbcf1118c9d5e5f",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-009",
+      "word": "ზიარი",
+      "length": 5,
+      "proposedMeaning": "shared; jointly owned",
+      "partOfSpeech": "adjective",
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%96%E1%83%98%E1%83%90%E1%83%A0%E1%83%98",
+          "sha256": "4868855977cc48b4eeb1d924e695b180a49289b97b56e1ef0c41bdf659240ff9",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-010",
+      "word": "კედი",
+      "length": 4,
+      "proposedMeaning": "canvas sports shoe",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Singular shoe headword. Plural კედები is not proposed.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%99%E1%83%94%E1%83%93%E1%83%98",
+          "sha256": "f98ee3506fc3eec655ded966401226855348439bdaabdc0d6f03446dc89e80f5",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-011",
+      "word": "კეპი",
+      "length": 4,
+      "proposedMeaning": "peaked cap",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%99%E1%83%94%E1%83%9E%E1%83%98",
+          "sha256": "531b2924ea2287c3cb37471dae4c886bab6e14dbbed416d0295903eba0e64d98",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        },
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%99%E1%83%94%E1%83%9E%E1%83%98?oldid=84099077",
+          "revisionId": 84099077,
+          "sha256": "4949e4b899feb80b78db8f7d3a0c8af33bbfcb70ebca11018289aa7477b58932",
+          "kind": "Wiktionary Georgian entry",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-012",
+      "word": "მდორე",
+      "length": 5,
+      "proposedMeaning": "slow-flowing",
+      "partOfSpeech": "adjective",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%9B%E1%83%93%E1%83%9D%E1%83%A0%E1%83%94",
+          "sha256": "1e44d8510cc1dc0712481a86b831c98aa917d063abd6b414255da360bedd7c98",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-013",
+      "word": "მოლა",
+      "length": 4,
+      "proposedMeaning": "Muslim religious cleric",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%9B%E1%83%9D%E1%83%9A%E1%83%90",
+          "sha256": "8c24b97a4e1a942cd69a261100c9a76804cee3650ec43208404d440e909cd8b7",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-014",
+      "word": "სპორა",
+      "length": 5,
+      "proposedMeaning": "spore",
+      "partOfSpeech": "noun",
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%A1%E1%83%9E%E1%83%9D%E1%83%A0%E1%83%90?oldid=84101676",
+          "revisionId": 84101676,
+          "sha256": "d9a56d5a7525abd0a059064b51cffba4c7a063ac9ff0fdc2fcb39f5b1fcee899",
+          "kind": "Wiktionary Georgian entry",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-015",
+      "word": "უკუდო",
+      "length": 5,
+      "proposedMeaning": "tailless",
+      "partOfSpeech": "adjective",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["crubadan.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%99%E1%83%A3%E1%83%93%E1%83%9D",
+          "sha256": "7ef89638bdd465e304fac296d06d0fb5f63e569e01d05eeb5fcccadfc66f3270",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-016",
+      "word": "უსულო",
+      "length": 5,
+      "proposedMeaning": "inanimate",
+      "partOfSpeech": "adjective",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%A1%E1%83%A3%E1%83%9A%E1%83%9D",
+          "sha256": "39dbebced067767fb40ba2046f4cff5e5b298b0f24ce6063ed53654f24a5a8c5",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-017",
+      "word": "უფეხო",
+      "length": 5,
+      "proposedMeaning": "legless",
+      "partOfSpeech": "adjective",
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["crubadan.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%A4%E1%83%94%E1%83%AE%E1%83%9D",
+          "sha256": "09da65303074618b0bda1381467e4d93097701e3eeb8f4af3fd6db35c936e086",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-018",
+      "word": "უქმი",
+      "length": 4,
+      "proposedMeaning": "idle; unproductive",
+      "partOfSpeech": "adjective",
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Idle/unproductive sense verified; not a new word for holiday.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://gesl.iliauni.edu.ge/uqmi/",
+          "sha256": "254bdd0b3ea3f6cc35e6b3ac6c80378ef93e5b7138fe966ed5457f86cb60b989",
+          "file": "custom-უქმი.html",
+          "checked": "2026-10-20",
+          "kind": "primary dictionary or usage source",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-019",
+      "word": "უღონო",
+      "length": 5,
+      "proposedMeaning": "without strength",
+      "partOfSpeech": "adjective",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%A6%E1%83%9D%E1%83%9C%E1%83%9D",
+          "sha256": "7cf991f7c90af5d5182fabd6c04466e36b915b357e7503f57d99b93f94d634ba",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-020",
+      "word": "ფანი",
+      "length": 4,
+      "proposedMeaning": "enthusiastic supporter",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Supporter sense corroborated by ena.ge teaching vocabulary and the NPLG school orthographic index; not the unrelated Svan bread sense.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://ena.ge/elearning/81/__5.html",
+          "sha256": "45bc5a41fe9cfe9248f33e94d5ea859dea302b95b78ab718f5ca4820a13540de",
+          "file": "custom-ფანი.html",
+          "checked": "2026-10-20",
+          "kind": "primary dictionary or usage source",
+          "sourceChecked": "2026-10-20"
+        },
+        {
+          "url": "https://www.nplg.gov.ge/saskolo/index.php?a=contents&d=42",
+          "error": "HTTP Error 410: Gone",
+          "verification": "web search primary-source result inspected",
+          "kind": "school orthographic dictionary"
+        }
+      ]
+    },
+    {
+      "id": "T08-021",
+      "word": "ფარსი",
+      "length": 5,
+      "proposedMeaning": "farce",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt", "crubadan.txt"],
+      "sources": [
+        {
+          "url": "https://www.nplg.gov.ge/greenstone3/halftone-library/collection/lexikonebi/document/HASH4bbd21f80bb6dd386893ca?ed=1",
+          "error": "HTTP Error 410: Gone",
+          "verification": "web search primary-source result inspected",
+          "kind": "primary dictionary or usage source",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-022",
+      "word": "ფაქსი",
+      "length": 5,
+      "proposedMeaning": "fax",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A4%E1%83%90%E1%83%A5%E1%83%A1%E1%83%98",
+          "sha256": "c5d2ea453f1721db95e94a6e79eee1957b3a3af003e109aa6eea04ca658482ff",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-023",
+      "word": "ფიჩხი",
+      "length": 5,
+      "proposedMeaning": "dry twigs; kindling",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A4%E1%83%98%E1%83%A9%E1%83%AE%E1%83%98",
+          "sha256": "eeceb674c9fe7049e8fe327d26d32767f720e0eb961bc6e8a139aa33ff6fe242",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-024",
+      "word": "ქიშპი",
+      "length": 5,
+      "proposedMeaning": "rivalry",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A5%E1%83%98%E1%83%A8%E1%83%9E%E1%83%98",
+          "sha256": "d6fa300b2ee145dc1f38debd9163b08d1311f3ab379896f2d1d7e2613f7fa466",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-025",
+      "word": "შაირი",
+      "length": 5,
+      "proposedMeaning": "humorous verse; sixteen-syllable verse",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A8%E1%83%90%E1%83%98%E1%83%A0%E1%83%98",
+          "sha256": "a041f7cc6cd840a5189a6778b2a50838a1d4edbdc14189f8821325610e7e5193",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-026",
+      "word": "შლეგი",
+      "length": 5,
+      "proposedMeaning": "wild; frenzied",
+      "partOfSpeech": "adjective",
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A8%E1%83%9A%E1%83%94%E1%83%92%E1%83%98",
+          "sha256": "a6702d99f93db7ba5a3cbdb5fc24b57746704a04dabd8ebe5e37c86029e22d1f",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-027",
+      "word": "შფოთი",
+      "length": 5,
+      "proposedMeaning": "unrest; agitation",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A8%E1%83%A4%E1%83%9D%E1%83%97%E1%83%98",
+          "sha256": "6343ee830e889ae2b7e427860ed60f7f596b8313ab48b553cc58540282c434cb",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-028",
+      "word": "ძმობა",
+      "length": 5,
+      "proposedMeaning": "brotherhood",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Relationship noun (brotherhood), not a verb or a plural.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%AB%E1%83%9B%E1%83%9D%E1%83%91%E1%83%90",
+          "sha256": "d660311dac606f73cb2feea1be24e6933a8ef839116b8b1a06efa433d7914caf",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        },
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%AB%E1%83%9B%E1%83%9D%E1%83%91%E1%83%90?oldid=84102845",
+          "revisionId": 84102845,
+          "sha256": "fd1a4bce4f836257ae9016ed654f9c5f2681f0658d476204c376789de7795477",
+          "kind": "Wiktionary Georgian entry",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-029",
+      "word": "ძუძუ",
+      "length": 4,
+      "proposedMeaning": "breast; mammary gland",
+      "partOfSpeech": "noun",
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%AB%E1%83%A3%E1%83%AB%E1%83%A3",
+          "sha256": "c25818e1b3a6102fd3a5e9e1b65f5ef8ab4e6cc9c5933e34be3945d7b3a71c54",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        },
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%AB%E1%83%A3%E1%83%AB%E1%83%A3?oldid=86609706",
+          "revisionId": 86609706,
+          "sha256": "c8ed147845d34834f921ced34b447f1c4d9c8947df23a32d21c5aeacb352dc67",
+          "kind": "Wiktionary Georgian entry",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-030",
+      "word": "წიწვი",
+      "length": 5,
+      "proposedMeaning": "conifer needle",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%AC%E1%83%98%E1%83%AC%E1%83%95%E1%83%98",
+          "sha256": "d4dd74ee4417dd5b4e0767e14fa8734efaaa71d700e3bf3ab1c3c49d6cd9c751",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-031",
+      "word": "წნული",
+      "length": 5,
+      "proposedMeaning": "woven; wicker",
+      "partOfSpeech": "adjective",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Material/texture adjective (woven/wicker); not a conjugated verb.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%AC%E1%83%9C%E1%83%A3%E1%83%9A%E1%83%98",
+          "sha256": "59bbc51e796b38698896bc6e36557abda575b5653a17fdcf58ec7a563549e6fb",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-032",
+      "word": "ხვადი",
+      "length": 5,
+      "proposedMeaning": "male animal",
+      "partOfSpeech": "adjective",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%AE%E1%83%95%E1%83%90%E1%83%93%E1%83%98",
+          "sha256": "fc513d181e71770e5f961781870f0aeb2e206f41a51f41245914a393245383a7",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-033",
+      "word": "ამბოხი",
+      "length": 6,
+      "proposedMeaning": "rebellion",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%90%E1%83%9B%E1%83%91%E1%83%9D%E1%83%AE%E1%83%98",
+          "sha256": "2daddbc525f1a4b97bf4648811ef35621259a57f36c40b6b48ff86a11534493a",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        },
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%90%E1%83%9B%E1%83%91%E1%83%9D%E1%83%AE%E1%83%98?oldid=84112522",
+          "revisionId": 84112522,
+          "sha256": "1f2665fb00f6c5a779d42ce1bfcf5780b14d3127afe2ee8ea1990ca2cded6012",
+          "kind": "Wiktionary Georgian entry",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-034",
+      "word": "ანგინა",
+      "length": 6,
+      "proposedMeaning": "throat inflammation",
+      "partOfSpeech": "noun",
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%90%E1%83%9C%E1%83%92%E1%83%98%E1%83%9C%E1%83%90",
+          "sha256": "5ac031536b59f617215a84b728799fd4bcf01c3b27e2285e1fdfa40a5dd6685b",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        },
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%90%E1%83%9C%E1%83%92%E1%83%98%E1%83%9C%E1%83%90?oldid=84097327",
+          "revisionId": 84097327,
+          "sha256": "8d270f2a4219cb40b26faa5fd8ff2b4684b75f26a7c5c72bc0683b15360086d0",
+          "kind": "Wiktionary Georgian entry",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-035",
+      "word": "ასორტი",
+      "length": 6,
+      "proposedMeaning": "assortment of foods",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%90%E1%83%A1%E1%83%9D%E1%83%A0%E1%83%A2%E1%83%98?oldid=84096938",
+          "revisionId": 84096938,
+          "sha256": "41b45811809c26d8491dced7f8d9c43e0651150a2e3417fe4b843f929be1251f",
+          "kind": "Wiktionary Georgian entry",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-036",
+      "word": "ბალანი",
+      "length": 6,
+      "proposedMeaning": "animal fur; body hair",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%91%E1%83%90%E1%83%9A%E1%83%90%E1%83%9C%E1%83%98",
+          "sha256": "f2ed20945f7219d8464391754b4594ab90c55bae205b25f871d530d203c6d8b5",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        },
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%91%E1%83%90%E1%83%9A%E1%83%90%E1%83%9C%E1%83%98?oldid=84113309",
+          "revisionId": 84113309,
+          "sha256": "4d3aa4b01fefced3390feeaa1630e60df4f5c6bd2c33a0b0be80d6557d5fda05",
+          "kind": "Wiktionary Georgian entry",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-037",
+      "word": "ბეკეკა",
+      "length": 6,
+      "proposedMeaning": "lamb or kid (affectionate)",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Source labels this an affectionate word for a lamb/kid. Child/family vocabulary, subject to owner familiarity review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%91%E1%83%94%E1%83%99%E1%83%94%E1%83%99%E1%83%90",
+          "sha256": "ea82066ad5f0ae5151fd05d209c280a4472032f4699f8afb3c36ef13528fd765",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-038",
+      "word": "ბლანკი",
+      "length": 6,
+      "proposedMeaning": "form to fill in",
+      "partOfSpeech": "noun",
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%91%E1%83%9A%E1%83%90%E1%83%9C%E1%83%99%E1%83%98",
+          "sha256": "ab59e06dc318e393b64f2567d9c748ca7feed6dc3ffbe9abf79e5f3cbe2128e8",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        },
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%91%E1%83%9A%E1%83%90%E1%83%9C%E1%83%99%E1%83%98?oldid=84097697",
+          "revisionId": 84097697,
+          "sha256": "105527ed686d4db61b9565a4e7de13ecb927700e350bbb6eccb1c4c341d683c7",
+          "kind": "Wiktionary Georgian entry",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-039",
+      "word": "ბრაუნი",
+      "length": 6,
+      "proposedMeaning": "chocolate brownie",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Food noun (brownie), not a surname. Georgian spelling and bilingual food sense attested in a restaurant menu and a Sakpatenti publication. New food loan; owner suitability review remains pending.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://cafemziuri.ge/wp-content/uploads/2025/04/%E1%83%9B%E1%83%94%E1%83%9C%E1%83%98%E1%83%A3-%E1%83%90%E1%83%9E%E1%83%A0%E1%83%98%E1%83%9A%E1%83%98-2025-01.pdf",
+          "sha256": "d3f023319f1286b1bdc48b77896445dd9312e2020f2bc8d13e002e2c29921ce1",
+          "file": "custom-ბრაუნი.pdf",
+          "checked": "2026-10-20",
+          "kind": "primary dictionary or usage source",
+          "sourceChecked": "2026-10-20"
+        },
+        {
+          "url": "https://www.sakpatenti.gov.ge/media/publication_pdf/BL192023.pdf",
+          "sha256": "d30956493ae41cd7e37b0da46abe872ab9e8f41213a90c91685b5c323c9fe618",
+          "file": "custom-ბრაუნი-official-attestation.pdf",
+          "checked": "2026-10-20",
+          "kind": "official Georgian publication"
+        }
+      ]
+    },
+    {
+      "id": "T08-040",
+      "word": "ბუტიკი",
+      "length": 6,
+      "proposedMeaning": "boutique",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["crubadan.txt"],
+      "sources": [
+        {
+          "url": "https://dictionary.ge/ka/word/salon/?ui=v2",
+          "sha256": "5936740924320c28b8ff628256ad9b654100bae7e85e99145ab90e090a4d4e89",
+          "file": "custom-ბუტიკი.html",
+          "checked": "2026-10-20",
+          "kind": "primary dictionary or usage source",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-041",
+      "word": "განედი",
+      "length": 6,
+      "proposedMeaning": "latitude",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%92%E1%83%90%E1%83%9C%E1%83%94%E1%83%93%E1%83%98",
+          "sha256": "3de0a14971f0b5abc95ee0761a65924fef4bff57d8e45752fddb6aab5310c0c6",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        },
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%92%E1%83%90%E1%83%9C%E1%83%94%E1%83%93%E1%83%98?oldid=84097842",
+          "revisionId": 84097842,
+          "sha256": "08fad48c78c6c5e1c0f17a20997e5ea9d0363dab20387b19c699c072d148b33c",
+          "kind": "Wiktionary Georgian entry",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-042",
+      "word": "განივი",
+      "length": 6,
+      "proposedMeaning": "transverse; crosswise",
+      "partOfSpeech": "adjective",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%92%E1%83%90%E1%83%9C%E1%83%98%E1%83%95%E1%83%98",
+          "sha256": "9caccea80d8e0622d7c0386a3d98020eee1229792bae613ce5d29bcb907d80a6",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-043",
+      "word": "გრძედი",
+      "length": 6,
+      "proposedMeaning": "longitude",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%92%E1%83%A0%E1%83%AB%E1%83%94%E1%83%93%E1%83%98",
+          "sha256": "ab99e94051f92719f5be1db2284c23efd6ea0391c91c22ff56d2a98ae071fde5",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        },
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%92%E1%83%A0%E1%83%AB%E1%83%94%E1%83%93%E1%83%98?oldid=84097984",
+          "revisionId": 84097984,
+          "sha256": "cce2fd7ae8cca7f8a496afea44a4cdc51d58c41e974a6b7c7b8c9580ca8df4f3",
+          "kind": "Wiktionary Georgian entry",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-044",
+      "word": "გრძივი",
+      "length": 6,
+      "proposedMeaning": "lengthwise",
+      "partOfSpeech": "adjective",
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%92%E1%83%A0%E1%83%AB%E1%83%98%E1%83%95%E1%83%98",
+          "sha256": "bf1c927a744a24ec9ee9f83233f2d80d03e9776972550ff8b6b2cd9f21ada1fe",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-045",
+      "word": "დრუნჩი",
+      "length": 6,
+      "proposedMeaning": "animal muzzle; snout",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%93%E1%83%A0%E1%83%A3%E1%83%9C%E1%83%A9%E1%83%98",
+          "sha256": "e0e285314970b2b6d56ef21309d97cbf9402e7d0a12e5b8224319afbfc969199",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        },
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%93%E1%83%A0%E1%83%A3%E1%83%9C%E1%83%A9%E1%83%98?oldid=92499923",
+          "revisionId": 92499923,
+          "sha256": "e3590a3f2742dcdb4f1d7d85cc7f10959ed2114e8eec9dbada109a350f8fcdf7",
+          "kind": "Wiktionary Georgian entry",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-046",
+      "word": "ეთნოსი",
+      "length": 6,
+      "proposedMeaning": "ethnic group",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["crubadan.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%94%E1%83%97%E1%83%9C%E1%83%9D%E1%83%A1%E1%83%98",
+          "sha256": "7aacbeaa9d1e986dbc0b55f3320a271560a9d3ac89e0c9c31aa9f423765a800d",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-047",
+      "word": "ზნეობა",
+      "length": 6,
+      "proposedMeaning": "morality",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%96%E1%83%9C%E1%83%94%E1%83%9D%E1%83%91%E1%83%90",
+          "sha256": "fa7c2349a1ad9637c9384b6c2c02af99685666dca0577bac514fa2488b1e04cc",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        },
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%96%E1%83%9C%E1%83%94%E1%83%9D%E1%83%91%E1%83%90?oldid=88644592",
+          "revisionId": 88644592,
+          "sha256": "bcab5d3450f82dc200a19e3d361f64d2bdc7d7fdf45a2720fbf2dab28ded46aa",
+          "kind": "Wiktionary Georgian entry",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-048",
+      "word": "ზრდილი",
+      "length": 6,
+      "proposedMeaning": "polite; well-mannered",
+      "partOfSpeech": "adjective",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Established character adjective (polite); not a conjugated verb.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%96%E1%83%A0%E1%83%93%E1%83%98%E1%83%9A%E1%83%98",
+          "sha256": "27173916a3d4aee445a422ac426bd457c53357aa7d7ef79831df013123ed1c11",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-049",
+      "word": "თეზისი",
+      "length": 6,
+      "proposedMeaning": "thesis; proposition",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%97%E1%83%94%E1%83%96%E1%83%98%E1%83%A1%E1%83%98",
+          "sha256": "b78c34aa03e6583fbd7eb7040ff62c59f526791603166803e1a952e7299bd084",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        },
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%97%E1%83%94%E1%83%96%E1%83%98%E1%83%A1%E1%83%98?oldid=84115536",
+          "revisionId": 84115536,
+          "sha256": "515037fdbc809485e31d65880fff7f3f5a10a12cd6368da8d6f236311ef718cc",
+          "kind": "Wiktionary Georgian entry",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-050",
+      "word": "იდილია",
+      "length": 6,
+      "proposedMeaning": "peaceful, harmonious life",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%98%E1%83%93%E1%83%98%E1%83%9A%E1%83%98%E1%83%90",
+          "sha256": "bf09af02ad615f10756f52a968cf7ba579b875ea36e7fb32fd56c18291672006",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        },
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%98%E1%83%93%E1%83%98%E1%83%9A%E1%83%98%E1%83%90?oldid=84098757",
+          "revisionId": 84098757,
+          "sha256": "3631584a82c48972591ce514b4354613f73fd18445b3984e3ab96b32c1790295",
+          "kind": "Wiktionary Georgian entry",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-051",
+      "word": "იერიში",
+      "length": 6,
+      "proposedMeaning": "assault; offensive",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%98%E1%83%94%E1%83%A0%E1%83%98%E1%83%A8%E1%83%98",
+          "sha256": "46b1f0460bff4a937ce3e9e0629e78a9f70f4e522d3157510f6420069cedbd85",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        },
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%98%E1%83%94%E1%83%A0%E1%83%98%E1%83%A8%E1%83%98?oldid=84098765",
+          "revisionId": 84098765,
+          "sha256": "5863d8dd96d6569120562e1e04726286913cf780f2112e5fc89e405a3dbe9ae3",
+          "kind": "Wiktionary Georgian entry",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-052",
+      "word": "კაბარე",
+      "length": 6,
+      "proposedMeaning": "cabaret",
+      "partOfSpeech": "noun",
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%99%E1%83%90%E1%83%91%E1%83%90%E1%83%A0%E1%83%94?oldid=84098909",
+          "revisionId": 84098909,
+          "sha256": "2ba24e8a7f13c33f1022e3b9583e0e3aa82b56f420bbf096355aa9829a9dd701",
+          "kind": "Wiktionary Georgian entry",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-053",
+      "word": "კლერკი",
+      "length": 6,
+      "proposedMeaning": "clerk",
+      "partOfSpeech": "noun",
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["crubadan.txt"],
+      "sources": [
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%99%E1%83%9A%E1%83%94%E1%83%A0%E1%83%99%E1%83%98?oldid=84099145",
+          "revisionId": 84099145,
+          "sha256": "60437d80d6d31b790a479a9239dfc6bb895eaeab7d55df839a6b7a1eaf39f028",
+          "kind": "Wiktionary Georgian entry",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-054",
+      "word": "კოზირი",
+      "length": 6,
+      "proposedMeaning": "trump card",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%99%E1%83%9D%E1%83%96%E1%83%98%E1%83%A0%E1%83%98",
+          "sha256": "38bc22119f355a4a1634c6c7118c1e6d0d378a080998baea013cff7bb06ce649",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        },
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%99%E1%83%9D%E1%83%96%E1%83%98%E1%83%A0%E1%83%98?oldid=84116224",
+          "revisionId": 84116224,
+          "sha256": "0edf23986132c05e8f0c2c1f2d875be772bf544c2b0314f4f94a9bdeeb87733f",
+          "kind": "Wiktionary Georgian entry",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-055",
+      "word": "კოლაჟი",
+      "length": 6,
+      "proposedMeaning": "collage",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["crubadan.txt"],
+      "sources": [
+        {
+          "url": "https://www.nplg.gov.ge/greenstone3/halftone-library/collection/saskolo/document/HASH8b6ac21158649b8b2d652f?ed=1",
+          "error": "HTTP Error 410: Gone",
+          "verification": "web search primary-source result inspected",
+          "kind": "primary dictionary or usage source",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-056",
+      "word": "კორომი",
+      "length": 6,
+      "proposedMeaning": "grove",
+      "partOfSpeech": "noun",
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%99%E1%83%9D%E1%83%A0%E1%83%9D%E1%83%9B%E1%83%98",
+          "sha256": "34188605aa76bf449802cf01c37197e298441c65a53bf782ec2f374597934aef",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-057",
+      "word": "კუბური",
+      "length": 6,
+      "proposedMeaning": "cubic",
+      "partOfSpeech": "adjective",
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%99%E1%83%A3%E1%83%91%E1%83%A3%E1%83%A0%E1%83%98",
+          "sha256": "3fb05f4250672b07e043bba97e28a3b270f35cdaa3e02c57213d8ecd5a1cdef8",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-058",
+      "word": "ლეჩაქი",
+      "length": 6,
+      "proposedMeaning": "traditional Georgian woman's head covering",
+      "partOfSpeech": "noun",
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%9A%E1%83%94%E1%83%A9%E1%83%90%E1%83%A5%E1%83%98",
+          "sha256": "49468dffbf52ea570d98b3db5c01efc0242e87ada2f8beee7b9f811657c83025",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-059",
+      "word": "მაჟორი",
+      "length": 6,
+      "proposedMeaning": "major musical mode",
+      "partOfSpeech": "noun",
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%9B%E1%83%90%E1%83%9F%E1%83%9D%E1%83%A0%E1%83%98",
+          "sha256": "0e6e3e8cebaed335b65a9d55c560e101cc663950f80ccacf2785a54c1892aadc",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-060",
+      "word": "მედეგი",
+      "length": 6,
+      "proposedMeaning": "resilient; steadfast",
+      "partOfSpeech": "adjective",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.nplg.gov.ge/gwdict/index.php?a=term&d=17&t=46894",
+          "error": "HTTP Error 410: Gone",
+          "verification": "web search primary-source result inspected",
+          "kind": "primary dictionary or usage source",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-061",
+      "word": "მზიური",
+      "length": 6,
+      "proposedMeaning": "sunny",
+      "partOfSpeech": "adjective",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Sunny adjective, not a personal name or park name.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%9B%E1%83%96%E1%83%98%E1%83%A3%E1%83%A0%E1%83%98",
+          "sha256": "56d6e0a333b0c7fd317fff1a4b292cab9080e110ec0b6fc83ee72d6fff784c23",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-062",
+      "word": "მითური",
+      "length": 6,
+      "proposedMeaning": "mythical",
+      "partOfSpeech": "adjective",
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%9B%E1%83%98%E1%83%97%E1%83%A3%E1%83%A0%E1%83%98",
+          "sha256": "22ce91fa741dbdfde7f69540524a6b06d2f4ff94963e6655aa058e41959611c0",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-063",
+      "word": "მიმიკა",
+      "length": 6,
+      "proposedMeaning": "facial expression",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%9B%E1%83%98%E1%83%9B%E1%83%98%E1%83%99%E1%83%90",
+          "sha256": "5f9ffd40d2b9c928b6641ff79a94dd352cf1d9555b7cad6cd009cb15ab81fd85",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-064",
+      "word": "მინორი",
+      "length": 6,
+      "proposedMeaning": "minor musical mode",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%9B%E1%83%98%E1%83%9C%E1%83%9D%E1%83%A0%E1%83%98",
+          "sha256": "5c037922a15ef5f8c8f84fb555f765272358f35bac6515125b1cb13caba808d4",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        },
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%9B%E1%83%98%E1%83%9C%E1%83%9D%E1%83%A0%E1%83%98?oldid=84099987",
+          "revisionId": 84099987,
+          "sha256": "fcb64466587fa0609e85d214be3ce3500e30e1832ffe02b84a928a35e6da6915",
+          "kind": "Wiktionary Georgian entry",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-065",
+      "word": "მიწური",
+      "length": 6,
+      "proposedMeaning": "earth-covered dwelling",
+      "partOfSpeech": "noun",
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%9B%E1%83%98%E1%83%AC%E1%83%A3%E1%83%A0%E1%83%98",
+          "sha256": "c77ace32cc002cc6355ba04a756c92d9e2901914163072cf03bc0c1fbdce00a9",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-066",
+      "word": "მოდგმა",
+      "length": 6,
+      "proposedMeaning": "lineage; ancestry",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Only the lineage/ancestry noun sense (dictionary sense 3); exclude verbal putting/adding senses.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%9B%E1%83%9D%E1%83%93%E1%83%92%E1%83%9B%E1%83%90",
+          "sha256": "01384e5bd7003da1895d1de4fe285e0a989fb5d3adb12c35b03e0bc33e2fb08c",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        },
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%9B%E1%83%9D%E1%83%93%E1%83%92%E1%83%9B%E1%83%90?oldid=84100040",
+          "revisionId": 84100040,
+          "sha256": "894ed61cc523159ca6bfe5d655b6e140b534732e64a61fe7611f93c704e2a74b",
+          "kind": "Wiktionary Georgian entry",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-067",
+      "word": "ნათალი",
+      "length": 6,
+      "proposedMeaning": "wood shaving; peel",
+      "partOfSpeech": "noun",
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Concrete noun sense: shaving or peel; not a conjugated verb.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%9C%E1%83%90%E1%83%97%E1%83%90%E1%83%9A%E1%83%98",
+          "sha256": "7913140386fe22536c2f5500cafdc837f9b3f9a971d91a600ac1943b46b5b47b",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-068",
+      "word": "ნამატი",
+      "length": 6,
+      "proposedMeaning": "additional amount; gain",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%9C%E1%83%90%E1%83%9B%E1%83%90%E1%83%A2%E1%83%98",
+          "sha256": "cda7c2d820f2e864e7aeb9d39c7de70638ab26028807c9d733a7b0dbeb1718a9",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        },
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%9C%E1%83%90%E1%83%9B%E1%83%90%E1%83%A2%E1%83%98?oldid=64513381",
+          "revisionId": 64513381,
+          "sha256": "8dc44c0a026e01b31b9c1eafb788742c4a4703dc8d5e790d7aba855c4403f97a",
+          "kind": "Wiktionary Georgian entry",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-069",
+      "word": "ნატიფი",
+      "length": 6,
+      "proposedMeaning": "delicate; refined",
+      "partOfSpeech": "adjective",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%9C%E1%83%90%E1%83%A2%E1%83%98%E1%83%A4%E1%83%98",
+          "sha256": "0fa9737f4cebe9e0057cccf6ad65d6f6d7fbb1548158fcd134004ea5fd05f083",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-070",
+      "word": "ნაღარა",
+      "length": 6,
+      "proposedMeaning": "paired drum",
+      "partOfSpeech": "noun",
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%9C%E1%83%90%E1%83%A6%E1%83%90%E1%83%A0%E1%83%90",
+          "sha256": "26eef2f486805b0ebb436e66322645678aeb550b95f1f4ab027c7131503bf638",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-071",
+      "word": "ნაყენი",
+      "length": 6,
+      "proposedMeaning": "herbal infusion; tincture",
+      "partOfSpeech": "noun",
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%9C%E1%83%90%E1%83%A7%E1%83%94%E1%83%9C%E1%83%98",
+          "sha256": "64393ec11993278fe0fc861cd505f7b5257c291000bc439c62d9d1e7c3f0ba3e",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-072",
+      "word": "ობლობა",
+      "length": 6,
+      "proposedMeaning": "orphanhood",
+      "partOfSpeech": "noun",
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%9D%E1%83%91%E1%83%9A%E1%83%9D%E1%83%91%E1%83%90",
+          "sha256": "98a437f23b68bb0e43758d41449741f9cabcbd04c7c11482bbe2103c7c712cc5",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        },
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%9D%E1%83%91%E1%83%9A%E1%83%9D%E1%83%91%E1%83%90?oldid=84117738",
+          "revisionId": 84117738,
+          "sha256": "71df28b52c2a6b4df2b87e1e4c4b127d5b1ac3f0fc843d92e67c8d80a36e30cd",
+          "kind": "Wiktionary Georgian entry",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-073",
+      "word": "ოვაცია",
+      "length": 6,
+      "proposedMeaning": "ovation",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%9D%E1%83%95%E1%83%90%E1%83%AA%E1%83%98%E1%83%90",
+          "sha256": "fb689dc292738271a36e65213c3828fc2d4e9ed3fbac9e46c8ebc06a4a6f959d",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        },
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%9D%E1%83%95%E1%83%90%E1%83%AA%E1%83%98%E1%83%90?oldid=84100445",
+          "revisionId": 84100445,
+          "sha256": "700f0187f46e77d9185bcc96e7c94751cd4c3ee58323ac03818e517e21838ead",
+          "kind": "Wiktionary Georgian entry",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-074",
+      "word": "ორღობე",
+      "length": 6,
+      "proposedMeaning": "lane between fences",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%9D%E1%83%A0%E1%83%A6%E1%83%9D%E1%83%91%E1%83%94",
+          "sha256": "97f03a9b0e7418578b718ce51ca2c12d54e19f6839849e4c4964e8572dca79b8",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-075",
+      "word": "ოქტავა",
+      "length": 6,
+      "proposedMeaning": "octave",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%9D%E1%83%A5%E1%83%A2%E1%83%90%E1%83%95%E1%83%90",
+          "sha256": "b15bf17693a42a92fb5ba1b718863096fdacbf683389c41e539f86b3628bdc29",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        },
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%9D%E1%83%A5%E1%83%A2%E1%83%90%E1%83%95%E1%83%90?oldid=84100523",
+          "revisionId": 84100523,
+          "sha256": "aaf9a2173e1e2fb42a9827e4c3b0eb0e6c6b90a0e725c6d2c0fa7b60990b3cec",
+          "kind": "Wiktionary Georgian entry",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-076",
+      "word": "პატაკი",
+      "length": 6,
+      "proposedMeaning": "formal military report",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%9E%E1%83%90%E1%83%A2%E1%83%90%E1%83%99%E1%83%98",
+          "sha256": "6896faa2607085510679f155c4a6d56fcd9dc2f1981b6b5be68bcda79908d843",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-077",
+      "word": "სამხრე",
+      "length": 6,
+      "proposedMeaning": "shoulder strap; shoulder pad",
+      "partOfSpeech": "noun",
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Singular shoulder strap/pad; plural forms are not proposed.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A1%E1%83%90%E1%83%9B%E1%83%AE%E1%83%A0%E1%83%94",
+          "sha256": "e98d793fcf8ab3652a88dad805c90fc1e8002a599116fcfdc9bc039a48b86762",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        },
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%A1%E1%83%90%E1%83%9B%E1%83%AE%E1%83%A0%E1%83%94?oldid=60724534",
+          "revisionId": 60724534,
+          "sha256": "ab27a2dd94fe866cfb8afec31b6f0977cd180d268a80b5afa9627cac592014e3",
+          "kind": "Wiktionary Georgian entry",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-078",
+      "word": "ტოლობა",
+      "length": 6,
+      "proposedMeaning": "mathematical equality",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Mathematical equality, a mathematical relation; not a verbal action.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A2%E1%83%9D%E1%83%9A%E1%83%9D%E1%83%91%E1%83%90",
+          "sha256": "c2b27fbb72aee83f8e9b5883dea21c14f9a3ae444072a6fbbba2e7b0988dcb8f",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        },
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%A2%E1%83%9D%E1%83%9A%E1%83%9D%E1%83%91%E1%83%90?oldid=84103617",
+          "revisionId": 84103617,
+          "sha256": "cfddbbe99692f1ec8112bf81039d96955af4f82df94d95a6e016833706475cd9",
+          "kind": "Wiktionary Georgian entry",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-079",
+      "word": "ტონუსი",
+      "length": 6,
+      "proposedMeaning": "tone; state of activation",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["crubadan.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A2%E1%83%9D%E1%83%9C%E1%83%A3%E1%83%A1%E1%83%98",
+          "sha256": "a2bb5d6322dad737b58259bfb5070e1d2cbd69216255c532de210ae05162fdf6",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-080",
+      "word": "უარესი",
+      "length": 6,
+      "proposedMeaning": "worse",
+      "partOfSpeech": "adjective",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt", "ka_full.txt", "ka_50k.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%90%E1%83%A0%E1%83%94%E1%83%A1%E1%83%98",
+          "sha256": "ef2b106012e25bf5990605d13c6fdcf6dacf348d59bb74ea899c18d2975d6e98",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-081",
+      "word": "უჟმური",
+      "length": 6,
+      "proposedMeaning": "grumpy",
+      "partOfSpeech": "adjective",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%9F%E1%83%9B%E1%83%A3%E1%83%A0%E1%83%98",
+          "sha256": "5bba6fc785d3f1cd75a8103d62a00274fc1a5641b50f5b0cbb88f27c5c83a389",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-082",
+      "word": "უსიერი",
+      "length": 6,
+      "proposedMeaning": "dense; thick (forest)",
+      "partOfSpeech": "adjective",
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%A1%E1%83%98%E1%83%94%E1%83%A0%E1%83%98",
+          "sha256": "748aaad0e48fea1c9b78413b0381b9106b26042892a93811c98d5a3bb771c950",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-083",
+      "word": "უუნარო",
+      "length": 6,
+      "proposedMeaning": "incapable",
+      "partOfSpeech": "adjective",
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%A3%E1%83%9C%E1%83%90%E1%83%A0%E1%83%9D",
+          "sha256": "cc199e0608e77dae899aa0580d877c534bf2eabd300f9e56970a9549f757ddb8",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-084",
+      "word": "უფუარი",
+      "length": 6,
+      "proposedMeaning": "unleavened",
+      "partOfSpeech": "adjective",
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%A4%E1%83%A3%E1%83%90%E1%83%A0%E1%83%98",
+          "sha256": "fa5ce636917ae10a408146d04c321c92fcf7517fed88ed6ce7d47d9605b6799b",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-085",
+      "word": "უშრეტი",
+      "length": 6,
+      "proposedMeaning": "inexhaustible",
+      "partOfSpeech": "adjective",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%A8%E1%83%A0%E1%83%94%E1%83%A2%E1%83%98",
+          "sha256": "4bf035c5300849d5b1aef15e45132040514f2b68b6df24ae367c81e3a86b0360",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-086",
+      "word": "უწყისი",
+      "length": 6,
+      "proposedMeaning": "register; record sheet",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%AC%E1%83%A7%E1%83%98%E1%83%A1%E1%83%98",
+          "sha256": "571baf25890f2c28aac338ad75320b43e243a37a8b296d5c9f252005f326dd0f",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        },
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%A3%E1%83%AC%E1%83%A7%E1%83%98%E1%83%A1%E1%83%98?oldid=84102119",
+          "revisionId": 84102119,
+          "sha256": "b6d94fcd725806b8da95efa176fdce3ab17317d45c1fe50715318ddbf6fa150a",
+          "kind": "Wiktionary Georgian entry",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-087",
+      "word": "ფასონი",
+      "length": 6,
+      "proposedMeaning": "style or cut of clothing",
+      "partOfSpeech": "noun",
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A4%E1%83%90%E1%83%A1%E1%83%9D%E1%83%9C%E1%83%98",
+          "sha256": "0abdd0eb938e070466de6184386c143efcc230a7d5b5b2aa6ff68be3f6b3d79a",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-088",
+      "word": "ფიტული",
+      "length": 6,
+      "proposedMeaning": "stuffed animal specimen",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A4%E1%83%98%E1%83%A2%E1%83%A3%E1%83%9A%E1%83%98",
+          "sha256": "88ff20632f33396b400e1ec0288886582607e214390a270125e503eff367f9b5",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-089",
+      "word": "ღიაობა",
+      "length": 6,
+      "proposedMeaning": "openness",
+      "partOfSpeech": "noun",
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%A6%E1%83%98%E1%83%90%E1%83%9D%E1%83%91%E1%83%90?oldid=84120232",
+          "revisionId": 84120232,
+          "sha256": "01d7abcc34761ca1862e19832244d78ad5685a502f51d0c313547c94d6629726",
+          "kind": "Wiktionary Georgian entry",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-090",
+      "word": "ღრმული",
+      "length": 6,
+      "proposedMeaning": "hollow; depression",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A6%E1%83%A0%E1%83%9B%E1%83%A3%E1%83%9A%E1%83%98",
+          "sha256": "5a11d039be38e915ba9d1741e79ba08c15fd4ba0c37e4a63b21a8cb86d4bccec",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-091",
+      "word": "ყეყეჩი",
+      "length": 6,
+      "proposedMeaning": "foolish; dim-witted",
+      "partOfSpeech": "adjective",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A7%E1%83%94%E1%83%A7%E1%83%94%E1%83%A9%E1%83%98",
+          "sha256": "be936c159e6c09f13df2572f1fb108a65d1a9b8554ae518271406905334f009b",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-092",
+      "word": "ყოჩაღი",
+      "length": 6,
+      "proposedMeaning": "capable; brave",
+      "partOfSpeech": "adjective",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A7%E1%83%9D%E1%83%A9%E1%83%90%E1%83%A6%E1%83%98",
+          "sha256": "9e62e4bbe335e9802ee6d6786cf052f268815e2ed971941d83bbd39136768130",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-093",
+      "word": "შტურმი",
+      "length": 6,
+      "proposedMeaning": "storming assault",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt", "crubadan.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A8%E1%83%A2%E1%83%A3%E1%83%A0%E1%83%9B%E1%83%98",
+          "sha256": "228d2d3ded4d0657dd68d8e013d8aefe7c95ba2ce7f4bcb7c19660c1771443ab",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-094",
+      "word": "ძღვენი",
+      "length": 6,
+      "proposedMeaning": "gift; offering",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%AB%E1%83%A6%E1%83%95%E1%83%94%E1%83%9C%E1%83%98",
+          "sha256": "16cedbd5d767181a696abfc6fd2474f7d02a315499dd08c5429076467cd7a32b",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        },
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%AB%E1%83%A6%E1%83%95%E1%83%94%E1%83%9C%E1%83%98?oldid=84102853",
+          "revisionId": 84102853,
+          "sha256": "5e3b8f4a5eeca236b2e5d426be3bf3803a0861195f7b9cbcc6cd3e7b3c44b6da",
+          "kind": "Wiktionary Georgian entry",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-095",
+      "word": "წიფელი",
+      "length": 6,
+      "proposedMeaning": "beech tree",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt", "ka_full.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%AC%E1%83%98%E1%83%A4%E1%83%94%E1%83%9A%E1%83%98",
+          "sha256": "5c28e0e4fa62a595a220059d95ae49ca6e01412587383945a473d1281d131417",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        },
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%AC%E1%83%98%E1%83%A4%E1%83%94%E1%83%9A%E1%83%98?oldid=84121067",
+          "revisionId": 84121067,
+          "sha256": "8e7266464975414fc5b3f9474c66af82cece1f2dd7de5456ac1833af62b1c1e7",
+          "kind": "Wiktionary Georgian entry",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-096",
+      "word": "ხალისი",
+      "length": 6,
+      "proposedMeaning": "good spirits; enthusiasm",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Emotional-state noun (good spirits), not the act of doing something.",
+      "discoveredIn": ["bumbeishvili.txt", "ka_full.txt", "ka_50k.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%AE%E1%83%90%E1%83%9A%E1%83%98%E1%83%A1%E1%83%98",
+          "sha256": "ec616c2dce5f8d1faff35537cda0505039bc633f67cc0bd7e12496e552acfab0",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-097",
+      "word": "ხეხილი",
+      "length": 6,
+      "proposedMeaning": "fruit trees",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%AE%E1%83%94%E1%83%AE%E1%83%98%E1%83%9A%E1%83%98",
+          "sha256": "ec76c2fc4d71d3e563268b7e714c1304f75e0e3972887093ccabdf32e2e43e0b",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-098",
+      "word": "ხრიოკი",
+      "length": 6,
+      "proposedMeaning": "barren; sparsely vegetated",
+      "partOfSpeech": "adjective",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%AE%E1%83%A0%E1%83%98%E1%83%9D%E1%83%99%E1%83%98",
+          "sha256": "eca7a93e1c6b3d5857b8fa169fb6f6d76a1d35dd64074edf945fba7afb43b206",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-099",
+      "word": "ხსნადი",
+      "length": 6,
+      "proposedMeaning": "soluble",
+      "partOfSpeech": "adjective",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Ordinary noun/adjective sense as glossed; familiarity remains subject to owner review.",
+      "discoveredIn": ["bumbeishvili.txt"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%AE%E1%83%A1%E1%83%9C%E1%83%90%E1%83%93%E1%83%98",
+          "sha256": "008ec7fa853ac4c57b7ea8e6339ab689aeaf9d860d94b785787cef65ce5122c8",
+          "kind": "Georgian explanatory dictionary",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    },
+    {
+      "id": "T08-100",
+      "word": "ჰობიტი",
+      "length": 6,
+      "proposedMeaning": "hobbit",
+      "partOfSpeech": "noun",
+      "ownerDecision": "approved",
+      "editorialDecision": "Proposed for everyday-familiarity review; source attestation is not owner approval.",
+      "senseNotes": "Fantasy creature familiar from books/films; not a human-name-only entry. Owner may prefer to omit fantasy vocabulary.",
+      "discoveredIn": ["crubadan.txt"],
+      "sources": [
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%B0%E1%83%9D%E1%83%91%E1%83%98%E1%83%A2%E1%83%98?oldid=84121555",
+          "revisionId": 84121555,
+          "sha256": "2e62d70f8a2b03a19b72a07cac8352d6204259ed15d2254b64166b3df9f94d79",
+          "kind": "Wiktionary Georgian entry",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-20"
+        }
+      ]
+    }
+  ],
+  "activeApprovedPool": 2075,
+  "approvedPoolBefore": 2195,
+  "approvedWords": [
+    "ბუტია",
+    "ბუღი",
+    "გეტო",
+    "დარდი",
+    "დუბლი",
+    "დუჟი",
+    "ეპოსი",
+    "კედი",
+    "კეპი",
+    "მდორე",
+    "მოლა",
+    "უკუდო",
+    "უსულო",
+    "უღონო",
+    "ფანი",
+    "ფარსი",
+    "ფაქსი",
+    "ფიჩხი",
+    "ქიშპი",
+    "შაირი",
+    "შფოთი",
+    "ძმობა",
+    "წიწვი",
+    "წნული",
+    "ხვადი",
+    "ამბოხი",
+    "ასორტი",
+    "ბალანი",
+    "ბეკეკა",
+    "ბრაუნი",
+    "ბუტიკი",
+    "განედი",
+    "განივი",
+    "გრძედი",
+    "დრუნჩი",
+    "ეთნოსი",
+    "ზნეობა",
+    "ზრდილი",
+    "თეზისი",
+    "იდილია",
+    "იერიში",
+    "კოზირი",
+    "კოლაჟი",
+    "მედეგი",
+    "მზიური",
+    "მიმიკა",
+    "მინორი",
+    "მოდგმა",
+    "ნამატი",
+    "ნატიფი",
+    "ოვაცია",
+    "ორღობე",
+    "ოქტავა",
+    "პატაკი",
+    "ტოლობა",
+    "ტონუსი",
+    "უარესი",
+    "უჟმური",
+    "უშრეტი",
+    "უწყისი",
+    "ფიტული",
+    "ღრმული",
+    "ყეყეჩი",
+    "ყოჩაღი",
+    "შტურმი",
+    "ძღვენი",
+    "წიფელი",
+    "ხალისი",
+    "ხეხილი",
+    "ხრიოკი",
+    "ხსნადი",
+    "ჰობიტი"
+  ],
+  "approvedCount": 72,
+  "rejectedWords": [
+    "გონიო",
+    "ზიარი",
+    "სპორა",
+    "უფეხო",
+    "უქმი",
+    "შლეგი",
+    "ძუძუ",
+    "ანგინა",
+    "ბლანკი",
+    "გრძივი",
+    "კაბარე",
+    "კლერკი",
+    "კორომი",
+    "კუბური",
+    "ლეჩაქი",
+    "მაჟორი",
+    "მითური",
+    "მიწური",
+    "ნათალი",
+    "ნაღარა",
+    "ნაყენი",
+    "ობლობა",
+    "სამხრე",
+    "უსიერი",
+    "უუნარო",
+    "უფუარი",
+    "ფასონი",
+    "ღიაობა"
+  ],
+  "rejectedCount": 28,
+  "additionalExcludedWords": ["უფარო"],
+  "totalNewExclusions": 29,
+  "approvedPoolAfter": 2267,
+  "pendingIntegrationCount": 192,
+  "reviewNote": "Owner rejected 28 batch words and approved the remaining 72. For typed უფარო, owner explicitly requested deleting both უფარო and batch word უფუარი. None of these additions is integrated into active revision 28."
+}

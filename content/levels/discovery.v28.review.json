@@ -1,0 +1,7 @@
+{
+  "revision": 28,
+  "draftSha256": "ebfb24e8242fa01c69b0d37564b52444df854813b785f8b481bed7bc312bf7fe",
+  "reviewedAt": "2026-10-20",
+  "reviewer": "Codex assistant policy/provenance audit following owner approval of targeted words, destinations and exact 50-level trial",
+  "scope": "All 1725 required slots and canonical-only variants checked against 2075 individual approvals; all formable eligible bonuses verified. Exact validated trial retained with destination chapter IDs assigned. First 295 boards preserve targets, grids, tiles, difficulty and IDs; eligible bonus recognition expands. 1414 distinct targets, 311 repeated slots (18.03%), minimum gap 75. Historical JSON hashes verified. See docs/VOCABULARY_REVIEW_V28.md. No optimality or physical-device playtest claim."
+}

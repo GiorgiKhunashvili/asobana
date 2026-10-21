@@ -2,22 +2,22 @@
 
 Offline Georgian crossword prototype for iOS and Android. Connect wheel letters,
 find target and bonus words, spend coins on hints, complete levels and resume from
-local SQLite. Content revision 26 has 295 wide, connected, mixed-topic puzzles
-across 59 journey stops, with five answers per board and five to seven wheel tiles.
+local SQLite. Content revision 28 has 345 wide, connected, mixed-topic puzzles
+across 69 journey stops, with five answers per board and five to seven wheel tiles.
 Required spellings and accepted variants may repeat only at least 75 levels apart;
-there are no two-letter targets. The reference dictionary has 1,970 entries /
-1,838 eligible words, while the separate everyday-target allowlist has 1,720 non-plural words.
+there are no two-letter targets. The reference dictionary has 2,325 entries /
+2,193 eligible words, while the separate everyday-target allowlist has 2,075 non-plural words.
 Pronouns, excluded verbs/action forms, name-only entries, reviewed barbarisms and
 owner-excluded words cannot appear as targets or bonuses. Valid rare words remain
 optional bonuses; verified plural nouns are also bonus-only, never required
 answers or variants. Every eligible formable extra is recognized. Campaign
 selection prioritizes using more distinct approved words to reduce repetition.
 See [the campaign rules](docs/DISCOVERY_CONTENT.md) and
-[the vocabulary review and all 295 boards](docs/VOCABULARY_REVIEW_V26.md).
+[the vocabulary review and all 345 boards](docs/VOCABULARY_REVIEW_V28.md).
 Five-letter answers begin at level 3 and six-letter answers at level 18; every
 board from level 26 has at least two longer answers. The journey map, destination
-paintings and screen integration use the exact 59 stop IDs in
-`content/journey-v23.json`. Malta, Tunisia and Spain extend the original Italy route.
+paintings and screen integration use the exact 69 stop IDs in
+`content/journey-v28.json`. Malta, Tunisia, Spain, Portugal and Morocco extend the original Italy route.
 Each chapter builds toward a challenge and follows it with a gentler board.
 Completing a chapter collects its illustrated destination postcard in the travel
 album. Every ten bonus finds earns a free letter hint, carried across levels and
@@ -108,7 +108,7 @@ uv run pytest
 uv run ruff check .
 uv run ruff format --check .
 uv run mypy src
-uv run python -m geowords_generator --allow-prototype --seed 42
+uv run python -m asobana_generator --allow-prototype --seed 42
 # exports ../artifacts/draft.v1.json and ../artifacts/draft.v1.review.json
 cd ..
 node --import tsx scripts/validate-draft.ts artifacts/draft.v1.json

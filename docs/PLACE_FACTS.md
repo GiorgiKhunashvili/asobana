@@ -134,3 +134,20 @@ to the region; the source locates the dish’s origin in l’Albufera.
 | გრანადა   | გრანადის ალჰამბრა იუნესკოს მსოფლიო მემკვიდრეობის ძეგლია.   | Granada’s Alhambra is a UNESCO World Heritage monument.      | [source](https://whc.unesco.org/en/list/314/)                                  |
 | კორდობა   | კორდობის ძველ მეჩეთში დღეს კათედრალია.                     | Cordoba’s former mosque now contains a cathedral.            | [source](https://www.mezquita-catedraldecordoba.es/en/cultos/espacio-sagrado/) |
 | სევილია   | სევილიის ესპანეთის მოედანი 1929 წლის გამოფენისთვის აშენდა. | Seville’s Plaza de Espana was built for the 1929 exposition. | [source](https://www.spain.info/es/lugares-interes/plaza-espana-sevilla/)      |
+
+## Portugal and Morocco — revision 28
+
+On 2026-10-20 the owner authorized these ten destinations with backgrounds and postcards. The assistant checked the following brief facts against primary tourism/heritage sources on the same date as part of that integration. Individual fact wording was not separately submitted for owner review; this is not a claim of separate native-speaker approval.
+
+| Stop           | Georgian fact                                             | Source                                                                                                  |
+| -------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| lagos          | ლაგუშთან პონტა-და-პიედადის სანაპირო კლდეებია.             | [Source](https://www.visitportugal.com/pt-pt/content/lagos)                                             |
+| lisbon         | ლისაბონი პორტუგალიის დედაქალაქია.                         | [Source](https://www.visitportugal.com/sites/default/files/LisboaCityBreaks_EN.pdf)                     |
+| sintra         | პენას სასახლე სინტრის მთებში მდებარეობს.                  | [Source](https://www.visitlisboa.com/en/places/palacio-nacional-da-pena)                                |
+| porto          | პორტუ მდინარე დორუს ნაპირზე მდებარეობს.                   | [Source](https://www.visitportugal.com/en/destinos/porto/73735)                                         |
+| tangier        | ტანჟერიდან გიბრალტარის სრუტე ჩანს.                        | [Source](https://www.visitmorocco.com/en/morocco-kingdom-of-football/en/six-cities-one-passion/tangier) |
+| chefchaouen    | შეფშაუენი ლურჯად შეღებილი სახლებითაა ცნობილი.             | [Source](https://www.visitmorocco.com/en/travel/chefchaouen)                                            |
+| fez            | ფესის ძველი ქალაქი იუნესკოს მსოფლიო მემკვიდრეობის ძეგლია. | [Source](https://www.visitmorocco.com/en/travel/fez)                                                    |
+| merzouga       | მერზუგასთან ერგ-შების ქვიშის დიუნებია.                    | [Source](https://www.visitmorocco.com/en/travel/errachidia-midelt-merzouga)                             |
+| ait-ben-haddou | აით-ბენ-ჰადუ თიხის არქიტექტურითაა ცნობილი.                | [Source](https://whc.unesco.org/en/list/444/)                                                           |
+| marrakech      | ჯემა-ელ-ფნა მარაკეშის ცნობილი მოედანია.                   | [Source](https://www.visitmorocco.com/en/travel/marrakesh)                                              |

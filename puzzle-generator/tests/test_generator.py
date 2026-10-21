@@ -5,11 +5,11 @@ from pathlib import Path
 import pytest
 from jsonschema import Draft202012Validator
 
-from geowords_generator.export import export_draft
-from geowords_generator.generator import GenerationError, derive_letters, generate_level
-from geowords_generator.models import Placement
-from geowords_generator.validation import valid_layout, validate_level, validate_pack
-from geowords_generator.vocabulary import (
+from asobana_generator.export import export_draft
+from asobana_generator.generator import GenerationError, derive_letters, generate_level
+from asobana_generator.models import Placement
+from asobana_generator.validation import valid_layout, validate_level, validate_pack
+from asobana_generator.vocabulary import (
     can_form_word,
     ingest_candidates,
     is_valid_word,

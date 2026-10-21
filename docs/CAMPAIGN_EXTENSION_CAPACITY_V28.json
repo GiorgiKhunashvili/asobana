@@ -1,0 +1,865 @@
+{
+  "date": "2026-10-20",
+  "status": "validated capacity experiment, not bundled",
+  "baselineRevision": 28,
+  "baselineLevels": 345,
+  "approvedWords": 2075,
+  "baselineDistinct": 1414,
+  "baselineRepeatedSlots": 311,
+  "baselineRepetitionPercent": 18.028985507246375,
+  "unusedWords": 661,
+  "unusedByLength": {
+    "4": 13,
+    "5": 80,
+    "6": 568
+  },
+  "definition": "Required answer occurrences beyond first use divided by all required answer slots; optional bonuses excluded.",
+  "method": "Freeze all 345 active boards. Search seven-tile pair-union wheels with at least three unused approved formable words; add two valid candidates to the existing 226200-board pool. Select ten five-board stops, maximizing new words then reducing prior-use concentration. All 395 boards rebuilt through unchanged copied Python gates, validated through unchanged copied TypeScript gates and solved through the game engine. Only the sandbox journey manifest receives synthetic extra chapters.",
+  "minimumRepeatGap": 75,
+  "frontier": [
+    {
+      "levels": 350,
+      "added": 5,
+      "distinct": 1425,
+      "unused": 650,
+      "repeatedSlots": 325,
+      "repetitionPercent": 18.571428571428573,
+      "newDistinct": 11
+    },
+    {
+      "levels": 355,
+      "added": 10,
+      "distinct": 1437,
+      "unused": 638,
+      "repeatedSlots": 338,
+      "repetitionPercent": 19.04225352112676,
+      "newDistinct": 23
+    },
+    {
+      "levels": 360,
+      "added": 15,
+      "distinct": 1447,
+      "unused": 628,
+      "repeatedSlots": 353,
+      "repetitionPercent": 19.61111111111111,
+      "newDistinct": 33
+    },
+    {
+      "levels": 365,
+      "added": 20,
+      "distinct": 1457,
+      "unused": 618,
+      "repeatedSlots": 368,
+      "repetitionPercent": 20.164383561643834,
+      "newDistinct": 43
+    },
+    {
+      "levels": 370,
+      "added": 25,
+      "distinct": 1470,
+      "unused": 605,
+      "repeatedSlots": 380,
+      "repetitionPercent": 20.54054054054054,
+      "newDistinct": 56
+    },
+    {
+      "levels": 375,
+      "added": 30,
+      "distinct": 1480,
+      "unused": 595,
+      "repeatedSlots": 395,
+      "repetitionPercent": 21.066666666666666,
+      "newDistinct": 66
+    },
+    {
+      "levels": 380,
+      "added": 35,
+      "distinct": 1490,
+      "unused": 585,
+      "repeatedSlots": 410,
+      "repetitionPercent": 21.57894736842105,
+      "newDistinct": 76
+    },
+    {
+      "levels": 385,
+      "added": 40,
+      "distinct": 1500,
+      "unused": 575,
+      "repeatedSlots": 425,
+      "repetitionPercent": 22.07792207792208,
+      "newDistinct": 86
+    },
+    {
+      "levels": 390,
+      "added": 45,
+      "distinct": 1510,
+      "unused": 565,
+      "repeatedSlots": 440,
+      "repetitionPercent": 22.564102564102566,
+      "newDistinct": 96
+    },
+    {
+      "levels": 395,
+      "added": 50,
+      "distinct": 1520,
+      "unused": 555,
+      "repeatedSlots": 455,
+      "repetitionPercent": 23.037974683544302,
+      "newDistinct": 106
+    }
+  ],
+  "extensionRecipes": [
+    {
+      "id": "ka-346",
+      "sourceWords": ["ავი", "აქცია", "ქაცვი", "ქვა", "ცაცია"],
+      "targets": ["ავი", "აქცია", "ქაცვი", "ქვა", "ცაცია"],
+      "wheel": "აავიქცც",
+      "seed": 6,
+      "transpose": false,
+      "wordIds": {
+        "ავი": "word-1",
+        "აქცია": "word-2",
+        "ქაცვი": "word-3",
+        "ქვა": "word-4",
+        "ცაცია": "word-5"
+      }
+    },
+    {
+      "id": "ka-347",
+      "sourceWords": ["თასი", "ლუქი", "სათლი", "ქულა", "ქუსლი"],
+      "targets": ["თასი", "ლუქი", "სათლი", "ქულა", "ქუსლი"],
+      "wheel": "ათილსუქ",
+      "seed": 3,
+      "transpose": false,
+      "wordIds": {
+        "თასი": "word-1",
+        "ლუქი": "word-2",
+        "სათლი": "word-3",
+        "ქულა": "word-4",
+        "ქუსლი": "word-5"
+      }
+    },
+    {
+      "id": "ka-348",
+      "sourceWords": ["ალყა", "ბალადა", "დაბა", "ლაბადა", "ყბა"],
+      "targets": ["ალყა", "ბალადა", "დაბა", "ლაბადა", "ყბა"],
+      "wheel": "აააბდლყ",
+      "seed": 4,
+      "transpose": false,
+      "wordIds": {
+        "ალყა": "word-1",
+        "ბალადა": "word-2",
+        "დაბა": "word-3",
+        "ლაბადა": "word-4",
+        "ყბა": "word-5"
+      }
+    },
+    {
+      "id": "ka-349",
+      "sourceWords": ["დონე", "ლენჩი", "ლოდი", "ნედლი", "ჩელო"],
+      "targets": ["დონე", "ლენჩი", "ლოდი", "ნედლი", "ჩელო"],
+      "wheel": "დეილნოჩ",
+      "seed": 3,
+      "transpose": false,
+      "wordIds": {
+        "დონე": "word-1",
+        "ლენჩი": "word-2",
+        "ლოდი": "word-3",
+        "ნედლი": "word-4",
+        "ჩელო": "word-5"
+      }
+    },
+    {
+      "id": "ka-350",
+      "sourceWords": ["ალპური", "ლუპა", "პური", "უარი", "ყლუპი"],
+      "targets": ["ალპური", "ლუპა", "პური", "უარი", "ყლუპი"],
+      "wheel": "აილპრუყ",
+      "seed": 3,
+      "transpose": false,
+      "wordIds": {
+        "ალპური": "word-1",
+        "ლუპა": "word-2",
+        "პური": "word-3",
+        "უარი": "word-4",
+        "ყლუპი": "word-5"
+      }
+    },
+    {
+      "id": "ka-351",
+      "sourceWords": ["დასი", "დედანი", "დეიდა", "იდეა", "სადენი"],
+      "targets": ["დასი", "დედანი", "დეიდა", "იდეა", "სადენი"],
+      "wheel": "ადდეინს",
+      "seed": 6,
+      "transpose": false,
+      "wordIds": {
+        "დასი": "word-1",
+        "დედანი": "word-2",
+        "დეიდა": "word-3",
+        "იდეა": "word-4",
+        "სადენი": "word-5"
+      }
+    },
+    {
+      "id": "ka-352",
+      "sourceWords": ["აფხაზი", "ბზა", "ფაზა", "ფხა", "ხაბაზი"],
+      "targets": ["აფხაზი", "ბზა", "ფაზა", "ფხა", "ხაბაზი"],
+      "wheel": "ააბზიფხ",
+      "seed": 5,
+      "transpose": false,
+      "wordIds": {
+        "აფხაზი": "word-1",
+        "ბზა": "word-2",
+        "ფაზა": "word-3",
+        "ფხა": "word-4",
+        "ხაბაზი": "word-5"
+      }
+    },
+    {
+      "id": "ka-353",
+      "sourceWords": ["გორა", "გროვა", "ვაგონი", "ორგანი", "რანგი"],
+      "targets": ["გორა", "გროვა", "ვაგონი", "ორგანი", "რანგი"],
+      "wheel": "აგვინორ",
+      "seed": 2,
+      "transpose": false,
+      "wordIds": {
+        "გორა": "word-1",
+        "გროვა": "word-2",
+        "ვაგონი": "word-3",
+        "ორგანი": "word-4",
+        "რანგი": "word-5"
+      }
+    },
+    {
+      "id": "ka-354",
+      "sourceWords": ["ერი", "ვერძი", "ვერხვი", "რძე", "ძეხვი"],
+      "targets": ["ერი", "ვერძი", "ვერხვი", "რძე", "ძეხვი"],
+      "wheel": "ევვირძხ",
+      "seed": 6,
+      "transpose": true,
+      "wordIds": {
+        "ერი": "word-1",
+        "ვერძი": "word-2",
+        "ვერხვი": "word-3",
+        "რძე": "word-4",
+        "ძეხვი": "word-5"
+      }
+    },
+    {
+      "id": "ka-355",
+      "sourceWords": ["ოსი", "სამოსი", "სასიძო", "საძმო", "ძმა"],
+      "targets": ["ოსი", "სამოსი", "სასიძო", "საძმო", "ძმა"],
+      "wheel": "აიმოსსძ",
+      "seed": 11,
+      "transpose": false,
+      "wordIds": {
+        "ოსი": "word-1",
+        "სამოსი": "word-2",
+        "სასიძო": "word-3",
+        "საძმო": "word-4",
+        "ძმა": "word-5"
+      }
+    },
+    {
+      "id": "ka-356",
+      "sourceWords": ["რიყე", "ურყევი", "ყრუ", "ყური", "ჭურვი"],
+      "targets": ["რიყე", "ურყევი", "ყრუ", "ყური", "ჭურვი"],
+      "wheel": "ევირუყჭ",
+      "seed": 22,
+      "transpose": true,
+      "wordIds": {
+        "რიყე": "word-1",
+        "ურყევი": "word-2",
+        "ყრუ": "word-3",
+        "ყური": "word-4",
+        "ჭურვი": "word-5"
+      }
+    },
+    {
+      "id": "ka-357",
+      "sourceWords": ["კარი", "ნაპირი", "ნიკაპი", "პიკი", "რკინა"],
+      "targets": ["კარი", "ნაპირი", "ნიკაპი", "პიკი", "რკინა"],
+      "wheel": "აიიკნპრ",
+      "seed": 11,
+      "transpose": false,
+      "wordIds": {
+        "კარი": "word-1",
+        "ნაპირი": "word-2",
+        "ნიკაპი": "word-3",
+        "პიკი": "word-4",
+        "რკინა": "word-5"
+      }
+    },
+    {
+      "id": "ka-358",
+      "sourceWords": ["აურა", "აქაური", "იარა", "კარაქი", "ურიკა"],
+      "targets": ["აურა", "აქაური", "იარა", "კარაქი", "ურიკა"],
+      "wheel": "ააიკრუქ",
+      "seed": 5,
+      "transpose": true,
+      "wordIds": {
+        "აურა": "word-1",
+        "აქაური": "word-2",
+        "იარა": "word-3",
+        "კარაქი": "word-4",
+        "ურიკა": "word-5"
+      }
+    },
+    {
+      "id": "ka-359",
+      "sourceWords": ["იაფი", "ლიფი", "ფაილი", "ფლიდი", "წილადი"],
+      "targets": ["იაფი", "ლიფი", "ფაილი", "ფლიდი", "წილადი"],
+      "wheel": "ადიილფწ",
+      "seed": 7,
+      "transpose": false,
+      "wordIds": {
+        "იაფი": "word-1",
+        "ლიფი": "word-2",
+        "ფაილი": "word-3",
+        "ფლიდი": "word-4",
+        "წილადი": "word-5"
+      }
+    },
+    {
+      "id": "ka-360",
+      "sourceWords": ["დანა", "დაფა", "დაფნა", "პანდა", "პაპა"],
+      "targets": ["დანა", "დაფა", "დაფნა", "პანდა", "პაპა"],
+      "wheel": "აადნპპფ",
+      "seed": 1,
+      "transpose": false,
+      "wordIds": {
+        "დანა": "word-1",
+        "დაფა": "word-2",
+        "დაფნა": "word-3",
+        "პანდა": "word-4",
+        "პაპა": "word-5"
+      }
+    },
+    {
+      "id": "ka-361",
+      "sourceWords": ["გირაო", "გორილა", "რგოლი", "ჯგრო", "ჯოგი"],
+      "targets": ["გირაო", "გორილა", "რგოლი", "ჯგრო", "ჯოგი"],
+      "wheel": "აგილორჯ",
+      "seed": 3,
+      "transpose": false,
+      "wordIds": {
+        "გირაო": "word-1",
+        "გორილა": "word-2",
+        "რგოლი": "word-3",
+        "ჯგრო": "word-4",
+        "ჯოგი": "word-5"
+      }
+    },
+    {
+      "id": "ka-362",
+      "sourceWords": ["კრუიზი", "კუზი", "ცირკი", "ციური", "ცრუ"],
+      "targets": ["კრუიზი", "კუზი", "ცირკი", "ციური", "ცრუ"],
+      "wheel": "ზიიკრუც",
+      "seed": 7,
+      "transpose": true,
+      "wordIds": {
+        "კრუიზი": "word-1",
+        "კუზი": "word-2",
+        "ცირკი": "word-3",
+        "ციური": "word-4",
+        "ცრუ": "word-5"
+      }
+    },
+    {
+      "id": "ka-363",
+      "sourceWords": ["ბაკანი", "ბანაკი", "კაბა", "კამა", "მანია"],
+      "targets": ["ბაკანი", "ბანაკი", "კაბა", "კამა", "მანია"],
+      "wheel": "ააბიკმნ",
+      "seed": 4,
+      "transpose": false,
+      "wordIds": {
+        "ბაკანი": "word-1",
+        "ბანაკი": "word-2",
+        "კაბა": "word-3",
+        "კამა": "word-4",
+        "მანია": "word-5"
+      }
+    },
+    {
+      "id": "ka-364",
+      "sourceWords": ["დრამა", "თამადა", "თმა", "მადა", "მათარა"],
+      "targets": ["დრამა", "თამადა", "თმა", "მადა", "მათარა"],
+      "wheel": "ააადთმრ",
+      "seed": 2,
+      "transpose": true,
+      "wordIds": {
+        "დრამა": "word-1",
+        "თამადა": "word-2",
+        "თმა": "word-3",
+        "მადა": "word-4",
+        "მათარა": "word-5"
+      }
+    },
+    {
+      "id": "ka-365",
+      "sourceWords": ["ავტორი", "არხი", "ხარი", "ხატი", "ხროვა"],
+      "targets": ["ავტორი", "არხი", "ხარი", "ხატი", "ხროვა"],
+      "wheel": "ავიორტხ",
+      "seed": 16,
+      "transpose": false,
+      "wordIds": {
+        "ავტორი": "word-1",
+        "არხი": "word-2",
+        "ხარი": "word-3",
+        "ხატი": "word-4",
+        "ხროვა": "word-5"
+      }
+    },
+    {
+      "id": "ka-366",
+      "sourceWords": ["ლაფი", "ფიალა", "ფილა", "ჯალათი", "ჯაფა"],
+      "targets": ["ლაფი", "ფიალა", "ფილა", "ჯალათი", "ჯაფა"],
+      "wheel": "აათილფჯ",
+      "seed": 5,
+      "transpose": false,
+      "wordIds": {
+        "ლაფი": "word-1",
+        "ფიალა": "word-2",
+        "ფილა": "word-3",
+        "ჯალათი": "word-4",
+        "ჯაფა": "word-5"
+      }
+    },
+    {
+      "id": "ka-367",
+      "sourceWords": ["კომა", "კომეტა", "მაკე", "მალე", "მოკლე"],
+      "targets": ["კომა", "კომეტა", "მაკე", "მალე", "მოკლე"],
+      "wheel": "აეკლმოტ",
+      "seed": 31,
+      "transpose": true,
+      "wordIds": {
+        "კომა": "word-1",
+        "კომეტა": "word-2",
+        "მაკე": "word-3",
+        "მალე": "word-4",
+        "მოკლე": "word-5"
+      }
+    },
+    {
+      "id": "ka-368",
+      "sourceWords": ["ალი", "პანელი", "პენალი", "პენსია", "პიესა"],
+      "targets": ["ალი", "პანელი", "პენალი", "პენსია", "პიესა"],
+      "wheel": "აეილნპს",
+      "seed": 8,
+      "transpose": false,
+      "wordIds": {
+        "ალი": "word-1",
+        "პანელი": "word-2",
+        "პენალი": "word-3",
+        "პენსია": "word-4",
+        "პიესა": "word-5"
+      }
+    },
+    {
+      "id": "ka-369",
+      "sourceWords": ["აგენტი", "გრანტი", "ენა", "ერა", "ნეტარი"],
+      "targets": ["აგენტი", "გრანტი", "ენა", "ერა", "ნეტარი"],
+      "wheel": "აგეინრტ",
+      "seed": 4,
+      "transpose": true,
+      "wordIds": {
+        "აგენტი": "word-1",
+        "გრანტი": "word-2",
+        "ენა": "word-3",
+        "ერა": "word-4",
+        "ნეტარი": "word-5"
+      }
+    },
+    {
+      "id": "ka-370",
+      "sourceWords": ["აბი", "ბაიტი", "ბატონი", "ობი", "ობიანი"],
+      "targets": ["აბი", "ბაიტი", "ბატონი", "ობი", "ობიანი"],
+      "wheel": "აბიინოტ",
+      "seed": 5,
+      "transpose": true,
+      "wordIds": {
+        "აბი": "word-1",
+        "ბაიტი": "word-2",
+        "ბატონი": "word-3",
+        "ობი": "word-4",
+        "ობიანი": "word-5"
+      }
+    },
+    {
+      "id": "ka-371",
+      "sourceWords": ["აღვირი", "ვირი", "თარიღი", "თაღი", "ღია"],
+      "targets": ["აღვირი", "ვირი", "თარიღი", "თაღი", "ღია"],
+      "wheel": "ავთიირღ",
+      "seed": 13,
+      "transpose": false,
+      "wordIds": {
+        "აღვირი": "word-1",
+        "ვირი": "word-2",
+        "თარიღი": "word-3",
+        "თაღი": "word-4",
+        "ღია": "word-5"
+      }
+    },
+    {
+      "id": "ka-372",
+      "sourceWords": ["ასო", "ოაზისი", "საიქიო", "ქისა", "ქოსა"],
+      "targets": ["ასო", "ოაზისი", "საიქიო", "ქისა", "ქოსა"],
+      "wheel": "აზიიოსქ",
+      "seed": 5,
+      "transpose": true,
+      "wordIds": {
+        "ასო": "word-1",
+        "ოაზისი": "word-2",
+        "საიქიო": "word-3",
+        "ქისა": "word-4",
+        "ქოსა": "word-5"
+      }
+    },
+    {
+      "id": "ka-373",
+      "sourceWords": ["მაუსი", "მინუსი", "ნამუსი", "სიმი", "უმი"],
+      "targets": ["მაუსი", "მინუსი", "ნამუსი", "სიმი", "უმი"],
+      "wheel": "აიიმნსუ",
+      "seed": 16,
+      "transpose": false,
+      "wordIds": {
+        "მაუსი": "word-1",
+        "მინუსი": "word-2",
+        "ნამუსი": "word-3",
+        "სიმი": "word-4",
+        "უმი": "word-5"
+      }
+    },
+    {
+      "id": "ka-374",
+      "sourceWords": ["სრუტე", "ტირე", "ტუჩი", "ურჩი", "ჩუსტი"],
+      "targets": ["სრუტე", "ტირე", "ტუჩი", "ურჩი", "ჩუსტი"],
+      "wheel": "ეირსტუჩ",
+      "seed": 1,
+      "transpose": false,
+      "wordIds": {
+        "სრუტე": "word-1",
+        "ტირე": "word-2",
+        "ტუჩი": "word-3",
+        "ურჩი": "word-4",
+        "ჩუსტი": "word-5"
+      }
+    },
+    {
+      "id": "ka-375",
+      "sourceWords": ["ლიმონი", "მილი", "მწნილი", "ოინი", "ომი"],
+      "targets": ["ლიმონი", "მილი", "მწნილი", "ოინი", "ომი"],
+      "wheel": "იილმნოწ",
+      "seed": 12,
+      "transpose": false,
+      "wordIds": {
+        "ლიმონი": "word-1",
+        "მილი": "word-2",
+        "მწნილი": "word-3",
+        "ოინი": "word-4",
+        "ომი": "word-5"
+      }
+    },
+    {
+      "id": "ka-376",
+      "sourceWords": ["იოგა", "ნაფოტი", "ტანგო", "ტანი", "ფონი"],
+      "targets": ["იოგა", "ნაფოტი", "ტანგო", "ტანი", "ფონი"],
+      "wheel": "აგინოტფ",
+      "seed": 8,
+      "transpose": false,
+      "wordIds": {
+        "იოგა": "word-1",
+        "ნაფოტი": "word-2",
+        "ტანგო": "word-3",
+        "ტანი": "word-4",
+        "ფონი": "word-5"
+      }
+    },
+    {
+      "id": "ka-377",
+      "sourceWords": ["მამული", "მუმია", "მუხლი", "ხამი", "ხმა"],
+      "targets": ["მამული", "მუმია", "მუხლი", "ხამი", "ხმა"],
+      "wheel": "აილმმუხ",
+      "seed": 8,
+      "transpose": true,
+      "wordIds": {
+        "მამული": "word-1",
+        "მუმია": "word-2",
+        "მუხლი": "word-3",
+        "ხამი": "word-4",
+        "ხმა": "word-5"
+      }
+    },
+    {
+      "id": "ka-378",
+      "sourceWords": ["ასკილი", "ისლამი", "მაისი", "სკა", "სკამი"],
+      "targets": ["ასკილი", "ისლამი", "მაისი", "სკა", "სკამი"],
+      "wheel": "აიიკლმს",
+      "seed": 8,
+      "transpose": true,
+      "wordIds": {
+        "ასკილი": "word-1",
+        "ისლამი": "word-2",
+        "მაისი": "word-3",
+        "სკა": "word-4",
+        "სკამი": "word-5"
+      }
+    },
+    {
+      "id": "ka-379",
+      "sourceWords": ["აკნე", "ანკეტა", "კატა", "კენტი", "ნეკა"],
+      "targets": ["აკნე", "ანკეტა", "კატა", "კენტი", "ნეკა"],
+      "wheel": "ააეიკნტ",
+      "seed": 2,
+      "transpose": true,
+      "wordIds": {
+        "აკნე": "word-1",
+        "ანკეტა": "word-2",
+        "კატა": "word-3",
+        "კენტი": "word-4",
+        "ნეკა": "word-5"
+      }
+    },
+    {
+      "id": "ka-380",
+      "sourceWords": ["პირმშო", "რომი", "ტორი", "შტო", "შტორმი"],
+      "targets": ["პირმშო", "რომი", "ტორი", "შტო", "შტორმი"],
+      "wheel": "იმოპრტშ",
+      "seed": 3,
+      "transpose": false,
+      "wordIds": {
+        "პირმშო": "word-1",
+        "რომი": "word-2",
+        "ტორი": "word-3",
+        "შტო": "word-4",
+        "შტორმი": "word-5"
+      }
+    },
+    {
+      "id": "ka-381",
+      "sourceWords": ["ასლი", "ახალი", "ხალასი", "ხალხი", "ხახა"],
+      "targets": ["ასლი", "ახალი", "ხალასი", "ხალხი", "ხახა"],
+      "wheel": "ააილსხხ",
+      "seed": 2,
+      "transpose": false,
+      "wordIds": {
+        "ასლი": "word-1",
+        "ახალი": "word-2",
+        "ხალასი": "word-3",
+        "ხალხი": "word-4",
+        "ხახა": "word-5"
+      }
+    },
+    {
+      "id": "ka-382",
+      "sourceWords": ["ავზი", "ეშვი", "ვეშაპი", "ვიზა", "პეშვი"],
+      "targets": ["ავზი", "ეშვი", "ვეშაპი", "ვიზა", "პეშვი"],
+      "wheel": "აევზიპშ",
+      "seed": 1,
+      "transpose": false,
+      "wordIds": {
+        "ავზი": "word-1",
+        "ეშვი": "word-2",
+        "ვეშაპი": "word-3",
+        "ვიზა": "word-4",
+        "პეშვი": "word-5"
+      }
+    },
+    {
+      "id": "ka-383",
+      "sourceWords": ["თამაში", "მთა", "ნაშთი", "ნიშა", "შამანი"],
+      "targets": ["თამაში", "მთა", "ნაშთი", "ნიშა", "შამანი"],
+      "wheel": "აათიმნშ",
+      "seed": 6,
+      "transpose": false,
+      "wordIds": {
+        "თამაში": "word-1",
+        "მთა": "word-2",
+        "ნაშთი": "word-3",
+        "ნიშა": "word-4",
+        "შამანი": "word-5"
+      }
+    },
+    {
+      "id": "ka-384",
+      "sourceWords": ["ზამში", "ზარი", "მარში", "მზა", "პრიზმა"],
+      "targets": ["ზამში", "ზარი", "მარში", "მზა", "პრიზმა"],
+      "wheel": "აზიმპრშ",
+      "seed": 8,
+      "transpose": false,
+      "wordIds": {
+        "ზამში": "word-1",
+        "ზარი": "word-2",
+        "მარში": "word-3",
+        "მზა": "word-4",
+        "პრიზმა": "word-5"
+      }
+    },
+    {
+      "id": "ka-385",
+      "sourceWords": ["ბიბილო", "ბოლი", "იოლი", "ხიბლი", "ხილი"],
+      "targets": ["ბიბილო", "ბოლი", "იოლი", "ხიბლი", "ხილი"],
+      "wheel": "ბბიილოხ",
+      "seed": 1,
+      "transpose": false,
+      "wordIds": {
+        "ბიბილო": "word-1",
+        "ბოლი": "word-2",
+        "იოლი": "word-3",
+        "ხიბლი": "word-4",
+        "ხილი": "word-5"
+      }
+    },
+    {
+      "id": "ka-386",
+      "sourceWords": ["ეზო", "რტო", "ტურნე", "უზნეო", "ურო"],
+      "targets": ["ეზო", "რტო", "ტურნე", "უზნეო", "ურო"],
+      "wheel": "ეზნორტუ",
+      "seed": 2,
+      "transpose": false,
+      "wordIds": {
+        "ეზო": "word-1",
+        "რტო": "word-2",
+        "ტურნე": "word-3",
+        "უზნეო": "word-4",
+        "ურო": "word-5"
+      }
+    },
+    {
+      "id": "ka-387",
+      "sourceWords": ["კიდე", "კოდი", "კრედო", "ჯოკერი", "ჯორი"],
+      "targets": ["კიდე", "კოდი", "კრედო", "ჯოკერი", "ჯორი"],
+      "wheel": "დეიკორჯ",
+      "seed": 8,
+      "transpose": false,
+      "wordIds": {
+        "კიდე": "word-1",
+        "კოდი": "word-2",
+        "კრედო": "word-3",
+        "ჯოკერი": "word-4",
+        "ჯორი": "word-5"
+      }
+    },
+    {
+      "id": "ka-388",
+      "sourceWords": ["ამპერი", "ირემი", "მერი", "პირი", "პრემია"],
+      "targets": ["ამპერი", "ირემი", "მერი", "პირი", "პრემია"],
+      "wheel": "აეიიმპრ",
+      "seed": 5,
+      "transpose": false,
+      "wordIds": {
+        "ამპერი": "word-1",
+        "ირემი": "word-2",
+        "მერი": "word-3",
+        "პირი": "word-4",
+        "პრემია": "word-5"
+      }
+    },
+    {
+      "id": "ka-389",
+      "sourceWords": ["ლაჩარი", "რალი", "ჩადრი", "ჩალა", "ჩია"],
+      "targets": ["ლაჩარი", "რალი", "ჩადრი", "ჩალა", "ჩია"],
+      "wheel": "აადილრჩ",
+      "seed": 1,
+      "transpose": true,
+      "wordIds": {
+        "ლაჩარი": "word-1",
+        "რალი": "word-2",
+        "ჩადრი": "word-3",
+        "ჩალა": "word-4",
+        "ჩია": "word-5"
+      }
+    },
+    {
+      "id": "ka-390",
+      "sourceWords": ["ეული", "სელი", "სუსხი", "სხეული", "ხელი"],
+      "targets": ["ეული", "სელი", "სუსხი", "სხეული", "ხელი"],
+      "wheel": "ეილსსუხ",
+      "seed": 6,
+      "transpose": false,
+      "wordIds": {
+        "ეული": "word-1",
+        "სელი": "word-2",
+        "სუსხი": "word-3",
+        "სხეული": "word-4",
+        "ხელი": "word-5"
+      }
+    },
+    {
+      "id": "ka-391",
+      "sourceWords": ["ელფი", "ლირა", "ფარფლი", "ფერფლი", "ფრე"],
+      "targets": ["ელფი", "ლირა", "ფარფლი", "ფერფლი", "ფრე"],
+      "wheel": "აეილრფფ",
+      "seed": 25,
+      "transpose": false,
+      "wordIds": {
+        "ელფი": "word-1",
+        "ლირა": "word-2",
+        "ფარფლი": "word-3",
+        "ფერფლი": "word-4",
+        "ფრე": "word-5"
+      }
+    },
+    {
+      "id": "ka-392",
+      "sourceWords": ["ვაზი", "ზავი", "ზვავი", "ჩაი", "ჩვევა"],
+      "targets": ["ვაზი", "ზავი", "ზვავი", "ჩაი", "ჩვევა"],
+      "wheel": "აევვზიჩ",
+      "seed": 1,
+      "transpose": true,
+      "wordIds": {
+        "ვაზი": "word-1",
+        "ზავი": "word-2",
+        "ზვავი": "word-3",
+        "ჩაი": "word-4",
+        "ჩვევა": "word-5"
+      }
+    },
+    {
+      "id": "ka-393",
+      "sourceWords": ["ლირიკა", "რკალი", "ღარი", "ღილაკი", "ღილი"],
+      "targets": ["ლირიკა", "რკალი", "ღარი", "ღილაკი", "ღილი"],
+      "wheel": "აიიკლრღ",
+      "seed": 7,
+      "transpose": true,
+      "wordIds": {
+        "ლირიკა": "word-1",
+        "რკალი": "word-2",
+        "ღარი": "word-3",
+        "ღილაკი": "word-4",
+        "ღილი": "word-5"
+      }
+    },
+    {
+      "id": "ka-394",
+      "sourceWords": ["ადგილი", "გუდა", "გულადი", "დილა", "ლუდი"],
+      "targets": ["ადგილი", "გუდა", "გულადი", "დილა", "ლუდი"],
+      "wheel": "აგდიილუ",
+      "seed": 16,
+      "transpose": false,
+      "wordIds": {
+        "ადგილი": "word-1",
+        "გუდა": "word-2",
+        "გულადი": "word-3",
+        "დილა": "word-4",
+        "ლუდი": "word-5"
+      }
+    },
+    {
+      "id": "ka-395",
+      "sourceWords": ["ოდა", "საბადო", "საბაზო", "სადა", "სოდა"],
+      "targets": ["ოდა", "საბადო", "საბაზო", "სადა", "სოდა"],
+      "wheel": "ააბდზოს",
+      "seed": 5,
+      "transpose": true,
+      "wordIds": {
+        "ოდა": "word-1",
+        "საბადო": "word-2",
+        "საბაზო": "word-3",
+        "სადა": "word-4",
+        "სოდა": "word-5"
+      }
+    }
+  ],
+  "validationDraftSha256": "b0bf7bc874a783bacb508d6eca60c4700fd4ded07408f64b9a082e7b30dcadaf",
+  "limitations": "Bounded search, not a maximum-capacity or global-optimality proof. No vocabulary additions, real destinations, artwork or release promotion. Active content and catalog hashes remain unchanged."
+}

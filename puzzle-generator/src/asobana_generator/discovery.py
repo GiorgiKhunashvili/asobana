@@ -40,7 +40,14 @@ SPAIN_JOURNEY: JourneyManifest = json.loads(
 )
 
 
+PORTUGAL_MOROCCO_JOURNEY: JourneyManifest = json.loads(
+    (Path(__file__).resolve().parents[3] / "content/journey-v28.json").read_text()
+)
+
+
 def journey_for_revision(revision: int) -> JourneyManifest:
+    if revision >= 28:
+        return PORTUGAL_MOROCCO_JOURNEY
     if revision >= 23:
         return SPAIN_JOURNEY
     if revision >= 22:

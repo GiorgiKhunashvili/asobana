@@ -1,5 +1,27 @@
 # Asobana TestFlight
 
+## Bundle ID change — 2026-10-20 (not yet built)
+
+The owner moved the app to **`ge.spilogames.asobana`** (iOS bundle ID and
+Android package; URL scheme `asobana`). Apple does not let an App Store app
+change its bundle ID, so the next build needs a **new App Store Connect app
+record**. Builds 0.1.0 (1)–(13) below stay under the old record `6822637685`
+(`dev.geowords.prototype`); testers install the new app separately and start
+with a fresh save. The Expo project (`geowords`, same project ID) and the
+internal content-pack ID are unchanged.
+
+Before the next upload, the owner (signed in to Apple) needs to:
+
+1. let EAS register the new bundle ID and create its App Store provisioning
+   profile, e.g. by running once, interactively from `mobile/`:
+   `npx eas-cli@latest credentials --platform ios` (production profile);
+2. create the App Store Connect app for `ge.spilogames.asobana` (Apps → + →
+   New App), then put its Apple ID in `mobile/eas.json` as
+   `submit.production.ios.ascAppId` (the old value was removed so no build of
+   the new ID is sent to the old record).
+
+After that, the local build and EAS Submit commands are unchanged.
+
 ## Rewarded demo ads beta — 2026-10-19 (uploaded, Apple processing)
 
 **Asobana 0.1.0 (13)** was built locally with Xcode 26.6 and uploaded to App

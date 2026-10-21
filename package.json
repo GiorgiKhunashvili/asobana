@@ -1,5 +1,5 @@
 {
-  "name": "geowords-workspace",
+  "name": "asobana-workspace",
   "version": "0.1.0",
   "private": true,
   "workspaces": [
@@ -18,7 +18,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "test:python": "cd puzzle-generator && uv run pytest",
-    "generate": "cd puzzle-generator && uv run python -m geowords_generator",
+    "generate": "cd puzzle-generator && uv run python -m asobana_generator",
     "validate:content": "npm run validate:content -w mobile",
     "check": "npm run typecheck && npm run lint && npm test && npm run validate:content && npm run format:check"
   },

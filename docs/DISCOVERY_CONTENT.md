@@ -1,4 +1,64 @@
-# Journey campaign — revision 26: approved vocabulary expansion
+# Journey campaign — revision 28: Portugal and Morocco
+
+The owner approved adding the ten proposed destinations and exact validated
+50-level extension on 2026-10-20. The active route now has **345 levels / 69 stops**:
+Portugal 296–315 (Lagos, Lisbon, Sintra, Porto), then Morocco 316–345 (Tangier,
+Chefchaouen, Fez, Merzouga, Aït Ben Haddou, Marrakech).
+
+Revision 28 integrates all **78 targeted approvals**, giving **2,075 required
+words** and **2,193 eligible spellings** (118 bonus-only). The 1,725 slots use
+**1,414 distinct words** with **311 repeated slots (18.03%)**, minimum gap 75.
+The first 295 required boards, layouts, wheels, difficulty and IDs remain exactly
+as revision 27; eligible bonus recognition expands. All historical content stays
+immutable. Migration preserves saved progress, earned balance, hint and bonus
+credits, doubled rewards, receipts and collected postcards.
+
+Ten generated paintings and matching postcard crops are bundled, with Georgian
+captions and source-checked place facts. See [artwork and exact prompts](PORTUGAL_MOROCCO_ARTWORK.md),
+[all 345 boards and audit](VOCABULARY_REVIEW_V28.md), and
+[the complete approved pool](VOCABULARY_OWNER_REVIEW_V28.md).
+The current manifest is `content/journey-v28.json`; the deterministic rebuild
+script defaults to revision 28 and requires the reviewed SHA-256 to promote.
+
+Validation: 338 app tests in 44 suites and 150 Python tests passed; all 345
+levels were validated and solved. TypeScript typecheck/lint, Python Ruff checks
+and mypy passed. The final iOS export contains all twenty new JPEG assets.
+The initial root check reached formatting and reported two prior trial-report
+files; these were formatted and the formatting stage rerun separately.
+No native-device playtest or TestFlight upload is included in this content change.
+
+## Historical revision 27
+
+### October owner review
+
+The owner approved applying the 295-board trial on 2026-10-20. Revision 27 adds
+277 individually reviewed senses, reaching **1,997 required approvals** and
+**2,115 playable spellings**, including the unchanged 118 bonus-only words.
+The 93 explicit rejections are excluded from all gameplay roles; 41 unselected
+alternatives remain unapproved. Historical packs and dictionaries remain unchanged.
+
+The game now uses **1,281 distinct required words** across **1,475 answer slots**,
+with **194 repeated slots (13.15%)**, down from 242 (16.41%). There are **716 unused
+approvals**. The approved draft's boards are unchanged; its publication uses new
+revision 27 and the existing 295-level, 59-stop route in `content/journey-v23.json`.
+The minimum repeat gap is 76 levels, above the required 75.
+
+Current pack, recipes, reference and allowlist use v27. The official rebuild script
+defaults to `--revision 27`; promotion checks the reviewed draft SHA-256. The owner
+waived progress-preservation as a release requirement; the existing migration path
+was extended to accept v27 without adding reset behavior.
+
+See [the review and validation](VOCABULARY_REVIEW_V27.md),
+[every approved word and its usage](VOCABULARY_OWNER_REVIEW_V27.md), and
+[the complete owner decisions](VOCABULARY_EXPANSION_REVIEW_2026_10_20.json).
+The earlier [isolated trial report](VOCABULARY_GENERATION_TRIAL_2026_10_20.md)
+records the search before this promotion.
+The [extension capacity report](CAMPAIGN_EXTENSION_CAPACITY_V27.md) compares validated
+options for 5–50 additional levels; these experiments are not bundled.
+
+---
+
+# Historical revision 26: approved vocabulary expansion
 
 [Batch 07](VOCABULARY_EXPANSION_BATCH_07.md) adds **75 approved senses** and excludes
 the **25 owner-rejected spellings** from required answers, variants and bonuses.
@@ -17,7 +77,7 @@ See [all boards and measurements](VOCABULARY_REVIEW_V26.md) and
 
 Current pack, recipes, reference and allowlist use v26; the route remains
 `content/journey-v23.json`. Rebuild with `scripts/rebuild-wide-content.py --revision 26`
-(the default), inspect the draft and promote only against its reviewed digest.
+(the default at that revision), inspect the draft and promote only against its reviewed digest.
 Historical JSON remains immutable. Save migration supports revisions 1–25 with a
 1,670 historical hint-credit ceiling and preserves earned progress across restart.
 
@@ -796,6 +856,16 @@ reproduces coordinates, word IDs, wheel order, bonuses and difficulty. All 50 te
 grids and target/bonus lists were inspected against the unchanged reference
 vocabulary before explicitly approving the draft digest in
 `content/levels/discovery.v6.review.json`.
+
+A wide recipe may opt into a bound-aware layout with `"layout": "bounded-v1"` plus
+`maxRows`, `maxColumns` and `minColumns` (limits apply before any transpose). That
+mode places every target inside the board limits by backtracking: it prunes each
+partial layout that leaves the limits or fails `valid_layout` instead of discarding
+the board, and the result depends only on the word set, seed and limits. Recipes
+without `layout` use the unchanged greedy generator, so every pack through revision
+28 rebuilds byte-identically. No active pack uses the bounded mode yet; the
+500-level rebuild draft in [CAMPAIGN_500_FULL_REBUILD_RESULTS.md](CAMPAIGN_500_FULL_REBUILD_RESULTS.md)
+is its first user.
 
 Generation always exports `generated-draft`. Promotion is a **separate explicit
 invocation** bound to the reviewed draft SHA-256; a changed draft cannot reuse the

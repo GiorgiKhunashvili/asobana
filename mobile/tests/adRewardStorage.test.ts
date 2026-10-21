@@ -113,7 +113,7 @@ test('version 2 database migration leaves the old snapshot untouched; receipts s
     expect(receipt.state.coins).toBe(112);
     const current = createSqliteRepository(db, catalog, previousCatalogs);
     const migrated = await current.load();
-    expect(migrated?.state.contentRevision).toBe(26);
+    expect(migrated?.state.contentRevision).toBe(28);
     const duplicate = await current.claimAdReward('before-content-upgrade');
     expect(duplicate.granted).toBe(false);
     expect(duplicate.state).toEqual(migrated?.state);

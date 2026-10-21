@@ -3,8 +3,8 @@ from pathlib import Path
 
 import pytest
 
-from geowords_generator.wide import rebuild_wide, validate_wide
-from geowords_generator.word_policy import playable_vocabulary, required_vocabulary
+from asobana_generator.wide import rebuild_wide, validate_wide
+from asobana_generator.word_policy import playable_vocabulary, required_vocabulary
 
 ROOT = Path(__file__).resolve().parents[2]
 

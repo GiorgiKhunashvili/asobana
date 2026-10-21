@@ -1,5 +1,5 @@
 import batch from '../../docs/VOCABULARY_EXPANSION_BATCH_07.json';
-import manifest from '../../content/levels/discovery.v26.recipes.json';
+import manifest from '../../content/levels/discovery.v28.recipes.json';
 import {
   catalog,
   previousCatalogs,
@@ -37,10 +37,12 @@ test('batch seven adds exactly the 75 approved senses and preserves the 118 bonu
     new Set([...requiredWordsForRevision(25), ...approved]),
   );
   expect(requiredWordsForRevision(26).size).toBe(1720);
-  expect(vocabulary.size).toBe(1838);
+  expect(vocabularyForRevision(26).size).toBe(1838);
   expect(
     new Set(
-      [...vocabulary].filter((w) => !requiredWordsForRevision(26).has(w)),
+      [...vocabularyForRevision(26)].filter(
+        (w) => !requiredWordsForRevision(26).has(w),
+      ),
     ),
   ).toEqual(
     new Set(
@@ -56,8 +58,8 @@ test('batch seven adds exactly the 75 approved senses and preserves the 118 bonu
   const after = new Set(
     catalog.levels.flatMap((l) => l.words.map((w) => w.answer)),
   );
-  expect(catalog.levels).toHaveLength(295);
-  expect(catalog.chapters).toEqual(old.chapters);
+  expect(catalog.levels).toHaveLength(345);
+  expect(catalog.chapters.slice(0, old.chapters.length)).toEqual(old.chapters);
   expect(after.size).toBeGreaterThan(before.size);
 });
 
@@ -153,7 +155,7 @@ test.each(['partial', 'complete'] as const)(
       await createSqliteRepository(db, previous).save(old, 0);
       const repo = createSqliteRepository(db, catalog, previousCatalogs);
       const upgraded = (await repo.load())!;
-      expect(upgraded.state.contentRevision).toBe(26);
+      expect(upgraded.state.contentRevision).toBe(28);
       expect(upgraded.state.progress['ka-001']!.hintsUsed).toBe(1628);
       expect(upgraded.state.coins).toBe(old.coins);
       expect(upgraded.state.currentLevelId).toBe(old.currentLevelId);

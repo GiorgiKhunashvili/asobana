@@ -4,7 +4,7 @@ from pathlib import Path
 
 import pytest
 
-from geowords_generator.wide import validate_word_lengths
+from asobana_generator.wide import validate_word_lengths
 
 ROOT = Path(__file__).resolve().parents[2]
 

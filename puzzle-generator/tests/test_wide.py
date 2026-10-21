@@ -6,10 +6,10 @@ from typing import cast
 
 import pytest
 
-from geowords_generator.discovery import discovery_difficulty
-from geowords_generator.models import PackJSON
-from geowords_generator.validation import validate_pack
-from geowords_generator.wide import (
+from asobana_generator.discovery import discovery_difficulty
+from asobana_generator.models import PackJSON
+from asobana_generator.validation import validate_pack
+from asobana_generator.wide import (
     WideManifest,
     project_board,
     rebuild_wide,

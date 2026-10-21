@@ -1,5 +1,5 @@
 import review from '../../content/dictionaries/everyday-targets-v14.json';
-import manifest from '../../content/levels/discovery.v26.recipes.json';
+import manifest from '../../content/levels/discovery.v28.recipes.json';
 import { catalog, previousCatalogs, vocabulary } from '../src/content/catalog';
 import { requiredWordsForRevision } from '../src/content/wordPolicy';
 import { validateWide } from '../src/content/wide';
@@ -16,7 +16,7 @@ import { TestSqlite } from './sqliteAdapter';
 const plurals = new Set(review.pluralReview.map((entry) => entry.word));
 
 test('plurals are bonus-only from v14 and vocabulary coverage improves', () => {
-  expect(catalog.revision).toBe(26);
+  expect(catalog.revision).toBe(28);
   expect(requiredWordsForRevision(14).size).toBe(831);
   for (const word of plurals) {
     expect(vocabulary.has(word)).toBe(true);

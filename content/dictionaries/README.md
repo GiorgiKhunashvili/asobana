@@ -14,7 +14,18 @@ No fake words, automated dictionary guesses or bulk dictionary imports are bundl
 The historical four crossword layouts are manually authored and mechanically validated.
 They remain as revision 1 fixtures. Revisions 2 and 3 are also retained for save
 migration; revision 4 is also retained. The active campaign is
-[revision 26](../../docs/DISCOVERY_CONTENT.md).
+[revision 27](../../docs/DISCOVERY_CONTENT.md).
+
+The [October 20 owner review](../../docs/VOCABULARY_EXPANSION_REVIEW_2026_10_20.json)
+records 277 additional approved senses, bringing the reviewed pool to 1,997.
+Their source URLs, checked dates, concise glosses and individual decisions are
+retained in that ledger. Georgian explanatory-dictionary and University of Georgia
+synonym-dictionary entries are verification sources; full definitions are not
+republished. Existing Wiktionary attribution and terms remain attached.
+The [generation trial](../../docs/VOCABULARY_GENERATION_TRIAL_2026_10_20.md) uses
+copied dictionaries and policies under `artifacts/vocabulary-trial-1997/runtime/`.
+The owner subsequently approved this exact trial; it is now integrated as revision 27.
+Historical dictionaries and packs remain immutable.
 
 `beta-ka.json` records 147 selected reference-checked words with exact Wiktionary
 source revision URLs and short glosses, under the same CC BY-SA 4.0 terms. Source
@@ -351,3 +362,20 @@ and CC BY-SA 4.0 terms remain. Georgian explanatory dictionary links support sho
 editorial glosses; full definitions are not copied. Source checking alone is not
 approval: individual owner decisions authorize these senses. Current usage is in
 `docs/VOCABULARY_OWNER_REVIEW_V26.md`.
+
+## Revision 27: October owner vocabulary review
+
+`discovery-v27-ka.json` preserves all 1,970 prior entries and adds 277 individually
+approved senses, for 2,247 reference entries. `everyday-targets-v27.json` contains
+1,997 required approvals. The eligible dictionary has 2,115 spellings, including
+the same 118 bonus-only words. The `owner-oct20-expansion` policy excludes all 93
+explicit owner rejections from revision 27. The other 41 unselected alternatives
+are not approved or ingested. Source attribution and per-entry sense decisions are
+recorded in `docs/VOCABULARY_EXPANSION_REVIEW_2026_10_20.json`.
+
+The active 295-board campaign uses 1,281 words, leaving 716 approvals unused.
+See `docs/VOCABULARY_REVIEW_V27.md` and `docs/VOCABULARY_OWNER_REVIEW_V27.md`.
+
+## Revision 28: targeted approvals for Portugal and Morocco
+
+`discovery-v28-ka.json` preserves all historical reference entries and adds 78 individually owner-approved senses from targeted batches 01 (54) and 02 (24). `everyday-targets-v28.json` contains 2,075 required approvals. The eligible dictionary has 2,193 spellings, with the same 118 bonus-only reservations. Unselected candidates are not ingested. Existing exclusions are unchanged. Individual explanatory-dictionary URLs, check dates, content hashes and sense notes remain attached; English glosses are brief editorial summaries, not republished full definitions. Historical dictionary files remain immutable.

@@ -1,11 +1,11 @@
 """Revision 6: reproducible wide crosswords, independent of the UI renderer."""
 
 import math
-from typing import NotRequired, TypedDict
+from typing import Literal, NotRequired, TypedDict
 
 from .discovery import discovery_difficulty, journey_for_revision, validate_discovery
-from .generator import generate_level
-from .models import ChapterJSON, GridJSON, PackJSON, Placement
+from .generator import BOUNDED_LAYOUT, generate_bounded_level, generate_level
+from .models import ChapterJSON, GridJSON, LevelJSON, PackJSON, Placement
 from .validation import validate_pack
 from .vocabulary import can_form_word
 from .word_policy import (
@@ -42,6 +42,13 @@ class WideRecipe(TypedDict):
     seed: int
     transpose: bool
     wordIds: NotRequired[dict[str, str]]
+    # Opt-in bound-aware layout ("bounded-v1"); without it the greedy generator
+    # runs, so every recipe written before this field rebuilds byte-identically.
+    # The limits apply before any transpose.
+    layout: NotRequired[Literal["bounded-v1"]]
+    maxRows: NotRequired[int]
+    maxColumns: NotRequired[int]
+    minColumns: NotRequired[int]
 
 
 class WideManifest(TypedDict):
@@ -101,11 +108,13 @@ def validate_wide(
         24,
         25,
         26,
+        27,
+        28,
     ):
         raise ValueError(
             "Wide campaign requires stable pack identity "
             "and revision 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, "
-            "19, 20, 21, 22, 23, 24, 25 or 26"
+            "19, 20, 21, 22, 23, 24, 25, 26, 27 or 28"
         )
     if pack["revision"] >= 7:
         vocabulary = playable_vocabulary(vocabulary, revision=pack["revision"])
@@ -229,14 +238,9 @@ def rebuild_wide(manifest: WideManifest, vocabulary: set[str]) -> PackJSON:
         source = recipe["sourceWords"]
         if not set(source) <= required or not 5 <= len(recipe["targets"]) <= 7:
             raise ValueError("Unverified wide recipe")
-        level = generate_level(
-            source,
-            seed=recipe["seed"],
-            level_id=recipe["id"],
-            chapter_id=manifest["chapters"][index // 5]["id"],
-            max_words=len(recipe["targets"]),
-            max_tiles=len(recipe["wheel"]),
-        ).level
+        level = generate_recipe_level(
+            recipe, chapter_id=manifest["chapters"][index // 5]["id"]
+        )
         answers = [word["answer"] for word in level["words"]]
         if sorted(answers) != sorted(recipe["targets"]):
             raise ValueError("Recipe did not reproduce its reviewed targets")
@@ -272,6 +276,39 @@ def rebuild_wide(manifest: WideManifest, vocabulary: set[str]) -> PackJSON:
         pack["levels"].append(level)
     validate_wide(pack, vocabulary, manifest["familiarity"])
     return pack
+
+
+def generate_recipe_level(recipe: WideRecipe, *, chapter_id: str) -> LevelJSON:
+    """Generate one recipe's level with the layout mode it names (greedy by default)."""
+    limits = ("maxRows", "maxColumns", "minColumns")
+    layout = recipe.get("layout")
+    if layout is None:
+        if any(key in recipe for key in limits):
+            raise ValueError("Board limits require an explicit layout mode")
+        return generate_level(
+            recipe["sourceWords"],
+            seed=recipe["seed"],
+            level_id=recipe["id"],
+            chapter_id=chapter_id,
+            max_words=len(recipe["targets"]),
+            max_tiles=len(recipe["wheel"]),
+        ).level
+    if layout != BOUNDED_LAYOUT:
+        raise ValueError(f"Unknown wide layout mode: {layout}")
+    if not all(key in recipe for key in limits):
+        raise ValueError("Bounded layout needs maxRows, maxColumns and minColumns")
+    if sorted(recipe["sourceWords"]) != sorted(recipe["targets"]):
+        raise ValueError("Bounded layout places exactly its target words")
+    return generate_bounded_level(
+        recipe["sourceWords"],
+        seed=recipe["seed"],
+        max_rows=recipe["maxRows"],
+        max_columns=recipe["maxColumns"],
+        min_columns=recipe["minColumns"],
+        level_id=recipe["id"],
+        chapter_id=chapter_id,
+        max_tiles=len(recipe["wheel"]),
+    ).level
 
 
 def validate_word_lengths(pack: PackJSON) -> None:

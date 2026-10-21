@@ -1,0 +1,64 @@
+ASOBANA — VOCABULARY REVIEW BATCH 08
+Reviewed 2026-10-20. 46 approved; 14 excluded. Integrated in revision 27.
+See VOCABULARY_EXPANSION_REVIEW_2026_10_20.json for all subsequent reviews.
+
+01. [APPROVED] ანტენა — antenna
+02. [APPROVED] აშკარა — obvious
+03. [APPROVED] ბებერი — old; aged
+04. [APPROVED] გოგონა — girl
+05. [APPROVED] გუგული — cuckoo
+06. [APPROVED] დევიზი — motto
+07. [APPROVED] დღიური — diary
+08. [APPROVED] ვალუტა — currency
+09. [APPROVED] ვიზიტი — official visit
+10. [APPROVED] ზერელე — superficial
+11. [EXCLUDED] კაკადუ — cockatoo
+12. [APPROVED] ლაბადა — light overcoat; cloak
+13. [APPROVED] მამაცი — brave
+14. [APPROVED] მეტოქე — opponent
+15. [APPROVED] მეუღლე — spouse
+16. [APPROVED] მეჩეთი — mosque
+17. [APPROVED] მეჭეჭი — wart
+18. [EXCLUDED] მოდიდო — rather large
+19. [EXCLUDED] მომსხო — rather thick
+20. [EXCLUDED] მომცრო — rather small
+21. [APPROVED] მონობა — slavery
+22. [EXCLUDED] მოტკბო — slightly sweet
+23. [APPROVED] მოხელე — public official
+24. [APPROVED] მუხუდო — chickpea
+25. [APPROVED] მშვიდი — calm
+26. [APPROVED] მცველი — guard
+27. [APPROVED] ნიანგი — crocodile
+28. [EXCLUDED] ოხუნჯი — joking; humorous
+29. [APPROVED] პატარა — small
+30. [APPROVED] პეპელა — butterfly
+31. [APPROVED] პითონი — python snake
+32. [APPROVED] პიჯაკი — suit jacket
+33. [APPROVED] პუნქტი — numbered clause
+34. [EXCLUDED] რიგითი — ordinary
+35. [APPROVED] საბაჟო — customs office
+36. [APPROVED] საელჩო — embassy
+37. [APPROVED] საეჭვო — suspicious
+38. [APPROVED] სიკეთე — kindness
+39. [APPROVED] სოსისი — sausage
+40. [APPROVED] ტიტული — title
+41. [EXCLUDED] უშუალო — direct
+42. [APPROVED] ფინიში — finish line
+43. [APPROVED] ფუღურო — hollow in a tree
+44. [APPROVED] ქელეხი — funeral meal
+45. [APPROVED] ყადაღა — legal seizure of property
+46. [EXCLUDED] ყოფითი — everyday; domestic
+47. [APPROVED] შაკიკი — migraine
+48. [APPROVED] შედეგი — result
+49. [APPROVED] შუადღე — noon
+50. [EXCLUDED] ჩვეული — usual; customary
+51. [APPROVED] ჩრჩილი — moth
+52. [APPROVED] ცერეცო — culinary herb
+53. [EXCLUDED] ცერცვი — broad bean
+54. [APPROVED] ციტატა — quotation
+55. [EXCLUDED] ციცხვი — ladle
+56. [EXCLUDED] ცქვიტი — nimble
+57. [APPROVED] წყლული — ulcer
+58. [APPROVED] ხვეული — curly
+59. [APPROVED] ხუჭუჭა — curly-haired
+60. [EXCLUDED] ჯუნგლი — jungle

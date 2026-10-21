@@ -3,18 +3,18 @@
     "name": "Asobana",
     "slug": "geowords",
     "version": "0.1.0",
-    "scheme": "geowords",
+    "scheme": "asobana",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "dev.geowords.prototype",
+      "bundleIdentifier": "ge.spilogames.asobana",
       "config": {
         "usesNonExemptEncryption": false
       }
     },
     "android": {
-      "package": "dev.geowords.prototype"
+      "package": "ge.spilogames.asobana"
     },
     "plugins": [
       [

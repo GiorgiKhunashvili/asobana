@@ -57,6 +57,17 @@ STOP_BANDS = {
     "granada": (0.45, 0.71),
     "cordoba": (0.44, 0.70),
     "seville": (0.48, 0.74),
+    "lagos": (0.5, 0.76),
+    "lisbon": (0.71, 0.97),
+    "sintra": (0.43, 0.69),
+    "porto": (0.47, 0.73),
+    "tangier": (0.55, 0.81),
+    "chefchaouen": (0.6, 0.86),
+    "fez": (0.55, 0.81),
+    "merzouga": (0.48, 0.74),
+    "ait-ben-haddou": (0.48, 0.74),
+    "marrakech": (0.38, 0.64),
+
 }
 
 

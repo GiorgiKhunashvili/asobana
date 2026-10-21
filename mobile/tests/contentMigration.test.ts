@@ -118,7 +118,7 @@ test.each([0, 1, 2, 3])(
 );
 
 test('SQLite upgrade commits once, resumes in a new store and rejects stale writers', async () => {
-  const folder = mkdtempSync(join(tmpdir(), 'geowords-beta-'));
+  const folder = mkdtempSync(join(tmpdir(), 'asobana-beta-'));
   const path = join(folder, 'game.db');
   let db = new TestSqlite(path);
   try {

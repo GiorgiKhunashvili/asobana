@@ -12,7 +12,7 @@ import { reachLevel, submit } from './helpers';
 import { TestSqlite } from './sqliteAdapter';
 
 test('the shipped revision 4 save upgrades atomically and survives closing SQLite', async () => {
-  const directory = mkdtempSync(join(tmpdir(), 'geowords-discovery-'));
+  const directory = mkdtempSync(join(tmpdir(), 'asobana-discovery-'));
   const path = join(directory, 'save.db');
   const previous = previousCatalogs[3]!;
   const level = previous.levels[21]!;

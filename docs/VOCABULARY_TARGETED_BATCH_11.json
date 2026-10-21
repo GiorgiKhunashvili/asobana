@@ -1,0 +1,751 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-20",
+  "status": "owner-reviewed-pending-integration",
+  "activeRevisionUnchanged": 28,
+  "activeApprovedPool": 2075,
+  "approvedPoolBefore": 2299,
+  "pendingIntegrationCount": 243,
+  "candidateCount": 35,
+  "countsByCategory": {
+    "animal": 5,
+    "food": 10,
+    "country": 20
+  },
+  "countsByLength": {
+    "3": 1,
+    "4": 5,
+    "5": 7,
+    "6": 22
+  },
+  "previouslyRecordedSpellings": 4705,
+  "previousReviewOverlap": 0,
+  "method": "Owner-requested animals, foods and popular countries. Compare exact spellings against all vocabulary review JSON files and dictionary JSON files, including rejected/skipped proposals. Check individual meanings using dictionaries, Georgian encyclopedia entries and primary food usage; verify full country names against Unicode CLDR 48.",
+  "limitations": "Owner review complete: 19 countries approved and 16 other candidates rejected. No boards generated, capacity or repetition measured, or game content changed. The 19 individually approved countries require eligibility integration in a future revision.",
+  "sourceAttribution": "Georgian explanatory dictionary/Linguistic Technologies Group; Dictionary.ge; NPLG dictionaries and Tabula archive; Georgian Wikipedia contributors (CC BY-SA 4.0); Unicode CLDR contributors. Brief English glosses only. Individual URLs and available content hashes/revision IDs retained.",
+  "entries": [
+    {
+      "word": "ლემური",
+      "length": 6,
+      "category": "animal",
+      "proposedMeaning": "lemur",
+      "partOfSpeech": "noun",
+      "ownerDecision": "rejected",
+      "sourceChecked": "2026-10-20",
+      "senseNotes": "Singular ordinary noun; no plural or human-name-only sense proposed. Owner familiarity review remains pending.",
+      "sources": [
+        {
+          "url": "https://dictionary.ge/en/letter/m/",
+          "kind": "Primary dictionary text",
+          "checkedVia": "Source text inspected through web retrieval"
+        }
+      ],
+      "id": "T11-001"
+    },
+    {
+      "word": "მაკაკა",
+      "length": 6,
+      "category": "animal",
+      "proposedMeaning": "macaque",
+      "partOfSpeech": "noun",
+      "ownerDecision": "rejected",
+      "sourceChecked": "2026-10-20",
+      "senseNotes": "Singular ordinary noun; no plural or human-name-only sense proposed. Owner familiarity review remains pending.",
+      "sources": [
+        {
+          "url": "https://dictionary.ge/en/letter/m/",
+          "kind": "Primary dictionary text",
+          "checkedVia": "Source text inspected through web retrieval"
+        }
+      ],
+      "id": "T11-002"
+    },
+    {
+      "word": "ციცარი",
+      "length": 6,
+      "category": "animal",
+      "proposedMeaning": "guinea fowl",
+      "partOfSpeech": "noun",
+      "ownerDecision": "rejected",
+      "sourceChecked": "2026-10-20",
+      "senseNotes": "Singular ordinary noun; no plural or human-name-only sense proposed. Owner familiarity review remains pending.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%AA%E1%83%98%E1%83%AA%E1%83%90%E1%83%A0%E1%83%98",
+          "kind": "Georgian explanatory dictionary",
+          "sha256": "dea973314e27f06c73569c0c52be59ac7652ba5cf246482c6f56c449a874aaa9"
+        }
+      ],
+      "id": "T11-003"
+    },
+    {
+      "word": "ნუტრია",
+      "length": 6,
+      "category": "animal",
+      "proposedMeaning": "coypu (nutria)",
+      "partOfSpeech": "noun",
+      "ownerDecision": "rejected",
+      "sourceChecked": "2026-10-20",
+      "senseNotes": "Singular ordinary noun; no plural or human-name-only sense proposed. Owner familiarity review remains pending.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%9C%E1%83%A3%E1%83%A2%E1%83%A0%E1%83%98%E1%83%90",
+          "kind": "Georgian explanatory dictionary",
+          "sha256": "35711753ba13d1b5d5a4292051a526ad49c02fbdb205ae91e9e6a096e95256d1"
+        }
+      ],
+      "id": "T11-004"
+    },
+    {
+      "word": "კეფალი",
+      "length": 6,
+      "category": "animal",
+      "proposedMeaning": "mullet fish",
+      "partOfSpeech": "noun",
+      "ownerDecision": "rejected",
+      "sourceChecked": "2026-10-20",
+      "senseNotes": "Singular ordinary noun; no plural or human-name-only sense proposed. Owner familiarity review remains pending.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%99%E1%83%94%E1%83%A4%E1%83%90%E1%83%9A%E1%83%98",
+          "kind": "Georgian explanatory dictionary",
+          "sha256": "f3954c8bb893e556e406dc6f3ef62679646196c721dc1e0b7c985c2d8e9ef896"
+        }
+      ],
+      "id": "T11-005"
+    },
+    {
+      "word": "თათარა",
+      "length": 6,
+      "category": "food",
+      "proposedMeaning": "grape-juice and flour pudding",
+      "partOfSpeech": "noun",
+      "ownerDecision": "rejected",
+      "sourceChecked": "2026-10-20",
+      "senseNotes": "Singular ordinary noun; no plural or human-name-only sense proposed. Owner familiarity review remains pending.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%97%E1%83%90%E1%83%97%E1%83%90%E1%83%A0%E1%83%90",
+          "kind": "Georgian explanatory dictionary",
+          "sha256": "42c5a77342ab3fa77d7f23c59e39f7e00c379c93556c1ab6c5aa99367b1d80c5"
+        }
+      ],
+      "id": "T11-006"
+    },
+    {
+      "word": "ჩანახი",
+      "length": 6,
+      "category": "food",
+      "proposedMeaning": "meat and vegetable stew",
+      "partOfSpeech": "noun",
+      "ownerDecision": "rejected",
+      "sourceChecked": "2026-10-20",
+      "senseNotes": "Singular ordinary noun; no plural or human-name-only sense proposed. Owner familiarity review remains pending.",
+      "sources": [
+        {
+          "url": "https://www.nplg.gov.ge/wikidict/index.php/ჩანახი_(კერძი)",
+          "kind": "Primary dictionary text",
+          "checkedVia": "Source text inspected through web retrieval"
+        }
+      ],
+      "id": "T11-007"
+    },
+    {
+      "word": "ფსტა",
+      "length": 4,
+      "category": "food",
+      "proposedMeaning": "pistachio",
+      "partOfSpeech": "noun",
+      "ownerDecision": "rejected",
+      "sourceChecked": "2026-10-20",
+      "senseNotes": "Dictionary entry describes the pistachio plant and edible kernel; food-category label includes edible plants.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A4%E1%83%A1%E1%83%A2%E1%83%90",
+          "kind": "Georgian explanatory dictionary",
+          "sha256": "7d672ef103250a7a708dc3f586989283646a3f6b4a8701f42e1b514226fd8fa4"
+        }
+      ],
+      "id": "T11-008"
+    },
+    {
+      "word": "ბაგეტი",
+      "length": 6,
+      "category": "food",
+      "proposedMeaning": "baguette",
+      "partOfSpeech": "noun",
+      "ownerDecision": "rejected",
+      "sourceChecked": "2026-10-20",
+      "senseNotes": "Specific food name, source-attested Georgian spelling. Not a claim of native-speaker review; owner decides familiarity.",
+      "sources": [
+        {
+          "url": "https://ka.wikipedia.org/w/index.php?title=ბაგეტი&oldid=4672605",
+          "kind": "Georgian encyclopedia entry",
+          "revisionId": 4672605,
+          "sha256": "8f387c869bea3b96c3b89ac2fbe557ca7e80578801290f69bf7d92e4fe2bc3a7",
+          "license": "CC BY-SA 4.0"
+        }
+      ],
+      "id": "T11-009"
+    },
+    {
+      "word": "ბრი",
+      "length": 3,
+      "category": "food",
+      "proposedMeaning": "Brie cheese",
+      "partOfSpeech": "noun",
+      "ownerDecision": "rejected",
+      "sourceChecked": "2026-10-20",
+      "senseNotes": "Specific food name, source-attested Georgian spelling. Not a claim of native-speaker review; owner decides familiarity.",
+      "sources": [
+        {
+          "url": "https://ka.wikipedia.org/w/index.php?title=ბრი&oldid=5359653",
+          "kind": "Georgian encyclopedia entry",
+          "revisionId": 5359653,
+          "sha256": "05fdf90c139e0643dc59345b5c4f32cdee66244d553fbaf70dd1d5ec04674208",
+          "license": "CC BY-SA 4.0"
+        }
+      ],
+      "id": "T11-010"
+    },
+    {
+      "word": "ფეტა",
+      "length": 4,
+      "category": "food",
+      "proposedMeaning": "feta cheese",
+      "partOfSpeech": "noun",
+      "ownerDecision": "rejected",
+      "sourceChecked": "2026-10-20",
+      "senseNotes": "Specific food name, source-attested Georgian spelling. Not a claim of native-speaker review; owner decides familiarity.",
+      "sources": [
+        {
+          "url": "https://ka.wikipedia.org/w/index.php?title=ფეტა&oldid=4972850",
+          "kind": "Georgian encyclopedia entry",
+          "revisionId": 4972850,
+          "sha256": "d4509140ef23c4a420da282c7101905da0efa3c0a5ee6a8e333c5989ccbf685e",
+          "license": "CC BY-SA 4.0"
+        }
+      ],
+      "id": "T11-011"
+    },
+    {
+      "word": "მაფინი",
+      "length": 6,
+      "category": "food",
+      "proposedMeaning": "muffin",
+      "partOfSpeech": "noun",
+      "ownerDecision": "rejected",
+      "sourceChecked": "2026-10-20",
+      "senseNotes": "Specific food name, source-attested Georgian spelling. Not a claim of native-speaker review; owner decides familiarity.",
+      "sources": [
+        {
+          "url": "https://ka.wikipedia.org/w/index.php?title=მაფინი&oldid=4540528",
+          "kind": "Georgian encyclopedia entry",
+          "revisionId": 4540528,
+          "sha256": "a10ed653c4039a3a81c66cc548a8cb5f1a8cdade35c8371995815d29c30ddb7c",
+          "license": "CC BY-SA 4.0"
+        }
+      ],
+      "id": "T11-012"
+    },
+    {
+      "word": "პაპაია",
+      "length": 6,
+      "category": "food",
+      "proposedMeaning": "papaya",
+      "partOfSpeech": "noun",
+      "ownerDecision": "rejected",
+      "sourceChecked": "2026-10-20",
+      "senseNotes": "Singular ordinary noun; no plural or human-name-only sense proposed. Owner familiarity review remains pending.",
+      "sources": [
+        {
+          "url": "https://ka.wikipedia.org/w/index.php?title=ნესვის ხე&oldid=4408307",
+          "kind": "Georgian encyclopedia entry",
+          "revisionId": 4408307,
+          "sha256": "da2e0633ea5f109bbd7ed9fe40b03156cb84c6e4528311160eae08e4a0fdd4d2",
+          "license": "CC BY-SA 4.0"
+        }
+      ],
+      "id": "T11-013"
+    },
+    {
+      "word": "ოლადი",
+      "length": 5,
+      "category": "food",
+      "proposedMeaning": "small pancake",
+      "partOfSpeech": "noun",
+      "ownerDecision": "rejected",
+      "sourceChecked": "2026-10-20",
+      "senseNotes": "Singular ordinary noun; no plural or human-name-only sense proposed. Owner familiarity review remains pending.",
+      "sources": [
+        {
+          "url": "https://dictionary.ge/en/search/cake/",
+          "kind": "Dictionary.ge English–Georgian dictionary",
+          "sha256": "e779b20e1fef76b5a5ec7819ab8f70f7220ac970ba3e7b5674b61016abe27a28"
+        }
+      ],
+      "id": "T11-014"
+    },
+    {
+      "word": "პესტო",
+      "length": 5,
+      "category": "food",
+      "proposedMeaning": "pesto sauce",
+      "partOfSpeech": "noun",
+      "ownerDecision": "rejected",
+      "sourceChecked": "2026-10-20",
+      "senseNotes": "Specific food name, source-attested Georgian spelling. Not a claim of native-speaker review; owner decides familiarity.",
+      "sources": [
+        {
+          "url": "https://www.nplg.gov.ge/greenstone3/library/collection/period/document/HASH0125e5e5d1c03119ff443bb9?ed=1",
+          "kind": "Georgian recipe published in Tabula, archived by NPLG",
+          "checkedVia": "Source text inspected through web retrieval"
+        }
+      ],
+      "id": "T11-015"
+    },
+    {
+      "word": "ჩინეთი",
+      "length": 6,
+      "category": "country",
+      "proposedMeaning": "China",
+      "partOfSpeech": "proper noun (country)",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-20",
+      "territoryCode": "CN",
+      "senseNotes": "Owner-approved country name; preserve this exact full Georgian spelling and source provenance. Awaiting integration into a future content revision.",
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/unicode-org/cldr/release-48/common/main/ka.xml",
+          "kind": "Unicode CLDR 48 Georgian territory names",
+          "sha256": "43be430b7ad4fbe09c73344efbbc074cb69a4d27942e6e992c812c76cb3db380",
+          "territoryCode": "CN"
+        }
+      ],
+      "id": "T11-016"
+    },
+    {
+      "word": "რუსეთი",
+      "length": 6,
+      "category": "country",
+      "proposedMeaning": "Russia",
+      "partOfSpeech": "proper noun (country)",
+      "ownerDecision": "rejected",
+      "sourceChecked": "2026-10-20",
+      "territoryCode": "RU",
+      "senseNotes": "Country-name category explicitly requested by the owner; individual approval still required. Full Georgian country name, not an abbreviation. Runtime eligibility has not been changed or tested.",
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/unicode-org/cldr/release-48/common/main/ka.xml",
+          "kind": "Unicode CLDR 48 Georgian territory names",
+          "sha256": "43be430b7ad4fbe09c73344efbbc074cb69a4d27942e6e992c812c76cb3db380",
+          "territoryCode": "RU"
+        }
+      ],
+      "id": "T11-017"
+    },
+    {
+      "word": "კანადა",
+      "length": 6,
+      "category": "country",
+      "proposedMeaning": "Canada",
+      "partOfSpeech": "proper noun (country)",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-20",
+      "territoryCode": "CA",
+      "senseNotes": "Owner-approved country name; preserve this exact full Georgian spelling and source provenance. Awaiting integration into a future content revision.",
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/unicode-org/cldr/release-48/common/main/ka.xml",
+          "kind": "Unicode CLDR 48 Georgian territory names",
+          "sha256": "43be430b7ad4fbe09c73344efbbc074cb69a4d27942e6e992c812c76cb3db380",
+          "territoryCode": "CA"
+        }
+      ],
+      "id": "T11-018"
+    },
+    {
+      "word": "იტალია",
+      "length": 6,
+      "category": "country",
+      "proposedMeaning": "Italy",
+      "partOfSpeech": "proper noun (country)",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-20",
+      "territoryCode": "IT",
+      "senseNotes": "Owner-approved country name; preserve this exact full Georgian spelling and source provenance. Awaiting integration into a future content revision.",
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/unicode-org/cldr/release-48/common/main/ka.xml",
+          "kind": "Unicode CLDR 48 Georgian territory names",
+          "sha256": "43be430b7ad4fbe09c73344efbbc074cb69a4d27942e6e992c812c76cb3db380",
+          "territoryCode": "IT"
+        }
+      ],
+      "id": "T11-019"
+    },
+    {
+      "word": "ბელგია",
+      "length": 6,
+      "category": "country",
+      "proposedMeaning": "Belgium",
+      "partOfSpeech": "proper noun (country)",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-20",
+      "territoryCode": "BE",
+      "senseNotes": "Owner-approved country name; preserve this exact full Georgian spelling and source provenance. Awaiting integration into a future content revision.",
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/unicode-org/cldr/release-48/common/main/ka.xml",
+          "kind": "Unicode CLDR 48 Georgian territory names",
+          "sha256": "43be430b7ad4fbe09c73344efbbc074cb69a4d27942e6e992c812c76cb3db380",
+          "territoryCode": "BE"
+        }
+      ],
+      "id": "T11-020"
+    },
+    {
+      "word": "დანია",
+      "length": 5,
+      "category": "country",
+      "proposedMeaning": "Denmark",
+      "partOfSpeech": "proper noun (country)",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-20",
+      "territoryCode": "DK",
+      "senseNotes": "Owner-approved country name; preserve this exact full Georgian spelling and source provenance. Awaiting integration into a future content revision.",
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/unicode-org/cldr/release-48/common/main/ka.xml",
+          "kind": "Unicode CLDR 48 Georgian territory names",
+          "sha256": "43be430b7ad4fbe09c73344efbbc074cb69a4d27942e6e992c812c76cb3db380",
+          "territoryCode": "DK"
+        }
+      ],
+      "id": "T11-021"
+    },
+    {
+      "word": "ფინეთი",
+      "length": 6,
+      "category": "country",
+      "proposedMeaning": "Finland",
+      "partOfSpeech": "proper noun (country)",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-20",
+      "territoryCode": "FI",
+      "senseNotes": "Owner-approved country name; preserve this exact full Georgian spelling and source provenance. Awaiting integration into a future content revision.",
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/unicode-org/cldr/release-48/common/main/ka.xml",
+          "kind": "Unicode CLDR 48 Georgian territory names",
+          "sha256": "43be430b7ad4fbe09c73344efbbc074cb69a4d27942e6e992c812c76cb3db380",
+          "territoryCode": "FI"
+        }
+      ],
+      "id": "T11-022"
+    },
+    {
+      "word": "ჩეხეთი",
+      "length": 6,
+      "category": "country",
+      "proposedMeaning": "Czechia",
+      "partOfSpeech": "proper noun (country)",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-20",
+      "territoryCode": "CZ",
+      "senseNotes": "Owner-approved country name; preserve this exact full Georgian spelling and source provenance. Awaiting integration into a future content revision.",
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/unicode-org/cldr/release-48/common/main/ka.xml",
+          "kind": "Unicode CLDR 48 Georgian territory names",
+          "sha256": "43be430b7ad4fbe09c73344efbbc074cb69a4d27942e6e992c812c76cb3db380",
+          "territoryCode": "CZ"
+        }
+      ],
+      "id": "T11-023"
+    },
+    {
+      "word": "ირანი",
+      "length": 5,
+      "category": "country",
+      "proposedMeaning": "Iran",
+      "partOfSpeech": "proper noun (country)",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-20",
+      "territoryCode": "IR",
+      "senseNotes": "Owner-approved country name; preserve this exact full Georgian spelling and source provenance. Awaiting integration into a future content revision.",
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/unicode-org/cldr/release-48/common/main/ka.xml",
+          "kind": "Unicode CLDR 48 Georgian territory names",
+          "sha256": "43be430b7ad4fbe09c73344efbbc074cb69a4d27942e6e992c812c76cb3db380",
+          "territoryCode": "IR"
+        }
+      ],
+      "id": "T11-024"
+    },
+    {
+      "word": "ერაყი",
+      "length": 5,
+      "category": "country",
+      "proposedMeaning": "Iraq",
+      "partOfSpeech": "proper noun (country)",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-20",
+      "territoryCode": "IQ",
+      "senseNotes": "Owner-approved country name; preserve this exact full Georgian spelling and source provenance. Awaiting integration into a future content revision.",
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/unicode-org/cldr/release-48/common/main/ka.xml",
+          "kind": "Unicode CLDR 48 Georgian territory names",
+          "sha256": "43be430b7ad4fbe09c73344efbbc074cb69a4d27942e6e992c812c76cb3db380",
+          "territoryCode": "IQ"
+        }
+      ],
+      "id": "T11-025"
+    },
+    {
+      "word": "სირია",
+      "length": 5,
+      "category": "country",
+      "proposedMeaning": "Syria",
+      "partOfSpeech": "proper noun (country)",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-20",
+      "territoryCode": "SY",
+      "senseNotes": "Owner-approved country name; preserve this exact full Georgian spelling and source provenance. Awaiting integration into a future content revision.",
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/unicode-org/cldr/release-48/common/main/ka.xml",
+          "kind": "Unicode CLDR 48 Georgian territory names",
+          "sha256": "43be430b7ad4fbe09c73344efbbc074cb69a4d27942e6e992c812c76cb3db380",
+          "territoryCode": "SY"
+        }
+      ],
+      "id": "T11-026"
+    },
+    {
+      "word": "ლიბანი",
+      "length": 6,
+      "category": "country",
+      "proposedMeaning": "Lebanon",
+      "partOfSpeech": "proper noun (country)",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-20",
+      "territoryCode": "LB",
+      "senseNotes": "Owner-approved country name; preserve this exact full Georgian spelling and source provenance. Awaiting integration into a future content revision.",
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/unicode-org/cldr/release-48/common/main/ka.xml",
+          "kind": "Unicode CLDR 48 Georgian territory names",
+          "sha256": "43be430b7ad4fbe09c73344efbbc074cb69a4d27942e6e992c812c76cb3db380",
+          "territoryCode": "LB"
+        }
+      ],
+      "id": "T11-027"
+    },
+    {
+      "word": "ნეპალი",
+      "length": 6,
+      "category": "country",
+      "proposedMeaning": "Nepal",
+      "partOfSpeech": "proper noun (country)",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-20",
+      "territoryCode": "NP",
+      "senseNotes": "Owner-approved country name; preserve this exact full Georgian spelling and source provenance. Awaiting integration into a future content revision.",
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/unicode-org/cldr/release-48/common/main/ka.xml",
+          "kind": "Unicode CLDR 48 Georgian territory names",
+          "sha256": "43be430b7ad4fbe09c73344efbbc074cb69a4d27942e6e992c812c76cb3db380",
+          "territoryCode": "NP"
+        }
+      ],
+      "id": "T11-028"
+    },
+    {
+      "word": "მონაკო",
+      "length": 6,
+      "category": "country",
+      "proposedMeaning": "Monaco",
+      "partOfSpeech": "proper noun (country)",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-20",
+      "territoryCode": "MC",
+      "senseNotes": "Owner-approved country name; preserve this exact full Georgian spelling and source provenance. Awaiting integration into a future content revision.",
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/unicode-org/cldr/release-48/common/main/ka.xml",
+          "kind": "Unicode CLDR 48 Georgian territory names",
+          "sha256": "43be430b7ad4fbe09c73344efbbc074cb69a4d27942e6e992c812c76cb3db380",
+          "territoryCode": "MC"
+        }
+      ],
+      "id": "T11-029"
+    },
+    {
+      "word": "მალტა",
+      "length": 5,
+      "category": "country",
+      "proposedMeaning": "Malta",
+      "partOfSpeech": "proper noun (country)",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-20",
+      "territoryCode": "MT",
+      "senseNotes": "Owner-approved country name; preserve this exact full Georgian spelling and source provenance. Awaiting integration into a future content revision.",
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/unicode-org/cldr/release-48/common/main/ka.xml",
+          "kind": "Unicode CLDR 48 Georgian territory names",
+          "sha256": "43be430b7ad4fbe09c73344efbbc074cb69a4d27942e6e992c812c76cb3db380",
+          "territoryCode": "MT"
+        }
+      ],
+      "id": "T11-030"
+    },
+    {
+      "word": "მაროკო",
+      "length": 6,
+      "category": "country",
+      "proposedMeaning": "Morocco",
+      "partOfSpeech": "proper noun (country)",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-20",
+      "territoryCode": "MA",
+      "senseNotes": "Owner-approved country name; preserve this exact full Georgian spelling and source provenance. Awaiting integration into a future content revision.",
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/unicode-org/cldr/release-48/common/main/ka.xml",
+          "kind": "Unicode CLDR 48 Georgian territory names",
+          "sha256": "43be430b7ad4fbe09c73344efbbc074cb69a4d27942e6e992c812c76cb3db380",
+          "territoryCode": "MA"
+        }
+      ],
+      "id": "T11-031"
+    },
+    {
+      "word": "ტუნისი",
+      "length": 6,
+      "category": "country",
+      "proposedMeaning": "Tunisia",
+      "partOfSpeech": "proper noun (country)",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-20",
+      "territoryCode": "TN",
+      "senseNotes": "Owner-approved country name; preserve this exact full Georgian spelling and source provenance. Awaiting integration into a future content revision.",
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/unicode-org/cldr/release-48/common/main/ka.xml",
+          "kind": "Unicode CLDR 48 Georgian territory names",
+          "sha256": "43be430b7ad4fbe09c73344efbbc074cb69a4d27942e6e992c812c76cb3db380",
+          "territoryCode": "TN"
+        }
+      ],
+      "id": "T11-032"
+    },
+    {
+      "word": "ჩილე",
+      "length": 4,
+      "category": "country",
+      "proposedMeaning": "Chile",
+      "partOfSpeech": "proper noun (country)",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-20",
+      "territoryCode": "CL",
+      "senseNotes": "Owner-approved country name; preserve this exact full Georgian spelling and source provenance. Awaiting integration into a future content revision.",
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/unicode-org/cldr/release-48/common/main/ka.xml",
+          "kind": "Unicode CLDR 48 Georgian territory names",
+          "sha256": "43be430b7ad4fbe09c73344efbbc074cb69a4d27942e6e992c812c76cb3db380",
+          "territoryCode": "CL"
+        }
+      ],
+      "id": "T11-033"
+    },
+    {
+      "word": "პერუ",
+      "length": 4,
+      "category": "country",
+      "proposedMeaning": "Peru",
+      "partOfSpeech": "proper noun (country)",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-20",
+      "territoryCode": "PE",
+      "senseNotes": "Owner-approved country name; preserve this exact full Georgian spelling and source provenance. Awaiting integration into a future content revision.",
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/unicode-org/cldr/release-48/common/main/ka.xml",
+          "kind": "Unicode CLDR 48 Georgian territory names",
+          "sha256": "43be430b7ad4fbe09c73344efbbc074cb69a4d27942e6e992c812c76cb3db380",
+          "territoryCode": "PE"
+        }
+      ],
+      "id": "T11-034"
+    },
+    {
+      "word": "კუბა",
+      "length": 4,
+      "category": "country",
+      "proposedMeaning": "Cuba",
+      "partOfSpeech": "proper noun (country)",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-20",
+      "territoryCode": "CU",
+      "senseNotes": "Owner-approved country name; preserve this exact full Georgian spelling and source provenance. Awaiting integration into a future content revision.",
+      "sources": [
+        {
+          "url": "https://raw.githubusercontent.com/unicode-org/cldr/release-48/common/main/ka.xml",
+          "kind": "Unicode CLDR 48 Georgian territory names",
+          "sha256": "43be430b7ad4fbe09c73344efbbc074cb69a4d27942e6e992c812c76cb3db380",
+          "territoryCode": "CU"
+        }
+      ],
+      "id": "T11-035"
+    }
+  ],
+  "approvedWords": [
+    "ჩინეთი",
+    "კანადა",
+    "იტალია",
+    "ბელგია",
+    "დანია",
+    "ფინეთი",
+    "ჩეხეთი",
+    "ირანი",
+    "ერაყი",
+    "სირია",
+    "ლიბანი",
+    "ნეპალი",
+    "მონაკო",
+    "მალტა",
+    "მაროკო",
+    "ტუნისი",
+    "ჩილე",
+    "პერუ",
+    "კუბა"
+  ],
+  "approvedCount": 19,
+  "rejectedWords": [
+    "ლემური",
+    "მაკაკა",
+    "ციცარი",
+    "ნუტრია",
+    "კეფალი",
+    "თათარა",
+    "ჩანახი",
+    "ფსტა",
+    "ბაგეტი",
+    "ბრი",
+    "ფეტა",
+    "მაფინი",
+    "პაპაია",
+    "ოლადი",
+    "პესტო",
+    "რუსეთი"
+  ],
+  "rejectedCount": 16,
+  "approvedPoolAfter": 2318,
+  "reviewNote": "Owner kept only the country candidates and excluded Russia (რუსეთი): 19 approved countries; all five animal and ten food candidates plus რუსეთი rejected. These decisions await content integration; active revision 28 remains unchanged."
+}

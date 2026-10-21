@@ -1,0 +1,681 @@
+{
+  "date": "2026-10-20",
+  "status": "validated isolated capacity experiments; not bundled",
+  "baselineRevision": 28,
+  "baselineLevels": 345,
+  "baselineDistinct": 1414,
+  "baselineRepeatedSlots": 311,
+  "baselineRepetitionPercent": 18.028985507246375,
+  "activeApprovedWords": 2075,
+  "newApprovedWords": 51,
+  "totalApprovedWords": 2126,
+  "newApprovalsByReview": {
+    "targetedBatch03": 10,
+    "targetedBatch04": 41
+  },
+  "rejectedWords": [
+    "დამბა",
+    "თმიანი",
+    "კოტიტა",
+    "მილაკი",
+    "ტაქტი",
+    "ტრასა",
+    "ტყიანი",
+    "უმიზნო",
+    "ქაჩალი"
+  ],
+  "unusedBeforeTrial": 712,
+  "definition": "Required occurrences beyond a spelling's first required appearance, divided by all required slots. Bonuses excluded.",
+  "candidateCount": 230580,
+  "method": "Freeze the first 345 required boards. Add 51 approved source-linked senses in isolated dictionary copies. Search new seven-tile pair-union wheels, including six-tile unions expanded by one letter, and retain valid landscape five-answer boards. CP-SAT selects five-level stops with novelty first, prior-use concentration second, under spacing, unique wheels, length progression and pacing constraints. A separate 25-level joint selection checks a larger planning window. Best measured checkpoint shown; the 25-level checkpoint uses the separately validated joint variant.",
+  "recommendation": {
+    "extraLevels": 20,
+    "totalLevels": 365,
+    "maximumExtraWithinOnePercentagePoint": 10,
+    "maximumExtraWithinTwoPercentagePoints": 20,
+    "rationale": "Use 20 as a practical modest-increase choice (+1.81 percentage points); choose 10 for a stricter less-than-one-point increase. These cutoffs describe tested outcomes, not mathematical maximum capacity."
+  },
+  "frontier": [
+    {
+      "added": 5,
+      "levels": 350,
+      "distinct": 1429,
+      "repeatedSlots": 321,
+      "repetitionPercent": 18.34285714285714,
+      "increasePercentagePoints": 0.3138716356107665,
+      "newDistinct": 15,
+      "oldUnusedIntroduced": 7,
+      "newApprovalsUsed": 8,
+      "unusedApproved": 697,
+      "extensionRepeatedSlots": 10,
+      "wordsUsedThreeOrMore": 20,
+      "wordsUsedFourOrMore": 1,
+      "variant": "extension"
+    },
+    {
+      "added": 10,
+      "levels": 355,
+      "distinct": 1443,
+      "repeatedSlots": 332,
+      "repetitionPercent": 18.704225352112676,
+      "increasePercentagePoints": 0.6752398448663008,
+      "newDistinct": 29,
+      "oldUnusedIntroduced": 18,
+      "newApprovalsUsed": 11,
+      "unusedApproved": 683,
+      "extensionRepeatedSlots": 21,
+      "wordsUsedThreeOrMore": 28,
+      "wordsUsedFourOrMore": 1,
+      "variant": "extension"
+    },
+    {
+      "added": 15,
+      "levels": 360,
+      "distinct": 1453,
+      "repeatedSlots": 347,
+      "repetitionPercent": 19.27777777777778,
+      "increasePercentagePoints": 1.2487922705314034,
+      "newDistinct": 39,
+      "oldUnusedIntroduced": 23,
+      "newApprovalsUsed": 16,
+      "unusedApproved": 673,
+      "extensionRepeatedSlots": 36,
+      "wordsUsedThreeOrMore": 28,
+      "wordsUsedFourOrMore": 1,
+      "variant": "extension"
+    },
+    {
+      "added": 20,
+      "levels": 365,
+      "distinct": 1463,
+      "repeatedSlots": 362,
+      "repetitionPercent": 19.835616438356166,
+      "increasePercentagePoints": 1.8066309311097903,
+      "newDistinct": 49,
+      "oldUnusedIntroduced": 31,
+      "newApprovalsUsed": 18,
+      "unusedApproved": 663,
+      "extensionRepeatedSlots": 51,
+      "wordsUsedThreeOrMore": 31,
+      "wordsUsedFourOrMore": 1,
+      "variant": "extension"
+    },
+    {
+      "added": 25,
+      "levels": 370,
+      "distinct": 1476,
+      "repeatedSlots": 374,
+      "repetitionPercent": 20.216216216216218,
+      "increasePercentagePoints": 2.1872307089698424,
+      "newDistinct": 62,
+      "oldUnusedIntroduced": 43,
+      "newApprovalsUsed": 19,
+      "unusedApproved": 650,
+      "extensionRepeatedSlots": 63,
+      "wordsUsedThreeOrMore": 34,
+      "wordsUsedFourOrMore": 4,
+      "variant": "global"
+    },
+    {
+      "added": 30,
+      "levels": 375,
+      "distinct": 1485,
+      "repeatedSlots": 390,
+      "repetitionPercent": 20.8,
+      "increasePercentagePoints": 2.7710144927536255,
+      "newDistinct": 71,
+      "oldUnusedIntroduced": 52,
+      "newApprovalsUsed": 19,
+      "unusedApproved": 641,
+      "extensionRepeatedSlots": 79,
+      "wordsUsedThreeOrMore": 39,
+      "wordsUsedFourOrMore": 2,
+      "variant": "extension"
+    },
+    {
+      "added": 35,
+      "levels": 380,
+      "distinct": 1495,
+      "repeatedSlots": 405,
+      "repetitionPercent": 21.31578947368421,
+      "increasePercentagePoints": 3.2868039664378337,
+      "newDistinct": 81,
+      "oldUnusedIntroduced": 60,
+      "newApprovalsUsed": 21,
+      "unusedApproved": 631,
+      "extensionRepeatedSlots": 94,
+      "wordsUsedThreeOrMore": 42,
+      "wordsUsedFourOrMore": 2,
+      "variant": "extension"
+    },
+    {
+      "added": 40,
+      "levels": 385,
+      "distinct": 1505,
+      "repeatedSlots": 420,
+      "repetitionPercent": 21.818181818181817,
+      "increasePercentagePoints": 3.7891963109354414,
+      "newDistinct": 91,
+      "oldUnusedIntroduced": 69,
+      "newApprovalsUsed": 22,
+      "unusedApproved": 621,
+      "extensionRepeatedSlots": 109,
+      "wordsUsedThreeOrMore": 47,
+      "wordsUsedFourOrMore": 2,
+      "variant": "extension"
+    },
+    {
+      "added": 45,
+      "levels": 390,
+      "distinct": 1515,
+      "repeatedSlots": 435,
+      "repetitionPercent": 22.307692307692307,
+      "increasePercentagePoints": 4.278706800445931,
+      "newDistinct": 101,
+      "oldUnusedIntroduced": 78,
+      "newApprovalsUsed": 23,
+      "unusedApproved": 611,
+      "extensionRepeatedSlots": 124,
+      "wordsUsedThreeOrMore": 52,
+      "wordsUsedFourOrMore": 2,
+      "variant": "extension"
+    },
+    {
+      "added": 50,
+      "levels": 395,
+      "distinct": 1525,
+      "repeatedSlots": 450,
+      "repetitionPercent": 22.78481012658228,
+      "increasePercentagePoints": 4.755824619335904,
+      "newDistinct": 111,
+      "oldUnusedIntroduced": 87,
+      "newApprovalsUsed": 24,
+      "unusedApproved": 601,
+      "extensionRepeatedSlots": 139,
+      "wordsUsedThreeOrMore": 58,
+      "wordsUsedFourOrMore": 3,
+      "variant": "extension"
+    },
+    {
+      "added": 55,
+      "levels": 400,
+      "distinct": 1535,
+      "repeatedSlots": 465,
+      "repetitionPercent": 23.25,
+      "increasePercentagePoints": 5.221014492753625,
+      "newDistinct": 121,
+      "oldUnusedIntroduced": 96,
+      "newApprovalsUsed": 25,
+      "unusedApproved": 591,
+      "extensionRepeatedSlots": 154,
+      "wordsUsedThreeOrMore": 65,
+      "wordsUsedFourOrMore": 4,
+      "variant": "extension"
+    },
+    {
+      "added": 60,
+      "levels": 405,
+      "distinct": 1545,
+      "repeatedSlots": 480,
+      "repetitionPercent": 23.703703703703702,
+      "increasePercentagePoints": 5.674718196457327,
+      "newDistinct": 131,
+      "oldUnusedIntroduced": 103,
+      "newApprovalsUsed": 28,
+      "unusedApproved": 581,
+      "extensionRepeatedSlots": 169,
+      "wordsUsedThreeOrMore": 73,
+      "wordsUsedFourOrMore": 5,
+      "variant": "extension"
+    },
+    {
+      "added": 65,
+      "levels": 410,
+      "distinct": 1555,
+      "repeatedSlots": 495,
+      "repetitionPercent": 24.146341463414632,
+      "increasePercentagePoints": 6.117355956168257,
+      "newDistinct": 141,
+      "oldUnusedIntroduced": 113,
+      "newApprovalsUsed": 28,
+      "unusedApproved": 571,
+      "extensionRepeatedSlots": 184,
+      "wordsUsedThreeOrMore": 82,
+      "wordsUsedFourOrMore": 7,
+      "variant": "extension"
+    },
+    {
+      "added": 70,
+      "levels": 415,
+      "distinct": 1565,
+      "repeatedSlots": 510,
+      "repetitionPercent": 24.57831325301205,
+      "increasePercentagePoints": 6.549327745765673,
+      "newDistinct": 151,
+      "oldUnusedIntroduced": 120,
+      "newApprovalsUsed": 31,
+      "unusedApproved": 561,
+      "extensionRepeatedSlots": 199,
+      "wordsUsedThreeOrMore": 95,
+      "wordsUsedFourOrMore": 7,
+      "variant": "extension"
+    },
+    {
+      "added": 75,
+      "levels": 420,
+      "distinct": 1575,
+      "repeatedSlots": 525,
+      "repetitionPercent": 25.0,
+      "increasePercentagePoints": 6.971014492753625,
+      "newDistinct": 161,
+      "oldUnusedIntroduced": 130,
+      "newApprovalsUsed": 31,
+      "unusedApproved": 551,
+      "extensionRepeatedSlots": 214,
+      "wordsUsedThreeOrMore": 108,
+      "wordsUsedFourOrMore": 9,
+      "variant": "extension"
+    },
+    {
+      "added": 80,
+      "levels": 425,
+      "distinct": 1583,
+      "repeatedSlots": 542,
+      "repetitionPercent": 25.50588235294118,
+      "increasePercentagePoints": 7.476896845694803,
+      "newDistinct": 169,
+      "oldUnusedIntroduced": 136,
+      "newApprovalsUsed": 33,
+      "unusedApproved": 543,
+      "extensionRepeatedSlots": 231,
+      "wordsUsedThreeOrMore": 111,
+      "wordsUsedFourOrMore": 9,
+      "variant": "extension"
+    },
+    {
+      "added": 85,
+      "levels": 430,
+      "distinct": 1591,
+      "repeatedSlots": 559,
+      "repetitionPercent": 26.0,
+      "increasePercentagePoints": 7.971014492753625,
+      "newDistinct": 177,
+      "oldUnusedIntroduced": 144,
+      "newApprovalsUsed": 33,
+      "unusedApproved": 535,
+      "extensionRepeatedSlots": 248,
+      "wordsUsedThreeOrMore": 115,
+      "wordsUsedFourOrMore": 12,
+      "variant": "extension"
+    },
+    {
+      "added": 90,
+      "levels": 435,
+      "distinct": 1597,
+      "repeatedSlots": 578,
+      "repetitionPercent": 26.57471264367816,
+      "increasePercentagePoints": 8.545727136431786,
+      "newDistinct": 183,
+      "oldUnusedIntroduced": 150,
+      "newApprovalsUsed": 33,
+      "unusedApproved": 529,
+      "extensionRepeatedSlots": 267,
+      "wordsUsedThreeOrMore": 118,
+      "wordsUsedFourOrMore": 12,
+      "variant": "extension"
+    },
+    {
+      "added": 95,
+      "levels": 440,
+      "distinct": 1602,
+      "repeatedSlots": 598,
+      "repetitionPercent": 27.181818181818183,
+      "increasePercentagePoints": 9.152832674571808,
+      "newDistinct": 188,
+      "oldUnusedIntroduced": 154,
+      "newApprovalsUsed": 34,
+      "unusedApproved": 524,
+      "extensionRepeatedSlots": 287,
+      "wordsUsedThreeOrMore": 118,
+      "wordsUsedFourOrMore": 12,
+      "variant": "extension"
+    },
+    {
+      "added": 100,
+      "levels": 445,
+      "distinct": 1609,
+      "repeatedSlots": 616,
+      "repetitionPercent": 27.685393258426966,
+      "increasePercentagePoints": 9.656407751180591,
+      "newDistinct": 195,
+      "oldUnusedIntroduced": 161,
+      "newApprovalsUsed": 34,
+      "unusedApproved": 517,
+      "extensionRepeatedSlots": 305,
+      "wordsUsedThreeOrMore": 121,
+      "wordsUsedFourOrMore": 13,
+      "variant": "extension"
+    }
+  ],
+  "variants": {
+    "extension": {
+      "levels": 445,
+      "minimumRepeatGap": 75,
+      "draftSha256": "73b219d9a7ac4213480348db0d54d6730609b374ac5c5e89016482fec1acc0f1",
+      "draft": "artifacts/extension-trial-2126/extension-draft.json",
+      "recipes": "artifacts/extension-trial-2126/extension.recipes.json",
+      "validation": "Unchanged copied Python and TypeScript gates passed; every board solved using the game engine; production reviewed-only loader rejects draft."
+    },
+    "global": {
+      "levels": 370,
+      "minimumRepeatGap": 75,
+      "draftSha256": "6b17cfe4d2ba9b4223fd85f64bf29b11ed8f5bd2b5f6b155464646dd49998779",
+      "draft": "artifacts/extension-trial-2126/global-draft.json",
+      "recipes": "artifacts/extension-trial-2126/global.recipes.json",
+      "validation": "Unchanged copied Python and TypeScript gates passed; every board solved using the game engine; production reviewed-only loader rejects draft."
+    }
+  },
+  "recommendedExtensionRecipes": [
+    {
+      "id": "ka-346",
+      "sourceWords": ["ბადრო", "დოზა", "ზორბა", "საზრდო", "სოდა"],
+      "targets": ["ბადრო", "დოზა", "ზორბა", "საზრდო", "სოდა"],
+      "wheel": "აბდზორს",
+      "seed": 7,
+      "transpose": false,
+      "wordIds": {
+        "ბადრო": "word-1",
+        "დოზა": "word-2",
+        "ზორბა": "word-3",
+        "საზრდო": "word-4",
+        "სოდა": "word-5"
+      }
+    },
+    {
+      "id": "ka-347",
+      "sourceWords": ["დეფისი", "ელფი", "სელფი", "ფილე", "ფლიდი"],
+      "targets": ["დეფისი", "ელფი", "სელფი", "ფილე", "ფლიდი"],
+      "wheel": "დეიილსფ",
+      "seed": 3,
+      "transpose": false,
+      "wordIds": {
+        "დეფისი": "word-1",
+        "ელფი": "word-2",
+        "სელფი": "word-3",
+        "ფილე": "word-4",
+        "ფლიდი": "word-5"
+      }
+    },
+    {
+      "id": "ka-348",
+      "sourceWords": ["აგენტი", "გენია", "ტანი", "ჰანგი", "ჰიენა"],
+      "targets": ["აგენტი", "გენია", "ტანი", "ჰანგი", "ჰიენა"],
+      "wheel": "აგეინტჰ",
+      "seed": 9,
+      "transpose": true,
+      "wordIds": {
+        "აგენტი": "word-1",
+        "გენია": "word-2",
+        "ტანი": "word-3",
+        "ჰანგი": "word-4",
+        "ჰიენა": "word-5"
+      }
+    },
+    {
+      "id": "ka-349",
+      "sourceWords": ["აქცია", "ქაცვი", "ქვა", "ქირა", "ცვარი"],
+      "targets": ["აქცია", "ქაცვი", "ქვა", "ქირა", "ცვარი"],
+      "wheel": "აავირქც",
+      "seed": 1,
+      "transpose": false,
+      "wordIds": {
+        "აქცია": "word-1",
+        "ქაცვი": "word-2",
+        "ქვა": "word-3",
+        "ქირა": "word-4",
+        "ცვარი": "word-5"
+      }
+    },
+    {
+      "id": "ka-350",
+      "sourceWords": ["არხი", "ლახტი", "რალი", "ტიხარი", "ხრტილი"],
+      "targets": ["არხი", "ლახტი", "რალი", "ტიხარი", "ხრტილი"],
+      "wheel": "აიილრტხ",
+      "seed": 2,
+      "transpose": false,
+      "wordIds": {
+        "არხი": "word-1",
+        "ლახტი": "word-2",
+        "რალი": "word-3",
+        "ტიხარი": "word-4",
+        "ხრტილი": "word-5"
+      }
+    },
+    {
+      "id": "ka-351",
+      "sourceWords": ["ლენჩი", "ნალექი", "ნელი", "ქეჩა", "ქილა"],
+      "targets": ["ლენჩი", "ნალექი", "ნელი", "ქეჩა", "ქილა"],
+      "wheel": "აეილნქჩ",
+      "seed": 6,
+      "transpose": true,
+      "wordIds": {
+        "ლენჩი": "word-1",
+        "ნალექი": "word-2",
+        "ნელი": "word-3",
+        "ქეჩა": "word-4",
+        "ქილა": "word-5"
+      }
+    },
+    {
+      "id": "ka-352",
+      "sourceWords": ["რქა", "რქიანი", "ქინძი", "ქნარი", "ძია"],
+      "targets": ["რქა", "რქიანი", "ქინძი", "ქნარი", "ძია"],
+      "wheel": "აიინრქძ",
+      "seed": 4,
+      "transpose": false,
+      "wordIds": {
+        "რქა": "word-1",
+        "რქიანი": "word-2",
+        "ქინძი": "word-3",
+        "ქნარი": "word-4",
+        "ძია": "word-5"
+      }
+    },
+    {
+      "id": "ka-353",
+      "sourceWords": ["თასი", "თაღი", "თესლი", "სათლი", "სილაღე"],
+      "targets": ["თასი", "თაღი", "თესლი", "სათლი", "სილაღე"],
+      "wheel": "აეთილსღ",
+      "seed": 8,
+      "transpose": true,
+      "wordIds": {
+        "თასი": "word-1",
+        "თაღი": "word-2",
+        "თესლი": "word-3",
+        "სათლი": "word-4",
+        "სილაღე": "word-5"
+      }
+    },
+    {
+      "id": "ka-354",
+      "sourceWords": ["ერი", "ვერძი", "ვერხვი", "რძე", "ძეხვი"],
+      "targets": ["ერი", "ვერძი", "ვერხვი", "რძე", "ძეხვი"],
+      "wheel": "ევვირძხ",
+      "seed": 6,
+      "transpose": true,
+      "wordIds": {
+        "ერი": "word-1",
+        "ვერძი": "word-2",
+        "ვერხვი": "word-3",
+        "რძე": "word-4",
+        "ძეხვი": "word-5"
+      }
+    },
+    {
+      "id": "ka-355",
+      "sourceWords": ["ოსი", "სამოსი", "სასიძო", "საძმო", "ძმა"],
+      "targets": ["ოსი", "სამოსი", "სასიძო", "საძმო", "ძმა"],
+      "wheel": "აიმოსსძ",
+      "seed": 11,
+      "transpose": false,
+      "wordIds": {
+        "ოსი": "word-1",
+        "სამოსი": "word-2",
+        "სასიძო": "word-3",
+        "საძმო": "word-4",
+        "ძმა": "word-5"
+      }
+    },
+    {
+      "id": "ka-356",
+      "sourceWords": ["ლუქი", "სასუქი", "ქისა", "ქულა", "ქუსლი"],
+      "targets": ["ლუქი", "სასუქი", "ქისა", "ქულა", "ქუსლი"],
+      "wheel": "აილსსუქ",
+      "seed": 5,
+      "transpose": false,
+      "wordIds": {
+        "ლუქი": "word-1",
+        "სასუქი": "word-2",
+        "ქისა": "word-3",
+        "ქულა": "word-4",
+        "ქუსლი": "word-5"
+      }
+    },
+    {
+      "id": "ka-357",
+      "sourceWords": ["არსი", "სხარტი", "ფასი", "ფისტა", "ფხა"],
+      "targets": ["არსი", "სხარტი", "ფასი", "ფისტა", "ფხა"],
+      "wheel": "აირსტფხ",
+      "seed": 6,
+      "transpose": true,
+      "wordIds": {
+        "არსი": "word-1",
+        "სხარტი": "word-2",
+        "ფასი": "word-3",
+        "ფისტა": "word-4",
+        "ფხა": "word-5"
+      }
+    },
+    {
+      "id": "ka-358",
+      "sourceWords": ["გნომი", "მანგო", "მონა", "ოქმი", "ქომაგი"],
+      "targets": ["გნომი", "მანგო", "მონა", "ოქმი", "ქომაგი"],
+      "wheel": "აგიმნოქ",
+      "seed": 2,
+      "transpose": true,
+      "wordIds": {
+        "გნომი": "word-1",
+        "მანგო": "word-2",
+        "მონა": "word-3",
+        "ოქმი": "word-4",
+        "ქომაგი": "word-5"
+      }
+    },
+    {
+      "id": "ka-359",
+      "sourceWords": ["ალყა", "ბალადა", "დაბა", "ლაბადა", "ყბა"],
+      "targets": ["ალყა", "ბალადა", "დაბა", "ლაბადა", "ყბა"],
+      "wheel": "აააბდლყ",
+      "seed": 4,
+      "transpose": false,
+      "wordIds": {
+        "ალყა": "word-1",
+        "ბალადა": "word-2",
+        "დაბა": "word-3",
+        "ლაბადა": "word-4",
+        "ყბა": "word-5"
+      }
+    },
+    {
+      "id": "ka-360",
+      "sourceWords": ["ალოე", "პალტო", "პლატო", "ტლაპო", "ჩელო"],
+      "targets": ["ალოე", "პალტო", "პლატო", "ტლაპო", "ჩელო"],
+      "wheel": "აელოპტჩ",
+      "seed": 5,
+      "transpose": false,
+      "wordIds": {
+        "ალოე": "word-1",
+        "პალტო": "word-2",
+        "პლატო": "word-3",
+        "ტლაპო": "word-4",
+        "ჩელო": "word-5"
+      }
+    },
+    {
+      "id": "ka-361",
+      "sourceWords": ["ჩარხი", "ჩვარი", "ხარი", "ხარჩო", "ხროვა"],
+      "targets": ["ჩარხი", "ჩვარი", "ხარი", "ხარჩო", "ხროვა"],
+      "wheel": "ავიორჩხ",
+      "seed": 7,
+      "transpose": false,
+      "wordIds": {
+        "ჩარხი": "word-1",
+        "ჩვარი": "word-2",
+        "ხარი": "word-3",
+        "ხარჩო": "word-4",
+        "ხროვა": "word-5"
+      }
+    },
+    {
+      "id": "ka-362",
+      "sourceWords": ["ბატონი", "ბოტი", "იოგა", "ტანგო", "ტონა"],
+      "targets": ["ბატონი", "ბოტი", "იოგა", "ტანგო", "ტონა"],
+      "wheel": "აბგინოტ",
+      "seed": 5,
+      "transpose": true,
+      "wordIds": {
+        "ბატონი": "word-1",
+        "ბოტი": "word-2",
+        "იოგა": "word-3",
+        "ტანგო": "word-4",
+        "ტონა": "word-5"
+      }
+    },
+    {
+      "id": "ka-363",
+      "sourceWords": ["ალპური", "ლუპა", "პური", "უარი", "ყლუპი"],
+      "targets": ["ალპური", "ლუპა", "პური", "უარი", "ყლუპი"],
+      "wheel": "აილპრუყ",
+      "seed": 3,
+      "transpose": false,
+      "wordIds": {
+        "ალპური": "word-1",
+        "ლუპა": "word-2",
+        "პური": "word-3",
+        "უარი": "word-4",
+        "ყლუპი": "word-5"
+      }
+    },
+    {
+      "id": "ka-364",
+      "sourceWords": ["დაღი", "დოღი", "რადიო", "ღორი", "ღორღი"],
+      "targets": ["დაღი", "დოღი", "რადიო", "ღორი", "ღორღი"],
+      "wheel": "ადიორღღ",
+      "seed": 2,
+      "transpose": true,
+      "wordIds": {
+        "დაღი": "word-1",
+        "დოღი": "word-2",
+        "რადიო": "word-3",
+        "ღორი": "word-4",
+        "ღორღი": "word-5"
+      }
+    },
+    {
+      "id": "ka-365",
+      "sourceWords": ["დანა", "დაფა", "დაფნა", "პანდა", "პაპა"],
+      "targets": ["დანა", "დაფა", "დაფნა", "პანდა", "პაპა"],
+      "wheel": "აადნპპფ",
+      "seed": 1,
+      "transpose": false,
+      "wordIds": {
+        "დანა": "word-1",
+        "დაფა": "word-2",
+        "დაფნა": "word-3",
+        "პანდა": "word-4",
+        "პაპა": "word-5"
+      }
+    }
+  ],
+  "limitations": "Bounded candidate search and time-limited selection, not a global optimum or maximum-capacity proof. No real destinations, artwork, production vocabulary integration or campaign promotion. Original required boards remain exact; trial bonus recognition expands with the approved additions. All production content and catalog hashes are unchanged. Review records and AGENTS.md record the owner decisions; the nine exclusions are enforced in both copied runtimes."
+}

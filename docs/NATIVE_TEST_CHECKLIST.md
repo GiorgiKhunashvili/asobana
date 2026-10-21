@@ -58,7 +58,6 @@ Verify on the native development build:
    the path and continue to its victory screen: no `×2` offer appears. Press the
    pill while the ad is still loading, then tap "შემდეგი დონე": no ad may appear
    later on the next board.
-
 10. On gameplay, confirm the 320×50 banner says **Test mode** below the wheel.
     Check a 375×667 iPhone SE and a larger iPhone: both hints and the whole wheel
     must remain reachable, with a divider and gap above the banner. Buy each hint
@@ -106,7 +105,7 @@ they are not the acceptance test for native AdMob behavior.
 ## Native smoke flows
 
 `mobile/e2e/startup.yaml` opens Expo Go via local Metro and checks the initial
-home/game UI. It expects a fresh GeoWords database, not a cleared Expo Go app.
+home/game UI. It expects a fresh Asobana database, not a cleared Expo Go app.
 Never clear all Expo Go data to reset one project's save.
 
 ```sh
@@ -134,7 +133,7 @@ monetization and payments remain unconfigured.
 
 ## Recorded smoke-flow sequence
 
-With a fresh, isolated GeoWords save on the tested iPhone 17 Pro:
+With a fresh, isolated Asobana save on the tested iPhone 17 Pro:
 `startup.yaml` → `drag.yaml` → `answer-feedback.yaml` → `family-partial.yaml` →
 `restart.yaml` → `chapter-gesture.yaml` → `finish-pack.yaml`.
 

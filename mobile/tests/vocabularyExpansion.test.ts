@@ -1,6 +1,6 @@
 import dictionary from '../../content/dictionaries/discovery-v9-ka.json';
 import oldDictionary from '../../content/dictionaries/discovery-v8-ka.json';
-import manifest from '../../content/levels/discovery.v26.recipes.json';
+import manifest from '../../content/levels/discovery.v28.recipes.json';
 import { catalog, previousCatalogs, vocabulary } from '../src/content/catalog';
 import { validateWide } from '../src/content/wide';
 import {
@@ -21,7 +21,7 @@ test('expanded ordinary senses are reviewed and used in the campaign', () => {
     (entry) => !historical.has(entry.word),
   );
   expect(additions).toHaveLength(686);
-  expect(vocabulary.size).toBe(1838);
+  expect(vocabulary.size).toBe(2193);
   for (const entry of additions) {
     expect(['noun', 'adjective']).toContain(
       'partOfSpeech' in entry ? entry.partOfSpeech : undefined,

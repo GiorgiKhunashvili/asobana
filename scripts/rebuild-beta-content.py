@@ -5,9 +5,9 @@ import json
 from pathlib import Path
 from typing import cast
 
-from geowords_generator.authoring import Manifest, rebuild_beta
-from geowords_generator.models import PackJSON
-from geowords_generator.vocabulary import load_vocabulary
+from asobana_generator.authoring import Manifest, rebuild_beta
+from asobana_generator.models import PackJSON
+from asobana_generator.vocabulary import load_vocabulary
 
 ROOT = Path(__file__).resolve().parents[1]
 

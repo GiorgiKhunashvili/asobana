@@ -37,7 +37,9 @@ test('Spain appends exactly six painted five-level stops using the existing appr
     'cordoba',
     'seville',
   ]);
-  expect(COUNTRIES.at(-1)?.chapterIds).toEqual([
+  expect(
+    COUNTRIES.find((country) => country.id === 'spain')?.chapterIds,
+  ).toEqual([
     'barcelona',
     'valencia',
     'madrid',

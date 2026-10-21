@@ -6,8 +6,8 @@ from typing import cast
 
 import pytest
 
-from geowords_generator.wide import WideManifest, rebuild_wide
-from geowords_generator.word_policy import playable_vocabulary
+from asobana_generator.wide import WideManifest, rebuild_wide
+from asobana_generator.word_policy import playable_vocabulary
 
 ROOT = Path(__file__).resolve().parents[2]
 MANIFEST = cast(

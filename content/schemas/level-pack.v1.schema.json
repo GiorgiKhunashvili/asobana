@@ -52,8 +52,8 @@
     }
   },
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://geowords.invalid/schemas/level-pack.v1.schema.json",
-  "title": "GeoWords level pack v1",
+  "$id": "https://asobana.invalid/schemas/level-pack.v1.schema.json",
+  "title": "Asobana level pack v1",
   "$defs": {
     "level": {
       "type": "object",

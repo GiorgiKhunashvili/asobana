@@ -10,7 +10,7 @@ import {
 } from '../src/storage/repository';
 import { TestSqlite } from './sqliteAdapter';
 test('real SQLite migrate, atomic save, close/reopen, CAS and settings restore', async () => {
-  const folder = mkdtempSync(join(tmpdir(), 'geowords-'));
+  const folder = mkdtempSync(join(tmpdir(), 'asobana-'));
   const path = join(folder, 'game.db');
   let db = new TestSqlite(path);
   try {
