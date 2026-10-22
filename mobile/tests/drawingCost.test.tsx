@@ -1,4 +1,5 @@
 import { render } from '@testing-library/react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import { Backdrop, EnamelBackdrop } from '../src/components/Backdrop';
 import { LetterWheel } from '../src/components/LetterWheel';
 import { catalog } from '../src/content/catalog';
@@ -64,4 +65,20 @@ test("the wheel's plate and shadow are native views", async () => {
   expect(
     tree.match(/"RNSVGSvgView[A-Za-z]*"/g)?.length ?? 0,
   ).toBeLessThanOrEqual(2);
+  // Cache just the bounded static plate. The letters, swipe and controls
+  // must remain outside it so their updates don't rebuild the texture.
+  const cached = wheel
+    .UNSAFE_getAllByType(View)
+    .filter((view) => view.props.renderToHardwareTextureAndroid);
+  expect(cached).toHaveLength(1);
+  const plate = cached[0]!;
+  expect(StyleSheet.flatten(plate.props.style)).toMatchObject({
+    left: -16,
+    top: -16,
+    width: 312,
+    height: 312,
+  });
+  expect(plate.findAllByType(Text)).toHaveLength(0);
+  expect(plate.findAllByProps({ testID: 'shuffle' })).toHaveLength(0);
+  expect(plate.props.pointerEvents).toBe('none');
 });

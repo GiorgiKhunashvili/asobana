@@ -1,5 +1,24 @@
 # Asobana TestFlight
 
+## USB animation profiling — 2026-10-22 (perf APKs only, no upload)
+
+Rebuilt `master` at `26c6475`, then compared local Gradle release APKs on the
+Samsung Galaxy A07 using `ge.spilogames.asobana.perf`, version 0.1.0 / local
+versionCode 1, ARM64, Java 17 and `ASOBANA_LIVE_ADS=0`. All used the normal
+non-debuggable release configuration. No EAS/store version change or upload.
+
+Builds covered the baseline; transform-only shuffle; cached wheel plate;
+a temporary canvas-disabled control; cached background; combined caches;
+a rebuilt baseline; plate cache with memoization; and the final simplified
+plate-cache wrapper. Only the bounded wheel cache and memoization remain.
+The final perf app was used to solve level 2 and verify its victory screen.
+The real app and progress were untouched; existing IPA/AAB artifacts remain.
+
+`npm run check` passed (358 tests, 49 suites, 500 levels solved). Full results,
+including the limited GPU improvement and variable frame times, are recorded in
+[the animation report](ANDROID_ANIMATION_PERFORMANCE.md). Temporary builds,
+traces and generated native directories are removed after profiling.
+
 ## USB transition diagnostics — 2026-10-22 (perf APKs only, no upload)
 
 Local Gradle test APKs were built from `master` at `04a9ba3`, then with the

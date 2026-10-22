@@ -1,5 +1,6 @@
 import { Canvas, Circle, Path, Skia } from '@shopify/react-native-skia';
 import {
+  memo,
   useCallback,
   useEffect,
   useMemo,
@@ -332,8 +333,12 @@ const SHADOW_ALPHA = 0.35;
 /** Static medallion: ivory enamel face, gold rim wire and a fine inner ring.
  * Plain views with a native radial-gradient shadow: drawn by the GPU, unlike a
  * Skia canvas (an extra texture layer every Android frame) or an SVG
- * (rasterized in software on the main thread as each level opened). */
-function Plate({ size }: { size: number }) {
+ * (rasterized in software on the main thread as each level opened).
+ * Android caches only this static, bounded layer: the shadow/plate no longer
+ * need to be shaded on every shuffle or swipe frame. At the A07's wheel size
+ * it costs about 1.3 MiB, released with the view. Letters and the cord remain
+ * outside the cache. Memoization also skips React work while tracing words. */
+const Plate = memo(function Plate({ size }: { size: number }) {
   const c = size / 2 + SHADOW;
   const edge = size / 2 - 4;
   const outer = edge + 2 * SHADOW_SIGMA;
@@ -346,13 +351,24 @@ function Plate({ size }: { size: number }) {
     )
     .join(', ');
   return (
-    <>
+    <View
+      pointerEvents="none"
+      renderToHardwareTextureAndroid
+      testID="wheel-plate"
+      style={{
+        position: 'absolute',
+        left: -SHADOW,
+        top: -SHADOW,
+        width: size + SHADOW * 2,
+        height: size + SHADOW * 2,
+      }}
+    >
       <View
         pointerEvents="none"
         style={{
           position: 'absolute',
-          left: -SHADOW,
-          top: -SHADOW,
+          left: 0,
+          top: 0,
           width: size + SHADOW * 2,
           height: size + SHADOW * 2,
           experimental_backgroundImage: `radial-gradient(circle ${outer}px at ${c}px ${c + 4}px, ${stops})`,
@@ -363,8 +379,8 @@ function Plate({ size }: { size: number }) {
         style={[
           styles.ring,
           {
-            left: 2,
-            top: 2,
+            left: SHADOW + 2,
+            top: SHADOW + 2,
             width: size - 4,
             height: size - 4,
             borderRadius: size / 2 - 2,
@@ -378,6 +394,8 @@ function Plate({ size }: { size: number }) {
         style={[
           styles.ring,
           {
+            left: SHADOW,
+            top: SHADOW,
             width: size,
             height: size,
             borderRadius: size / 2,
@@ -391,8 +409,8 @@ function Plate({ size }: { size: number }) {
         style={[
           styles.ring,
           {
-            left: 10.4,
-            top: 10.4,
+            left: SHADOW + 10.4,
+            top: SHADOW + 10.4,
             width: size - 20.8,
             height: size - 20.8,
             borderRadius: size / 2 - 10.4,
@@ -401,9 +419,9 @@ function Plate({ size }: { size: number }) {
           },
         ]}
       />
-    </>
+    </View>
   );
-}
+});
 
 /** Visual circle around a letter, centred on the adapter's touch circle. */
 function halo(tile: WheelTile) {
