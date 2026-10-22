@@ -1,5 +1,29 @@
 # Asobana TestFlight
 
+## USB word-submission profiling — 2026-10-23 (perf APKs only, no upload)
+
+Four local ARM64 release variants used Java 17, `ASOBANA_LIVE_ADS=0`, version
+0.1.0 / local versionCode 1 and package `ge.spilogames.asobana.perf`. All manifests
+were non-debuggable/non-profileable and contained demo-ad configuration. The first
+two have temporary JavaScript timing instrumentation and a synthetic scratch-DB
+benchmark; their measurements are diagnostic only. The last two contain no probes.
+
+| Variant                             | APK SHA-256                                                        |
+| ----------------------------------- | ------------------------------------------------------------------ |
+| `e658ad0` selector baseline probe   | `5b67440abf5ba17ca26d46affc5a02caae88e839f4799f87852ec28a8a3a9144` |
+| Single-pass selector probe          | `854954875062088e6784d77b09954302aee2560ed145de53ff814e7e777b4098` |
+| Ordinary `e658ad0` runtime baseline | `092f46bb7993b91f28424d58093504c2c7a21a4db5a250cbfad812491ddbab41` |
+| Ordinary selector candidate         | `cec20d9ba8f6f2ab82e463fe9c59c1d861ee17c6ba9d1f02ede1f479b0d0ce12` |
+
+The final ordinary candidate replaces the probe on the physical Samsung A07.
+Only campaign selector algorithms change; ads, saves and existing performance
+fixes remain intact. See [word-submission measurements and limitations](ANDROID_WORD_SUBMISSION_PERFORMANCE.md).
+No EAS/store build, upload, version increment or production-app operation. The
+owner subsequently authorized committing the selector change, docs and tests
+directly to master and pushing, with no new builds. Current tester IPA/AAB
+artifacts remain unchanged. Generated native build output and summarized
+experiment intermediates were removed; the final repository size was 3.4 GB.
+
 ## USB banner render isolation — 2026-10-23 (perf APKs only, no upload)
 
 Built the `03edc96` runtime baseline and a candidate that only memoizes the private

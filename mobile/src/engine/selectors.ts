@@ -7,7 +7,6 @@ import type {
 import {
   DEFAULT_ECONOMY,
   emptyProgress,
-  isUnlocked,
   nextLevelId,
   revealedCells,
 } from './game';
@@ -66,26 +65,44 @@ export function selectGameplay(
   };
 }
 export function selectLevels(state: GameState, pack: LevelPack) {
-  return pack.levels.map((level, index) => ({
-    id: level.id,
-    chapterId: level.chapterId,
-    title: level.title,
-    number: index + 1,
-    unlocked: isUnlocked(state, pack, level.id),
-    completed: state.progress[level.id]?.completed ?? false,
-  }));
+  // Unlocking depends on the completed prefix, not a fresh scan for every row.
+  let unlocked = true;
+  return pack.levels.map((level, index) => {
+    const completed = state.progress[level.id]?.completed ?? false;
+    const row = {
+      id: level.id,
+      chapterId: level.chapterId,
+      title: level.title,
+      number: index + 1,
+      unlocked,
+      completed,
+    };
+    unlocked = unlocked && completed;
+    return row;
+  });
 }
 export function selectChapters(state: GameState, pack: LevelPack) {
-  const levels = selectLevels(state, pack);
+  const totals = new Map<
+    string,
+    { unlocked: boolean; completedLevels: number; totalLevels: number }
+  >();
+  for (const level of selectLevels(state, pack)) {
+    const total = totals.get(level.chapterId) ?? {
+      unlocked: false,
+      completedLevels: 0,
+      totalLevels: 0,
+    };
+    total.unlocked ||= level.unlocked;
+    total.completedLevels += Number(level.completed);
+    total.totalLevels++;
+    totals.set(level.chapterId, total);
+  }
   return pack.chapters.map((chapter) => ({
     ...chapter,
-    unlocked: levels.some(
-      (level) => level.chapterId === chapter.id && level.unlocked,
-    ),
-    completedLevels: levels.filter(
-      (level) => level.chapterId === chapter.id && level.completed,
-    ).length,
-    totalLevels: levels.filter((level) => level.chapterId === chapter.id)
-      .length,
+    ...(totals.get(chapter.id) ?? {
+      unlocked: false,
+      completedLevels: 0,
+      totalLevels: 0,
+    }),
   }));
 }
