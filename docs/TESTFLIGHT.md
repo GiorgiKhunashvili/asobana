@@ -1,5 +1,32 @@
 # Asobana TestFlight
 
+## Shared banner beta — 2026-10-22 (uploaded, Apple processing)
+
+**Asobana 0.1.0 (5)**, built locally with the `beta` profile (real AdMob app
+IDs, demo ad units) from `master` at `abe58d9`. Android versionCode 7 was built
+from the same commit for Play internal testing. Non-interactive `eas submit`
+uploaded it to App Store Connect app `6825282360` (submission
+`b3d4f4c5-fefd-4dbb-bd7b-4c1e072004d7`); Apple's processing was not confirmed when
+this was written.
+
+New since build 4: one shared ad banner, created after the first level's
+transition and reused across levels and the victory screen. On a Samsung Galaxy
+A07 the old per-level banner cost a ~134 ms web-view first draw during
+transitions and ad-SDK lock waits of up to 117 ms on taps; the first
+journey-to-level tap went from six frames over 100 ms to one.
+
+- IPA check: Asobana 0.1.0 (5), bundle `ge.spilogames.asobana`,
+  `GADApplicationIdentifier` `ca-app-pub-8935292332039677~8334673550`, embedded
+  `extra.liveAds` false; the Hermes bundle contains the shared banner. Size:
+  56,968,176 bytes; SHA-256:
+  `3a6e6e015b038fab8893e16cae3483f9122d41067d939c95598584a3be109fef`.
+- Preflight: root check (358 app tests in 49 suites, all 500 levels solved,
+  TypeScript/ESLint/formatting) passed. Measured on the A07 with a side-by-side
+  release build; this IPA has not been installed on an iOS device or simulator.
+- Evidence (git-ignored): `artifacts/asobana-0.1.0-beta-banner.ipa`,
+  `artifacts/asobana-ios-beta-banner.log`,
+  `artifacts/asobana-ios-beta-banner-submit.log`.
+
 ## Smoother screens beta — 2026-10-22 (uploaded, Apple processing)
 
 **Asobana 0.1.0 (4)**, built locally with the `beta` profile (real AdMob app
