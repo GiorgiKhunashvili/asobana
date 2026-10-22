@@ -217,17 +217,24 @@ disclosures remain to be filled in. See the native checklist for verification.
 
 ### Gameplay test banner
 
-`GameBannerAd` uses a fixed 320×50 banner in `Screen`'s optional footer,
-outside the scroll view and letter-wheel gesture area. The 76-point footer reserves
-space before loading, with a divider, 17 points above the creative and 8 below.
-Gameplay subtracts that space from the board budget without reducing the wheel or
-hint touch targets. The footer stays inside the bottom safe area. Loading, failures
-and offline/unsupported builds keep the same space so controls do not jump.
+`GameBannerAd` is the gameplay `Screen`'s footer: a 76-point slot outside the
+scroll view and letter-wheel gesture area, with a divider, 17 points above the
+creative and 8 below. Gameplay subtracts that space from the board budget without
+reducing the wheel or hint touch targets. The footer stays inside the bottom safe
+area. Loading, failures and offline/unsupported builds keep the same space so
+controls do not jump.
 
-The banner is unmounted while the route is unfocused, the app is inactive, the
-tutorial is visible or a hint rewarded ad is showing. Returning mounts a fresh
-banner; there is no manual refresh timer. `nativeAdsSdk` guards Expo Go/web and
-shares initialization with rewarded ads. Banners never call reward or save APIs.
+The 320×50 banner itself is `SharedGameBanner`, rendered once in the root layout
+over that slot. A footer asks for it while its route is focused and neither the
+tutorial nor a hint rewarded ad is showing; without a request it is hidden
+(transparent, no touches). It is first mounted 0.8 s after the first request, once
+the screen's transition has finished, and then reused across level changes and the
+victory screen; it unmounts after 30 s without a request and while the app is
+inactive. On a Samsung Galaxy A07 a new banner per level cost a ~134 ms web-view
+first draw in the transition and ad-SDK lock waits of up to 117 ms on taps; the
+shared banner removed both from level changes. There is no manual refresh timer.
+`nativeAdsSdk` guards Expo Go/web and shares initialization with rewarded ads.
+Banners never call reward or save APIs.
 
 ### Level-complete "×2" ad
 

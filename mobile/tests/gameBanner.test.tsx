@@ -1,20 +1,44 @@
 import { act, fireEvent, render } from '@testing-library/react-native';
 import { useIsFocused } from 'expo-router';
+import { useEffect } from 'react';
 import { AppState, View, type AppStateStatus } from 'react-native';
 import { loadNativeAdsSdk } from '../src/ads/nativeAdsSdk';
-import { GameBannerAd } from '../src/components/GameBannerAd';
+import {
+  BANNER_KEEP_ALIVE_MS,
+  FIRST_BANNER_DELAY_MS,
+  GameBannerAd,
+  SharedGameBanner,
+} from '../src/components/GameBannerAd';
 
 jest.mock('expo-router', () => ({ useIsFocused: jest.fn(() => true) }));
 jest.mock('../src/ads/nativeAdsSdk', () => ({ loadNativeAdsSdk: jest.fn() }));
+jest.mock(
+  'react-native-safe-area-context',
+  () => require('react-native-safe-area-context/jest/mock').default,
+);
 
+/** Each mount stands for a new native ad view: a new web view on Android. */
+let bannerMounts = 0;
+function NativeBanner(props: object) {
+  useEffect(() => {
+    bannerMounts++;
+  }, []);
+  return <View testID="native-banner" {...props} />;
+}
 const sdk = {
-  BannerAd: (props: object) => <View testID="native-banner" {...props} />,
+  BannerAd: NativeBanner,
   TestIds: { BANNER: 'google-demo-banner' },
   BannerAdSize: { BANNER: 'BANNER' },
 } as unknown as Awaited<ReturnType<typeof loadNativeAdsSdk>>;
 let changeState: (state: AppStateStatus) => void;
+const wait = (ms: number) =>
+  act(async () => {
+    jest.advanceTimersByTime(ms);
+  });
 
 beforeEach(() => {
+  jest.useFakeTimers();
+  bannerMounts = 0;
   jest.mocked(useIsFocused).mockReturnValue(true);
   jest.mocked(loadNativeAdsSdk).mockResolvedValue(sdk);
   AppState.currentState = 'active';
@@ -23,49 +47,81 @@ beforeEach(() => {
     return { remove: jest.fn() };
   });
 });
-afterEach(() => jest.restoreAllMocks());
+afterEach(() => {
+  jest.useRealTimers();
+  jest.restoreAllMocks();
+});
 
-test('reserves the same footer through loading, success and failure; uses only demo ads', async () => {
-  const screen = render(<GameBannerAd />);
-  const footerStyle = screen.getByTestId('game-banner-slot').props.style;
-  await act(async () => {});
+/** The root layout's shared banner with one gameplay screen's footer. */
+function App({ level = 'ka-001', visible = true }) {
+  return (
+    <>
+      <GameBannerAd key={level} visible={visible} />
+      <SharedGameBanner />
+    </>
+  );
+}
+
+test('the footer reserves the same space; the first banner waits for the transition', async () => {
+  const screen = await render(<App />);
+  const footer = screen.getByTestId('game-banner-slot').props.style;
+  expect(screen.queryByTestId('shared-game-banner')).toBeNull();
+  await wait(FIRST_BANNER_DELAY_MS);
   const banner = screen.getByTestId('native-banner');
   expect(banner.props.unitId).toBe('google-demo-banner');
   expect(banner.props.size).toBe('BANNER');
   expect(banner.props.requestOptions.requestNonPersonalizedAdsOnly).toBe(true);
+  expect(screen.getByText('რეკლამა იტვირთება…')).toBeTruthy();
   fireEvent(banner, 'adLoaded', { width: 320, height: 50 });
   expect(screen.queryByText('რეკლამა იტვირთება…')).toBeNull();
-  expect(screen.getByTestId('game-banner-slot').props.style).toEqual(
-    footerStyle,
-  );
-  fireEvent(banner, 'adFailedToLoad', new Error('offline'));
-  expect(screen.getByText('რეკლამა ვერ ჩაიტვირთა')).toBeTruthy();
-  expect(screen.getByTestId('game-banner-slot').props.style).toEqual(
-    footerStyle,
-  );
+  expect(screen.getByTestId('game-banner-slot').props.style).toEqual(footer);
 });
 
-test('unmounts ads behind other screens, coach marks and the app background', async () => {
-  const screen = render(<GameBannerAd />);
-  await act(async () => {});
-  expect(screen.getByTestId('native-banner')).toBeTruthy();
+test('moving to the next level reuses the banner instead of building a new one', async () => {
+  const screen = await render(<App level="ka-001" />);
+  await wait(FIRST_BANNER_DELAY_MS);
+  expect(bannerMounts).toBe(1);
+  // The victory screen: no footer asks for the banner, so it hides but lives.
+  jest.mocked(useIsFocused).mockReturnValue(false);
+  await screen.rerender(<App level="ka-001" />);
+  const shared = screen.getByTestId('shared-game-banner');
+  expect(shared.props.pointerEvents).toBe('none');
+  expect(shared.props.style).toEqual(
+    expect.arrayContaining([expect.objectContaining({ opacity: 0 })]),
+  );
+  // The next level's screen replaces the old one; the same banner shows again.
+  jest.mocked(useIsFocused).mockReturnValue(true);
+  await screen.rerender(<App level="ka-002" />);
+  await wait(FIRST_BANNER_DELAY_MS);
+  expect(screen.getByTestId('shared-game-banner').props.pointerEvents).toBe(
+    'box-none',
+  );
+  expect(bannerMounts).toBe(1);
+});
+
+test('coach marks and ads hide it; it unmounts in the background and after a long absence', async () => {
+  const screen = await render(<App />);
+  await wait(FIRST_BANNER_DELAY_MS);
+  await screen.rerender(<App visible={false} />);
+  expect(screen.getByTestId('shared-game-banner').props.pointerEvents).toBe(
+    'none',
+  );
+  await screen.rerender(<App />);
   act(() => changeState('background'));
   expect(screen.queryByTestId('native-banner')).toBeNull();
   await act(async () => changeState('active'));
   expect(screen.getByTestId('native-banner')).toBeTruthy();
   jest.mocked(useIsFocused).mockReturnValue(false);
-  screen.rerender(<GameBannerAd />);
-  expect(screen.queryByTestId('native-banner')).toBeNull();
-  jest.mocked(useIsFocused).mockReturnValue(true);
-  screen.rerender(<GameBannerAd visible={false} />);
-  expect(screen.queryByTestId('native-banner')).toBeNull();
+  await screen.rerender(<App />);
+  await wait(BANNER_KEEP_ALIVE_MS);
+  expect(screen.queryByTestId('shared-game-banner')).toBeNull();
   expect(screen.getByTestId('game-banner-slot')).toBeTruthy();
 });
 
 test('unsupported builds and SDK failures keep a noninteractive fallback', async () => {
   jest.mocked(loadNativeAdsSdk).mockRejectedValue(new Error('unavailable'));
-  const screen = render(<GameBannerAd />);
-  await act(async () => {});
+  const screen = await render(<App />);
+  await wait(FIRST_BANNER_DELAY_MS);
   expect(screen.getByText('რეკლამა ვერ ჩაიტვირთა')).toBeTruthy();
   expect(screen.queryByTestId('native-banner')).toBeNull();
 });

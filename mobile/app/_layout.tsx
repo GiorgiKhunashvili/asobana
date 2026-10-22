@@ -7,6 +7,7 @@ import { StatusBar } from 'expo-status-bar';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { loadNativeAdsSdk } from '../src/ads/nativeAdsSdk';
+import { SharedGameBanner } from '../src/components/GameBannerAd';
 import { gameStore, useGameStore } from '../src/state/gameStore';
 import { useGameFeedback } from '../src/services/feedback';
 import { Backdrop } from '../src/components/Backdrop';
@@ -135,6 +136,8 @@ export default function RootLayout() {
                 options={{ animation: 'fade' }}
               />
             </Stack>
+            {/* One banner over the gameplay footer, reused across levels. */}
+            <SharedGameBanner />
           </>
         )}
       </SafeAreaProvider>
