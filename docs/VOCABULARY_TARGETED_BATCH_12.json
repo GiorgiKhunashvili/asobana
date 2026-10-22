@@ -1,0 +1,4476 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-21",
+  "status": "owner-reviewed-rejected",
+  "activeRevisionUnchanged": 29,
+  "activeApprovedPool": 2318,
+  "approvedPoolBefore": 2318,
+  "candidateCount": 83,
+  "countsByLength": {
+    "3": 3,
+    "4": 21,
+    "5": 59
+  },
+  "countsByCategory": {
+    "verbal-noun-concept": 23,
+    "nature-farming": 14,
+    "home-food": 11,
+    "adjective": 8,
+    "everyday-objects-people": 6,
+    "clothing": 4,
+    "animals": 4,
+    "culture": 4,
+    "abstract": 3,
+    "technology-measure": 3,
+    "geometry-shape": 3
+  },
+  "countsByFamiliarityTier": {
+    "A": 30,
+    "B": 53
+  },
+  "verbalNounOriginCount": 22,
+  "purpose": "Lower required-answer repetition. In revision 29, 467 of the 546 repeated answer slots are three- or four-letter connector words (3 letters: 141 repeats from 62 approvals; 4 letters: 326 repeats from 520 approvals).",
+  "previouslyRecordedSpellings": 8537,
+  "previousReviewOverlap": 0,
+  "method": "Removed every exact Georgian string recorded in content/dictionaries/*.json, content/*.json, content/levels/*.json and docs/VOCABULARY* (approvals, exclusions, bonus-only reservations, rejected, skipped and unselected proposals, historical packs). Discovery: the 33 bonus-dictionary words outside the approved list (none has 3–5 letters and is unreviewed); English Wiktionary categories Georgian nouns (12,929) and Georgian adjectives (4,242), leaving 817 unrecorded 3–5-letter lemmas; Leipzig Georgian web 2019 and news 2016 corpora (1M sentences each) ranked by frequency; the batch-08 Bumbeishvili and Crubadan lists; and about 1,800 topic-brainstormed everyday words. Each proposed sense was checked on ganmarteba.ge (page SHA-256 recorded) or, where absent there, a fixed English Wiktionary revision (wikitext SHA-256 recorded). Plurals, verbs, pronouns, names, barbarisms, action senses, serious illnesses, spelling variants and uncommon technical words were screened out (listed under editorScreenedNotProposed).",
+  "poolFinding": "The unreviewed pool of familiar 3–4-letter Georgian nouns and adjectives is close to exhausted: of about 1,800 brainstormed everyday words only 82 three-to-five-letter spellings were unrecorded, and the corpus and Wiktionary scans add mostly verbal nouns, inflected forms, names and rare words. This batch therefore has 83 candidates instead of about 100, mostly five letters; only three have three letters. Padding with obscure words would break the familiarity-first rule.",
+  "familiarityTiers": {
+    "A": "Everyday word most adult speakers use or hear regularly (editor judgment).",
+    "B": "Familiar but less frequent, regional, bookish, rural or specialised; owner judgment especially needed."
+  },
+  "repetitionBaseline": {
+    "revision": 29,
+    "levels": 500,
+    "slots": 2500,
+    "distinct": 1954,
+    "repeatedSlots": 546,
+    "repetitionPercent": 21.84,
+    "repeatsByLength": {
+      "3": 141,
+      "4": 326,
+      "5": 77,
+      "6": 2
+    },
+    "approvedByLength": {
+      "3": 62,
+      "4": 520,
+      "5": 766,
+      "6": 970
+    }
+  },
+  "trialReplan": {
+    "method": "Isolated copy of the revision-29 candidate search and planner (artifacts/journey-v29/plan in the revision-29 worktree), run in a scratch directory with identical settings: search.py 12 0 15 40; plan.py five --rounds 4 --rarity-scale 20000 --six-bonus 2000 --concentration 30. Same rules: 5/6/7 tiles, at most five rows, five answers, 75-level gap, pacing and variety. The control run with the 2,318 approvals reproduces revision 29.",
+    "control": {
+      "distinct": 1954,
+      "repeatedSlots": 546,
+      "repetitionPercent": 21.84,
+      "minimumGap": 75,
+      "maximumUses": 7,
+      "repeatsByLength": {
+        "3": 141,
+        "4": 326,
+        "5": 77,
+        "6": 2
+      },
+      "candidatesUsed": 0,
+      "candidateSlots": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "distinct": 1945,
+          "repetitionPercent": 22.2
+        },
+        {
+          "round": 2,
+          "distinct": 1954,
+          "repetitionPercent": 21.84
+        },
+        {
+          "round": 3,
+          "distinct": 1939,
+          "repetitionPercent": 22.44
+        },
+        {
+          "round": 4,
+          "distinct": 1940,
+          "repetitionPercent": 22.4
+        }
+      ]
+    },
+    "allCandidates": {
+      "distinct": 2008,
+      "repeatedSlots": 492,
+      "repetitionPercent": 19.68,
+      "minimumGap": 75,
+      "maximumUses": 6,
+      "repeatsByLength": {
+        "3": 131,
+        "4": 285,
+        "5": 75,
+        "6": 1
+      },
+      "candidatesUsed": 74,
+      "candidateSlots": 89,
+      "rounds": [
+        {
+          "round": 1,
+          "distinct": 1995,
+          "repetitionPercent": 20.2
+        },
+        {
+          "round": 2,
+          "distinct": 2008,
+          "repetitionPercent": 19.68
+        },
+        {
+          "round": 3,
+          "distinct": 2003,
+          "repetitionPercent": 19.88
+        },
+        {
+          "round": 4,
+          "distinct": 2006,
+          "repetitionPercent": 19.76
+        }
+      ]
+    },
+    "withoutVerbalNouns": {
+      "distinct": 1992,
+      "repeatedSlots": 508,
+      "repetitionPercent": 20.32,
+      "minimumGap": 75,
+      "maximumUses": 6,
+      "repeatsByLength": {
+        "3": 146,
+        "4": 276,
+        "5": 83,
+        "6": 3
+      },
+      "candidatesUsed": 54,
+      "candidateSlots": 70,
+      "rounds": [
+        {
+          "round": 1,
+          "distinct": 1983,
+          "repetitionPercent": 20.68
+        },
+        {
+          "round": 2,
+          "distinct": 1992,
+          "repetitionPercent": 20.32
+        },
+        {
+          "round": 3,
+          "distinct": 1982,
+          "repetitionPercent": 20.72
+        }
+      ]
+    },
+    "note": "Heuristic planner estimate, not a validated campaign. The 75-level gap was re-checked on the selected boards; production layout/runtime gates, the solve check and board review were not run."
+  },
+  "inPlaceEstimate": {
+    "method": "Direct same-length substitution into the existing 500 revision-29 boards (wheel letters and crossing letters kept, at most one replaced repeated answer per board, maximum matching).",
+    "repeatedSlotsRemovable": 9,
+    "note": "A conservative floor: fixed boards rarely accept a new word, so a re-plan is needed to realise most of the gain."
+  },
+  "rankingMethod": "Rank = number of usable 5-, 6- and 7-tile wheels (exact unions of two approved words that already hold five approved answers and the stage minimum of long answers) whose letters contain the candidate; ties by uses in the all-candidates trial re-plan, then length. More wheels means the word can act as a connector on more boards, which matters most for a 1,000-level campaign.",
+  "limitations": "Owner review complete: all 83 rejected; nothing ingested or applied. Familiarity tiers are editorial judgments, not native-speaker review. Corpus counts come from news and web text and under-represent household, rural and food words. The trial re-plans are unvalidated drafts in a scratch directory; production dictionaries, policies, packs and saves are unchanged.",
+  "sourceAttribution": "Georgian explanatory dictionary ganmarteba.ge (Linguistic Technologies Group); English Wiktionary contributors (CC BY-SA 4.0). Discovery only: Leipzig Corpora Collection Georgian web 2019 and news 2016 word lists (counts only, no text reproduced); Dato Bumbeishvili (MIT) and Kevin Scannell/Crubadan (CC BY 4.0) lists from targeted batch 08. Brief original English glosses; source definitions are not republished.",
+  "discoverySources": [
+    {
+      "name": "Leipzig Corpora Collection kat-ge_web_2019_1M",
+      "url": "https://downloads.wortschatz-leipzig.de/corpora/kat-ge_web_2019_1M.tar.gz",
+      "sha256": "5a1e8081d5d251838c62eedb615e722beaef64a4128f3644cf9d32d5afc36491",
+      "retrieved": "2026-10-21"
+    },
+    {
+      "name": "Leipzig Corpora Collection kat_newscrawl_2016_1M",
+      "url": "https://downloads.wortschatz-leipzig.de/corpora/kat_newscrawl_2016_1M.tar.gz",
+      "sha256": "15974a68a386537b058d88972885e241cd81d072ce49ee118ef183798da5fb9c",
+      "retrieved": "2026-10-21"
+    },
+    {
+      "name": "English Wiktionary Category:Georgian nouns and Category:Georgian adjectives",
+      "url": "https://en.wiktionary.org/wiki/Category:Georgian_nouns",
+      "retrieved": "2026-10-21",
+      "note": "Listed through the MediaWiki categorymembers API."
+    },
+    {
+      "name": "Bumbeishvili and Crubadan lists",
+      "url": "https://raw.githubusercontent.com/gamag/ka_GE.spell/master/words/",
+      "note": "Same files and hashes as targeted batch 08."
+    }
+  ],
+  "entries": [
+    {
+      "id": "T12-001",
+      "rank": 1,
+      "word": "ლამი",
+      "length": 4,
+      "category": "nature-farming",
+      "proposedMeaning": "silt",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%9A%E1%83%90%E1%83%9B%E1%83%98",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "6675adb50b998f3401fa2b432ba761cb263c9d1102ca0feead986519c594bdd0",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 34,
+        "leipzigNews2016": 12,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": false
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 1,
+          "6": 171,
+          "7": 1562
+        },
+        "usableWheelsTotal": 1734,
+        "rev29InPlaceSlots": 5,
+        "rev29ReplaceableAnswers": ["ვალი", "ლომი", "ნამი", "შალი", "ცელი"],
+        "trialUses": {
+          "allCandidates": 2,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-002",
+      "rank": 2,
+      "word": "ბუა",
+      "length": 3,
+      "category": "everyday-objects-people",
+      "proposedMeaning": "bogeyman (imaginary creature used to frighten children)",
+      "partOfSpeech": "noun",
+      "familiarityTier": "A",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%91%E1%83%A3%E1%83%90",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "74daf4e6fce8e2398c43935441ab2a16e0655d61f5a45717682071f296430e5b",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 2,
+        "leipzigNews2016": 9,
+        "bumbeishvili": false,
+        "crubadan": false,
+        "wiktionaryLemma": false
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 2,
+          "6": 68,
+          "7": 814
+        },
+        "usableWheelsTotal": 884,
+        "rev29InPlaceSlots": 1,
+        "rev29ReplaceableAnswers": ["ჭია"],
+        "trialUses": {
+          "allCandidates": 4,
+          "withoutVerbalNouns": 4
+        }
+      }
+    },
+    {
+      "id": "T12-003",
+      "rank": 3,
+      "word": "ბაკი",
+      "length": 4,
+      "category": "nature-farming",
+      "proposedMeaning": "livestock pen (unroofed enclosure)",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Proposed sense is the livestock pen (homonym 1) only; homonym 2 is a colloquial synonym of ავზი (tank). Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%91%E1%83%90%E1%83%99%E1%83%98/1",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "a87ee6378b9dc0aa1f7f9e667fb48fa4fe613455e64ec32c9aa9b2c7ff9fb46f",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 14,
+        "leipzigNews2016": 3,
+        "bumbeishvili": false,
+        "crubadan": true,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 1,
+          "6": 53,
+          "7": 517
+        },
+        "usableWheelsTotal": 571,
+        "rev29InPlaceSlots": 2,
+        "rev29ReplaceableAnswers": ["ბანი", "ბაღი"],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-004",
+      "rank": 4,
+      "word": "სინი",
+      "length": 4,
+      "category": "home-food",
+      "proposedMeaning": "tray (same as ლანგარი)",
+      "partOfSpeech": "noun",
+      "familiarityTier": "A",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A1%E1%83%98%E1%83%9C%E1%83%98",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "0addaf0b50db538dc0377945a2b9277b253ef254a5e7a42cf4defac6867131a8",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 12,
+        "leipzigNews2016": 1,
+        "bumbeishvili": false,
+        "crubadan": false,
+        "wiktionaryLemma": false
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 20,
+          "7": 383
+        },
+        "usableWheelsTotal": 403,
+        "rev29InPlaceSlots": 4,
+        "rev29ReplaceableAnswers": ["ნული", "სული", "სუნი", "ჯინი"],
+        "trialUses": {
+          "allCandidates": 2,
+          "withoutVerbalNouns": 2
+        }
+      }
+    },
+    {
+      "id": "T12-005",
+      "rank": 5,
+      "word": "კვარი",
+      "length": 5,
+      "category": "home-food",
+      "proposedMeaning": "resinous pine torch",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%99%E1%83%95%E1%83%90%E1%83%A0%E1%83%98",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "902f13c1cce212234ced5a8e4edbfc7b006729ac6b7b2d470f9eb962cf872a04",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 2,
+        "leipzigNews2016": 0,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 26,
+          "7": 316
+        },
+        "usableWheelsTotal": 342,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 2,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-006",
+      "rank": 6,
+      "word": "ცდა",
+      "length": 3,
+      "category": "verbal-noun-concept",
+      "proposedMeaning": "experiment; attempt, effort",
+      "partOfSpeech": "noun",
+      "familiarityTier": "A",
+      "verbalNounOrigin": true,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Proposed senses: scientific experiment (homonym 2, sense 2) and effort/attempt (homonym 3); not the waiting sense (homonym 1). Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%AA%E1%83%93%E1%83%90/2",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "5d83d661a366da1bac32c129b0b63730fa60e8c592e10deb702ee62608ef62a7",
+          "sourceChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%AA%E1%83%93%E1%83%90/3",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "5115b1415c3a36702cdfa11b0a92c4016f567eca1ee0569f383bee5b0271c273",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 96,
+        "leipzigNews2016": 75,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 6,
+          "7": 270
+        },
+        "usableWheelsTotal": 276,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 3,
+          "withoutVerbalNouns": null
+        }
+      },
+      "verbalNounNote": "Dictionary labels this a verbal noun (საწყისი) or event noun. It is proposed only for the listed concept/object sense under the rule that ordinary concept senses are retained; the owner may reject it as an action form."
+    },
+    {
+      "id": "T12-007",
+      "rank": 7,
+      "word": "მხალი",
+      "length": 5,
+      "category": "home-food",
+      "proposedMeaning": "dish of cooked greens or vegetables (same as ფხალი)",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Synonym of ფხალი; the owner may prefer to approve only one spelling. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%9B%E1%83%AE%E1%83%90%E1%83%9A%E1%83%98",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "6de189a8a6bea4f66fc7c452b22f3421ec47bf3735e48d69bbb5b14d96885ef4",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 4,
+        "leipzigNews2016": 3,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": false
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 1,
+          "6": 27,
+          "7": 245
+        },
+        "usableWheelsTotal": 273,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-008",
+      "rank": 8,
+      "word": "ვარია",
+      "length": 5,
+      "category": "animals",
+      "proposedMeaning": "pullet (young hen)",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%95%E1%83%90%E1%83%A0%E1%83%98%E1%83%90",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "18fc9d0988311b7b15f011739dd54d45c38cc6a5cfd1e7d299e664a9474199c9",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 7,
+        "leipzigNews2016": 1,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 7,
+          "7": 194
+        },
+        "usableWheelsTotal": 201,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-009",
+      "rank": 9,
+      "word": "ზრდა",
+      "length": 4,
+      "category": "verbal-noun-concept",
+      "proposedMeaning": "growth, increase",
+      "partOfSpeech": "noun",
+      "familiarityTier": "A",
+      "verbalNounOrigin": true,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Proposed sense 2 (increase in amount, e.g. ფასების ზრდა). Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%96%E1%83%A0%E1%83%93%E1%83%90",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "8ad4857e56012c3604bb50d7b0807daa4dddb36f995ebffc484a03318150afce",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 1046,
+        "leipzigNews2016": 1349,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 18,
+          "7": 172
+        },
+        "usableWheelsTotal": 190,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": null
+        }
+      },
+      "verbalNounNote": "Dictionary labels this a verbal noun (საწყისი) or event noun. It is proposed only for the listed concept/object sense under the rule that ordinary concept senses are retained; the owner may reject it as an action form."
+    },
+    {
+      "id": "T12-010",
+      "rank": 10,
+      "word": "ჭილი",
+      "length": 4,
+      "category": "nature-farming",
+      "proposedMeaning": "rush (plant used for mats); onion set",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%AD%E1%83%98%E1%83%9A%E1%83%98/1",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "09dd29661f6258bc23e51e74142efcd16790f55f5c6ecd4034be030748cdaa70",
+          "sourceChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%AD%E1%83%98%E1%83%9A%E1%83%98/2",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "1efcc16c8fd9dd9befe54ec263f14dd15910afa064d92d26a3d498930d2a1102",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 1,
+        "leipzigNews2016": 2,
+        "bumbeishvili": false,
+        "crubadan": false,
+        "wiktionaryLemma": false
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 7,
+          "7": 175
+        },
+        "usableWheelsTotal": 182,
+        "rev29InPlaceSlots": 1,
+        "rev29ReplaceableAnswers": ["წილი"],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 2
+        }
+      }
+    },
+    {
+      "id": "T12-011",
+      "rank": 11,
+      "word": "ჭური",
+      "length": 4,
+      "category": "home-food",
+      "proposedMeaning": "clay wine vessel (same as ქვევრი)",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Synonym of approved ქვევრი; common in western Georgia. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%AD%E1%83%A3%E1%83%A0%E1%83%98",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "4b67fe83d8e92b356895fb63c1358786049bcc6b4dca3e9a8b4a5803f6c5aca7",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 2,
+        "leipzigNews2016": 5,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": false
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 5,
+          "7": 160
+        },
+        "usableWheelsTotal": 165,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-012",
+      "rank": 12,
+      "word": "ჟამი",
+      "length": 4,
+      "category": "abstract",
+      "proposedMeaning": "time, era (bookish)",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Proposed sense is homonym 1 (time); homonym 2 (plague) is not proposed. Dictionary label: bookish. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%9F%E1%83%90%E1%83%9B%E1%83%98/1",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "73caa704eb6fc914a54efdb04ded17652a1471d22a0a65128b159384ad4ae04f",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 104,
+        "leipzigNews2016": 53,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 2,
+          "7": 132
+        },
+        "usableWheelsTotal": 134,
+        "rev29InPlaceSlots": 1,
+        "rev29ReplaceableAnswers": ["პასი"],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 2
+        }
+      }
+    },
+    {
+      "id": "T12-013",
+      "rank": 13,
+      "word": "ბზე",
+      "length": 3,
+      "category": "nature-farming",
+      "proposedMeaning": "chaff",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Rural word; widely known through the idiom თავში ბზე უყრია. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%91%E1%83%96%E1%83%94",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "1cff62d45e42f5f43f82894ef4f9837b98c0454b57db8dffd65280aaf4c99001",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 2,
+        "leipzigNews2016": 0,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": false
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 15,
+          "7": 117
+        },
+        "usableWheelsTotal": 132,
+        "rev29InPlaceSlots": 1,
+        "rev29ReplaceableAnswers": ["ეზო"],
+        "trialUses": {
+          "allCandidates": 2,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-014",
+      "rank": 14,
+      "word": "ღვარი",
+      "length": 5,
+      "category": "nature-farming",
+      "proposedMeaning": "torrent, flood (same as ნიაღვარი)",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A6%E1%83%95%E1%83%90%E1%83%A0%E1%83%98",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "9d5dc6c1c0a7e5dc13844c98a608b3dbaae39fcdceacf65dc681bd37f687c766",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 1,
+        "leipzigNews2016": 0,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 8,
+          "7": 111
+        },
+        "usableWheelsTotal": 119,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 2,
+          "withoutVerbalNouns": 2
+        }
+      }
+    },
+    {
+      "id": "T12-015",
+      "rank": 15,
+      "word": "წიბო",
+      "length": 4,
+      "category": "geometry-shape",
+      "proposedMeaning": "edge (of a solid in geometry)",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%AC%E1%83%98%E1%83%91%E1%83%9D",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "22efa18a735e234dc54d626cd7034b29177258d866178aa0321215c1899dfb76",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 3,
+        "leipzigNews2016": 0,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": false
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 7,
+          "7": 111
+        },
+        "usableWheelsTotal": 118,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-016",
+      "rank": 16,
+      "word": "ფხალი",
+      "length": 5,
+      "category": "home-food",
+      "proposedMeaning": "pkhali (dish of minced greens or vegetables)",
+      "partOfSpeech": "noun",
+      "familiarityTier": "A",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Dictionary gives it as a synonym of მხალი; the common modern name of the dish. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A4%E1%83%AE%E1%83%90%E1%83%9A%E1%83%98",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "a1af94b7332c75aeb0003815bd3e72161ebf23af2659cb4cba5d36958f08f27f",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 6,
+        "leipzigNews2016": 3,
+        "bumbeishvili": false,
+        "crubadan": false,
+        "wiktionaryLemma": false
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 1,
+          "6": 10,
+          "7": 107
+        },
+        "usableWheelsTotal": 118,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-017",
+      "rank": 17,
+      "word": "ტალკი",
+      "length": 5,
+      "category": "home-food",
+      "proposedMeaning": "talc; talcum powder",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Not a headword in the explanatory dictionary checked; English Wiktionary Georgian entry used. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://en.wiktionary.org/w/index.php?title=%E1%83%A2%E1%83%90%E1%83%9A%E1%83%99%E1%83%98&oldid=84101793",
+          "kind": "English Wiktionary, Georgian entry",
+          "revisionId": 84101793,
+          "sha256": "2a942e46ea6c9866b2a7633ade4a0f4995b6a82720195f89e21f6eaaadd9b980",
+          "sha256Of": "revision wikitext",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 8,
+        "leipzigNews2016": 0,
+        "bumbeishvili": false,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 4,
+          "7": 113
+        },
+        "usableWheelsTotal": 117,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 2
+        }
+      }
+    },
+    {
+      "id": "T12-018",
+      "rank": 18,
+      "word": "ტოგა",
+      "length": 4,
+      "category": "culture",
+      "proposedMeaning": "toga",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Not a headword in the explanatory dictionary checked; English Wiktionary Georgian entry used. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://en.wiktionary.org/w/index.php?title=%E1%83%A2%E1%83%9D%E1%83%92%E1%83%90&oldid=84101891",
+          "kind": "English Wiktionary, Georgian entry",
+          "revisionId": 84101891,
+          "sha256": "bb6f137717cc7a32467af152a8d72171d0baebbb65aa7dfb02d0ca577f287265",
+          "sha256Of": "revision wikitext",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 0,
+        "leipzigNews2016": 0,
+        "bumbeishvili": false,
+        "crubadan": true,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 3,
+          "7": 96
+        },
+        "usableWheelsTotal": 99,
+        "rev29InPlaceSlots": 1,
+        "rev29ReplaceableAnswers": ["ტონა"],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-019",
+      "rank": 19,
+      "word": "დეკა",
+      "length": 4,
+      "category": "nature-farming",
+      "proposedMeaning": "Caucasian rhododendron",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%93%E1%83%94%E1%83%99%E1%83%90",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "abacbdf0209e54bde54002c8a3696ee3dcb5c470c80a5d8f94552bd8516c7278",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 7,
+        "leipzigNews2016": 2,
+        "bumbeishvili": false,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 8,
+          "7": 90
+        },
+        "usableWheelsTotal": 98,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-020",
+      "rank": 20,
+      "word": "რიქშა",
+      "length": 5,
+      "category": "culture",
+      "proposedMeaning": "rickshaw",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Not a headword in the explanatory dictionary checked; English Wiktionary Georgian entry used. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://en.wiktionary.org/w/index.php?title=%E1%83%A0%E1%83%98%E1%83%A5%E1%83%A8%E1%83%90&oldid=84101084",
+          "kind": "English Wiktionary, Georgian entry",
+          "revisionId": 84101084,
+          "sha256": "675d61ff4a6e0ec6a4b99d357a7d558c283e52c33d5824126f2719bd76f2b01f",
+          "sha256Of": "revision wikitext",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 1,
+        "leipzigNews2016": 1,
+        "bumbeishvili": false,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 1,
+          "6": 9,
+          "7": 88
+        },
+        "usableWheelsTotal": 98,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-021",
+      "rank": 21,
+      "word": "ინჩი",
+      "length": 4,
+      "category": "technology-measure",
+      "proposedMeaning": "inch",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Wiktionary also records a dated humorous sense, which is not proposed. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://en.wiktionary.org/w/index.php?title=%E1%83%98%E1%83%9C%E1%83%A9%E1%83%98&oldid=84115880",
+          "kind": "English Wiktionary, Georgian entry",
+          "revisionId": 84115880,
+          "sha256": "19fa48ece9dae823fd9193dbde8749795bddeca035e34e55708c535f8ac700d9",
+          "sha256Of": "revision wikitext",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 9,
+        "leipzigNews2016": 2,
+        "bumbeishvili": false,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 3,
+          "7": 94
+        },
+        "usableWheelsTotal": 97,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-022",
+      "rank": 22,
+      "word": "ბაასი",
+      "length": 5,
+      "category": "verbal-noun-concept",
+      "proposedMeaning": "calm conversation, chat",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": true,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Event noun; mildly literary. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%91%E1%83%90%E1%83%90%E1%83%A1%E1%83%98",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "debbe0816a96e2b6543abe2716b72e163aa0e467c0cd821f79eb7f9af7a242b7",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 8,
+        "leipzigNews2016": 5,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 7,
+          "7": 82
+        },
+        "usableWheelsTotal": 89,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 2,
+          "withoutVerbalNouns": null
+        }
+      },
+      "verbalNounNote": "Dictionary labels this a verbal noun (საწყისი) or event noun. It is proposed only for the listed concept/object sense under the rule that ordinary concept senses are retained; the owner may reject it as an action form."
+    },
+    {
+      "id": "T12-023",
+      "rank": 23,
+      "word": "ნიმფა",
+      "length": 5,
+      "category": "culture",
+      "proposedMeaning": "nymph",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Not a headword in the explanatory dictionary checked; English Wiktionary Georgian entry used. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://en.wiktionary.org/w/index.php?title=%E1%83%9C%E1%83%98%E1%83%9B%E1%83%A4%E1%83%90&oldid=84100397",
+          "kind": "English Wiktionary, Georgian entry",
+          "revisionId": 84100397,
+          "sha256": "11aa7eb23334a00ee65009f8bceda31a3ba4ed0e56840fda3ae4ee39b358ce77",
+          "sha256Of": "revision wikitext",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 3,
+        "leipzigNews2016": 1,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 5,
+          "7": 83
+        },
+        "usableWheelsTotal": 88,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-024",
+      "rank": 24,
+      "word": "ხვატი",
+      "length": 5,
+      "category": "nature-farming",
+      "proposedMeaning": "sultry heat",
+      "partOfSpeech": "noun",
+      "familiarityTier": "A",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Not a headword in the explanatory dictionary checked; English Wiktionary Georgian entry used. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://en.wiktionary.org/w/index.php?title=%E1%83%AE%E1%83%95%E1%83%90%E1%83%A2%E1%83%98&oldid=84121291",
+          "kind": "English Wiktionary, Georgian entry",
+          "revisionId": 84121291,
+          "sha256": "bf2b84d18fb8aa845387ade7c009a74f7283ae0640c9487a3703f62c76988ab8",
+          "sha256Of": "revision wikitext",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 4,
+        "leipzigNews2016": 0,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 8,
+          "7": 70
+        },
+        "usableWheelsTotal": 78,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-025",
+      "rank": 25,
+      "word": "ოსტრი",
+      "length": 5,
+      "category": "home-food",
+      "proposedMeaning": "ostri (traditional Georgian beef stew)",
+      "partOfSpeech": "noun",
+      "familiarityTier": "A",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Not a headword in the explanatory dictionary checked; English Wiktionary Georgian entry used. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://en.wiktionary.org/w/index.php?title=%E1%83%9D%E1%83%A1%E1%83%A2%E1%83%A0%E1%83%98&oldid=84096951",
+          "kind": "English Wiktionary, Georgian entry",
+          "revisionId": 84096951,
+          "sha256": "cb461fc976be4725bfa68b29e374ae93f0db7b5f578d7ee28dc73539f6d9092a",
+          "sha256Of": "revision wikitext",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 1,
+        "leipzigNews2016": 1,
+        "bumbeishvili": false,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 1,
+          "6": 7,
+          "7": 65
+        },
+        "usableWheelsTotal": 73,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-026",
+      "rank": 26,
+      "word": "ბალღი",
+      "length": 5,
+      "category": "everyday-objects-people",
+      "proposedMeaning": "child (regional)",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Dictionary label: regional (კუთხური). Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%91%E1%83%90%E1%83%9A%E1%83%A6%E1%83%98",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "44bdd2a39208ad618be19c657602de9dd98c3e1e03f3d1bc4656a94198b8db9a",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 7,
+        "leipzigNews2016": 0,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": false
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 1,
+          "6": 5,
+          "7": 64
+        },
+        "usableWheelsTotal": 70,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-027",
+      "rank": 27,
+      "word": "ცხავი",
+      "length": 5,
+      "category": "nature-farming",
+      "proposedMeaning": "coarse sieve, riddle",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%AA%E1%83%AE%E1%83%90%E1%83%95%E1%83%98",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "c155538f8dd926809db30d511e213b64094cd22d50d25514904bd27981c4e4c8",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 0,
+        "leipzigNews2016": 0,
+        "bumbeishvili": false,
+        "crubadan": false,
+        "wiktionaryLemma": false
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 1,
+          "7": 68
+        },
+        "usableWheelsTotal": 69,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 2
+        }
+      }
+    },
+    {
+      "id": "T12-028",
+      "rank": 28,
+      "word": "ტიული",
+      "length": 5,
+      "category": "home-food",
+      "proposedMeaning": "tulle (net fabric, net curtain)",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Not a headword in the explanatory dictionary checked; English Wiktionary Georgian entry used. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://en.wiktionary.org/w/index.php?title=%E1%83%A2%E1%83%98%E1%83%A3%E1%83%9A%E1%83%98&oldid=84101879",
+          "kind": "English Wiktionary, Georgian entry",
+          "revisionId": 84101879,
+          "sha256": "7cc5fe5b15de9d7141c6e87ef6afa46abc92a5659522f7ede1e32bcab605f7f2",
+          "sha256Of": "revision wikitext",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 0,
+        "leipzigNews2016": 0,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 1,
+          "7": 64
+        },
+        "usableWheelsTotal": 65,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-029",
+      "rank": 29,
+      "word": "ჭრაქი",
+      "length": 5,
+      "category": "home-food",
+      "proposedMeaning": "oil lamp (wick lamp)",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Proposed sense is homonym 1 (lamp); homonym 2 (vine mildew) not proposed. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%AD%E1%83%A0%E1%83%90%E1%83%A5%E1%83%98/1",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "e141f0ca88e7d84c22fd5ac56ad9b753edf4932fbaa159e8901b6a9a1ecbffa6",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 5,
+        "leipzigNews2016": 3,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 1,
+          "6": 5,
+          "7": 59
+        },
+        "usableWheelsTotal": 65,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-030",
+      "rank": 30,
+      "word": "ქება",
+      "length": 4,
+      "category": "verbal-noun-concept",
+      "proposedMeaning": "praise",
+      "partOfSpeech": "noun",
+      "familiarityTier": "A",
+      "verbalNounOrigin": true,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Concept noun 'praise'. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A5%E1%83%94%E1%83%91%E1%83%90",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "d036936a2b6f69ae1ddb3f247ac658bb29a22102b20864934170a582535f7ed8",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 64,
+        "leipzigNews2016": 35,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": false
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 3,
+          "7": 57
+        },
+        "usableWheelsTotal": 60,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": null
+        }
+      },
+      "verbalNounNote": "Dictionary labels this a verbal noun (საწყისი) or event noun. It is proposed only for the listed concept/object sense under the rule that ordinary concept senses are retained; the owner may reject it as an action form."
+    },
+    {
+      "id": "T12-031",
+      "rank": 31,
+      "word": "ბუღა",
+      "length": 4,
+      "category": "animals",
+      "proposedMeaning": "breeding bull",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%91%E1%83%A3%E1%83%A6%E1%83%90",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "6632a35915eccca29c988d4c0aa8c1a472e7cd45b12a33ddfe5c9c8dde004236",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 5,
+        "leipzigNews2016": 4,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": false
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 4,
+          "7": 53
+        },
+        "usableWheelsTotal": 57,
+        "rev29InPlaceSlots": 2,
+        "rev29ReplaceableAnswers": ["ბაღი", "ბუღი"],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-032",
+      "rank": 32,
+      "word": "ბუცი",
+      "length": 4,
+      "category": "clothing",
+      "proposedMeaning": "football boot (studded sports shoe)",
+      "partOfSpeech": "noun",
+      "familiarityTier": "A",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Listed as an ordinary noun in the explanatory dictionary; owner to judge whether it reads as a borrowing. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%91%E1%83%A3%E1%83%AA%E1%83%98",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "b3d34c7f02e768245556fffc68f4ecd236c4608f7c3f60e8badcc90512cd47e6",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 13,
+        "leipzigNews2016": 7,
+        "bumbeishvili": false,
+        "crubadan": false,
+        "wiktionaryLemma": false
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 3,
+          "7": 53
+        },
+        "usableWheelsTotal": 56,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 2,
+          "withoutVerbalNouns": 2
+        }
+      }
+    },
+    {
+      "id": "T12-033",
+      "rank": 33,
+      "word": "რბოლა",
+      "length": 5,
+      "category": "verbal-noun-concept",
+      "proposedMeaning": "race (speed competition)",
+      "partOfSpeech": "noun",
+      "familiarityTier": "A",
+      "verbalNounOrigin": true,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Proposed sense 2 (sports race), not the old 'running' sense. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A0%E1%83%91%E1%83%9D%E1%83%9A%E1%83%90",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "9f3bc435af37031555bf823b3db72fb3515207306da5c47dd2d220f4bb4d0a18",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 58,
+        "leipzigNews2016": 68,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 1,
+          "7": 48
+        },
+        "usableWheelsTotal": 49,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": null
+        }
+      },
+      "verbalNounNote": "Dictionary labels this a verbal noun (საწყისი) or event noun. It is proposed only for the listed concept/object sense under the rule that ordinary concept senses are retained; the owner may reject it as an action form."
+    },
+    {
+      "id": "T12-034",
+      "rank": 34,
+      "word": "უვადო",
+      "length": 5,
+      "category": "adjective",
+      "proposedMeaning": "indefinite, without a time limit",
+      "partOfSpeech": "adjective",
+      "familiarityTier": "A",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Privative adjective; earlier batches rejected several უ-…-ო words, so owner judgment matters. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%95%E1%83%90%E1%83%93%E1%83%9D",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "3e8a26cc034cab2643cbc730a6c22cb877bf3be2111c40a25957fc4103e3b12a",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 138,
+        "leipzigNews2016": 191,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": false
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 1,
+          "7": 48
+        },
+        "usableWheelsTotal": 49,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-035",
+      "rank": 35,
+      "word": "ასტრა",
+      "length": 5,
+      "category": "nature-farming",
+      "proposedMeaning": "aster (garden flower)",
+      "partOfSpeech": "noun",
+      "familiarityTier": "A",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Not a headword in the explanatory dictionary checked; English Wiktionary Georgian entry used. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://en.wiktionary.org/w/index.php?title=%E1%83%90%E1%83%A1%E1%83%A2%E1%83%A0%E1%83%90&oldid=84097454",
+          "kind": "English Wiktionary, Georgian entry",
+          "revisionId": 84097454,
+          "sha256": "ed8da2060372d8f1b0c7d95c9a606925406199953b96ec646478bcae0e93294b",
+          "sha256Of": "revision wikitext",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 4,
+        "leipzigNews2016": 5,
+        "bumbeishvili": false,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 2,
+          "7": 43
+        },
+        "usableWheelsTotal": 45,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 2,
+          "withoutVerbalNouns": 2
+        }
+      }
+    },
+    {
+      "id": "T12-036",
+      "rank": 36,
+      "word": "წყავი",
+      "length": 5,
+      "category": "nature-farming",
+      "proposedMeaning": "cherry laurel (shrub and its berry)",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%AC%E1%83%A7%E1%83%90%E1%83%95%E1%83%98",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "3e80caa76c0c11fe8bbb1527403395f822ee3c0dfdc24c985817027c3bffa7e6",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 3,
+        "leipzigNews2016": 0,
+        "bumbeishvili": false,
+        "crubadan": true,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 2,
+          "7": 43
+        },
+        "usableWheelsTotal": 45,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 0,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-037",
+      "rank": 37,
+      "word": "უბირი",
+      "length": 5,
+      "category": "adjective",
+      "proposedMeaning": "uneducated, simple",
+      "partOfSpeech": "adjective",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "May read as condescending. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%91%E1%83%98%E1%83%A0%E1%83%98",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "a8321489f4ea09b35a47205ba52ef832db7f1dd643adf9f2d0c8bf6640e2fa40",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 2,
+        "leipzigNews2016": 5,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 0,
+          "7": 44
+        },
+        "usableWheelsTotal": 44,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-038",
+      "rank": 38,
+      "word": "ციცა",
+      "length": 4,
+      "category": "everyday-objects-people",
+      "proposedMeaning": "kitty (colloquial word for a cat)",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Colloquial; Wiktionary also records a dialectal 'girl' sense, which is not proposed. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://en.wiktionary.org/w/index.php?title=%E1%83%AA%E1%83%98%E1%83%AA%E1%83%90&oldid=89248579",
+          "kind": "English Wiktionary, Georgian entry",
+          "revisionId": 89248579,
+          "sha256": "dda1b5c0b7fb24f4a1b1d80c710eaa097f201ac9eacd9ae2a3a463a5af3bc068",
+          "sha256Of": "revision wikitext",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 0,
+        "leipzigNews2016": 0,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 0,
+          "7": 43
+        },
+        "usableWheelsTotal": 43,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 3
+        }
+      }
+    },
+    {
+      "id": "T12-039",
+      "rank": 39,
+      "word": "ნდობა",
+      "length": 5,
+      "category": "verbal-noun-concept",
+      "proposedMeaning": "trust",
+      "partOfSpeech": "noun",
+      "familiarityTier": "A",
+      "verbalNounOrigin": true,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Concept noun 'trust'. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%9C%E1%83%93%E1%83%9D%E1%83%91%E1%83%90",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "ee1026232dceee042e311b15e80a16259dc0efa56fb3a539b7b871ba5f75d384",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 405,
+        "leipzigNews2016": 660,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 1,
+          "7": 41
+        },
+        "usableWheelsTotal": 42,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": null
+        }
+      },
+      "verbalNounNote": "Dictionary labels this a verbal noun (საწყისი) or event noun. It is proposed only for the listed concept/object sense under the rule that ordinary concept senses are retained; the owner may reject it as an action form."
+    },
+    {
+      "id": "T12-040",
+      "rank": 40,
+      "word": "სმენა",
+      "length": 5,
+      "category": "verbal-noun-concept",
+      "proposedMeaning": "hearing; ear for music",
+      "partOfSpeech": "noun",
+      "familiarityTier": "A",
+      "verbalNounOrigin": true,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Proposed sense 2 (musical ear) and the sense of hearing, not the act of listening. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A1%E1%83%9B%E1%83%94%E1%83%9C%E1%83%90",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "ed5a5fcb93717de928cd8e376f74aa4247be343dddf9168f96776a432d3e9cc3",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 73,
+        "leipzigNews2016": 20,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 1,
+          "7": 38
+        },
+        "usableWheelsTotal": 39,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": null
+        }
+      },
+      "verbalNounNote": "Dictionary labels this a verbal noun (საწყისი) or event noun. It is proposed only for the listed concept/object sense under the rule that ordinary concept senses are retained; the owner may reject it as an action form."
+    },
+    {
+      "id": "T12-041",
+      "rank": 41,
+      "word": "გნოლი",
+      "length": 5,
+      "category": "animals",
+      "proposedMeaning": "partridge (small hen-like game bird)",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%92%E1%83%9C%E1%83%9D%E1%83%9A%E1%83%98",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "bb2c7c5c3dc13132b3541c1ebf11d08ab02f283938b3b0b7f6d36b85e3841d8d",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 2,
+        "leipzigNews2016": 1,
+        "bumbeishvili": false,
+        "crubadan": true,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 0,
+          "7": 38
+        },
+        "usableWheelsTotal": 38,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-042",
+      "rank": 42,
+      "word": "შრომა",
+      "length": 5,
+      "category": "verbal-noun-concept",
+      "proposedMeaning": "labour, work; scholarly work",
+      "partOfSpeech": "noun",
+      "familiarityTier": "A",
+      "verbalNounOrigin": true,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Proposed as the concept 'labour' and sense 2 (a written work). Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A8%E1%83%A0%E1%83%9D%E1%83%9B%E1%83%90",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "c362eeb092b5b6998d3a923dd274f0617c6d967d386c093f6c23b436f9e4c693",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 431,
+        "leipzigNews2016": 337,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 1,
+          "7": 37
+        },
+        "usableWheelsTotal": 38,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": null
+        }
+      },
+      "verbalNounNote": "Dictionary labels this a verbal noun (საწყისი) or event noun. It is proposed only for the listed concept/object sense under the rule that ordinary concept senses are retained; the owner may reject it as an action form."
+    },
+    {
+      "id": "T12-043",
+      "rank": 43,
+      "word": "კრება",
+      "length": 5,
+      "category": "verbal-noun-concept",
+      "proposedMeaning": "meeting, assembly",
+      "partOfSpeech": "noun",
+      "familiarityTier": "A",
+      "verbalNounOrigin": true,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Sense 2 is a plain noun (meeting of members); the gathering-action sense 1 is not proposed. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%99%E1%83%A0%E1%83%94%E1%83%91%E1%83%90",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "441d51ca443de993d0d72f6d9fcc4fe76660862913246442da4e635c9d82f56a",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 143,
+        "leipzigNews2016": 215,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 1,
+          "7": 26
+        },
+        "usableWheelsTotal": 27,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": null
+        }
+      },
+      "verbalNounNote": "Dictionary labels this a verbal noun (საწყისი) or event noun. It is proposed only for the listed concept/object sense under the rule that ordinary concept senses are retained; the owner may reject it as an action form."
+    },
+    {
+      "id": "T12-044",
+      "rank": 44,
+      "word": "მაცნე",
+      "length": 5,
+      "category": "everyday-objects-people",
+      "proposedMeaning": "herald, messenger",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Dictionary label: old (ძველი). Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%9B%E1%83%90%E1%83%AA%E1%83%9C%E1%83%94",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "12faada91a6b676dc13fab6d3d40dc9dc67fed85a1527281bfb4280f765cd1d3",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 41,
+        "leipzigNews2016": 12,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 0,
+          "7": 27
+        },
+        "usableWheelsTotal": 27,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 2
+        }
+      }
+    },
+    {
+      "id": "T12-045",
+      "rank": 45,
+      "word": "ხნული",
+      "length": 5,
+      "category": "nature-farming",
+      "proposedMeaning": "ploughed land",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Participle used as a noun. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%AE%E1%83%9C%E1%83%A3%E1%83%9A%E1%83%98",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "2c8d75acb9ee6252edfe3530c9c7e1fff03d6a577bac03ea2ef6dbcf96f6ae8f",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 3,
+        "leipzigNews2016": 2,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": false
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 0,
+          "7": 26
+        },
+        "usableWheelsTotal": 26,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-046",
+      "rank": 46,
+      "word": "წვერო",
+      "length": 5,
+      "category": "geometry-shape",
+      "proposedMeaning": "tip, top (of a mountain or tree)",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%AC%E1%83%95%E1%83%94%E1%83%A0%E1%83%9D",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "7ec7015af307ab25fe768f906f29d2e6523220af778fd380f3bb023bd9b4f72c",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 3,
+        "leipzigNews2016": 1,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": false
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 1,
+          "7": 24
+        },
+        "usableWheelsTotal": 25,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-047",
+      "rank": 47,
+      "word": "რუმბა",
+      "length": 5,
+      "category": "culture",
+      "proposedMeaning": "rumba (dance)",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Not a headword in the explanatory dictionary checked; English Wiktionary Georgian entry used. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://en.wiktionary.org/w/index.php?title=%E1%83%A0%E1%83%A3%E1%83%9B%E1%83%91%E1%83%90&oldid=84101122",
+          "kind": "English Wiktionary, Georgian entry",
+          "revisionId": 84101122,
+          "sha256": "f6f7e6bee7119f3dff3214e410ecdc228386562bcb8f870255aa1b7c519f4fa9",
+          "sha256Of": "revision wikitext",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 1,
+        "leipzigNews2016": 2,
+        "bumbeishvili": false,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 0,
+          "7": 24
+        },
+        "usableWheelsTotal": 24,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-048",
+      "rank": 48,
+      "word": "ჯღანი",
+      "length": 5,
+      "category": "clothing",
+      "proposedMeaning": "very old, worn-out shoe",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%AF%E1%83%A6%E1%83%90%E1%83%9C%E1%83%98",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "02708b2ccc8735a6ea491bb5883495f64fc861d62193ab598ae0ad61a71df715",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 0,
+        "leipzigNews2016": 0,
+        "bumbeishvili": false,
+        "crubadan": false,
+        "wiktionaryLemma": false
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 1,
+          "7": 21
+        },
+        "usableWheelsTotal": 22,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-049",
+      "rank": 49,
+      "word": "ყოფა",
+      "length": 4,
+      "category": "verbal-noun-concept",
+      "proposedMeaning": "everyday life, living conditions",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": true,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Dictionary definition is a plain concept (daily life), although labelled საწყისი. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A7%E1%83%9D%E1%83%A4%E1%83%90",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "f4f382a30af6c261c991545f3675008f5021e94f7ecf04edd15af81776b152c9",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 98,
+        "leipzigNews2016": 58,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 0,
+          "7": 21
+        },
+        "usableWheelsTotal": 21,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": null
+        }
+      },
+      "verbalNounNote": "Dictionary labels this a verbal noun (საწყისი) or event noun. It is proposed only for the listed concept/object sense under the rule that ordinary concept senses are retained; the owner may reject it as an action form."
+    },
+    {
+      "id": "T12-050",
+      "rank": 50,
+      "word": "წიხლი",
+      "length": 5,
+      "category": "verbal-noun-concept",
+      "proposedMeaning": "kick",
+      "partOfSpeech": "noun",
+      "familiarityTier": "A",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Event noun; the dictionary lists it as a noun, not a verbal noun. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%AC%E1%83%98%E1%83%AE%E1%83%9A%E1%83%98",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "329693720bc6f17d0536b0e5488e50f4168764378f54414d3635085ebea93f8c",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 25,
+        "leipzigNews2016": 22,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": false
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 0,
+          "7": 21
+        },
+        "usableWheelsTotal": 21,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-051",
+      "rank": 51,
+      "word": "გლოვა",
+      "length": 5,
+      "category": "verbal-noun-concept",
+      "proposedMeaning": "mourning",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": true,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Concept noun (period or expression of grief). Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%92%E1%83%9A%E1%83%9D%E1%83%95%E1%83%90",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "3ef32ecb8e81eec2b9432e9ec632c3ed488ca185aa8aea25c5df4907876e0e9c",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 36,
+        "leipzigNews2016": 24,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": false
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 1,
+          "7": 18
+        },
+        "usableWheelsTotal": 19,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": null
+        }
+      },
+      "verbalNounNote": "Dictionary labels this a verbal noun (საწყისი) or event noun. It is proposed only for the listed concept/object sense under the rule that ordinary concept senses are retained; the owner may reject it as an action form."
+    },
+    {
+      "id": "T12-052",
+      "rank": 52,
+      "word": "რჩევა",
+      "length": 5,
+      "category": "verbal-noun-concept",
+      "proposedMeaning": "advice",
+      "partOfSpeech": "noun",
+      "familiarityTier": "A",
+      "verbalNounOrigin": true,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Proposed sense is 'advice' (sense 3) only, not the choosing senses. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A0%E1%83%A9%E1%83%94%E1%83%95%E1%83%90",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "6fa6141278dd8cf2f5bed15fbd379ee4c06fca503a8000d1942033bbbfe0328e",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 314,
+        "leipzigNews2016": 307,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 1,
+          "7": 18
+        },
+        "usableWheelsTotal": 19,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 0,
+          "withoutVerbalNouns": null
+        }
+      },
+      "verbalNounNote": "Dictionary labels this a verbal noun (საწყისი) or event noun. It is proposed only for the listed concept/object sense under the rule that ordinary concept senses are retained; the owner may reject it as an action form."
+    },
+    {
+      "id": "T12-053",
+      "rank": 53,
+      "word": "მორჩი",
+      "length": 5,
+      "category": "nature-farming",
+      "proposedMeaning": "young shoot, sprout",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%9B%E1%83%9D%E1%83%A0%E1%83%A9%E1%83%98",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "869f66d8a3b595af8d315ed1192a5cdf0775ea80a7f5e86dbd79f0480bc13f5c",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 10,
+        "leipzigNews2016": 3,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 0,
+          "7": 18
+        },
+        "usableWheelsTotal": 18,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-054",
+      "rank": 54,
+      "word": "გეჯა",
+      "length": 4,
+      "category": "nature-farming",
+      "proposedMeaning": "wooden feeding trough",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%92%E1%83%94%E1%83%AF%E1%83%90",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "6bc223e0dfee91f9e4a6cafad0c0e22cdde5aac19c34244b590c3a7fe32e6cbd",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 1,
+        "leipzigNews2016": 0,
+        "bumbeishvili": false,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 0,
+          "7": 17
+        },
+        "usableWheelsTotal": 17,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-055",
+      "rank": 55,
+      "word": "ღელვა",
+      "length": 5,
+      "category": "verbal-noun-concept",
+      "proposedMeaning": "sea swell; agitation, anxiety",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": true,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Natural phenomenon (waves) and the feeling of anxiety. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A6%E1%83%94%E1%83%9A%E1%83%95%E1%83%90",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "cb6490f6984cea3a31c82627d8ed9a2a8bd9d606f027b64eb11cdef145881522",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 26,
+        "leipzigNews2016": 13,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": false
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 1,
+          "7": 16
+        },
+        "usableWheelsTotal": 17,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": null
+        }
+      },
+      "verbalNounNote": "Dictionary labels this a verbal noun (საწყისი) or event noun. It is proposed only for the listed concept/object sense under the rule that ordinary concept senses are retained; the owner may reject it as an action form."
+    },
+    {
+      "id": "T12-056",
+      "rank": 56,
+      "word": "ლოცვა",
+      "length": 5,
+      "category": "verbal-noun-concept",
+      "proposedMeaning": "prayer (text or service)",
+      "partOfSpeech": "noun",
+      "familiarityTier": "A",
+      "verbalNounOrigin": true,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Proposed senses 2–3 (prayer text; church service). Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%9A%E1%83%9D%E1%83%AA%E1%83%95%E1%83%90",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "d972682cadc201d39b6b0a6cf5374dd0b15e9bf1540823304e6cb5e8855f7d8e",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 363,
+        "leipzigNews2016": 197,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 1,
+          "7": 15
+        },
+        "usableWheelsTotal": 16,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": null
+        }
+      },
+      "verbalNounNote": "Dictionary labels this a verbal noun (საწყისი) or event noun. It is proposed only for the listed concept/object sense under the rule that ordinary concept senses are retained; the owner may reject it as an action form."
+    },
+    {
+      "id": "T12-057",
+      "rank": 57,
+      "word": "ფიქრი",
+      "length": 5,
+      "category": "verbal-noun-concept",
+      "proposedMeaning": "thought",
+      "partOfSpeech": "noun",
+      "familiarityTier": "A",
+      "verbalNounOrigin": true,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Dictionary labels it a verbal noun (საწყისი); proposed as the concept 'thought', not the action of thinking. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A4%E1%83%98%E1%83%A5%E1%83%A0%E1%83%98",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "815e6371a702d777ff8d1c1ce8422ac8cac61da3b67855360546a435344b8064",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 496,
+        "leipzigNews2016": 220,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 0,
+          "7": 14
+        },
+        "usableWheelsTotal": 14,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": null
+        }
+      },
+      "verbalNounNote": "Dictionary labels this a verbal noun (საწყისი) or event noun. It is proposed only for the listed concept/object sense under the rule that ordinary concept senses are retained; the owner may reject it as an action form."
+    },
+    {
+      "id": "T12-058",
+      "rank": 58,
+      "word": "ჩაჩი",
+      "length": 4,
+      "category": "clothing",
+      "proposedMeaning": "soft cap (chef's cap, house cap, baby bonnet)",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A9%E1%83%90%E1%83%A9%E1%83%98",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "45dd7a104357ffd719ef8c32dd72b3a53c6a32ba1af161f7aa57e621d22c8832",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 4,
+        "leipzigNews2016": 0,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": false
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 0,
+          "7": 13
+        },
+        "usableWheelsTotal": 13,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 2,
+          "withoutVerbalNouns": 2
+        }
+      }
+    },
+    {
+      "id": "T12-059",
+      "rank": 59,
+      "word": "ცნობა",
+      "length": 5,
+      "category": "verbal-noun-concept",
+      "proposedMeaning": "certificate (official document); piece of news",
+      "partOfSpeech": "noun",
+      "familiarityTier": "A",
+      "verbalNounOrigin": true,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Proposed senses 4–5 (news item; official certificate), not the recognising senses. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%AA%E1%83%9C%E1%83%9D%E1%83%91%E1%83%90",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "b41ba5fa59400810a96aca10c6d092a2f12314a1e0e852f084ff9f4d552b31da",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 340,
+        "leipzigNews2016": 353,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 0,
+          "7": 13
+        },
+        "usableWheelsTotal": 13,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": null
+        }
+      },
+      "verbalNounNote": "Dictionary labels this a verbal noun (საწყისი) or event noun. It is proposed only for the listed concept/object sense under the rule that ordinary concept senses are retained; the owner may reject it as an action form."
+    },
+    {
+      "id": "T12-060",
+      "rank": 60,
+      "word": "ხველა",
+      "length": 5,
+      "category": "verbal-noun-concept",
+      "proposedMeaning": "cough",
+      "partOfSpeech": "noun",
+      "familiarityTier": "A",
+      "verbalNounOrigin": true,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Symptom noun like approved სურდო and გრიპი. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%AE%E1%83%95%E1%83%94%E1%83%9A%E1%83%90",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "59202851c2837835b18e985518f944a72fd03a5ed37bd0acb69ef2635a3448b1",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 86,
+        "leipzigNews2016": 10,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 0,
+          "7": 13
+        },
+        "usableWheelsTotal": 13,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": null
+        }
+      },
+      "verbalNounNote": "Dictionary labels this a verbal noun (საწყისი) or event noun. It is proposed only for the listed concept/object sense under the rule that ordinary concept senses are retained; the owner may reject it as an action form."
+    },
+    {
+      "id": "T12-061",
+      "rank": 61,
+      "word": "ქორფა",
+      "length": 5,
+      "category": "adjective",
+      "proposedMeaning": "fresh and tender (young greens, newborn lamb)",
+      "partOfSpeech": "adjective",
+      "familiarityTier": "A",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A5%E1%83%9D%E1%83%A0%E1%83%A4%E1%83%90",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "c8f03a27fcc612738d61b081af27da8a45412eb1516e5817a4e4e4adf71e9f87",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 16,
+        "leipzigNews2016": 6,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": false
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 0,
+          "7": 12
+        },
+        "usableWheelsTotal": 12,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-062",
+      "rank": 62,
+      "word": "პანტა",
+      "length": 5,
+      "category": "nature-farming",
+      "proposedMeaning": "wild pear (fruit and tree)",
+      "partOfSpeech": "noun",
+      "familiarityTier": "A",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%9E%E1%83%90%E1%83%9C%E1%83%A2%E1%83%90",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "3d6322565d8ee9c18c0c27fbd9ed18f0b1b2c305b1fff3c17f42d738b1d8c59a",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 2,
+        "leipzigNews2016": 3,
+        "bumbeishvili": true,
+        "crubadan": true,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 0,
+          "7": 11
+        },
+        "usableWheelsTotal": 11,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 2,
+          "withoutVerbalNouns": 2
+        }
+      }
+    },
+    {
+      "id": "T12-063",
+      "rank": 63,
+      "word": "ღოჯი",
+      "length": 4,
+      "category": "animals",
+      "proposedMeaning": "tusk (of a boar or pig); protruding tooth",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A6%E1%83%9D%E1%83%AF%E1%83%98",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "7efdb70e9f3fefdd55574f7edfbf9e684996c3590978e08dee1a4c4e950497e3",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 0,
+        "leipzigNews2016": 0,
+        "bumbeishvili": false,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 0,
+          "7": 8
+        },
+        "usableWheelsTotal": 8,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-064",
+      "rank": 64,
+      "word": "ქეიფი",
+      "length": 5,
+      "category": "verbal-noun-concept",
+      "proposedMeaning": "feast, merrymaking",
+      "partOfSpeech": "noun",
+      "familiarityTier": "A",
+      "verbalNounOrigin": true,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Event noun. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A5%E1%83%94%E1%83%98%E1%83%A4%E1%83%98",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "700812ba3214440853df50d316944bd958b13e077201abed4627459a28387f39",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 39,
+        "leipzigNews2016": 19,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 0,
+          "7": 8
+        },
+        "usableWheelsTotal": 8,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": null
+        }
+      },
+      "verbalNounNote": "Dictionary labels this a verbal noun (საწყისი) or event noun. It is proposed only for the listed concept/object sense under the rule that ordinary concept senses are retained; the owner may reject it as an action form."
+    },
+    {
+      "id": "T12-065",
+      "rank": 65,
+      "word": "წყენა",
+      "length": 5,
+      "category": "verbal-noun-concept",
+      "proposedMeaning": "resentment, hurt feelings",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": true,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Homonym 1 (feeling hurt); homonym 2 (food upset) not proposed. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%AC%E1%83%A7%E1%83%94%E1%83%9C%E1%83%90/1",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "8d77f1a2405b24563d81cab823eda5a1c9a42170038dae7ae26c27dc18d14eee",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 68,
+        "leipzigNews2016": 42,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 0,
+          "7": 7
+        },
+        "usableWheelsTotal": 7,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": null
+        }
+      },
+      "verbalNounNote": "Dictionary labels this a verbal noun (საწყისი) or event noun. It is proposed only for the listed concept/object sense under the rule that ordinary concept senses are retained; the owner may reject it as an action form."
+    },
+    {
+      "id": "T12-066",
+      "rank": 66,
+      "word": "წყობა",
+      "length": 5,
+      "category": "verbal-noun-concept",
+      "proposedMeaning": "structure, arrangement; stack",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": true,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Proposed senses 1, 2 and 4 (structure; ordered arrangement; a stack). Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%AC%E1%83%A7%E1%83%9D%E1%83%91%E1%83%90",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "f6c4b73c5610f50027ce5678188be061b7cdb21b37982d7b042f6f55c5ffed84",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 61,
+        "leipzigNews2016": 22,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 0,
+          "7": 6
+        },
+        "usableWheelsTotal": 6,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": null
+        }
+      },
+      "verbalNounNote": "Dictionary labels this a verbal noun (საწყისი) or event noun. It is proposed only for the listed concept/object sense under the rule that ordinary concept senses are retained; the owner may reject it as an action form."
+    },
+    {
+      "id": "T12-067",
+      "rank": 67,
+      "word": "ჟღალი",
+      "length": 5,
+      "category": "adjective",
+      "proposedMeaning": "deep red; reddish-yellow (of hair)",
+      "partOfSpeech": "adjective",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%9F%E1%83%A6%E1%83%90%E1%83%9A%E1%83%98",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "f3bc14d6d7847d1767ea3e0c702c8de134231149805b635523c3ddf0c547ce7a",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 10,
+        "leipzigNews2016": 12,
+        "bumbeishvili": false,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 0,
+          "7": 5
+        },
+        "usableWheelsTotal": 5,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-068",
+      "rank": 68,
+      "word": "ფურნე",
+      "length": 5,
+      "category": "home-food",
+      "proposedMeaning": "bread oven; bakery",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A4%E1%83%A3%E1%83%A0%E1%83%9C%E1%83%94",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "51093172273205995df58c69c63b8278e062ee3473fc4891ba5d93a28a59c16d",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 2,
+        "leipzigNews2016": 1,
+        "bumbeishvili": false,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 0,
+          "7": 4
+        },
+        "usableWheelsTotal": 4,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 0,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-069",
+      "rank": 69,
+      "word": "შვება",
+      "length": 5,
+      "category": "abstract",
+      "proposedMeaning": "relief (from worry or a burden)",
+      "partOfSpeech": "noun",
+      "familiarityTier": "A",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A8%E1%83%95%E1%83%94%E1%83%91%E1%83%90",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "fc8298be71cdb0d49f98a4eb34ac658e4e0aef9a741d9f25efd2ab7be0fabedc",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 110,
+        "leipzigNews2016": 33,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 0,
+          "7": 4
+        },
+        "usableWheelsTotal": 4,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 0,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-070",
+      "rank": 70,
+      "word": "წაღა",
+      "length": 4,
+      "category": "clothing",
+      "proposedMeaning": "soft high-topped heelless boot",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%AC%E1%83%90%E1%83%A6%E1%83%90",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "b49b8b9d4eaa9395c41745131e88f2ceb2405cb1027f9f1bb812fb9bd4138972",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 0,
+        "leipzigNews2016": 0,
+        "bumbeishvili": false,
+        "crubadan": false,
+        "wiktionaryLemma": false
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 0,
+          "7": 3
+        },
+        "usableWheelsTotal": 3,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-071",
+      "rank": 71,
+      "word": "დაზგა",
+      "length": 5,
+      "category": "technology-measure",
+      "proposedMeaning": "workbench; machine tool; loom",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Not a headword in the explanatory dictionary checked; English Wiktionary Georgian entry used. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://en.wiktionary.org/w/index.php?title=%E1%83%93%E1%83%90%E1%83%96%E1%83%92%E1%83%90&oldid=85046777",
+          "kind": "English Wiktionary, Georgian entry",
+          "revisionId": 85046777,
+          "sha256": "53fb78fd209627bdba0da2936fcedc5d23ed2e281511b65c10e767d8dea96d4a",
+          "sha256Of": "revision wikitext",
+          "license": "CC BY-SA 4.0",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 8,
+        "leipzigNews2016": 6,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 0,
+          "7": 3
+        },
+        "usableWheelsTotal": 3,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 0
+        }
+      }
+    },
+    {
+      "id": "T12-072",
+      "rank": 72,
+      "word": "უჯიშო",
+      "length": 5,
+      "category": "adjective",
+      "proposedMeaning": "mongrel, of poor breed; (figurative) no-good",
+      "partOfSpeech": "adjective",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Privative adjective; the figurative sense can be used as an insult. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%AF%E1%83%98%E1%83%A8%E1%83%9D",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "d6c3413f3c1f58cc8f1a6929d24d60d9d890cf12b5ff8b8455f4dc87b09fc13c",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 11,
+        "leipzigNews2016": 11,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": false
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 0,
+          "7": 3
+        },
+        "usableWheelsTotal": 3,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-073",
+      "rank": 73,
+      "word": "მრუმე",
+      "length": 5,
+      "category": "adjective",
+      "proposedMeaning": "dim, murky, dark",
+      "partOfSpeech": "adjective",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%9B%E1%83%A0%E1%83%A3%E1%83%9B%E1%83%94",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "cb95e32c89c14a855666a8626b40af33518c64b73237b185b33502a5ec6cf3f8",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 6,
+        "leipzigNews2016": 6,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 0,
+          "7": 3
+        },
+        "usableWheelsTotal": 3,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 0,
+          "withoutVerbalNouns": 0
+        }
+      }
+    },
+    {
+      "id": "T12-074",
+      "rank": 74,
+      "word": "ზათქი",
+      "length": 5,
+      "category": "abstract",
+      "proposedMeaning": "loud crash, roar (of an impact or waves)",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%96%E1%83%90%E1%83%97%E1%83%A5%E1%83%98",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "4152285f7bfdbd57c177299792622e3c1ac7435431864e482bec2959c069dc2e",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 0,
+        "leipzigNews2016": 1,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 0,
+          "7": 2
+        },
+        "usableWheelsTotal": 2,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 0
+        }
+      }
+    },
+    {
+      "id": "T12-075",
+      "rank": 75,
+      "word": "ჩხუბი",
+      "length": 5,
+      "category": "verbal-noun-concept",
+      "proposedMeaning": "quarrel, fight",
+      "partOfSpeech": "noun",
+      "familiarityTier": "A",
+      "verbalNounOrigin": true,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Dictionary labels it a verbal noun; proposed as the event noun 'quarrel', like approved დავა. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A9%E1%83%AE%E1%83%A3%E1%83%91%E1%83%98",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "490f711374c174228e3bdd0d85ae60cad976da6c7a5789508b422a8bd5d0a910",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 213,
+        "leipzigNews2016": 201,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 0,
+          "7": 2
+        },
+        "usableWheelsTotal": 2,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": null
+        }
+      },
+      "verbalNounNote": "Dictionary labels this a verbal noun (საწყისი) or event noun. It is proposed only for the listed concept/object sense under the rule that ordinary concept senses are retained; the owner may reject it as an action form."
+    },
+    {
+      "id": "T12-076",
+      "rank": 76,
+      "word": "ცეკვა",
+      "length": 5,
+      "category": "verbal-noun-concept",
+      "proposedMeaning": "dance",
+      "partOfSpeech": "noun",
+      "familiarityTier": "A",
+      "verbalNounOrigin": true,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Proposed as 'a dance' (for example ქართული ცეკვა), not the act of dancing. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%AA%E1%83%94%E1%83%99%E1%83%95%E1%83%90",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "36bbb71a1662cb08bcc1bbc78035ebaf4149b03ce4f57b0f8d966c83db71e903",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 234,
+        "leipzigNews2016": 164,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 0,
+          "7": 2
+        },
+        "usableWheelsTotal": 2,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": null
+        }
+      },
+      "verbalNounNote": "Dictionary labels this a verbal noun (საწყისი) or event noun. It is proposed only for the listed concept/object sense under the rule that ordinary concept senses are retained; the owner may reject it as an action form."
+    },
+    {
+      "id": "T12-077",
+      "rank": 77,
+      "word": "წყება",
+      "length": 5,
+      "category": "geometry-shape",
+      "proposedMeaning": "row, series (of similar things)",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%AC%E1%83%A7%E1%83%94%E1%83%91%E1%83%90",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "0e1a796b68126064ac228529b95c526bde8b1328d26bf287d238fd8aaf104efd",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 33,
+        "leipzigNews2016": 16,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 0,
+          "7": 2
+        },
+        "usableWheelsTotal": 2,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-078",
+      "rank": 78,
+      "word": "ძაბვა",
+      "length": 5,
+      "category": "technology-measure",
+      "proposedMeaning": "electrical voltage",
+      "partOfSpeech": "noun",
+      "familiarityTier": "A",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Homonym 2 is a plain noun (voltage); homonym 1 (tensing) is not proposed. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%AB%E1%83%90%E1%83%91%E1%83%95%E1%83%90/2",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "4abd29e764ab1157cd8b456486b035de0f5876e00fb05c2ba87667b0f6e3cb7e",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 39,
+        "leipzigNews2016": 9,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 0,
+          "7": 2
+        },
+        "usableWheelsTotal": 2,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 0,
+          "withoutVerbalNouns": 0
+        }
+      }
+    },
+    {
+      "id": "T12-079",
+      "rank": 79,
+      "word": "მოძმე",
+      "length": 5,
+      "category": "everyday-objects-people",
+      "proposedMeaning": "fellow countryman; brother in spirit",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%9B%E1%83%9D%E1%83%AB%E1%83%9B%E1%83%94",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "42734e8d7d7074dc6e69068c6ca487ac1cc11438e978cd8b1874db2d79f4ac89",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 38,
+        "leipzigNews2016": 49,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": false
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 0,
+          "7": 1
+        },
+        "usableWheelsTotal": 1,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-080",
+      "rank": 80,
+      "word": "ცოდო",
+      "length": 4,
+      "category": "adjective",
+      "proposedMeaning": "pitiable, poor (deserving pity)",
+      "partOfSpeech": "adjective",
+      "familiarityTier": "A",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%AA%E1%83%9D%E1%83%93%E1%83%9D",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "378120d47c39adc079e1477cf842c8553e887268110788985bf82d0dd6f611c3",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 13,
+        "leipzigNews2016": 9,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": false
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 0,
+          "7": 0
+        },
+        "usableWheelsTotal": 0,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 1,
+          "withoutVerbalNouns": 1
+        }
+      }
+    },
+    {
+      "id": "T12-081",
+      "rank": 81,
+      "word": "თლილი",
+      "length": 5,
+      "category": "adjective",
+      "proposedMeaning": "cut, hewn (cut glass, dressed stone)",
+      "partOfSpeech": "adjective",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Participle used as an adjective. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%97%E1%83%9A%E1%83%98%E1%83%9A%E1%83%98",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "0b15ec2f7ecf3be9fc9ac28d281b9cc89000b53bb087b4f1fcc7882c83fb3058",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 16,
+        "leipzigNews2016": 3,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": false
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 0,
+          "7": 0
+        },
+        "usableWheelsTotal": 0,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 0,
+          "withoutVerbalNouns": 0
+        }
+      }
+    },
+    {
+      "id": "T12-082",
+      "rank": 82,
+      "word": "შემწე",
+      "length": 5,
+      "category": "everyday-objects-people",
+      "proposedMeaning": "helper, supporter",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Participle used as a noun. Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A8%E1%83%94%E1%83%9B%E1%83%AC%E1%83%94",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "65073ef5c205e3d58a85f44c23de111238ae134f584844038dd147bc32c64993",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 23,
+        "leipzigNews2016": 12,
+        "bumbeishvili": true,
+        "crubadan": false,
+        "wiktionaryLemma": false
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 0,
+          "7": 0
+        },
+        "usableWheelsTotal": 0,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 0,
+          "withoutVerbalNouns": 0
+        }
+      }
+    },
+    {
+      "id": "T12-083",
+      "rank": 83,
+      "word": "წიპწა",
+      "length": 5,
+      "category": "home-food",
+      "proposedMeaning": "grape seed",
+      "partOfSpeech": "noun",
+      "familiarityTier": "B",
+      "verbalNounOrigin": false,
+      "ownerDecision": "rejected",
+      "editorialDecision": "Proposed for individual owner familiarity review. Dictionary attestation, corpus counts and board fit are supporting evidence, not approval.",
+      "senseNotes": "Singular form; no plural, conjugated-verb, pronoun or name-only sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%AC%E1%83%98%E1%83%9E%E1%83%AC%E1%83%90",
+          "kind": "Georgian explanatory dictionary (ganmarteba.ge, Linguistic Technologies Group)",
+          "sha256": "19976e1740cadc77bc99a5e65bb10dbddc81de3cef9f645c15d5d67b0902280f",
+          "sourceChecked": "2026-10-21"
+        }
+      ],
+      "corpusEvidence": {
+        "leipzigWeb2019": 7,
+        "leipzigNews2016": 1,
+        "bumbeishvili": false,
+        "crubadan": false,
+        "wiktionaryLemma": true
+      },
+      "fit": {
+        "usableWheels": {
+          "5": 0,
+          "6": 0,
+          "7": 0
+        },
+        "usableWheelsTotal": 0,
+        "rev29InPlaceSlots": 0,
+        "rev29ReplaceableAnswers": [],
+        "trialUses": {
+          "allCandidates": 0,
+          "withoutVerbalNouns": 0
+        }
+      }
+    }
+  ],
+  "editorScreenedNotProposed": {
+    "note": "Editor screening only, not owner decisions and not policy exclusions. Recorded so later batches do not re-examine them without a reason.",
+    "count": 107,
+    "words": [
+      {
+        "word": "ქცევა",
+        "reason": "verbal-action-form",
+        "note": "Dictionary senses are actions (turning, behaving via მოქცევა)."
+      },
+      {
+        "word": "დაცვა",
+        "reason": "verbal-action-form",
+        "note": "Dictionary senses are actions (protecting, defending)."
+      },
+      {
+        "word": "კვება",
+        "reason": "verbal-action-form",
+        "note": "Dictionary sense is the action of feeding."
+      },
+      {
+        "word": "ძიება",
+        "reason": "verbal-action-form",
+        "note": "Search or investigation as an action."
+      },
+      {
+        "word": "აღქმა",
+        "reason": "verbal-action-form",
+        "note": "Mental process; abstract."
+      },
+      {
+        "word": "ახსნა",
+        "reason": "verbal-action-form",
+        "note": "Explaining or untying as actions."
+      },
+      {
+        "word": "დასჯა",
+        "reason": "verbal-action-form",
+        "note": "Action of punishing; სასჯელი is the object noun."
+      },
+      {
+        "word": "ცვლა",
+        "reason": "verbal-action-form",
+        "note": "Dictionary lists only changing actions, not the work-shift sense."
+      },
+      {
+        "word": "რყევა",
+        "reason": "verbal-action-form",
+        "note": "Shaking as an action."
+      },
+      {
+        "word": "ხატვა",
+        "reason": "verbal-action-form",
+        "note": "Drawing as an action."
+      },
+      {
+        "word": "ლხენა",
+        "reason": "verbal-action-form",
+        "note": "Dictionary refers to the action მოლხენა."
+      },
+      {
+        "word": "ცურვა",
+        "reason": "verbal-action-form",
+        "note": "Swimming as an action."
+      },
+      {
+        "word": "სროლა",
+        "reason": "verbal-action-form",
+        "note": "Shooting as an action."
+      },
+      {
+        "word": "ყიდვა",
+        "reason": "verbal-action-form",
+        "note": "Buying as an action."
+      },
+      {
+        "word": "ხტომა",
+        "reason": "verbal-action-form",
+        "note": "Jumping as an action."
+      },
+      {
+        "word": "ფრენა",
+        "reason": "verbal-action-form",
+        "note": "Flying as an action."
+      },
+      {
+        "word": "დევნა",
+        "reason": "verbal-action-form",
+        "note": "Persecution as an action."
+      },
+      {
+        "word": "ძებნა",
+        "reason": "verbal-action-form",
+        "note": "Searching as an action."
+      },
+      {
+        "word": "ტიფი",
+        "reason": "illness",
+        "note": "Serious disease; the owner rejected ანგინა and ქოლერა."
+      },
+      {
+        "word": "ჭლექი",
+        "reason": "illness",
+        "note": "Tuberculosis (colloquial); serious disease."
+      },
+      {
+        "word": "კეთრი",
+        "reason": "illness",
+        "note": "Leprosy; serious disease."
+      },
+      {
+        "word": "ციება",
+        "reason": "illness",
+        "note": "Fever chills; malaria sense."
+      },
+      {
+        "word": "ვნება",
+        "reason": "sensitive",
+        "note": "First dictionary sense is carnal desire; second is harm."
+      },
+      {
+        "word": "ნეშტი",
+        "reason": "sensitive",
+        "note": "Mortal remains (bookish)."
+      },
+      {
+        "word": "ბოშა",
+        "reason": "sensitive",
+        "note": "Ethnonym that can be used pejoratively."
+      },
+      {
+        "word": "ზანგი",
+        "reason": "sensitive",
+        "note": "Offensive ethnic term."
+      },
+      {
+        "word": "ზალა",
+        "reason": "barbarism",
+        "note": "Colloquial borrowing for a hall; prefer დარბაზი."
+      },
+      {
+        "word": "ვაქსი",
+        "reason": "barbarism",
+        "note": "Colloquial borrowing for shoe polish."
+      },
+      {
+        "word": "ბოჩკა",
+        "reason": "barbarism",
+        "note": "Borrowing for a barrel; prefer კასრი."
+      },
+      {
+        "word": "გიმნი",
+        "reason": "barbarism",
+        "note": "Prefer ჰიმნი."
+      },
+      {
+        "word": "შაიბა",
+        "reason": "barbarism",
+        "note": "Hockey puck; not in the explanatory dictionary checked."
+      },
+      {
+        "word": "ლეზვი",
+        "reason": "barbarism",
+        "note": "Razor blade; borrowing."
+      },
+      {
+        "word": "ლინკი",
+        "reason": "barbarism",
+        "note": "Prefer approved ბმული."
+      },
+      {
+        "word": "პლანი",
+        "reason": "barbarism",
+        "note": "Prefer გეგმა."
+      },
+      {
+        "word": "ბოსი",
+        "reason": "barbarism",
+        "note": "Slang borrowing."
+      },
+      {
+        "word": "ჰოლი",
+        "reason": "barbarism",
+        "note": "Borrowing for a hall or lobby."
+      },
+      {
+        "word": "ფრი",
+        "reason": "barbarism",
+        "note": "Colloquial name for French fries."
+      },
+      {
+        "word": "ჩატი",
+        "reason": "barbarism",
+        "note": "Internet slang."
+      },
+      {
+        "word": "ლაიქი",
+        "reason": "barbarism",
+        "note": "Internet slang."
+      },
+      {
+        "word": "აპი",
+        "reason": "barbarism",
+        "note": "Slang abbreviation."
+      },
+      {
+        "word": "მულტი",
+        "reason": "barbarism",
+        "note": "Slang for a cartoon."
+      },
+      {
+        "word": "ინფო",
+        "reason": "barbarism",
+        "note": "Abbreviation."
+      },
+      {
+        "word": "ავტო",
+        "reason": "barbarism",
+        "note": "Abbreviation."
+      },
+      {
+        "word": "პოლკა",
+        "reason": "barbarism-homograph",
+        "note": "Polka dance, but also a colloquial borrowing for a shelf; homograph risk as with რული."
+      },
+      {
+        "word": "თორნე",
+        "reason": "variant",
+        "note": "Alternative form of approved თონე."
+      },
+      {
+        "word": "პასკა",
+        "reason": "variant",
+        "note": "Alternative form of პასქა, which was skipped in batch 07."
+      },
+      {
+        "word": "რეგბი",
+        "reason": "variant",
+        "note": "Alternative form of რაგბი."
+      },
+      {
+        "word": "ნიში",
+        "reason": "variant",
+        "note": "Same as ნიშა."
+      },
+      {
+        "word": "მუქთი",
+        "reason": "variant",
+        "note": "Same as მუქთა."
+      },
+      {
+        "word": "უდაო",
+        "reason": "variant",
+        "note": "Standard form is უდავო."
+      },
+      {
+        "word": "სადაო",
+        "reason": "variant",
+        "note": "Standard form is სადავო."
+      },
+      {
+        "word": "ძრავი",
+        "reason": "variant",
+        "note": "Approved ძრავა is the standard form."
+      },
+      {
+        "word": "კადა",
+        "reason": "no-source",
+        "note": "Not found in the dictionaries checked."
+      },
+      {
+        "word": "კვახი",
+        "reason": "no-source",
+        "note": "Not found in the dictionaries checked."
+      },
+      {
+        "word": "ფუფხი",
+        "reason": "no-source",
+        "note": "Not found in the dictionaries checked."
+      },
+      {
+        "word": "ირისი",
+        "reason": "no-source",
+        "note": "Not found in the dictionaries checked."
+      },
+      {
+        "word": "სჯული",
+        "reason": "no-source",
+        "note": "Not found in the dictionaries checked."
+      },
+      {
+        "word": "სათაო",
+        "reason": "no-source",
+        "note": "Not found in the dictionaries checked."
+      },
+      {
+        "word": "შარმი",
+        "reason": "no-source",
+        "note": "Not found in the dictionaries checked."
+      },
+      {
+        "word": "ხუცი",
+        "reason": "no-source",
+        "note": "Not found as a headword."
+      },
+      {
+        "word": "ბუხი",
+        "reason": "no-source",
+        "note": "Not found as a headword."
+      },
+      {
+        "word": "ბოა",
+        "reason": "no-source",
+        "note": "Not found in the dictionaries checked."
+      },
+      {
+        "word": "ტრუხა",
+        "reason": "slang",
+        "note": "Wiktionary records only a slang sense ('false')."
+      },
+      {
+        "word": "დერბი",
+        "reason": "proper-noun",
+        "note": "Wiktionary records it as a proper noun."
+      },
+      {
+        "word": "ომეგა",
+        "reason": "proper-noun",
+        "note": "Wiktionary records it as a proper noun."
+      },
+      {
+        "word": "სალდო",
+        "reason": "uncommon",
+        "note": "Accounting term; no dictionary source found."
+      },
+      {
+        "word": "ტურბო",
+        "reason": "uncommon",
+        "note": "No dictionary source found."
+      },
+      {
+        "word": "აქატი",
+        "reason": "uncommon",
+        "note": "Gemstone name (agate); uncommon."
+      },
+      {
+        "word": "ქარსი",
+        "reason": "uncommon",
+        "note": "Mineral (mica); technical."
+      },
+      {
+        "word": "იასპი",
+        "reason": "uncommon",
+        "note": "Gemstone (jasper); uncommon."
+      },
+      {
+        "word": "ბრომი",
+        "reason": "uncommon",
+        "note": "Chemical element; technical."
+      },
+      {
+        "word": "ეთილი",
+        "reason": "uncommon",
+        "note": "Chemical term; technical."
+      },
+      {
+        "word": "აფსკი",
+        "reason": "uncommon",
+        "note": "Photographic film; technical."
+      },
+      {
+        "word": "ოპუსი",
+        "reason": "uncommon",
+        "note": "Music term."
+      },
+      {
+        "word": "რონდო",
+        "reason": "uncommon",
+        "note": "Music form."
+      },
+      {
+        "word": "იამბი",
+        "reason": "uncommon",
+        "note": "Poetry term."
+      },
+      {
+        "word": "ტროპი",
+        "reason": "uncommon",
+        "note": "Literary term."
+      },
+      {
+        "word": "აბატი",
+        "reason": "uncommon",
+        "note": "Catholic abbot."
+      },
+      {
+        "word": "მნათე",
+        "reason": "uncommon",
+        "note": "Church sexton."
+      },
+      {
+        "word": "მოგვი",
+        "reason": "uncommon",
+        "note": "Magus; mostly known in the plural."
+      },
+      {
+        "word": "მიტრა",
+        "reason": "uncommon",
+        "note": "Bishop's mitre."
+      },
+      {
+        "word": "ფაშა",
+        "reason": "uncommon",
+        "note": "Ottoman title."
+      },
+      {
+        "word": "რაჯა",
+        "reason": "uncommon",
+        "note": "Indian title."
+      },
+      {
+        "word": "ემირი",
+        "reason": "uncommon",
+        "note": "Title (emir)."
+      },
+      {
+        "word": "ლაიკა",
+        "reason": "uncommon",
+        "note": "Dog breed."
+      },
+      {
+        "word": "ტვიდი",
+        "reason": "uncommon",
+        "note": "Fabric (tweed)."
+      },
+      {
+        "word": "ტაფტა",
+        "reason": "uncommon",
+        "note": "Fabric (taffeta)."
+      },
+      {
+        "word": "მირტი",
+        "reason": "uncommon",
+        "note": "Myrtle; uncommon."
+      },
+      {
+        "word": "სორგო",
+        "reason": "uncommon",
+        "note": "Sorghum; uncommon."
+      },
+      {
+        "word": "აკაჟუ",
+        "reason": "uncommon",
+        "note": "Cashew; ქეშიუ is more common."
+      },
+      {
+        "word": "მუშკი",
+        "reason": "uncommon",
+        "note": "Musk; uncommon."
+      },
+      {
+        "word": "აბედი",
+        "reason": "uncommon",
+        "note": "Tinder fungus; mainly in an idiom."
+      },
+      {
+        "word": "შლამი",
+        "reason": "uncommon",
+        "note": "River sludge; technical."
+      },
+      {
+        "word": "ვერფი",
+        "reason": "uncommon",
+        "note": "Shipyard; borrowing."
+      },
+      {
+        "word": "საბო",
+        "reason": "uncommon",
+        "note": "Wooden clog."
+      },
+      {
+        "word": "ერდო",
+        "reason": "uncommon",
+        "note": "Ethnographic roof term."
+      },
+      {
+        "word": "სარგო",
+        "reason": "uncommon",
+        "note": "Bookish participle."
+      },
+      {
+        "word": "ძეძვი",
+        "reason": "uncommon",
+        "note": "Christ's-thorn shrub; uncommon."
+      },
+      {
+        "word": "რუმბი",
+        "reason": "uncommon",
+        "note": "Large leather wineskin; uncommon."
+      },
+      {
+        "word": "ბარდი",
+        "reason": "uncommon",
+        "note": "Tangled thicket; uncommon."
+      },
+      {
+        "word": "ლურჯა",
+        "reason": "uncommon",
+        "note": "Grey horse (poetic)."
+      },
+      {
+        "word": "ლაფშა",
+        "reason": "uncommon",
+        "note": "Fabled swift horse (same as იაბო); uncommon."
+      },
+      {
+        "word": "პუნში",
+        "reason": "uncommon",
+        "note": "Punch (drink); uncommon."
+      },
+      {
+        "word": "ეგიდა",
+        "reason": "uncommon",
+        "note": "Used only in an idiom."
+      },
+      {
+        "word": "ლუფა",
+        "reason": "uncommon",
+        "note": "Loofah plant; uncommon."
+      },
+      {
+        "word": "ტოლჩა",
+        "reason": "uncommon",
+        "note": "Wide-mouthed jug; uncommon."
+      },
+      {
+        "word": "ყია",
+        "reason": "uncommon",
+        "note": "Colloquial for throat; arrow nock."
+      }
+    ]
+  },
+  "approvedWords": [],
+  "approvedCount": 0,
+  "rejectedWords": [
+    "ასტრა",
+    "ბაასი",
+    "ბაკი",
+    "ბალღი",
+    "ბზე",
+    "ბუა",
+    "ბუღა",
+    "ბუცი",
+    "გეჯა",
+    "გლოვა",
+    "გნოლი",
+    "დაზგა",
+    "დეკა",
+    "ვარია",
+    "ზათქი",
+    "ზრდა",
+    "თლილი",
+    "ინჩი",
+    "კვარი",
+    "კრება",
+    "ლამი",
+    "ლოცვა",
+    "მაცნე",
+    "მორჩი",
+    "მოძმე",
+    "მრუმე",
+    "მხალი",
+    "ნდობა",
+    "ნიმფა",
+    "ოსტრი",
+    "პანტა",
+    "ჟამი",
+    "ჟღალი",
+    "რბოლა",
+    "რიქშა",
+    "რუმბა",
+    "რჩევა",
+    "სინი",
+    "სმენა",
+    "ტალკი",
+    "ტიული",
+    "ტოგა",
+    "უბირი",
+    "უვადო",
+    "უჯიშო",
+    "ფიქრი",
+    "ფურნე",
+    "ფხალი",
+    "ქება",
+    "ქეიფი",
+    "ქორფა",
+    "ღელვა",
+    "ღვარი",
+    "ღოჯი",
+    "ყოფა",
+    "შემწე",
+    "შვება",
+    "შრომა",
+    "ჩაჩი",
+    "ჩხუბი",
+    "ცდა",
+    "ცეკვა",
+    "ციცა",
+    "ცნობა",
+    "ცოდო",
+    "ცხავი",
+    "ძაბვა",
+    "წაღა",
+    "წვერო",
+    "წიბო",
+    "წიპწა",
+    "წიხლი",
+    "წყავი",
+    "წყება",
+    "წყენა",
+    "წყობა",
+    "ჭილი",
+    "ჭრაქი",
+    "ჭური",
+    "ხვატი",
+    "ხველა",
+    "ხნული",
+    "ჯღანი"
+  ],
+  "rejectedCount": 83,
+  "approvedPoolAfter": 2318,
+  "reviewNote": "On 2026-10-22 the owner rejected all 83 candidates, including the 30 the editor rated everyday and the 22 verbal-noun concept senses. None is approved; all are excluded from required answers, variants and bonuses from revision 29 (owner-targeted-batch-12). None was in the revision 29 dictionaries, so active content is unchanged."
+}

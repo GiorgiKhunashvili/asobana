@@ -202,6 +202,14 @@ as the canonical rulebook; tool-specific instruction files should point here.
   are excluded from required answers, variants and bonuses from revision 29 through
   the `owner-targeted-batch-*` categories in `word-policy.json`. The "awaiting
   integration" notes above describe the review stage.
+  [Targeted batch 12](docs/VOCABULARY_TARGETED_BATCH_12.json) proposed 83 short
+  words (3–5 letters) to cut connector-word repetition; on 2026-10-22 the owner
+  **rejected all 83**, including the 22 verbal-noun concept senses. They are
+  excluded from required answers, variants and bonuses through
+  `owner-targeted-batch-12`; none was in the revision 29 dictionaries, so content
+  is unchanged and approvals stay at **2,318**. Its editor found the pool of
+  familiar, never-reviewed short words nearly exhausted, so do not refill a short
+  batch with rare words or propose any of these 83 again.
   [Expansion batch 02](docs/VOCABULARY_EXPANSION_BATCH_02.json) contains 130 entirely
   new source-checked words with draft-board examples. The owner approved all 130
   for the main word list; revision 17 adds their recorded noun/adjective senses

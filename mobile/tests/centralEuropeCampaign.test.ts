@@ -112,7 +112,14 @@ test('revision 29 uses the 2,318 approvals and excludes every rejected spelling'
   const rejected = policy.excludedCategories
     .filter((category) => category.id.startsWith('owner-targeted-batch-'))
     .flatMap((category) => category.words);
-  expect(rejected).toHaveLength(99);
+  // Batches 04–11 rejected 99 spellings; on 2026-10-22 the owner rejected all 83
+  // of batch 12, none of which was in the revision 29 dictionaries.
+  expect(rejected).toHaveLength(99 + 83);
+  expect(
+    policy.excludedCategories.find(
+      (category) => category.id === 'owner-targeted-batch-12',
+    )?.words,
+  ).toHaveLength(83);
   for (const word of rejected) {
     expect(vocabulary.has(word)).toBe(false);
     expect(requiredWordsForRevision(29).has(word)).toBe(false);
