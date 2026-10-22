@@ -1,4 +1,3 @@
-import { Canvas, Circle, Group, Path } from '@shopify/react-native-skia';
 import { useEffect, useRef } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 import Animated, {
@@ -9,6 +8,7 @@ import Animated, {
   withSpring,
   withTiming,
 } from 'react-native-reanimated';
+import Svg, { Circle, G, Path } from 'react-native-svg';
 import { motion, palette } from '../theme';
 import { STAR8 } from './Icon';
 import { Txt } from './Text';
@@ -23,27 +23,24 @@ export function CoinGlyph({ size = 20 }: { readonly size?: number }) {
       importantForAccessibility="no-hide-descendants"
       style={{ width: size, height: size }}
     >
-      <Canvas style={{ width: size, height: size }}>
-        <Circle cx={r} cy={r} r={r} color={palette.goldDeep} />
-        <Circle cx={r} cy={r - size * 0.04} r={r * 0.9} color={palette.gold} />
+      {/* SVG, not a Skia canvas: each canvas is a texture layer on Android. */}
+      <Svg width={size} height={size}>
+        <Circle cx={r} cy={r} r={r} fill={palette.goldDeep} />
+        <Circle cx={r} cy={r - size * 0.04} r={r * 0.9} fill={palette.gold} />
         <Circle
           cx={r}
           cy={r - size * 0.04}
           r={r * 0.68}
-          color={palette.goldDeep}
-          style="stroke"
+          fill="none"
+          stroke={palette.goldDeep}
           strokeWidth={Math.max(1, size * 0.05)}
         />
-        <Group
-          transform={[
-            { translateX: r - size * 0.27 },
-            { translateY: r - size * 0.31 },
-            { scale: (size * 0.54) / 24 },
-          ]}
+        <G
+          transform={`translate(${r - size * 0.27} ${r - size * 0.31}) scale(${(size * 0.54) / 24})`}
         >
-          <Path path={STAR8} color={palette.goldDeep} />
-        </Group>
-      </Canvas>
+          <Path d={STAR8} fill={palette.goldDeep} />
+        </G>
+      </Svg>
     </View>
   );
 }

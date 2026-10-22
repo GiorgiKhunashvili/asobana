@@ -27,7 +27,7 @@ test('plurals are bonus-only from v14 and vocabulary coverage improves', () => {
     level.words.flatMap((word) => [word.answer, ...word.acceptedAnswers]),
   );
   expect(answers.some((word) => plurals.has(word))).toBe(false);
-  const previous = previousCatalogs.find((pack) => pack.revision === 13)!;
+  const previous = previousCatalogs().find((pack) => pack.revision === 13)!;
   const oldWords = new Set(
     previous.levels.flatMap((level) => level.words.map((word) => word.answer)),
   );
@@ -63,7 +63,7 @@ test('plurals are bonus-only from v14 and vocabulary coverage improves', () => {
 test('a formable plural earns one bonus reward without solving a target', () => {
   // A fixed wheel keeps this reward test independent of campaign optimization.
   // Recompute its bonus list with the current eligible vocabulary.
-  const historical = previousCatalogs.find((pack) => pack.revision === 18)!;
+  const historical = previousCatalogs().find((pack) => pack.revision === 18)!;
   const source = historical.levels.find((level) =>
     level.bonusWords.some((word) => plurals.has(word)),
   )!;
@@ -102,7 +102,7 @@ test('a formable plural earns one bonus reward without solving a target', () => 
 test.each(['partial', 'complete'] as const)(
   'v13 %s progress and journey postcards survive current migration and restart',
   async (scenario) => {
-    const previous = previousCatalogs.find((pack) => pack.revision === 13)!;
+    const previous = previousCatalogs().find((pack) => pack.revision === 13)!;
     const index = 70;
     const level = previous.levels[index]!;
     let old = reachLevel(index, previous);
@@ -138,7 +138,7 @@ test.each(['partial', 'complete'] as const)(
     try {
       await migrateDatabase(db);
       await createSqliteRepository(db, previous).save(old, 0);
-      const repo = createSqliteRepository(db, catalog, previousCatalogs);
+      const repo = createSqliteRepository(db, catalog, previousCatalogs());
       const upgraded = (await repo.load())!;
       expect(upgraded.state.contentRevision).toBe(catalog.revision);
       expect(upgraded.state.progress['ka-001']!.hintsUsed).toBe(1250);
@@ -164,7 +164,7 @@ test.each(['partial', 'complete'] as const)(
           .map((card) => card.chapterId),
       ).toEqual(expect.arrayContaining(cards));
       expect(
-        await createSqliteRepository(db, catalog, previousCatalogs).load(),
+        await createSqliteRepository(db, catalog, previousCatalogs()).load(),
       ).toEqual(upgraded);
       if (scenario === 'partial') {
         const hinted = transition(
@@ -177,7 +177,7 @@ test.each(['partial', 'complete'] as const)(
         const restarted = await createSqliteRepository(
           db,
           catalog,
-          previousCatalogs,
+          previousCatalogs(),
         ).load();
         expect(restarted!.state).toEqual(hinted);
       }

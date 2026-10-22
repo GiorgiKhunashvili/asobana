@@ -18,9 +18,9 @@ import { COUNTRIES, sceneFor } from '../src/theme';
 import { reachLevel, submit } from './helpers';
 import { TestSqlite } from './sqliteAdapter';
 
-const catalog = previousCatalogs.find((pack) => pack.revision === 22)!;
+const catalog = previousCatalogs().find((pack) => pack.revision === 22)!;
 const vocabulary = vocabularyForRevision(22);
-const previous = previousCatalogs.find((pack) => pack.revision === 21)!;
+const previous = previousCatalogs().find((pack) => pack.revision === 21)!;
 
 test('Tunisia appends exactly three painted five-level stops using the existing approvals', () => {
   expect(catalog.revision).toBe(22);
@@ -93,7 +93,7 @@ test.each(['partial', 'complete'] as const)(
     try {
       await migrateDatabase(db);
       await createSqliteRepository(db, previous).save(old, 0);
-      const repo = createSqliteRepository(db, catalog, previousCatalogs);
+      const repo = createSqliteRepository(db, catalog, previousCatalogs());
       const upgraded = (await repo.load())!;
       expect(upgraded.state).toEqual({
         ...old,
@@ -101,7 +101,7 @@ test.each(['partial', 'complete'] as const)(
         legacyPostcardChapterIds: old.legacyPostcardChapterIds ?? [],
       });
       expect(
-        await createSqliteRepository(db, catalog, previousCatalogs).load(),
+        await createSqliteRepository(db, catalog, previousCatalogs()).load(),
       ).toEqual(upgraded);
       expect(
         selectPostcards(upgraded.state, catalog)
@@ -131,8 +131,11 @@ test.each(['partial', 'complete'] as const)(
         expect(nextLevelId(catalog, 'ka-265')).toBeNull();
         await repo.save(state, upgraded.revision);
         expect(
-          (await createSqliteRepository(db, catalog, previousCatalogs).load())!
-            .state,
+          (await createSqliteRepository(
+            db,
+            catalog,
+            previousCatalogs(),
+          ).load())!.state,
         ).toEqual(state);
       }
     } finally {

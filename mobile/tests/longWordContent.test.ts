@@ -41,7 +41,7 @@ test('long answers are required throughout the campaign, independently of wheel 
     lengths.slice(40).filter((words) => words.includes(6)).length,
   ).toBeGreaterThanOrEqual(7);
   // The released pack had six-tile wheels but no six-letter answers.
-  expect(() => validateWordLengths(previousCatalogs[9]!)).toThrow();
+  expect(() => validateWordLengths(previousCatalogs()[9]!)).toThrow();
   const missingLong = {
     ...catalog,
     levels: catalog.levels.map((level, index) =>
@@ -87,7 +87,7 @@ test('new boards retain chapter recovery waves and bounded difficulty increases'
 test.each([10, 11])(
   'revision %i level-25 save keeps completed levels, partial progress, coins, hints and postcards after restart',
   async (revision) => {
-    const previous = previousCatalogs[revision - 1]!;
+    const previous = previousCatalogs()[revision - 1]!;
     const hintLimit = revision === 11 ? 1166 : 1124;
     const level = previous.levels[24]!;
     let old = submit(
@@ -114,7 +114,7 @@ test.each([10, 11])(
     try {
       await migrateDatabase(db);
       await createSqliteRepository(db, previous).save(old, 0);
-      const repo = createSqliteRepository(db, catalog, previousCatalogs);
+      const repo = createSqliteRepository(db, catalog, previousCatalogs());
       const upgraded = (await repo.load())!;
       const state = upgraded.state;
       expect(state.contentRevision).toBe(catalog.revision);
@@ -139,7 +139,7 @@ test.each([10, 11])(
       ).toHaveLength(8);
       expect(state.legacyPostcardChapterIds).toHaveLength(4);
       expect(
-        await createSqliteRepository(db, catalog, previousCatalogs).load(),
+        await createSqliteRepository(db, catalog, previousCatalogs()).load(),
       ).toEqual(upgraded);
     } finally {
       db.close();

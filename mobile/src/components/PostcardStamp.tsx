@@ -1,6 +1,7 @@
-import { Canvas, Circle, Path, PathOp, Skia } from '@shopify/react-native-skia';
+import { PathOp, Skia } from '@shopify/react-native-skia';
 import { useMemo } from 'react';
 import { StyleSheet, Text, useWindowDimensions, View } from 'react-native';
+import Svg, { Circle, Path } from 'react-native-svg';
 import { destinationCaptions, placeFacts } from '../content/destinations';
 import {
   countryById,
@@ -128,21 +129,22 @@ function Stamp({
       holes.addCircle(0, (j * height) / down, hole);
       holes.addCircle(width, (j * height) / down, hole);
     }
-    return Skia.Path.MakeFromOp(sheet, holes.detach(), PathOp.Difference);
+    // Skia computes the exact outline; SVG draws it inside the view tree (a
+    // Skia canvas per stamp was its own texture layer on Android).
+    return Skia.Path.MakeFromOp(
+      sheet,
+      holes.detach(),
+      PathOp.Difference,
+    )?.toSVGString();
   }, [width, height, hole]);
   return (
     <View style={{ width, height }}>
-      <Canvas style={StyleSheet.absoluteFill}>
-        {paper && <Path path={paper} color={STAMP_PAPER} />}
-        {paper && (
-          <Path
-            path={paper}
-            color={STAMP_EDGE}
-            style="stroke"
-            strokeWidth={1}
-          />
-        )}
-      </Canvas>
+      {paper && (
+        <Svg style={StyleSheet.absoluteFill} width={width} height={height}>
+          <Path d={paper} fill={STAMP_PAPER} />
+          <Path d={paper} fill="none" stroke={STAMP_EDGE} strokeWidth={1} />
+        </Svg>
+      )}
       <View
         style={[styles.art, { left: margin, top: margin, ...art }]}
         importantForAccessibility="no-hide-descendants"
@@ -183,36 +185,29 @@ function Postmark({ top, bottom }: { top: string; bottom: string }) {
       d += `M${MARK + 4} ${r - 18 + k * 12}`;
       for (let x = 0; x < 5; x++) d += ' q 9 -7 18 0 t 18 0';
     }
-    return Skia.Path.MakeFromSVGString(d);
+    return d;
   }, [r]);
   return (
     <View pointerEvents="none" style={styles.mark}>
-      <Canvas style={StyleSheet.absoluteFill}>
+      <Svg style={StyleSheet.absoluteFill}>
         <Circle
           cx={r}
           cy={r}
           r={r - 2}
-          color={palette.ivory}
-          style="stroke"
+          fill="none"
+          stroke={palette.ivory}
           strokeWidth={2.5}
         />
         <Circle
           cx={r}
           cy={r}
           r={r - 10}
-          color={palette.ivory}
-          style="stroke"
+          fill="none"
+          stroke={palette.ivory}
           strokeWidth={1.2}
         />
-        {waves && (
-          <Path
-            path={waves}
-            color={palette.ivory}
-            style="stroke"
-            strokeWidth={2}
-          />
-        )}
-      </Canvas>
+        <Path d={waves} fill="none" stroke={palette.ivory} strokeWidth={2} />
+      </Svg>
       <View style={styles.markText}>
         <Text
           numberOfLines={1}

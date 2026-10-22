@@ -10,7 +10,7 @@ import { selectPostcards } from '../engine/postcards';
 export function restoreContent(
   value: unknown,
   pack: LevelPack,
-  previousPacks: readonly LevelPack[],
+  previousPacks: readonly LevelPack[] | (() => readonly LevelPack[]),
 ): { state: GameState; migrated: boolean } {
   const raw = object(value, 'save');
   if (raw.packId === pack.id && raw.contentRevision === pack.revision)
@@ -19,7 +19,10 @@ export function restoreContent(
       migrated:
         raw.bonusRewards === undefined || raw.tutorialSeen === undefined,
     };
-  const previous = previousPacks.find(
+  // Only an older save needs the historical packs; a current one never loads them.
+  const previous = (
+    typeof previousPacks === 'function' ? previousPacks() : previousPacks
+  ).find(
     (candidate) =>
       candidate.id === raw.packId && candidate.revision === raw.contentRevision,
   );

@@ -29,7 +29,7 @@ test('duplicate reward callbacks, queued purchases, reopen and reset cannot cred
       }),
       store.getState().claimAdReward('same-ad'),
     ]);
-    expect(store.getState().game?.coins).toBe(255); // 200 + 75 - 20
+    expect(store.getState().game?.coins).toBe(230); // 200 + 50 - 20
     const saved = store.getState().game;
     db.close();
     db = new TestSqlite(path);
@@ -40,7 +40,7 @@ test('duplicate reward callbacks, queued purchases, reopen and reset cannot cred
     await store.getState().claimAdReward('same-ad');
     expect(store.getState().game).toEqual(saved);
     await store.getState().claimAdReward('next-ad');
-    expect(store.getState().game?.coins).toBe(330);
+    expect(store.getState().game?.coins).toBe(280);
     await store.getState().reset();
     await store.getState().claimAdReward('same-ad');
     expect(store.getState().game?.coins).toBe(200);
@@ -80,7 +80,7 @@ test('failed coin write rolls back the receipt, publishes no reward, and can be 
     await db.execAsync('DROP TRIGGER fail_reward');
     await store.getState().claimAdReward('retry-ad');
     await store.getState().claimAdReward('retry-ad');
-    expect(store.getState().game?.coins).toBe(275);
+    expect(store.getState().game?.coins).toBe(250);
     expect(store.getState().error).toBeNull();
   } finally {
     db.close();
@@ -90,7 +90,7 @@ test('failed coin write rolls back the receipt, publishes no reward, and can be 
 test('version 2 database migration leaves the old snapshot untouched; receipts survive content upgrades', async () => {
   const db = new TestSqlite();
   try {
-    const previous = previousCatalogs.find((pack) => pack.revision === 25)!;
+    const previous = previousCatalogs().find((pack) => pack.revision === 25)!;
     const old = { ...initialState(previous), coins: 37 };
     await db.execAsync(
       'CREATE TABLE game_snapshot (id INTEGER PRIMARY KEY, revision INTEGER NOT NULL, payload TEXT NOT NULL, save_format INTEGER NOT NULL DEFAULT 1); PRAGMA user_version = 2;',
@@ -110,8 +110,8 @@ test('version 2 database migration leaves the old snapshot untouched; receipts s
     const receipt = await createSqliteRepository(db, previous).claimAdReward(
       'before-content-upgrade',
     );
-    expect(receipt.state.coins).toBe(112);
-    const current = createSqliteRepository(db, catalog, previousCatalogs);
+    expect(receipt.state.coins).toBe(87);
+    const current = createSqliteRepository(db, catalog, previousCatalogs());
     const migrated = await current.load();
     expect(migrated?.state.contentRevision).toBe(29);
     const duplicate = await current.claimAdReward('before-content-upgrade');
@@ -139,7 +139,7 @@ test('reward transaction reads the latest saved progress even if the calling sto
       .getState()
       .dispatch({ type: 'hint', kind: 'cell', levelId: catalog.levels[0]!.id });
     await second.getState().claimAdReward('other-store-ad');
-    expect(second.getState().game?.coins).toBe(255);
+    expect(second.getState().game?.coins).toBe(230);
     expect(second.getState().game?.progress).toEqual(
       first.getState().game?.progress,
     );

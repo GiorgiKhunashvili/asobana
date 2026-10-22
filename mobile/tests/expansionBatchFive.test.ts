@@ -12,7 +12,7 @@ import {
 import { validateWide } from '../src/content/wide';
 import { canFormWord } from '../src/engine/georgian';
 
-const catalog = previousCatalogs.find((pack) => pack.revision === 20)!;
+const catalog = previousCatalogs().find((pack) => pack.revision === 20)!;
 const vocabulary = vocabularyForRevision(20);
 const rejected =
   'აქტი ბაგა დომენი დუღაბი ეჟვანი ლაქი პწკარი სამთო ტირიფი ფლანგი ყანჩა ყულფი'.split(
@@ -74,7 +74,7 @@ test('v20 approves exactly 88 new words and excludes the 12 rejected proposals',
 });
 
 test('v20 uses more distinct words while recognizing every eligible formable bonus', () => {
-  const old = previousCatalogs.find((pack) => pack.revision === 19)!;
+  const old = previousCatalogs().find((pack) => pack.revision === 19)!;
   const unique = (pack: typeof activeCatalog) =>
     new Set(
       pack.levels.flatMap((level) => level.words.map((word) => word.answer)),

@@ -6,7 +6,7 @@ import { parseSnapshot } from '../src/storage/snapshot';
 import { tilesFor, submit as send } from './helpers';
 import type { GameState, Level } from '../src/models/types';
 
-const catalog = previousCatalogs[1]!;
+const catalog = previousCatalogs()[1]!;
 const vocabulary = new Set(dictionary.entries.map((entry) => entry.word));
 const submit = (state: GameState, level: Level, word: string) =>
   send(state, level, word, catalog);
@@ -39,7 +39,7 @@ test('beta contains 50 distinct connected levels, each with four or five targets
   });
   expect(new Set(signatures).size).toBe(50);
   expect(catalog.levels.slice(0, 4).map((level) => level.id)).toEqual(
-    previousCatalogs[0]!.levels.map((level) => level.id),
+    previousCatalogs()[0]!.levels.map((level) => level.id),
   );
 });
 

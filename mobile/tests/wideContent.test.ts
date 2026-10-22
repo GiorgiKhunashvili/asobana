@@ -6,7 +6,7 @@ import { solutionCells } from '../src/engine/grid';
 import type { Level } from '../src/models/types';
 
 test('the journey preserves historical level IDs in order while assigning the new stops', () => {
-  const previous = previousCatalogs[11]!;
+  const previous = previousCatalogs()[11]!;
   expect(previous.revision).toBe(12);
   expect(catalog.levels.slice(0, 50).map((level) => level.id)).toEqual(
     previous.levels.map((level) => level.id),

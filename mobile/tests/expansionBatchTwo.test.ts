@@ -22,8 +22,8 @@ test('v17 adds exactly the 130 approved senses without changing historical vocab
     expect(entry.ownerDecision).toBe('required-eligible');
     expect(previous.has(entry.word)).toBe(false);
   }
-  const historical = previousCatalogs.find((pack) => pack.revision === 17)!;
-  const old = previousCatalogs.find((pack) => pack.revision === 16)!;
+  const historical = previousCatalogs().find((pack) => pack.revision === 17)!;
+  const old = previousCatalogs().find((pack) => pack.revision === 16)!;
   const unique = (pack: typeof catalog) =>
     new Set(
       pack.levels.flatMap((level) => level.words.map((word) => word.answer)),

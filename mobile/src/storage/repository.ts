@@ -70,7 +70,7 @@ export async function migrateDatabase(database: SqlDatabase): Promise<void> {
 export function createSqliteRepository(
   database: SqlDatabase,
   pack: LevelPack,
-  previousPacks: readonly LevelPack[] = [],
+  previousPacks: readonly LevelPack[] | (() => readonly LevelPack[]) = [],
 ): GameRepository {
   /** Credits an earned ad once. `apply` returns null when nothing is owed. */
   async function claim(

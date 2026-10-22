@@ -31,7 +31,7 @@ test('expanded ordinary senses are reviewed and used in the campaign', () => {
   for (const word of ['წიგნი', 'სკოლა', 'კოვზი', 'ქოლგა'])
     expect(vocabulary.has(word)).toBe(true);
   const oldAnswers = new Set(
-    previousCatalogs[7]!.levels.flatMap((level) =>
+    previousCatalogs()[7]!.levels.flatMap((level) =>
       level.words.map((word) => word.answer),
     ),
   );
@@ -99,7 +99,7 @@ test('name-only entries and action forms are blocked while ordinary homographs r
 });
 
 test('revision 8 save migrates a removed action answer and paid hint exactly once', async () => {
-  const previous = previousCatalogs[7]!;
+  const previous = previousCatalogs()[7]!;
   expect(previous.revision).toBe(8);
   const index = previous.levels.findIndex((level) =>
     level.words.some((word) => word.answer === 'სვლა'),
@@ -117,7 +117,7 @@ test('revision 8 save migrates a removed action answer and paid hint exactly onc
   try {
     await migrateDatabase(db);
     await createSqliteRepository(db, previous).save(old, 0);
-    const repo = createSqliteRepository(db, catalog, previousCatalogs);
+    const repo = createSqliteRepository(db, catalog, previousCatalogs());
     const upgraded = (await repo.load())!;
     expect(upgraded.state.contentRevision).toBe(catalog.revision);
     expect(upgraded.state.coins).toBe(old.coins);

@@ -1,14 +1,14 @@
-import {
-  Canvas,
+import { memo, useMemo } from 'react';
+import { StyleSheet, useWindowDimensions, View } from 'react-native';
+import Svg, {
   Circle,
+  Defs,
   LinearGradient,
   Path,
   RadialGradient,
   Rect,
-  vec,
-} from '@shopify/react-native-skia';
-import { memo, useMemo } from 'react';
-import { StyleSheet, useWindowDimensions, View } from 'react-native';
+  Stop,
+} from 'react-native-svg';
 import { PlaceArt } from './PlaceArt';
 import { palette, type Scene, type Tone } from '../theme';
 
@@ -17,6 +17,7 @@ const star = (x: number, y: number, s: number) =>
   `M${x - s} ${y - s}h${2 * s}v${2 * s}h${-2 * s}z` +
   `M${x} ${y - s * 1.42}L${x + s * 1.42} ${y}L${x} ${y + s * 1.42}L${x - s * 1.42} ${y}z`;
 const dusk = (alpha: number) => `rgba(${palette.dusk}, ${alpha})`;
+const DUSK = dusk(1);
 
 /**
  * Chapter background. Normally the chapter's painted Georgian scene, with a soft
@@ -49,25 +50,37 @@ function SceneBackdrop({ scene, veil }: { scene: Scene; veil: number }) {
       style={[StyleSheet.absoluteFill, { backgroundColor: scene.sky }]}
     >
       <PlaceArt scene={scene} variant="full" size={{ width, height }} />
-      <Canvas style={StyleSheet.absoluteFill}>
+      {/* SVG draws inside the view tree; a full-screen Skia canvas was an extra
+          texture layer composited on every Android frame. */}
+      <Svg style={StyleSheet.absoluteFill} width={width} height={height}>
+        <Defs>
+          <LinearGradient id="top" x1="0" y1="0" x2="0" y2="1">
+            <Stop offset="0" stopColor={DUSK} stopOpacity={0.5} />
+            <Stop offset="1" stopColor={DUSK} stopOpacity={0} />
+          </LinearGradient>
+          <LinearGradient id="bottom" x1="0" y1="0" x2="0" y2="1">
+            <Stop offset="0" stopColor={DUSK} stopOpacity={0} />
+            <Stop offset="1" stopColor={DUSK} stopOpacity={0.32} />
+          </LinearGradient>
+        </Defs>
         {veil > 0 && (
-          <Rect x={0} y={0} width={width} height={height} color={dusk(veil)} />
+          <Rect x={0} y={0} width={width} height={height} fill={dusk(veil)} />
         )}
-        <Rect x={0} y={0} width={width} height={height * 0.24}>
-          <LinearGradient
-            start={vec(0, 0)}
-            end={vec(0, height * 0.24)}
-            colors={[dusk(0.5), dusk(0)]}
-          />
-        </Rect>
-        <Rect x={0} y={height * 0.72} width={width} height={height * 0.28}>
-          <LinearGradient
-            start={vec(0, height * 0.72)}
-            end={vec(0, height)}
-            colors={[dusk(0), dusk(0.32)]}
-          />
-        </Rect>
-      </Canvas>
+        <Rect
+          x={0}
+          y={0}
+          width={width}
+          height={height * 0.24}
+          fill="url(#top)"
+        />
+        <Rect
+          x={0}
+          y={height * 0.72}
+          width={width}
+          height={height * 0.28}
+          fill="url(#bottom)"
+        />
+      </Svg>
     </View>
   );
 }
@@ -97,33 +110,44 @@ export function EnamelBackdrop({
     return { lines, stars };
   }, [width, height]);
   return (
-    <Canvas
+    <View
       pointerEvents="none"
       style={StyleSheet.absoluteFill}
       accessibilityElementsHidden
       importantForAccessibility="no-hide-descendants"
     >
-      <Rect x={0} y={0} width={width} height={height}>
-        <LinearGradient
-          start={vec(0, 0)}
-          end={vec(0, height)}
-          colors={[tone.ground[0], tone.ground[1]]}
-        />
-      </Rect>
-      <Circle cx={width / 2} cy={height * glowY} r={width * 0.95}>
-        <RadialGradient
-          c={vec(width / 2, height * glowY)}
+      <Svg width={width} height={height}>
+        <Defs>
+          <LinearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+            <Stop offset="0" stopColor={tone.ground[0]} />
+            <Stop offset="1" stopColor={tone.ground[1]} />
+          </LinearGradient>
+          <RadialGradient
+            id="glow"
+            cx={width / 2}
+            cy={height * glowY}
+            r={width * 0.95}
+            gradientUnits="userSpaceOnUse"
+          >
+            <Stop offset="0" stopColor={tone.glow} stopOpacity={0x55 / 255} />
+            <Stop offset="1" stopColor={tone.glow} stopOpacity={0} />
+          </RadialGradient>
+        </Defs>
+        <Rect x={0} y={0} width={width} height={height} fill="url(#ground)" />
+        <Circle
+          cx={width / 2}
+          cy={height * glowY}
           r={width * 0.95}
-          colors={[`${tone.glow}55`, `${tone.glow}00`]}
+          fill="url(#glow)"
         />
-      </Circle>
-      <Path
-        path={lattice.lines}
-        color="rgba(227, 182, 90, 0.045)"
-        style="stroke"
-        strokeWidth={1}
-      />
-      <Path path={lattice.stars} color="rgba(227, 182, 90, 0.11)" />
-    </Canvas>
+        <Path
+          d={lattice.lines}
+          fill="none"
+          stroke="rgba(227, 182, 90, 0.045)"
+          strokeWidth={1}
+        />
+        <Path d={lattice.stars} fill="rgba(227, 182, 90, 0.11)" />
+      </Svg>
+    </View>
   );
 }

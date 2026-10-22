@@ -20,8 +20,8 @@ import { createGameStore } from '../src/state/createGameStore';
 import { reachLevel, submit } from './legacyHelpers';
 import { TestSqlite } from './sqliteAdapter';
 
-const legacy = previousCatalogs[0]!;
-const catalog = previousCatalogs[1]!;
+const legacy = previousCatalogs()[0]!;
+const catalog = previousCatalogs()[1]!;
 
 test('a paid old crossing hint reveals both retained letters when the new grid separates them', () => {
   const oldLevel = legacy.levels[3]!;
@@ -35,7 +35,7 @@ test('a paid old crossing hint reveals both retained letters when the new grid s
   const oldCrossing = wordCells(oldLevel.words[0]!)[2]!.id;
   expect(wordCells(oldLevel.words[1]!)[3]!.id).toBe(oldCrossing);
   expect(state.progress[oldLevel.id]!.revealedCellIds).toContain(oldCrossing);
-  const upgraded = restoreContent(state, catalog, previousCatalogs).state;
+  const upgraded = restoreContent(state, catalog, previousCatalogs()).state;
   const level = catalog.levels[3]!;
   const first = level.words.find(
     (word) => word.answer === oldLevel.words[0]!.answer,
@@ -56,7 +56,7 @@ test('completed prototype levels retain coins and unlock the new fifth level', (
   for (const word of legacy.levels[3]!.words)
     state = submit(state, legacy.levels[3]!, word.answer).state;
   const before = JSON.stringify(state);
-  const restored = restoreContent(state, catalog, previousCatalogs);
+  const restored = restoreContent(state, catalog, previousCatalogs());
   expect(restored.migrated).toBe(true);
   expect(JSON.stringify(state)).toBe(before);
   expect(restored.state.coins).toBe(state.coins);
@@ -68,7 +68,7 @@ test('completed prototype levels retain coins and unlock the new fifth level', (
   }
   expect(isUnlocked(restored.state, catalog, 'ka-005')).toBe(true);
   expect(isUnlocked(restored.state, catalog, 'ka-006')).toBe(false);
-  expect(restoreContent(restored.state, catalog, previousCatalogs)).toEqual({
+  expect(restoreContent(restored.state, catalog, previousCatalogs())).toEqual({
     state: restored.state,
     migrated: false,
   });
@@ -93,7 +93,7 @@ test.each([0, 1, 2, 3])(
       legacy,
     ).state;
     const saved = state.progress[oldLevel.id]!;
-    const upgraded = restoreContent(state, catalog, previousCatalogs).state;
+    const upgraded = restoreContent(state, catalog, previousCatalogs()).state;
     const level = catalog.levels[index]!;
     const progress = upgraded.progress[level.id]!;
     expect(upgraded.coins).toBe(state.coins);
@@ -126,7 +126,7 @@ test('SQLite upgrade commits once, resumes in a new store and rejects stale writ
     const old = createSqliteRepository(db, legacy);
     const state = submit(reachLevel(1), legacy.levels[1]!, 'მადა').state;
     await old.save(state, 0);
-    const repo = createSqliteRepository(db, catalog, previousCatalogs);
+    const repo = createSqliteRepository(db, catalog, previousCatalogs());
     const restored = (await repo.load())!;
     expect(restored.revision).toBe(2);
     expect(restored.state.coins).toBe(state.coins);
@@ -135,7 +135,7 @@ test('SQLite upgrade commits once, resumes in a new store and rejects stale writ
     db.close();
     db = new TestSqlite(path);
     const store = createGameStore(catalog, async () =>
-      createSqliteRepository(db, catalog, previousCatalogs),
+      createSqliteRepository(db, catalog, previousCatalogs()),
     );
     await store.getState().initialize();
     expect(store.getState().status).toBe('ready');
@@ -145,7 +145,7 @@ test('SQLite upgrade commits once, resumes in a new store and rejects stale writ
       settings: { sound: false, haptics: true },
     });
     expect(
-      (await createSqliteRepository(db, catalog, previousCatalogs).load())
+      (await createSqliteRepository(db, catalog, previousCatalogs()).load())
         ?.revision,
     ).toBe(3);
   } finally {
@@ -171,7 +171,7 @@ test.each([
         payload,
       );
       await expect(
-        createSqliteRepository(db, catalog, previousCatalogs).load(),
+        createSqliteRepository(db, catalog, previousCatalogs()).load(),
       ).rejects.toThrow();
       expect(
         await db.getFirstAsync('SELECT payload, revision FROM game_snapshot'),
@@ -185,7 +185,7 @@ test.each([
 test('failed migration writes roll back and incompatible target/order changes are rejected', async () => {
   const state = reachLevel(1);
   const incompatible = { ...catalog, levels: [...catalog.levels].reverse() };
-  expect(() => restoreContent(state, incompatible, previousCatalogs)).toThrow(
+  expect(() => restoreContent(state, incompatible, previousCatalogs())).toThrow(
     'Incompatible',
   );
   const removed = {
@@ -195,7 +195,7 @@ test('failed migration writes roll back and incompatible target/order changes ar
       ...catalog.levels.slice(1),
     ],
   };
-  expect(() => restoreContent(state, removed, previousCatalogs)).toThrow(
+  expect(() => restoreContent(state, removed, previousCatalogs())).toThrow(
     'Incompatible',
   );
   const db = new TestSqlite();
@@ -206,7 +206,7 @@ test('failed migration writes roll back and incompatible target/order changes ar
       "CREATE TRIGGER fail_upgrade BEFORE UPDATE ON game_snapshot BEGIN SELECT RAISE(ABORT, 'Disk full'); END;",
     );
     await expect(
-      createSqliteRepository(db, catalog, previousCatalogs).load(),
+      createSqliteRepository(db, catalog, previousCatalogs()).load(),
     ).rejects.toThrow('Disk full');
     expect(
       (
@@ -217,7 +217,7 @@ test('failed migration writes roll back and incompatible target/order changes ar
     ).toBe(JSON.stringify(state));
     await db.execAsync('DROP TRIGGER fail_upgrade');
     expect(
-      (await createSqliteRepository(db, catalog, previousCatalogs).load())
+      (await createSqliteRepository(db, catalog, previousCatalogs()).load())
         ?.revision,
     ).toBe(2);
   } finally {

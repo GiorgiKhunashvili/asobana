@@ -153,7 +153,7 @@ test('owner exclusions apply to all roles from v15, with the other 140 still app
   const words = new Set(
     catalog.levels.flatMap((level) => level.words.map((word) => word.answer)),
   );
-  const previous = previousCatalogs.find((pack) => pack.revision === 14)!;
+  const previous = previousCatalogs().find((pack) => pack.revision === 14)!;
   const oldWords = new Set(
     previous.levels.flatMap((level) => level.words.map((word) => word.answer)),
   );
@@ -179,7 +179,7 @@ test.each([
 ])(
   'v$revision $scenario progress and journey postcards survive current migration and restart',
   async ({ revision, scenario }) => {
-    const previous = previousCatalogs.find(
+    const previous = previousCatalogs().find(
       (pack) => pack.revision === revision,
     )!;
     const hintLimit =
@@ -244,7 +244,7 @@ test.each([
     try {
       await migrateDatabase(db);
       await createSqliteRepository(db, previous).save(old, 0);
-      const repo = createSqliteRepository(db, catalog, previousCatalogs);
+      const repo = createSqliteRepository(db, catalog, previousCatalogs());
       const upgraded = (await repo.load())!;
       expect(upgraded.state.contentRevision).toBe(catalog.revision);
       expect(upgraded.state.progress['ka-001']!.hintsUsed).toBe(hintLimit);
@@ -275,7 +275,7 @@ test.each([
           .map((card) => card.chapterId),
       ).toEqual(expect.arrayContaining(cards));
       expect(
-        await createSqliteRepository(db, catalog, previousCatalogs).load(),
+        await createSqliteRepository(db, catalog, previousCatalogs()).load(),
       ).toEqual(upgraded);
       if (scenario === 'partial') {
         const hinted = transition(
@@ -288,7 +288,7 @@ test.each([
         const restarted = await createSqliteRepository(
           db,
           catalog,
-          previousCatalogs,
+          previousCatalogs(),
         ).load();
         expect(restarted!.state).toEqual(hinted);
       }

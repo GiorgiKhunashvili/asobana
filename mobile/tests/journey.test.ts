@@ -87,7 +87,7 @@ test('failed writes do not award a hint; concurrent duplicates and restarts cann
   const db = new TestSqlite();
   try {
     await migrateDatabase(db);
-    const repo = createSqliteRepository(db, catalog, previousCatalogs);
+    const repo = createSqliteRepository(db, catalog, previousCatalogs());
     await repo.save(before, 0);
     const store = createGameStore(catalog, async () => repo);
     await store.getState().initialize();
@@ -123,7 +123,7 @@ test('failed writes do not award a hint; concurrent duplicates and restarts cann
 });
 
 test('old saves receive bonus credit before retired markers are filtered, once in SQLite', async () => {
-  const old = findBonuses(12, previousCatalogs[8]!).result.state;
+  const old = findBonuses(12, previousCatalogs()[8]!).result.state;
   const { bonusRewards: _rewards, ...legacy } = old;
   const db = new TestSqlite();
   try {
@@ -132,7 +132,7 @@ test('old saves receive bonus credit before retired markers are filtered, once i
       'INSERT INTO game_snapshot (id, revision, payload, save_format) VALUES (1, 1, ?, 1)',
       JSON.stringify(legacy),
     );
-    const repo = createSqliteRepository(db, catalog, previousCatalogs);
+    const repo = createSqliteRepository(db, catalog, previousCatalogs());
     const saved = (await repo.load())!;
     expect(saved.revision).toBe(2);
     expect(saved.state.bonusRewards).toEqual({ totalFound: 12, hintsSpent: 0 });
@@ -142,7 +142,7 @@ test('old saves receive bonus credit before retired markers are filtered, once i
         (card) => card.collected && card.legacy,
       ).length,
     ).toBe(
-      selectPostcards(old, previousCatalogs[8]!).filter(
+      selectPostcards(old, previousCatalogs()[8]!).filter(
         (card) => card.collected,
       ).length,
     );
@@ -197,8 +197,8 @@ test('postcards unlock at chapter completion, with the next destination previewe
 });
 
 test('pacing keeps all unique answers and enforces a recovery after every chapter challenge', () => {
-  const previous = previousCatalogs[8]!;
-  const journey = previousCatalogs[9]!;
+  const previous = previousCatalogs()[8]!;
+  const journey = previousCatalogs()[9]!;
   const words = (pack: LevelPack) =>
     pack.levels
       .flatMap((level) => level.words.map((word) => word.answer))

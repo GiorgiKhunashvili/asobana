@@ -71,7 +71,7 @@ test('required variants share the cooldown, with exact boundary and within-board
 test.each(['partial', 'complete'] as const)(
   'v12 %s save retains credits and original postcards across restart',
   async (scenario) => {
-    const previous = previousCatalogs.find((pack) => pack.revision === 12)!;
+    const previous = previousCatalogs().find((pack) => pack.revision === 12)!;
     const index = scenario === 'partial' ? 16 : 49;
     const level = previous.levels[index]!;
     let old = reachLevel(index, previous);
@@ -106,7 +106,7 @@ test.each(['partial', 'complete'] as const)(
       const upgraded = (await createSqliteRepository(
         db,
         catalog,
-        previousCatalogs,
+        previousCatalogs(),
       ).load())!;
       const state = upgraded.state;
       expect(state.contentRevision).toBe(catalog.revision);
@@ -146,7 +146,7 @@ test.each(['partial', 'complete'] as const)(
         ).toBe(old.coins);
       }
       expect(
-        await createSqliteRepository(db, catalog, previousCatalogs).load(),
+        await createSqliteRepository(db, catalog, previousCatalogs()).load(),
       ).toEqual(upgraded);
       expect(parseSnapshot(state, catalog)).toEqual(state);
     } finally {
@@ -206,10 +206,10 @@ test('excluded spellings cannot return as targets, variants or bonuses', () => {
 test.each([13, 14])(
   'continuing answers retain IDs from v%i to its successor',
   (revision) => {
-    const previous = previousCatalogs.find(
+    const previous = previousCatalogs().find(
       (pack) => pack.revision === revision,
     )!;
-    const successor = [catalog, ...previousCatalogs].find(
+    const successor = [catalog, ...previousCatalogs()].find(
       (pack) => pack.revision === revision + 1,
     )!;
     for (const [index, level] of previous.levels.entries())

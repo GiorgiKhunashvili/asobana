@@ -6,7 +6,7 @@ import { selectGameplay } from '../src/engine/selectors';
 import { parseSnapshot } from '../src/storage/snapshot';
 import { submit } from './helpers';
 
-const catalog = previousCatalogs[3]!;
+const catalog = previousCatalogs()[3]!;
 
 test('all 50 distinct puzzles and their bonuses fit the topic displayed above the board', () => {
   expect(catalog.levels).toHaveLength(50);

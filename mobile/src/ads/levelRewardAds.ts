@@ -4,7 +4,7 @@ import { gameStore } from '../state/gameStore';
 import { createRewardedAds } from './createRewardedAds';
 import { createNativeRewardedAd } from './nativeRewardedAd';
 
-/** The victory screen's "×2" ad. Kept apart from the 75-coin ads so neither
+/** The victory screen's "×2" ad. Kept apart from the coin ads so neither
  * placement shows (or retries) the other's reward. The target is a level ID. */
 export const levelRewardAds = createRewardedAds<string>({
   createAd: createNativeRewardedAd,

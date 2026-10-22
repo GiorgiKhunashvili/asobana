@@ -19,8 +19,8 @@ import { hitTest, layoutWheel } from '../src/engine/wheel';
 import { reachLevel, submit } from './helpers';
 
 test('every previous answer has an explicit review and every new answer is approved', () => {
-  const previousAnswers = previousCatalogs[10]!.levels
-    .flatMap((level) => level.words.map((word) => word.answer))
+  const previousAnswers = previousCatalogs()[10]!
+    .levels.flatMap((level) => level.words.map((word) => word.answer))
     .sort();
   expect(
     review.previousCampaignReview.map((entry) => entry.word).sort(),
@@ -55,7 +55,7 @@ test('every previous answer has an explicit review and every new answer is appro
   // Old puzzles cannot silently pass a new release just because their words exist.
   expect(() =>
     validateWide(
-      { ...previousCatalogs[10]!, revision: 12 },
+      { ...previousCatalogs()[10]!, revision: 12 },
       vocabularyForRevision(12),
       oldManifest.familiarity,
     ),

@@ -32,7 +32,6 @@ import rawDiscoveryPack from '../../../content/levels/discovery.v5.json';
 import rawExpandedPack from '../../../content/levels/themed.v4.json';
 import rawThemedPack from '../../../content/levels/themed.v3.json';
 import rawBetaPack from '../../../content/levels/beta.v2.json';
-import manifest from '../../../content/levels/discovery.v29.recipes.json';
 import rawVocabulary from '../../../content/dictionaries/discovery-v9-ka.json';
 import batchFiveVocabulary from '../../../content/dictionaries/discovery-v20-ka.json';
 import batchFourVocabulary from '../../../content/dictionaries/discovery-v19-ka.json';
@@ -40,12 +39,9 @@ import batchThreeVocabulary from '../../../content/dictionaries/discovery-v18-ka
 import expandedVocabulary from '../../../content/dictionaries/discovery-v17-ka.json';
 import journeyVocabulary from '../../../content/dictionaries/discovery-v13-ka.json';
 import rawLegacyPack from '../../../content/levels/prototype.v1.json';
+import type { LevelPack } from '../models/types';
 import { parsePack } from '../engine/validation';
-import { validateWide } from './wide';
 import { excludedWordsForRevision } from './wordPolicy';
-const historicalVocabulary: ReadonlySet<string> = new Set(
-  rawVocabulary.entries.map((entry) => entry.word),
-);
 export function vocabularyForRevision(revision: number): ReadonlySet<string> {
   const excluded = excludedWordsForRevision(revision);
   const entries =
@@ -77,36 +73,47 @@ export function vocabularyForRevision(revision: number): ReadonlySet<string> {
   );
 }
 export const vocabulary = vocabularyForRevision(rawPack.revision);
+/** Parsed at launch, structure only. The full release gates (`validateWide`)
+ * run on this exact pack in `npm run check` and the campaign tests; on Android
+ * they added about two seconds to every start. */
 export const catalog = parsePack(rawPack, vocabulary);
-validateWide(catalog, vocabulary, manifest.familiarity);
-/** Exact historical definitions are required to validate and upgrade old saves. */
-export const previousCatalogs = [
-  parsePack(rawLegacyPack, historicalVocabulary),
-  parsePack(rawBetaPack, historicalVocabulary),
-  parsePack(rawThemedPack, historicalVocabulary),
-  parsePack(rawExpandedPack, historicalVocabulary),
-  parsePack(rawDiscoveryPack, historicalVocabulary),
-  parsePack(rawWidePack, historicalVocabulary),
-  parsePack(rawPronounPack, historicalVocabulary),
-  parsePack(rawUniquePack, historicalVocabulary),
-  parsePack(rawExpandedDiscoveryPack, historicalVocabulary),
-  parsePack(rawJourneyPack, historicalVocabulary),
-  parsePack(rawLongWordPack, historicalVocabulary),
-  parsePack(rawEverydayPack, historicalVocabulary),
-  parsePack(rawPluralPack, vocabularyForRevision(13)),
-  parsePack(rawSingularPack, vocabularyForRevision(14)),
-  parsePack(rawOwnerPack, vocabularyForRevision(15)),
-  parsePack(rawBonusPromotionPack, vocabularyForRevision(16)),
-  parsePack(rawBatchTwoPack, vocabularyForRevision(17)),
-  parsePack(rawBatchThreePack, vocabularyForRevision(18)),
-  parsePack(rawBatchFourPack, vocabularyForRevision(19)),
-  parsePack(rawBatchFivePack, vocabularyForRevision(20)),
-  parsePack(rawMaltaPack, vocabularyForRevision(21)),
-  parsePack(rawTunisiaPack, vocabularyForRevision(22)),
-  parsePack(rawSpainPack, vocabularyForRevision(23)),
-  parsePack(rawReplacementPack, vocabularyForRevision(24)),
-  parsePack(rawBatchSixPack, vocabularyForRevision(25)),
-  parsePack(rawBatchSevenPack, vocabularyForRevision(26)),
-  parsePack(rawOctoberPack, vocabularyForRevision(27)),
-  parsePack(rawTargetedPack, vocabularyForRevision(28)),
-];
+let previous: readonly LevelPack[] | undefined;
+/** Exact historical definitions are required to validate and upgrade old saves.
+ * Parsed on first use, once, so a launch with a current save skips them. */
+export function previousCatalogs(): readonly LevelPack[] {
+  if (previous) return previous;
+  const historicalVocabulary: ReadonlySet<string> = new Set(
+    rawVocabulary.entries.map((entry) => entry.word),
+  );
+  previous = [
+    parsePack(rawLegacyPack, historicalVocabulary),
+    parsePack(rawBetaPack, historicalVocabulary),
+    parsePack(rawThemedPack, historicalVocabulary),
+    parsePack(rawExpandedPack, historicalVocabulary),
+    parsePack(rawDiscoveryPack, historicalVocabulary),
+    parsePack(rawWidePack, historicalVocabulary),
+    parsePack(rawPronounPack, historicalVocabulary),
+    parsePack(rawUniquePack, historicalVocabulary),
+    parsePack(rawExpandedDiscoveryPack, historicalVocabulary),
+    parsePack(rawJourneyPack, historicalVocabulary),
+    parsePack(rawLongWordPack, historicalVocabulary),
+    parsePack(rawEverydayPack, historicalVocabulary),
+    parsePack(rawPluralPack, vocabularyForRevision(13)),
+    parsePack(rawSingularPack, vocabularyForRevision(14)),
+    parsePack(rawOwnerPack, vocabularyForRevision(15)),
+    parsePack(rawBonusPromotionPack, vocabularyForRevision(16)),
+    parsePack(rawBatchTwoPack, vocabularyForRevision(17)),
+    parsePack(rawBatchThreePack, vocabularyForRevision(18)),
+    parsePack(rawBatchFourPack, vocabularyForRevision(19)),
+    parsePack(rawBatchFivePack, vocabularyForRevision(20)),
+    parsePack(rawMaltaPack, vocabularyForRevision(21)),
+    parsePack(rawTunisiaPack, vocabularyForRevision(22)),
+    parsePack(rawSpainPack, vocabularyForRevision(23)),
+    parsePack(rawReplacementPack, vocabularyForRevision(24)),
+    parsePack(rawBatchSixPack, vocabularyForRevision(25)),
+    parsePack(rawBatchSevenPack, vocabularyForRevision(26)),
+    parsePack(rawOctoberPack, vocabularyForRevision(27)),
+    parsePack(rawTargetedPack, vocabularyForRevision(28)),
+  ];
+  return previous;
+}

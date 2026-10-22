@@ -20,7 +20,7 @@ test('conjugated verbs cannot be answers, variants or bonuses, even when formabl
   }
   // Released wheels exercise formable rejection even if the new campaign
   // happens not to contain the same letter combination.
-  const fixture = previousCatalogs[9]!;
+  const fixture = previousCatalogs()[9]!;
   for (const verb of ['იდო', 'არის']) {
     const index = fixture.levels.findIndex((level) =>
       canFormWord(
@@ -82,7 +82,7 @@ test('required spellings only recur after the global 75-level gap', () => {
 });
 
 test('revision 7 progress and paid hints survive removal of verb answers and bonuses', () => {
-  const previous = previousCatalogs[6]!;
+  const previous = previousCatalogs()[6]!;
   expect(previous.revision).toBe(7);
   const index = previous.levels.findIndex((level) =>
     level.words.some((word) => word.answer === 'იდო'),
@@ -112,7 +112,7 @@ test('revision 7 progress and paid hints survive removal of verb answers and bon
     },
     previous,
   );
-  const { state, migrated } = restoreContent(old, catalog, previousCatalogs);
+  const { state, migrated } = restoreContent(old, catalog, previousCatalogs());
   expect(migrated).toBe(true);
   expect(state.currentLevelId).toBe(old.currentLevelId);
   expect(state.coins).toBe(old.coins);
@@ -132,7 +132,7 @@ test('revision 7 progress and paid hints survive removal of verb answers and bon
   expect(
     state.progress[oldLevel.id]!.revealedCellIds.length,
   ).toBeGreaterThanOrEqual(old.progress[oldLevel.id]!.revealedCellIds.length);
-  expect(restoreContent(state, catalog, previousCatalogs)).toEqual({
+  expect(restoreContent(state, catalog, previousCatalogs())).toEqual({
     state,
     migrated: false,
   });

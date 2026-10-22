@@ -6,7 +6,7 @@ import { previousCatalogs } from '../src/content/catalog';
 import { validatePacing } from '../src/content/pacing';
 import type { LevelPack } from '../src/models/types';
 
-const catalog = previousCatalogs[3]!;
+const catalog = previousCatalogs()[3]!;
 
 function repetition(pack: LevelPack) {
   const targets = pack.levels.flatMap((level) =>
@@ -60,7 +60,7 @@ test('expanded vocabulary has reference attribution and every topic gains playab
 });
 
 test('the actual campaign adds variety, rather than only expanding unused dictionary entries', () => {
-  const old = repetition(previousCatalogs[2]!);
+  const old = repetition(previousCatalogs()[2]!);
   const current = repetition(catalog);
   expect(current.unique).toBeGreaterThanOrEqual(140);
   expect(current.unique).toBeGreaterThan(old.unique);

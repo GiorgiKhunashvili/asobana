@@ -2,6 +2,7 @@ import { act, fireEvent, render } from '@testing-library/react-native';
 import { router } from 'expo-router';
 import { AccessibilityInfo } from 'react-native';
 import Settings from '../app/(tabs)/settings';
+import { gatherAdsConsent } from '../src/ads/consent';
 import { cardPlacement } from '../src/components/CoachMarks';
 import { catalog, previousCatalogs } from '../src/content/catalog';
 import { DEFAULT_ECONOMY, initialState, transition } from '../src/engine/game';
@@ -251,6 +252,36 @@ describe('settings', () => {
   });
 });
 
+describe('ad privacy', () => {
+  const consent = (required: boolean) =>
+    ({
+      AdsConsent: {
+        gatherConsent: async () => ({
+          canRequestAds: true,
+          privacyOptionsRequirementStatus: required
+            ? 'REQUIRED'
+            : 'NOT_REQUIRED',
+        }),
+      },
+      AdsConsentPrivacyOptionsRequirementStatus: { REQUIRED: 'REQUIRED' },
+    }) as unknown as Parameters<typeof gatherAdsConsent>[0];
+
+  test('settings offer the consent form only where the law requires it', async () => {
+    gameStore.setState({ game: { ...reachLevel(7), tutorialSeen: true } });
+    const screen = await render(<Settings />);
+    expect(screen.queryByTestId('ad-privacy-options')).toBeNull();
+    await act(async () => {
+      await gatherAdsConsent(consent(true));
+    });
+    expect(screen.getByText('რეკლამის კონფიდენციალურობა')).toBeTruthy();
+    expect(screen.getByTestId('ad-privacy-options')).toBeTruthy();
+    await act(async () => {
+      await gatherAdsConsent(consent(false));
+    });
+    expect(screen.queryByTestId('ad-privacy-options')).toBeNull();
+  });
+});
+
 describe('save', () => {
   test('new games start unseen; the command sets and clears the flag', () => {
     expect(fresh.tutorialSeen).toBe(false);
@@ -307,21 +338,23 @@ describe('save', () => {
 
   test('a missing flag is written back once; a present one is left alone', () => {
     const { tutorialSeen: _, ...old } = reachLevel(3);
-    const restored = restoreContent(old, catalog, previousCatalogs);
+    const restored = restoreContent(old, catalog, previousCatalogs());
     expect(restored.migrated).toBe(true);
     expect(restored.state.tutorialSeen).toBe(true);
-    expect(restoreContent(restored.state, catalog, previousCatalogs)).toEqual({
-      state: restored.state,
-      migrated: false,
-    });
+    expect(restoreContent(restored.state, catalog, previousCatalogs())).toEqual(
+      {
+        state: restored.state,
+        migrated: false,
+      },
+    );
   });
 
   test('content upgrades keep coins and progress and carry the flag across', () => {
-    const v12 = previousCatalogs.find((pack) => pack.revision === 12)!;
+    const v12 = previousCatalogs().find((pack) => pack.revision === 12)!;
     expect(v12.revision).toBe(12);
     const played = reachLevel(3, v12);
     const { tutorialSeen: _, ...old } = played;
-    const upgraded = restoreContent(old, catalog, previousCatalogs).state;
+    const upgraded = restoreContent(old, catalog, previousCatalogs()).state;
     expect(upgraded.tutorialSeen).toBe(true);
     expect(upgraded.coins).toBe(played.coins);
     expect(upgraded.currentLevelId).toBe(played.currentLevelId);
@@ -330,7 +363,7 @@ describe('save', () => {
     // A player who saw the tutorial on revision 12 stays done after the upgrade.
     const untouched = { ...initialState(v12), tutorialSeen: true };
     expect(
-      restoreContent(untouched, catalog, previousCatalogs).state.tutorialSeen,
+      restoreContent(untouched, catalog, previousCatalogs()).state.tutorialSeen,
     ).toBe(true);
   });
 

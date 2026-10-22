@@ -10,7 +10,7 @@ import { parseSnapshot } from '../src/storage/snapshot';
 import { reachLevel, submit } from './helpers';
 import { TestSqlite } from './sqliteAdapter';
 
-describe.each(previousCatalogs)(
+describe.each(previousCatalogs())(
   'discovery upgrade from revision $revision',
   (previous) => {
     test('completed levels and earned coins remain intact', () => {
@@ -19,16 +19,18 @@ describe.each(previousCatalogs)(
       for (const word of last.words)
         state = submit(state, last, word.answer, previous).state;
       const before = JSON.stringify(state);
-      const result = restoreContent(state, catalog, previousCatalogs);
+      const result = restoreContent(state, catalog, previousCatalogs());
       expect(JSON.stringify(state)).toBe(before);
       expect(result.state.coins).toBe(state.coins);
       expect(result.state.currentLevelId).toBe(state.currentLevelId);
       for (const old of previous.levels)
         expect(result.state.progress[old.id]?.completed).toBe(true);
-      expect(restoreContent(result.state, catalog, previousCatalogs)).toEqual({
-        state: result.state,
-        migrated: false,
-      });
+      expect(restoreContent(result.state, catalog, previousCatalogs())).toEqual(
+        {
+          state: result.state,
+          migrated: false,
+        },
+      );
     });
 
     test('every partial board keeps solved-word credits, hint benefit and settings', () => {
@@ -48,7 +50,11 @@ describe.each(previousCatalogs)(
           previous,
         ).state;
         const saved = state.progress[old.id]!;
-        const upgraded = restoreContent(state, catalog, previousCatalogs).state;
+        const upgraded = restoreContent(
+          state,
+          catalog,
+          previousCatalogs(),
+        ).state;
         const level = catalog.levels[index]!;
         const current = upgraded.progress[level.id]!;
         expect(current.solvedWordIds.length).toBeGreaterThanOrEqual(
@@ -74,7 +80,7 @@ describe.each(previousCatalogs)(
         await db.execAsync(
           "CREATE TRIGGER fail_topics BEFORE UPDATE ON game_snapshot BEGIN SELECT RAISE(ABORT, 'Disk full'); END;",
         );
-        const repo = createSqliteRepository(db, catalog, previousCatalogs);
+        const repo = createSqliteRepository(db, catalog, previousCatalogs());
         await expect(repo.load()).rejects.toThrow('Disk full');
         expect(
           (
@@ -99,8 +105,8 @@ describe.each(previousCatalogs)(
 );
 
 test('completion credits from a longer old board pay once and hints survive smaller boards', () => {
-  const previous = previousCatalogs[1]!;
-  const target = previousCatalogs[2]!;
+  const previous = previousCatalogs()[1]!;
+  const target = previousCatalogs()[2]!;
   const old = previous.levels[0]!;
   let state = { ...initialState(previous), coins: 1000 };
   for (let i = 0; i < 3; i++)
@@ -110,27 +116,31 @@ test('completion credits from a longer old board pay once and hints survive smal
       previous,
     ).state;
   expect(state.progress[old.id]?.completed).toBe(false);
-  const upgraded = restoreContent(state, target, previousCatalogs).state;
+  const upgraded = restoreContent(state, target, previousCatalogs()).state;
   expect(upgraded.progress[old.id]?.completed).toBe(true);
   expect(upgraded.coins).toBe(state.coins + 20);
-  expect(restoreContent(upgraded, target, previousCatalogs).state.coins).toBe(
+  expect(restoreContent(upgraded, target, previousCatalogs()).state.coins).toBe(
     upgraded.coins,
   );
 });
 
 test('unknown revisions, corrupt saves and reordered level identities are rejected', () => {
-  const old = initialState(previousCatalogs[1]!);
+  const old = initialState(previousCatalogs()[1]!);
   expect(() =>
-    restoreContent({ ...old, contentRevision: 99 }, catalog, previousCatalogs),
+    restoreContent(
+      { ...old, contentRevision: 99 },
+      catalog,
+      previousCatalogs(),
+    ),
   ).toThrow('Unsupported');
   expect(() =>
-    restoreContent({ ...old, coins: -1 }, catalog, previousCatalogs),
+    restoreContent({ ...old, coins: -1 }, catalog, previousCatalogs()),
   ).toThrow();
   expect(() =>
     restoreContent(
       old,
       { ...catalog, levels: [...catalog.levels].reverse() },
-      previousCatalogs,
+      previousCatalogs(),
     ),
   ).toThrow('Incompatible');
 });

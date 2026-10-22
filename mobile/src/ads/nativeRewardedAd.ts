@@ -1,13 +1,14 @@
+import { adUnitId } from './adUnits';
 import { type AdCallbacks, type RewardedAdHandle } from './createRewardedAds';
 import { loadNativeAdsSdk } from './nativeAdsSdk';
 
-/** Demo-only adapter. No production ad unit, targeting data, tracking prompt or
- * mediation is configured. Live ads require a separate consent/account setup. */
+/** Non-personalized rewarded ads: no targeting data, tracking prompt or
+ * mediation. Live units only in opted-in store builds (see adUnits). */
 export async function createNativeRewardedAd(
   callbacks: AdCallbacks,
 ): Promise<RewardedAdHandle> {
   const sdk = await loadNativeAdsSdk();
-  const ad = sdk.RewardedAd.createForAdRequest(sdk.TestIds.REWARDED, {
+  const ad = sdk.RewardedAd.createForAdRequest(adUnitId(sdk, 'rewarded'), {
     requestNonPersonalizedAdsOnly: true,
   });
   const off = [

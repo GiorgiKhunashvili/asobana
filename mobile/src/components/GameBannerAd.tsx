@@ -1,6 +1,7 @@
 import { useIsFocused } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { AppState, StyleSheet, View } from 'react-native';
+import { adUnitId } from '../ads/adUnits';
 import { loadNativeAdsSdk } from '../ads/nativeAdsSdk';
 import { palette } from '../theme';
 import { Txt } from './Text';
@@ -11,7 +12,8 @@ export const GAME_BANNER_HEIGHT = 76;
 const requestOptions = { requestNonPersonalizedAdsOnly: true };
 type AdsSdk = Awaited<ReturnType<typeof loadNativeAdsSdk>>;
 
-/** Demo only. No collapsing/expanding creative or publisher ad unit is used. */
+/** Non-personalized, no collapsing/expanding creative. Live units only in
+ * opted-in store builds (see adUnits). */
 export function GameBannerAd({ visible = true }: { visible?: boolean }) {
   const focused = useIsFocused();
   const [foreground, setForeground] = useState(
@@ -62,7 +64,7 @@ function Banner() {
       )}
       {sdk && (
         <sdk.BannerAd
-          unitId={sdk.TestIds.BANNER}
+          unitId={adUnitId(sdk, 'banner')}
           size={sdk.BannerAdSize.BANNER}
           requestOptions={requestOptions}
           onAdLoaded={() => setStatus('loaded')}

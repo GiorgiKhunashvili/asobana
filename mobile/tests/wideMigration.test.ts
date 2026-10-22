@@ -10,7 +10,7 @@ import { parseSnapshot } from '../src/storage/snapshot';
 import { reachLevel, submit } from './helpers';
 import { TestSqlite } from './sqliteAdapter';
 
-const previous = previousCatalogs[4]!;
+const previous = previousCatalogs()[4]!;
 
 test.each(['untouched', 'partial', 'hinted', 'completed', 'final'] as const)(
   'real revision 5 %s save upgrades once with credits intact',
@@ -52,7 +52,7 @@ test.each(['untouched', 'partial', 'hinted', 'completed', 'final'] as const)(
     try {
       await migrateDatabase(db);
       await createSqliteRepository(db, previous).save(old, 0);
-      const repo = createSqliteRepository(db, catalog, previousCatalogs);
+      const repo = createSqliteRepository(db, catalog, previousCatalogs());
       const upgraded = (await repo.load())!;
       const state = upgraded.state;
       expect(state.contentRevision).toBe(catalog.revision);
@@ -86,7 +86,7 @@ test.each(['untouched', 'partial', 'hinted', 'completed', 'final'] as const)(
       if (scenario === 'final')
         expect(selectGameplay(state, catalog).nextLevelId).toBe('ka-051');
       expect(await repo.load()).toEqual(upgraded);
-      expect(restoreContent(state, catalog, previousCatalogs)).toEqual({
+      expect(restoreContent(state, catalog, previousCatalogs())).toEqual({
         state,
         migrated: false,
       });
@@ -109,7 +109,7 @@ test('unsupported content remains byte-for-byte on disk after a failed v6 load',
       payload,
     );
     await expect(
-      createSqliteRepository(db, catalog, previousCatalogs).load(),
+      createSqliteRepository(db, catalog, previousCatalogs()).load(),
     ).rejects.toThrow('save retained');
     expect(
       await db.getFirstAsync(

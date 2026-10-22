@@ -14,7 +14,7 @@ import {
 } from '../src/storage/repository';
 import { reachLevel, submit } from './helpers';
 import { TestSqlite } from './sqliteAdapter';
-const catalog = previousCatalogs.find((pack) => pack.revision === 25)!;
+const catalog = previousCatalogs().find((pack) => pack.revision === 25)!;
 const vocabulary = vocabularyForRevision(25);
 const rejected =
   'არშია ბადურა დოგი დუნე თხემი იადონი ლობი ნაცხი ნაწერი პოპი პრესი საგა საგზაო სადაფი საერო სავალი სატეხი სატინი ტოტემი ფორა შასი ჩანგი ჭედური ხილული'.split(
@@ -49,7 +49,7 @@ test('batch six adds exactly the 76 approved senses and preserves the 118 bonus-
       ),
     ),
   );
-  const old = previousCatalogs.find((p) => p.revision === 24)!;
+  const old = previousCatalogs().find((p) => p.revision === 24)!;
   const before = new Set(
     old.levels.flatMap((l) => l.words.map((w) => w.answer)),
   );
@@ -97,7 +97,7 @@ test('the 24 rejected proposals fail every gameplay role even with a permissive 
 test.each(['partial', 'complete'] as const)(
   'v24 %s progress and journey postcards survive current migration and restart',
   async (scenario) => {
-    const previous = previousCatalogs.find((pack) => pack.revision === 24)!;
+    const previous = previousCatalogs().find((pack) => pack.revision === 24)!;
     const index = previous.levels.findIndex(
       (level, i) =>
         i >= 10 &&
@@ -151,7 +151,7 @@ test.each(['partial', 'complete'] as const)(
     try {
       await migrateDatabase(db);
       await createSqliteRepository(db, previous).save(old, 0);
-      const repo = createSqliteRepository(db, catalog, previousCatalogs);
+      const repo = createSqliteRepository(db, catalog, previousCatalogs());
       const upgraded = (await repo.load())!;
       expect(upgraded.state.contentRevision).toBe(25);
       expect(upgraded.state.progress['ka-001']!.hintsUsed).toBe(1586);
@@ -177,7 +177,7 @@ test.each(['partial', 'complete'] as const)(
           .map((card) => card.chapterId),
       ).toEqual(expect.arrayContaining(cards));
       expect(
-        await createSqliteRepository(db, catalog, previousCatalogs).load(),
+        await createSqliteRepository(db, catalog, previousCatalogs()).load(),
       ).toEqual(upgraded);
       if (scenario === 'partial') {
         const hinted = transition(
@@ -194,7 +194,7 @@ test.each(['partial', 'complete'] as const)(
         const restarted = await createSqliteRepository(
           db,
           catalog,
-          previousCatalogs,
+          previousCatalogs(),
         ).load();
         expect(restarted!.state).toEqual(hinted);
       }

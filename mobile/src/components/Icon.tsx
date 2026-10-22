@@ -1,5 +1,5 @@
-import { Canvas, Group, Path } from '@shopify/react-native-skia';
 import { View } from 'react-native';
+import Svg, { Path } from 'react-native-svg';
 
 interface Part {
   readonly d: string;
@@ -100,21 +100,25 @@ export function Icon({
       importantForAccessibility="no-hide-descendants"
       style={{ width: size, height: size }}
     >
-      <Canvas style={{ width: size, height: size }}>
-        <Group transform={[{ scale: size / 24 }]}>
-          {parts.map((part) => (
+      {/* SVG draws inside the view hierarchy. A Skia canvas per icon became its
+          own texture layer on Android, composited on every frame. */}
+      <Svg width={size} height={size} viewBox="0 0 24 24">
+        {parts.map((part) =>
+          part.fill ? (
+            <Path key={part.d} d={part.d} fill={color} />
+          ) : (
             <Path
               key={part.d}
-              path={part.d}
-              color={color}
-              style={part.fill ? 'fill' : 'stroke'}
+              d={part.d}
+              fill="none"
+              stroke={color}
               strokeWidth={strokeWidth}
-              strokeCap="round"
-              strokeJoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
-          ))}
-        </Group>
-      </Canvas>
+          ),
+        )}
+      </Svg>
     </View>
   );
 }

@@ -6,7 +6,7 @@ import {
 } from '../src/content/catalog';
 import { requiredWordsForRevision } from '../src/content/wordPolicy';
 import { validateWide } from '../src/content/wide';
-const catalog = previousCatalogs.find((p) => p.revision === 27)!;
+const catalog = previousCatalogs().find((p) => p.revision === 27)!;
 const vocabulary = vocabularyForRevision(27);
 
 test('revision 27 applies the exact October approvals and keeps rare words optional', () => {

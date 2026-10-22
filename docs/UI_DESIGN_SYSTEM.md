@@ -122,7 +122,8 @@ and painted styles all read as atlases rather than as a game.
   level, the arrival.
 - **Postcard page** (`StampedPostcard`, owner's pick of three styles on
   2026-10-17). A collected card is a large postage stamp tilted on the veiled
-  painting: perforated paper cut with Skia, the card number on the painting, the
+  painting: perforated paper (outline computed with Skia's path API, drawn in
+  SVG), the card number on the painting, the
   place in Mtavruli on the stamp's foot and an ivory postmark (country, stop
   number, wavy lines) over its top right corner. The caption sits below, and the
   fact is written on a paper note held by a strip of tape. It echoes the stamps
@@ -276,11 +277,24 @@ the line-box centre (ascent 1068, descent 292, x-height 546). Every instance
 keeps all 33 modern letters plus the full Mkhedruli and Mtavruli blocks.
 Regenerate with `uv run --with fonttools python -I scripts/instance-fonts.py`.
 
+## Drawing: Skia only for live drawing
+
+On Android every Skia `<Canvas>` is its own `TextureView`, a separate layer the
+GPU composites on every frame. On 2026-10-22 the game screen had 11 of them
+(icons, coin, a full-screen shading layer, the wheel's plate); Samsung testing
+reported lag. Static vector art (icons, coins, backdrops, the wheel plate,
+postcard stamps and postmarks) is therefore drawn with `react-native-svg`, which
+renders inside the normal view tree. Skia stays only where drawing follows a
+gesture or animation every frame: the wheel's cord, the live loading mark and the
+coach-mark spotlight. Skia's path API (no canvas) may still compute geometry,
+e.g. the stamp's perforated outline exported with `toSVGString()`.
+
 ## Components
 
 - `Screen` / `TopBar` — backdrop, safe areas, and the native-gesture-wrapped
   `ScrollView` the wheel blocks while tracing (contract requirement; keep it).
-- `Backdrop` — static Skia ground: gradient, kiln glow, faint wire-star lattice.
+- `Backdrop` — static SVG ground: gradient, kiln glow, faint wire-star lattice;
+  on scenes, SVG dusk gradients over the painting.
 - `CrosswordBoard` — cells sized to the space given (26–84 pt, 4 pt gaps,
   corners scaling with the cell); `BoardMoment` drives reveal order, hint
   gilding, duplicate reminders and the victory wave.
@@ -307,7 +321,7 @@ or content changes (prefer columns ≥ rows, or transpose tall layouts) fix that
 
 - `PlaceArt` — a stop's painting cropped to its box, or its placeholder landscape.
 - `PrimaryButton`, `SecondaryButton`, `RoundButton`, `Card`, `CoinBadge`,
-  `CoinGlyph`, `Icon` (Skia line icons, no icon font), `LoadingLogo` /
+  `CoinGlyph`, `Icon` (SVG line icons, no icon font), `LoadingLogo` /
   `VictoryLogo`, `Postcard`, `StampedPostcard`, `PlaceFact`, `TabBar`,
   `BonusMeter`, `Txt`, `Display`.
 

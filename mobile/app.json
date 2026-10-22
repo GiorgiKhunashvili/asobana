@@ -20,8 +20,8 @@
       [
         "react-native-google-mobile-ads",
         {
-          "androidAppId": "ca-app-pub-3940256099942544~3347511713",
-          "iosAppId": "ca-app-pub-3940256099942544~1458002511",
+          "androidAppId": "ca-app-pub-8935292332039677~9321375605",
+          "iosAppId": "ca-app-pub-8935292332039677~8334673550",
           "delayAppMeasurementInit": true
         }
       ],
@@ -44,7 +44,11 @@
           "backgroundColor": "#0B294B",
           "image": "./assets/branding/splash-lockup.png",
           "imageWidth": 260,
-          "resizeMode": "contain"
+          "resizeMode": "contain",
+          "android": {
+            "image": "./assets/branding/mark-dark.png",
+            "imageWidth": 160
+          }
         }
       ]
     ],

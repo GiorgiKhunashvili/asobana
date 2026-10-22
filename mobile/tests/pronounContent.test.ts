@@ -64,7 +64,7 @@ test('a formable excluded pronoun is rejected by gameplay without earning coins'
 });
 
 test('a shipped v6 save migrates once, retaining paid hints and coins from a retired pronoun bonus', async () => {
-  const previous = previousCatalogs[5]!;
+  const previous = previousCatalogs()[5]!;
   expect(previous.revision).toBe(6);
   const level = previous.levels[1]!;
   expect(level.bonusWords).toContain('ის');
@@ -88,7 +88,7 @@ test('a shipped v6 save migrates once, retaining paid hints and coins from a ret
   try {
     await migrateDatabase(db);
     await createSqliteRepository(db, previous).save(old, 0);
-    const repo = createSqliteRepository(db, catalog, previousCatalogs);
+    const repo = createSqliteRepository(db, catalog, previousCatalogs());
     const migrated = (await repo.load())!;
     expect(migrated.revision).toBe(2);
     expect(migrated.state.contentRevision).toBe(catalog.revision);
@@ -108,7 +108,7 @@ test('a shipped v6 save migrates once, retaining paid hints and coins from a ret
 });
 
 test('the historical pack still validates pronoun answers needed to read old saves', () => {
-  const previous = previousCatalogs[5]!;
+  const previous = previousCatalogs()[5]!;
   const level = previous.levels[0]!;
   expect(level.words.some((word) => word.answer === 'მათი')).toBe(true);
   const result = submit(initialState(previous), level, 'მათი', previous);

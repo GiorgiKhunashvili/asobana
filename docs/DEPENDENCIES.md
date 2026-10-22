@@ -5,6 +5,8 @@ map, `expo install --check`, Expo Doctor, native exports and automated tests.
 
 - [Expo SDK 57](https://expo.dev/changelog/sdk-57): stable registry tag was 57.0.28.
 - [Skia for SDK 57](https://docs.expo.dev/versions/v57.0.0/sdk/skia/): 2.6.2.
+- [react-native-svg for SDK 57](https://docs.expo.dev/versions/v57.0.0/sdk/svg/): 15.15.4,
+  added 2026-10-22 with `npx expo install` for static vector art (see below).
 - [Reanimated for SDK 57](https://docs.expo.dev/versions/v57.0.0/sdk/reanimated/): 4.5.1;
   accompanying Worklets 0.10.1 and Gesture Handler ~2.32.0 are from Expo's map.
 - React 19.2.3, RN 0.86.3, Expo Router ~57.0.26 and SQLite ~57.0.4 are from that map.

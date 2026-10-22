@@ -1,10 +1,4 @@
-import {
-  BlurMask,
-  Canvas,
-  Circle,
-  Path,
-  Skia,
-} from '@shopify/react-native-skia';
+import { Canvas, Circle, Path, Skia } from '@shopify/react-native-skia';
 import {
   useCallback,
   useMemo,
@@ -14,6 +8,12 @@ import {
 } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 import { GestureDetector } from 'react-native-gesture-handler';
+import Svg, {
+  Circle as SvgCircle,
+  Defs,
+  RadialGradient,
+  Stop,
+} from 'react-native-svg';
 import Animated, {
   LinearTransition,
   useAnimatedStyle,
@@ -278,47 +278,78 @@ export function LetterWheel(props: LetterWheelViewProps) {
 /** Room around the disc for its soft shadow on the painting. */
 const SHADOW = 16;
 
-/** Static medallion: ivory enamel face, gold rim wire and a fine inner ring. */
+/** Gaussian falloff of the old Skia BlurMask (sigma 10) around the shadow's
+ * edge: offsets in sigmas from the edge and the remaining share of its alpha. */
+const SHADOW_FALLOFF = [
+  [-2, 0.977],
+  [-1, 0.841],
+  [0, 0.5],
+  [1, 0.159],
+  [2, 0.023],
+] as const;
+const SHADOW_SIGMA = 10;
+const SHADOW_COLOR = 'rgb(40, 22, 30)';
+const SHADOW_ALPHA = 0.35;
+
+/** Static medallion: ivory enamel face, gold rim wire and a fine inner ring.
+ * SVG, so it is part of the view tree; as a Skia canvas it was a second large
+ * texture layer composited on every Android frame. */
 function Plate({ size }: { size: number }) {
   const c = size / 2 + SHADOW;
+  const edge = size / 2 - 4;
+  const outer = edge + 2 * SHADOW_SIGMA;
   return (
-    <Canvas
+    <Svg
       pointerEvents="none"
-      style={{
-        position: 'absolute',
-        left: -SHADOW,
-        top: -SHADOW,
-        width: size + SHADOW * 2,
-        height: size + SHADOW * 2,
-      }}
+      width={size + SHADOW * 2}
+      height={size + SHADOW * 2}
+      style={{ position: 'absolute', left: -SHADOW, top: -SHADOW }}
     >
-      <Circle cx={c} cy={c + 4} r={size / 2 - 4} color="rgba(40, 22, 30, 0.35)">
-        <BlurMask blur={10} style="normal" />
-      </Circle>
-      <Circle
+      <Defs>
+        <RadialGradient
+          id="plateShadow"
+          cx={c}
+          cy={c + 4}
+          r={outer}
+          gradientUnits="userSpaceOnUse"
+        >
+          {[[-Infinity, 1] as const, ...SHADOW_FALLOFF].map(
+            ([sigmas, share]) => (
+              <Stop
+                key={sigmas}
+                offset={Math.max(0, (edge + sigmas * SHADOW_SIGMA) / outer)}
+                stopColor={SHADOW_COLOR}
+                stopOpacity={SHADOW_ALPHA * share}
+              />
+            ),
+          )}
+        </RadialGradient>
+      </Defs>
+      <SvgCircle cx={c} cy={c + 4} r={outer} fill="url(#plateShadow)" />
+      <SvgCircle
         cx={c}
         cy={c}
         r={size / 2 - 2}
-        color={palette.parchment}
-        opacity={0.9}
+        fill={palette.parchment}
+        fillOpacity={0.9}
       />
-      <Circle
+      <SvgCircle
         cx={c}
         cy={c}
         r={size / 2 - 2}
-        color={palette.gold}
-        style="stroke"
+        fill="none"
+        stroke={palette.gold}
         strokeWidth={4}
       />
-      <Circle
+      <SvgCircle
         cx={c}
         cy={c}
         r={size / 2 - 11}
-        color={palette.parchmentRing}
-        style="stroke"
+        fill="none"
+        stroke={palette.parchmentRing}
         strokeWidth={1.2}
       />
-    </Canvas>
+    </Svg>
   );
 }
 

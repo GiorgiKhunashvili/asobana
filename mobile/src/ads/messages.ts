@@ -15,7 +15,7 @@ export const rewardedAdMessages: Record<RewardedStatus, string> = {
   unavailable: 'რეკლამა ამ ვერსიაში მიუწვდომელია.',
 };
 
-/** The victory screen's optional "×2": same states, a doubling instead of +75. */
+/** The victory screen's optional "×2": same states, a doubling instead of coins. */
 export const levelDoubleMessages: Record<RewardedStatus, string> = {
   ...rewardedAdMessages,
   idle: 'რეკლამის ნახვით გააორმაგებ დონის ჯილდოს.',

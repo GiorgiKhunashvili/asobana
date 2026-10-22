@@ -14,7 +14,7 @@ import { TestSqlite } from './sqliteAdapter';
 test('the shipped revision 4 save upgrades atomically and survives closing SQLite', async () => {
   const directory = mkdtempSync(join(tmpdir(), 'asobana-discovery-'));
   const path = join(directory, 'save.db');
-  const previous = previousCatalogs[3]!;
+  const previous = previousCatalogs()[3]!;
   const level = previous.levels[21]!;
   let state = { ...reachLevel(21, previous), coins: 1000 };
   state = transition(
@@ -46,7 +46,7 @@ test('the shipped revision 4 save upgrades atomically and survives closing SQLit
     const upgraded = (await createSqliteRepository(
       db,
       catalog,
-      previousCatalogs,
+      previousCatalogs(),
     ).load())!;
     expect(upgraded.revision).toBe(2);
     expect(upgraded.state.contentRevision).toBe(catalog.revision);
@@ -63,7 +63,7 @@ test('the shipped revision 4 save upgrades atomically and survives closing SQLit
     db.close();
     db = new TestSqlite(path);
     expect(
-      await createSqliteRepository(db, catalog, previousCatalogs).load(),
+      await createSqliteRepository(db, catalog, previousCatalogs()).load(),
     ).toEqual(upgraded);
   } finally {
     db.close();

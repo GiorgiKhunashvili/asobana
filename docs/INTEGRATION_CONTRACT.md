@@ -160,8 +160,8 @@ one free letter hint. The 200-coin starting balance applies only to a new game o
 an explicit reset: existing saves retain their exact balance and all progress,
 paid hints, bonus credits and postcards. No economy migration or content revision
 is needed; future rewards and purchases use the current prices without repricing
-past actions. Optional AdMob demo ads now award 75 coins through a separate,
-persisted claim; gameplay commands cannot directly grant ad coins. The
+past actions. Optional rewarded ads award 50 coins (75 before 2026-10-22) through
+a separate, persisted claim; gameplay commands cannot directly grant ad coins. The
 level-complete screen's optional ad pays `LEVEL_DOUBLE_COINS` (the completion
 reward, 20) once per finished level through the same kind of claim.
 
@@ -171,12 +171,12 @@ from revisions 25 and 26 through real SQLite close/reopen. It checks retained
 paid hints, free bonus hints, completed stops, partial progress and postcards,
 then verifies that future purchases use the new prices and survive another restart.
 
-### Rewarded demo ads
+### Rewarded ads
 
 `src/ads/rewardedAds.ts` owns one controller shared across screen mounts. The coins
-screen loads a demo ad and requires an explicit watch press. An unaffordable hint
-keeps its letter/word icon while its price pill turns gold and reads `▶ +75` with
-a coin (`↻ +75` for a save-only retry); the spoken label names the ad, the reward
+screen loads an ad and requires an explicit watch press. An unaffordable hint
+keeps its letter/word icon while its price pill turns gold and reads `▶ +50` with
+a coin (`↻ +50` for a save-only retry); the spoken label names the ad, the reward
 and the hint price. It bounces once on becoming unaffordable (respecting reduced
 motion). That press
 calls `watch(signal)` directly from gameplay: a ready ad presents immediately;
@@ -189,8 +189,8 @@ hint. Content-disabled hints and completed levels remain unavailable.
 
 Only `EARNED_REWARD` calls `gameStore.claimAdReward(claimId)`. One UUID belongs to
 one presentation; retries reuse that UUID, while another ad receives a new UUID.
-The fixed reward is `REWARDED_AD_COINS = 75`, independent of Google's demo reward
-payload. Closing early, loading, showing or a timeout alone grants nothing.
+The fixed reward is `REWARDED_AD_COINS = 50`, independent of the ad unit's reward
+payload (set to 1 in AdMob). Closing early, loading, showing or a timeout alone grants nothing.
 
 Database version 3 adds `rewarded_ad_claims` without changing existing snapshots.
 `GameRepository.claimAdReward` reads the latest saved game and inserts the unique
@@ -205,13 +205,19 @@ a storage failure. This is client-side deduplication, not server-side fraud
 verification. A reward not committed before process termination cannot be
 recovered from AdMob by this client alone; pending failed claims are in memory.
 Production reward recovery/verification requires a separately designed server
-flow. Demo ads use Google's sample app IDs, `TestIds.REWARDED` and `TestIds.BANNER`;
-live ads, UMP configuration, ATT decisions and store privacy disclosures are a
-separate rollout. See the native checklist for build and manual verification steps.
+flow. `src/ads/adUnits.ts` picks the units: the owner's live iOS and Android
+banner and rewarded units only in release builds with `ASOBANA_LIVE_ADS=1` (the
+EAS `production` profile), and Google's `TestIds` everywhere else, including the
+`beta` profile used for TestFlight and Play testing. `loadNativeAdsSdk` runs Google's UMP consent flow
+(`src/ads/consent.ts`) before initializing the SDK and requests no ads until
+`canRequestAds`; the root layout starts it once the first screen appears, and
+Settings reopens the consent form where the law requires it. Ads stay
+non-personalized with no App Tracking Transparency prompt. Store privacy
+disclosures remain to be filled in. See the native checklist for verification.
 
 ### Gameplay test banner
 
-`GameBannerAd` uses a fixed 320×50 Google demo banner in `Screen`'s optional footer,
+`GameBannerAd` uses a fixed 320×50 banner in `Screen`'s optional footer,
 outside the scroll view and letter-wheel gesture area. The 76-point footer reserves
 space before loading, with a divider, 17 points above the creative and 8 below.
 Gameplay subtracts that space from the board budget without reducing the wheel or

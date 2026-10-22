@@ -15,7 +15,7 @@ import { Icon } from './Icon';
 import { Txt } from './Text';
 
 /** A hint control. When the hint is unaffordable it keeps its own icon and only
- * the price pill turns gold ("▶ +75", or "↻ +75" to retry saving a reward), so
+ * the price pill turns gold ("▶ +50", or "↻ +50" to retry saving a reward), so
  * the two hints stay distinguishable. */
 export function HintAdButton({
   kind,

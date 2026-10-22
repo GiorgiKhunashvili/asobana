@@ -51,7 +51,7 @@ test('batch seven adds exactly the 75 approved senses and preserves the 118 bonu
       ),
     ),
   );
-  const old = previousCatalogs.find((p) => p.revision === 25)!;
+  const old = previousCatalogs().find((p) => p.revision === 25)!;
   const before = new Set(
     old.levels.flatMap((l) => l.words.map((w) => w.answer)),
   );
@@ -99,7 +99,7 @@ test('the 25 rejected proposals fail every gameplay role even with a permissive 
 test.each(['partial', 'complete'] as const)(
   'v25 %s progress and journey postcards survive current migration and restart',
   async (scenario) => {
-    const previous = previousCatalogs.find((pack) => pack.revision === 25)!;
+    const previous = previousCatalogs().find((pack) => pack.revision === 25)!;
     const index = previous.levels.findIndex(
       (level, i) =>
         i >= 10 &&
@@ -153,7 +153,7 @@ test.each(['partial', 'complete'] as const)(
     try {
       await migrateDatabase(db);
       await createSqliteRepository(db, previous).save(old, 0);
-      const repo = createSqliteRepository(db, catalog, previousCatalogs);
+      const repo = createSqliteRepository(db, catalog, previousCatalogs());
       const upgraded = (await repo.load())!;
       expect(upgraded.state.contentRevision).toBe(29);
       expect(upgraded.state.progress['ka-001']!.hintsUsed).toBe(1628);
@@ -179,7 +179,7 @@ test.each(['partial', 'complete'] as const)(
           .map((card) => card.chapterId),
       ).toEqual(expect.arrayContaining(cards));
       expect(
-        await createSqliteRepository(db, catalog, previousCatalogs).load(),
+        await createSqliteRepository(db, catalog, previousCatalogs()).load(),
       ).toEqual(upgraded);
       if (scenario === 'partial') {
         const hinted = transition(
@@ -192,7 +192,7 @@ test.each(['partial', 'complete'] as const)(
         const restarted = await createSqliteRepository(
           db,
           catalog,
-          previousCatalogs,
+          previousCatalogs(),
         ).load();
         expect(restarted!.state).toEqual(hinted);
       }

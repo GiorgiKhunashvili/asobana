@@ -17,7 +17,7 @@ import { TestSqlite } from './sqliteAdapter';
 async function open(path = ':memory:') {
   const db = new TestSqlite(path);
   await migrateDatabase(db);
-  const repo = createSqliteRepository(db, catalog, previousCatalogs);
+  const repo = createSqliteRepository(db, catalog, previousCatalogs());
   const store = createGameStore(catalog, async () => repo);
   return { db, repo, store };
 }
@@ -140,7 +140,7 @@ test('saves without doublings load unchanged; doublings survive content upgrades
 
   const { db } = await open();
   try {
-    const previous = previousCatalogs.find((pack) => pack.revision === 25)!;
+    const previous = previousCatalogs().find((pack) => pack.revision === 25)!;
     const old = {
       ...reachLevel(3, previous),
       coins: 61,
@@ -148,7 +148,7 @@ test('saves without doublings load unchanged; doublings survive content upgrades
       doubledRewardLevelIds: ['ka-002'],
     };
     await createSqliteRepository(db, previous).save(old, 0);
-    const current = createSqliteRepository(db, catalog, previousCatalogs);
+    const current = createSqliteRepository(db, catalog, previousCatalogs());
     const migrated = (await current.load())!.state;
     expect(migrated.contentRevision).toBe(catalog.revision);
     expect(migrated.coins).toBe(61);

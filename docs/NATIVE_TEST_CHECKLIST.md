@@ -5,13 +5,14 @@ with an unavailable-ad message. Keep runtime test results
 separate from Jest mocks and static bundle exports. Record platform/runtime, steps,
 expected result and screenshot/log evidence in `CODEX_STATUS.md`.
 
-## AdMob demo ads
+## AdMob ads
 
-No AdMob account is needed for this test configuration. Google supplies the
-[demo ad units](https://developers.google.com/admob/ios/test-ads) and sample app
-IDs in the [iOS](https://developers.google.com/admob/ios/quick-start) and
-[Android](https://developers.google.com/admob/android/quick-start) setup guides.
-The demo earns in-game coins but produces no advertising revenue.
+Development builds and `beta` builds (TestFlight, Play testing tracks) request
+Google's [demo ad units](https://developers.google.com/admob/ios/test-ads) under
+the owner's real app IDs, so testers can tap ads freely. Only `production` EAS
+builds (`ASOBANA_LIVE_ADS=1`) request the live iOS and Android units in
+`mobile/src/ads/adUnits.ts`; they are for public release and are not installed on
+testers' devices. Never tap live ads on a device that is not an AdMob test device.
 
 The installed native integration is `react-native-google-mobile-ads` 17.3.1.
 It cannot run in Expo Go. From the repository root:
@@ -31,14 +32,14 @@ upload is implied by this implementation.
 Verify on the native development build:
 
 1. Open the coins screen. Wait for the ad to load; it must not open automatically.
-2. Tap “ნახე რეკლამა · +75 მონეტა”. Confirm Google's test-ad label, complete its
-   reward action, and dismiss. The balance increases by exactly 75 after saving.
+2. Tap “ნახე რეკლამა · +50 მონეტა”. Confirm Google's test-ad label, complete its
+   reward action, and dismiss. The balance increases by exactly 50 after saving.
 3. Restart the app. The same balance and prior progress must remain. Watch a
-   second ad: it can earn a separate 75-coin reward.
+   second ad: it can earn a separate 50-coin reward.
 4. Close an ad before earning its reward. No coins are added. Repeated presses
    while loading/showing/saving must not present multiple ads.
 5. In an isolated test save, spend below the displayed hint cost. The affected
-   button keeps its hint icon and its price pill turns gold, reading `▶ +75` with a
+   button keeps its hint icon and its price pill turns gold, reading `▶ +50` with a
    coin, with one brief bounce. Press it: the ad opens from gameplay without a coins-page
    detour or another watch press. If loading, wait or cancel. Leaving the board
    or backgrounding during that wait must prevent a later presentation. Returning
@@ -74,13 +75,16 @@ worked on the SE. Leaving gameplay removed the banner. Screenshots are in
 across 42 suites, and an iOS Metro export passed. This was simulator testing,
 not a physical-device test or TestFlight upload.
 
-The demo-only adapter requests non-personalized ads, sets the maximum content
-rating to G, and does not ask for tracking permission or collect targeting data.
-It is not a production consent implementation. Before live ads, create an
-[AdMob account](https://admob.google.com/), register each platform, configure
-rewarded units, implement required consent/privacy choices and disclosures, and
-review age/audience settings. Replace the sample app IDs and test units only as
-part of that rollout. Do not publish this demo configuration as live monetization.
+Ads are non-personalized with a maximum content rating of G; the app does not ask
+for tracking permission. Google's UMP consent flow runs once the first screen
+appears and before the SDK starts; no ad loads until it allows ad requests.
+Verify on a native build with an EEA debug geography (or from the EEA): the
+consent form appears once at launch, ads load after a choice, and Settings shows
+“რეკლამის კონფიდენციალურობა”, which reopens the form. Outside the EEA, UK and
+Switzerland that entry stays hidden. The form only appears after the European
+regulations message is published in AdMob's Privacy & messaging. Store privacy
+disclosures (App Store privacy label, Play Data safety) must list the Google
+Mobile Ads SDK's data collection.
 
 The older smoke flows below target historical prototype boards and Expo Go;
 they are not the acceptance test for native AdMob behavior.

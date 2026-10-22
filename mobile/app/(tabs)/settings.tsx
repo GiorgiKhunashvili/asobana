@@ -7,6 +7,8 @@ import {
 } from 'react-native';
 import Constants from 'expo-constants';
 import { router } from 'expo-router';
+import { usePrivacyOptionsRequired } from '../../src/ads/consent';
+import { openAdsPrivacyOptions } from '../../src/ads/nativeAdsSdk';
 import { SecondaryButton } from '../../src/components/Buttons';
 import { Card, CardRow } from '../../src/components/Card';
 import { Icon, type IconName } from '../../src/components/Icon';
@@ -80,6 +82,7 @@ export default function Settings() {
   const game = useGameStore((state) => state.game);
   const busy = useGameStore((state) => state.busy);
   const error = useGameStore((state) => state.error);
+  const privacyOptions = usePrivacyOptionsRequired();
   if (!game) return null;
   const next = nextUnfinished(game);
   return (
@@ -147,6 +150,27 @@ export default function Settings() {
           onPress={() => next && showTutorial(next.id)}
         />
       </Card>
+      {privacyOptions && (
+        <Card>
+          <CardRow>
+            <Icon name="lock" size={24} color={palette.gold} />
+            <View style={styles.text}>
+              <Txt variant="bodyStrong">რეკლამის კონფიდენციალურობა</Txt>
+              <Txt variant="caption" color={palette.textMuted}>
+                შეცვალე რეკლამასთან დაკავშირებული თანხმობა.
+              </Txt>
+            </View>
+          </CardRow>
+          <SecondaryButton
+            label="პარამეტრების გახსნა"
+            icon="sliders"
+            testID="ad-privacy-options"
+            onPress={() => {
+              void openAdsPrivacyOptions().catch(() => undefined);
+            }}
+          />
+        </Card>
+      )}
       <Card>
         <CardRow>
           <Icon name="restart" size={24} color={palette.gold} />

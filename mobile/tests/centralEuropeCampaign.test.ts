@@ -22,7 +22,7 @@ import { COUNTRIES, sceneFor } from '../src/theme';
 import { reachLevel, submit } from './helpers';
 import { TestSqlite } from './sqliteAdapter';
 
-const previous = previousCatalogs.find((pack) => pack.revision === 28)!;
+const previous = previousCatalogs().find((pack) => pack.revision === 28)!;
 const NEW_STOPS: Record<string, string[]> = {
   france: [
     'carcassonne',
@@ -154,7 +154,7 @@ test.each(['partial', 'complete'] as const)(
     try {
       await migrateDatabase(db);
       await createSqliteRepository(db, previous).save(old, 0);
-      const repo = createSqliteRepository(db, catalog, previousCatalogs);
+      const repo = createSqliteRepository(db, catalog, previousCatalogs());
       const upgraded = (await repo.load())!;
       const state = upgraded.state;
       expect(state.contentRevision).toBe(29);
@@ -189,7 +189,7 @@ test.each(['partial', 'complete'] as const)(
         scenario === 'complete' ? cards : expect.arrayContaining(cards),
       );
       expect(
-        await createSqliteRepository(db, catalog, previousCatalogs).load(),
+        await createSqliteRepository(db, catalog, previousCatalogs()).load(),
       ).toEqual(upgraded);
       expect(isUnlocked(state, catalog, 'ka-346')).toBe(after.completed);
       expect(isUnlocked(state, catalog, 'ka-347')).toBe(false);
@@ -211,8 +211,11 @@ test.each(['partial', 'complete'] as const)(
         expect(nextLevelId(catalog, 'ka-500')).toBeNull();
         await repo.save(next, upgraded.revision);
         expect(
-          (await createSqliteRepository(db, catalog, previousCatalogs).load())!
-            .state,
+          (await createSqliteRepository(
+            db,
+            catalog,
+            previousCatalogs(),
+          ).load())!.state,
         ).toEqual(next);
       }
     } finally {

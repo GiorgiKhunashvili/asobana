@@ -33,7 +33,7 @@ import {
 } from '../src/theme';
 import { catalog as journeyCatalog } from '../src/content/catalog';
 import { JourneyScreen } from '../src/screens/JourneyScreen';
-import { TabBar } from '../src/components/TabBar';
+import { TabBar, tabBarRole } from '../src/components/TabBar';
 import { blockedHaptic } from '../src/services/feedback';
 import { StampedPostcard } from '../src/components/PostcardStamp';
 import { placeFacts } from '../src/content/destinations';
@@ -129,7 +129,10 @@ jest.mock('@shopify/react-native-skia', () => {
     PathOp: { Difference: 0 },
     Skia: {
       PathBuilder: { Make: () => builder, MakeFromPath: () => builder },
-      Path: { MakeFromSVGString: () => ({}), MakeFromOp: () => ({}) },
+      Path: {
+        MakeFromSVGString: () => ({}),
+        MakeFromOp: () => ({ toSVGString: () => 'M0 0h10v10H0z' }),
+      },
       XYWHRect: () => ({}),
     },
     vec: (x: number, y: number) => ({ x, y }),
@@ -186,7 +189,7 @@ test('low-balance hints clearly offer an ad and watch directly without navigatin
     const screen = await render(<GameplayScreen levelId="ka-001" />);
     expect(screen.getByTestId('hint-word')).not.toBeDisabled();
     expect(screen.getByTestId('hint-cell')).not.toBeDisabled();
-    expect(screen.getAllByText('+75')).toHaveLength(2);
+    expect(screen.getAllByText('+50')).toHaveLength(2);
     expect(screen.getByTestId('hint-word').props.accessibilityHint).toBe(
       'რეკლამა გაიხსნება აქვე; მინიშნებას შემდეგ ცალკე აირჩევ',
     );
@@ -201,9 +204,10 @@ test('low-balance hints clearly offer an ad and watch directly without navigatin
     expect(router.push).not.toHaveBeenCalled();
     expect(gameStore.getState().dispatch).not.toHaveBeenCalled();
     expect(rewardedAds.watch).toHaveBeenCalledTimes(2);
-    gameStore.setState({ game: { ...gameStore.getState().game!, coins: 75 } });
+    // One 50-coin ad from zero covers the word hint, so both offers disappear.
+    gameStore.setState({ game: { ...gameStore.getState().game!, coins: 50 } });
     await screen.rerender(<GameplayScreen levelId="ka-001" />);
-    expect(screen.queryByText('+75')).toBeNull();
+    expect(screen.queryByText('+50')).toBeNull();
     expect(gameStore.getState().dispatch).not.toHaveBeenCalled();
   } finally {
     gameStore.setState({ game: before });
@@ -220,7 +224,7 @@ test('affordable and free hints still perform the hint action without an ad', as
       game: { ...initialState(journeyCatalog), coins: 30, tutorialSeen: true },
     });
     const screen = await render(<GameplayScreen levelId="ka-001" />);
-    expect(screen.getAllByText('+75')).toHaveLength(1);
+    expect(screen.getAllByText('+50')).toHaveLength(1);
     await fireEvent.press(screen.getByTestId('hint-cell'));
     expect(dispatch).toHaveBeenCalledWith({
       type: 'hint',
@@ -280,7 +284,7 @@ test('a pending hint ad cancels on navigation and offers a save-only retry after
   }
 });
 
-test('coins screen shows the 75-coin offer and requires an explicit watch press', async () => {
+test('coins screen shows the 50-coin offer and requires an explicit watch press', async () => {
   const before = gameStore.getState().game;
   gameStore.setState({ game: { ...initialState(journeyCatalog), coins: 0 } });
   jest.mocked(useLocalSearchParams).mockReturnValue({ reason: 'hint' });
@@ -288,14 +292,14 @@ test('coins screen shows the 75-coin offer and requires an explicit watch press'
     const screen = await render(<Coins />);
     expect(screen.getByText(/მინიშნებისთვის მონეტები არ გყოფნის/)).toBeTruthy();
     expect(
-      screen.getByRole('button', { name: 'ნახე რეკლამა · +75 მონეტა' }),
+      screen.getByRole('button', { name: 'ნახე რეკლამა · +50 მონეტა' }),
     ).toBeTruthy();
     expect(rewardedAds.load).toHaveBeenCalledTimes(1);
     expect(rewardedAds.show).not.toHaveBeenCalled();
     await fireEvent.press(screen.getByTestId('rewarded-ad'));
     expect(rewardedAds.show).toHaveBeenCalledTimes(1);
     gameStore.setState({
-      game: { ...initialState(journeyCatalog), coins: 75 },
+      game: { ...initialState(journeyCatalog), coins: 50 },
     });
     await screen.rerender(<Coins />);
     expect(screen.queryByText(/მინიშნებისთვის მონეტები არ გყოფნის/)).toBeNull();
@@ -586,6 +590,9 @@ test('the bottom bar has the journey, album and settings, and no shop', async ()
   // The open tab does not stack itself again.
   await fireEvent.press(screen.getByTestId('tab-journey'));
   expect(navigation.navigate).toHaveBeenCalledTimes(1);
+  // Android throws on "tabbar" at launch; it gets its own equivalent role.
+  expect(tabBarRole('ios')).toBe('tabbar');
+  expect(tabBarRole('android')).toBe('tablist');
 });
 
 test('victory returns to the journey path; there is no home button', async () => {

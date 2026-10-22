@@ -14,7 +14,7 @@ import {
 } from '../src/storage/repository';
 import { reachLevel, submit } from './helpers';
 import { TestSqlite } from './sqliteAdapter';
-const catalog = previousCatalogs.find((pack) => pack.revision === 24)!;
+const catalog = previousCatalogs().find((pack) => pack.revision === 24)!;
 const vocabulary = vocabularyForRevision(24);
 const removed = new Set<string>(review.removedWords);
 
@@ -75,7 +75,7 @@ test('every newly rejected spelling is blocked in required, variant and bonus ro
 test.each(['partial', 'complete'] as const)(
   'v23 %s progress and journey postcards survive current migration and restart',
   async (scenario) => {
-    const previous = previousCatalogs.find((pack) => pack.revision === 23)!;
+    const previous = previousCatalogs().find((pack) => pack.revision === 23)!;
     const index = 8;
     const level = previous.levels[index]!;
     let old = reachLevel(index, previous);
@@ -113,7 +113,7 @@ test.each(['partial', 'complete'] as const)(
     try {
       await migrateDatabase(db);
       await createSqliteRepository(db, previous).save(old, 0);
-      const repo = createSqliteRepository(db, catalog, previousCatalogs);
+      const repo = createSqliteRepository(db, catalog, previousCatalogs());
       const upgraded = (await repo.load())!;
       expect(upgraded.state.contentRevision).toBe(24);
       expect(upgraded.state.progress['ka-001']!.hintsUsed).toBe(1544);
@@ -139,7 +139,7 @@ test.each(['partial', 'complete'] as const)(
           .map((card) => card.chapterId),
       ).toEqual(expect.arrayContaining(cards));
       expect(
-        await createSqliteRepository(db, catalog, previousCatalogs).load(),
+        await createSqliteRepository(db, catalog, previousCatalogs()).load(),
       ).toEqual(upgraded);
       if (scenario === 'partial') {
         const hinted = transition(
@@ -152,7 +152,7 @@ test.each(['partial', 'complete'] as const)(
         const restarted = await createSqliteRepository(
           db,
           catalog,
-          previousCatalogs,
+          previousCatalogs(),
         ).load();
         expect(restarted!.state).toEqual(hinted);
       }

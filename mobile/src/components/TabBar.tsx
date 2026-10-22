@@ -1,5 +1,5 @@
 import type { BottomTabBarProps } from 'expo-router/js-tabs';
-import { Pressable, StyleSheet, View } from 'react-native';
+import { Platform, Pressable, StyleSheet, View } from 'react-native';
 import { palette, space } from '../theme';
 import { Icon, type IconName } from './Icon';
 import { Txt } from './Text';
@@ -13,11 +13,17 @@ const TABS: Readonly<
   settings: { label: 'პარამეტრები', icon: 'sliders', testID: 'tab-settings' },
 };
 
+/** Android has no "tabbar" role and throws on it at launch; "tablist" is its
+ * equivalent. */
+export function tabBarRole(os: string = Platform.OS) {
+  return os === 'ios' ? 'tabbar' : 'tablist';
+}
+
 /** Enamel bottom bar shared by the journey path, the album and settings. */
 export function TabBar({ state, navigation, insets }: BottomTabBarProps) {
   return (
     <View
-      accessibilityRole="tabbar"
+      accessibilityRole={tabBarRole()}
       style={[
         styles.tabs,
         { paddingBottom: Math.max(insets.bottom, space.sm) },

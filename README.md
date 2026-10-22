@@ -39,7 +39,8 @@ Selected stack: Expo SDK 57, React Native 0.86.3, React 19.2.3, strict TypeScrip
 Expo Router, Skia, Gesture Handler, Reanimated/Worklets, Zustand and Expo SQLite.
 Native versions were installed from SDK 57's compatibility map using `expo install`.
 The npm lockfile pins the complete tree. Gameplay needs no backend; optional
-AdMob demo ads require internet. No AdMob registration is needed for the demo IDs.
+Ads require internet. Development and `beta` (tester) builds show Google's demo
+ads; only `production` EAS builds (`ASOBANA_LIVE_ADS=1`) request the live units.
 
 ## Install and play
 
@@ -68,8 +69,8 @@ tap mode: tap letters in order, then the check in the wheel's hub; ✕ clears.
 Find every crossword word to unlock the next level. Bonuses are optional. Hints
 reveal a cell or word and deduct the displayed price. Progress and settings commit
 before success feedback, so force-close/reopen resumes the last committed state.
-The coins screen offers an optional AdMob demo ad for 75 coins. An unaffordable
-hint keeps its icon and its price pill turns gold (`▶ +75`); tapping it opens the ad
+The coins screen offers an optional rewarded ad for 50 coins. An unaffordable
+hint keeps its icon and its price pill turns gold (`▶ +50`); tapping it opens the ad
 directly on the board, without visiting the coins screen. Ads preload when coins
 are low, and a pending watch can be cancelled. Watching an ad never purchases a
 hint automatically.

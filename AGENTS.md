@@ -379,9 +379,8 @@ as the canonical rulebook; tool-specific instruction files should point here.
   remains usable; no new save system or reset behavior is required for this release.
 
 - The owner approved a **test banner at the bottom of the game screen** on
-  2026-10-20. Use Google's demo banner only, in a reserved footer separated from
-  the letter wheel and hint buttons. Preserve their touch targets and existing
-  saves; this experiment does not authorize live ads.
+  2026-10-20, in a reserved footer separated from the letter wheel and hint
+  buttons. Preserve their touch targets and existing saves.
 
 - The owner approved the economy on 2026-10-19: **200 starting coins**, **20 coins
   per completed level**, **20 coins per letter hint** and **50 coins per word hint**.
@@ -391,18 +390,35 @@ as the canonical rulebook; tool-specific instruction files should point here.
   migrating an existing save must preserve its earned balance, completed levels,
   partial progress, paid hints, bonus credits and postcards without repricing past
   actions or granting a starting-balance top-up. Future actions use the new prices.
-- The owner approved **75-coin optional rewarded ads** on 2026-10-19, starting
-  with **Google AdMob demo ads only** on the coins screen and unaffordable hint
-  buttons. The owner requested a direct flow: show the ad/+75 offer on the hint
-  button, then present on that press without routing through a second page.
+- The owner approved optional rewarded ads on 2026-10-19 on the coins screen and
+  unaffordable hint buttons, and on 2026-10-22 lowered the reward from 75 to
+  **50 coins per ad**, so one ad pays for one word hint. Coins already earned
+  from 75-coin ads stay. The owner requested a direct flow: show the ad/+50 offer
+  on the hint button, then present on that press without routing through a second page.
   Preload when coins are low; cancel a pending presentation when leaving the
   board. Never show ads without a watch press or spend the reward on a hint
   automatically. Credit only the SDK's earned-reward event;
   save the claim receipt and balance atomically so retries, duplicate callbacks
   and restarts cannot award the same claim twice. Preserve existing saves.
-  Production ads require a separate account, consent and release setup.
+- The owner approved **live AdMob ads** on 2026-10-22 with their own account
+  (publisher `ca-app-pub-8935292332039677`). iOS uses app ID `~8334673550`,
+  banner unit `/8167152594` and rewarded unit `/8819345552`; Android uses app ID
+  `~9321375605`, banner `/6993138895` and rewarded `/4063723227`
+  (`mobile/src/ads/adUnits.ts`). Live units serve only in release builds whose
+  EAS profile sets `ASOBANA_LIVE_ADS=1` (the `production` profile), which
+  `mobile/app.config.js` embeds at build time; development builds and tests use
+  Google's demo units. Do not move this switch into an `EXPO_PUBLIC_` variable:
+  Metro's cache can carry a stale inlined value between builds. To avoid
+  suspension for self-clicks, the owner chose demo ads for every tester build:
+  TestFlight and Play testing builds use the `beta` profile (production with
+  `ASOBANA_LIVE_ADS=0`). Only the build submitted for public release uses
+  `production`, and the owner does not install it. Ads stay
+  **non-personalized** (no App Tracking Transparency prompt), rated G, and start
+  only after Google's UMP consent flow allows ad requests; Settings offers the
+  consent form again wherever the law requires it. Never tap live ads on
+  non-test devices; register testers as AdMob test devices.
 - The owner approved an optional **rewarded "×2" offer on the level-complete
-  screen** on 2026-10-19 (same demo ads), shown beside the level reward: watching
+  screen** on 2026-10-19 (same rewarded unit), shown beside the level reward: watching
   it pays the level's completion reward once more, **20 extra coins per level, at
   most once per level**, including after restarting or reopening a finished level.
   Continuing without watching stays the primary action; only a press presents,
@@ -453,7 +469,10 @@ grammar classifier: new vocabulary still needs the editorial review above.
    `uv run mypy src` from `puzzle-generator`. Include meaningful coverage of vocabulary
    exclusions, rare bonuses, the 75-level gap, length progression, deterministic
    rebuilding and save migration. Solve all 500 levels via `npm run validate:content`
-   (also included in `npm run check`). For bundled mobile content changes, verify an
+   (also included in `npm run check`). That check and the campaign tests are the
+   release gate: since 2026-10-22 the app no longer re-runs `validateWide` or parses
+   the historical packs at launch (about 3 s of every Android start); historical
+   packs load only to upgrade an older save. For bundled mobile content changes, verify an
    iOS export from `mobile` with `npx expo export --platform ios`.
 5. Update the review and content documentation with actual results and limitations.
    Do not describe an export as a native-device test or a TestFlight upload.

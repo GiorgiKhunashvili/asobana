@@ -8,9 +8,18 @@
       "developmentClient": true,
       "distribution": "internal"
     },
+    "beta": {
+      "extends": "production",
+      "env": {
+        "ASOBANA_LIVE_ADS": "0"
+      }
+    },
     "production": {
       "distribution": "store",
       "autoIncrement": true,
+      "env": {
+        "ASOBANA_LIVE_ADS": "1"
+      },
       "ios": {
         "image": "latest"
       }

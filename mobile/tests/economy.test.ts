@@ -92,7 +92,7 @@ test.each([
   },
 );
 
-test.each([catalog, previousCatalogs.find((pack) => pack.revision === 25)!])(
+test.each([catalog, previousCatalogs().find((pack) => pack.revision === 25)!])(
   'old-price revision $revision save keeps balances, paid hints, bonuses and postcards after reopen',
   async (previous) => {
     const folder = mkdtempSync(join(tmpdir(), 'asobana-economy-'));
@@ -154,7 +154,11 @@ test.each([catalog, previousCatalogs.find((pack) => pack.revision === 25)!])(
       db.close();
       db = new TestSqlite(path);
       await migrateDatabase(db);
-      const repository = createSqliteRepository(db, catalog, previousCatalogs);
+      const repository = createSqliteRepository(
+        db,
+        catalog,
+        previousCatalogs(),
+      );
       const store = createGameStore(catalog, async () => repository);
       await store.getState().initialize();
       const loaded = store.getState().game!;
@@ -203,7 +207,7 @@ test.each([catalog, previousCatalogs.find((pack) => pack.revision === 25)!])(
       db = new TestSqlite(path);
       await migrateDatabase(db);
       const restarted = createGameStore(catalog, async () =>
-        createSqliteRepository(db, catalog, previousCatalogs),
+        createSqliteRepository(db, catalog, previousCatalogs()),
       );
       await restarted.getState().initialize();
       expect(restarted.getState().game).toEqual(expected);

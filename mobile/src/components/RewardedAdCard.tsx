@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { liveAdsEnabled } from '../ads/adUnits';
 import { rewardedAds, useRewardedAd } from '../ads/rewardedAds';
 import { rewardedAdMessages } from '../ads/messages';
 import { REWARDED_AD_COINS } from '../engine/adRewards';
@@ -36,7 +37,7 @@ export function RewardedAdCard() {
   return (
     <Card>
       <Display variant="eyebrow" color={palette.gold}>
-        {`სატესტო რეკლამა · +${REWARDED_AD_COINS}`}
+        {`${liveAdsEnabled() ? 'რეკლამა' : 'სატესტო რეკლამა'} · +${REWARDED_AD_COINS}`}
       </Display>
       <Txt accessibilityLiveRegion="polite">{rewardedAdMessages[status]}</Txt>
       <PrimaryButton
