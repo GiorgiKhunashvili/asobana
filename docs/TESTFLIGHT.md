@@ -1,5 +1,39 @@
 # Asobana TestFlight
 
+## Live-ads, Android and performance beta — 2026-10-22 (uploaded, Apple processing)
+
+**Asobana 0.1.0 (3)**, built locally with Xcode 26.6 / iOS 26.5 SDK
+(`eas build --local --profile beta`) from branch
+`live-ads-android-performance` at `284ac1a`. TestFlight builds use the new
+`beta` profile: the owner's real AdMob app ID with Google's demo ad units, so
+testers can tap ads without risking the AdMob account. Only a `production`
+build serves live ads. Non-interactive `eas submit` uploaded it to App Store
+Connect app `6825282360` (submission `712ef18f-1cdd-4f6a-82e4-8893c7933772`);
+Apple's processing was not confirmed when this was written.
+
+New since build 2:
+
+- live AdMob setup behind the build profile, Google's UMP consent flow before
+  any ad loads, and a Settings entry to change consent where required;
+- the rewarded ad pays 50 coins instead of 75;
+- launch no longer re-runs the 500-level release gates or parses 28 historical
+  packs (first frame 3.2 s → 0.37 s on an Android emulator);
+- icons, coins, backdrops, the wheel plate and postcard stamps draw with SVG
+  instead of separate Skia canvases (game screen 11 Android texture layers → 1);
+- the Android-only fixes (tab bar crash, splash circle) are in the shared code
+  but do not change iOS behaviour.
+
+- IPA check: Asobana 0.1.0 (3), bundle `ge.spilogames.asobana`,
+  `GADApplicationIdentifier` `ca-app-pub-8935292332039677~8334673550`, embedded
+  `extra.liveAds` false, Hermes bundle includes `react-native-svg` and revision 29. Size: 56,960,237 bytes; SHA-256:
+  `24473f5ab4d950d85c48a46785566d7238395d0054013e74c8a8e2d676efc934`.
+- Preflight: root check (353 app tests in 48 suites, all 500 levels solved,
+  TypeScript/ESLint/formatting) passed. Android release builds were exercised on
+  an emulator; this IPA has not been installed on an iOS device or simulator.
+- Evidence (git-ignored): `artifacts/asobana-0.1.0-beta-2026-10-22.ipa`,
+  `artifacts/asobana-ios-beta-2026-10-22.log`,
+  `artifacts/asobana-ios-beta-2026-10-22-submit.log`.
+
 ## Revision 29 beta — 2026-10-21 (uploaded, Apple processing)
 
 **Asobana 0.1.0 (2)** is the first upload to the new App Store Connect app
