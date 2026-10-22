@@ -384,7 +384,8 @@ function GameLayout({
             width={content}
             tone={tone}
             accent={tone.scene.accent}
-            disabled={busy}
+            // Never disabled while saving: submissions queue in order, and a
+            // phone's save is long enough that the next word was ignored.
             onSubmit={onSubmit}
             onTileEntered={tileHaptic}
             feedback={feedback}

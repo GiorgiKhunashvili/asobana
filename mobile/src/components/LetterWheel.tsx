@@ -1,19 +1,15 @@
 import { Canvas, Circle, Path, Skia } from '@shopify/react-native-skia';
 import {
   useCallback,
+  useEffect,
   useMemo,
+  useRef,
   useState,
   type ReactNode,
   type RefObject,
 } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 import { GestureDetector } from 'react-native-gesture-handler';
-import Svg, {
-  Circle as SvgCircle,
-  Defs,
-  RadialGradient,
-  Stop,
-} from 'react-native-svg';
 import Animated, {
   LinearTransition,
   useAnimatedStyle,
@@ -23,6 +19,7 @@ import Animated, {
   type SharedValue,
 } from 'react-native-reanimated';
 import type { WheelSelection, WheelTile } from '../engine/wheel';
+import type { LetterTile } from '../models/types';
 import { fonts, letterLift, motion, palette, type Tone } from '../theme';
 import { RoundButton } from './Buttons';
 import { Icon } from './Icon';
@@ -58,6 +55,8 @@ export function wheelSize(content: number, width: number, height: number) {
 }
 
 const SELECTED_SCALE = 1.06;
+/** Longest a submitted word waits in the strip for its result. */
+const PENDING_MS = 4000;
 /** The selection disc is drawn this much larger than the touch circle. */
 const HALO = 4;
 const HUB = 52;
@@ -78,10 +77,43 @@ export function LetterWheel(props: LetterWheelViewProps) {
   const disabled = Boolean(props.disabled);
   const [tapMode, setTapMode] = useState(false);
   const [tapIds, setTapIds] = useState<readonly string[]>([]);
+  const { onSubmit, onTileEntered } = props;
+  // The word just submitted stays in the strip until its own result arrives.
+  // Saving takes a moment, and meanwhile the strip fell back to the previous
+  // outcome: an old red "not here" made a correct word look rejected.
+  const feedbackKey = props.feedback?.key;
+  const latestKey = useRef(feedbackKey);
+  useEffect(() => {
+    latestKey.current = feedbackKey;
+  }, [feedbackKey]);
+  const [pending, setPending] = useState<{
+    readonly letters: readonly string[];
+    readonly after: number | undefined;
+    readonly tiles: readonly LetterTile[];
+  } | null>(null);
+  const submit = useCallback(
+    (ids: readonly string[]) => {
+      setPending({
+        letters: ids.map(
+          (id) => tiles.find((tile) => tile.id === id)?.letter ?? '',
+        ),
+        after: latestKey.current,
+        tiles,
+      });
+      onSubmit(ids);
+    },
+    [tiles, onSubmit],
+  );
+  // A save that fails publishes no result; let the strip move on regardless.
+  useEffect(() => {
+    if (!pending) return;
+    const timer = setTimeout(() => setPending(null), PENDING_MS);
+    return () => clearTimeout(timer);
+  }, [pending]);
   const wheel = useLetterWheel({
     tiles,
     size,
-    onSubmit: props.onSubmit,
+    onSubmit: submit,
     disabled: disabled || tapMode,
     ...(props.onTileEntered ? { onTileEntered: props.onTileEntered } : {}),
   });
@@ -117,11 +149,11 @@ export function LetterWheel(props: LetterWheelViewProps) {
   const tipY = useDerivedValue(() => pointer.get().y);
   const tipOpacity = useDerivedValue(() => (selection.get().active ? 1 : 0));
 
-  const { onSubmit, onTileEntered } = props;
   const submitTaps = useCallback(() => {
-    onSubmit(tapIds);
+    if (tapIds.length < 2) return;
+    submit(tapIds);
     setTapIds([]);
-  }, [onSubmit, tapIds]);
+  }, [submit, tapIds]);
   const tapLetter = useCallback(
     (id: string) => {
       setTapIds((ids) => (ids.includes(id) ? ids : [...ids, id]));
@@ -129,13 +161,20 @@ export function LetterWheel(props: LetterWheelViewProps) {
     },
     [onTileEntered],
   );
-  const letters = useMemo(
+  const traced = useMemo(
     () =>
       tapMode
         ? tapIds.map((id) => tiles.find((tile) => tile.id === id)?.letter ?? '')
         : Array.from(wheel.preview),
     [tapMode, tapIds, tiles, wheel.preview],
   );
+  const letters =
+    traced.length === 0 &&
+    pending !== null &&
+    pending.after === feedbackKey &&
+    pending.tiles === tiles
+      ? pending.letters
+      : traced;
   const center = size / 2;
 
   return (
@@ -288,68 +327,81 @@ const SHADOW_FALLOFF = [
   [2, 0.023],
 ] as const;
 const SHADOW_SIGMA = 10;
-const SHADOW_COLOR = 'rgb(40, 22, 30)';
 const SHADOW_ALPHA = 0.35;
 
 /** Static medallion: ivory enamel face, gold rim wire and a fine inner ring.
- * SVG, so it is part of the view tree; as a Skia canvas it was a second large
- * texture layer composited on every Android frame. */
+ * Plain views with a native radial-gradient shadow: drawn by the GPU, unlike a
+ * Skia canvas (an extra texture layer every Android frame) or an SVG
+ * (rasterized in software on the main thread as each level opened). */
 function Plate({ size }: { size: number }) {
   const c = size / 2 + SHADOW;
   const edge = size / 2 - 4;
   const outer = edge + 2 * SHADOW_SIGMA;
+  const stops = [[-Infinity, 1] as const, ...SHADOW_FALLOFF]
+    .map(
+      ([sigmas, share]) =>
+        `rgba(40, 22, 30, ${(SHADOW_ALPHA * share).toFixed(4)}) ${(
+          Math.max(0, (edge + sigmas * SHADOW_SIGMA) / outer) * 100
+        ).toFixed(2)}%`,
+    )
+    .join(', ');
   return (
-    <Svg
-      pointerEvents="none"
-      width={size + SHADOW * 2}
-      height={size + SHADOW * 2}
-      style={{ position: 'absolute', left: -SHADOW, top: -SHADOW }}
-    >
-      <Defs>
-        <RadialGradient
-          id="plateShadow"
-          cx={c}
-          cy={c + 4}
-          r={outer}
-          gradientUnits="userSpaceOnUse"
-        >
-          {[[-Infinity, 1] as const, ...SHADOW_FALLOFF].map(
-            ([sigmas, share]) => (
-              <Stop
-                key={sigmas}
-                offset={Math.max(0, (edge + sigmas * SHADOW_SIGMA) / outer)}
-                stopColor={SHADOW_COLOR}
-                stopOpacity={SHADOW_ALPHA * share}
-              />
-            ),
-          )}
-        </RadialGradient>
-      </Defs>
-      <SvgCircle cx={c} cy={c + 4} r={outer} fill="url(#plateShadow)" />
-      <SvgCircle
-        cx={c}
-        cy={c}
-        r={size / 2 - 2}
-        fill={palette.parchment}
-        fillOpacity={0.9}
+    <>
+      <View
+        pointerEvents="none"
+        style={{
+          position: 'absolute',
+          left: -SHADOW,
+          top: -SHADOW,
+          width: size + SHADOW * 2,
+          height: size + SHADOW * 2,
+          experimental_backgroundImage: `radial-gradient(circle ${outer}px at ${c}px ${c + 4}px, ${stops})`,
+        }}
       />
-      <SvgCircle
-        cx={c}
-        cy={c}
-        r={size / 2 - 2}
-        fill="none"
-        stroke={palette.gold}
-        strokeWidth={4}
+      <View
+        pointerEvents="none"
+        style={[
+          styles.ring,
+          {
+            left: 2,
+            top: 2,
+            width: size - 4,
+            height: size - 4,
+            borderRadius: size / 2 - 2,
+            backgroundColor: palette.parchment,
+            opacity: 0.9,
+          },
+        ]}
       />
-      <SvgCircle
-        cx={c}
-        cy={c}
-        r={size / 2 - 11}
-        fill="none"
-        stroke={palette.parchmentRing}
-        strokeWidth={1.2}
+      <View
+        pointerEvents="none"
+        style={[
+          styles.ring,
+          {
+            width: size,
+            height: size,
+            borderRadius: size / 2,
+            borderWidth: 4,
+            borderColor: palette.gold,
+          },
+        ]}
       />
-    </Svg>
+      <View
+        pointerEvents="none"
+        style={[
+          styles.ring,
+          {
+            left: 10.4,
+            top: 10.4,
+            width: size - 20.8,
+            height: size - 20.8,
+            borderRadius: size / 2 - 10.4,
+            borderWidth: 1.2,
+            borderColor: palette.parchmentRing,
+          },
+        ]}
+      />
+    </>
   );
 }
 
@@ -468,6 +520,7 @@ function TapTile({
 }
 
 const styles = StyleSheet.create({
+  ring: { position: 'absolute', left: 0, top: 0 },
   disc: { position: 'absolute', top: 0 },
   letterSlot: {
     position: 'absolute',

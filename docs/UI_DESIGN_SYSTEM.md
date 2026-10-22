@@ -277,24 +277,35 @@ the line-box centre (ascent 1068, descent 292, x-height 546). Every instance
 keeps all 33 modern letters plus the full Mkhedruli and Mtavruli blocks.
 Regenerate with `uv run --with fonttools python -I scripts/instance-fonts.py`.
 
-## Drawing: Skia only for live drawing
+## Drawing: cheapest primitive for each job
 
-On Android every Skia `<Canvas>` is its own `TextureView`, a separate layer the
-GPU composites on every frame. On 2026-10-22 the game screen had 11 of them
-(icons, coin, a full-screen shading layer, the wheel's plate); Samsung testing
-reported lag. Static vector art (icons, coins, backdrops, the wheel plate,
-postcard stamps and postmarks) is therefore drawn with `react-native-svg`, which
-renders inside the normal view tree. Skia stays only where drawing follows a
-gesture or animation every frame: the wheel's cord, the live loading mark and the
-coach-mark spotlight. Skia's path API (no canvas) may still compute geometry,
-e.g. the stamp's perforated outline exported with `toSVGString()`.
+Measured on Android in October 2026, each drawing primitive has its own cost:
+
+- A Skia `<Canvas>` is its own `TextureView`, a layer the GPU composites on every
+  frame. The game screen once had 11 of them; Samsung testing reported lag.
+- A `react-native-svg` view is rasterized **in software on the main thread** into a
+  bitmap as its screen appears, then uploaded. Harmless at icon size; a
+  full-screen SVG is about 15 MB per screen and made every "გაგრძელება" stutter.
+- Native views (`experimental_backgroundImage` linear/radial gradients, borders,
+  `borderRadius`, `<Image resizeMode="repeat">` tiles) are drawn by the GPU with
+  no extra layer or bitmap.
+
+So: large static surfaces (backdrops, the wheel plate and its shadow) use native
+views; small static art (icons, coins, postcard stamps and postmarks) uses SVG;
+Skia only draws what follows a gesture or animation every frame (the wheel's cord,
+the live loading mark, the coach-mark spotlight). Skia's path API without a
+canvas may still compute geometry, e.g. the stamp's perforated outline exported
+with `toSVGString()`. The enamel lattice is a tile from
+`scripts/build-lattice.py`. `mobile/tests/drawingCost.test.tsx` guards the
+backdrops and the plate.
 
 ## Components
 
 - `Screen` / `TopBar` — backdrop, safe areas, and the native-gesture-wrapped
   `ScrollView` the wheel blocks while tracing (contract requirement; keep it).
-- `Backdrop` — static SVG ground: gradient, kiln glow, faint wire-star lattice;
-  on scenes, SVG dusk gradients over the painting.
+- `Backdrop` — enamel ground from native gradients (gradient, kiln glow) and a
+  repeating wire-star lattice tile; on scenes, native dusk gradients over the
+  painting.
 - `CrosswordBoard` — cells sized to the space given (26–84 pt, 4 pt gaps,
   corners scaling with the cell); `BoardMoment` drives reveal order, hint
   gilding, duplicate reminders and the victory wave.

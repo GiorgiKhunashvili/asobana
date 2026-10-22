@@ -456,6 +456,71 @@ test('tap mode submits unique tile IDs in the order tapped', async () => {
   expect(onSubmit).toHaveBeenCalledWith(ids);
 });
 
+test('the wheel keeps taking words while the previous one saves', async () => {
+  // Saves queue in order, so input never has to wait. On a phone a save takes
+  // long enough that a disabled wheel ignored the next word, which felt laggy.
+  const before = gameStore.getState().game;
+  const dispatch = jest
+    .mocked(gameStore.getState().dispatch)
+    .mockResolvedValue(undefined);
+  try {
+    gameStore.setState({
+      game: { ...initialState(journeyCatalog), tutorialSeen: true },
+      busy: true,
+    });
+    const screen = await render(<GameplayScreen levelId="ka-001" />);
+    await fireEvent.press(screen.getByTestId('input-mode'));
+    const ids = tilesFor(journeyCatalog.levels[0]!, 'ყდა');
+    for (const id of ids)
+      await fireEvent.press(screen.getByTestId(`tap-tile-${id}`));
+    await fireEvent.press(screen.getByTestId('tap-submit'));
+    expect(dispatch).toHaveBeenCalledWith({
+      type: 'submit',
+      levelId: 'ka-001',
+      tileIds: ids,
+    });
+  } finally {
+    gameStore.setState({ game: before, busy: false });
+  }
+});
+
+test('a submitted word replaces the last outcome until its own result arrives', async () => {
+  // Saving takes a moment on a phone. The previous word's red "not here" must
+  // not reappear in that gap, or a correct word looks rejected before it fills.
+  const family = catalog.levels[1]!;
+  const ids = tilesFor(family, 'დედა');
+  const props = {
+    tiles: family.tiles,
+    size: 280,
+    width: 360,
+    tone: chapterTone(family.chapterId),
+    onSubmit: jest.fn(),
+  };
+  const rejected = {
+    key: 1,
+    kind: 'invalid' as const,
+    word: 'დედ',
+    caption: 'ეს სიტყვა აქ არ არის',
+  };
+  const screen = await render(<LetterWheel {...props} feedback={rejected} />);
+  const strip = () => screen.getByTestId('selection-preview');
+  expect(strip().props.accessibilityLabel).toBe('დედ, ეს სიტყვა აქ არ არის');
+  await fireEvent.press(screen.getByTestId('input-mode'));
+  for (const id of ids)
+    await fireEvent.press(screen.getByTestId(`tap-tile-${id}`));
+  await fireEvent.press(screen.getByTestId('tap-submit'));
+  expect(props.onSubmit).toHaveBeenCalledWith(ids);
+  // Still waiting for the save: the submitted word stays, not the old outcome.
+  expect(strip().props.accessibilityLabel).toBe('დედა');
+  await screen.rerender(
+    <LetterWheel
+      {...props}
+      feedback={{ key: 2, kind: 'found', word: 'დედა' }}
+    />,
+  );
+  expect(strip().props.accessibilityLabel).toBe('დედა, ნაპოვნია');
+});
+
 test('journey countries cover every stop once, in travel order', () => {
   expect(COUNTRIES.flatMap((country) => country.chapterIds)).toEqual(
     journeyCatalog.chapters.map((chapter) => chapter.id),
