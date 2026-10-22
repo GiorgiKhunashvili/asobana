@@ -1,5 +1,26 @@
 # Asobana TestFlight
 
+## USB board-entry profiling — 2026-10-22 (perf APKs only, no upload)
+
+Committed/pushed the prior rewarded-preload work as `54101da`, then rebuilt it
+as the baseline. Tested on the Samsung Galaxy A07 with the isolated package
+`ge.spilogames.asobana.perf`, version 0.1.0 / local versionCode 1, ARM64, Java 17
+and `ASOBANA_LIVE_ADS=0`. All timed builds used normal non-debuggable release
+settings. A separate temporary shell-profileable probe was used only for Java
+method attribution and was removed before subsequent builds.
+
+Build variants: baseline; shell-profileable probe; temporary icon-disabled
+control; pre-rendered-icon candidate; final source cleanup. Reinstalled baseline
+and candidate for reverse comparisons. The final release perf APK remains on the
+phone; real app data and existing IPA/AAB tester artifacts are untouched.
+
+Median first-board draw recording fell from 37.18 to 20.08 ms (46%); whole-frame
+results remain variable. `npm run check` passed (378 tests, 51 suites, 500 levels
+solved). See [the board-entry report](ANDROID_BOARD_ENTRY_PERFORMANCE.md) for
+all samples, the correction to earlier debug-enabled measurements, functional
+checks and limitations. No store version increment or upload. Temporary builds,
+traces and native build folders are removed after recording results.
+
 ## USB rewarded-preload profiling — 2026-10-22 (perf APKs only, no upload)
 
 Rebuilt `master` at `6538781`, then tested deferred rewarded preloading on the

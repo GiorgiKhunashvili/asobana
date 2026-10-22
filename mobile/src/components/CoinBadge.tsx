@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { Pressable, StyleSheet, View } from 'react-native';
+import { Image, Platform, Pressable, StyleSheet, View } from 'react-native';
 import Animated, {
   interpolateColor,
   useAnimatedStyle,
@@ -12,10 +12,15 @@ import Svg, { Circle, G, Path } from 'react-native-svg';
 import { motion, palette } from '../theme';
 import { STAR8 } from './Icon';
 import { Txt } from './Text';
+import { coinGeometry } from './coinGeometry';
+import { gameplayCoinAssets } from './gameplayIconAssets';
 
 /** In-game coin: struck gold with the eight-pointed star. Not a real currency. */
 export function CoinGlyph({ size = 20 }: { readonly size?: number }) {
-  const r = size / 2;
+  const geometry = coinGeometry(size);
+  const { r } = geometry;
+  const bitmap =
+    Platform.OS === 'android' ? gameplayCoinAssets[size] : undefined;
   return (
     <View
       pointerEvents="none"
@@ -23,24 +28,35 @@ export function CoinGlyph({ size = 20 }: { readonly size?: number }) {
       importantForAccessibility="no-hide-descendants"
       style={{ width: size, height: size }}
     >
-      {/* SVG, not a Skia canvas: each canvas is a texture layer on Android. */}
-      <Svg width={size} height={size}>
-        <Circle cx={r} cy={r} r={r} fill={palette.goldDeep} />
-        <Circle cx={r} cy={r - size * 0.04} r={r * 0.9} fill={palette.gold} />
-        <Circle
-          cx={r}
-          cy={r - size * 0.04}
-          r={r * 0.68}
-          fill="none"
-          stroke={palette.goldDeep}
-          strokeWidth={Math.max(1, size * 0.05)}
+      {bitmap ? (
+        <Image
+          source={bitmap}
+          fadeDuration={0}
+          resizeMode="contain"
+          style={{ width: size, height: size }}
         />
-        <G
-          transform={`translate(${r - size * 0.27} ${r - size * 0.31}) scale(${(size * 0.54) / 24})`}
-        >
-          <Path d={STAR8} fill={palette.goldDeep} />
-        </G>
-      </Svg>
+      ) : (
+        <Svg width={size} height={size}>
+          <Circle cx={r} cy={r} r={r} fill={palette.goldDeep} />
+          <Circle
+            cx={r}
+            cy={geometry.cy}
+            r={geometry.faceRadius}
+            fill={palette.gold}
+          />
+          <Circle
+            cx={r}
+            cy={geometry.cy}
+            r={geometry.ringRadius}
+            fill="none"
+            stroke={palette.goldDeep}
+            strokeWidth={geometry.strokeWidth}
+          />
+          <G transform={geometry.starTransform}>
+            <Path d={STAR8} fill={palette.goldDeep} />
+          </G>
+        </Svg>
+      )}
     </View>
   );
 }
