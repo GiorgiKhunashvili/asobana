@@ -1,5 +1,36 @@
 # Asobana TestFlight
 
+## Smoother screens beta — 2026-10-22 (uploaded, Apple processing)
+
+**Asobana 0.1.0 (4)**, built locally with the `beta` profile (real AdMob app
+IDs, demo ad units) from branch `live-ads-android-performance` at `06472eb`.
+Android versionCode 6 was built from the same commit for Play internal testing.
+Non-interactive `eas submit` uploaded it to App Store Connect app `6825282360`
+(submission `4056a56f-4a23-44fb-ada6-ef3e586af6e9`); Apple's processing was not
+confirmed when this was written.
+
+New since build 3:
+
+- a correct word no longer flashes the previous word's red "not here" while it
+  saves; the strip keeps the submitted word until its own result arrives;
+- the wheel accepts the next word while the previous one is saving;
+- backdrops and the wheel plate draw with native gradients, borders and a
+  repeating lattice tile instead of full-screen SVG, which Android rasterized in
+  software as each screen opened (worst "გაგრძელება" transition frames on an
+  emulator 59–117 ms → 46–54 ms).
+
+- IPA check: Asobana 0.1.0 (4), bundle `ge.spilogames.asobana`,
+  `GADApplicationIdentifier` `ca-app-pub-8935292332039677~8334673550`, embedded
+  `extra.liveAds` false; the Hermes bundle contains the native gradients and the
+  lattice tile. Size: 56,965,596 bytes; SHA-256:
+  `6205fd140b31e004300b0cc8c09092cda59397575a4ccfe9a525061c732d13dc`.
+- Preflight: root check (357 app tests in 49 suites, all 500 levels solved,
+  TypeScript/ESLint/formatting) passed. Android release builds were exercised on
+  an emulator; this IPA has not been installed on an iOS device or simulator.
+- Evidence (git-ignored): `artifacts/asobana-0.1.0-beta-smooth.ipa`,
+  `artifacts/asobana-ios-beta-smooth.log`,
+  `artifacts/asobana-ios-beta-smooth-submit.log`.
+
 ## Live-ads, Android and performance beta — 2026-10-22 (uploaded, Apple processing)
 
 **Asobana 0.1.0 (3)**, built locally with Xcode 26.6 / iOS 26.5 SDK
