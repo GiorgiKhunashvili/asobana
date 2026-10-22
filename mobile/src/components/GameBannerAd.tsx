@@ -1,5 +1,5 @@
 import { useIsFocused } from 'expo-router';
-import { useEffect, useId, useState, useSyncExternalStore } from 'react';
+import { memo, useEffect, useId, useState, useSyncExternalStore } from 'react';
 import { AppState, StyleSheet, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { adUnitId } from '../ads/adUnits';
@@ -105,7 +105,9 @@ export function SharedGameBanner() {
   );
 }
 
-function Banner() {
+// Footer visibility belongs to the parent. Its changes must not re-render the
+// SDK subtree with identical ad props; native refresh and SDK events still run.
+const Banner = memo(function Banner() {
   const [sdk, setSdk] = useState<AdsSdk | null>(null);
   const [status, setStatus] = useState<'loading' | 'loaded' | 'failed'>(
     'loading',
@@ -146,7 +148,7 @@ function Banner() {
       )}
     </View>
   );
-}
+});
 
 const styles = StyleSheet.create({
   footer: {

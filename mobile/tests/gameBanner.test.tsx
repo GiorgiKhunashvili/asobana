@@ -19,7 +19,9 @@ jest.mock(
 
 /** Each mount stands for a new native ad view: a new web view on Android. */
 let bannerMounts = 0;
+let bannerRenders = 0;
 function NativeBanner(props: object) {
+  bannerRenders++;
   useEffect(() => {
     bannerMounts++;
   }, []);
@@ -39,6 +41,7 @@ const wait = (ms: number) =>
 beforeEach(() => {
   jest.useFakeTimers();
   bannerMounts = 0;
+  bannerRenders = 0;
   jest.mocked(useIsFocused).mockReturnValue(true);
   jest.mocked(loadNativeAdsSdk).mockResolvedValue(sdk);
   AppState.currentState = 'active';
@@ -124,4 +127,54 @@ test('unsupported builds and SDK failures keep a noninteractive fallback', async
   await wait(FIRST_BANNER_DELAY_MS);
   expect(screen.getByText('რეკლამა ვერ ჩაიტვირთა')).toBeTruthy();
   expect(screen.queryByTestId('native-banner')).toBeNull();
+});
+
+// Ad opportunities must not be removed merely to reduce recreation costs.
+test('each short foreground return mounts a fresh banner without another startup delay', async () => {
+  const screen = await render(<App />);
+  await wait(FIRST_BANNER_DELAY_MS);
+  expect(bannerMounts).toBe(1);
+  for (let returned = 1; returned <= 2; returned++) {
+    act(() => changeState('background'));
+    expect(screen.queryByTestId('native-banner')).toBeNull();
+    await wait(5000);
+    await act(async () => changeState('active'));
+    // No foreground timer advance: the original request opportunity is immediate.
+    expect(screen.getByTestId('native-banner')).toBeTruthy();
+    expect(screen.getByTestId('shared-game-banner').props.pointerEvents).toBe(
+      'box-none',
+    );
+    expect(bannerMounts).toBe(returned + 1);
+    expect(loadNativeAdsSdk).toHaveBeenCalledTimes(returned + 1);
+  }
+});
+
+test('footer visibility and unrelated root renders do not re-render the SDK banner', async () => {
+  const screen = await render(<App />);
+  await wait(FIRST_BANNER_DELAY_MS);
+  fireEvent(screen.getByTestId('native-banner'), 'adLoaded');
+  const loadedRenders = bannerRenders;
+  const nativeProps = screen.getByTestId('native-banner').props;
+  await screen.rerender(<App />);
+  expect(bannerRenders).toBe(loadedRenders);
+  await screen.rerender(<App visible={false} />);
+  expect(screen.getByTestId('shared-game-banner').props.style).toEqual(
+    expect.arrayContaining([expect.objectContaining({ opacity: 0 })]),
+  );
+  expect(bannerRenders).toBe(loadedRenders);
+  await wait(BANNER_KEEP_ALIVE_MS - 1);
+  await screen.rerender(<App />);
+  expect(screen.getByTestId('shared-game-banner').props.style).toEqual(
+    expect.arrayContaining([expect.objectContaining({ opacity: 1 })]),
+  );
+  expect(bannerRenders).toBe(loadedRenders);
+  expect(bannerMounts).toBe(1);
+  expect(loadNativeAdsSdk).toHaveBeenCalledTimes(1);
+  expect(screen.getByTestId('native-banner').props).toEqual(nativeProps);
+  // Events still update the wrapper, including a later SDK refresh outcome.
+  fireEvent(screen.getByTestId('native-banner'), 'adFailedToLoad');
+  expect(screen.getByText('რეკლამა ვერ ჩაიტვირთა')).toBeTruthy();
+  fireEvent(screen.getByTestId('native-banner'), 'adLoaded');
+  expect(screen.queryByText('რეკლამა ვერ ჩაიტვირთა')).toBeNull();
+  expect(bannerMounts).toBe(1);
 });

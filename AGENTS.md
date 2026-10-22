@@ -390,6 +390,15 @@ as the canonical rulebook; tool-specific instruction files should point here.
   2026-10-20, in a reserved footer separated from the letter wheel and hint
   buttons. Preserve their touch targets and existing saves.
 
+- On 2026-10-23 the owner made **protecting ad revenue the priority over ad
+  performance optimizations**. Preserve existing ad request, presentation and
+  refresh behavior when optimizing rendering. Demo-ad timing tests cannot prove
+  revenue neutrality; do not ship changes that reduce ad opportunities or delay
+  exposure based on those tests. The Android background-reuse/800 ms return-delay
+  experiment was withdrawn; its measurements remain in
+  [ANDROID_BANNER_PERFORMANCE.md](docs/ANDROID_BANNER_PERFORMANCE.md). No absolute
+  earnings guarantee is possible; flag any monetization tradeoff before adopting it.
+
 - The owner approved the economy on 2026-10-19: **200 starting coins**, **20 coins
   per completed level**, **20 coins per letter hint** and **50 coins per word hint**.
   Keep the **3-coin bonus-word reward** and **one free letter hint per ten bonus

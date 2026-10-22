@@ -1,5 +1,57 @@
 # Asobana TestFlight
 
+## USB banner render isolation — 2026-10-23 (perf APKs only, no upload)
+
+Built the `03edc96` runtime baseline and a candidate that only memoizes the private
+banner React subtree. Request, visibility, background teardown and refresh behavior
+are unchanged. Both use `ge.spilogames.asobana.perf`, version 0.1.0 / local
+versionCode 1, ARM64, Java 17, `ASOBANA_LIVE_ADS=0`, ordinary non-debuggable,
+non-profileable release. No timing probes or store builds were used.
+
+- Baseline APK SHA-256: `b8cab8116635f3f4c1052046f52d6cc15a6cdb93d4e7b599557335f3d1695e85`.
+- Memo-only APK SHA-256: `9e855735b091641d1999dd40430545004c570bf6d4c60dc73f23d17b2daa3fc1`.
+- Physical Samsung A07 comparison and limitations:
+  [ANDROID_BANNER_RENDERING_PERFORMANCE.md](ANDROID_BANNER_RENDERING_PERFORMANCE.md).
+
+The memo-only demo perf build replaces the withdrawn reuse candidate on the
+phone. The save remains intact. The owner subsequently authorized committing
+the rendering change, docs and tests directly to master and pushing, with no new
+builds. No version increment or upload; production package and tester IPA/AAB
+are untouched.
+
+The banner-reuse experiment below was **withdrawn on 2026-10-23** to preserve
+existing ad opportunities. Banner lifecycle behavior was restored to `03edc96`; the later memo-only
+rendering change above preserves it.
+Demo-ad performance tests did not establish revenue neutrality. No replacement
+APK was built at withdrawal time; the later rendering-only comparison above
+replaced that demo installation. Production and tester artifacts are unchanged.
+
+## USB banner lifecycle profiling — 2026-10-22 (perf APKs only, no upload)
+
+Rebuilt clean `master` at `03edc96` as the baseline, then built the bounded
+Android banner-reuse candidate locally for the physical Samsung Galaxy A07.
+Both use `ge.spilogames.asobana.perf`, version 0.1.0 / local versionCode 1,
+ARM64, Java 17 and `ASOBANA_LIVE_ADS=0`. Both are ordinary non-debuggable,
+non-profileable release APKs; merged manifests and the packaged demo-ad switch
+were checked. The production package, app configuration, tester IPA/AAB and
+production progress were preserved.
+
+A separate temporary release probe logged only banner mounts and AppState to
+attribute deep-link recreation. Its timings were excluded, and its logging was
+removed before the candidate build. Baseline and candidate were reinstalled for
+a reverse comparison without clearing the perf save. No EAS/store build, upload,
+version increment, commit or push was performed.
+
+- Baseline APK SHA-256: `1f2f67c1e1d7a9b9cc8c1d9efcc29307afd1d142a16b1c58737868947e1cf3a1`.
+- Immediate-reuse experiment APK SHA-256: `5763623e2902610bf78a579f2995875f8223c192ecafb4494c044f3187414416`. Rejected after worse resume-frame tails.
+- Final candidate APK SHA-256: `01bf67642c0892b85ac5175c1a8850e3f8fd80ac0b480c8c48f74fe0b6b316ef`. Retains the banner but waits 800 ms after foregrounding before showing it.
+- Measurements, attribution, memory/background checks and limitations:
+  [ANDROID_BANNER_PERFORMANCE.md](ANDROID_BANNER_PERFORMANCE.md).
+
+That final candidate remained installed until the memo-only follow-up above. Task APKs, probe source,
+traces and other intermediates were removed after summarizing; generated native
+projects and dependency Android build/C++ output were also removed.
+
 ## USB board-entry profiling — 2026-10-22 (perf APKs only, no upload)
 
 Committed/pushed the prior rewarded-preload work as `54101da`, then rebuilt it
