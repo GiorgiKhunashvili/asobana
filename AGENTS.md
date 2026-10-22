@@ -479,12 +479,39 @@ grammar classifier: new vocabulary still needs the editorial review above.
    Building or uploading to TestFlight requires the user's request for that release;
    content editing alone does not authorize an upload.
 
-## Simulator cleanup
+## Cleanup when a task ends
 
-- When finished working, shut down **all running simulators** and quit the
-  Simulator app, including simulators that were already open before the task.
-  The owner explicitly requested this on 2026-10-20. Preserve installed apps and
-  saves; shutting down does not authorize erasing simulator data.
+The owner wants this folder kept small. On 2026-10-22 it had grown to about
+36 GB (28 GB measured), almost all of it regenerable build output, `node_modules`
+copies in worktrees and finished experiment data. A task is done only after this
+cleanup, for Claude, Codex and any other agent:
+
+- **Simulators:** shut down **all running simulators and emulators** and quit the
+  Simulator app, including ones already open before the task (owner's request,
+  2026-10-20). Preserve installed apps and saves; erasing simulator data needs
+  the owner.
+- **Merged worktrees:** remove a task's worktree (`.claude/worktrees/*`, a Codex
+  worktree, any other) once its branch is merged into `master`: check
+  `git -C <path> status --short` shows no changes and
+  `git rev-list --count master..<branch>` is 0, then run `git worktree remove
+<path>`, `git branch -d <branch>` and `git worktree prune`. A worktree holding
+  uncommitted or unmerged work stays in place until the owner decides.
+- **Worktree dependencies:** when a task in a worktree ends, delete that
+  worktree's `node_modules` (about 2 GB each), even if the worktree stays for
+  review. `npm ci` restores it.
+- **Native build output:** after a local build or a simulator/emulator run, delete
+  `mobile/android`, `mobile/ios` and the `node_modules/*/android/build` and
+  `node_modules/*/android/.cxx` folders the build created; prebuild and
+  `npx expo run:*` regenerate them. EAS local builds write only the final
+  `.ipa`/`.aab` into `artifacts/`, never their working folder.
+- **Store builds:** keep only the newest `.ipa` and `.aab` in `artifacts/`; delete
+  an older one once its successor has been uploaded.
+- **Experiments:** when an experiment concludes and its results are written to
+  `docs/`, delete its intermediates (candidate pools, runtime copies, drafts,
+  logs, recordings). `artifacts/` is not in git, so anything neither regenerable
+  nor summarized in `docs/` needs the owner's OK first.
+- **Size check:** finish any task that built or experimented with `du -sh .`;
+  above about 8 GB, apply the rules above until it is back under.
 
 When the owner changes these rules, update this file and the relevant enforced
 policies/tests together. Update the current-file pointers when a new revision lands.
