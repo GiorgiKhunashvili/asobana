@@ -56,6 +56,7 @@ jest.mock('expo-router', () => ({
     dismissTo: jest.fn(),
   },
   useFocusEffect: jest.fn(),
+  useNavigation: jest.fn().mockReturnValue({ addListener: () => () => {} }),
   useIsFocused: jest.fn(() => true),
   useLocalSearchParams: jest.fn(() => ({})),
 }));
@@ -193,7 +194,7 @@ test('low-balance hints clearly offer an ad and watch directly without navigatin
     expect(screen.getByTestId('hint-word').props.accessibilityHint).toBe(
       'რეკლამა გაიხსნება აქვე; მინიშნებას შემდეგ ცალკე აირჩევ',
     );
-    expect(rewardedAds.load).toHaveBeenCalledTimes(1);
+    expect(rewardedAds.load).not.toHaveBeenCalled();
     expect(rewardedAds.watch).not.toHaveBeenCalled();
     await act(async () => {
       fireEvent.press(screen.getByTestId('hint-word'));
@@ -820,7 +821,7 @@ describe('the optional ×2 ad on the victory screen', () => {
     );
     // Moving on stays the primary action; nothing plays by itself.
     expect(screen.getByTestId('victory-next')).toBeTruthy();
-    expect(levelRewardAds.load).toHaveBeenCalledTimes(1);
+    expect(levelRewardAds.load).not.toHaveBeenCalled();
     expect(levelRewardAds.watch).not.toHaveBeenCalled();
     await act(async () => {
       fireEvent.press(offer);

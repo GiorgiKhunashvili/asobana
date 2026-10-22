@@ -2,6 +2,7 @@ import { useIsFocused } from 'expo-router';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { AppState } from 'react-native';
 import { rewardedAds, useRewardedAd } from './rewardedAds';
+import { useDeferredAdPreload } from './useDeferredAdPreload';
 
 /** Preload without presenting. Only an explicit hint/ad press starts watching. */
 export function useHintRewardedAd(eligible: boolean, levelId: string) {
@@ -17,9 +18,12 @@ export function useHintRewardedAd(eligible: boolean, levelId: string) {
     setEngaged(false);
   }, []);
 
-  useEffect(() => {
-    if (focused && eligible) void rewardedAds.load();
-  }, [focused, eligible, levelId]);
+  const cancelPreload = useDeferredAdPreload(
+    focused && eligible,
+    levelId,
+    rewardedAds.load,
+    600,
+  );
   useEffect(() => {
     // A waiting ad must never appear after leaving the board or changing levels.
     return cancel;
@@ -39,6 +43,7 @@ export function useHintRewardedAd(eligible: boolean, levelId: string) {
 
   const watch = async () => {
     if (!focused || request.current) return;
+    cancelPreload();
     setEngaged(true);
     if (status === 'save-error') {
       await rewardedAds.retryReward();

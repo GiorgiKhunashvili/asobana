@@ -1,5 +1,23 @@
 # Asobana TestFlight
 
+## USB rewarded-preload profiling — 2026-10-22 (perf APKs only, no upload)
+
+Rebuilt `master` at `6538781`, then tested deferred rewarded preloading on the
+Samsung Galaxy A07 using `ge.spilogames.asobana.perf`, version 0.1.0 / local
+versionCode 1, ARM64, Java 17 and `ASOBANA_LIVE_ADS=0`. Paired baseline/candidate
+builds used release JS with temporary native debugging for repeatable perf-only
+save fixtures. Reinstalled the baseline for reverse comparisons, then rebuilt
+the candidate with ordinary non-debuggable release settings for the final check.
+No EAS/store version change or upload; existing IPA/AAB files remain.
+
+Low-coin entry peaked at 138–169 ms before and 127–131 ms after. Victory's peak
+callback did not consistently improve, but its ad request moved past the entrance
+animations and was skipped entirely when continuing quickly. An early explicit
+watch still opened a demo ad. Remaining board and full-screen-ad spikes are
+recorded in [the full report](ANDROID_REWARDED_PRELOAD_PERFORMANCE.md).
+`npm run check` passed (372 tests, 50 suites, all 500 levels solved). Temporary
+APKs, traces and native build folders are removed after recording the results.
+
 ## USB animation profiling — 2026-10-22 (perf APKs only, no upload)
 
 Rebuilt `master` at `26c6475`, then compared local Gradle release APKs on the

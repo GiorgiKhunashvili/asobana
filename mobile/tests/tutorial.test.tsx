@@ -37,6 +37,7 @@ jest.mock('expo-router', () => ({
     dismissTo: jest.fn(),
   },
   useFocusEffect: jest.fn(),
+  useNavigation: jest.fn().mockReturnValue({ addListener: () => () => {} }),
   useIsFocused: () => true,
   useLocalSearchParams: jest.fn(() => ({})),
 }));

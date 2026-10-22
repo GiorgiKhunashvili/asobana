@@ -2,6 +2,7 @@ import { useIsFocused } from 'expo-router';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { AppState } from 'react-native';
 import { levelRewardAds, useLevelRewardAdSnapshot } from './levelRewardAds';
+import { useDeferredAdPreload } from './useDeferredAdPreload';
 
 /** Preload while the "×2" offer is on screen. Only an explicit press presents. */
 export function useLevelRewardAd(offered: boolean, levelId: string) {
@@ -17,9 +18,13 @@ export function useLevelRewardAd(offered: boolean, levelId: string) {
     setEngaged(false);
   }, []);
 
-  useEffect(() => {
-    if (focused && offered) void levelRewardAds.load();
-  }, [focused, offered, levelId]);
+  // The victory logo takes 2.1 s; allow its entrance to finish before ad work.
+  const cancelPreload = useDeferredAdPreload(
+    focused && offered,
+    levelId,
+    levelRewardAds.load,
+    2200,
+  );
   useEffect(() => {
     // A waiting ad must never appear after leaving the victory screen.
     return cancel;
@@ -39,6 +44,7 @@ export function useLevelRewardAd(offered: boolean, levelId: string) {
 
   const watch = async () => {
     if (!focused || !offered || request.current) return;
+    cancelPreload();
     setEngaged(true);
     // An earned reward whose save failed is retried without another ad.
     if (status === 'save-error') {
