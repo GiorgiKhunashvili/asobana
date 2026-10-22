@@ -20,10 +20,15 @@
     "test:python": "cd puzzle-generator && uv run pytest",
     "generate": "cd puzzle-generator && uv run python -m asobana_generator",
     "validate:content": "npm run validate:content -w mobile",
-    "check": "npm run typecheck && npm run lint && npm test && npm run validate:content && npm run format:check"
+    "check": "npm run typecheck && npm run lint && npm test && npm run validate:content && npm run format:check",
+    "postinstall": "patch-package --error-on-fail",
+    "test:native": "python3 scripts/test-reanimated-sync-props.py"
   },
   "overrides": {
     "react": "19.2.3",
     "react-dom": "19.2.3"
+  },
+  "devDependencies": {
+    "patch-package": "8.0.1"
   }
 }

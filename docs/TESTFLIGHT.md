@@ -1,5 +1,26 @@
 # Asobana TestFlight
 
+## USB transition diagnostics — 2026-10-22 (perf APKs only, no upload)
+
+Local Gradle test APKs were built from `master` at `04a9ba3`, then with the
+uncommitted Reanimated Android mounting guard. All used the separate package
+`ge.spilogames.asobana.perf`, version 0.1.0 / local versionCode 1, ARM64 and
+`ASOBANA_LIVE_ADS=0` (demo ad units). No EAS version was incremented, and no
+IPA, AAB, TestFlight or Play upload was made. Existing tester artifacts stay.
+
+Variants: ordinary release baseline; baseline and patched release-JS builds
+with temporary native debugging enabled for repeatable perf-save fixtures;
+a temporary control without automatic hint-ad preloading; and a final ordinary
+release perf APK with normal ad behavior and only the native guard. The first
+Java 25 build attempt failed at CMake configuration; successful builds used the
+installed Java 17 toolchain. The real app and its progress were untouched.
+
+The native regression test reproduces missing-view updates before the patch
+and passes after it. Root `npm run check` passed (358 tests in 49 suites, all
+500 levels solved). Full measurement methodology, results, remaining frame
+costs and cleanup are in [the phone report](ANDROID_TRANSITION_PERFORMANCE.md).
+Temporary APKs, traces and native build directories are removed at task end.
+
 ## Shared banner beta — 2026-10-22 (uploaded, Apple processing)
 
 **Asobana 0.1.0 (5)**, built locally with the `beta` profile (real AdMob app
