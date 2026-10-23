@@ -1,5 +1,114 @@
 # Asobana TestFlight
 
+## USB SQLite save overhead — 2026-10-23 (perf APKs only, no upload)
+
+Baseline is `6348d4b` plus pending save-validation, hidden-journey and crossword
+changes. The preceding serialization candidate remains rejected. Only the
+side-by-side `ge.spilogames.asobana.perf` package is used on the physical Samsung.
+All variants use Java 17, ARM64, `ASOBANA_LIVE_ADS=0`, version 0.1.0 / local
+versionCode 1, non-debuggable/non-profileable release settings and demo ads.
+
+| Variant                                         | APK SHA-256                                                        |
+| ----------------------------------------------- | ------------------------------------------------------------------ |
+| Existing ordinary baseline, pulled and verified | `af112f9b22ca94863178014303a224fffa5b79bccfeec767aac28d78d2949a40` |
+| Paired diagnostic probe                         | `7af47c4b773540333069e8e3a238eb5552fb7880f3e336b3033672de373fb453` |
+| Ordinary candidate, probe removed               | `505914d1e453434e33e69c421f5db186d76d76d94d5fd1f206ba79a2915ada0f` |
+
+The probe compares old/new repository saves in its own scratch database. Timings
+are compared only within that matched probe, never against ordinary release.
+Normal saves retain all validation and use one atomic conditional revision/write
+statement on a private persistent connection. Multi-step reward/migration
+transactions and all ad behavior are unchanged. See
+[measurements, safety checks and limitations](ANDROID_SQLITE_SAVE_PERFORMANCE.md).
+The ordinary candidate replaces the probe for final gameplay save/restart
+verification. No store build/upload, version change, production-app operation,
+commit or push. Current tester IPA/AAB and prior performance work are preserved.
+
+## USB save serialization/copying — 2026-10-23 (rejected experiment, no upload)
+
+Baseline is `6348d4b` plus the pending save-validation, hidden-journey and
+crossword-rendering changes. The installed ordinary baseline was pulled and its
+hash verified against the previous task; it was restored after the experiment.
+One new local diagnostic APK uses Java 17, ARM64, `ASOBANA_LIVE_ADS=0`, version
+0.1.0 / local versionCode 1 and package `ge.spilogames.asobana.perf`.
+Both APKs are non-debuggable/non-profileable and contain demo-ad configuration.
+
+- Ordinary baseline/restored APK: `af112f9b22ca94863178014303a224fffa5b79bccfeec767aac28d78d2949a40`.
+- Paired diagnostic APK: `91f5a9801451680773d212f2b2f79d5ed24703b07fbd9078c6ef7981d1de73f4`.
+
+The probe contains both baseline and candidate parsers/repositories, with matched
+measurements in a separate scratch database. It never replaces player progress
+with a synthetic fixture. The allocation candidate did not consistently improve
+save preparation and was reverted; **no runtime optimization from this task is
+retained**. New save-safety tests and documentation remain. See
+[measurements and limitations](ANDROID_SAVE_SERIALIZATION_PERFORMANCE.md).
+No new ordinary release, store build/upload, production-app operation, commit or
+push. Current tester IPA/AAB and prior performance changes are preserved.
+
+## USB crossword rendering — 2026-10-23 (perf APKs only, no upload)
+
+Source baseline is `6348d4b` plus the pending save-validation and hidden-journey
+changes. Four local APKs use `ge.spilogames.asobana.perf`, version 0.1.0 / local
+versionCode 1, Java 17, ARM64 and `ASOBANA_LIVE_ADS=0`. All manifests are
+non-debuggable/non-profileable; embedded ad configuration is demo-only.
+
+| Variant         | APK SHA-256                                                        |
+| --------------- | ------------------------------------------------------------------ |
+| baseline-probe  | `1d4463c8a316420d1e01a492ed105954dc1ec157ece203a8aa1d8faf08f1c346` |
+| baseline        | `69b76d8956ed3aba9168c9d02e996f0b7885709c9bf38ca7846b1886d2cdb9ed` |
+| candidate-probe | `5395fc3d9d677509f91b5f5155ad63954e6bc31e4f18ec0f6ce4889e1914beea` |
+| candidate       | `af112f9b22ca94863178014303a224fffa5b79bccfeec767aac28d78d2949a40` |
+
+The two probes use matching temporary cell-render counters and local board
+fixtures without touching saved progress. Their JS commit timings are compared
+only with each other. Ordinary baseline/candidate APKs contain no instrumentation
+and are measured separately with atrace/gfxinfo. The ordinary candidate replaces
+the probe on the Samsung. See [measurements and limitations](ANDROID_CROSSWORD_RENDERING_PERFORMANCE.md).
+No ad behavior, production package, current tester IPA/AAB, version number or
+store upload changes. No commit or push. Generated native output and summarized
+experiment intermediates are removed at completion.
+
+## USB hidden-journey profiling — 2026-10-23 (perf APKs only, no upload)
+
+Baseline is `6348d4b` plus the still-uncommitted save-validation optimization.
+All three local APKs use `ge.spilogames.asobana.perf`, version 0.1.0 / local
+versionCode 1, Java 17, ARM64 and `ASOBANA_LIVE_ADS=0`. Manifests are
+non-debuggable/non-profileable and packaged ad configuration is demo-only.
+
+- Baseline probe: `79d208913f6689542e0103e2580f1d38d71158c497c6515c3e778c26e79432a8`.
+- Focused-subscription probe: `d5efd687a06ec3f226e51eecdcf19742e2908bd73ebc181779a02eedd9d28457`.
+- Final ordinary candidate: `cfd41f8f838fcce5bd147ead5993316a175a9618a2477f04a132ebf9258c4b2d`.
+
+The probes time journey calculations during controlled in-memory identity updates;
+they never write the save. Their timings are compared only with each other.
+The final ordinary candidate has all instrumentation removed and replaces the
+probe on the physical Samsung. Only the journey observer changes in this step;
+prior save work, ads and earlier fixes are preserved. See
+[hidden-journey measurements and limitations](ANDROID_HIDDEN_JOURNEY_PERFORMANCE.md).
+No store build/upload, production package operation, commit or push. Generated
+native output and summarized intermediates are removed; tester IPA/AAB retained.
+
+## USB save-validation profiling — 2026-10-23 (perf APKs only, no upload)
+
+Source baseline `6348d4b` includes the prior selector optimization. The installed
+ordinary baseline was reused after verifying its APK hash matched the previous
+selector candidate. Two new local APKs use version 0.1.0 / local versionCode 1,
+`ge.spilogames.asobana.perf`, Java 17, ARM64 and `ASOBANA_LIVE_ADS=0`.
+Both are non-debuggable/non-profileable and contain demo-ad configuration.
+
+- Paired comparison probe: `b290e952b3f6859b20d6c660bf907f22d4d90b97d8044ec0896f66cc5ea6533c`.
+  Contains the exact old parser/repository and candidate; alternates them against
+  a scratch database, with timing and equality checks. Diagnostic timings only.
+- Ordinary final candidate: `9d3f632967a260d303cfeeb5ed04a98ca02d94f99525130173e2a0e1275b1f0f`.
+  All instrumentation removed. Only the save-validator implementation changes.
+
+[Samsung measurements, correctness checks and limitations](ANDROID_SAVE_VALIDATION_PERFORMANCE.md)
+record two paired probe launches and separate ordinary-release gameplay checks.
+The ordinary candidate replaces the probe on the phone. No production package,
+ad behavior, tester IPA/AAB, app version, EAS/store build or upload changes.
+No commit or push. Generated native output and summarized experiments are removed
+at completion; existing perf utilities are retained.
+
 ## USB word-submission profiling — 2026-10-23 (perf APKs only, no upload)
 
 Four local ARM64 release variants used Java 17, `ASOBANA_LIVE_ADS=0`, version

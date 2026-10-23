@@ -187,18 +187,18 @@ export function createSqliteRepository(
       if (!Number.isSafeInteger(expectedRevision) || expectedRevision < 0)
         throw new Error('Invalid save revision');
       const revision = expectedRevision + 1;
-      await database.withExclusiveTransactionAsync(async (tx) => {
-        const row = await tx.getFirstAsync<{ revision: number }>(
-          'SELECT revision FROM game_snapshot WHERE id = 1',
-        );
-        if ((row?.revision ?? 0) !== expectedRevision)
-          throw new StaleSaveError();
-        await tx.runAsync(
-          'INSERT INTO game_snapshot (id, revision, payload, save_format) VALUES (1, ?, ?, 1) ON CONFLICT(id) DO UPDATE SET revision = excluded.revision, payload = excluded.payload, save_format = excluded.save_format',
-          revision,
-          JSON.stringify(validated),
-        );
-      });
+      // The revision check and write are one atomic SQLite statement. Normal
+      // saves need no separate read or per-save exclusive connection; reward
+      // receipts and migrations still use their multi-statement transactions.
+      // RETURNING belongs to this statement, unlike connection-wide changes().
+      // Expo's getFirstAsync finalizes the statement before resolving.
+      const result = await database.getFirstAsync<{ revision: number }>(
+        'INSERT INTO game_snapshot (id, revision, payload, save_format) SELECT 1, ?, ?, 1 WHERE ? = COALESCE((SELECT revision FROM game_snapshot WHERE id = 1), 0) ON CONFLICT(id) DO UPDATE SET revision = excluded.revision, payload = excluded.payload, save_format = excluded.save_format RETURNING revision',
+        revision,
+        JSON.stringify(validated),
+        expectedRevision,
+      );
+      if (result?.revision !== revision) throw new StaleSaveError();
       return revision;
     },
   };

@@ -101,6 +101,8 @@ jest.mock('../src/state/gameStore', () => {
   return {
     gameStore: {
       getState: () => state,
+      getInitialState: () => state,
+      subscribe: () => () => {},
       setState: (next: object) => Object.assign(state, next),
     },
     useGameStore: (selector: (state: unknown) => unknown) => selector(state),

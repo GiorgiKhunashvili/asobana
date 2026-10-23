@@ -1,6 +1,5 @@
 import type { GameState, LevelPack, LevelProgress } from '../models/types';
-import { emptyProgress, isUnlocked, revealedCells } from '../engine/game';
-import { solutionCells, wordCells } from '../engine/grid';
+import { wordCells } from '../engine/grid';
 import { BONUS_GOAL } from '../engine/bonusRewards';
 import journey from '../../../content/journey-v13.json';
 import {
@@ -21,9 +20,12 @@ export function parseSnapshot(value: unknown, pack: LevelPack): GameState {
       'Save content revision mismatch; migration required',
     );
   const progressRaw = object(raw.progress, 'progress');
+  // Scoped to this parse: every save is still fully validated, including old
+  // levels. No validation result survives a call or a content revision.
+  const levelsById = new Map(pack.levels.map((level) => [level.id, level]));
   const progress: Record<string, LevelProgress> = {};
   for (const [id, value] of Object.entries(progressRaw)) {
-    const level = pack.levels.find((level) => level.id === id);
+    const level = levelsById.get(id);
     if (!level) throw new ContentError('Unknown saved level');
     const saved = object(value, 'level progress');
     const solvedWordIds = array(saved.solvedWordIds, 'solvedWordIds').map(
@@ -40,7 +42,13 @@ export function parseSnapshot(value: unknown, pack: LevelPack): GameState {
     unique(bonusWords, 'saved bonuses');
     if (solvedWordIds.some((id) => !level.words.some((word) => word.id === id)))
       throw new ContentError('Unknown saved word');
-    const cells = new Set(solutionCells(level).map((cell) => cell.id));
+    // The validator only needs cell IDs, not a sorted renderable grid. Reuse
+    // each word's geometry for membership, visibility and completion checks.
+    const words = level.words.map((word) => ({
+      id: word.id,
+      cells: wordCells(word).map((cell) => cell.id),
+    }));
+    const cells = new Set(words.flatMap((word) => word.cells));
     if (revealedCellIds.some((id) => !cells.has(id)))
       throw new ContentError('Unknown saved cell');
     if (bonusWords.some((word) => !level.bonusWords.includes(word)))
@@ -103,10 +111,13 @@ export function parseSnapshot(value: unknown, pack: LevelPack): GameState {
       ),
       completed: boolean(saved.completed, 'completed'),
     };
-    const visible = revealedCells(level, restored);
-    for (const word of level.words)
+    const visible = new Set(revealedCellIds);
+    for (const word of words)
+      if (solvedWordIds.includes(word.id))
+        for (const cell of word.cells) visible.add(cell);
+    for (const word of words)
       if (
-        wordCells(word).every((cell) => visible.has(cell.id)) !==
+        word.cells.every((cell) => visible.has(cell)) !==
         solvedWordIds.includes(word.id)
       )
         throw new ContentError('Inconsistent saved word completion');
@@ -190,19 +201,28 @@ export function parseSnapshot(value: unknown, pack: LevelPack): GameState {
         : boolean(raw.tutorialSeen, 'tutorialSeen'),
     ...(doubledRewardLevelIds === undefined ? {} : { doubledRewardLevelIds }),
   };
-  if (!isUnlocked(state, pack, state.currentLevelId))
-    throw new ContentError('Saved current level is locked');
+  // Walk the completed prefix once. Keep the original error precedence:
+  // an unknown/locked current level is reported before any locked progress.
+  let unlocked = true;
+  let currentUnlocked = false;
+  let lockedProgress = false;
   for (const level of pack.levels) {
-    const saved = progress[level.id] ?? emptyProgress();
+    const saved = progress[level.id];
+    if (level.id === state.currentLevelId) currentUnlocked = unlocked;
     if (
+      !unlocked &&
+      saved &&
       (saved.completed ||
         saved.solvedWordIds.length ||
         saved.revealedCellIds.length ||
         saved.bonusWords.length ||
-        saved.hintsUsed) &&
-      !isUnlocked(state, pack, level.id)
+        saved.hintsUsed)
     )
-      throw new ContentError('Progress exists for locked level');
+      lockedProgress = true;
+    unlocked = unlocked && (saved?.completed ?? false);
   }
+  if (!currentUnlocked) throw new ContentError('Saved current level is locked');
+  if (lockedProgress)
+    throw new ContentError('Progress exists for locked level');
   return state;
 }

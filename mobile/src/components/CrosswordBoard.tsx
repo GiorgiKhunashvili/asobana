@@ -84,7 +84,11 @@ export function CrosswordBoard({
       {cells.map((cell) => (
         <Cell
           key={cell.id}
-          cell={cell}
+          id={cell.id}
+          row={cell.row}
+          column={cell.column}
+          status={cell.status}
+          letter={cell.letter}
           size={size}
           revealDelay={(timing.order.get(cell.id) ?? 0) * motion.cellStagger}
           source={moment?.source ?? 'word'}
@@ -92,7 +96,9 @@ export function CrosswordBoard({
           remindToken={timing.remind.has(cell.id) ? (moment?.sequence ?? 0) : 0}
           celebrateToken={moment?.celebrate ? moment.sequence : 0}
           celebrateDelay={
-            timing.wave + (cell.row + cell.column) * motion.waveStagger
+            moment?.celebrate
+              ? timing.wave + (cell.row + cell.column) * motion.waveStagger
+              : 0
           }
         />
       ))}
@@ -100,8 +106,14 @@ export function CrosswordBoard({
   );
 }
 
+// Selectors return fresh cell objects. Primitive visual props let memo skip
+// unchanged cells without caching game state or ignoring animation tokens.
 const Cell = memo(function Cell({
-  cell,
+  id,
+  row,
+  column,
+  status,
+  letter,
   size,
   revealDelay,
   source,
@@ -110,7 +122,11 @@ const Cell = memo(function Cell({
   celebrateToken,
   celebrateDelay,
 }: {
-  cell: CrosswordCell;
+  id: string;
+  row: number;
+  column: number;
+  status: CrosswordCell['status'];
+  letter: CrosswordCell['letter'];
   size: number;
   revealDelay: number;
   source: 'word' | 'hint';
@@ -119,7 +135,7 @@ const Cell = memo(function Cell({
   celebrateToken: number;
   celebrateDelay: number;
 }) {
-  const revealed = cell.status === 'revealed';
+  const revealed = status === 'revealed';
   // Only cells revealed while this board is on screen play the entrance.
   const [lockedAtMount] = useState(!revealed);
   /*
@@ -131,12 +147,12 @@ const Cell = memo(function Cell({
   const pop = useSharedValue(1);
   const flash = useSharedValue(0);
   const gilded = useSharedValue(0);
-  const previous = useRef(cell.status);
+  const previous = useRef(status);
 
   useEffect(() => {
     const was = previous.current;
-    previous.current = cell.status;
-    if (was !== 'locked' || cell.status !== 'revealed') return;
+    previous.current = status;
+    if (was !== 'locked' || status !== 'revealed') return;
     flash.set(
       withDelay(
         revealDelay,
@@ -153,7 +169,7 @@ const Cell = memo(function Cell({
           withDelay(revealDelay + 650, withTiming(0, { duration: 700 })),
         ),
       );
-  }, [cell.status, revealDelay, source, flash, gilded]);
+  }, [status, revealDelay, source, flash, gilded]);
 
   useEffect(() => {
     if (!remindToken) return;
@@ -200,14 +216,14 @@ const Cell = memo(function Cell({
 
   return (
     <Animated.View
-      testID={`cell-${cell.id}`}
+      testID={`cell-${id}`}
       accessible
-      accessibilityLabel={`რიგი ${cell.row + 1}, სვეტი ${cell.column + 1}, ${cell.letter ?? 'ცარიელი'}`}
+      accessibilityLabel={`რიგი ${row + 1}, სვეტი ${column + 1}, ${letter ?? 'ცარიელი'}`}
       style={[
         styles.cell,
         {
-          left: cell.column * (size + GAP),
-          top: cell.row * (size + GAP),
+          left: column * (size + GAP),
+          top: row * (size + GAP),
           width: size,
           height: size,
           borderRadius: corner(size),
@@ -228,7 +244,7 @@ const Cell = memo(function Cell({
           style={[styles.enamel, { backgroundColor: accent }]}
         >
           <Animated.View style={[styles.enamel, styles.gold, gold]} />
-          {cell.letter !== null && (
+          {letter !== null && (
             <Animated.Text
               maxFontSizeMultiplier={1}
               style={[
@@ -237,7 +253,7 @@ const Cell = memo(function Cell({
                 letterLift(fontSize),
               ]}
             >
-              {cell.letter}
+              {letter}
             </Animated.Text>
           )}
         </Animated.View>

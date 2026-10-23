@@ -54,7 +54,7 @@ import { selectChapters, selectLevels } from '../engine/selectors';
 import { routes } from '../navigation/routes';
 import { blockedHaptic } from '../services/feedback';
 import { nextUnfinished } from './nextLevel';
-import { useGameStore } from '../state/gameStore';
+import { useFocusedGame } from '../state/useFocusedGame';
 import {
   COUNTRIES,
   countryOf,
@@ -149,7 +149,8 @@ function nodeY(row: StopRow, index: number) {
 }
 
 export function JourneyScreen() {
-  const game = useGameStore((state) => state.game);
+  const focused = useIsFocused();
+  const game = useFocusedGame(focused);
   const insets = useSafeAreaInsets();
   const { width } = useWindowDimensions();
   const [sheet, setSheet] = useState(false);
