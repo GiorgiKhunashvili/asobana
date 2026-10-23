@@ -66,7 +66,6 @@ function send(command: GameCommand): void {
 
 export function GameplayScreen({ levelId }: { levelId: string | null }) {
   const game = useGameStore((state) => state.game);
-  const busy = useGameStore((state) => state.busy);
   const error = useGameStore((state) => state.error);
   const batch = useGameStore((state) => state.eventBatch);
   // Events committed before this screen opened are not replayed.
@@ -168,7 +167,6 @@ export function GameplayScreen({ levelId }: { levelId: string | null }) {
         catalog.levels.findIndex((level) => level.id === model.levelId) + 1
       }
       tone={tone}
-      busy={busy}
       error={error}
       moment={moment}
       feedback={feedback}
@@ -184,7 +182,6 @@ function GameLayout({
   model,
   levelNumber,
   tone,
-  busy,
   error,
   moment,
   feedback,
@@ -196,7 +193,6 @@ function GameLayout({
   model: GameplayView;
   levelNumber: number;
   tone: ReturnType<typeof levelTone>;
-  busy: boolean;
   error: string | null;
   moment: ReturnType<typeof boardMoment>;
   feedback: ReturnType<typeof stripFeedback>;
@@ -229,7 +225,9 @@ function GameLayout({
     space.xs * 2;
   // Saves take milliseconds; controls ignore presses meanwhile instead of dimming.
   const hint = (kind: 'cell' | 'word') => {
-    if (busy) return;
+    // Busy changes have no visual effect here. Read at press time so hints
+    // stay guarded without rerendering the whole screen for every queued save.
+    if (gameStore.getState().busy) return;
     if (
       kind === 'cell'
         ? model.canGetCoinsForCellHint

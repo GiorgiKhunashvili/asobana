@@ -1,5 +1,74 @@
 # Asobana TestFlight
 
+## Performance tester release — 2026-10-23
+
+Built locally from `master` at `bbe7965` plus the uncommitted gameplay busy
+subscription change and its four regression tests. Both builds use `beta`,
+`ASOBANA_LIVE_ADS=0`, the existing `ge.spilogames.asobana` identifiers and signing
+credentials. The owner explicitly selected **Play testing with demo ads**.
+Neither artifact is intended for public release with live ads.
+
+- **iOS 0.1.0 (6):** uploaded successfully to App Store Connect app `6825282360`
+  through EAS submission `b028dd5c-214b-4115-afa2-d6f8f756f810`. App Store Connect
+  confirms `VALID` and `IN_BETA_TESTING`; external state is
+  `READY_FOR_BETA_SUBMISSION` (no external beta review submitted).
+  File: `artifacts/asobana-0.1.0-beta-performance.ipa`, **57,005,888 bytes**.
+  SHA-256: `d22ad8de2854ada8cd183a96326b6d1d40fa63d8ea7a5fc5191a068cecb61c80`.
+- **Android 0.1.0 / versionCode 8:** signed AAB for the owner's Play testing
+  upload; no Google Play submission was made. File:
+  `artifacts/asobana-android-beta-0.1.0-performance.aab`, **152,721,097 bytes**.
+  SHA-256: `8b835dfb0c68cb4ef9d5626d4b6b1ec34bbe7b5eae5b88e45d8e72283d18bf3e`.
+
+Verification: iOS signature verification passed, `get-task-allow` is false,
+minimum iOS is 16.4 and the embedded Hermes bundle is present. Android targets
+SDK 36, minimum SDK 24, contains ARM64, ARMv7, x86 and x86_64 libraries and has
+no debuggable/profileable manifest opt-in. All 1,992 non-META-INF AAB entries
+passed signature/digest verification; its signing certificate matches the prior
+AAB. Both embedded configs have `extra.liveAds: false` and the correct AdMob app
+IDs. Both build copies include the latest gameplay source; Android's install log
+confirms the existing Reanimated patch applied.
+
+The immediately preceding preflight passed `npm run check`: 435 tests in 58
+suites, TypeScript, ESLint, all 500 level solves and formatting. No application
+source changed for packaging. Includes the prior board-entry, rewarded-preload,
+banner-render, word-selector, save-validation, SQLite, hidden-journey and
+crossword improvements, plus the nonvisual busy-subscription fix. No new changes
+to ad requests, refresh, visibility, save validation or save ordering. These store
+artifacts were not installed on a device; the preceding ordinary-release Samsung
+verification and benchmark limitations remain in the linked performance reports.
+No git commit/push or public store release was performed.
+
+Cleanup: both EAS temporary workspaces were removed automatically; no generated
+`mobile/android`, `mobile/ios` or dependency Android build/`.cxx` folders remain.
+Gradle is stopped, all simulators are shut down and no Android emulator is
+running. Removed the superseded IPA after build 6 uploaded, verification extracts
+and summarized build logs. Retained the previous tester AAB until its successor
+is uploaded by the owner. Perf utilities remain. Final repository size: **3.6 GB**.
+
+## USB word feedback and drawing — 2026-10-23 (perf APKs only, no upload)
+
+Baseline is committed `bbe7965`. All variants use `ge.spilogames.asobana.perf`,
+Java 17, ARM64, `ASOBANA_LIVE_ADS=0`, version 0.1.0 / local versionCode 1 and
+non-debuggable/non-profileable release settings. Manifest, ABI and embedded
+Google demo-ad configuration were verified.
+
+| Variant                                         | APK SHA-256                                                        |
+| ----------------------------------------------- | ------------------------------------------------------------------ |
+| Existing ordinary baseline, pulled and verified | `505914d1e453434e33e69c421f5db186d76d76d94d5fd1f206ba79a2915ada0f` |
+| Word-stage / paired drawing diagnostic          | `b97198d94d84fa897d088b79ab2fa128086e051967db442d276683346fa3e183` |
+| Paired busy-render diagnostic                   | `5b1ea7b3380b041e05e1ce7ee1a24716fbd2da9f96ef91b047bceedbece4c761` |
+| Ordinary candidate, all probes removed          | `a7bb77d676cf250eaf0367d2c5c8b7030452e387dc97d855b6a53bf2c2800fd9` |
+
+The retained change removes gameplay's nonvisual busy subscription; hint presses
+read the current busy state directly. Saves, progress checks and all ad behavior
+remain unchanged. Per-cell texture caching did not improve drawing consistently
+and was rejected. The animation-off control is not retained. Diagnostic timings
+are compared only within matched probes, never against ordinary release. The
+final ordinary candidate replaces all probes on the physical Samsung.
+See [measurements and limitations](ANDROID_WORD_FEEDBACK_PERFORMANCE.md).
+No production-package operation, EAS/store build/upload, version change, commit
+or push. Current tester IPA/AAB and earlier fixes are preserved.
+
 ## USB SQLite save overhead — 2026-10-23 (perf APKs only, no upload)
 
 Baseline is `6348d4b` plus pending save-validation, hidden-journey and crossword
@@ -729,7 +798,7 @@ The CLI retrieves the existing signing credentials and build number, then Xcode
 compiles on this Mac. EAS Submit only uploads the resulting IPA.
 
 ```sh
-PATH="/opt/homebrew/bin:$PATH" eas build --platform ios --profile production --local --non-interactive --output ../artifacts/asobana-next.ipa
+PATH="/opt/homebrew/bin:$PATH" eas build --platform ios --profile beta --local --non-interactive --output ../artifacts/asobana-next.ipa
 eas submit --platform ios --profile production --path ../artifacts/asobana-next.ipa --non-interactive --wait
 ```
 
