@@ -27,7 +27,8 @@ import { palette } from '../theme';
 
 /*
  * The Asobana mark, drawn from its vector master (mobile/assets/branding):
- * a gold A whose navy swipe joins three letter-dots, the word-finding gesture.
+ * a gold A whose swipe joins three letter-dots, the word-finding gesture.
+ * The swipe takes the colour of the ground behind it, as the icon's navy does.
  * Coordinates are in the master's 512-unit square.
  */
 const BODY =
@@ -40,7 +41,6 @@ const DOTS = [
   [407, 394],
   [105, 394],
 ] as const;
-export const NAVY = '#0B294B';
 const UNIT = 512;
 
 // Even-odd keeps the A's counter open, so the light sweep skips it.
@@ -136,7 +136,7 @@ function MarkCanvas({
   bodyOpacity = 1,
   bodyScale = 1,
   bodyColor = palette.gold,
-  cordColor = NAVY,
+  cordColor = palette.night,
   cordEnds = [1, 1],
   dots,
   sweepX,
@@ -339,9 +339,9 @@ function useSpark(
 /* ------------------------------------------------------------------ loading */
 
 const STILL: readonly [DotLook, DotLook, DotLook] = [
-  { scale: 1, r: 32, color: NAVY },
-  { scale: 1, r: 32, color: NAVY },
-  { scale: 1, r: 32, color: NAVY },
+  { scale: 1, r: 32, color: palette.night },
+  { scale: 1, r: 32, color: palette.night },
+  { scale: 1, r: 32, color: palette.night },
 ];
 
 /** Loading indicator: a spark loops along the swipe instead of a spinner. */

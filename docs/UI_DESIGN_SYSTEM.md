@@ -30,9 +30,13 @@ earlier enamel rosette on home and victory.
   for the path (see [Navigation](#navigation-2026-10-17)), and `HomeLogo` went
   with it; the launch lockup below is now the logo moment.
 - **Launch:** the native splash (`expo-splash-screen` in `mobile/app.json`) is
-  navy `#0B294B` with `branding/splash-lockup.png`: the mark (160 pt) above the
-  name ასობანა in gold-light display letters, 260 x 200 pt, built by
-  `scripts/build-splash.py`. The root layout keeps it until its first frame,
+  the app's night violet `#120C24` (`palette.night`, also the bars, the journey
+  ground and the background between screens) with `branding/splash-lockup.png`:
+  the mark (160 pt) above the name ასობანა in gold-light display letters,
+  260 x 200 pt, built by `scripts/build-splash.py`. Its swipe and dots are cut
+  in the same violet (`branding/mark-splash.*`), as the icon's are in its navy;
+  the owner chose on 2026-10-23 to keep the game violet and match the splash to
+  it rather than recolour the game navy. The app icon stays navy. The root layout keeps it until its first frame,
   then fades it (250 ms) into the loading view, which rebuilds the lockup in the
   same place (the live mark plus `splash-name.png`, the same name pixels), so
   the only visible change is the spark starting. Expo Go shows its own loader

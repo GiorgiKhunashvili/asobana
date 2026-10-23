@@ -1,5 +1,6 @@
 import { Tabs } from 'expo-router/js-tabs';
 import { TabBar } from '../../src/components/TabBar';
+import { palette } from '../../src/theme';
 
 /**
  * The app's main screens share one bottom bar; the board, victory, a single
@@ -11,7 +12,7 @@ export default function MainTabs() {
       tabBar={(props) => <TabBar {...props} />}
       screenOptions={{
         headerShown: false,
-        sceneStyle: { backgroundColor: '#120C24' },
+        sceneStyle: { backgroundColor: palette.night },
       }}
     >
       <Tabs.Screen name="index" />

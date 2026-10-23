@@ -12,7 +12,7 @@ import { gameStore, useGameStore } from '../src/state/gameStore';
 import { useGameFeedback } from '../src/services/feedback';
 import { Backdrop } from '../src/components/Backdrop';
 import { PrimaryButton } from '../src/components/Buttons';
-import { LoadingLogo, NAVY } from '../src/components/Logo';
+import { LoadingLogo } from '../src/components/Logo';
 import { StudioCredit } from '../src/components/StudioCredit';
 import Animated, { FadeIn } from 'react-native-reanimated';
 import { Display, Txt } from '../src/components/Text';
@@ -34,9 +34,9 @@ function AdsConsentOnStart() {
 const tone = chapterTone(null);
 
 /*
- * The native splash (navy with the mark, see app.json) stays up until this
- * layout's first frame, then fades into the loading view below, which draws the
- * mark at the same size and position and sets its spark running.
+ * The native splash (night violet with the mark, see app.json) stays up until
+ * this layout's first frame, then fades into the loading view below, which
+ * draws the mark at the same size and position and sets its spark running.
  */
 void SplashScreen.preventAutoHideAsync().catch(() => undefined);
 SplashScreen.setOptions({ duration: 250, fade: true });
@@ -73,13 +73,11 @@ export default function RootLayout() {
   }, []);
   const failed = status === 'error' || fontError;
   return (
-    <GestureHandlerRootView
-      style={[styles.root, { backgroundColor: tone.ground[1] }]}
-    >
+    <GestureHandlerRootView style={styles.root}>
       <SafeAreaProvider>
         <StatusBar style="light" />
         {failed || status !== 'ready' || !fontsLoaded || !shown ? (
-          <View style={[styles.center, !failed && styles.splash]}>
+          <View style={styles.center}>
             {failed && <Backdrop tone={tone} glowY={0.45} />}
             {failed ? (
               <View style={styles.failure}>
@@ -126,7 +124,7 @@ export default function RootLayout() {
             <Stack
               screenOptions={{
                 headerShown: false,
-                contentStyle: { backgroundColor: tone.ground[1] },
+                contentStyle: { backgroundColor: palette.night },
                 animation: 'slide_from_right',
               }}
             >
@@ -146,9 +144,9 @@ export default function RootLayout() {
 }
 
 const styles = StyleSheet.create({
-  root: { flex: 1 },
+  // Shows wherever no screen paints yet: transitions, and behind the splash.
+  root: { flex: 1, backgroundColor: palette.night },
   center: { flex: 1, alignItems: 'center', justifyContent: 'center' },
-  splash: { backgroundColor: NAVY },
   studio: { position: 'absolute', bottom: 64, opacity: 0.85 },
   lockup: {
     width: SPLASH.width,

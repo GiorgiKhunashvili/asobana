@@ -8,6 +8,8 @@ export const palette = {
   parchment: '#F4EAD3',
   parchmentRing: 'rgba(156, 110, 31, 0.32)',
   ink: '#1B1838',
+  /** The app's night violet: the launch splash, bars and screen transitions. */
+  night: '#120C24',
   pomegranate: '#C8334E',
   pomegranateLight: '#FF9AA9',
   turquoise: '#23A094',

@@ -59,7 +59,7 @@ def name_layer() -> Image.Image:
 def main() -> None:
     name = name_layer()
     lockup = Image.new("RGBA", name.size, (0, 0, 0, 0))
-    mark = Image.open(BRANDING / "mark-dark.png").convert("RGBA")
+    mark = Image.open(BRANDING / "mark-splash.png").convert("RGBA")
     mark = mark.resize((MARK * SCALE, MARK * SCALE), Image.Resampling.LANCZOS)
     lockup.alpha_composite(mark, ((WIDTH - MARK) * SCALE // 2, 0))
     lockup.alpha_composite(name)

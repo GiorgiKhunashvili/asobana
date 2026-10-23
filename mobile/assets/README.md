@@ -12,10 +12,13 @@ as clean vector paths; it is not a crop of the concept sheet.
   on the home screen. The PNG is 1024 × 1024 RGB without alpha or rounded outer
   corners; the platform applies its icon mask.
 - `branding/mark-light.*` and `branding/mark-dark.*`: symbol for light/dark surfaces.
+- `branding/mark-splash.*`: the dark symbol with its swipe in the app's night
+  violet `#120C24`, for the launch splash (Android directly, iOS through
+  `splash-lockup.png`, which `scripts/build-splash.py` builds from it).
 - `branding/mark-mono.*` and `branding/mark-white.*`: single-colour cutout symbols.
 - `branding/logo-light.*` and `branding/logo-dark.*`: horizontal symbol + Asobana
   wordmark for advertising. Letterforms are original vector paths, with no font
-  dependency. All six variants have SVG masters and transparent PNG exports.
+  dependency. All seven variants have SVG masters and transparent PNG exports.
 
 Regenerate from the repository root with `node scripts/build-branding.cjs` in an
 environment where the `sharp` Node package is available (including via `NODE_PATH`).

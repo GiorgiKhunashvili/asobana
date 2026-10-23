@@ -46,8 +46,20 @@ test("Android's splash is the mark alone, at the loading view's size", () => {
       Array.isArray(plugin) && plugin[0] === 'expo-splash-screen',
   );
   expect(splash.android).toEqual({
-    image: './assets/branding/mark-dark.png',
+    image: './assets/branding/mark-splash.png',
     imageWidth: 160,
   });
   expect(splash.image).toBe('./assets/branding/splash-lockup.png');
+});
+
+test('the splash ground is the night violet of the bars and transitions', () => {
+  // The mark's swipe is cut in this colour (branding/mark-splash.*), and the
+  // root layout fades the splash into a loading view on the same ground.
+  const app = require('../app.json');
+  const { palette } = require('../src/theme/palette');
+  const [, splash] = app.expo.plugins.find(
+    (plugin: unknown) =>
+      Array.isArray(plugin) && plugin[0] === 'expo-splash-screen',
+  );
+  expect(splash.backgroundColor).toBe(palette.night);
 });

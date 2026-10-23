@@ -41,12 +41,12 @@
       [
         "expo-splash-screen",
         {
-          "backgroundColor": "#0B294B",
+          "backgroundColor": "#120C24",
           "image": "./assets/branding/splash-lockup.png",
           "imageWidth": 260,
           "resizeMode": "contain",
           "android": {
-            "image": "./assets/branding/mark-dark.png",
+            "image": "./assets/branding/mark-splash.png",
             "imageWidth": 160
           }
         }

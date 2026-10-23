@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     paddingTop: space.sm,
-    backgroundColor: '#120C24',
+    backgroundColor: palette.night,
     borderTopWidth: 1,
     borderTopColor: 'rgba(227, 182, 90, 0.25)',
   },

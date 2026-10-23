@@ -82,7 +82,7 @@ const PLACE_ART = 150;
 const ZIG = [0, 46, 70, 46, 0, -46] as const;
 
 const GROUND = {
-  ground: ['#231A3E', '#120C24'] as const,
+  ground: ['#231A3E', palette.night] as const,
   glow: '#5B47A8',
 };
 
@@ -1294,7 +1294,7 @@ function PlaceSheet({
 }
 
 const styles = StyleSheet.create({
-  root: { flex: 1, backgroundColor: '#120C24' },
+  root: { flex: 1, backgroundColor: palette.night },
   pressed: { opacity: 0.8 },
   bold: { fontFamily: fonts.textBold },
   shadow: {
@@ -1308,7 +1308,7 @@ const styles = StyleSheet.create({
     gap: space.sm,
     paddingHorizontal: space.lg,
     paddingBottom: space.sm,
-    backgroundColor: '#120C24',
+    backgroundColor: palette.night,
     borderBottomWidth: 1,
     borderBottomColor: 'rgba(227, 182, 90, 0.18)',
   },

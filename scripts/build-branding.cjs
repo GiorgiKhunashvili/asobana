@@ -10,6 +10,8 @@ const previews = join(root, 'artifacts/branding');
 const NAVY = '#0B294B';
 const GOLD = '#E3B65A';
 const IVORY = '#F8F0DE';
+// The launch splash's ground (palette.night), so its swipe reads as a cut-out.
+const NIGHT = '#120C24';
 
 // A rounded A, open below the crossbar. The swipe joins all three terminals.
 const body =
@@ -80,6 +82,7 @@ async function main() {
   const variants = {
     'mark-light': mark(NAVY, GOLD),
     'mark-dark': mark(GOLD, NAVY),
+    'mark-splash': mark(GOLD, NIGHT),
     'mark-mono': mono(NAVY),
     'mark-white': mono(IVORY),
   };
@@ -156,7 +159,7 @@ async function main() {
     .png()
     .toFile(join(previews, 'asobana-01-production-preview.png'));
   console.log(
-    'Built app icon, six SVG/PNG brand variants and production preview.',
+    'Built app icon, seven SVG/PNG brand variants and production preview.',
   );
 }
 
