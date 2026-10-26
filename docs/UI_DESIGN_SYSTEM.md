@@ -10,10 +10,12 @@ screen placeholder "ქართული სიტყვები".
 ## Logo (2026-10-17)
 
 The owner selected concept **01**: a rounded **A** whose three terminals connect
-through a word-tracing path. The app icon is gold `#E3B65A` on navy `#0B294B`;
-the light-surface logo reverses the emphasis to a navy A with a gold path. The
-Latin **Asobana** wordmark is shared across international advertising, while
-the Georgian home-screen title remains **ასობანა**.
+through a word-tracing path. The app icon is gold `#E3B65A` on the game's night
+violet `#120C24`, with the swipe cut in the same violet; it was navy `#0B294B`
+until the owner changed it on 2026-10-24 to match the splash and the game. The
+advertising variants keep navy, and the light-surface logo reverses the emphasis
+to a navy A with a gold path. The Latin **Asobana** wordmark is shared across
+international advertising, while the Georgian home-screen title remains **ასობანა**.
 
 `scripts/build-branding.cjs` generates the vector/PNG masters in
 `mobile/assets/branding/` and `mobile/assets/icon.*`. See the
@@ -34,12 +36,13 @@ earlier enamel rosette on home and victory.
   ground and the background between screens) with `branding/splash-lockup.png`:
   the mark (160 pt) above the name ასობანა in gold-light display letters,
   260 x 200 pt, built by `scripts/build-splash.py`. Its swipe and dots are cut
-  in the same violet (`branding/mark-splash.*`), as the icon's are in its navy;
-  the owner chose on 2026-10-23 to keep the game violet and match the splash to
-  it rather than recolour the game navy. The app icon stays navy. The root layout keeps it until its first frame,
-  then fades it (250 ms) into the loading view, which rebuilds the lockup in the
-  same place (the live mark plus `splash-name.png`, the same name pixels), so
-  the only visible change is the spark starting. Expo Go shows its own loader
+  in the same violet (`branding/mark-splash.*`), as the icon's are; the owner
+  chose on 2026-10-23 to keep the game violet and match the splash to it rather
+  than recolour the game navy, and on 2026-10-24 moved the app icon to the same
+  violet. The root layout keeps it until its first frame, then fades it
+  (250 ms) into the loading view, which rebuilds the lockup in the same place
+  (the live mark plus `splash-name.png`, the same name pixels), so the only
+  visible change is the spark starting. Expo Go shows its own loader
   instead; the native splash appears only in builds.
 - **Loading** (`LoadingLogo`): the spark loops along the swipe instead of a
   spinner while fonts and the save load. The view stays at least 800 ms, so the

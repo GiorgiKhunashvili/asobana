@@ -28,7 +28,7 @@ import { palette } from '../theme';
 /*
  * The Asobana mark, drawn from its vector master (mobile/assets/branding):
  * a gold A whose swipe joins three letter-dots, the word-finding gesture.
- * The swipe takes the colour of the ground behind it, as the icon's navy does.
+ * The swipe takes the colour of the ground behind it, as on the app icon.
  * Coordinates are in the master's 512-unit square.
  */
 const BODY =

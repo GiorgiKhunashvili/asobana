@@ -8,9 +8,11 @@ The owner selected Asobana logo concept **01** on 2026-10-17: a rounded connecte
 `artifacts/branding/asobana-logo-directions.*`. Production artwork is reconstructed
 as clean vector paths; it is not a crop of the concept sheet.
 
-- `icon.svg` and `icon.png`: app icon, also displayed above the Georgian title
-  on the home screen. The PNG is 1024 × 1024 RGB without alpha or rounded outer
-  corners; the platform applies its icon mask.
+- `icon.svg` and `icon.png`: app icon, the gold mark with its swipe cut in the
+  night violet `#120C24` (navy `#0B294B` until 2026-10-24), as on the launch
+  splash. The PNG is 1024 × 1024 RGB without alpha or rounded outer corners;
+  the platform applies its icon mask. `scripts/build-store-screenshots.cjs`
+  resizes it into the Play Store icon.
 - `branding/mark-light.*` and `branding/mark-dark.*`: symbol for light/dark surfaces.
 - `branding/mark-splash.*`: the dark symbol with its swipe in the app's night
   violet `#120C24`, for the launch splash (Android directly, iOS through

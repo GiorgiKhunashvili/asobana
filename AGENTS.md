@@ -20,7 +20,10 @@ as the canonical rulebook; tool-specific instruction files should point here.
   identifiers from now on so installs and saves carry over.
 - The owner selected logo concept **01**: the navy-and-gold connected **A**.
   Vector masters and advertising exports live in `mobile/assets/branding/`;
-  `scripts/build-branding.cjs` generates them and the app icon.
+  `scripts/build-branding.cjs` generates them and the app icon. On 2026-10-24
+  the owner moved the app icon's background, and the swipe cut in it, from navy
+  to the game's night violet `#120C24`, matching the launch splash; the navy
+  advertising variants are unchanged.
 - The studio is **Spilo Games**. The owner selected studio logo **04D-3A**:
   plum SPILO lettering with an elephant inside the P. The approved reference,
   transparent PNG and implementation handoff live in

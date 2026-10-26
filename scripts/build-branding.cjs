@@ -10,7 +10,8 @@ const previews = join(root, 'artifacts/branding');
 const NAVY = '#0B294B';
 const GOLD = '#E3B65A';
 const IVORY = '#F8F0DE';
-// The launch splash's ground (palette.night), so its swipe reads as a cut-out.
+// The app icon's and launch splash's ground (palette.night); the swipe is cut
+// in it. The owner moved the icon from navy to this violet on 2026-10-24.
 const NIGHT = '#120C24';
 
 // A rounded A, open below the crossbar. The swipe joins all three terminals.
@@ -68,13 +69,13 @@ async function main() {
   const icon = svg(
     1024,
     1024,
-    `<rect width="1024" height="1024" fill="${NAVY}"/><g transform="translate(51.2 51.2) scale(1.8)">${mark(GOLD, NAVY)}</g>`,
+    `<rect width="1024" height="1024" fill="${NIGHT}"/><g transform="translate(51.2 51.2) scale(1.8)">${mark(GOLD, NIGHT)}</g>`,
     'Asobana connected A app icon',
   );
   writeFileSync(join(assets, 'icon.svg'), icon);
   // RGB, no alpha, no pre-rounded outer corners: the platform applies its mask.
   await sharp(Buffer.from(icon))
-    .flatten({ background: NAVY })
+    .flatten({ background: NIGHT })
     .removeAlpha()
     .png()
     .toFile(join(assets, 'icon.png'));
