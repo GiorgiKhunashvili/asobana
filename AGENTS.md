@@ -589,6 +589,12 @@ grammar classifier: new vocabulary still needs the editorial review above.
    Do not describe an export as a native-device test or a TestFlight upload.
    Building or uploading to TestFlight requires the user's request for that release;
    content editing alone does not authorize an upload.
+6. Build and upload iOS store builds only with `scripts/release-ios.sh <beta|production>`
+   from a clean commit, never alongside an Android build. It uploads only after the
+   build log confirms React Native's prebuilt frameworks, `scripts/check-ios-ipa.py`
+   finds every linked framework embedded and the ads mode matches the profile.
+   Build 1.0.0 (8) passed the build but crashed at launch for lack of
+   `React.framework`; see `docs/TESTFLIGHT.md`.
 
 ## Cleanup when a task ends
 

@@ -8,11 +8,26 @@ submission. Content revision 31, privacy link to spilogames.ge, iPhone only.
 These builds serve **live AdMob ads**: per AGENTS.md, the owner and testers do
 not install them; keep build 8 out of TestFlight tester groups.
 
-- **iOS 1.0.0 (8):** uploaded to App Store Connect app `6825282360` through EAS
-  submission `8504930d-b080-4c8d-b1eb-783114ea0de0`; Apple accepted the binary
-  for processing (processing result not checked here).
-  File: `artifacts/asobana-ios-1.0.0-production.ipa`, **59,821,188 bytes**.
-  SHA-256: `1d5483c1f4446a341f46b7587f83fe98fc4e56f62faa8e7f7efec4fffb50a48b`.
+- **iOS 1.0.0 (8): broken, withdrawn.** Uploaded through EAS submission
+  `8504930d-b080-4c8d-b1eb-783114ea0de0` and submitted for review, then **crashed
+  at launch** on the owner's iPhone 15 Pro (iOS 26.6.2) about 70 ms after start:
+  dyld `Library not loaded: @rpath/React.framework/React`, referenced from
+  `ExpoModulesWorklets.framework`. During this EAS local build CocoaPods logged
+  "[ReactNativeCore] No prebuilt artifacts found, reverting to building from
+  source" (also for ReactNativeDependencies): React Native's online existence
+  check for its prebuilt artifacts failed, it built React from source, and Expo's
+  precompiled frameworks still linked the prebuilt `React.framework`, which was
+  not embedded. The build reported success. The owner removed it from review;
+  expire it in TestFlight. The simulator Release builds were unaffected.
+- **iOS 1.0.0 (9): the review build.** Rebuilt from the same commit, alone (not
+  in parallel with Android). Its log shows `Building from source: false` for
+  ReactNativeCore and ReactNativeDependencies, and the IPA embeds
+  `React.framework` and `ReactNativeDependencies.framework`.
+  `scripts/check-ios-ipa.py` passes (it fails on build 8). File:
+  `artifacts/asobana-ios-1.0.0-production-b9.ipa`, **57,088,771 bytes**.
+  SHA-256: `3097470173d7b1e591c641fb19b0a1056ab2dc46d4df195e7114527f844e533c`.
+  **From now on, build and upload iOS with `scripts/release-ios.sh <beta|production>`**,
+  which runs these checks and refuses to upload a build that fails them.
 - **Android 1.0.0 / versionCode 10:** signed AAB for the owner's Google Play
   production upload; no Play submission was made. File:
   `artifacts/asobana-android-1.0.0-production.aab`, **152,849,325 bytes**.
