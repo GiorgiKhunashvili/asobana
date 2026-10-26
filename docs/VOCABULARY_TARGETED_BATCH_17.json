@@ -1,0 +1,2513 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-26",
+  "status": "owner-reviewed-partial-approval",
+  "activeRevisionUnchanged": 30,
+  "activeApprovedPool": 2306,
+  "totalApprovedPoolBeforeReview": 2339,
+  "pendingIntegrationBeforeReview": 33,
+  "candidateCount": 89,
+  "countsByLength": {
+    "3": 1,
+    "4": 7,
+    "5": 18,
+    "6": 63
+  },
+  "countsByCategory": {
+    "qualities": 7,
+    "language": 3,
+    "literature": 3,
+    "culture": 5,
+    "music": 5,
+    "ideas": 5,
+    "art": 1,
+    "history": 9,
+    "religion": 4,
+    "society": 4,
+    "objects": 5,
+    "architecture": 1,
+    "people": 5,
+    "materials": 2,
+    "technology": 2,
+    "transport": 1,
+    "geography": 2,
+    "science": 7,
+    "nature": 2,
+    "clothing": 3,
+    "sport": 1,
+    "games": 2,
+    "money": 5,
+    "measurement": 2,
+    "school": 2,
+    "food": 1
+  },
+  "countsByPartOfSpeech": {
+    "adjective": 7,
+    "noun": 82
+  },
+  "previouslyRecordedSpellings": 8796,
+  "previousReviewOverlap": 0,
+  "requestedCount": 100,
+  "ownerSelectedScope": "Familiar Georgian words from any subject; not restricted to strictly everyday use. Existing 3–6-letter and all other vocabulary rules remain.",
+  "method": "Exact-spelling deduplication against all content JSON and all VOCABULARY review JSON/text, including approved, rejected, skipped, unselected and pending spellings. Individually read primary explanatory-dictionary definitions, bilingual dictionary entries and linked specialist/cultural sources. Rejected dictionary search-result pages as evidence of a definition; replaced ambiguous spellings and unsupported senses. Cached definitions were re-read, with available source hashes retained.",
+  "limitations": [
+    "The exact 19 selected senses are owner-approved and await integration. The other 70 remain unapproved for required use, without an explicit all-gameplay exclusion. Eleven previously removed entries remain review history. Do not propose any of the original 100 spellings again as new.",
+    "Removed all six ordinals, both approximate-colour adjectives and three analogous prefixed adjectives. The latter three are explicitly recorded as an editorial application, not individually quoted owner rejections.",
+    "Familiarity is an editorial proposal across broad subjects, not a claim that every Georgian speaker knows every remaining word. No native-speaker review is claimed.",
+    "Previous individual exclusions, plural/grammar/name/barbarism rules and the 3–6-letter limit remain. მეორე was not in the original 100 and remains excluded by its earlier decision.",
+    "Batch 16 remains pending in full. Total approvals are 2,358, including 52 awaiting integration from batches 13–15 and 17. Active revision 30 stays at 2,306 required approvals and 500 levels.",
+    "No gameplay files, board fit, campaign capacity or repetition change was applied or measured. დარტსი has primary usage evidence rather than a standalone dictionary definition."
+  ],
+  "sourceAttribution": "Short adapted English glosses only. Sources: Georgian Explanatory Dictionary / Linguistic Technologies Group; TSU English–Georgian Dictionary; NPLG hosted dictionaries and published references; University of Georgia synonym dictionary; CSS social-science dictionary; Japanese Embassy in Georgia; a primary Georgian product description. Full definitions are not reproduced.",
+  "entries": [
+    {
+      "id": "T17-007",
+      "word": "გოროზი",
+      "length": 6,
+      "proposedMeaning": "stern-looking; imposing",
+      "partOfSpeech": "adjective",
+      "category": "qualities",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "Established Georgian descriptive word, including familiar literary vocabulary.",
+      "senseNotes": "Use the inspected dictionary sense, stern-looking/imposing; do not silently replace it with a different arrogant sense.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/გოროზი",
+          "sha256": "2523747fbf0a12ddd9e0378fcd6fbc293ccbddd283630468d96fb88a00408d84",
+          "checkedVia": "Primary dictionary page retrieved and parsed on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 7,
+      "reviewNumber": 1,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-008",
+      "word": "ქველი",
+      "length": 5,
+      "proposedMeaning": "kind; generous; charitable",
+      "partOfSpeech": "adjective",
+      "category": "qualities",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "Established Georgian descriptive word, including familiar literary vocabulary.",
+      "senseNotes": "Dictionary labels this older vocabulary; propose the familiar kind/generous sense under the owner-broadened review scope, not an obscure historical sense.",
+      "sourceLabels": ["ძველი"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/ქველი",
+          "sha256": "d39857415049ac34ca73e100b78db11c1cc6544ec32128fdb028330a7eb84185",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 8,
+      "reviewNumber": 2,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-009",
+      "word": "უხიაგი",
+      "length": 6,
+      "proposedMeaning": "stubborn; difficult",
+      "partOfSpeech": "adjective",
+      "category": "qualities",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "Established Georgian descriptive word, including familiar literary vocabulary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/უხიაგი",
+          "sha256": "c357c3be0f11c55d2695bf5548624fa40691b86ed9982bb45cacaa7d826f98c7",
+          "checkedVia": "Primary dictionary page retrieved and parsed on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 9,
+      "reviewNumber": 3,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-010",
+      "word": "ფუტურო",
+      "length": 6,
+      "proposedMeaning": "rotten and dry, of wood",
+      "partOfSpeech": "adjective",
+      "category": "qualities",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "Established Georgian descriptive word, including familiar literary vocabulary.",
+      "senseNotes": "Dictionary describes dry rotten wood; do not reduce the sense to any hollow object.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/ფუტურო",
+          "sha256": "216dbdde4d26facfec803aff5fe3d5a6a0ad49f4603e521e3c5daca116a0155c",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 10,
+      "reviewNumber": 4,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-011",
+      "word": "ჯაბანი",
+      "length": 6,
+      "proposedMeaning": "cowardly",
+      "partOfSpeech": "adjective",
+      "category": "qualities",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "Established Georgian descriptive word, including familiar literary vocabulary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/ჯაბანი",
+          "sha256": "2f6d7c27166aae0868d488a8c4802036123ee58b7926dc8807c2abcfbe0a39cf",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 11,
+      "reviewNumber": 5,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-012",
+      "word": "მდაბიო",
+      "length": 6,
+      "proposedMeaning": "of the common people; low-born",
+      "partOfSpeech": "adjective",
+      "category": "qualities",
+      "ownerDecision": "approved",
+      "editorialDecision": "Owner-approved recorded sense; awaits integration under unchanged policy and campaign rules.",
+      "familiarityBasis": "Established Georgian descriptive word, including familiar literary vocabulary.",
+      "senseNotes": "Social-status adjective, not a personal name or an origin label.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/მდაბიო",
+          "sha256": "9c643428c7531dc526ef83a63593e2e7188ae43ee307d66b8f1ca40e5e619c39",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 12,
+      "reviewNumber": 6,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-015",
+      "word": "აფიქსი",
+      "length": 6,
+      "proposedMeaning": "affix; grammatical word-building element",
+      "partOfSpeech": "noun",
+      "category": "language",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "School language/grammar vocabulary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.nplg.gov.ge/wikidict/index.php/აფიქსი",
+          "checkedVia": "Primary Georgian-language encyclopedia article defines the grammatical element; school-language sense only.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 15,
+      "reviewNumber": 7,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-016",
+      "word": "ფონემა",
+      "length": 6,
+      "proposedMeaning": "phoneme; distinctive speech-sound unit",
+      "partOfSpeech": "noun",
+      "category": "language",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "School language/grammar vocabulary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://dictionary.ge/en/word/phoneme/",
+          "sha256": "d00400fcdee6ed2c8c29e1e15340567cef193f4edd7ae80e1027c1fc1d3e3547",
+          "checkedVia": "Primary English–Georgian definition retrieved and exact Georgian spelling and sense inspected on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 16,
+      "reviewNumber": 8,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-017",
+      "word": "ელეგია",
+      "length": 6,
+      "proposedMeaning": "elegy; mournful lyric poem",
+      "partOfSpeech": "noun",
+      "category": "literature",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "School literature and familiar literary vocabulary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/ელეგია",
+          "sha256": "b10ecd7445059fbc7c4f5f94c6e265fad38db6ceaf906b1c7efc2d03c26f5352",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 17,
+      "reviewNumber": 9,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-018",
+      "word": "ფაბულა",
+      "length": 6,
+      "proposedMeaning": "plot; outline of a story",
+      "partOfSpeech": "noun",
+      "category": "literature",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "School literature and familiar literary vocabulary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/ფაბულა",
+          "sha256": "bb04cf912c46559d2d92182b8e3d0f9dc49a486c6353fea29380ca4808717e16",
+          "checkedVia": "Primary dictionary page retrieved and parsed on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 18,
+      "reviewNumber": 10,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-019",
+      "word": "იდიომი",
+      "length": 6,
+      "proposedMeaning": "idiom; fixed figurative expression",
+      "partOfSpeech": "noun",
+      "category": "language",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "School language/grammar vocabulary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/იდიომი",
+          "sha256": "d861b1e042501d5011613638bcfff2dc0dc44fb93b68dfe1fbabf2c91928133e",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 19,
+      "reviewNumber": 11,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-020",
+      "word": "ესთეტი",
+      "length": 6,
+      "proposedMeaning": "aesthete; admirer of beauty",
+      "partOfSpeech": "noun",
+      "category": "culture",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://dictionary.ge/en/word/aesthete/",
+          "sha256": "2d93c921b50f26ce8a0ed868e72a33db0bbb4bddbf2f515fbfe9190df1c8b1db",
+          "checkedVia": "Primary English–Georgian definition retrieved and exact Georgian spelling and sense inspected on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 20,
+      "reviewNumber": 12,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-021",
+      "word": "არღანი",
+      "length": 6,
+      "proposedMeaning": "barrel organ; mechanical musical instrument",
+      "partOfSpeech": "noun",
+      "category": "music",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "Recognisable instrument or basic musical notation.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/არღანი",
+          "sha256": "75982cd4f7603a73cbdffc9ba176fb295199e0a7b8bb4900540e4411a7524e0e",
+          "checkedVia": "Primary dictionary page retrieved and parsed on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 21,
+      "reviewNumber": 13,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-022",
+      "word": "სტვირი",
+      "length": 6,
+      "proposedMeaning": "pipe; simple wind instrument",
+      "partOfSpeech": "noun",
+      "category": "music",
+      "ownerDecision": "approved",
+      "editorialDecision": "Owner-approved recorded sense; awaits integration under unchanged policy and campaign rules.",
+      "familiarityBasis": "Recognisable instrument or basic musical notation.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/სტვირი",
+          "sha256": "a9112754cad3ede49c7ec366ec0897e8aa2047a6dbddc2ed605a9a17ce89c6ea",
+          "checkedVia": "Primary dictionary page retrieved and parsed on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 22,
+      "reviewNumber": 14,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-023",
+      "word": "ბაიანი",
+      "length": 6,
+      "proposedMeaning": "bayan; button accordion",
+      "partOfSpeech": "noun",
+      "category": "music",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "Recognisable instrument or basic musical notation.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.nplg.gov.ge/wikidict/index.php/ჩასაბერი_საკრავები",
+          "checkedVia": "Music encyclopedia includes ბაიანი with accordion-type instruments; musical sense only, excluding unrelated slang.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 23,
+      "reviewNumber": 15,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-024",
+      "word": "ბემოლი",
+      "length": 6,
+      "proposedMeaning": "flat sign in musical notation",
+      "partOfSpeech": "noun",
+      "category": "music",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "Recognisable instrument or basic musical notation.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.nplg.gov.ge/gwdict/index.php?a=list&d=83&p=13&w1=ბ",
+          "checkedVia": "Primary foreign-word dictionary list defines the musical flat sign and note-lowering sense.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 24,
+      "reviewNumber": 16,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-025",
+      "word": "ჰობოი",
+      "length": 5,
+      "proposedMeaning": "oboe; woodwind instrument",
+      "partOfSpeech": "noun",
+      "category": "music",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "Recognisable instrument or basic musical notation.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://dictionary.ge/en/word/oboe/",
+          "sha256": "589a8c89d6d523c1f63ee24d0664a992475a4ff129d76a1414651f4a1582cdd8",
+          "checkedVia": "Primary English–Georgian definition retrieved and exact Georgian spelling and sense inspected on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 25,
+      "reviewNumber": 17,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-026",
+      "word": "ღვაწლი",
+      "length": 6,
+      "proposedMeaning": "merit; valuable contribution through work",
+      "partOfSpeech": "noun",
+      "category": "ideas",
+      "ownerDecision": "approved",
+      "editorialDecision": "Owner-approved recorded sense; awaits integration under unchanged policy and campaign rules.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Merit/valuable contribution noun, not a conjugated verb or proposed verbal-action form.",
+      "sourceLabels": ["წიგნური"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/ღვაწლი",
+          "sha256": "4dc77bb6280d2913637d7110052dc7b718aa08a306615890c858dff2c6b51428",
+          "checkedVia": "Cached primary explanatory-dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 26,
+      "reviewNumber": 18,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-027",
+      "word": "როკოკო",
+      "length": 6,
+      "proposedMeaning": "Rococo artistic style",
+      "partOfSpeech": "noun",
+      "category": "art",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.nplg.gov.ge/gwdict/index.php?a=list&d=83&p=590",
+          "checkedVia": "Primary foreign-word dictionary list defines the architectural/decorative style.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 27,
+      "reviewNumber": 19,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-028",
+      "word": "ხალიფა",
+      "length": 6,
+      "proposedMeaning": "caliph; historical ruler's title",
+      "partOfSpeech": "noun",
+      "category": "history",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "School history or familiar Georgian cultural/historical vocabulary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://dictionary.ge/en/word/caliph/",
+          "sha256": "b2b42839bd8f842e5f8a8adf8254e68913dcf3110fae2bb285c9a36e0f7c72c0",
+          "checkedVia": "Primary English–Georgian definition retrieved and exact Georgian spelling and sense inspected on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 28,
+      "reviewNumber": 20,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-029",
+      "word": "სატრფო",
+      "length": 6,
+      "proposedMeaning": "beloved; sweetheart",
+      "partOfSpeech": "noun",
+      "category": "literature",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "School literature and familiar literary vocabulary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": ["ძველი"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/სატრფო",
+          "sha256": "d9760ab88228a681fd29ca706287cb068c9d17880bf8c7f4b31fcc8e564cda5a",
+          "checkedVia": "Cached primary explanatory-dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 29,
+      "reviewNumber": 21,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-030",
+      "word": "ბეგი",
+      "length": 4,
+      "proposedMeaning": "bey; historical noble title",
+      "partOfSpeech": "noun",
+      "category": "history",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "School history or familiar Georgian cultural/historical vocabulary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://dictionary.ge/en/word/bey/",
+          "sha256": "a6f4ed68029415b3dfa15c03d8c0eeac5fcf7b23722f48602d69fa178a7028da",
+          "checkedVia": "Primary English–Georgian definition retrieved and exact Georgian spelling and sense inspected on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 30,
+      "reviewNumber": 22,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-031",
+      "word": "ამირა",
+      "length": 5,
+      "proposedMeaning": "emir; historical ruler or governor",
+      "partOfSpeech": "noun",
+      "category": "history",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "School history or familiar Georgian cultural/historical vocabulary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://dictionary.ge/en/word/emir/",
+          "sha256": "289ff5ccaa6419a36e575c30f61562716ef85f8bab8ae049584e3eeab5f76b3b",
+          "checkedVia": "Primary English–Georgian definition retrieved and exact Georgian spelling and sense inspected on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 31,
+      "reviewNumber": 23,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-032",
+      "word": "ვეზირი",
+      "length": 6,
+      "proposedMeaning": "vizier; royal adviser",
+      "partOfSpeech": "noun",
+      "category": "history",
+      "ownerDecision": "approved",
+      "editorialDecision": "Owner-approved recorded sense; awaits integration under unchanged policy and campaign rules.",
+      "familiarityBasis": "School history or familiar Georgian cultural/historical vocabulary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": ["ძველი"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/ვეზირი",
+          "sha256": "ac0bd4a6ba69a9d9f3ecf92fe7f9c6ed44d06bb86ed14cd70495d88d3ab8d285",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 32,
+      "reviewNumber": 24,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-033",
+      "word": "ვასალი",
+      "length": 6,
+      "proposedMeaning": "vassal; subordinate feudal lord",
+      "partOfSpeech": "noun",
+      "category": "history",
+      "ownerDecision": "approved",
+      "editorialDecision": "Owner-approved recorded sense; awaits integration under unchanged policy and campaign rules.",
+      "familiarityBasis": "School history or familiar Georgian cultural/historical vocabulary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/ვასალი",
+          "sha256": "5280c19b5a5459f9054e05e2e9155e6bd27e329c16232cd6c226e4f40f22377f",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 33,
+      "reviewNumber": 25,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-034",
+      "word": "რაბინი",
+      "length": 6,
+      "proposedMeaning": "rabbi; Jewish religious teacher",
+      "partOfSpeech": "noun",
+      "category": "religion",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://dlab.ug.edu.ge/synonym/detail/10819/რაბინი",
+          "checkedVia": "Primary university dictionary defines the religious role.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 34,
+      "reviewNumber": 26,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-035",
+      "word": "ქურუმი",
+      "length": 6,
+      "proposedMeaning": "priest of an ancient pagan religion",
+      "partOfSpeech": "noun",
+      "category": "religion",
+      "ownerDecision": "approved",
+      "editorialDecision": "Owner-approved recorded sense; awaits integration under unchanged policy and campaign rules.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/ქურუმი",
+          "sha256": "42cdfb2fe350c4ce0a043491c33f616edb14fbb3f5279f1a3bc06cdfc990ead5",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 35,
+      "reviewNumber": 27,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-036",
+      "word": "კვართი",
+      "length": 6,
+      "proposedMeaning": "tunic; historical shirt-like garment",
+      "partOfSpeech": "noun",
+      "category": "history",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "School history or familiar Georgian cultural/historical vocabulary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": ["ძველი"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/კვართი",
+          "sha256": "3c12609026abc7a85478c8cfa77bfb6c5e19db268120cddb6e253c7ea6e16151",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 36,
+      "reviewNumber": 28,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-037",
+      "word": "სენაკი",
+      "length": 6,
+      "proposedMeaning": "monastic cell; small room for a monk",
+      "partOfSpeech": "noun",
+      "category": "religion",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/სენაკი",
+          "sha256": "533cd9140518cfacdc4b59cd2a75007d0d90d4b9f9b4b399d7c77fbd2b85d09d",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 37,
+      "reviewNumber": 29,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-038",
+      "word": "ეტრატი",
+      "length": 6,
+      "proposedMeaning": "parchment; prepared writing skin",
+      "partOfSpeech": "noun",
+      "category": "history",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "School history or familiar Georgian cultural/historical vocabulary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/ეტრატი",
+          "sha256": "5a4536931f5fd708b1851c97e2cb0c5cac4ca052edb7cb7795e494b029480573",
+          "checkedVia": "Primary dictionary page retrieved and parsed on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 38,
+      "reviewNumber": 30,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-039",
+      "word": "კომუნა",
+      "length": 6,
+      "proposedMeaning": "commune; community sharing property and work",
+      "partOfSpeech": "noun",
+      "category": "society",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://dspace.nplg.gov.ge/bitstream/1234/274192/1/Uaxlesi_ekonomikuri_leqsikoni.pdf",
+          "checkedVia": "Primary Georgian economic dictionary defines the community sharing work and property; no political endorsement or event claim.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 39,
+      "reviewNumber": 31,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-040",
+      "word": "პუტჩი",
+      "length": 5,
+      "proposedMeaning": "coup; seizure of state power",
+      "partOfSpeech": "noun",
+      "category": "society",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/პუტჩი",
+          "sha256": "1b1a3265fe2e17058277504099b1b18df5104e8e7f8416f64c71e6ba5afd9e4c",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 40,
+      "reviewNumber": 32,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-041",
+      "word": "ხუნტა",
+      "length": 5,
+      "proposedMeaning": "junta; military government",
+      "partOfSpeech": "noun",
+      "category": "society",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/ხუნტა",
+          "sha256": "310ebcaa6204f8b5cd2d17a8f257a184fee820be211713d25dea2489702a7be8",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 41,
+      "reviewNumber": 33,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-042",
+      "word": "ბურჟუა",
+      "length": 6,
+      "proposedMeaning": "bourgeois; member of the propertied class",
+      "partOfSpeech": "noun",
+      "category": "history",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "School history or familiar Georgian cultural/historical vocabulary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/ბურჟუა",
+          "sha256": "0a0cbb4914cdc71987d9f7c7642587265fef0f3ebb98fd356b9d16ce1d7fedc9",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 42,
+      "reviewNumber": 34,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-043",
+      "word": "გოდორი",
+      "length": 6,
+      "proposedMeaning": "large woven basket for grain or fruit",
+      "partOfSpeech": "noun",
+      "category": "objects",
+      "ownerDecision": "approved",
+      "editorialDecision": "Owner-approved recorded sense; awaits integration under unchanged policy and campaign rules.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/გოდორი",
+          "sha256": "9bf4ffb8dd46ab9c95eb89b6085e4e58163dbe9cfe3624dd49f3fbe26eb469ff",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 43,
+      "reviewNumber": 35,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-044",
+      "word": "გოდოლი",
+      "length": 6,
+      "proposedMeaning": "fortress tower",
+      "partOfSpeech": "noun",
+      "category": "architecture",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/გოდოლი",
+          "sha256": "8055f314d9d23d78cecc8f69a75246b2175e0fd1995fa8aef95eb6c074e9b104",
+          "checkedVia": "Primary dictionary page retrieved and parsed on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 44,
+      "reviewNumber": 36,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-045",
+      "word": "გუშაგი",
+      "length": 6,
+      "proposedMeaning": "sentry; armed guard",
+      "partOfSpeech": "noun",
+      "category": "people",
+      "ownerDecision": "approved",
+      "editorialDecision": "Owner-approved recorded sense; awaits integration under unchanged policy and campaign rules.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": ["ძველი"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/გუშაგი",
+          "sha256": "4085e02cead6dbf0449df2671cec86bb1495f8c395426ceb31df3bd3355ea09a",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 45,
+      "reviewNumber": 37,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-046",
+      "word": "ხარაზი",
+      "length": 6,
+      "proposedMeaning": "shoemaker",
+      "partOfSpeech": "noun",
+      "category": "people",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/ხარაზი",
+          "sha256": "c78541ee14eafaabe8004ffa92830a08cefcf923915157eb56c1bf7b6846aadb",
+          "checkedVia": "Primary dictionary page retrieved and parsed on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 46,
+      "reviewNumber": 38,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-047",
+      "word": "მეეტლე",
+      "length": 6,
+      "proposedMeaning": "coachman; carriage driver",
+      "partOfSpeech": "noun",
+      "category": "people",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/მეეტლე",
+          "sha256": "76d2efe47f970b197ba0c7c758b0c7860533628d37c47fa047d308b1acc12cac",
+          "checkedVia": "Primary dictionary page retrieved and parsed on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 47,
+      "reviewNumber": 39,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-048",
+      "word": "მენავე",
+      "length": 6,
+      "proposedMeaning": "boatman",
+      "partOfSpeech": "noun",
+      "category": "people",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/მენავე",
+          "sha256": "14ff4a20ac981408cbea70452ce663cc92719b16bda746d40c72790612611cac",
+          "checkedVia": "Primary dictionary page retrieved and parsed on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 48,
+      "reviewNumber": 40,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-049",
+      "word": "დუქანი",
+      "length": 6,
+      "proposedMeaning": "traditional small shop or eating house",
+      "partOfSpeech": "noun",
+      "category": "culture",
+      "ownerDecision": "approved",
+      "editorialDecision": "Owner-approved recorded sense; awaits integration under unchanged policy and campaign rules.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": ["ძველი"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/დუქანი",
+          "sha256": "73c3e205e825dbfdcb90312ba7329c778cf08412a51899fc2adbe93f28a22d19",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 49,
+      "reviewNumber": 41,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-050",
+      "word": "გიშერი",
+      "length": 6,
+      "proposedMeaning": "jet; black ornamental material",
+      "partOfSpeech": "noun",
+      "category": "materials",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/გიშერი",
+          "sha256": "1c38e1ac0535fbab3b7813da7678191ebd5bb3e6a6995c712efe9300e4bbb5c4",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 50,
+      "reviewNumber": 42,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-051",
+      "word": "ვარცლი",
+      "length": 6,
+      "proposedMeaning": "wooden dough-kneading trough",
+      "partOfSpeech": "noun",
+      "category": "objects",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/ვარცლი",
+          "sha256": "f7be66bde9322cd6c9473fe5076e7226dfec8a2a35c201a3f826384a97f705c5",
+          "checkedVia": "Primary dictionary page retrieved and parsed on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 51,
+      "reviewNumber": 43,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-052",
+      "word": "ჭილოფი",
+      "length": 6,
+      "proposedMeaning": "woven rush mat",
+      "partOfSpeech": "noun",
+      "category": "objects",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.nplg.gov.ge/gwdict/index.php?a=list&d=39&t=dict&w1=ჭ",
+          "checkedVia": "Primary material-culture dictionary lists ჭილობი, ჭილოფი and defines a woven rush mat.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 52,
+      "reviewNumber": 44,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-053",
+      "word": "კაფელი",
+      "length": 6,
+      "proposedMeaning": "glazed ceramic wall tile",
+      "partOfSpeech": "noun",
+      "category": "materials",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Glazed tile noun in the explanatory dictionary; loanword attestation is not automatic permission to ignore a later prescriptive exclusion.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/კაფელი",
+          "sha256": "7d4d077170a29ddb1aae208d2f235c5679b3a4cbe3f55566e559358faf9cf4dd",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 53,
+      "reviewNumber": 45,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-054",
+      "word": "მოტორი",
+      "length": 6,
+      "proposedMeaning": "motor; engine",
+      "partOfSpeech": "noun",
+      "category": "technology",
+      "ownerDecision": "approved",
+      "editorialDecision": "Owner-approved recorded sense; awaits integration under unchanged policy and campaign rules.",
+      "familiarityBasis": "Common modern terminology; exact spelling and language-policy review remain necessary.",
+      "senseNotes": "Dictionary-listed motor/engine noun, distinct from nonstandard მატორი; preserve the spelling and owner review.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/მოტორი",
+          "sha256": "b393325180de19223d1cb829036623332208571e87e377b7dacd913e2c41a646",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 54,
+      "reviewNumber": 46,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-055",
+      "word": "კატერი",
+      "length": 6,
+      "proposedMeaning": "motorboat",
+      "partOfSpeech": "noun",
+      "category": "transport",
+      "ownerDecision": "approved",
+      "editorialDecision": "Owner-approved recorded sense; awaits integration under unchanged policy and campaign rules.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Dictionary-listed motorboat sense, equated with კატარღა; preserve exact spelling and owner review.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/კატერი",
+          "sha256": "642171c25fb38a5aa1eb72fda9b88bfbdaf59719559be945938edb556758372f",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 55,
+      "reviewNumber": 47,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-056",
+      "word": "ტროსი",
+      "length": 5,
+      "proposedMeaning": "steel wire rope; cable",
+      "partOfSpeech": "noun",
+      "category": "objects",
+      "ownerDecision": "approved",
+      "editorialDecision": "Owner-approved recorded sense; awaits integration under unchanged policy and campaign rules.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Technical dictionary treats ტროსი as the headword and კანატი as its barbarism. The heading ბარბარიზმი on that page must not be misread as labelling ტროსი itself.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/ტროსი",
+          "sha256": "b5c6d374fc87e04fa1d63bb86b316badfd90fc7f8786b96c6ae2a10b5fccadf2",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        },
+        {
+          "url": "https://techdict.ge/ka/word/ტროსი/",
+          "checkedVia": "Primary technical dictionary headword and separate barbarism field inspected; the latter lists კანატი, not the headword.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 56,
+      "reviewNumber": 48,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-057",
+      "word": "კევრი",
+      "length": 5,
+      "proposedMeaning": "traditional threshing sledge",
+      "partOfSpeech": "noun",
+      "category": "history",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "School history or familiar Georgian cultural/historical vocabulary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": ["ძველი"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/კევრი",
+          "sha256": "0dd6213af93acfe86c8cc24f3d27edb0ffb68db4c0d9d000c98cf2455c7aecd1",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 57,
+      "reviewNumber": 49,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-058",
+      "word": "პრერია",
+      "length": 6,
+      "proposedMeaning": "prairie; broad grassland",
+      "partOfSpeech": "noun",
+      "category": "geography",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://dictionary.ge/en/word/prairie/",
+          "sha256": "ce045a7bd81fc80440dc143f595c3cefebb3e95b15eb4ce39e820b689d482493",
+          "checkedVia": "Primary English–Georgian definition retrieved and exact Georgian spelling and sense inspected on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 58,
+      "reviewNumber": 50,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-059",
+      "word": "ტუნდრა",
+      "length": 6,
+      "proposedMeaning": "tundra; northern low-vegetation region",
+      "partOfSpeech": "noun",
+      "category": "geography",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": ["გეოგრაფია"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/ტუნდრა",
+          "sha256": "0eb167ccc629fae00cadf6cbe637c465cc972047ce8c45af06da2595ee733a6f",
+          "checkedVia": "Primary dictionary page retrieved and parsed on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 59,
+      "reviewNumber": 51,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-060",
+      "word": "მაგმა",
+      "length": 5,
+      "proposedMeaning": "magma; molten rock beneath the surface",
+      "partOfSpeech": "noun",
+      "category": "science",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "School science or widely encountered scientific/health vocabulary; owner familiarity review especially important.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.nplg.gov.ge/gwdict/index.php?a=term&d=73&t=582",
+          "checkedVia": "Primary terminology entry attests the molten-rock meaning. Gloss avoids conflating underground magma and erupted lava.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 60,
+      "reviewNumber": 52,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-061",
+      "word": "ზვირთი",
+      "length": 6,
+      "proposedMeaning": "large wave; billow",
+      "partOfSpeech": "noun",
+      "category": "nature",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/ზვირთი",
+          "sha256": "6aad906fb23dbb437f97bf01a7cee60c00c10ced2b511eaa42613f88feba1c1e",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 61,
+      "reviewNumber": 53,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-062",
+      "word": "ქედანი",
+      "length": 6,
+      "proposedMeaning": "wood pigeon",
+      "partOfSpeech": "noun",
+      "category": "nature",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/ქედანი",
+          "sha256": "6495edcaa2f44b7decc24382c2f46e1db95543f6cb72db3cff476252f92c9d4d",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 62,
+      "reviewNumber": 54,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-063",
+      "word": "ანოდი",
+      "length": 5,
+      "proposedMeaning": "anode; electrode term",
+      "partOfSpeech": "noun",
+      "category": "science",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "School science or widely encountered scientific/health vocabulary; owner familiarity review especially important.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://dictionary.ge/en/word/anode/",
+          "sha256": "aafa0cc0e2a33bae48c946aabb6b5a6a205b4a3ad272dffae068038b47e8adc4",
+          "checkedVia": "Primary English–Georgian definition retrieved and exact Georgian spelling and sense inspected on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 63,
+      "reviewNumber": 55,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-064",
+      "word": "კათოდი",
+      "length": 6,
+      "proposedMeaning": "cathode; electrode term",
+      "partOfSpeech": "noun",
+      "category": "science",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "School science or widely encountered scientific/health vocabulary; owner familiarity review especially important.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://dictionary.ge/en/word/cathode/",
+          "sha256": "e72bb290bc770487c76f0a4403cf67ca3db0bc50fce110aad8f233e50f0cc40f",
+          "checkedVia": "Primary English–Georgian definition retrieved and exact Georgian spelling and sense inspected on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 64,
+      "reviewNumber": 56,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-065",
+      "word": "რეზუსი",
+      "length": 6,
+      "proposedMeaning": "rhesus blood factor",
+      "partOfSpeech": "noun",
+      "category": "science",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "School science or widely encountered scientific/health vocabulary; owner familiarity review especially important.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://dspace.nplg.gov.ge/bitstream/1234/574121/1/Istoriuli_Memkvidreoba_2017_N1.pdf",
+          "checkedVia": "Primary Georgian article uses დადებითი რეზუსი and explains the blood-factor sense; no health advice or test interpretation proposed.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 65,
+      "reviewNumber": 57,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-066",
+      "word": "კისტა",
+      "length": 5,
+      "proposedMeaning": "cyst; fluid-filled bodily cavity",
+      "partOfSpeech": "noun",
+      "category": "science",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "School science or widely encountered scientific/health vocabulary; owner familiarity review especially important.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/კისტა",
+          "sha256": "e202051539b2f878d286f6b0b7b307ca82c74531bb9eb7096bf9553f0611aadd",
+          "checkedVia": "Primary dictionary page retrieved and parsed on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 66,
+      "reviewNumber": 58,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-067",
+      "word": "ციროზი",
+      "length": 6,
+      "proposedMeaning": "cirrhosis; organ-scarring condition",
+      "partOfSpeech": "noun",
+      "category": "science",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "School science or widely encountered scientific/health vocabulary; owner familiarity review especially important.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": ["მედიცინა"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/ციროზი",
+          "sha256": "42d02ea6131f9389496050b7f7682be24a229376511b61aa5caaa3ce188fd708",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 67,
+      "reviewNumber": 59,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-068",
+      "word": "ამება",
+      "length": 5,
+      "proposedMeaning": "amoeba; single-celled organism",
+      "partOfSpeech": "noun",
+      "category": "science",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "School science or widely encountered scientific/health vocabulary; owner familiarity review especially important.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.nplg.gov.ge/wikidict/index.php?action=edit&title=ამება",
+          "checkedVia": "Source text of the Georgian dictionary article explicitly defines the single-celled organism; not the unrelated homographic verb.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 68,
+      "reviewNumber": 60,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-069",
+      "word": "ტიტანი",
+      "length": 6,
+      "proposedMeaning": "titan; exceptionally powerful person",
+      "partOfSpeech": "noun",
+      "category": "ideas",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Use the inspected figurative noun meaning an exceptionally powerful person; chemical and personal-name senses are not independently approved by this proposal.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/ტიტანი",
+          "sha256": "498e99d916cbaaeb4663b1106c3ca62ec8efbd43428376c6764e454edffae9e7",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 69,
+      "reviewNumber": 61,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-070",
+      "word": "კიმონო",
+      "length": 6,
+      "proposedMeaning": "kimono; traditional robe or martial-arts clothing",
+      "partOfSpeech": "noun",
+      "category": "clothing",
+      "ownerDecision": "approved",
+      "editorialDecision": "Owner-approved recorded sense; awaits integration under unchanged policy and campaign rules.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.nplg.gov.ge/gwdict/index.php?a=list&d=3&p=2&w1=კ&w2=ი",
+          "checkedVia": "Primary foreign-word dictionary records the robe and martial-arts clothing senses.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 70,
+      "reviewNumber": 62,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-071",
+      "word": "ხიზანი",
+      "length": 6,
+      "proposedMeaning": "person given refuge; sheltered newcomer",
+      "partOfSpeech": "noun",
+      "category": "people",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/ხიზანი",
+          "sha256": "cef507575c4fa697f0b13caf7e7ae99704e69794c85aca30eeaa429d5106c34e",
+          "checkedVia": "Cached primary explanatory-dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 71,
+      "reviewNumber": 63,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-072",
+      "word": "გეიშა",
+      "length": 5,
+      "proposedMeaning": "geisha; traditional Japanese entertainer",
+      "partOfSpeech": "noun",
+      "category": "culture",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/გეიშა",
+          "sha256": "d6cdb2874d8f2ba6195612a8d833f46c01e59fa6d3002b9c7dbfdbf1e7e057bb",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 72,
+      "reviewNumber": 64,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-073",
+      "word": "სუმო",
+      "length": 4,
+      "proposedMeaning": "sumo wrestling",
+      "partOfSpeech": "noun",
+      "category": "sport",
+      "ownerDecision": "approved",
+      "editorialDecision": "Owner-approved recorded sense; awaits integration under unchanged policy and campaign rules.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ge.emb-japan.go.jp/files/japan_fact_sheet/Sumo.pdf",
+          "checkedVia": "Japanese Embassy Georgian fact sheet identifies and explains the sport; no weight-rule or competition-statistic claim is proposed.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 73,
+      "reviewNumber": 65,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-074",
+      "word": "ბინგო",
+      "length": 5,
+      "proposedMeaning": "bingo; number-matching game",
+      "partOfSpeech": "noun",
+      "category": "games",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://dlab.ug.edu.ge/synonym/detail/13479/ბრიჯი",
+          "checkedVia": "Primary university dictionary lists ბინგო with lotto and board/card games; propose the game noun rather than an exclamation.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 74,
+      "reviewNumber": 66,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-075",
+      "word": "აქციზი",
+      "length": 6,
+      "proposedMeaning": "excise; a type of tax on goods",
+      "partOfSpeech": "noun",
+      "category": "money",
+      "ownerDecision": "approved",
+      "editorialDecision": "Owner-approved recorded sense; awaits integration under unchanged policy and campaign rules.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/აქციზი",
+          "sha256": "17dbcd83ee3dafec555bf73c04729d810697705334f8f60e13245e3bdf3a1b84",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 75,
+      "reviewNumber": 67,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-076",
+      "word": "ლოტი",
+      "length": 4,
+      "proposedMeaning": "lot; item or group offered at auction",
+      "partOfSpeech": "noun",
+      "category": "money",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.dspace.nplg.gov.ge/bitstream/1234/565368/1/Sazghvao_Gadazidvebi_2009.pdf",
+          "checkedVia": "Maritime academy textbook footnote distinguishes senses and explicitly identifies the auction-item sense.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 76,
+      "reviewNumber": 68,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-077",
+      "word": "თუმანი",
+      "length": 6,
+      "proposedMeaning": "historical money term for ten maneti",
+      "partOfSpeech": "noun",
+      "category": "money",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Historical familiar money term, explicitly retained as a proposal under the wider familiarity criterion; not a current exchange-rate claim.",
+      "sourceLabels": ["ძველი"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/თუმანი",
+          "sha256": "d51769149abf5aaa7ed6b24ba6dbb5e1f0d00f5db06c8b6fe73eaa989b6b27ae",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 77,
+      "reviewNumber": 69,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-078",
+      "word": "გროში",
+      "length": 5,
+      "proposedMeaning": "a very small amount of money",
+      "partOfSpeech": "noun",
+      "category": "money",
+      "ownerDecision": "approved",
+      "editorialDecision": "Owner-approved recorded sense; awaits integration under unchanged policy and campaign rules.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Use the dictionary-attested figurative very-little-money sense; no currency rate or current value is claimed.",
+      "sourceLabels": ["საუბრული"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/გროში",
+          "sha256": "1dc5728aa323d0465e8bb022fb228aed49bef4f18f2456912f49280373115cf5",
+          "checkedVia": "Primary dictionary page retrieved and parsed on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 78,
+      "reviewNumber": 70,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-079",
+      "word": "შაური",
+      "length": 5,
+      "proposedMeaning": "historical five-kopeck coin or amount",
+      "partOfSpeech": "noun",
+      "category": "money",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Historical coin/amount sense; not a human name or current monetary conversion.",
+      "sourceLabels": ["ძველი"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/შაური",
+          "sha256": "0965df1c07beab2d6b285d40be3f23737172ac0a389516395a4f4846ea5ee739",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 79,
+      "reviewNumber": 71,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-080",
+      "word": "ფუთი",
+      "length": 4,
+      "proposedMeaning": "pood; historical unit of weight",
+      "partOfSpeech": "noun",
+      "category": "measurement",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "Familiar unit from school, literature or public usage.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/ფუთი",
+          "sha256": "0e91b2e4db3a8a3a0d45e04aefbde940a8b122807cbabf4f8fb1fd796f624799",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 80,
+      "reviewNumber": 72,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-081",
+      "word": "ბოჰემა",
+      "length": 6,
+      "proposedMeaning": "bohemian artistic community or way of life",
+      "partOfSpeech": "noun",
+      "category": "culture",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/ბოჰემა",
+          "sha256": "c7fae93cf83d8c423ec7646bb5838025794131ea2ad5524d2856f432226b53f2",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 81,
+      "reviewNumber": 73,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-082",
+      "word": "ფურორი",
+      "length": 6,
+      "proposedMeaning": "sensation; enthusiastic public success",
+      "partOfSpeech": "noun",
+      "category": "ideas",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.nplg.gov.ge/gwdict/index.php?a=term&d=3&t=43365",
+          "checkedVia": "Primary foreign-word dictionary defines enthusiastic public success.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 82,
+      "reviewNumber": 74,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-083",
+      "word": "კოლოსი",
+      "length": 6,
+      "proposedMeaning": "colossus; someone or something enormous",
+      "partOfSpeech": "noun",
+      "category": "ideas",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://dlab.ug.edu.ge/synonym/detail/12351/კოლოსი",
+          "checkedVia": "Primary university dictionary explicitly defines the figurative enormous-person/object sense; exclude the named statue sense.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 83,
+      "reviewNumber": 75,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-084",
+      "word": "ეგო",
+      "length": 3,
+      "proposedMeaning": "ego; psychological self",
+      "partOfSpeech": "noun",
+      "category": "ideas",
+      "ownerDecision": "approved",
+      "editorialDecision": "Owner-approved recorded sense; awaits integration under unchanged policy and campaign rules.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://dictionary.css.ge/node/586",
+          "checkedVia": "Primary social-science reference defines the psychological ego; not the homographic Georgian verb form.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 84,
+      "reviewNumber": 76,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-085",
+      "word": "ემოჯი",
+      "length": 5,
+      "proposedMeaning": "emoji; pictorial message symbol",
+      "partOfSpeech": "noun",
+      "category": "technology",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "Common modern terminology; exact spelling and language-policy review remain necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://dspace.nplg.gov.ge/bitstream/1234/585993/1/Niqabadze_Mari_Disertacia.pdf",
+          "checkedVia": "TSU linguistic dissertation describes the pictorial message symbol and uses the exact Georgian noun spelling.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 85,
+      "reviewNumber": 77,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-086",
+      "word": "ქორდა",
+      "length": 5,
+      "proposedMeaning": "chord; line segment joining two points on a curve",
+      "partOfSpeech": "noun",
+      "category": "school",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/ქორდა",
+          "sha256": "4de36ac6a15d5ea8c796f42f582f35a9eece8df24f2d8a692c54e64fdcb7eafd",
+          "checkedVia": "Primary dictionary page retrieved and parsed on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 86,
+      "reviewNumber": 78,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-087",
+      "word": "ტერორი",
+      "length": 6,
+      "proposedMeaning": "terror; intimidation through violence",
+      "partOfSpeech": "noun",
+      "category": "society",
+      "ownerDecision": "approved",
+      "editorialDecision": "Owner-approved recorded sense; awaits integration under unchanged policy and campaign rules.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/ტერორი",
+          "sha256": "bfc40d8791f430523e10880cf55d13216024a59f57fe8bfd294eff0a75ac5c80",
+          "checkedVia": "Cached primary explanatory-dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 87,
+      "reviewNumber": 79,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-088",
+      "word": "ზეფირი",
+      "length": 6,
+      "proposedMeaning": "zefir; soft whipped sweet",
+      "partOfSpeech": "noun",
+      "category": "food",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://dlab.ug.edu.ge/synonym/detail/17919/კექსი",
+          "checkedVia": "Primary university dictionary contains a ზეფირი section defining the fruit/cream sweet; only the food sense, not the wind deity.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 88,
+      "reviewNumber": 80,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-089",
+      "word": "ფუტი",
+      "length": 4,
+      "proposedMeaning": "foot; unit of length",
+      "partOfSpeech": "noun",
+      "category": "measurement",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "Familiar unit from school, literature or public usage.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.nplg.gov.ge/gwdict/index.php?a=list&d=3&p=2&w1=ფ&w2=უ",
+          "checkedVia": "Primary foreign-word dictionary defines the English unit of length; no dialectal smoke/tree sense is proposed.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 89,
+      "reviewNumber": 81,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-090",
+      "word": "დარტსი",
+      "length": 6,
+      "proposedMeaning": "darts; target-and-dart game",
+      "partOfSpeech": "noun",
+      "category": "games",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://sportmaster.ge/product/დარტსი-სიზუსტისა-და-მიზ-3/",
+          "checkedVia": "Primary Georgian retailer describes the dart-and-target game under this exact spelling; university-style standalone lexical verification remains weaker than for the other entries. Owner review and unchanged language policy still apply.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 90,
+      "reviewNumber": 82,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-091",
+      "word": "წუღა",
+      "length": 4,
+      "proposedMeaning": "traditional soft leather shoe",
+      "partOfSpeech": "noun",
+      "category": "clothing",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/წუღა",
+          "sha256": "ca0fb5fc9d3a8423a53e4a0ceba19b8e4766ea94bd14484adeec90bcb9ee15d0",
+          "checkedVia": "Cached primary explanatory-dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 91,
+      "reviewNumber": 83,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-095",
+      "word": "ზოზინა",
+      "length": 6,
+      "proposedMeaning": "slow-moving; dawdling",
+      "partOfSpeech": "adjective",
+      "category": "qualities",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "Established Georgian descriptive word, including familiar literary vocabulary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/ზოზინა",
+          "sha256": "c10710d5b390732e930fada2dd3b6ea48d91daa06d7445493115525ba6e3d723",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 95,
+      "reviewNumber": 84,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-096",
+      "word": "ძაძა",
+      "length": 4,
+      "proposedMeaning": "mourning clothes; sackcloth",
+      "partOfSpeech": "noun",
+      "category": "clothing",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Singular collective clothing noun; do not propose plural ძაძები as a required answer.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/ძაძა",
+          "sha256": "f93fc0fd5f23bca7c749ddf84285bca5db2cca8e46225c7eec4304a26555fe46",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 96,
+      "reviewNumber": 85,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-097",
+      "word": "სუდარა",
+      "length": 6,
+      "proposedMeaning": "burial shroud",
+      "partOfSpeech": "noun",
+      "category": "objects",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/სუდარა",
+          "sha256": "81a76fde805b66d55be338ff5e697f8fdfd7cea4e4c3412763c958374bff1b91",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 97,
+      "reviewNumber": 86,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-098",
+      "word": "ხუცესი",
+      "length": 6,
+      "proposedMeaning": "priest; cleric",
+      "partOfSpeech": "noun",
+      "category": "religion",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/ხუცესი",
+          "sha256": "778bade00dcc4bd43992af947edcd1ce0e18f277aad70bc4e687697b5081886b",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 98,
+      "reviewNumber": 87,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-099",
+      "word": "ნობათი",
+      "length": 6,
+      "proposedMeaning": "gift; produce brought as a gift",
+      "partOfSpeech": "noun",
+      "category": "culture",
+      "ownerDecision": "approved",
+      "editorialDecision": "Owner-approved recorded sense; awaits integration under unchanged policy and campaign rules.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": ["წიგნური"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/ნობათი",
+          "sha256": "1328c3fe2d23da2657a05bb56d7a7f494ed33c0043e9fa0fd97687d47f6622b3",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 99,
+      "reviewNumber": 88,
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T17-100",
+      "word": "კალკი",
+      "length": 5,
+      "proposedMeaning": "tracing paper; calque in language",
+      "partOfSpeech": "noun",
+      "category": "school",
+      "ownerDecision": "unapproved",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "familiarityBasis": "General cultural or ordinary noun sense; owner familiarity review remains necessary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": ["ენათმეცნიერება"],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/კალკი",
+          "sha256": "89ca385f99fc8333486acc70a5eadbfbbfcfb8e6fd8591c0290613ecbc1e94de",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 100,
+      "reviewNumber": 89,
+      "ownerReviewedAt": "2026-10-26"
+    }
+  ],
+  "productionBaselineSha256": {
+    "content/dictionaries/discovery-v30-ka.json": "4c354d592cb6c3574ff23caa80d5e261e1f000394064b30700c9bf1165c3148d",
+    "content/dictionaries/everyday-targets-v30.json": "8bde23f6920e4fac245ec804ad2d84a101796f13a789715573a3774174f5d3ac",
+    "content/levels/discovery.v30.review.json": "36c4646dbf208f67c1b875ce4a78beeb89686e975ece44cc93f9ce9fb3f548cd",
+    "content/levels/discovery.v30.json": "aa06da11c1eabdaa6adad84c63c258cb76f9120832c02acf1f6c692aae74176f",
+    "content/levels/discovery.v30.recipes.json": "ae4b2885821c3e96132225620cbab14fff8809823214cef504e8dfc32826113c",
+    "content/dictionaries/word-policy.json": "482c910fdd5dd69748dbedff478a929745356c1e2ece72b1efc7d06db9fe9d78",
+    "mobile/src/content/catalog.ts": "b9c623099936a6fe139d738815cbdaa38ae0d30f19abbe3f7acb3780b8602f56"
+  },
+  "originalCandidateCount": 100,
+  "removedCount": 11,
+  "ownerFilteredAt": "2026-10-26",
+  "removedEntries": [
+    {
+      "id": "T17-001",
+      "word": "მესამე",
+      "length": 6,
+      "proposedMeaning": "third",
+      "partOfSpeech": "numeral",
+      "category": "numbers",
+      "ownerDecision": "removed-from-review",
+      "editorialDecision": "Removed from this review and not approved; preserve the original sense and source record. This request does not itself change runtime eligibility.",
+      "familiarityBasis": "Basic ordinal familiar from counting and school.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://dictionary.ge/en/word/third%2BI/",
+          "checkedVia": "Primary English–Georgian entry inspected via web; records the exact third/მესამე ordinal spelling.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 1,
+      "removedAt": "2026-10-26",
+      "removalReason": "Ordinal numeral: removed under the owner request exemplified by მეორე and მესამე.",
+      "removalBasis": "owner-category-request"
+    },
+    {
+      "id": "T17-002",
+      "word": "მეოთხე",
+      "length": 6,
+      "proposedMeaning": "fourth",
+      "partOfSpeech": "numeral",
+      "category": "numbers",
+      "ownerDecision": "removed-from-review",
+      "editorialDecision": "Removed from this review and not approved; preserve the original sense and source record. This request does not itself change runtime eligibility.",
+      "familiarityBasis": "Basic ordinal familiar from counting and school.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://dictionary.ge/en/word/fourth/",
+          "sha256": "ead7f067b881f55ae9f0f6b320ddfcd6d34553e963b37b23f001e28e19ab6274",
+          "checkedVia": "Primary English–Georgian definition retrieved and exact Georgian spelling and sense inspected on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 2,
+      "removedAt": "2026-10-26",
+      "removalReason": "Ordinal numeral: removed under the owner request exemplified by მეორე and მესამე.",
+      "removalBasis": "owner-category-request"
+    },
+    {
+      "id": "T17-003",
+      "word": "მეხუთე",
+      "length": 6,
+      "proposedMeaning": "fifth",
+      "partOfSpeech": "numeral",
+      "category": "numbers",
+      "ownerDecision": "removed-from-review",
+      "editorialDecision": "Removed from this review and not approved; preserve the original sense and source record. This request does not itself change runtime eligibility.",
+      "familiarityBasis": "Basic ordinal familiar from counting and school.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://dictionary.ge/en/word/fifth/",
+          "sha256": "c642808a79e653a2d936cd129417f832a455594ed633778b01df8058e44d5d42",
+          "checkedVia": "Primary English–Georgian definition retrieved and exact Georgian spelling and sense inspected on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 3,
+      "removedAt": "2026-10-26",
+      "removalReason": "Ordinal numeral: removed under the owner request exemplified by მეორე and მესამე.",
+      "removalBasis": "owner-category-request"
+    },
+    {
+      "id": "T17-004",
+      "word": "მეცხრე",
+      "length": 6,
+      "proposedMeaning": "ninth",
+      "partOfSpeech": "numeral",
+      "category": "numbers",
+      "ownerDecision": "removed-from-review",
+      "editorialDecision": "Removed from this review and not approved; preserve the original sense and source record. This request does not itself change runtime eligibility.",
+      "familiarityBasis": "Basic ordinal familiar from counting and school.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://dictionary.ge/en/word/ninth/",
+          "sha256": "d92679d17a6fd0f0dea0fdfff675f2386fab9860ed32a1ab646211eac20076ad",
+          "checkedVia": "Primary English–Georgian definition retrieved and exact Georgian spelling and sense inspected on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 4,
+      "removedAt": "2026-10-26",
+      "removalReason": "Ordinal numeral: removed under the owner request exemplified by მეორე and მესამე.",
+      "removalBasis": "owner-category-request"
+    },
+    {
+      "id": "T17-005",
+      "word": "მეასე",
+      "length": 5,
+      "proposedMeaning": "hundredth",
+      "partOfSpeech": "numeral",
+      "category": "numbers",
+      "ownerDecision": "removed-from-review",
+      "editorialDecision": "Removed from this review and not approved; preserve the original sense and source record. This request does not itself change runtime eligibility.",
+      "familiarityBasis": "Basic ordinal familiar from counting and school.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://dictionary.ge/en/word/hundredth/",
+          "sha256": "59e730e97fafb370a8cce7b5002f9f1bc44ce720690284ca3af7c065df804d9f",
+          "checkedVia": "Primary English–Georgian definition retrieved and exact Georgian spelling and sense inspected on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 5,
+      "removedAt": "2026-10-26",
+      "removalReason": "Ordinal numeral: removed under the owner request exemplified by მეორე and მესამე.",
+      "removalBasis": "owner-category-request"
+    },
+    {
+      "id": "T17-006",
+      "word": "მეოცე",
+      "length": 5,
+      "proposedMeaning": "twentieth",
+      "partOfSpeech": "numeral",
+      "category": "numbers",
+      "ownerDecision": "removed-from-review",
+      "editorialDecision": "Removed from this review and not approved; preserve the original sense and source record. This request does not itself change runtime eligibility.",
+      "familiarityBasis": "Basic ordinal familiar from counting and school.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://dictionary.ge/en/word/twentieth/",
+          "sha256": "1771a765af027cc83505fb2ce25e7c2e6786f01f2278598ffdb2bd81e6201eab",
+          "checkedVia": "Primary English–Georgian definition retrieved and exact Georgian spelling and sense inspected on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 6,
+      "removedAt": "2026-10-26",
+      "removalReason": "Ordinal numeral: removed under the owner request exemplified by მეორე and მესამე.",
+      "removalBasis": "owner-category-request"
+    },
+    {
+      "id": "T17-013",
+      "word": "მორუხო",
+      "length": 6,
+      "proposedMeaning": "greyish",
+      "partOfSpeech": "adjective",
+      "category": "qualities",
+      "ownerDecision": "removed-from-review",
+      "editorialDecision": "Removed from this review and not approved; preserve the original sense and source record. This request does not itself change runtime eligibility.",
+      "familiarityBasis": "Established Georgian descriptive word, including familiar literary vocabulary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://dspace.nplg.gov.ge/bitstream/1234/503539/1/Sokoebi_1990.pdf",
+          "checkedVia": "Primary Georgian mushroom monograph uses მორუხო as a colour adjective; meaning independently corroborated in the Wiktionary-derived Kaikki adjective entry.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 13,
+      "removedAt": "2026-10-26",
+      "removalReason": "Approximate-colour adjective explicitly named by the owner.",
+      "removalBasis": "owner-explicit-spelling"
+    },
+    {
+      "id": "T17-014",
+      "word": "მოშავო",
+      "length": 6,
+      "proposedMeaning": "blackish; darkish",
+      "partOfSpeech": "adjective",
+      "category": "qualities",
+      "ownerDecision": "removed-from-review",
+      "editorialDecision": "Removed from this review and not approved; preserve the original sense and source record. This request does not itself change runtime eligibility.",
+      "familiarityBasis": "Established Georgian descriptive word, including familiar literary vocabulary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/მოშავო",
+          "sha256": "09153abb4006f2dfa0823a47c249738733aaf0291cb3952042274bf0fc4df769",
+          "checkedVia": "Primary dictionary page retrieved and parsed on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 14,
+      "removedAt": "2026-10-26",
+      "removalReason": "Approximate-colour adjective explicitly named by the owner.",
+      "removalBasis": "owner-explicit-spelling"
+    },
+    {
+      "id": "T17-092",
+      "word": "უდედო",
+      "length": 5,
+      "proposedMeaning": "motherless",
+      "partOfSpeech": "adjective",
+      "category": "qualities",
+      "ownerDecision": "removed-from-review",
+      "editorialDecision": "Removed from this review and not approved; preserve the original sense and source record. This request does not itself change runtime eligibility.",
+      "familiarityBasis": "Established Georgian descriptive word, including familiar literary vocabulary.",
+      "senseNotes": "Established descriptive adjective, not a plural or personal name.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/უდედო",
+          "sha256": "2775c3d332c890182505d11df9ab0d31350544c0e1c5156bd519d385faeacf50",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 92,
+      "removedAt": "2026-10-26",
+      "removalReason": "Analogous productive prefixed adjective: editorial application of the request to avoid derivative forms. The owner did not individually name this spelling.",
+      "removalBasis": "editorial-application-of-owner-preference"
+    },
+    {
+      "id": "T17-093",
+      "word": "უმამო",
+      "length": 5,
+      "proposedMeaning": "fatherless",
+      "partOfSpeech": "adjective",
+      "category": "qualities",
+      "ownerDecision": "removed-from-review",
+      "editorialDecision": "Removed from this review and not approved; preserve the original sense and source record. This request does not itself change runtime eligibility.",
+      "familiarityBasis": "Established Georgian descriptive word, including familiar literary vocabulary.",
+      "senseNotes": "Established descriptive adjective, not a plural or personal name.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/უმამო",
+          "sha256": "5914300fd33dcc56088ed282216b3d2b90f6a14b88673b1b39db2a4903c55989",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 93,
+      "removedAt": "2026-10-26",
+      "removalReason": "Analogous productive prefixed adjective: editorial application of the request to avoid derivative forms. The owner did not individually name this spelling.",
+      "removalBasis": "editorial-application-of-owner-preference"
+    },
+    {
+      "id": "T17-094",
+      "word": "უმზეო",
+      "length": 5,
+      "proposedMeaning": "sunless; without sunlight",
+      "partOfSpeech": "adjective",
+      "category": "qualities",
+      "ownerDecision": "removed-from-review",
+      "editorialDecision": "Removed from this review and not approved; preserve the original sense and source record. This request does not itself change runtime eligibility.",
+      "familiarityBasis": "Established Georgian descriptive word, including familiar literary vocabulary.",
+      "senseNotes": "Only the glossed ordinary noun/adjective/numeral sense is proposed. No broader homograph, name, plural or action-form approval.",
+      "sourceLabels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/უმზეო",
+          "sha256": "2824ff8d0a267b7a05aa4f065c351d61485b5f3396ab23dab20cd19942ba7507",
+          "checkedVia": "Cached primary dictionary definition re-read on 2026-10-26.",
+          "sourceChecked": "2026-10-26"
+        }
+      ],
+      "originalReviewNumber": 94,
+      "removedAt": "2026-10-26",
+      "removalReason": "Analogous productive prefixed adjective: editorial application of the request to avoid derivative forms. The owner did not individually name this spelling.",
+      "removalBasis": "editorial-application-of-owner-preference"
+    }
+  ],
+  "ownerFilter": {
+    "instruction": "მოკლედ ესეთი სიტყვები ბრუნვებში: მეორე, მესამე, მოშავო, მორუხო საერთოდ არ მინდა სიაში ამოშალე ამ 100 დან ესეთი სიტყვები",
+    "removedOrdinals": [
+      "მეასე",
+      "მეოთხე",
+      "მეოცე",
+      "მესამე",
+      "მეცხრე",
+      "მეხუთე"
+    ],
+    "removedApproximateColors": ["მორუხო", "მოშავო"],
+    "removedAnalogousPrefixedAdjectives": ["უდედო", "უმამო", "უმზეო"],
+    "additionalExample": "მეორე was absent from batch 17 and already excluded under owner-targeted-batch-05; its prior exclusion remains unchanged.",
+    "scope": "Filter the pending review and future proposals. No new campaign, runtime dictionary, previous approval or all-gameplay exclusion is applied.",
+    "renumbering": "Remaining review entries are renumbered 1–89; original T17 IDs and originalReviewNumber remain for tracing old references."
+  },
+  "ownerReviewedAt": "2026-10-26",
+  "approvedCount": 19,
+  "unapprovedCount": 70,
+  "approvedWords": [
+    "მდაბიო",
+    "სტვირი",
+    "ღვაწლი",
+    "ვეზირი",
+    "ვასალი",
+    "ქურუმი",
+    "გოდორი",
+    "გუშაგი",
+    "დუქანი",
+    "მოტორი",
+    "კატერი",
+    "ტროსი",
+    "კიმონო",
+    "სუმო",
+    "აქციზი",
+    "გროში",
+    "ეგო",
+    "ტერორი",
+    "ნობათი"
+  ],
+  "totalApprovedPoolAfterReview": 2358,
+  "pendingIntegrationCount": 52
+}

@@ -3,7 +3,10 @@ import path from 'node:path';
 import journey from '../../content/journey-v29.json';
 import manifest from '../../content/levels/discovery.v29.recipes.json';
 import policy from '../../content/dictionaries/word-policy.json';
-import { catalog, vocabulary, previousCatalogs } from '../src/content/catalog';
+import {
+  vocabularyForRevision,
+  previousCatalogs,
+} from '../src/content/catalog';
 import { destinationCaptions, placeFacts } from '../src/content/destinations';
 import { projectBoard, validateWide } from '../src/content/wide';
 import { requiredWordsForRevision } from '../src/content/wordPolicy';
@@ -22,6 +25,8 @@ import { COUNTRIES, sceneFor } from '../src/theme';
 import { reachLevel, submit } from './helpers';
 import { TestSqlite } from './sqliteAdapter';
 
+const catalog = previousCatalogs().find((pack) => pack.revision === 29)!;
+const vocabulary = vocabularyForRevision(29);
 const previous = previousCatalogs().find((pack) => pack.revision === 28)!;
 const NEW_STOPS: Record<string, string[]> = {
   france: [

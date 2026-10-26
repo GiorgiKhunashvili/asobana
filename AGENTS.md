@@ -31,9 +31,100 @@ as the canonical rulebook; tool-specific instruction files should point here.
 
 ## Word selection
 
-- Required answers must be **everyday Georgian words** with familiar, verified
-  meanings. Prefer ordinary nouns, adjectives and numbers. Dictionary inclusion,
-  short spelling or an AI familiarity score alone does not establish suitability.
+- On 2026-10-26 the owner removed exactly **three words** after reviewing the
+  39-word approved-form audit: `მოგრძო`, `უკვალო` and `უკუდო`. **Revision 31**
+  excludes them from required answers, accepted variants and bonuses through
+  `owner-approved-form-review`. The other **36 keep their prior approvals**;
+  there is no blanket adjective ban. Revision 31 retains 500 levels / 100 stops,
+  **2,303 required approvals** and **2,421 eligible spellings**, repairing only
+  required boards 9, 126 and 242. All other 497 required boards and the revision-29
+  route are unchanged. Historical revision 30 and earlier content remains immutable.
+  Total approvals after these removals are **2,355**, including **52 awaiting
+  integration** from batches 13–15 and 17. Those additions are not integrated by
+  this removal. See [the exact decision and repairs](docs/VOCABULARY_FORM_REMOVALS_2026_10_26.json).
+
+- On 2026-10-26 the owner explicitly removed these **12 origin labels** from
+  required answers, accepted variants and bonuses: `აზიელი`, `აზიური`, `არაბი`, `აფხაზი`, `გურული`, `თურქი`, `ინდური`, `ოსი`, `სვანი`, `სომეხი`, `ფრანგი`, `შვედი`.
+  Revision 30 enforces the exact list through `owner-origin-label-review`.
+  Individually approved country names remain eligible. No blanket ban on other
+  words is inferred. Revision 30 retains 500 levels / 100 stops and 2,306 required
+  approvals (2,424 eligible spellings), repairing 13 required boards and filtering
+  bonuses; the other 487 required boards remain unchanged. Historical revision 29
+  and earlier packs/dictionaries are immutable. New candidate proposals await
+  individual owner approval and do not enter gameplay automatically.
+
+- [Targeted batch 13](docs/VOCABULARY_TARGETED_BATCH_13.json), reviewed on
+  2026-10-26, records **19 approved senses**: `პომადა`, `თამასა`, `აპათია`,
+  `უტოპია`, `ფრანკი` (currency only), `ბადალი`, `ანკარა` (clear/pure water),
+  `ბეჩავი`, `კაპასი`, plus all ten countries in that batch: `ალჟირი`, `კატარი`,
+  `კენია`, `ლატვია`, `ლიბია`, `ლაოსი`, `პანამა`, `სუდანი`, `უგანდა`, `ზამბია`.
+  These **19 await integration**, bringing total approvals to **2,325**; active
+  revision 30 retains 2,306. The other 11 remain unapproved for required use,
+  without an explicit all-gameplay exclusion. Preserve the exact approved senses
+  and spellings; `ყატარი` is not separately approved. The owner chose smaller
+  batches within the existing 3–6-letter rules. Do not propose any of the 30
+  reviewed spellings again as unseen.
+
+- [Targeted batch 14](docs/VOCABULARY_TARGETED_BATCH_14.json), reviewed on
+  2026-10-26, records **eight approved senses**: `ჩიფსი`, `ტოსტი` (toasted bread),
+  `დონატი`, `კრონა`, `რიალი`, `პესო`, `პენი` (currency/coin senses) and `კონგო`
+  (Republic of the Congo). Total approvals are **2,333**, including **27 awaiting
+  integration** from batches 13–14. Active revision 30 remains at 2,306 required
+  approvals and 500 levels. The other 12 remain unapproved for required use,
+  without an explicit all-gameplay exclusion. Do not propose any of the 20 reviewed
+  spellings again as unseen. The owner requested more familiar short food words
+  like `ჩიფსი`, `ტოსტი` and `დონატი`, within the existing 3–6-letter rules.
+
+- [Targeted batch 15](docs/VOCABULARY_TARGETED_BATCH_15.json), reviewed on
+  2026-10-26, records **six approved food/drink senses**: `ეკლერი`, `ლატე`,
+  `რამენი`, `ვასაბი` (condiment), `ჩედარი` and `გაუდა` (cheeses). Total approvals
+  are **2,339**, including **33 awaiting integration** from batches 13–15. Active
+  revision 30 remains at 2,306 required approvals and 500 levels. The other four
+  remain unapproved for required use, without an explicit all-gameplay exclusion.
+  Preserve the exact recorded senses and do not propose any of the ten reviewed
+  spellings again as unseen. The owner requested more words of this kind within
+  the existing 3–6-letter rules.
+
+- [Targeted batch 16](docs/VOCABULARY_TARGETED_BATCH_16.json) proposes **eight new
+  3–6-letter food/drink candidates** and awaits individual owner review. None is
+  approved or integrated; do not present these spellings again as unseen. Total
+  prior approvals remain 2,339, including 33 awaiting integration. Active revision
+  30 remains at 2,306 required approvals and 500 levels. Source attestation alone
+  does not establish everyday familiarity or override any vocabulary policy.
+
+- [Targeted batch 17](docs/VOCABULARY_TARGETED_BATCH_17.json) retains **89 of the
+  original 100 candidates** after the initial filter. On 2026-10-26 the owner
+  requested removing forms like `მეორე`, `მესამე`, `მოშავო` and `მორუხო`.
+  Remove ordinal numerals and productive approximate-colour variants from future
+  proposals. The batch drops `მესამე`, `მეოთხე`, `მეხუთე`, `მეცხრე`, `მეასე`,
+  `მეოცე`, `მოშავო` and `მორუხო`. It also drops `უდედო`, `უმამო` and
+  `უმზეო` as an editorial application to analogous prefixed adjectives, not as
+  individually named owner rejections. Avoid filling reviews with such productive
+  derivative forms; this is not a blanket ban on all adjectives. `მეორე` was not
+  in this batch and remains excluded under its prior batch-05 decision.
+  Preserve all 100 original IDs and decisions in review history; never present
+  removed spellings again as new. The owner subsequently approved **19 recorded
+  senses**: `მდაბიო`, `სტვირი`, `ღვაწლი`, `ვეზირი`, `ვასალი`, `ქურუმი`,
+  `გოდორი`, `გუშაგი`, `დუქანი`, `მოტორი`, `კატერი`, `ტროსი`, `კიმონო`,
+  `სუმო`, `აქციზი`, `გროში`, `ეგო`, `ტერორი` and `ნობათი`. Preserve the exact
+  JSON senses and sources, including the psychological noun `ეგო`. The other
+  **70 remain unapproved** for required use, without an explicit all-gameplay
+  exclusion. Do not propose any of the original 100 spellings again as new.
+  Total approvals are **2,358**, including **52 awaiting integration** from
+  batches 13–15 and 17. Batch 16 remains pending. Active revision 30 remains at
+  2,306 required approvals and 500 levels at that review. The subsequent three-word
+  form-audit removal is recorded above and takes precedence over those totals.
+  No new runtime dictionary or campaign is applied.
+
+- Required answers must be **familiar Georgian words** with verified meanings.
+  On 2026-10-26 the owner broadened the criterion beyond strictly everyday use:
+  widely known vocabulary from school, literature, history, culture, science,
+  sport and other subjects may be proposed. Familiarity remains essential;
+  specialist obscurity, dictionary inclusion, short spelling or an AI score alone
+  does not establish suitability. Prefer nouns, adjectives and numbers. The owner
+  requested a fresh 100-word review under this broader scope; this does not
+  approve individual candidates, relax the 3–6-letter rule, reverse any earlier
+  decision or change the grammar, name, plural or barbarism exclusions.
 - **Plural noun forms are optional bonuses only**, never required answers or
   accepted-answer variants, starting with revision 14. Examples include `ფეხები`
   and `ქვები`. Keep individually verified plurals in the wider bonus dictionary.
@@ -447,14 +538,14 @@ as the canonical rulebook; tool-specific instruction files should point here.
 
 ## Sources of truth
 
-Read these before editing content; current filenames below describe revision 29:
+Read these before editing content; current filenames below describe revision 31:
 
 - [Grammar and name exclusions](content/dictionaries/word-policy.json).
-- [Required-word allowlist and individual previous-word decisions](content/dictionaries/everyday-targets-v29.json).
-- [Reference dictionary](content/dictionaries/discovery-v29-ka.json) and
+- [Required-word allowlist and individual previous-word decisions](content/dictionaries/everyday-targets-v31.json).
+- [Reference dictionary](content/dictionaries/discovery-v31-ka.json) and
   [provenance/licensing](content/dictionaries/README.md).
-- [Journey vocabulary review and all 500 boards](docs/VOCABULARY_REVIEW_V29.md).
-- [Full vocabulary list for owner review](docs/VOCABULARY_OWNER_REVIEW_V29.md).
+- [Journey vocabulary review and all 500 boards](docs/VOCABULARY_REVIEW_V31.md).
+- [Full vocabulary list for owner review](docs/VOCABULARY_OWNER_REVIEW_V31.md).
 - [Current journey manifest](content/journey-v29.json).
 - [Central Europe artwork and generation prompts](docs/CENTRAL_EUROPE_ARTWORK.md).
 - [Portugal and Morocco artwork and generation prompts](docs/PORTUGAL_MOROCCO_ARTWORK.md).

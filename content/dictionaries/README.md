@@ -14,7 +14,7 @@ No fake words, automated dictionary guesses or bulk dictionary imports are bundl
 The historical four crossword layouts are manually authored and mechanically validated.
 They remain as revision 1 fixtures. Revisions 2 and 3 are also retained for save
 migration; revision 4 is also retained. The active campaign is
-[revision 27](../../docs/DISCOVERY_CONTENT.md).
+[revision 31](../../docs/DISCOVERY_CONTENT.md).
 
 The [October 20 owner review](../../docs/VOCABULARY_EXPANSION_REVIEW_2026_10_20.json)
 records 277 additional approved senses, bringing the reviewed pool to 1,997.
@@ -383,3 +383,22 @@ See `docs/VOCABULARY_REVIEW_V27.md` and `docs/VOCABULARY_OWNER_REVIEW_V27.md`.
 ## Revision 29: targeted batches 03–06 and 08–11
 
 `discovery-v29-ka.json` preserves all 2,325 revision-28 reference entries and adds the 243 individually owner-approved senses from targeted batches 03–06 and 08–11, including 19 country names sourced from Unicode CLDR Georgian territory names. `everyday-targets-v29.json` contains 2,318 required approvals; the eligible dictionary has 2,436 spellings. Source URLs, check dates and content hashes stay attached; where a source page is gone or had no recorded hash, the recorded verification note is kept as `sourceNote`. English glosses are brief editorial summaries. The 97 rejected batch spellings plus the owner's extra exclusions `უტყუო` and `უფარო` are excluded from every role from revision 29 (`owner-targeted-batch-*` in `word-policy.json`). Historical dictionary files remain immutable.
+
+## Revision 30 — owner origin-label removal
+
+The owner removed the exact 12 spellings recorded under `owner-origin-label-review`
+on 2026-10-26. `discovery-v30-ka.json` and `everyday-targets-v30.json` preserve all
+other recorded senses and source provenance. There are 2,306 required approvals
+and 2,424 eligible spellings. Historical dictionaries remain immutable. Country
+names remain eligible, and new review proposals grant no approval. See the
+[revision-30 review](../../docs/VOCABULARY_REVIEW_V30.md).
+
+## Revision 31 — exact approved-form removals
+
+The owner removed exactly `მოგრძო`, `უკვალო` and `უკუდო` after the 39-word
+approved-pool audit. `owner-approved-form-review` excludes these three from all
+current gameplay. The other 36 retain their prior approvals. `discovery-v31-ka.json`
+and `everyday-targets-v31.json` preserve every other entry and its recorded sense
+and provenance: 2,303 required approvals and 2,421 eligible spellings. The 52 pending
+approved additions are not integrated here. Revision 30 and earlier files are
+immutable. See the [revision-31 review](../../docs/VOCABULARY_REVIEW_V31.md).

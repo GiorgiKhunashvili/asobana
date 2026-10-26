@@ -8,7 +8,7 @@ import { reachLevel, submit } from './helpers';
 import { TestSqlite } from './sqliteAdapter';
 import review from '../../content/dictionaries/everyday-targets-v15.json';
 import expandedReview from '../../content/dictionaries/everyday-targets-v16.json';
-import manifest from '../../content/levels/discovery.v29.recipes.json';
+import manifest from '../../content/levels/discovery.v31.recipes.json';
 import {
   catalog,
   vocabulary,

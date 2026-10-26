@@ -1,0 +1,71 @@
+# Word suitability audit — 26 October 2026
+
+Recommendation only. Revision 29 and all existing owner approvals remain unchanged.
+
+Screened **2,318 approved required spellings**, **118 eligible bonus-only spellings**, and **500 active boards** (2,500 required slots; 1,954 distinct required answers). The raw reference includes excluded historical entries; these are not all playable. Detailed current dictionary checks focus on the shortlist.
+
+The concern is whether an answer feels fair and recognizable without a definition. Dictionary inclusion verifies a word; it does not establish everyday familiarity. These priorities are editorial judgments, not measured player reactions or native-speaker review.
+
+## Recommended first pass: 20 compulsory-answer removals
+
+Keep these valid words available as optional bonuses. Removing them from required eligibility must also cover accepted variants in a future revision. Existing approvals remain active until the owner decides.
+
+| Word   | Meaning                                  | Required levels | Reason                                                                                                                     | Verification                                                              |
+| ------ | ---------------------------------------- | --------------- | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| ჯგრო   | crowd; disorderly group                  | 6               | Colloquial group noun. A weak fit for onboarding, where it is compulsory at level 6.                                       | [Dictionary](https://www.ganmarteba.ge/word/ჯგრო)                         |
+| ეული   | alone; without close kin                 | 49, 249, 408    | Less transparent alternative for an everyday idea; risks feeling like a word selected to fit the wheel.                    | [Dictionary](https://www.ganmarteba.ge/word/ეული)                         |
+| დილეგი | dungeon                                  | 79              | Historical prison vocabulary; I would reserve it for optional discovery.                                                   | [Dictionary](https://www.ganmarteba.ge/word/დილეგი)                       |
+| თეჯირი | folding room divider                     | 345             | Specific household term whose recognition should not be needed to complete a casual board.                                 | [Dictionary](https://dlab.ug.edu.ge/synonym/detail/19384/თეჯირი)          |
+| ზორბა  | large and burly                          | 452             | Colloquial descriptive word; lower confidence in broad everyday recognition.                                               | [Dictionary](https://www.ganmarteba.ge/word/ზორბა)                        |
+| ქნარი  | lyre                                     | 297             | Ancient instrument and poetic symbol; narrower than the ordinary musical vocabulary suitable for compulsory play.          | [Dictionary](https://www.ganmarteba.ge/word/ქნარი)                        |
+| ქეჩა   | thick felt                               | 201             | Specific material term; doubtful compulsory recognition for a broad casual audience.                                       | [Dictionary](https://www.ganmarteba.ge/word/ქეჩა)                         |
+| ცვარი  | dew                                      | 180, 398        | Alternative to ნამი, which is already in the approved pool. I would prefer the more direct everyday answer.                | [Dictionary](https://www.ganmarteba.ge/word/ცვარი)                        |
+| უბიწო  | morally pure; innocent                   | 311             | Elevated moral description; less direct than ordinary conversational adjectives.                                           | [Dictionary](https://www.ganmarteba.ge/word/უბიწო)                        |
+| ლახტი  | leather strap used in a traditional game | 244             | Recorded approved sense depends on knowledge of a traditional game. Other attested senses do not prove broad familiarity.  | [Dictionary](https://www.ganmarteba.ge/word/ლახტი)                        |
+| ტლაპო  | thin mud                                 | 144             | Specific mud term; I would prefer a familiar ordinary answer over this narrower synonym.                                   | [Dictionary](https://www.ganmarteba.ge/word/ტლაპო)                        |
+| თოხლო  | soft-boiled, of an egg                   | 139             | Narrow culinary adjective with context that the letter wheel does not supply.                                              | [Dictionary](https://www.ganmarteba.ge/word/თოხლო)                        |
+| მუთაქა | long firm bolster pillow                 | 449             | Specific household object name; optional discovery is a better fit.                                                        | [Dictionary](https://www.ganmarteba.ge/word/მუთაქა)                       |
+| პეშვი  | cupped hand; amount it holds             | 257             | Potential recognition barrier beside more ordinary hand/handful vocabulary; editorial judgment, not a spelling objection.  | [Dictionary](https://www.ganmarteba.ge/word/პეშვი)                        |
+| ფლოსტი | slipper                                  | 463             | Alternative footwear word; ჩუსტი is already approved. NPLG verifies the word, but compulsory familiarity remains doubtful. | [Dictionary](https://www.nplg.gov.ge/gwdict/index.php?a=term&d=39&t=4544) |
+| ქოში   | particular slip-on shoe                  | 172             | Specific footwear term; optional discovery is a better fit for this casual campaign.                                       | [Dictionary](https://www.ganmarteba.ge/word/ქოში)                         |
+| სააქაო | this earthly world                       | Unused          | Abstract this-world/afterlife vocabulary; not currently required, but remains eligible for future generation.              | [Dictionary](https://www.ganmarteba.ge/word/სააქაო)                       |
+| ძგიდე  | septum; partition                        | 152             | Anatomical or structural term. Its consonant cluster and specialist sense make compulsory guessing less inviting.          | [Dictionary](https://www.ganmarteba.ge/word/ძგიდე)                        |
+| უნაბი  | jujube fruit or tree                     | 230             | Valid fruit name, but audience familiarity may depend on region; I would not require it without stronger owner confidence. | [Dictionary](https://www.ganmarteba.ge/word/უნაბი)                        |
+| დუჟი   | froth from the mouth                     | 461             | Both a less transparent bodily-fluid term and an unpleasant discovery in a light casual puzzle.                            | [Dictionary](https://www.ganmarteba.ge/word/დუჟი)                         |
+
+These 20 spellings account for **22 required slots across 22 boards**; 1 is currently unused as a target. This is the exposure count, not a validated rebuild estimate.
+
+## Two form issues
+
+| Word  | Recommendation                                                                                                                                                                                                                                              | Required levels | Evidence                                                                                                         |
+| ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- | ---------------------------------------------------------------------------------------------------------------- |
+| სოიო  | The explanatory dictionary explicitly labels this a colloquial equivalent of სოია. Both spellings are approved; სოიო is compulsory at level 20. Prefer სოია for compulsory answers; retain colloquial bonus recognition unless the owner decides otherwise. | 20              | [Source](https://www.ganmarteba.ge/word/სოიო)                                                                    |
+| ბაბთა | The orthographic reference explicitly prefers ბაფთა over ბაბთა (printed page 65). Both are in the current allowlist. Recommend excluding ბაბთა from new gameplay after owner decision; retain ბაფთა and immutable historical records.                       | Unused          | [Source](https://dspace.nplg.gov.ge/bitstream/1234/464037/1/QartuliMartlweris120WesiPunqtuacia_1995.pdf#page=65) |
+
+## Ten weaker candidates for owner judgment
+
+These are less clear-cut. They may be familiar enough to keep; no blanket removal is recommended.
+
+| Word   | Meaning                | Required levels | Concern                                                                                                           | Verification                                                                                                                                                                    |
+| ------ | ---------------------- | --------------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ბადრო  | discus                 | 56, 315         | Specific athletics equipment; weaker concern because school/sports familiarity may be sufficient.                 | [Dictionary](https://www.nplg.gov.ge/greenstone3/halftone-library/collection/dictiona/document/HASH625974762f868f0e9723e9%3Bjsessionid%3DF9B644EB9EFC1AF0DBBB022C1ACA3936?ed=1) |
+| ბაკანი | turtle shell           | 19              | Valid natural-history vocabulary, but level 19 may be early for this term.                                        | [Dictionary](https://www.ganmarteba.ge/word/ბაკანი)                                                                                                                             |
+| ბალანი | animal fur; body hair  | 223             | Consider whether players naturally know this rather than ბეწვი; familiarity concern only.                         | [Dictionary](https://www.ganmarteba.ge/word/ბალანი)                                                                                                                             |
+| ბეცი   | poor-sighted           | 204             | Less direct descriptive adjective; owner familiarity judgment should decide.                                      | [Dictionary](https://www.ganmarteba.ge/word/ბეცი)                                                                                                                               |
+| მაყარი | wedding attendant      | Unused          | Traditional wedding vocabulary; regional and generational familiarity may vary.                                   | [Dictionary](https://www.ganmarteba.ge/word/მაყარი)                                                                                                                             |
+| მოლა   | Muslim cleric          | 59, 489         | Specific occupation term; judge familiarity consistently with other religious vocabulary, not religious identity. | [Dictionary](https://www.ganmarteba.ge/word/მოლა)                                                                                                                               |
+| ქოსა   | beardless              | 186, 413        | Traditional descriptive adjective; retain if ordinary recognition is clear to the owner.                          | [Dictionary](https://www.ganmarteba.ge/word/ქოსა)                                                                                                                               |
+| უწყისი | register; record sheet | Unused          | Administrative vocabulary; currently unused as a target.                                                          | [Dictionary](https://www.ganmarteba.ge/word/უწყისი)                                                                                                                             |
+| მუჭი   | cupped hand            | 324             | Dictionary-supported word. Review possible player confusion with მუჭა; do not mark it a misspelling.              | [Dictionary](https://www.ganmarteba.ge/word/მუჭი)                                                                                                                               |
+| ნეფე   | bridegroom             | Unused          | Dictionary-supported word. Review whether players expect საქმრო; do not mark it a misspelling.                    | [Dictionary](https://www.ganmarteba.ge/word/ნეფე)                                                                                                                               |
+
+## Boundaries and checks
+
+- No current required answer falls outside the allowlist, and no approved spelling overlaps a current policy exclusion. No currently listed bonus overlaps an all-gameplay exclusion. These are spelling-set checks, not a full grammatical or familiarity classifier.
+- The other eligible bonus-only words do not need removal merely for being unfamiliar: they never block completion.
+- Preserve the explicitly approved exceptions აისი, დაისი and ხარკი. Their literary/historical labels alone do not revoke owner approval.
+- Ordinary loanwords, country names, technical words and name homographs are not automatically unsuitable. No broad category ban is proposed.
+- No corpus rank or assistant familiarity score was treated as approval or proof of rarity.
+- Applying a selected list later requires a new content revision, affected-board generation, the unchanged 75-level gap and all campaign/save-migration validation. No board capacity claim is made here.
+
+Exact input hashes, per-word required/variant/bonus appearances and machine-readable recommendations are in [the JSON audit](WORD_SUITABILITY_AUDIT_2026_10_26.json).

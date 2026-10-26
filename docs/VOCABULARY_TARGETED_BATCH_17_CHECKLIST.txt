@@ -1,0 +1,93 @@
+Targeted batch 17 — owner reviewed
+19 approved; 70 unapproved, without an explicit all-gameplay exclusion.
+11 forms previously removed from the original 100; preserved in JSON review history.
+
+1. [unapproved] გოროზი — stern-looking; imposing
+2. [unapproved] ქველი — kind; generous; charitable
+3. [unapproved] უხიაგი — stubborn; difficult
+4. [unapproved] ფუტურო — rotten and dry, of wood
+5. [unapproved] ჯაბანი — cowardly
+6. [approved] მდაბიო — of the common people; low-born
+7. [unapproved] აფიქსი — affix; grammatical word-building element
+8. [unapproved] ფონემა — phoneme; distinctive speech-sound unit
+9. [unapproved] ელეგია — elegy; mournful lyric poem
+10. [unapproved] ფაბულა — plot; outline of a story
+11. [unapproved] იდიომი — idiom; fixed figurative expression
+12. [unapproved] ესთეტი — aesthete; admirer of beauty
+13. [unapproved] არღანი — barrel organ; mechanical musical instrument
+14. [approved] სტვირი — pipe; simple wind instrument
+15. [unapproved] ბაიანი — bayan; button accordion
+16. [unapproved] ბემოლი — flat sign in musical notation
+17. [unapproved] ჰობოი — oboe; woodwind instrument
+18. [approved] ღვაწლი — merit; valuable contribution through work
+19. [unapproved] როკოკო — Rococo artistic style
+20. [unapproved] ხალიფა — caliph; historical ruler's title
+21. [unapproved] სატრფო — beloved; sweetheart
+22. [unapproved] ბეგი — bey; historical noble title
+23. [unapproved] ამირა — emir; historical ruler or governor
+24. [approved] ვეზირი — vizier; royal adviser
+25. [approved] ვასალი — vassal; subordinate feudal lord
+26. [unapproved] რაბინი — rabbi; Jewish religious teacher
+27. [approved] ქურუმი — priest of an ancient pagan religion
+28. [unapproved] კვართი — tunic; historical shirt-like garment
+29. [unapproved] სენაკი — monastic cell; small room for a monk
+30. [unapproved] ეტრატი — parchment; prepared writing skin
+31. [unapproved] კომუნა — commune; community sharing property and work
+32. [unapproved] პუტჩი — coup; seizure of state power
+33. [unapproved] ხუნტა — junta; military government
+34. [unapproved] ბურჟუა — bourgeois; member of the propertied class
+35. [approved] გოდორი — large woven basket for grain or fruit
+36. [unapproved] გოდოლი — fortress tower
+37. [approved] გუშაგი — sentry; armed guard
+38. [unapproved] ხარაზი — shoemaker
+39. [unapproved] მეეტლე — coachman; carriage driver
+40. [unapproved] მენავე — boatman
+41. [approved] დუქანი — traditional small shop or eating house
+42. [unapproved] გიშერი — jet; black ornamental material
+43. [unapproved] ვარცლი — wooden dough-kneading trough
+44. [unapproved] ჭილოფი — woven rush mat
+45. [unapproved] კაფელი — glazed ceramic wall tile
+46. [approved] მოტორი — motor; engine
+47. [approved] კატერი — motorboat
+48. [approved] ტროსი — steel wire rope; cable
+49. [unapproved] კევრი — traditional threshing sledge
+50. [unapproved] პრერია — prairie; broad grassland
+51. [unapproved] ტუნდრა — tundra; northern low-vegetation region
+52. [unapproved] მაგმა — magma; molten rock beneath the surface
+53. [unapproved] ზვირთი — large wave; billow
+54. [unapproved] ქედანი — wood pigeon
+55. [unapproved] ანოდი — anode; electrode term
+56. [unapproved] კათოდი — cathode; electrode term
+57. [unapproved] რეზუსი — rhesus blood factor
+58. [unapproved] კისტა — cyst; fluid-filled bodily cavity
+59. [unapproved] ციროზი — cirrhosis; organ-scarring condition
+60. [unapproved] ამება — amoeba; single-celled organism
+61. [unapproved] ტიტანი — titan; exceptionally powerful person
+62. [approved] კიმონო — kimono; traditional robe or martial-arts clothing
+63. [unapproved] ხიზანი — person given refuge; sheltered newcomer
+64. [unapproved] გეიშა — geisha; traditional Japanese entertainer
+65. [approved] სუმო — sumo wrestling
+66. [unapproved] ბინგო — bingo; number-matching game
+67. [approved] აქციზი — excise; a type of tax on goods
+68. [unapproved] ლოტი — lot; item or group offered at auction
+69. [unapproved] თუმანი — historical money term for ten maneti
+70. [approved] გროში — a very small amount of money
+71. [unapproved] შაური — historical five-kopeck coin or amount
+72. [unapproved] ფუთი — pood; historical unit of weight
+73. [unapproved] ბოჰემა — bohemian artistic community or way of life
+74. [unapproved] ფურორი — sensation; enthusiastic public success
+75. [unapproved] კოლოსი — colossus; someone or something enormous
+76. [approved] ეგო — ego; psychological self
+77. [unapproved] ემოჯი — emoji; pictorial message symbol
+78. [unapproved] ქორდა — chord; line segment joining two points on a curve
+79. [approved] ტერორი — terror; intimidation through violence
+80. [unapproved] ზეფირი — zefir; soft whipped sweet
+81. [unapproved] ფუტი — foot; unit of length
+82. [unapproved] დარტსი — darts; target-and-dart game
+83. [unapproved] წუღა — traditional soft leather shoe
+84. [unapproved] ზოზინა — slow-moving; dawdling
+85. [unapproved] ძაძა — mourning clothes; sackcloth
+86. [unapproved] სუდარა — burial shroud
+87. [unapproved] ხუცესი — priest; cleric
+88. [approved] ნობათი — gift; produce brought as a gift
+89. [unapproved] კალკი — tracing paper; calque in language

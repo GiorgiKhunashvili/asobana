@@ -1258,6 +1258,42 @@
       "sources": [
         "docs/VOCABULARY_TARGETED_BATCH_12.json"
       ]
+    },
+    {
+      "id": "owner-origin-label-review",
+      "sinceRevision": 30,
+      "reason": "Owner decision on 2026-10-26: remove these exact nationality, ethnicity, regional labels and the two agreed geographical adjectives from required answers, accepted variants and bonuses. Individually approved country names remain eligible. Historical packs retain their vocabulary.",
+      "words": [
+        "აზიელი",
+        "აზიური",
+        "არაბი",
+        "აფხაზი",
+        "გურული",
+        "თურქი",
+        "ინდური",
+        "ოსი",
+        "სვანი",
+        "სომეხი",
+        "ფრანგი",
+        "შვედი"
+      ],
+      "sources": [
+        "Owner approval in the vocabulary-review conversation, 2026-10-26"
+      ]
+    },
+    {
+      "id": "owner-approved-form-review",
+      "sinceRevision": 31,
+      "reason": "Owner decision on 2026-10-26: remove only მოგრძო, უკვალო and უკუდო from required answers, accepted variants and bonuses after the 39-word approved-pool audit. The other 36 retain their prior approvals. Historical packs retain their vocabulary.",
+      "words": [
+        "მოგრძო",
+        "უკვალო",
+        "უკუდო"
+      ],
+      "sources": [
+        "Owner exact three-word removal list in the vocabulary-review conversation, 2026-10-26",
+        "docs/APPROVED_WORD_FORM_AUDIT_2026_10_26.json"
+      ]
     }
   ],
   "requiredExcludedCategories": [

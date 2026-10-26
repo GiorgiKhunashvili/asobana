@@ -1,4 +1,35 @@
-# Journey campaign — revision 29: rebuilt 500-level route with Central Europe
+# Journey campaign — revision 31: exact approved-form removals
+
+The owner removed **მოგრძო, უკვალო and უკუდო** after the 39-word form audit.
+The other 36 keep their prior approvals. Revision 31 retains **500 levels / 100 stops**
+on the revision-29 route, with **2,303 required approvals** and **2,421 eligible
+spellings**. Only required boards 9, 126 and 242 change; all other 497 are unchanged.
+The campaign uses 1,941 distinct answers in 2,500 slots (22.36% repeated slots),
+with a minimum repeat gap of 75. The 52 pending additions remain unintegrated.
+
+The rebuild script defaults to revision 31 and uses the reviewed digest in
+`content/levels/discovery.v31.review.json`. Saves from revisions 1–30 migrate with
+progress, earned credits, hints, coins, receipts and postcards preserved. Historical
+content remains immutable. See the [all-board review](VOCABULARY_REVIEW_V31.md),
+[full current pool](VOCABULARY_OWNER_REVIEW_V31.md) and
+[exact removal record](VOCABULARY_FORM_REMOVALS_2026_10_26.json).
+
+## Revision 30 — origin-label removal (historical)
+
+On 2026-10-26 the owner approved the exact 12-word removal documented in
+[Vocabulary review v30](VOCABULARY_REVIEW_V30.md). The campaign retains 500 levels /
+100 stops on the unchanged revision-29 route. Revision 30 has **2,306 required
+approvals** and **2,424 eligible spellings**, repairing 13 required boards and
+filtering bonus lists. The other 487 required boards remain unchanged. The 2,500
+slots use **1,943 distinct words** (**22.28%** repeated slots), minimum gap 75.
+Country names remain eligible. New review candidates await individual owner approval.
+
+For revision 30, use `--revision 30`, with its reviewed digest
+in `content/levels/discovery.v30.review.json`. Historical packs remain immutable;
+revisions 1–29 migrate with progress, coins, hints, bonus rewards, doubled rewards,
+receipts and postcards preserved. See the [complete revision-30 pool](VOCABULARY_OWNER_REVIEW_V30.md).
+
+# Historical revision 29: rebuilt 500-level route with Central Europe
 
 On 2026-10-21 the owner approved rebuilding all 500 levels under today's rules and
 appending 31 stops (levels 346–500): France (Carcassonne to Paris, 12 stops),

@@ -1,0 +1,190 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-26",
+  "status": "pending-owner-review",
+  "activeRevisionUnchanged": 30,
+  "activeApprovedPool": 2306,
+  "totalApprovedPoolBeforeReview": 2339,
+  "pendingIntegrationBeforeReview": 33,
+  "candidateCount": 8,
+  "countsByLength": {
+    "4": 6,
+    "5": 1,
+    "6": 1
+  },
+  "countsByCategory": {
+    "drink": 2,
+    "ingredient": 2,
+    "dish": 3,
+    "condiment": 1
+  },
+  "previouslyRecordedSpellings": 8788,
+  "previousReviewOverlap": 0,
+  "ownerSelectedScope": "More familiar food/drink words like the selected éclair, latte, ramen, wasabi, cheddar and Gouda, within existing 3–6-letter rules.",
+  "method": "Exact-spelling deduplication against all content JSON and all VOCABULARY review JSON/text, including approved, rejected, skipped and unselected spellings. Individually inspected primary sources for spelling and proposed sense. Kept a small batch without padding to an arbitrary count.",
+  "limitations": [
+    "All eight await individual owner review; no gameplay files or runtime policy were changed.",
+    "Source attestation supports spelling and sense, not everyday familiarity. No native-speaker or corpus-frequency review is claimed; uncommon entries may still be unsuitable for required use.",
+    "All earlier vocabulary and campaign rules remain. Prior approvals from batches 13–15 await integration.",
+    "No candidate boards, repetition benefits or additional campaign capacity have been validated."
+  ],
+  "entries": [
+    {
+      "id": "T16-001",
+      "word": "მოკა",
+      "length": 4,
+      "proposedMeaning": "mocha coffee",
+      "partOfSpeech": "noun",
+      "category": "drink",
+      "ownerDecision": "pending",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Source-attested food/drink candidate for individual owner review; not approved or integrated.",
+      "senseNotes": "University dictionary records მოკა among types of coffee. Propose the coffee sense only; do not infer a particular chocolate recipe, brand or place-name approval.",
+      "sources": [
+        {
+          "url": "https://dlab.ug.edu.ge/synonym/detail/1165/ყავა",
+          "checkedVia": "Primary dictionary, official bilingual food list or agricultural source inspected on 2026-10-26; short adapted gloss only. Attestation does not automatically establish everyday familiarity."
+        }
+      ]
+    },
+    {
+      "id": "T16-002",
+      "word": "ჩილი",
+      "length": 4,
+      "proposedMeaning": "chilli; hot pepper",
+      "partOfSpeech": "noun",
+      "category": "ingredient",
+      "ownerDecision": "pending",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Source-attested food/drink candidate for individual owner review; not approved or integrated.",
+      "senseNotes": "Dictionary explicitly records ჩილი for the fresh or dried hot-pepper fruit. Food sense only, not a country or person.",
+      "sources": [
+        {
+          "url": "https://dictionary.ge/en/word/chilli/",
+          "checkedVia": "Primary dictionary, official bilingual food list or agricultural source inspected on 2026-10-26; short adapted gloss only. Attestation does not automatically establish everyday familiarity."
+        }
+      ]
+    },
+    {
+      "id": "T16-003",
+      "word": "პეკანი",
+      "length": 6,
+      "proposedMeaning": "pecan; edible nut/tree",
+      "partOfSpeech": "noun",
+      "category": "ingredient",
+      "ownerDecision": "pending",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Source-attested food/drink candidate for individual owner review; not approved or integrated.",
+      "senseNotes": "Georgian Agriculture Ministry publication identifies პეკანი as a nut-bearing crop with edible fruit; botanical dictionary independently records the exact spelling. Familiarity needs owner judgment; no nutritional or medical claims are proposed.",
+      "sources": [
+        {
+          "url": "https://dspace.nplg.gov.ge/bitstream/1234/481966/1/Chveni_Sofeli_2020_N8.pdf",
+          "checkedVia": "Primary dictionary, official bilingual food list or agricultural source inspected on 2026-10-26; short adapted gloss only. Attestation does not automatically establish everyday familiarity."
+        },
+        {
+          "url": "https://www.nplg.gov.ge/greenstone3/library/collection/dictiona/document/HASH02a8b79764c28bc1315d45?ed=1",
+          "checkedVia": "Botanical dictionary records პეკანი and the pecan species; independently supports exact spelling."
+        }
+      ]
+    },
+    {
+      "id": "T16-004",
+      "word": "კიში",
+      "length": 4,
+      "proposedMeaning": "quiche; savoury tart",
+      "partOfSpeech": "noun",
+      "category": "dish",
+      "ownerDecision": "pending",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Source-attested food/drink candidate for individual owner review; not approved or integrated.",
+      "senseNotes": "Official bilingual goods list 300192 records კიში for quiche, described as a tart-shaped pie. Propose only the culinary noun, not a homographic name.",
+      "sources": [
+        {
+          "url": "https://www.sakpatenti.gov.ge/media/page_files/3.List_of_Nice_Classification_goods.docx.pdf#page=380",
+          "checkedVia": "Primary dictionary, official bilingual food list or agricultural source inspected on 2026-10-26; short adapted gloss only. Attestation does not automatically establish everyday familiarity."
+        }
+      ]
+    },
+    {
+      "id": "T16-005",
+      "word": "მისო",
+      "length": 4,
+      "proposedMeaning": "miso; soybean paste",
+      "partOfSpeech": "noun",
+      "category": "condiment",
+      "ownerDecision": "pending",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Source-attested food/drink candidate for individual owner review; not approved or integrated.",
+      "senseNotes": "Official bilingual goods list 300194 records მისო as soybean paste. Paste/condiment sense only; no blanket approval of an independently spelled soup name.",
+      "sources": [
+        {
+          "url": "https://www.sakpatenti.gov.ge/media/page_files/3.List_of_Nice_Classification_goods.docx.pdf#page=380",
+          "checkedVia": "Primary dictionary, official bilingual food list or agricultural source inspected on 2026-10-26; short adapted gloss only. Attestation does not automatically establish everyday familiarity."
+        }
+      ]
+    },
+    {
+      "id": "T16-006",
+      "word": "უდონი",
+      "length": 5,
+      "proposedMeaning": "udon noodles",
+      "partOfSpeech": "noun",
+      "category": "dish",
+      "ownerDecision": "pending",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Source-attested food/drink candidate for individual owner review; not approved or integrated.",
+      "senseNotes": "Official bilingual goods list 300273 records უდონი in the exact expression ლაფშა უდონი. The named noodle variety is proposed, not a shortened unrelated word or Georgian plural.",
+      "sources": [
+        {
+          "url": "https://www.sakpatenti.gov.ge/media/page_files/3.List_of_Nice_Classification_goods.docx.pdf#page=384",
+          "checkedVia": "Primary dictionary, official bilingual food list or agricultural source inspected on 2026-10-26; short adapted gloss only. Attestation does not automatically establish everyday familiarity."
+        }
+      ]
+    },
+    {
+      "id": "T16-007",
+      "word": "სობა",
+      "length": 4,
+      "proposedMeaning": "soba noodles",
+      "partOfSpeech": "noun",
+      "category": "dish",
+      "ownerDecision": "pending",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Source-attested food/drink candidate for individual owner review; not approved or integrated.",
+      "senseNotes": "Official bilingual goods list 300274 records სობა in the exact expression ლაფშა სობა. Named noodle variety only; no other homographic sense is proposed.",
+      "sources": [
+        {
+          "url": "https://www.sakpatenti.gov.ge/media/page_files/3.List_of_Nice_Classification_goods.docx.pdf#page=384",
+          "checkedVia": "Primary dictionary, official bilingual food list or agricultural source inspected on 2026-10-26; short adapted gloss only. Attestation does not automatically establish everyday familiarity."
+        }
+      ]
+    },
+    {
+      "id": "T16-008",
+      "word": "მატე",
+      "length": 4,
+      "proposedMeaning": "mate tea",
+      "partOfSpeech": "noun",
+      "category": "drink",
+      "ownerDecision": "pending",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Source-attested food/drink candidate for individual owner review; not approved or integrated.",
+      "senseNotes": "University dictionary records მატე as a tea/drink. Ordinary beverage sense only, not a personal name; name overlap does not itself exclude an ordinary sense. Familiarity needs owner judgment.",
+      "sources": [
+        {
+          "url": "https://dlab.ug.edu.ge/synonym/detail/996/ჩაი",
+          "checkedVia": "Primary dictionary, official bilingual food list or agricultural source inspected on 2026-10-26; short adapted gloss only. Attestation does not automatically establish everyday familiarity."
+        }
+      ]
+    }
+  ],
+  "productionBaselineSha256": {
+    "content/dictionaries/discovery-v30-ka.json": "4c354d592cb6c3574ff23caa80d5e261e1f000394064b30700c9bf1165c3148d",
+    "content/dictionaries/everyday-targets-v30.json": "8bde23f6920e4fac245ec804ad2d84a101796f13a789715573a3774174f5d3ac",
+    "content/levels/discovery.v30.review.json": "36c4646dbf208f67c1b875ce4a78beeb89686e975ece44cc93f9ce9fb3f548cd",
+    "content/levels/discovery.v30.json": "aa06da11c1eabdaa6adad84c63c258cb76f9120832c02acf1f6c692aae74176f",
+    "content/levels/discovery.v30.recipes.json": "ae4b2885821c3e96132225620cbab14fff8809823214cef504e8dfc32826113c",
+    "content/dictionaries/word-policy.json": "482c910fdd5dd69748dbedff478a929745356c1e2ece72b1efc7d06db9fe9d78",
+    "mobile/src/content/catalog.ts": "b9c623099936a6fe139d738815cbdaa38ae0d30f19abbe3f7acb3780b8602f56"
+  }
+}

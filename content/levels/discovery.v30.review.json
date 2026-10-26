@@ -1,0 +1,36 @@
+{
+  "revision": 30,
+  "draftSha256": "c6ea666e58639c1f65976ff111e884893ae0e50d572b0ce93e59f9ed0eb356d6",
+  "reviewedAt": "2026-10-26",
+  "reviewer": "Codex assistant policy and all-board audit following the owner’s exact 12-word removal approval",
+  "scope": "All 2,500 required slots and accepted variants checked against 2,306 inherited approvals; all bonuses rebuilt against 2,424 eligible spellings. Exact 12 agreed origin labels excluded from all roles. Repaired 13 required boards; remaining 487 required boards retain answers, IDs, wheels, layout and difficulty. Same 500 levels and 100 destinations. All 75-level gaps, five-answer length progression, pacing, bounded layouts and variety checks pass. No new vocabulary approved by the review proposal. No device playtest or release upload.",
+  "removedWords": [
+    "აზიელი",
+    "აზიური",
+    "არაბი",
+    "აფხაზი",
+    "გურული",
+    "თურქი",
+    "ინდური",
+    "ოსი",
+    "სვანი",
+    "სომეხი",
+    "ფრანგი",
+    "შვედი"
+  ],
+  "changedRequiredLevels": [
+    41,
+    45,
+    52,
+    60,
+    62,
+    96,
+    130,
+    198,
+    335,
+    395,
+    418,
+    419,
+    499
+  ]
+}

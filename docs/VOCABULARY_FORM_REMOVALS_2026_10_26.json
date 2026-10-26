@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-26",
+  "status": "owner-approved-applied",
+  "revision": 31,
+  "removedWords": ["მოგრძო", "უკვალო", "უკუდო"],
+  "retainedOtherAuditApprovals": 36,
+  "pendingIntegrationCount": 52,
+  "totalApprovedPoolAfterReview": 2355,
+  "metrics": {
+    "approved": 2303,
+    "eligible": 2421,
+    "distinct": 1941,
+    "repeatedSlots": 559,
+    "repetitionPercent": 22.36,
+    "minimumGap": 75,
+    "maxAppearances": 7,
+    "changedRequiredBoards": 3,
+    "changedBonusLists": 2
+  },
+  "changes": [
+    {
+      "level": 9,
+      "before": ["ურო", "რკო", "კურო", "უკუდო", "დრო"],
+      "after": ["კურო", "ურო", "დრო", "რკო", "კრედო"]
+    },
+    {
+      "level": 126,
+      "before": ["უკვალო", "ავი", "ოვალი", "კვალი", "ვოკალი"],
+      "after": ["ვოკალი", "ოვალი", "ავი", "კვალი", "კვირა"]
+    },
+    {
+      "level": 242,
+      "before": ["რომი", "ორმო", "მძორი", "მოგრძო", "მორგი"],
+      "after": ["მორგი", "რომი", "მძორი", "მერი", "მორიგე"]
+    }
+  ],
+  "changedBonusLevels": [126, 242],
+  "historicalRevision30Sha256": {
+    "content/dictionaries/discovery-v30-ka.json": "4c354d592cb6c3574ff23caa80d5e261e1f000394064b30700c9bf1165c3148d",
+    "content/dictionaries/everyday-targets-v30.json": "8bde23f6920e4fac245ec804ad2d84a101796f13a789715573a3774174f5d3ac",
+    "content/levels/discovery.v30.json": "aa06da11c1eabdaa6adad84c63c258cb76f9120832c02acf1f6c692aae74176f",
+    "content/levels/discovery.v30.recipes.json": "ae4b2885821c3e96132225620cbab14fff8809823214cef504e8dfc32826113c",
+    "content/levels/discovery.v30.review.json": "36c4646dbf208f67c1b875ce4a78beeb89686e975ece44cc93f9ce9fb3f548cd"
+  },
+  "varietyAudit": {
+    "uniqueWheels": 500,
+    "repeatedAnswerTriples": 0,
+    "maxSharedWheelTilesWithinTenLevels": 5,
+    "distinctGridPatternsPerStop": 5,
+    "identicalAdjacentPatterns": 0
+  },
+  "validation": {
+    "date": "2026-10-26",
+    "npmRunCheck": "passed: typecheck, lint, 61 suites / 456 tests, 500-level solve, formatting",
+    "pythonPytest": "170 passed",
+    "ruffCheck": "passed",
+    "ruffFormatCheck": "44 files already formatted",
+    "mypy": "passed: 13 source files",
+    "iosExpoExport": "passed; temporary export removed after verification",
+    "historicalContent": "All preexisting content JSON files except the intentionally revisioned shared word policy are byte-identical to task start.",
+    "cleanup": "Simulators shut down and Simulator quit; installed apps and saves preserved. Workspace 3.8 GB. Task intermediates removed.",
+    "limitations": [
+      "No native-device playtest.",
+      "No store build or upload.",
+      "The 52 approved additions awaiting integration remain outside revision 31."
+    ]
+  }
+}

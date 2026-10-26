@@ -1,0 +1,927 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-26",
+  "status": "owner-reviewed; exact three removals applied in revision 31",
+  "scope": "Review all 2,339 approved spellings: 2,306 integrated in revision 30 and 33 owner-approved additions in batches 13–15 awaiting integration. Pending/rejected spellings are excluded from this approved-pool audit.",
+  "criteria": "Find analogues of removed ordinal numerals, approximate-colour forms and productive prefixed adjectives. Screened all approved words, their recorded parts of speech and meanings; manually reviewed adjective groups. Did not classify all words beginning with უ or მო as derivatives.",
+  "counts": {
+    "approvedPool": 2339,
+    "integratedApproved": 2306,
+    "approvedAwaitingIntegration": 33,
+    "ordinalMatches": 0,
+    "approximateColorMatches": 0,
+    "closeDegreeOrComparison": 3,
+    "uODerivedAdjectives": 25,
+    "broaderLexicalizedNegativeAdjectives": 11,
+    "totalReviewCandidates": 39,
+    "candidatesAmongPendingApprovals": 0,
+    "distinctUsedRequiredCandidates": 28,
+    "requiredSlots": 29,
+    "acceptedVariantOccurrences": 0,
+    "affectedRequiredBoards": 25,
+    "notUsedAsRequired": 11
+  },
+  "checkedAbsent": {
+    "ordinalExamples": [
+      "პირველი",
+      "მეორე",
+      "მესამე",
+      "მეოთხე",
+      "მეხუთე",
+      "მეექვსე",
+      "მეშვიდე",
+      "მერვე",
+      "მეცხრე",
+      "მეათე",
+      "მეთერთმეტე",
+      "მეთორმეტე",
+      "მეოცე",
+      "ოცდამეერთე",
+      "მეასე",
+      "მეათასე"
+    ],
+    "approximateColorExamples": [
+      "მოშავო",
+      "მორუხო",
+      "მოთეთრო",
+      "მოწითალო",
+      "მოწითო",
+      "მოლურჯო",
+      "მომწვანო",
+      "მოყვითალო",
+      "მოვარდისფრო"
+    ]
+  },
+  "falsePositiveControls": [
+    {
+      "word": "წამი",
+      "reason": "Approved meaning second is a time unit, not an ordinal."
+    },
+    {
+      "word": "პირმშო",
+      "reason": "Firstborn child is an independent noun, not an ordinal numeral."
+    },
+    {
+      "word": "მეკვლე",
+      "reason": "First New Year visitor is a role noun, not an ordinal."
+    },
+    {
+      "word": "უტოპია",
+      "reason": "Approved but awaiting integration: this is a noun, not a negative adjective merely because the spelling starts with უ."
+    },
+    {
+      "words": [
+        "უდაბნო",
+        "ულუფა",
+        "ურემი",
+        "უჯრა",
+        "უცხო",
+        "უხეში",
+        "უხვი",
+        "მოკლე",
+        "მოდური"
+      ],
+      "reason": "Do not classify lexical nouns/basic adjectives as removed-style forms solely from initial letters."
+    }
+  ],
+  "limitations": [
+    "The original audit removed nothing. The subsequent owner decision removes exactly მოგრძო, უკვალო and უკუდო in revision 31; the other 36 retain prior approvals.",
+    "Similarity groups are editorial judgments, not claims that these are incorrect Georgian words or case-inflected forms. Many are ordinary independent adjectives.",
+    "The similarity groups are retained as audit history; the exact subsequent three-word owner choice is recorded in ownerReview.",
+    "No broad adjective ban is inferred. Only the three explicit approvals are withdrawn; no historical pack is modified.",
+    "Recorded source provenance supports the approved senses; new web dictionary rechecks focus on the three closest candidates. No native-speaker review is claimed.",
+    "Usage counts describe the revision-30 audit snapshot. Subsequent revision-31 repairs, metrics and validation are recorded separately in VOCABULARY_FORM_REMOVALS_2026_10_26.json."
+  ],
+  "inputs": {
+    "content/dictionaries/everyday-targets-v30.json": {
+      "sha256": "8bde23f6920e4fac245ec804ad2d84a101796f13a789715573a3774174f5d3ac"
+    },
+    "content/dictionaries/discovery-v30-ka.json": {
+      "sha256": "4c354d592cb6c3574ff23caa80d5e261e1f000394064b30700c9bf1165c3148d"
+    },
+    "content/levels/discovery.v30.json": {
+      "sha256": "aa06da11c1eabdaa6adad84c63c258cb76f9120832c02acf1f6c692aae74176f"
+    },
+    "content/dictionaries/word-policy.json": {
+      "sha256": "482c910fdd5dd69748dbedff478a929745356c1e2ece72b1efc7d06db9fe9d78"
+    },
+    "docs/VOCABULARY_TARGETED_BATCH_13.json": {
+      "sha256": "37d01745d27bf50ac8d6628f3879746b2b5d4f1cc441a029efdcc0564683014a"
+    },
+    "docs/VOCABULARY_TARGETED_BATCH_14.json": {
+      "sha256": "22b6ed724990198e643f491cda8dd505a962ea15d318d567cccf6dc5cda4d962"
+    },
+    "docs/VOCABULARY_TARGETED_BATCH_15.json": {
+      "sha256": "365e173495f962be6a16e7be69200d4876dbf1f194717892ca4140161cab31c6"
+    },
+    "mobile/src/content/catalog.ts": {
+      "sha256": "b9c623099936a6fe139d738815cbdaa38ae0d30f19abbe3f7acb3780b8602f56"
+    }
+  },
+  "affectedRequiredLevels": [
+    6, 9, 10, 48, 52, 53, 63, 85, 116, 125, 126, 150, 208, 217, 237, 242, 272,
+    300, 311, 326, 335, 427, 444, 448, 497
+  ],
+  "entries": [
+    {
+      "word": "მოგრძო",
+      "approvedMeaning": "somewhat elongated",
+      "group": "degree-or-comparison",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Closest match to the owner’s examples: approximate size/shape or a comparative age/quality sense.",
+      "notes": "Inspected dictionary meaning is ოდნავ გრძელი; the clearest active analogue of approximate-form proposals.",
+      "requiredLevels": [242],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%9B%E1%83%9D%E1%83%92%E1%83%A0%E1%83%AB%E1%83%9D",
+          "kind": "existing approved sense provenance"
+        },
+        {
+          "url": "https://www.ganmarteba.ge/word/მოგრძო",
+          "kind": "primary dictionary sense rechecked on 2026-10-26"
+        }
+      ],
+      "ownerDecision": "remove-from-all-current-gameplay",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "word": "უარესი",
+      "approvedMeaning": "worse",
+      "group": "degree-or-comparison",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Closest match to the owner’s examples: approximate size/shape or a comparative age/quality sense.",
+      "notes": "Inspected dictionary meaning is უფრო ცუდი; comparative quality form.",
+      "requiredLevels": [116],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%90%E1%83%A0%E1%83%94%E1%83%A1%E1%83%98",
+          "kind": "existing approved sense provenance"
+        },
+        {
+          "url": "https://www.ganmarteba.ge/word/უარესი",
+          "kind": "primary dictionary sense rechecked on 2026-10-26"
+        }
+      ],
+      "ownerDecision": "retain-prior-approval",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "word": "უფროსი",
+      "approvedMeaning": "older; senior",
+      "group": "degree-or-comparison",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Closest match to the owner’s examples: approximate size/shape or a comparative age/quality sense.",
+      "notes": "Approved recorded sense is older/senior. The inspected dictionary additionally records chief/manager, so this is not merely a dispensable inflection. That additional sense is not independently approved by this audit.",
+      "requiredLevels": [208],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [],
+      "sources": [
+        {
+          "url": "https://en.wiktionary.org/w/index.php?title=უფროსი&oldid=84091183",
+          "kind": "existing approved sense provenance"
+        },
+        {
+          "url": "https://www.ganmarteba.ge/word/უფროსი",
+          "kind": "primary dictionary sense rechecked on 2026-10-26"
+        }
+      ],
+      "ownerDecision": "retain-prior-approval",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "word": "უაზრო",
+      "approvedMeaning": "pointless; meaningless",
+      "group": "u-o-derived-adjectives",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Analogue of the removed უ-...-ო forms. Many are established independent adjectives; this is a review group, not a finding of grammatical invalidity or automatic removal.",
+      "notes": "Review the recorded approved sense individually; spelling structure alone is not a deletion rule.",
+      "requiredLevels": [326],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [],
+      "sources": [
+        {
+          "url": "https://en.wiktionary.org/w/index.php?title=უაზრო&oldid=75687201",
+          "kind": "existing approved sense provenance"
+        }
+      ],
+      "ownerDecision": "retain-prior-approval",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "word": "უბადლო",
+      "approvedMeaning": "matchless",
+      "group": "u-o-derived-adjectives",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Analogue of the removed უ-...-ო forms. Many are established independent adjectives; this is a review group, not a finding of grammatical invalidity or automatic removal.",
+      "notes": "Review the recorded approved sense individually; spelling structure alone is not a deletion rule.",
+      "requiredLevels": [],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%91%E1%83%90%E1%83%93%E1%83%9A%E1%83%9D",
+          "kind": "existing approved sense provenance"
+        }
+      ],
+      "ownerDecision": "retain-prior-approval",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "word": "უბიწო",
+      "approvedMeaning": "innocent; morally pure",
+      "group": "u-o-derived-adjectives",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Analogue of the removed უ-...-ო forms. Many are established independent adjectives; this is a review group, not a finding of grammatical invalidity or automatic removal.",
+      "notes": "Individually approved in targeted batch 03. Finding a structural analogy does not revoke that approval.",
+      "requiredLevels": [311],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%91%E1%83%98%E1%83%AC%E1%83%9D",
+          "kind": "existing approved sense provenance"
+        }
+      ],
+      "ownerDecision": "retain-prior-approval",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "word": "უბრალო",
+      "approvedMeaning": "simple",
+      "group": "u-o-derived-adjectives",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Analogue of the removed უ-...-ო forms. Many are established independent adjectives; this is a review group, not a finding of grammatical invalidity or automatic removal.",
+      "notes": "The approved meaning is simple, not just a literal absence of blame; lexicalization makes removal a matter of owner taste.",
+      "requiredLevels": [],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [],
+      "sources": [
+        {
+          "url": "https://en.wiktionary.org/w/index.php?title=უბრალო&oldid=75271163",
+          "kind": "existing approved sense provenance"
+        }
+      ],
+      "ownerDecision": "retain-prior-approval",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "word": "უგულო",
+      "approvedMeaning": "heartless",
+      "group": "u-o-derived-adjectives",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Analogue of the removed უ-...-ო forms. Many are established independent adjectives; this is a review group, not a finding of grammatical invalidity or automatic removal.",
+      "notes": "Review the recorded approved sense individually; spelling structure alone is not a deletion rule.",
+      "requiredLevels": [52],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [],
+      "sources": [
+        {
+          "url": "https://en.wiktionary.org/w/index.php?title=უგულო&oldid=88343102",
+          "kind": "existing approved sense provenance"
+        }
+      ],
+      "ownerDecision": "retain-prior-approval",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "word": "უდავო",
+      "approvedMeaning": "undeniable",
+      "group": "u-o-derived-adjectives",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Analogue of the removed უ-...-ო forms. Many are established independent adjectives; this is a review group, not a finding of grammatical invalidity or automatic removal.",
+      "notes": "Review the recorded approved sense individually; spelling structure alone is not a deletion rule.",
+      "requiredLevels": [125],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [],
+      "sources": [
+        {
+          "url": "https://en.wiktionary.org/w/index.php?title=უდავო&oldid=28797786",
+          "kind": "existing approved sense provenance"
+        }
+      ],
+      "ownerDecision": "retain-prior-approval",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "word": "უზადო",
+      "approvedMeaning": "flawless",
+      "group": "u-o-derived-adjectives",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Analogue of the removed უ-...-ო forms. Many are established independent adjectives; this is a review group, not a finding of grammatical invalidity or automatic removal.",
+      "notes": "Review the recorded approved sense individually; spelling structure alone is not a deletion rule.",
+      "requiredLevels": [125],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [326],
+      "sources": [
+        {
+          "url": "https://en.wiktionary.org/w/index.php?title=უზადო&oldid=84119546",
+          "kind": "existing approved sense provenance"
+        }
+      ],
+      "ownerDecision": "retain-prior-approval",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "word": "უზნეო",
+      "approvedMeaning": "immoral; ill-behaved",
+      "group": "u-o-derived-adjectives",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Analogue of the removed უ-...-ო forms. Many are established independent adjectives; this is a review group, not a finding of grammatical invalidity or automatic removal.",
+      "notes": "Review the recorded approved sense individually; spelling structure alone is not a deletion rule.",
+      "requiredLevels": [10],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%96%E1%83%9C%E1%83%94%E1%83%9D",
+          "kind": "existing approved sense provenance"
+        }
+      ],
+      "ownerDecision": "retain-prior-approval",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "word": "უიმედო",
+      "approvedMeaning": "hopeless",
+      "group": "u-o-derived-adjectives",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Analogue of the removed უ-...-ო forms. Many are established independent adjectives; this is a review group, not a finding of grammatical invalidity or automatic removal.",
+      "notes": "Review the recorded approved sense individually; spelling structure alone is not a deletion rule.",
+      "requiredLevels": [150],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%98%E1%83%9B%E1%83%94%E1%83%93%E1%83%9D",
+          "kind": "existing approved sense provenance"
+        }
+      ],
+      "ownerDecision": "retain-prior-approval",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "word": "უიღბლო",
+      "approvedMeaning": "unlucky",
+      "group": "u-o-derived-adjectives",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Analogue of the removed უ-...-ო forms. Many are established independent adjectives; this is a review group, not a finding of grammatical invalidity or automatic removal.",
+      "notes": "Review the recorded approved sense individually; spelling structure alone is not a deletion rule.",
+      "requiredLevels": [217],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [],
+      "sources": [
+        {
+          "url": "https://en.wiktionary.org/w/index.php?title=უიღბლო&oldid=84119570",
+          "kind": "existing approved sense provenance"
+        }
+      ],
+      "ownerDecision": "retain-prior-approval",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "word": "უკვალო",
+      "approvedMeaning": "leaving no trace; trackless",
+      "group": "u-o-derived-adjectives",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Analogue of the removed უ-...-ო forms. Many are established independent adjectives; this is a review group, not a finding of grammatical invalidity or automatic removal.",
+      "notes": "Review the recorded approved sense individually; spelling structure alone is not a deletion rule.",
+      "requiredLevels": [126],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [],
+      "sources": [
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%A3%E1%83%99%E1%83%95%E1%83%90%E1%83%9A%E1%83%9D",
+          "kind": "existing approved sense provenance"
+        }
+      ],
+      "ownerDecision": "remove-from-all-current-gameplay",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "word": "უკუდო",
+      "approvedMeaning": "tailless",
+      "group": "u-o-derived-adjectives",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Analogue of the removed უ-...-ო forms. Many are established independent adjectives; this is a review group, not a finding of grammatical invalidity or automatic removal.",
+      "notes": "Review the recorded approved sense individually; spelling structure alone is not a deletion rule.",
+      "requiredLevels": [9],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%99%E1%83%A3%E1%83%93%E1%83%9D",
+          "kind": "existing approved sense provenance"
+        }
+      ],
+      "ownerDecision": "remove-from-all-current-gameplay",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "word": "უმანკო",
+      "approvedMeaning": "innocent",
+      "group": "u-o-derived-adjectives",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Analogue of the removed უ-...-ო forms. Many are established independent adjectives; this is a review group, not a finding of grammatical invalidity or automatic removal.",
+      "notes": "Established innocent/pure sense; not automatically equivalent to an ad hoc derivative.",
+      "requiredLevels": [48],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%9B%E1%83%90%E1%83%9C%E1%83%99%E1%83%9D",
+          "kind": "existing approved sense provenance"
+        }
+      ],
+      "ownerDecision": "retain-prior-approval",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "word": "უმწეო",
+      "approvedMeaning": "helpless",
+      "group": "u-o-derived-adjectives",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Analogue of the removed უ-...-ო forms. Many are established independent adjectives; this is a review group, not a finding of grammatical invalidity or automatic removal.",
+      "notes": "Review the recorded approved sense individually; spelling structure alone is not a deletion rule.",
+      "requiredLevels": [],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [],
+      "sources": [
+        {
+          "url": "https://en.wiktionary.org/w/index.php?title=უმწეო&oldid=83145068",
+          "kind": "existing approved sense provenance"
+        }
+      ],
+      "ownerDecision": "retain-prior-approval",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "word": "უნაკლო",
+      "approvedMeaning": "flawless",
+      "group": "u-o-derived-adjectives",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Analogue of the removed უ-...-ო forms. Many are established independent adjectives; this is a review group, not a finding of grammatical invalidity or automatic removal.",
+      "notes": "Review the recorded approved sense individually; spelling structure alone is not a deletion rule.",
+      "requiredLevels": [],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [],
+      "sources": [
+        {
+          "url": "https://en.wiktionary.org/w/index.php?title=უნაკლო&oldid=84119652",
+          "kind": "existing approved sense provenance"
+        }
+      ],
+      "ownerDecision": "retain-prior-approval",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "word": "უნიჭო",
+      "approvedMeaning": "untalented",
+      "group": "u-o-derived-adjectives",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Analogue of the removed უ-...-ო forms. Many are established independent adjectives; this is a review group, not a finding of grammatical invalidity or automatic removal.",
+      "notes": "Review the recorded approved sense individually; spelling structure alone is not a deletion rule.",
+      "requiredLevels": [427],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%9C%E1%83%98%E1%83%AD%E1%83%9D",
+          "kind": "existing approved sense provenance"
+        }
+      ],
+      "ownerDecision": "retain-prior-approval",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "word": "ურიგო",
+      "approvedMeaning": "unsatisfactory; bad",
+      "group": "u-o-derived-adjectives",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Analogue of the removed უ-...-ო forms. Many are established independent adjectives; this is a review group, not a finding of grammatical invalidity or automatic removal.",
+      "notes": "Review the recorded approved sense individually; spelling structure alone is not a deletion rule.",
+      "requiredLevels": [6],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [52],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%A0%E1%83%98%E1%83%92%E1%83%9D",
+          "kind": "existing approved sense provenance"
+        }
+      ],
+      "ownerDecision": "retain-prior-approval",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "word": "უსულო",
+      "approvedMeaning": "inanimate",
+      "group": "u-o-derived-adjectives",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Analogue of the removed უ-...-ო forms. Many are established independent adjectives; this is a review group, not a finding of grammatical invalidity or automatic removal.",
+      "notes": "Review the recorded approved sense individually; spelling structure alone is not a deletion rule.",
+      "requiredLevels": [237],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%A1%E1%83%A3%E1%83%9A%E1%83%9D",
+          "kind": "existing approved sense provenance"
+        }
+      ],
+      "ownerDecision": "retain-prior-approval",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "word": "უტაქტო",
+      "approvedMeaning": "tactless",
+      "group": "u-o-derived-adjectives",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Analogue of the removed უ-...-ო forms. Many are established independent adjectives; this is a review group, not a finding of grammatical invalidity or automatic removal.",
+      "notes": "Review the recorded approved sense individually; spelling structure alone is not a deletion rule.",
+      "requiredLevels": [],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%A2%E1%83%90%E1%83%A5%E1%83%A2%E1%83%9D",
+          "kind": "existing approved sense provenance"
+        }
+      ],
+      "ownerDecision": "retain-prior-approval",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "word": "უტვინო",
+      "approvedMeaning": "foolish",
+      "group": "u-o-derived-adjectives",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Analogue of the removed უ-...-ო forms. Many are established independent adjectives; this is a review group, not a finding of grammatical invalidity or automatic removal.",
+      "notes": "Review the recorded approved sense individually; spelling structure alone is not a deletion rule.",
+      "requiredLevels": [],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%A2%E1%83%95%E1%83%98%E1%83%9C%E1%83%9D",
+          "kind": "existing approved sense provenance"
+        }
+      ],
+      "ownerDecision": "retain-prior-approval",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "word": "უფასო",
+      "approvedMeaning": "free of charge",
+      "group": "u-o-derived-adjectives",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Analogue of the removed უ-...-ო forms. Many are established independent adjectives; this is a review group, not a finding of grammatical invalidity or automatic removal.",
+      "notes": "Established free-of-charge meaning; included by structural analogy only.",
+      "requiredLevels": [335],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [],
+      "sources": [
+        {
+          "url": "https://en.wiktionary.org/w/index.php?title=უფასო&oldid=84119719",
+          "kind": "existing approved sense provenance"
+        }
+      ],
+      "ownerDecision": "retain-prior-approval",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "word": "უფორმო",
+      "approvedMeaning": "shapeless",
+      "group": "u-o-derived-adjectives",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Analogue of the removed უ-...-ო forms. Many are established independent adjectives; this is a review group, not a finding of grammatical invalidity or automatic removal.",
+      "notes": "Review the recorded approved sense individually; spelling structure alone is not a deletion rule.",
+      "requiredLevels": [85],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [],
+      "sources": [
+        {
+          "url": "https://en.wiktionary.org/wiki/%E1%83%A3%E1%83%A4%E1%83%9D%E1%83%A0%E1%83%9B%E1%83%9D",
+          "kind": "existing approved sense provenance"
+        }
+      ],
+      "ownerDecision": "retain-prior-approval",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "word": "უღონო",
+      "approvedMeaning": "without strength",
+      "group": "u-o-derived-adjectives",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Analogue of the removed უ-...-ო forms. Many are established independent adjectives; this is a review group, not a finding of grammatical invalidity or automatic removal.",
+      "notes": "Review the recorded approved sense individually; spelling structure alone is not a deletion rule.",
+      "requiredLevels": [],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%A6%E1%83%9D%E1%83%9C%E1%83%9D",
+          "kind": "existing approved sense provenance"
+        }
+      ],
+      "ownerDecision": "retain-prior-approval",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "word": "უწესო",
+      "approvedMeaning": "improper",
+      "group": "u-o-derived-adjectives",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Analogue of the removed უ-...-ო forms. Many are established independent adjectives; this is a review group, not a finding of grammatical invalidity or automatic removal.",
+      "notes": "Review the recorded approved sense individually; spelling structure alone is not a deletion rule.",
+      "requiredLevels": [311],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%AC%E1%83%94%E1%83%A1%E1%83%9D",
+          "kind": "existing approved sense provenance"
+        }
+      ],
+      "ownerDecision": "retain-prior-approval",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "word": "უხეირო",
+      "approvedMeaning": "poor quality",
+      "group": "u-o-derived-adjectives",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Analogue of the removed უ-...-ო forms. Many are established independent adjectives; this is a review group, not a finding of grammatical invalidity or automatic removal.",
+      "notes": "Review the recorded approved sense individually; spelling structure alone is not a deletion rule.",
+      "requiredLevels": [],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%AE%E1%83%94%E1%83%98%E1%83%A0%E1%83%9D",
+          "kind": "existing approved sense provenance"
+        }
+      ],
+      "ownerDecision": "retain-prior-approval",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "word": "უდრეკი",
+      "approvedMeaning": "resolute",
+      "group": "broader-lexicalized-negative-adjectives",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Broader negative/privative derivation, often strongly lexicalized. Lower-confidence analogy; owner may reasonably retain these familiar words.",
+      "notes": "Review the recorded approved sense individually; spelling structure alone is not a deletion rule.",
+      "requiredLevels": [448],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%93%E1%83%A0%E1%83%94%E1%83%99%E1%83%98",
+          "kind": "existing approved sense provenance"
+        }
+      ],
+      "ownerDecision": "retain-prior-approval",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "word": "უვიცი",
+      "approvedMeaning": "ignorant, uninformed",
+      "group": "broader-lexicalized-negative-adjectives",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Broader negative/privative derivation, often strongly lexicalized. Lower-confidence analogy; owner may reasonably retain these familiar words.",
+      "notes": "Review the recorded approved sense individually; spelling structure alone is not a deletion rule.",
+      "requiredLevels": [53],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [],
+      "sources": [
+        {
+          "url": "https://en.wiktionary.org/w/index.php?title=უვიცი&oldid=84088542",
+          "kind": "existing approved sense provenance"
+        }
+      ],
+      "ownerDecision": "retain-prior-approval",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "word": "ულევი",
+      "approvedMeaning": "inexhaustible",
+      "group": "broader-lexicalized-negative-adjectives",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Broader negative/privative derivation, often strongly lexicalized. Lower-confidence analogy; owner may reasonably retain these familiar words.",
+      "notes": "Review the recorded approved sense individually; spelling structure alone is not a deletion rule.",
+      "requiredLevels": [63, 272],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%9A%E1%83%94%E1%83%95%E1%83%98",
+          "kind": "existing approved sense provenance"
+        }
+      ],
+      "ownerDecision": "retain-prior-approval",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "word": "ურყევი",
+      "approvedMeaning": "steadfast, firm",
+      "group": "broader-lexicalized-negative-adjectives",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Broader negative/privative derivation, often strongly lexicalized. Lower-confidence analogy; owner may reasonably retain these familiar words.",
+      "notes": "Review the recorded approved sense individually; spelling structure alone is not a deletion rule.",
+      "requiredLevels": [],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%A0%E1%83%A7%E1%83%94%E1%83%95%E1%83%98",
+          "kind": "existing approved sense provenance"
+        }
+      ],
+      "ownerDecision": "retain-prior-approval",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "word": "ურცხვი",
+      "approvedMeaning": "shameless",
+      "group": "broader-lexicalized-negative-adjectives",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Broader negative/privative derivation, often strongly lexicalized. Lower-confidence analogy; owner may reasonably retain these familiar words.",
+      "notes": "Review the recorded approved sense individually; spelling structure alone is not a deletion rule.",
+      "requiredLevels": [53],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%A0%E1%83%AA%E1%83%AE%E1%83%95%E1%83%98",
+          "kind": "existing approved sense provenance"
+        }
+      ],
+      "ownerDecision": "retain-prior-approval",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "word": "უტყვი",
+      "approvedMeaning": "silent",
+      "group": "broader-lexicalized-negative-adjectives",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Broader negative/privative derivation, often strongly lexicalized. Lower-confidence analogy; owner may reasonably retain these familiar words.",
+      "notes": "Review the recorded approved sense individually; spelling structure alone is not a deletion rule.",
+      "requiredLevels": [444],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%A2%E1%83%A7%E1%83%95%E1%83%98",
+          "kind": "existing approved sense provenance"
+        }
+      ],
+      "ownerDecision": "retain-prior-approval",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "word": "უღირსი",
+      "approvedMeaning": "unworthy",
+      "group": "broader-lexicalized-negative-adjectives",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Broader negative/privative derivation, often strongly lexicalized. Lower-confidence analogy; owner may reasonably retain these familiar words.",
+      "notes": "Review the recorded approved sense individually; spelling structure alone is not a deletion rule.",
+      "requiredLevels": [300],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%A6%E1%83%98%E1%83%A0%E1%83%A1%E1%83%98",
+          "kind": "existing approved sense provenance"
+        }
+      ],
+      "ownerDecision": "retain-prior-approval",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "word": "უშნო",
+      "approvedMeaning": "ugly",
+      "group": "broader-lexicalized-negative-adjectives",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Broader negative/privative derivation, often strongly lexicalized. Lower-confidence analogy; owner may reasonably retain these familiar words.",
+      "notes": "Review the recorded approved sense individually; spelling structure alone is not a deletion rule.",
+      "requiredLevels": [10],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [],
+      "sources": [
+        {
+          "url": "https://en.wiktionary.org/w/index.php?title=უშნო&oldid=88343119",
+          "kind": "existing approved sense provenance"
+        }
+      ],
+      "ownerDecision": "retain-prior-approval",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "word": "უშრეტი",
+      "approvedMeaning": "inexhaustible",
+      "group": "broader-lexicalized-negative-adjectives",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Broader negative/privative derivation, often strongly lexicalized. Lower-confidence analogy; owner may reasonably retain these familiar words.",
+      "notes": "Review the recorded approved sense individually; spelling structure alone is not a deletion rule.",
+      "requiredLevels": [497],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [],
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/%E1%83%A3%E1%83%A8%E1%83%A0%E1%83%94%E1%83%A2%E1%83%98",
+          "kind": "existing approved sense provenance"
+        }
+      ],
+      "ownerDecision": "retain-prior-approval",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "word": "უცნობი",
+      "approvedMeaning": "unknown; unfamiliar",
+      "group": "broader-lexicalized-negative-adjectives",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Broader negative/privative derivation, often strongly lexicalized. Lower-confidence analogy; owner may reasonably retain these familiar words.",
+      "notes": "Approved unknown/unfamiliar adjective, not a proposal to infer eligibility for all participles.",
+      "requiredLevels": [],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [],
+      "sources": [
+        {
+          "url": "https://en.wiktionary.org/w/index.php?title=უცნობი&oldid=84089062",
+          "kind": "existing approved sense provenance"
+        }
+      ],
+      "ownerDecision": "retain-prior-approval",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "word": "უძრავი",
+      "approvedMeaning": "immobile; stationary",
+      "group": "broader-lexicalized-negative-adjectives",
+      "approvalStatus": "integrated-revision-30",
+      "auditDecision": "review-only; prior approval unchanged",
+      "reason": "Broader negative/privative derivation, often strongly lexicalized. Lower-confidence analogy; owner may reasonably retain these familiar words.",
+      "notes": "Approved stationary/immobile adjective; no new real-estate noun sense is approved.",
+      "requiredLevels": [],
+      "acceptedVariantLevels": [],
+      "bonusLevels": [],
+      "sources": [
+        {
+          "url": "https://en.wiktionary.org/w/index.php?title=უძრავი&oldid=84091194",
+          "kind": "existing approved sense provenance"
+        }
+      ],
+      "ownerDecision": "retain-prior-approval",
+      "ownerReviewedAt": "2026-10-26"
+    }
+  ],
+  "ownerReview": {
+    "date": "2026-10-26",
+    "removedWords": ["მოგრძო", "უკვალო", "უკუდო"],
+    "retainedPriorApprovals": 36,
+    "appliedRevision": 31,
+    "decisionRecord": "docs/VOCABULARY_FORM_REMOVALS_2026_10_26.json",
+    "note": "Original scope, usage counts and input hashes remain the revision-30 audit snapshot. Batch 17 was approved after that snapshot; total current approvals are 2,355, including 52 awaiting integration."
+  }
+}

@@ -1,0 +1,683 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-26",
+  "status": "owner-reviewed-partial-approval",
+  "activeRevisionUnchanged": 30,
+  "activeApprovedPool": 2306,
+  "candidateCount": 30,
+  "countsByLength": {
+    "5": 3,
+    "6": 27
+  },
+  "countsByCategory": {
+    "home": 1,
+    "objects": 1,
+    "ideas": 5,
+    "culture": 3,
+    "nature": 3,
+    "money": 1,
+    "school": 1,
+    "qualities": 5,
+    "country": 10
+  },
+  "previouslyRecordedSpellings": 8713,
+  "previousReviewOverlap": 0,
+  "requestedCount": 100,
+  "ownerSelectedScope": "After clarification, the owner selected a smaller batch within existing 3–6-letter rules instead of including longer words.",
+  "method": "Exact-spelling deduplication against dictionary/content/level JSON and all VOCABULARY review JSON and text documents, including approved, rejected, skipped and unselected spellings. Screened cached six-letter noun/adjective discovery lists and additional everyday suggestions; individually verified the proposed senses in the linked language or official country-name sources.",
+  "poolFinding": "The earlier review already found familiar unreviewed 3–5-letter words nearly exhausted. This bounded editorial search produced a 30-word review, mainly six-letter candidates. It is not proof that no further suitable words exist. No rare technical, archaic or verbal-action filler was added to reach 100.",
+  "familiarityTiers": {
+    "A": "Relatively direct ordinary sense, by assistant editorial judgment.",
+    "B": "School, culture, geography or less frequent wording; owner familiarity judgment especially important."
+  },
+  "limitations": [
+    "The exact 19 selected senses are approved; all await integration. Active revision 30 remains at 2,306 required approvals and 500 levels.",
+    "The other 11 spellings remain unapproved for required use; the owner did not explicitly exclude them from all gameplay. Do not propose any of these 30 reviewed spellings again as new.",
+    "No boards were generated for these additions. Campaign fit, capacity and repetition benefits remain unmeasured.",
+    "Country names are individually approved; other proper names and origin labels gain no approval.",
+    "All existing spelling, sense, grammar, length, layout, pacing and 75-level-gap rules remain."
+  ],
+  "sourceAttribution": "Georgian explanatory dictionary / Linguistic Technologies Group; NPLG hosted dictionaries; National Bank of Georgia (currency name only); Ministry of Foreign Affairs; Geostat; Sakpatenti. Links and short original/adapted English glosses, no full definitions.",
+  "entries": [
+    {
+      "id": "T13-001",
+      "word": "პომადა",
+      "length": 6,
+      "proposedMeaning": "lipstick",
+      "partOfSpeech": "noun",
+      "category": "home",
+      "familiarityTier": "A",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Owner-approved recorded sense; awaits a future content integration under unchanged policy and campaign rules.",
+      "senseNotes": "Cosmetic product sense only; established dictionary loanword, individually owner-approved.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/პომადა",
+          "checkedVia": "Web source text inspected on 2026-10-26; short adapted meaning, no full dictionary definition reproduced."
+        },
+        {
+          "url": "https://dlab.ug.edu.ge/synonym/detail/14825/პუდრი",
+          "checkedVia": "University dictionary source inspected on 2026-10-26: lists პომადა under lip cosmetics, while explicitly marking several other nearby foreign substitutions as barbarisms."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T13-002",
+      "word": "თამასა",
+      "length": 6,
+      "proposedMeaning": "crossbar; benchmark",
+      "partOfSpeech": "noun",
+      "category": "objects",
+      "familiarityTier": "A",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Owner-approved recorded sense; awaits a future content integration under unchanged policy and campaign rules.",
+      "senseNotes": "Physical crossbar or an established figurative benchmark, not an action form.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/თამასა",
+          "checkedVia": "Web source text inspected on 2026-10-26; short adapted meaning, no full dictionary definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T13-003",
+      "word": "ბაზისი",
+      "length": 6,
+      "proposedMeaning": "basis; foundation",
+      "partOfSpeech": "noun",
+      "category": "ideas",
+      "familiarityTier": "B",
+      "ownerDecision": "unapproved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Not selected in the owner approval list; not approved for required use. This is not an explicit all-gameplay exclusion.",
+      "senseNotes": "Ordinary basis/foundation sense; no specialist geometric sense required.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/ბაზისი",
+          "checkedVia": "Web source text inspected on 2026-10-26; short adapted meaning, no full dictionary definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T13-004",
+      "word": "აპათია",
+      "length": 6,
+      "proposedMeaning": "apathy; lack of interest",
+      "partOfSpeech": "noun",
+      "category": "ideas",
+      "familiarityTier": "B",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Owner-approved recorded sense; awaits a future content integration under unchanged policy and campaign rules.",
+      "senseNotes": "Ordinary lack-of-interest sense; no medical diagnosis is proposed.",
+      "sources": [
+        {
+          "url": "https://www.nplg.gov.ge/gwdict/index.php?a=term&d=3&t=4080",
+          "checkedVia": "Web source text inspected on 2026-10-26; short adapted meaning, no full dictionary definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T13-005",
+      "word": "ამპლუა",
+      "length": 6,
+      "proposedMeaning": "an actor’s characteristic type of role",
+      "partOfSpeech": "noun",
+      "category": "culture",
+      "familiarityTier": "B",
+      "ownerDecision": "unapproved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Not selected in the owner approval list; not approved for required use. This is not an explicit all-gameplay exclusion.",
+      "senseNotes": "Theatrical-role noun; owner should judge familiarity.",
+      "sources": [
+        {
+          "url": "https://www.nplg.gov.ge/gwdict/index.php?a=term&d=3&t=3217",
+          "checkedVia": "Web source text inspected on 2026-10-26; short adapted meaning, no full dictionary definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T13-006",
+      "word": "უტოპია",
+      "length": 6,
+      "proposedMeaning": "unattainable ideal",
+      "partOfSpeech": "noun",
+      "category": "ideas",
+      "familiarityTier": "B",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Owner-approved recorded sense; awaits a future content integration under unchanged policy and campaign rules.",
+      "senseNotes": "Established abstract noun; not a proper title or name.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/უტოპია",
+          "checkedVia": "Web source text inspected on 2026-10-26; short adapted meaning, no full dictionary definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T13-007",
+      "word": "ბაროკო",
+      "length": 6,
+      "proposedMeaning": "Baroque artistic style",
+      "partOfSpeech": "noun",
+      "category": "culture",
+      "familiarityTier": "B",
+      "ownerDecision": "unapproved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Not selected in the owner approval list; not approved for required use. This is not an explicit all-gameplay exclusion.",
+      "senseNotes": "Art/architecture vocabulary; owner familiarity review especially important.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/ბაროკო",
+          "checkedVia": "Web source text inspected on 2026-10-26; short adapted meaning, no full dictionary definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T13-008",
+      "word": "ფიორდი",
+      "length": 6,
+      "proposedMeaning": "fjord; narrow deep sea inlet",
+      "partOfSpeech": "noun",
+      "category": "nature",
+      "familiarityTier": "B",
+      "ownerDecision": "unapproved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Not selected in the owner approval list; not approved for required use. This is not an explicit all-gameplay exclusion.",
+      "senseNotes": "General geography noun; not an individual place name.",
+      "sources": [
+        {
+          "url": "https://www.nplg.gov.ge/gwdict/index.php?a=term&d=40&t=3547",
+          "checkedVia": "Web source text inspected on 2026-10-26; short adapted meaning, no full dictionary definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T13-009",
+      "word": "შარადა",
+      "length": 6,
+      "proposedMeaning": "charade; word-part riddle",
+      "partOfSpeech": "noun",
+      "category": "culture",
+      "familiarityTier": "B",
+      "ownerDecision": "unapproved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Not selected in the owner approval list; not approved for required use. This is not an explicit all-gameplay exclusion.",
+      "senseNotes": "Word-riddle noun, in the sense described by the source.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/შარადა",
+          "checkedVia": "Web source text inspected on 2026-10-26; short adapted meaning, no full dictionary definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T13-010",
+      "word": "ფრანკი",
+      "length": 6,
+      "proposedMeaning": "franc, a currency",
+      "partOfSpeech": "noun",
+      "category": "money",
+      "familiarityTier": "B",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Owner-approved recorded sense; awaits a future content integration under unchanged policy and campaign rules.",
+      "senseNotes": "Currency sense only, attested as შვეიცარიული ფრანკი by NBG. No ethnic/person sense proposed; distinct from removed ფრანგი.",
+      "sources": [
+        {
+          "url": "https://nbg.gov.ge/monetary-policy/currency",
+          "checkedVia": "Web source text inspected on 2026-10-26; short adapted meaning, no full dictionary definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T13-011",
+      "word": "ბადალი",
+      "length": 6,
+      "proposedMeaning": "an equal; a match",
+      "partOfSpeech": "noun",
+      "category": "ideas",
+      "familiarityTier": "A",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Owner-approved recorded sense; awaits a future content integration under unchanged policy and campaign rules.",
+      "senseNotes": "Noun in expressions such as having no equal; the source labels it a noun.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/ბადალი",
+          "checkedVia": "Web source text inspected on 2026-10-26; short adapted meaning, no full dictionary definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T13-012",
+      "word": "გუმანი",
+      "length": 6,
+      "proposedMeaning": "hunch; intuition",
+      "partOfSpeech": "noun",
+      "category": "ideas",
+      "familiarityTier": "B",
+      "ownerDecision": "unapproved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Not selected in the owner approval list; not approved for required use. This is not an explicit all-gameplay exclusion.",
+      "senseNotes": "Established intuition/suspicion noun; owner should judge familiarity.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/გუმანი",
+          "checkedVia": "Web source text inspected on 2026-10-26; short adapted meaning, no full dictionary definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T13-013",
+      "word": "აირადი",
+      "length": 6,
+      "proposedMeaning": "gaseous",
+      "partOfSpeech": "adjective",
+      "category": "school",
+      "familiarityTier": "B",
+      "ownerDecision": "unapproved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Not selected in the owner approval list; not approved for required use. This is not an explicit all-gameplay exclusion.",
+      "senseNotes": "Descriptive physical-state adjective; dictionary explicitly labels it adjective.",
+      "sources": [
+        {
+          "url": "https://www.nplg.gov.ge/gwdict/index.php?a=term&d=46&t=5297",
+          "checkedVia": "Web source text inspected on 2026-10-26; short adapted meaning, no full dictionary definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T13-014",
+      "word": "ანკარა",
+      "length": 6,
+      "proposedMeaning": "clear; pure, of water",
+      "partOfSpeech": "adjective",
+      "category": "nature",
+      "familiarityTier": "B",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Owner-approved recorded sense; awaits a future content integration under unchanged policy and campaign rules.",
+      "senseNotes": "Ordinary clear-water sense only, supported by a literary example in the synonym dictionary. Not the city Ankara.",
+      "sources": [
+        {
+          "url": "https://www.nplg.gov.ge/gwdict/index.php?a=term&d=17&t=3872",
+          "checkedVia": "Web source text inspected on 2026-10-26; short adapted meaning, no full dictionary definition reproduced."
+        }
+      ],
+      "sourceSenseNote": "The cited synonym entry also lists other synonyms; only its clear/pure-water sense and example were used.",
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T13-015",
+      "word": "უხმარი",
+      "length": 6,
+      "proposedMeaning": "unused",
+      "partOfSpeech": "adjective",
+      "category": "qualities",
+      "familiarityTier": "A",
+      "ownerDecision": "unapproved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Not selected in the owner approval list; not approved for required use. This is not an explicit all-gameplay exclusion.",
+      "senseNotes": "The source labels it a participial adjective meaning not yet used; no conjugated verb or action noun proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/უხმარი",
+          "checkedVia": "Web source text inspected on 2026-10-26; short adapted meaning, no full dictionary definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T13-016",
+      "word": "უჰაერო",
+      "length": 6,
+      "proposedMeaning": "airless",
+      "partOfSpeech": "adjective",
+      "category": "qualities",
+      "familiarityTier": "A",
+      "ownerDecision": "unapproved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Not selected in the owner approval list; not approved for required use. This is not an explicit all-gameplay exclusion.",
+      "senseNotes": "Descriptive adjective for an airless space.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/უჰაერო",
+          "checkedVia": "Web source text inspected on 2026-10-26; short adapted meaning, no full dictionary definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T13-017",
+      "word": "ბეჩავი",
+      "length": 6,
+      "proposedMeaning": "pitiful; downtrodden",
+      "partOfSpeech": "adjective",
+      "category": "qualities",
+      "familiarityTier": "B",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Owner-approved recorded sense; awaits a future content integration under unchanged policy and campaign rules.",
+      "senseNotes": "Descriptive adjective; owner familiarity review required.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/ბეჩავი",
+          "checkedVia": "Web source text inspected on 2026-10-26; short adapted meaning, no full dictionary definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T13-018",
+      "word": "კაპასი",
+      "length": 6,
+      "proposedMeaning": "quarrelsome; very ill-tempered",
+      "partOfSpeech": "adjective",
+      "category": "qualities",
+      "familiarityTier": "B",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Owner-approved recorded sense; awaits a future content integration under unchanged policy and campaign rules.",
+      "senseNotes": "Descriptive character adjective; owner familiarity review required.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/კაპასი",
+          "checkedVia": "Web source text inspected on 2026-10-26; short adapted meaning, no full dictionary definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T13-019",
+      "word": "პიტალო",
+      "length": 6,
+      "proposedMeaning": "bare; without vegetation, of rock",
+      "partOfSpeech": "adjective",
+      "category": "nature",
+      "familiarityTier": "B",
+      "ownerDecision": "unapproved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Not selected in the owner approval list; not approved for required use. This is not an explicit all-gameplay exclusion.",
+      "senseNotes": "The literal bare-rock sense only; no insulting colloquial sense proposed.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/პიტალო",
+          "checkedVia": "Web source text inspected on 2026-10-26; short adapted meaning, no full dictionary definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T13-020",
+      "word": "უდიერი",
+      "length": 6,
+      "proposedMeaning": "rude; disrespectful",
+      "partOfSpeech": "adjective",
+      "category": "qualities",
+      "familiarityTier": "B",
+      "ownerDecision": "unapproved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Not selected in the owner approval list; not approved for required use. This is not an explicit all-gameplay exclusion.",
+      "senseNotes": "Supported as an explanatory synonym of უხეში. Do not substitute an unsupported neglectful/careless gloss.",
+      "sources": [
+        {
+          "url": "https://www.nplg.gov.ge/gwdict/index.php?a=term&d=14&t=146849",
+          "checkedVia": "Web source text inspected on 2026-10-26; short adapted meaning, no full dictionary definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T13-021",
+      "word": "ალჟირი",
+      "length": 6,
+      "proposedMeaning": "Algeria",
+      "partOfSpeech": "proper-noun",
+      "category": "country",
+      "familiarityTier": "B",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Owner-approved recorded sense; awaits a future content integration under unchanged policy and campaign rules.",
+      "senseNotes": "Country-name sense only; individually approved under the existing country-name review exception. No nationality, ethnicity, regional-person label, capital or broader proper-name permission is proposed.",
+      "sources": [
+        {
+          "url": "https://mfa.gov.ge/bilateral-relations/dz",
+          "checkedVia": "Web source text inspected on 2026-10-26; short adapted meaning, no full dictionary definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T13-022",
+      "word": "კატარი",
+      "length": 6,
+      "proposedMeaning": "Qatar",
+      "partOfSpeech": "proper-noun",
+      "category": "country",
+      "familiarityTier": "B",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Owner-approved recorded sense; awaits a future content integration under unchanged policy and campaign rules.",
+      "senseNotes": "Country-name sense only. The owner approved the exact MFA spelling კატარი shown in batch 13. Geostat also records ყატარი; that alternate spelling is not independently approved.",
+      "sources": [
+        {
+          "url": "https://mfa.gov.ge/bilateral-relations/qa",
+          "checkedVia": "Web source text inspected on 2026-10-26; short adapted meaning, no full dictionary definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T13-023",
+      "word": "კენია",
+      "length": 5,
+      "proposedMeaning": "Kenya",
+      "partOfSpeech": "proper-noun",
+      "category": "country",
+      "familiarityTier": "B",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Owner-approved recorded sense; awaits a future content integration under unchanged policy and campaign rules.",
+      "senseNotes": "Country-name sense only; individually approved under the existing country-name review exception. No nationality, ethnicity, regional-person label, capital or broader proper-name permission is proposed.",
+      "sources": [
+        {
+          "url": "https://mfa.gov.ge/bilateral-relations/ke",
+          "checkedVia": "Web source text inspected on 2026-10-26; short adapted meaning, no full dictionary definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T13-024",
+      "word": "ლატვია",
+      "length": 6,
+      "proposedMeaning": "Latvia",
+      "partOfSpeech": "proper-noun",
+      "category": "country",
+      "familiarityTier": "B",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Owner-approved recorded sense; awaits a future content integration under unchanged policy and campaign rules.",
+      "senseNotes": "Country-name sense only; individually approved under the existing country-name review exception. No nationality, ethnicity, regional-person label, capital or broader proper-name permission is proposed.",
+      "sources": [
+        {
+          "url": "https://mfa.gov.ge/bilateral-relations/lv",
+          "checkedVia": "Web source text inspected on 2026-10-26; short adapted meaning, no full dictionary definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T13-025",
+      "word": "ლიბია",
+      "length": 5,
+      "proposedMeaning": "Libya",
+      "partOfSpeech": "proper-noun",
+      "category": "country",
+      "familiarityTier": "B",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Owner-approved recorded sense; awaits a future content integration under unchanged policy and campaign rules.",
+      "senseNotes": "Country-name sense only; individually approved under the existing country-name review exception. No nationality, ethnicity, regional-person label, capital or broader proper-name permission is proposed.",
+      "sources": [
+        {
+          "url": "https://www.geostat.ge/media/55082/Countries-and-Territories_2023.pdf#page=10",
+          "checkedVia": "Web source text inspected on 2026-10-26; short adapted meaning, no full dictionary definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T13-026",
+      "word": "ლაოსი",
+      "length": 5,
+      "proposedMeaning": "Laos",
+      "partOfSpeech": "proper-noun",
+      "category": "country",
+      "familiarityTier": "B",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Owner-approved recorded sense; awaits a future content integration under unchanged policy and campaign rules.",
+      "senseNotes": "Country-name sense only; individually approved under the existing country-name review exception. No nationality, ethnicity, regional-person label, capital or broader proper-name permission is proposed.",
+      "sources": [
+        {
+          "url": "https://sakpatenti.org.ge/media/publication_pdf/BL142025.pdf",
+          "checkedVia": "Web source text inspected on 2026-10-26; short adapted meaning, no full dictionary definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T13-027",
+      "word": "პანამა",
+      "length": 6,
+      "proposedMeaning": "Panama",
+      "partOfSpeech": "proper-noun",
+      "category": "country",
+      "familiarityTier": "B",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Owner-approved recorded sense; awaits a future content integration under unchanged policy and campaign rules.",
+      "senseNotes": "Country-name sense only; individually approved under the existing country-name review exception. No nationality, ethnicity, regional-person label, capital or broader proper-name permission is proposed.",
+      "sources": [
+        {
+          "url": "https://www.geostat.ge/media/55082/Countries-and-Territories_2023.pdf#page=12",
+          "checkedVia": "Web source text inspected on 2026-10-26; short adapted meaning, no full dictionary definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T13-028",
+      "word": "სუდანი",
+      "length": 6,
+      "proposedMeaning": "Sudan",
+      "partOfSpeech": "proper-noun",
+      "category": "country",
+      "familiarityTier": "B",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Owner-approved recorded sense; awaits a future content integration under unchanged policy and campaign rules.",
+      "senseNotes": "Country-name sense only; individually approved under the existing country-name review exception. No nationality, ethnicity, regional-person label, capital or broader proper-name permission is proposed.",
+      "sources": [
+        {
+          "url": "https://mfa.gov.ge/bilateral-relations/sd",
+          "checkedVia": "Web source text inspected on 2026-10-26; short adapted meaning, no full dictionary definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T13-029",
+      "word": "უგანდა",
+      "length": 6,
+      "proposedMeaning": "Uganda",
+      "partOfSpeech": "proper-noun",
+      "category": "country",
+      "familiarityTier": "B",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Owner-approved recorded sense; awaits a future content integration under unchanged policy and campaign rules.",
+      "senseNotes": "Country-name sense only; individually approved under the existing country-name review exception. No nationality, ethnicity, regional-person label, capital or broader proper-name permission is proposed.",
+      "sources": [
+        {
+          "url": "https://mfa.gov.ge/bilateral-relations/ug",
+          "checkedVia": "Web source text inspected on 2026-10-26; short adapted meaning, no full dictionary definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T13-030",
+      "word": "ზამბია",
+      "length": 6,
+      "proposedMeaning": "Zambia",
+      "partOfSpeech": "proper-noun",
+      "category": "country",
+      "familiarityTier": "B",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Owner-approved recorded sense; awaits a future content integration under unchanged policy and campaign rules.",
+      "senseNotes": "Country-name sense only; individually approved under the existing country-name review exception. No nationality, ethnicity, regional-person label, capital or broader proper-name permission is proposed.",
+      "sources": [
+        {
+          "url": "https://mfa.gov.ge/bilateral-relations/zm",
+          "checkedVia": "Web source text inspected on 2026-10-26; short adapted meaning, no full dictionary definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    }
+  ],
+  "productionBaselineSha256": {
+    "content/dictionaries/discovery-v30-ka.json": "4c354d592cb6c3574ff23caa80d5e261e1f000394064b30700c9bf1165c3148d",
+    "content/dictionaries/everyday-targets-v30.json": "8bde23f6920e4fac245ec804ad2d84a101796f13a789715573a3774174f5d3ac",
+    "content/levels/discovery.v30.review.json": "36c4646dbf208f67c1b875ce4a78beeb89686e975ece44cc93f9ce9fb3f548cd",
+    "content/levels/discovery.v30.json": "aa06da11c1eabdaa6adad84c63c258cb76f9120832c02acf1f6c692aae74176f",
+    "content/levels/discovery.v30.recipes.json": "ae4b2885821c3e96132225620cbab14fff8809823214cef504e8dfc32826113c",
+    "content/dictionaries/word-policy.json": "482c910fdd5dd69748dbedff478a929745356c1e2ece72b1efc7d06db9fe9d78",
+    "mobile/src/content/catalog.ts": "b9c623099936a6fe139d738815cbdaa38ae0d30f19abbe3f7acb3780b8602f56"
+  },
+  "ownerReviewedAt": "2026-10-26",
+  "approvedCount": 19,
+  "unapprovedCount": 11,
+  "approvedWords": [
+    "ალჟირი",
+    "ანკარა",
+    "აპათია",
+    "ბადალი",
+    "ბეჩავი",
+    "ზამბია",
+    "თამასა",
+    "კაპასი",
+    "კატარი",
+    "კენია",
+    "ლაოსი",
+    "ლატვია",
+    "ლიბია",
+    "პანამა",
+    "პომადა",
+    "სუდანი",
+    "უგანდა",
+    "უტოპია",
+    "ფრანკი"
+  ],
+  "totalApprovedPoolAfterReview": 2325,
+  "pendingIntegrationCount": 19
+}

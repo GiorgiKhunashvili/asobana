@@ -1,0 +1,17 @@
+{
+  "revision": 31,
+  "draftSha256": "8dd65b596ad3266c7c39e4d61390232e7ce8a450ff120a891a22f7f3c4fc660a",
+  "reviewedAt": "2026-10-26",
+  "reviewer": "Codex assistant policy and all-board audit following the owner’s exact three-word removal decision",
+  "scope": "All 2,500 required slots and accepted variants inspected against the 2,303 retained approvals; all bonuses recomputed from 2,421 eligible spellings. Only levels 9, 126 and 242 change required boards; all 497 other required boards are unchanged. Retained 500 levels, 100 stops, stable IDs, 75-level gaps, length progression, pacing and bounded layouts. Unique wheels, no reused answer triples, no more than five shared wheel tiles within ten levels, and five grid patterns per stop checked separately. The other 36 form-audit words retain their prior approvals. Pending batches are not integrated. No native-device playtest or release upload.",
+  "removedWords": [
+    "მოგრძო",
+    "უკვალო",
+    "უკუდო"
+  ],
+  "changedRequiredLevels": [
+    9,
+    126,
+    242
+  ]
+}

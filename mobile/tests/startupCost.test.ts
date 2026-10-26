@@ -31,9 +31,9 @@ test('launch parses only the current pack and skips the release gates', () => {
   expect(parsed).toEqual([catalog.catalog.revision]);
   // Asking for the historical packs parses them once, on demand.
   const previous = catalog.previousCatalogs();
-  expect(previous).toHaveLength(28);
+  expect(previous).toHaveLength(30);
   expect(catalog.previousCatalogs()).toBe(previous);
-  expect(parsed).toHaveLength(29);
+  expect(parsed).toHaveLength(31);
 });
 
 test("Android's splash is the mark alone, at the loading view's size", () => {

@@ -1,0 +1,450 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-26",
+  "status": "owner-reviewed-partial-approval",
+  "activeRevisionUnchanged": 30,
+  "activeApprovedPool": 2306,
+  "totalApprovedPoolBeforeReview": 2325,
+  "pendingIntegrationBeforeReview": 19,
+  "candidateCount": 20,
+  "countsByLength": {
+    "4": 4,
+    "5": 7,
+    "6": 9
+  },
+  "countsByCategory": {
+    "food": 6,
+    "nature": 1,
+    "qualities": 3,
+    "money": 4,
+    "country": 6
+  },
+  "previouslyRecordedSpellings": 8758,
+  "previousReviewOverlap": 0,
+  "ownerSelectedScope": "Smaller batches of genuinely new 3–6-letter words; no obscure filler to reach 100.",
+  "method": "Exact-spelling deduplication against all content JSON and VOCABULARY review JSON/text, including rejected, skipped and unselected candidates. Individually checked proposed senses against linked sources.",
+  "limitations": [
+    "The exact eight selected senses are approved and await integration; the active revision 30 remains unchanged.",
+    "The other 12 remain unapproved for required use, without an explicit all-gameplay exclusion. Do not propose any of the 20 spellings again as new.",
+    "No boards, campaign capacity or repetition benefits have been validated.",
+    "Preserve recorded senses: currency names, toasted bread, snack, pastry and Republic of the Congo; no broader proper-name or grammatical exceptions."
+  ],
+  "entries": [
+    {
+      "id": "T14-001",
+      "word": "ჩიფსი",
+      "length": 5,
+      "proposedMeaning": "potato chips",
+      "partOfSpeech": "noun",
+      "category": "food",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Owner-approved recorded sense; awaits a future content integration under unchanged policy and campaign rules.",
+      "senseNotes": "Georgian dictionary lemma for the snack, not a Georgian plural form. The university dictionary and NPLG school orthographic dictionary record this spelling.",
+      "sources": [
+        {
+          "url": "https://dlab.ug.edu.ge/synonym/detail/18830/ჩიფსი",
+          "checkedVia": "Primary dictionary or official Georgian naming source inspected on 2026-10-26; short adapted gloss, no full definition reproduced."
+        },
+        {
+          "url": "https://www.nplg.gov.ge/saskolo/index.php?a=list&d=42&p=30&w1=ჩ",
+          "checkedVia": "School orthographic dictionary lists ჩიფსი and its dative ჩიფსს."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T14-002",
+      "word": "ტოსტი",
+      "length": 5,
+      "proposedMeaning": "toast; toasted bread",
+      "partOfSpeech": "noun",
+      "category": "food",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Owner-approved recorded sense; awaits a future content integration under unchanged policy and campaign rules.",
+      "senseNotes": "Bread sense only, not a spoken toast. The dictionary labels this newer usage; owner approved this sense.",
+      "sources": [
+        {
+          "url": "https://dlab.ug.edu.ge/synonym/detail/26841/ბლითი",
+          "checkedVia": "Primary dictionary or official Georgian naming source inspected on 2026-10-26; short adapted gloss, no full definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T14-003",
+      "word": "დონატი",
+      "length": 6,
+      "proposedMeaning": "doughnut",
+      "partOfSpeech": "noun",
+      "category": "food",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Owner-approved recorded sense; awaits a future content integration under unchanged policy and campaign rules.",
+      "senseNotes": "Fried pastry sense; dictionary culinary register does not by itself establish rarity or everyday suitability.",
+      "sources": [
+        {
+          "url": "https://dlab.ug.edu.ge/synonym/detail/27198/დონატი",
+          "checkedVia": "Primary dictionary or official Georgian naming source inspected on 2026-10-26; short adapted gloss, no full definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T14-004",
+      "word": "გალეტი",
+      "length": 6,
+      "proposedMeaning": "biscuit; cracker",
+      "partOfSpeech": "noun",
+      "category": "food",
+      "ownerDecision": "unapproved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "senseNotes": "Biscuit sense: university dictionary places it among baked snacks; a primary food-production project separately calls it an ორცხობილა. Familiarity needs owner judgment.",
+      "sources": [
+        {
+          "url": "https://dlab.ug.edu.ge/synonym/detail/30697/გალეტი",
+          "checkedVia": "Primary dictionary or official Georgian naming source inspected on 2026-10-26; short adapted gloss, no full definition reproduced."
+        },
+        {
+          "url": "https://innosystems.ge/pilot-projects/324/",
+          "checkedVia": "Food-production engineering project describes making გალეტის ორცხობილა for Barambo; supports biscuit sense."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T14-005",
+      "word": "ტარტი",
+      "length": 5,
+      "proposedMeaning": "tart; pastry",
+      "partOfSpeech": "noun",
+      "category": "food",
+      "ownerDecision": "unapproved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "senseNotes": "Pastry sense. University dictionary attests it among pastries; a bakery menu also uses it for a cream-and-berry tart. No detailed recipe definition is inferred from a cohyponym list.",
+      "sources": [
+        {
+          "url": "https://dlab.ug.edu.ge/synonym/detail/34136/ტარტი",
+          "checkedVia": "Primary dictionary or official Georgian naming source inspected on 2026-10-26; short adapted gloss, no full definition reproduced."
+        },
+        {
+          "url": "https://glovoapp.com/ka/ge/tbilisi/stores/firini-tbi",
+          "checkedVia": "Bakery menu offers ტარტი ნაღებით და კენკრით; supports pastry sense and contemporary usage, not automatic language-policy approval."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T14-006",
+      "word": "მაჭარი",
+      "length": 6,
+      "proposedMeaning": "young wine, not fully fermented",
+      "partOfSpeech": "noun",
+      "category": "food",
+      "ownerDecision": "unapproved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "senseNotes": "Ordinary Georgian young-wine sense; not a verb.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/მაჭარი",
+          "checkedVia": "Primary dictionary or official Georgian naming source inspected on 2026-10-26; short adapted gloss, no full definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T14-007",
+      "word": "ზეგანი",
+      "length": 6,
+      "proposedMeaning": "plateau; elevated flat land",
+      "partOfSpeech": "noun",
+      "category": "nature",
+      "ownerDecision": "unapproved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "senseNotes": "Geographic landform sense; familiarity should be judged separately from dictionary attestation.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/ზეგანი",
+          "checkedVia": "Primary dictionary or official Georgian naming source inspected on 2026-10-26; short adapted gloss, no full definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T14-008",
+      "word": "მეფური",
+      "length": 6,
+      "proposedMeaning": "royal; kingly",
+      "partOfSpeech": "adjective",
+      "category": "qualities",
+      "ownerDecision": "unapproved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "senseNotes": "Adjective describing something characteristic of or suitable for a king; not a personal name or origin label.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/მეფური",
+          "checkedVia": "Primary dictionary or official Georgian naming source inspected on 2026-10-26; short adapted gloss, no full definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T14-009",
+      "word": "შემძლე",
+      "length": 6,
+      "proposedMeaning": "capable; able",
+      "partOfSpeech": "adjective",
+      "category": "qualities",
+      "ownerDecision": "unapproved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "senseNotes": "Dictionary labels it an adjective (participle); proposed as a descriptive quality, not a conjugated verb or action noun.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/შემძლე",
+          "checkedVia": "Primary dictionary or official Georgian naming source inspected on 2026-10-26; short adapted gloss, no full definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T14-010",
+      "word": "ხმიანი",
+      "length": 6,
+      "proposedMeaning": "having a strong voice; resonant",
+      "partOfSpeech": "adjective",
+      "category": "qualities",
+      "ownerDecision": "unapproved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "senseNotes": "Source sense is having a good or strong voice, including an instrument; do not substitute a generic noisy sense.",
+      "sources": [
+        {
+          "url": "https://www.ganmarteba.ge/word/ხმიანი",
+          "checkedVia": "Primary dictionary or official Georgian naming source inspected on 2026-10-26; short adapted gloss, no full definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T14-011",
+      "word": "კრონა",
+      "length": 5,
+      "proposedMeaning": "Czech koruna; currency",
+      "partOfSpeech": "noun",
+      "category": "money",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Owner-approved recorded sense; awaits a future content integration under unchanged policy and campaign rules.",
+      "senseNotes": "Exact National Bank spelling ჩეხური კრონა; this does not approve other crown-currency spellings.",
+      "sources": [
+        {
+          "url": "https://nbg.gov.ge/monetary-policy/currency",
+          "checkedVia": "Primary dictionary or official Georgian naming source inspected on 2026-10-26; short adapted gloss, no full definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T14-012",
+      "word": "რიალი",
+      "length": 5,
+      "proposedMeaning": "rial; currency",
+      "partOfSpeech": "noun",
+      "category": "money",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Owner-approved recorded sense; awaits a future content integration under unchanged policy and campaign rules.",
+      "senseNotes": "Iranian or Qatari rial sense; spelling attested by the National Bank. No financial rate claim.",
+      "sources": [
+        {
+          "url": "https://nbg.gov.ge/monetary-policy/currency",
+          "checkedVia": "Primary dictionary or official Georgian naming source inspected on 2026-10-26; short adapted gloss, no full definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T14-013",
+      "word": "პესო",
+      "length": 4,
+      "proposedMeaning": "peso; currency",
+      "partOfSpeech": "noun",
+      "category": "money",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Owner-approved recorded sense; awaits a future content integration under unchanged policy and campaign rules.",
+      "senseNotes": "Modern currency sense only, not a historical Spanish gold-coin requirement.",
+      "sources": [
+        {
+          "url": "https://dlab.ug.edu.ge/synonym/detail/19555/პესო",
+          "checkedVia": "Primary dictionary or official Georgian naming source inspected on 2026-10-26; short adapted gloss, no full definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T14-014",
+      "word": "პენი",
+      "length": 4,
+      "proposedMeaning": "penny; British small coin",
+      "partOfSpeech": "noun",
+      "category": "money",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Owner-approved recorded sense; awaits a future content integration under unchanged policy and campaign rules.",
+      "senseNotes": "Coin sense only, not a surname/person. Source includes historical fractions, which are not proposed here.",
+      "sources": [
+        {
+          "url": "https://www.nplg.gov.ge/greenstone3/library/collection/dictiona/document/HASH012dfd293cc739c554e5a20c?ed=1",
+          "checkedVia": "Primary dictionary or official Georgian naming source inspected on 2026-10-26; short adapted gloss, no full definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T14-015",
+      "word": "ანგოლა",
+      "length": 6,
+      "proposedMeaning": "Angola",
+      "partOfSpeech": "proper-noun",
+      "category": "country",
+      "ownerDecision": "unapproved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "senseNotes": "Country-name sense only.",
+      "sources": [
+        {
+          "url": "https://mfa.gov.ge/bilateral-relations/ao",
+          "checkedVia": "Primary dictionary or official Georgian naming source inspected on 2026-10-26; short adapted gloss, no full definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T14-016",
+      "word": "იემენი",
+      "length": 6,
+      "proposedMeaning": "Yemen",
+      "partOfSpeech": "proper-noun",
+      "category": "country",
+      "ownerDecision": "unapproved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "senseNotes": "Country-name sense only.",
+      "sources": [
+        {
+          "url": "https://mfa.gov.ge/bilateral-relations/ye",
+          "checkedVia": "Primary dictionary or official Georgian naming source inspected on 2026-10-26; short adapted gloss, no full definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T14-017",
+      "word": "კონგო",
+      "length": 5,
+      "proposedMeaning": "Republic of the Congo",
+      "partOfSpeech": "proper-noun",
+      "category": "country",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Owner-approved recorded sense; awaits a future content integration under unchanged policy and campaign rules.",
+      "senseNotes": "Republic of the Congo country-name sense, not the river or a separate blanket approval for other proper names.",
+      "sources": [
+        {
+          "url": "https://mfa.gov.ge/bilateral-relations/cg",
+          "checkedVia": "Primary dictionary or official Georgian naming source inspected on 2026-10-26; short adapted gloss, no full definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T14-018",
+      "word": "მალი",
+      "length": 4,
+      "proposedMeaning": "Mali",
+      "partOfSpeech": "proper-noun",
+      "category": "country",
+      "ownerDecision": "unapproved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "senseNotes": "Country-name sense only; Geostat ISO ML / MLI / 466.",
+      "sources": [
+        {
+          "url": "https://www.geostat.ge/media/55082/Countries-and-Territories_2023.pdf#page=11",
+          "checkedVia": "Primary dictionary or official Georgian naming source inspected on 2026-10-26; short adapted gloss, no full definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T14-019",
+      "word": "ჰაიტი",
+      "length": 5,
+      "proposedMeaning": "Haiti",
+      "partOfSpeech": "proper-noun",
+      "category": "country",
+      "ownerDecision": "unapproved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "senseNotes": "Country-name sense only; Geostat ISO HT / HTI / 332.",
+      "sources": [
+        {
+          "url": "https://www.geostat.ge/media/55082/Countries-and-Territories_2023.pdf#page=16",
+          "checkedVia": "Primary dictionary or official Georgian naming source inspected on 2026-10-26; short adapted gloss, no full definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T14-020",
+      "word": "განა",
+      "length": 4,
+      "proposedMeaning": "Ghana",
+      "partOfSpeech": "proper-noun",
+      "category": "country",
+      "ownerDecision": "unapproved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "senseNotes": "Country-name sense only, not the homographic interrogative particle; Geostat ISO GH / GHA / 288.",
+      "sources": [
+        {
+          "url": "https://www.geostat.ge/media/55082/Countries-and-Territories_2023.pdf#page=7",
+          "checkedVia": "Primary dictionary or official Georgian naming source inspected on 2026-10-26; short adapted gloss, no full definition reproduced."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    }
+  ],
+  "productionBaselineSha256": {
+    "content/dictionaries/discovery-v30-ka.json": "4c354d592cb6c3574ff23caa80d5e261e1f000394064b30700c9bf1165c3148d",
+    "content/dictionaries/everyday-targets-v30.json": "8bde23f6920e4fac245ec804ad2d84a101796f13a789715573a3774174f5d3ac",
+    "content/levels/discovery.v30.review.json": "36c4646dbf208f67c1b875ce4a78beeb89686e975ece44cc93f9ce9fb3f548cd",
+    "content/levels/discovery.v30.json": "aa06da11c1eabdaa6adad84c63c258cb76f9120832c02acf1f6c692aae74176f",
+    "content/levels/discovery.v30.recipes.json": "ae4b2885821c3e96132225620cbab14fff8809823214cef504e8dfc32826113c",
+    "content/dictionaries/word-policy.json": "482c910fdd5dd69748dbedff478a929745356c1e2ece72b1efc7d06db9fe9d78",
+    "mobile/src/content/catalog.ts": "b9c623099936a6fe139d738815cbdaa38ae0d30f19abbe3f7acb3780b8602f56"
+  },
+  "ownerReviewedAt": "2026-10-26",
+  "approvedCount": 8,
+  "unapprovedCount": 12,
+  "approvedWords": [
+    "დონატი",
+    "კონგო",
+    "კრონა",
+    "პენი",
+    "პესო",
+    "რიალი",
+    "ტოსტი",
+    "ჩიფსი"
+  ],
+  "totalApprovedPoolAfterReview": 2333,
+  "pendingIntegrationCount": 27
+}

@@ -1,5 +1,5 @@
 import batch from '../../docs/VOCABULARY_EXPANSION_BATCH_07.json';
-import manifest from '../../content/levels/discovery.v29.recipes.json';
+import manifest from '../../content/levels/discovery.v31.recipes.json';
 import {
   catalog,
   previousCatalogs,
@@ -155,7 +155,7 @@ test.each(['partial', 'complete'] as const)(
       await createSqliteRepository(db, previous).save(old, 0);
       const repo = createSqliteRepository(db, catalog, previousCatalogs());
       const upgraded = (await repo.load())!;
-      expect(upgraded.state.contentRevision).toBe(29);
+      expect(upgraded.state.contentRevision).toBe(31);
       expect(upgraded.state.progress['ka-001']!.hintsUsed).toBe(1628);
       expect(upgraded.state.coins).toBe(old.coins);
       expect(upgraded.state.currentLevelId).toBe(old.currentLevelId);

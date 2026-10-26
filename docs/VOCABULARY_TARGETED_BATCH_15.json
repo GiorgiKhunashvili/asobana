@@ -1,0 +1,251 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-26",
+  "status": "owner-reviewed-partial-approval",
+  "activeRevisionUnchanged": 30,
+  "activeApprovedPool": 2306,
+  "totalApprovedPoolBeforeReview": 2333,
+  "pendingIntegrationBeforeReview": 27,
+  "candidateCount": 10,
+  "countsByLength": {
+    "4": 2,
+    "5": 3,
+    "6": 5
+  },
+  "countsByCategory": {
+    "pastry": 2,
+    "drink": 2,
+    "dish": 2,
+    "condiment": 1,
+    "cheese": 3
+  },
+  "previouslyRecordedSpellings": 8778,
+  "previousReviewOverlap": 0,
+  "ownerSelectedScope": "More familiar food words like ჩიფსი, ტოსტი and დონატი, within existing 3–6-letter rules.",
+  "method": "Exact-spelling deduplication against all content JSON and all VOCABULARY review JSON/text, including approved, rejected, unselected and skipped spellings. Reviewed dictionary and official Georgian food-name sources individually; no menu-only shortened spellings were used.",
+  "limitations": [
+    "The exact six selected food/drink senses are approved and await integration. Active revision 30 remains unchanged.",
+    "The other four spellings remain unapproved for required use, without an explicit all-gameplay exclusion. Do not propose any of the ten reviewed spellings again as new.",
+    "Existing barbarism, plural, grammar, length and campaign rules remain in force.",
+    "No candidate boards, repetition benefits or capacity gains have been validated."
+  ],
+  "entries": [
+    {
+      "id": "T15-001",
+      "word": "ეკლერი",
+      "length": 6,
+      "proposedMeaning": "éclair pastry",
+      "partOfSpeech": "noun",
+      "category": "pastry",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Owner-approved recorded food/drink sense; awaits integration under unchanged policy and campaign rules.",
+      "senseNotes": "University dictionary lists ეკლერი as a type of pastry. The proposed sense is the food, not the homographic publication name.",
+      "sources": [
+        {
+          "url": "https://dlab.ug.edu.ge/synonym/detail/3242",
+          "checkedVia": "Dictionary entry, official source text or indexed source excerpt inspected on 2026-10-26. Attestation is evidence for spelling/sense, not automatic everyday suitability."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T15-002",
+      "word": "კრეპი",
+      "length": 5,
+      "proposedMeaning": "crêpe; thin pancake",
+      "partOfSpeech": "noun",
+      "category": "pastry",
+      "ownerDecision": "unapproved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "senseNotes": "University dictionary defines the food made with eggs, flour and milk; it marks several English pancake substitutions elsewhere as barbarisms but not this culinary name.",
+      "sources": [
+        {
+          "url": "https://dlab.ug.edu.ge/synonym/detail/25434/კრეპი",
+          "checkedVia": "Dictionary entry, official source text or indexed source excerpt inspected on 2026-10-26. Attestation is evidence for spelling/sense, not automatic everyday suitability."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T15-003",
+      "word": "ლატე",
+      "length": 4,
+      "proposedMeaning": "latte; coffee with milk",
+      "partOfSpeech": "noun",
+      "category": "drink",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Owner-approved recorded food/drink sense; awaits integration under unchanged policy and campaign rules.",
+      "senseNotes": "University dictionary records ლატე as a type of coffee; a Georgian coffee guide separately describes the milk-and-espresso drink. Food/drink sense only.",
+      "sources": [
+        {
+          "url": "https://dlab.ug.edu.ge/synonym/detail/1165/ყავა",
+          "checkedVia": "Dictionary entry, official source text or indexed source excerpt inspected on 2026-10-26. Attestation is evidence for spelling/sense, not automatic everyday suitability."
+        },
+        {
+          "url": "https://dspace.nplg.gov.ge/bitstream/1234/209363/1/Voyager_By_Solo_2016_N3_ITALY.pdf",
+          "checkedVia": "Georgian coffee guide lists ლატე and describes milk with espresso; no quantities or health claims used."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T15-004",
+      "word": "სმუზი",
+      "length": 5,
+      "proposedMeaning": "smoothie; blended fruit drink",
+      "partOfSpeech": "noun",
+      "category": "drink",
+      "ownerDecision": "unapproved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "senseNotes": "Official Georgian goods classification 320050 translates smoothies as სმუზი and describes the fruit/vegetable drink. Independent Georgian noun spelling, not a Georgian plural.",
+      "sources": [
+        {
+          "url": "https://www.sakpatenti.gov.ge/media/page_files/3.List_of_Nice_Classification_goods.docx.pdf",
+          "checkedVia": "Dictionary entry, official source text or indexed source excerpt inspected on 2026-10-26. Attestation is evidence for spelling/sense, not automatic everyday suitability."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T15-005",
+      "word": "ტაკო",
+      "length": 4,
+      "proposedMeaning": "taco; filled tortilla",
+      "partOfSpeech": "noun",
+      "category": "dish",
+      "ownerDecision": "unapproved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "senseNotes": "Dictionary.ge explicitly records ტაკო and describes the Mexican filled-tortilla dish. Other sources use ტაქოსი; only the dictionary-backed exact spelling ტაკო is proposed, with no automatic variant approval.",
+      "sources": [
+        {
+          "url": "https://dictionary.ge/en/word/taco/",
+          "checkedVia": "Dictionary entry, official source text or indexed source excerpt inspected on 2026-10-26. Attestation is evidence for spelling/sense, not automatic everyday suitability."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T15-006",
+      "word": "რამენი",
+      "length": 6,
+      "proposedMeaning": "ramen; Japanese noodle dish",
+      "partOfSpeech": "noun",
+      "category": "dish",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Owner-approved recorded food/drink sense; awaits integration under unchanged policy and campaign rules.",
+      "senseNotes": "Official Georgian classification 300234 records this exact spelling with the Japanese noodle-dish meaning; a food name, not an origin/person label.",
+      "sources": [
+        {
+          "url": "https://www.sakpatenti.gov.ge/media/page_files/1-NIC_CLASS_list_by_alphabet__NEW.pdf",
+          "checkedVia": "Dictionary entry, official source text or indexed source excerpt inspected on 2026-10-26. Attestation is evidence for spelling/sense, not automatic everyday suitability."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T15-007",
+      "word": "ვასაბი",
+      "length": 6,
+      "proposedMeaning": "wasabi; spicy condiment",
+      "partOfSpeech": "noun",
+      "category": "condiment",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Owner-approved recorded food/drink sense; awaits integration under unchanged policy and campaign rules.",
+      "senseNotes": "Dictionary.ge records both the plant and culinary condiment. Propose only the familiar condiment sense here.",
+      "sources": [
+        {
+          "url": "https://dictionary.ge/ka/word/wasabi/?h=რა",
+          "checkedVia": "Dictionary entry, official source text or indexed source excerpt inspected on 2026-10-26. Attestation is evidence for spelling/sense, not automatic everyday suitability."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T15-008",
+      "word": "ჩედარი",
+      "length": 6,
+      "proposedMeaning": "cheddar cheese",
+      "partOfSpeech": "noun",
+      "category": "cheese",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Owner-approved recorded food/drink sense; awaits integration under unchanged policy and campaign rules.",
+      "senseNotes": "Official Georgian goods description explicitly lists ყველი ჩედარი. Food sense only, not a place or person.",
+      "sources": [
+        {
+          "url": "https://www.sakpatenti.gov.ge/media/publication_pdf/BL172025.pdf",
+          "checkedVia": "Dictionary entry, official source text or indexed source excerpt inspected on 2026-10-26. Attestation is evidence for spelling/sense, not automatic everyday suitability."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T15-009",
+      "word": "გაუდა",
+      "length": 5,
+      "proposedMeaning": "Gouda cheese",
+      "partOfSpeech": "noun",
+      "category": "cheese",
+      "ownerDecision": "approved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Owner-approved recorded food/drink sense; awaits integration under unchanged policy and campaign rules.",
+      "senseNotes": "Official Georgian guidance uses ჩედარი and გაუდა as food-name examples. A Georgian interview about cheese production also attests ქართული გაუდა. Cheese sense only, not the city.",
+      "sources": [
+        {
+          "url": "https://www.sakpatenti.gov.ge/media/page_files/TM_GUIDELINES-Georgian-FINAL.pdf",
+          "checkedVia": "Dictionary entry, official source text or indexed source excerpt inspected on 2026-10-26. Attestation is evidence for spelling/sense, not automatic everyday suitability."
+        },
+        {
+          "url": "https://www.nplg.gov.ge/greenstone3/library/collection/period/document/HASH011e610499742416be7407ac?ed=1",
+          "checkedVia": "Cheese-production interview attests ქართული გაუდა; supports the food-name sense."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    },
+    {
+      "id": "T15-010",
+      "word": "რიკოტა",
+      "length": 6,
+      "proposedMeaning": "ricotta; soft whey cheese",
+      "partOfSpeech": "noun",
+      "category": "cheese",
+      "ownerDecision": "unapproved",
+      "sourceChecked": "2026-10-26",
+      "editorialDecision": "Not selected in the owner approval list; unapproved for required use. This is not an explicit all-gameplay exclusion.",
+      "senseNotes": "Official Georgian food-name list records რიკოტა რომანა. A Georgian food article separately identifies რიკოტა as an Italian whey cheese. Propose the food noun, not the whole protected geographic expression.",
+      "sources": [
+        {
+          "url": "https://www.sakpatenti.gov.ge/media/publication_pdf/GEOGRGEORGIA.pdf",
+          "checkedVia": "Dictionary entry, official source text or indexed source excerpt inspected on 2026-10-26. Attestation is evidence for spelling/sense, not automatic everyday suitability."
+        },
+        {
+          "url": "https://iverieli.nplg.gov.ge/bitstream/1234/497067/1/Yvareli_2022_N15-16.pdf",
+          "checkedVia": "Georgian food article describes რიკოტა as an Italian whey cheese; no health claims used."
+        }
+      ],
+      "ownerReviewedAt": "2026-10-26"
+    }
+  ],
+  "productionBaselineSha256": {
+    "content/dictionaries/discovery-v30-ka.json": "4c354d592cb6c3574ff23caa80d5e261e1f000394064b30700c9bf1165c3148d",
+    "content/dictionaries/everyday-targets-v30.json": "8bde23f6920e4fac245ec804ad2d84a101796f13a789715573a3774174f5d3ac",
+    "content/levels/discovery.v30.review.json": "36c4646dbf208f67c1b875ce4a78beeb89686e975ece44cc93f9ce9fb3f548cd",
+    "content/levels/discovery.v30.json": "aa06da11c1eabdaa6adad84c63c258cb76f9120832c02acf1f6c692aae74176f",
+    "content/levels/discovery.v30.recipes.json": "ae4b2885821c3e96132225620cbab14fff8809823214cef504e8dfc32826113c",
+    "content/dictionaries/word-policy.json": "482c910fdd5dd69748dbedff478a929745356c1e2ece72b1efc7d06db9fe9d78",
+    "mobile/src/content/catalog.ts": "b9c623099936a6fe139d738815cbdaa38ae0d30f19abbe3f7acb3780b8602f56"
+  },
+  "ownerReviewedAt": "2026-10-26",
+  "approvedCount": 6,
+  "unapprovedCount": 4,
+  "approvedWords": ["გაუდა", "ეკლერი", "ვასაბი", "ლატე", "რამენი", "ჩედარი"],
+  "totalApprovedPoolAfterReview": 2339,
+  "pendingIntegrationCount": 33
+}

@@ -1,5 +1,5 @@
 import { discoveryDifficulty } from '../src/content/discovery';
-import manifest from '../../content/levels/discovery.v29.recipes.json';
+import manifest from '../../content/levels/discovery.v31.recipes.json';
 import { catalog, previousCatalogs, vocabulary } from '../src/content/catalog';
 import { projectBoard, validateWide } from '../src/content/wide';
 import { solutionCells } from '../src/engine/grid';

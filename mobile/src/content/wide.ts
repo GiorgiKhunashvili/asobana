@@ -49,11 +49,11 @@ export function validateWide(
     pack.id !== 'geowords-prototype' ||
     ![
       6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24,
-      25, 26, 27, 28, 29,
+      25, 26, 27, 28, 29, 30, 31,
     ].includes(pack.revision)
   )
     throw new ContentError(
-      'Wide campaign requires stable pack identity and revision 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28 or 29',
+      'Wide campaign requires stable pack identity and revision 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30 or 31',
     );
   const journey = journeyForRevision(pack.revision);
   const chapterIds = [

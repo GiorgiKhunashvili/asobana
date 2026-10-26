@@ -1,3 +1,7 @@
+import reviewedVocabulary from '../../../content/dictionaries/discovery-v31-ka.json';
+import originVocabulary from '../../../content/dictionaries/discovery-v30-ka.json';
+import rawOriginPack from '../../../content/levels/discovery.v30.json';
+import rawCentralEuropePack from '../../../content/levels/discovery.v29.json';
 import centralEuropeVocabulary from '../../../content/dictionaries/discovery-v29-ka.json';
 import rawTargetedPack from '../../../content/levels/discovery.v28.json';
 import targetedVocabulary from '../../../content/dictionaries/discovery-v28-ka.json';
@@ -7,7 +11,7 @@ import rawBatchSevenPack from '../../../content/levels/discovery.v26.json';
 import batchSevenVocabulary from '../../../content/dictionaries/discovery-v26-ka.json';
 import batchSixVocabulary from '../../../content/dictionaries/discovery-v25-ka.json';
 import replacementVocabulary from '../../../content/dictionaries/discovery-v24-ka.json';
-import rawPack from '../../../content/levels/discovery.v29.json';
+import rawPack from '../../../content/levels/discovery.v31.json';
 import rawBatchSixPack from '../../../content/levels/discovery.v25.json';
 import rawReplacementPack from '../../../content/levels/discovery.v24.json';
 import rawSpainPack from '../../../content/levels/discovery.v23.json';
@@ -45,29 +49,33 @@ import { excludedWordsForRevision } from './wordPolicy';
 export function vocabularyForRevision(revision: number): ReadonlySet<string> {
   const excluded = excludedWordsForRevision(revision);
   const entries =
-    revision >= 29
-      ? centralEuropeVocabulary.entries
-      : revision >= 28
-        ? targetedVocabulary.entries
-        : revision >= 27
-          ? octoberVocabulary.entries
-          : revision >= 26
-            ? batchSevenVocabulary.entries
-            : revision >= 25
-              ? batchSixVocabulary.entries
-              : revision >= 24
-                ? replacementVocabulary.entries
-                : revision >= 20
-                  ? batchFiveVocabulary.entries
-                  : revision >= 19
-                    ? batchFourVocabulary.entries
-                    : revision >= 18
-                      ? batchThreeVocabulary.entries
-                      : revision >= 17
-                        ? expandedVocabulary.entries
-                        : revision >= 13
-                          ? journeyVocabulary.entries
-                          : rawVocabulary.entries;
+    revision >= 31
+      ? reviewedVocabulary.entries
+      : revision >= 30
+        ? originVocabulary.entries
+        : revision >= 29
+          ? centralEuropeVocabulary.entries
+          : revision >= 28
+            ? targetedVocabulary.entries
+            : revision >= 27
+              ? octoberVocabulary.entries
+              : revision >= 26
+                ? batchSevenVocabulary.entries
+                : revision >= 25
+                  ? batchSixVocabulary.entries
+                  : revision >= 24
+                    ? replacementVocabulary.entries
+                    : revision >= 20
+                      ? batchFiveVocabulary.entries
+                      : revision >= 19
+                        ? batchFourVocabulary.entries
+                        : revision >= 18
+                          ? batchThreeVocabulary.entries
+                          : revision >= 17
+                            ? expandedVocabulary.entries
+                            : revision >= 13
+                              ? journeyVocabulary.entries
+                              : rawVocabulary.entries;
   return new Set(
     entries.map((entry) => entry.word).filter((word) => !excluded.has(word)),
   );
@@ -114,6 +122,8 @@ export function previousCatalogs(): readonly LevelPack[] {
     parsePack(rawBatchSevenPack, vocabularyForRevision(26)),
     parsePack(rawOctoberPack, vocabularyForRevision(27)),
     parsePack(rawTargetedPack, vocabularyForRevision(28)),
+    parsePack(rawCentralEuropePack, vocabularyForRevision(29)),
+    parsePack(rawOriginPack, vocabularyForRevision(30)),
   ];
   return previous;
 }

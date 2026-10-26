@@ -1,5 +1,5 @@
 import journey from '../../content/journey-v29.json';
-import manifest from '../../content/levels/discovery.v29.recipes.json';
+import manifest from '../../content/levels/discovery.v31.recipes.json';
 import { catalog, previousCatalogs, vocabulary } from '../src/content/catalog';
 import { validateRequiredGap } from '../src/content/discovery';
 import { validateWide } from '../src/content/wide';

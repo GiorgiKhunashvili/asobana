@@ -1,6 +1,6 @@
 import dictionary from '../../content/dictionaries/discovery-v9-ka.json';
 import oldDictionary from '../../content/dictionaries/discovery-v8-ka.json';
-import manifest from '../../content/levels/discovery.v29.recipes.json';
+import manifest from '../../content/levels/discovery.v31.recipes.json';
 import { catalog, vocabulary } from '../src/content/catalog';
 import { validateWide as validateDiscovery } from '../src/content/wide';
 import { canFormWord } from '../src/engine/georgian';
@@ -10,7 +10,7 @@ import { parseSnapshot } from '../src/storage/snapshot';
 import { reachLevel, submit } from './helpers';
 
 test('all 500 reviewed boards follow the small-wheel progression and contain useful extras', () => {
-  expect(catalog.revision).toBe(29);
+  expect(catalog.revision).toBe(31);
   expect(() =>
     validateDiscovery(catalog, vocabulary, manifest.familiarity),
   ).not.toThrow();

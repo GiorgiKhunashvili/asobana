@@ -1,7 +1,7 @@
 import review from '../../content/dictionaries/everyday-targets-v12.json';
 import ownerReview from '../../content/dictionaries/everyday-targets-v16.json';
 import oldManifest from '../../content/levels/discovery.v11.recipes.json';
-import manifest from '../../content/levels/discovery.v29.recipes.json';
+import manifest from '../../content/levels/discovery.v31.recipes.json';
 import {
   catalog,
   previousCatalogs,
