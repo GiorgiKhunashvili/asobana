@@ -3,7 +3,7 @@
  * Store screenshots, Play feature graphic and Play icon (docs/store/STORE_LISTING.md).
  *
  * Input: raw iPhone 17 Pro Max captures (1320x2868) in artifacts/store/raw/, named
- * as in SHOTS. Output: artifacts/store/{ios-6.9,play-phone}/, play-feature-graphic.png
+ * as in SHOTS. Output: artifacts/store/{ios-6.9,ios-6.3,play-phone}/, play-feature-graphic.png
  * and play-icon-512.png. sharp is not a repo dependency:
  *   NODE_PATH=/path/to/node_modules node scripts/build-store-screenshots.cjs
  */
@@ -55,6 +55,15 @@ const TARGETS = [
     height: 2868,
     screenWidth: 1120,
     fontSize: 104,
+  },
+  // App Store Connect's "iPhone with Dynamic Island (medium display)" slot
+  // takes only 6.1"/6.3" sizes; this is the 6.9" layout scaled to 1206 x 2622.
+  {
+    dir: 'ios-6.3',
+    width: 1206,
+    height: 2622,
+    screenWidth: 1023,
+    fontSize: 95,
   },
   {
     dir: 'play-phone',
