@@ -6,7 +6,9 @@ speaker; read it once before publishing. Character counts were checked by script
 
 Screenshots and the Play feature graphic are generated into `artifacts/store/`
 by `scripts/build-store-screenshots.cjs` (see [Screenshots](#screenshots)).
-The privacy policy to host is [privacy-policy.html](privacy-policy.html).
+The privacy policy is live at <https://spilogames.ge/asobana/privacy/> (English:
+<https://spilogames.ge/en/asobana/privacy/>). Its source is the separate
+`spilo-games-website` project, deployed to Cloudflare with `wrangler deploy`.
 
 ## Owner decisions and blockers before submitting
 
@@ -23,15 +25,20 @@ The privacy policy to host is [privacy-policy.html](privacy-policy.html).
 
 Status on 2026-10-26 (owner-approved in-app fixes):
 
-- **1:** Settings has a privacy policy button that opens `PRIVACY_POLICY_URL`
-  (`mobile/src/legal.ts`). It stays hidden while the URL is `null`; set it once
-  the page is hosted, before the production build.
+- **1:** done. The owner chose spilogames.ge. Both privacy pages there were
+  rewritten for Google AdMob (they had said the app had no ads and no internet
+  use) and deployed; Settings → "კონფიდენციალურობის პოლიტიკა" opens
+  <https://spilogames.ge/asobana/privacy/>.
+- **2:** support URL <https://spilogames.ge/asobana/support/>, contact
+  `support@spilogames.ge`. On 2026-10-26 the domain had **no MX records**, so
+  that address cannot receive mail until the owner turns on Cloudflare Email
+  Routing (a to-do in the website README). Fix before submitting.
 - **3:** done. Settings → "წყაროები და ლიცენზიები" opens a licenses screen with
   the Wiktionary (CC BY-SA 4.0), EasyGeorgian frequency list (CC BY 4.0) and
   Noto Sans Georgian (OFL 1.1) credits; `tests/storeRelease.test.ts` guards them.
 - **4:** done. `supportsTablet` is `false`; iPhone-only for 1.0.
 - **5:** done. `app.json` is `1.0.0` (build numbers stay remote in EAS).
-- **2, 6–8** remain with the owner.
+- **6–8** remain with the owner.
 
 ## Shared facts (verified in the code, revision 29)
 
@@ -67,7 +74,9 @@ Store Connect counts the field differently, drop entries from the end.
 - **Encryption:** already declared (`usesNonExemptEncryption: false`).
 - **Sign-in required:** No.
 - **Copyright:** `© 2026 Spilo Games` (match the rights owner; see blocker 6).
-- **Support URL / Marketing URL / Privacy Policy URL:** see blockers 1–2.
+- **Support URL:** `https://spilogames.ge/asobana/support/`.
+  **Marketing URL:** `https://spilogames.ge/`.
+  **Privacy Policy URL:** `https://spilogames.ge/asobana/privacy/`.
 
 ### Description (both stores, 4,000 max)
 

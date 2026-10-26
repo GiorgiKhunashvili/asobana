@@ -4,10 +4,12 @@
  */
 
 /**
- * The hosted docs/store/privacy-policy.html. Both stores require it and Apple
- * also wants it inside the app; Settings shows the link once this is set.
+ * The live policy on the studio site (the spilo-games-website project; English
+ * at /en/asobana/privacy/). Both stores require it and Apple also wants it
+ * inside the app; Settings shows the link while this is set.
  */
-export const PRIVACY_POLICY_URL: string | null = null;
+export const PRIVACY_POLICY_URL: string | null =
+  'https://spilogames.ge/asobana/privacy/';
 
 export interface Credit {
   readonly title: string;
