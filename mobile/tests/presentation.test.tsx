@@ -1,5 +1,5 @@
-import { act, fireEvent, render } from '@testing-library/react-native';
-import { View } from 'react-native';
+import { act, fireEvent, render, within } from '@testing-library/react-native';
+import { BackHandler, StyleSheet, View } from 'react-native';
 import { PrimaryButton, RoundButton } from '../src/components/Buttons';
 import { CrosswordBoard } from '../src/components/CrosswordBoard';
 import { LetterWheel } from '../src/components/LetterWheel';
@@ -583,6 +583,34 @@ test('journey path shows progress, the country pill and the whole route', async 
     expect(screen.queryByTestId('journey-home')).toBeNull();
     expect(screen.queryByText('მაღაზია')).toBeNull();
   } finally {
+    gameStore.setState({ game: before });
+  }
+});
+
+test('the journey sheet stays closable with every country listed', async () => {
+  const before = gameStore.getState().game;
+  const back = jest.spyOn(BackHandler, 'addEventListener');
+  try {
+    gameStore.setState({ game: reachCurrentLevel(3) });
+    const screen = await render(<JourneyScreen />);
+    await fireEvent.press(screen.getByTestId('journey-pill'));
+    // Fifteen countries outgrew the screen and pushed the close button off
+    // its top; the sheet now stops short and its list scrolls instead.
+    const sheet = screen.getByTestId('journey-sheet');
+    expect(StyleSheet.flatten(sheet.props.style).maxHeight).toBe('85%');
+    const body = screen.getByTestId('journey-sheet-body');
+    expect(body.type).toBe('RCTScrollView');
+    expect(
+      within(body).getByTestId(`journey-country-${COUNTRIES.at(-1)!.id}`),
+    ).toBeTruthy();
+    // Android's back button closes it.
+    const onBack = back.mock.calls.at(-1)![1];
+    await act(async () => {
+      expect(onBack({ type: 'hardwareBackPress', timeStamp: 0 })).toBe(true);
+    });
+    expect(screen.queryByTestId('journey-sheet')).toBeNull();
+  } finally {
+    back.mockRestore();
     gameStore.setState({ game: before });
   }
 });

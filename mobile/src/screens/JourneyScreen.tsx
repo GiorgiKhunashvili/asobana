@@ -10,8 +10,10 @@ import {
 } from 'react';
 import {
   AccessibilityInfo,
+  BackHandler,
   FlatList,
   Pressable,
+  ScrollView,
   StyleSheet,
   useWindowDimensions,
   View,
@@ -1154,7 +1156,12 @@ function JourneySheet({
   );
 }
 
-/** Bottom sheet over the path: dimmed backdrop, title row and close button. */
+/**
+ * Bottom sheet over the path: dimmed backdrop, title row and close button.
+ * Fifteen countries outgrow a phone screen, so the sheet stops short of the top
+ * and its body scrolls under the title: the close button and a strip of
+ * backdrop stay reachable. Android's back button closes it too.
+ */
 function Sheet({
   title,
   eyebrow,
@@ -1168,6 +1175,16 @@ function Sheet({
   onClose: () => void;
   children: ReactNode;
 }) {
+  useEffect(() => {
+    const subscription = BackHandler.addEventListener(
+      'hardwareBackPress',
+      () => {
+        onClose();
+        return true;
+      },
+    );
+    return () => subscription.remove();
+  }, [onClose]);
   return (
     <View style={StyleSheet.absoluteFill}>
       <Animated.View entering={FadeIn} exiting={FadeOut} style={styles.dim}>
@@ -1203,7 +1220,13 @@ function Sheet({
             onPress={onClose}
           />
         </View>
-        {children}
+        <ScrollView
+          style={styles.sheetBody}
+          showsVerticalScrollIndicator={false}
+          testID={`${testID}-body`}
+        >
+          {children}
+        </ScrollView>
       </Animated.View>
     </View>
   );
@@ -1524,6 +1547,8 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     bottom: 0,
+    // Leaves the status bar and the top bar dimmed above it, tappable to close.
+    maxHeight: '85%',
     paddingHorizontal: space.xl,
     paddingTop: space.lg,
     paddingBottom: space.xl + space.md,
@@ -1540,6 +1565,7 @@ const styles = StyleSheet.create({
     gap: space.md,
   },
   sheetTitle: { flex: 1 },
+  sheetBody: { flexGrow: 0, flexShrink: 1 },
   place: { gap: space.md, marginTop: space.md },
   placeArt: { height: PLACE_ART, borderRadius: 18, overflow: 'hidden' },
   sum: {
