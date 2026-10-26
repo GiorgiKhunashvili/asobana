@@ -1,5 +1,31 @@
 # Asobana TestFlight
 
+## Violet splash tester release — 2026-10-23
+
+Built locally from `master` at `75013a1` (clean tree, pushed), which adds the
+violet launch splash, loading view and screen-transition background (`0b0ef0e`)
+and the store listing kit (docs and scripts only). Both builds use `beta`,
+`ASOBANA_LIVE_ADS=0`; the owner selected **Play internal testing with demo ads**.
+Neither artifact is intended for public release with live ads.
+
+- **iOS 0.1.0 (7):** uploaded to App Store Connect app `6825282360` through EAS
+  submission `d8d9ffa4-0fd4-4847-860e-fb28e6819ac9`; Apple accepted the binary
+  for processing (processing result not checked here).
+  File: `artifacts/asobana-ios-beta-violet-splash.ipa`, **57,006,933 bytes**.
+  SHA-256: `504361594c8692100679bdfdb7b4336169a014dc998883be645a6dea38a4a8f6`.
+- **Android 0.1.0 / versionCode 9:** signed AAB for the owner's Play internal
+  testing upload; no Google Play submission was made. File:
+  `artifacts/asobana-android-beta-0.1.0-violet-splash.aab`, **152,724,564 bytes**.
+  SHA-256: `9cac012319dfdb09e72131f504538371a204a26988ffdb1ab013a1948f297a34`.
+
+Verification: the iOS signature verifies, `get-task-allow` is false and the
+bundle ID and AdMob app ID are the release ones. The AAB passes `jarsigner -verify`
+with the same upload certificate as versionCode 8. Both embedded configs have
+`extra.liveAds: false` and the splash background `#120C24`; Android's splash
+image is `mark-splash.png`. The splash change itself was checked in an iOS Release
+simulator build before commit; `npm run check` passed for that commit. These
+store artifacts were not installed on a device.
+
 ## Performance tester release — 2026-10-23
 
 Built locally from `master` at `bbe7965` plus the uncommitted gameplay busy
