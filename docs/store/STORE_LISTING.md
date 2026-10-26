@@ -39,6 +39,10 @@ Status on 2026-10-26 (owner-approved in-app fixes):
 - **4:** done. `supportsTablet` is `false`; iPhone-only for 1.0.
 - **5:** done. `app.json` is `1.0.0` (build numbers stay remote in EAS).
 - **6–8** remain with the owner.
+- **app-ads.txt:** live at <https://spilogames.ge/app-ads.txt> since 2026-10-26
+  (`google.com, pub-8935292332039677, DIRECT, f08c47fec0942fa0`). AdMob checks
+  it on the developer website listed in each store, so list
+  `https://spilogames.ge/` there, then link the app in AdMob once it is live.
 
 ## Shared facts (verified in the code, revision 29)
 

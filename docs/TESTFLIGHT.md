@@ -1,5 +1,32 @@
 # Asobana TestFlight
 
+## 1.0.0 store release builds — 2026-10-26
+
+Built locally from `master` at `82a29f8` (clean, pushed) with the **`production`**
+profile, `ASOBANA_LIVE_ADS=1`, for the owner's App Store and Google Play review
+submission. Content revision 31, privacy link to spilogames.ge, iPhone only.
+These builds serve **live AdMob ads**: per AGENTS.md, the owner and testers do
+not install them; keep build 8 out of TestFlight tester groups.
+
+- **iOS 1.0.0 (8):** uploaded to App Store Connect app `6825282360` through EAS
+  submission `8504930d-b080-4c8d-b1eb-783114ea0de0`; Apple accepted the binary
+  for processing (processing result not checked here).
+  File: `artifacts/asobana-ios-1.0.0-production.ipa`, **59,821,188 bytes**.
+  SHA-256: `1d5483c1f4446a341f46b7587f83fe98fc4e56f62faa8e7f7efec4fffb50a48b`.
+- **Android 1.0.0 / versionCode 10:** signed AAB for the owner's Google Play
+  production upload; no Play submission was made. File:
+  `artifacts/asobana-android-1.0.0-production.aab`, **152,849,325 bytes**.
+  SHA-256: `96eb47054b7c212dece68a3a628c1b888839526d0f613ee83379b7282ae530de`.
+
+Verification: both embedded configs have version `1.0.0`, `extra.liveAds: true`
+and splash `#120C24`; each JS bundle contains its platform's live banner and
+rewarded unit IDs and the privacy URL. iOS: signature verifies, `get-task-allow`
+false, `UIDeviceFamily` `[1]`, no `NSUserTrackingUsageDescription`, release AdMob
+app ID. Android: `jarsigner -verify` passes with the same upload certificate as
+versionCode 9, release AdMob app ID. `npm run check` passed on this tree (457
+tests, 500 levels) and the Python suite passed on revision 31. These store
+artifacts were not installed on a device.
+
 ## Violet splash tester release — 2026-10-23
 
 Built locally from `master` at `75013a1` (clean tree, pushed), which adds the
