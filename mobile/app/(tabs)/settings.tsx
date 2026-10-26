@@ -1,6 +1,7 @@
 import {
   AccessibilityInfo,
   Alert,
+  Linking,
   StyleSheet,
   Switch,
   View,
@@ -16,6 +17,7 @@ import { Screen, TopBar } from '../../src/components/Screen';
 import { StudioCredit } from '../../src/components/StudioCredit';
 import { Txt } from '../../src/components/Text';
 import { DEFAULT_ECONOMY } from '../../src/engine/game';
+import { PRIVACY_POLICY_URL } from '../../src/legal';
 import type { Settings as GameSettings } from '../../src/models/types';
 import { routes } from '../../src/navigation/routes';
 import { gameStore, useGameStore } from '../../src/state/gameStore';
@@ -83,6 +85,7 @@ export default function Settings() {
   const busy = useGameStore((state) => state.busy);
   const error = useGameStore((state) => state.error);
   const privacyOptions = usePrivacyOptionsRequired();
+  const privacyPolicy = PRIVACY_POLICY_URL;
   if (!game) return null;
   const next = nextUnfinished(game);
   return (
@@ -171,6 +174,34 @@ export default function Settings() {
           />
         </Card>
       )}
+      <Card>
+        <CardRow>
+          <Icon name="document" size={24} color={palette.gold} />
+          <View style={styles.text}>
+            <Txt variant="bodyStrong">კონფიდენციალურობა და ლიცენზიები</Txt>
+            <Txt variant="caption" color={palette.textMuted}>
+              მონაცემების დაცვა, სიტყვებისა და შრიფტების წყაროები.
+            </Txt>
+          </View>
+        </CardRow>
+        {privacyPolicy && (
+          <SecondaryButton
+            label="კონფიდენციალურობის პოლიტიკა"
+            icon="lock"
+            accessibilityHint="იხსნება ბრაუზერში"
+            testID="privacy-policy"
+            onPress={() => {
+              void Linking.openURL(privacyPolicy).catch(() => undefined);
+            }}
+          />
+        )}
+        <SecondaryButton
+          label="წყაროები და ლიცენზიები"
+          icon="document"
+          testID="licenses"
+          onPress={() => router.push('/licenses')}
+        />
+      </Card>
       <Card>
         <CardRow>
           <Icon name="restart" size={24} color={palette.gold} />

@@ -2,12 +2,12 @@
   "expo": {
     "name": "Asobana",
     "slug": "geowords",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "scheme": "asobana",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
     "ios": {
-      "supportsTablet": true,
+      "supportsTablet": false,
       "bundleIdentifier": "ge.spilogames.asobana",
       "config": {
         "usesNonExemptEncryption": false

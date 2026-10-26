@@ -1,6 +1,6 @@
 {
   "sources": {
-    "mobile/src/components/iconPaths.ts": "4adbf43fcf6d32b0433007f89d1d6955207f3f06c73fe3e98b776cc91d05ee76",
+    "mobile/src/components/iconPaths.ts": "c7f557ed20eef5b1e8d0a7b815d9f7822850f19f38c2f375c245c921f9ba8203",
     "mobile/src/components/coinGeometry.ts": "2262691ea4df1efa45beba550e4ef07cc274db46e77d99f6bd44fa2c9173b273",
     "mobile/src/theme/palette.ts": "94942bec3a6e3a17717952508d3b0ba84b4e9e6424e49484510dd71353288b10",
     "scripts/build-gameplay-icons.ts": "dfa5ff91c0b4cba740e22f2cf097e63ded4c3918411590399a03d7dcd9c3e2bd"

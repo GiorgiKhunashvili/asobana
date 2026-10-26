@@ -73,6 +73,10 @@ export const ICONS = {
     { d: dot(16.2, 9.2, 1.6), fill: true },
   ],
   bag: [{ d: 'M5.5 9h13l-1.2 11H6.7zM9 9V7.5a3 3 0 0 1 6 0V9' }],
+  document: [
+    { d: 'M6.5 3.5h7.5l4 4v13h-11.5z' },
+    { d: 'M14 3.5v4h4M9.5 12h5M9.5 15.5h5' },
+  ],
   play: [{ d: 'M8.5 5.5v13l10.5-6.5z', fill: true }],
 } satisfies Record<string, readonly Part[]>;
 

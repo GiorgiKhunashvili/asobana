@@ -7,6 +7,7 @@ import { cardPlacement } from '../src/components/CoachMarks';
 import { catalog, previousCatalogs } from '../src/content/catalog';
 import { DEFAULT_ECONOMY, initialState, transition } from '../src/engine/game';
 import { ContentError } from '../src/engine/validation';
+import { PRIVACY_POLICY_URL } from '../src/legal';
 import type { GameState } from '../src/models/types';
 import { GameplayScreen } from '../src/screens/GameplayScreen';
 import { tutorialSteps } from '../src/screens/tutorial';
@@ -250,6 +251,16 @@ describe('settings', () => {
     const screen = await render(<Settings />);
     expect(screen.getByText('ყველა დონე გავლილია.')).toBeTruthy();
     expect(screen.getByTestId('show-tutorial')).toBeDisabled();
+  });
+
+  test('settings open the licenses and, once hosted, the privacy policy', async () => {
+    gameStore.setState({ game: { ...reachLevel(7), tutorialSeen: true } });
+    const screen = await render(<Settings />);
+    await fireEvent.press(screen.getByTestId('licenses'));
+    expect(router.push).toHaveBeenCalledWith('/licenses');
+    expect(screen.queryByTestId('privacy-policy') !== null).toBe(
+      PRIVACY_POLICY_URL !== null,
+    );
   });
 });
 
