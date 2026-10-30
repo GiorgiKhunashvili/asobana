@@ -19,9 +19,14 @@ import { BonusMeter } from '../../src/components/BonusMeter';
 import { VictoryLogo } from '../../src/components/Logo';
 import { Screen, TopBar } from '../../src/components/Screen';
 import { Display, Txt } from '../../src/components/Text';
+import {
+  WordExplanationCard,
+  WordMeanings,
+} from '../../src/components/WordExplanation';
 import { levelDoubleMessages } from '../../src/ads/messages';
 import { useLevelRewardAd } from '../../src/ads/useLevelRewardAd';
 import { catalog } from '../../src/content/catalog';
+import { hasExplanation } from '../../src/content/wordExplanations';
 import { LEVEL_DOUBLE_COINS } from '../../src/engine/adRewards';
 import { BONUS_GOAL, freeCellHints } from '../../src/engine/bonusRewards';
 import { selectPostcards } from '../../src/engine/postcards';
@@ -52,6 +57,7 @@ export default function Victory() {
   const id = singleParam(params.levelId);
   const game = useGameStore((state) => state.game);
   const [reward] = useState(() => freshReward(id));
+  const [explaining, setExplaining] = useState<string | null>(null);
   const doubled = Boolean(id && game?.doubledRewardLevelIds?.includes(id));
   // The optional ×2 ad accompanies a reward just earned on the board, never a
   // reopened level, and pays once per level (the save enforces it too).
@@ -83,7 +89,11 @@ export default function Victory() {
   const next = nextLevel?.id ?? null;
   const progress = game.progress[id];
   const shownReward = (reward ?? 0) + (doubled ? LEVEL_DOUBLE_COINS : 0);
-  const emblem = Math.min(width * 0.46, 190);
+  const explained = (level?.words ?? [])
+    .map((word) => word.answer)
+    .filter(hasExplanation);
+  // The word box needs the room: both buttons stay on screen without scrolling.
+  const emblem = Math.min(width * 0.46, explained.length > 0 ? 96 : 190);
   const chapterCard = selectPostcards(game, catalog).find(
     (card) => card.chapterId === level?.chapterId,
   );
@@ -102,6 +112,47 @@ export default function Victory() {
     countryOf(nextChapter) !== countryOf(level?.chapterId)
       ? countryOf(nextChapter)
       : null;
+  const actions = (
+    <Animated.View
+      entering={FadeInUp.delay(760).duration(500)}
+      style={styles.actions}
+    >
+      {newCountry && (
+        <Txt
+          variant="bodyStrong"
+          color={palette.goldLight}
+          style={[styles.centered, onScene]}
+          testID="victory-new-country"
+        >
+          {`ახალი ქვეყანა: ${newCountry.name}!`}
+        </Txt>
+      )}
+      {next ? (
+        <PrimaryButton
+          label="შემდეგი დონე"
+          detail={`დონე ${nextLevel?.number ?? ''}`}
+          testID="victory-next"
+          onPress={() => router.replace(routes.game(next))}
+        />
+      ) : (
+        <Animated.View entering={FadeIn.delay(760)} style={styles.finale}>
+          <Txt
+            variant="bodyStrong"
+            color={palette.goldLight}
+            style={styles.centered}
+          >
+            მოგზაურობა დასრულდა — ყველა დონე გავლილია.
+          </Txt>
+        </Animated.View>
+      )}
+      <SecondaryButton
+        label="მოგზაურობა"
+        icon="route"
+        testID="victory-journey"
+        onPress={toJourney}
+      />
+    </Animated.View>
+  );
   return (
     <Screen
       tone={tone}
@@ -118,6 +169,20 @@ export default function Victory() {
         />
       }
       contentStyle={styles.content}
+      // The word box can fill a small phone: the way on never scrolls out of reach.
+      footer={
+        explained.length > 0 ? (
+          <View style={styles.footer}>{actions}</View>
+        ) : null
+      }
+      overlay={
+        explaining && (
+          <WordExplanationCard
+            word={explaining}
+            onClose={() => setExplaining(null)}
+          />
+        )
+      }
     >
       {showCard ? (
         <View style={styles.postcard}>
@@ -225,6 +290,14 @@ export default function Victory() {
             )}
           </View>
         )}
+      {explained.length > 0 && (
+        <Animated.View
+          entering={FadeIn.delay(600).duration(500)}
+          style={styles.fact}
+        >
+          <WordMeanings words={explained} onOpen={setExplaining} />
+        </Animated.View>
+      )}
       {arrival && (
         <Animated.View
           entering={FadeIn.delay(600).duration(500)}
@@ -238,45 +311,7 @@ export default function Victory() {
         freeHints={freeCellHints(game)}
         compact
       />
-      <Animated.View
-        entering={FadeInUp.delay(760).duration(500)}
-        style={styles.actions}
-      >
-        {newCountry && (
-          <Txt
-            variant="bodyStrong"
-            color={palette.goldLight}
-            style={[styles.centered, onScene]}
-            testID="victory-new-country"
-          >
-            {`ახალი ქვეყანა: ${newCountry.name}!`}
-          </Txt>
-        )}
-        {next ? (
-          <PrimaryButton
-            label="შემდეგი დონე"
-            detail={`დონე ${nextLevel?.number ?? ''}`}
-            testID="victory-next"
-            onPress={() => router.replace(routes.game(next))}
-          />
-        ) : (
-          <Animated.View entering={FadeIn.delay(760)} style={styles.finale}>
-            <Txt
-              variant="bodyStrong"
-              color={palette.goldLight}
-              style={styles.centered}
-            >
-              მოგზაურობა დასრულდა — ყველა დონე გავლილია.
-            </Txt>
-          </Animated.View>
-        )}
-        <SecondaryButton
-          label="მოგზაურობა"
-          icon="route"
-          testID="victory-journey"
-          onPress={toJourney}
-        />
-      </Animated.View>
+      {explained.length === 0 && actions}
     </Screen>
   );
 }
@@ -330,4 +365,10 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   finale: { paddingVertical: space.sm },
+  footer: {
+    alignItems: 'center',
+    paddingHorizontal: space.lg,
+    paddingTop: space.sm,
+    paddingBottom: space.lg,
+  },
 });

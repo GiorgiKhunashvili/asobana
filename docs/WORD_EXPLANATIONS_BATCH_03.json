@@ -1,0 +1,900 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-30",
+  "status": "pending-owner-review",
+  "activeRevision": 31,
+  "selection": "The owner selected these 96 words from the third review of WORD_EXPLANATION_CANDIDATES on 2026-10-30.",
+  "gameplayChanged": true,
+  "runtimeFile": "content/word-explanations.json",
+  "limitations": [
+    "These are assistant drafts in Georgian. No native speaker has reviewed them.",
+    "90 meanings were checked on ganmarteba.ge on 2026-10-30. The other 6 have no entry there and rest on the recorded meaning and general knowledge.",
+    "Dictionary text was used to check meanings, not copied. Some short facts can only be said one way.",
+    "Some details add general knowledge beyond the dictionary, such as ჟანრი examples or ცოფი spreading through bites."
+  ],
+  "groups": {
+    "tech": "Technology, science and maths",
+    "geography": "Geography and landscape",
+    "health": "Body and health",
+    "arts": "Music, literature and art",
+    "society": "Money, work and society",
+    "sport": "Sport and games",
+    "history": "History, faith and tradition",
+    "nature": "Plants and animals",
+    "family": "Family relationships",
+    "objects": "Old tools, crafts and household things",
+    "literary": "Literary or rarely used words",
+    "lookalike": "Looks like a different word"
+  },
+  "entries": [
+    {
+      "id": "WE03-001",
+      "word": "ლაზერი",
+      "group": "tech",
+      "recordedMeaning": "laser",
+      "explanationKa": "მოწყობილობა, რომელიც სინათლის ძალიან ვიწრო, ძლიერ სხივს გამოსცემს.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-002",
+      "word": "რადარი",
+      "group": "tech",
+      "recordedMeaning": "radar",
+      "explanationKa": "მოწყობილობა, რომელიც რადიოტალღებით საგნების ადგილს პოულობს.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-003",
+      "word": "ცილა",
+      "group": "tech",
+      "recordedMeaning": "protein",
+      "explanationKa": "ორგანიზმის მთავარი სამშენებლო ნივთიერება; ხორცსა და კვერცხში ბევრია.",
+      "dictionaryCheck": "none",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-004",
+      "word": "ღერძი",
+      "group": "tech",
+      "recordedMeaning": "axle; axis",
+      "explanationKa": "წარმოსახვითი ხაზი, რომლის გარშემოც რამე ბრუნავს; ასევე, ბორბლების ღერო.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-005",
+      "word": "ფაზა",
+      "group": "tech",
+      "recordedMeaning": "phase",
+      "explanationKa": "რისამე განვითარების ცალკეული ეტაპი.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-006",
+      "word": "ციკლი",
+      "group": "tech",
+      "recordedMeaning": "cycle",
+      "explanationKa": "მოვლენების რიგი, რომელიც ისევ თავიდან იწყება.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-007",
+      "word": "კონუსი",
+      "group": "tech",
+      "recordedMeaning": "cone",
+      "explanationKa": "გეომეტრიული სხეული მრგვალი ძირითა და წვეტიანი თავით.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-008",
+      "word": "რომბი",
+      "group": "tech",
+      "recordedMeaning": "rhombus",
+      "explanationKa": "ოთხკუთხედი, რომლის ოთხივე გვერდი ტოლია.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-009",
+      "word": "ქედი",
+      "group": "geography",
+      "recordedMeaning": "mountain range",
+      "explanationKa": "ერთმანეთზე გადაბმული მთების გრძელი მწკრივი.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-010",
+      "word": "ყურე",
+      "group": "geography",
+      "recordedMeaning": "bay, bight",
+      "explanationKa": "ზღვის ნაწილი, რომელიც ხმელეთშია შესული.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-011",
+      "word": "ვაკე",
+      "group": "geography",
+      "recordedMeaning": "plain, plane",
+      "explanationKa": "სწორი, ბრტყელი ადგილი მთებისა და ფერდობების გარეშე.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-012",
+      "word": "ხორხი",
+      "group": "health",
+      "recordedMeaning": "larynx",
+      "explanationKa": "სასუნთქი მილის ზედა ნაწილი, სადაც ხმა იქმნება.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-013",
+      "word": "ცოფი",
+      "group": "health",
+      "recordedMeaning": "rabies",
+      "explanationKa": "მძიმე ვირუსული დაავადება, რომელიც ცხოველის ნაკბენით გადადის.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-014",
+      "word": "ღრძილი",
+      "group": "health",
+      "recordedMeaning": "gum around the teeth",
+      "explanationKa": "კბილების ძირის გარშემო არსებული რბილი ქსოვილი.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-015",
+      "word": "ჟანრი",
+      "group": "arts",
+      "recordedMeaning": "genre",
+      "explanationKa": "ხელოვნების ნაწარმოების სახეობა, მაგალითად, კომედია ან დრამა.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-016",
+      "word": "ფრესკა",
+      "group": "arts",
+      "recordedMeaning": "fresco",
+      "explanationKa": "ნედლ ბათქაშზე შესრულებული კედლის მხატვრობა, ხშირად ეკლესიაში.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-017",
+      "word": "რითმა",
+      "group": "arts",
+      "recordedMeaning": "rhyme",
+      "explanationKa": "ლექსის სტრიქონების ბოლოების ბგერითი თანხვედრა.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-018",
+      "word": "ტურნე",
+      "group": "arts",
+      "recordedMeaning": "tour",
+      "explanationKa": "მუსიკოსების ან მსახიობების მოგზაურობა კონცერტებითა და წარმოდგენებით.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-019",
+      "word": "ჰანგი",
+      "group": "arts",
+      "recordedMeaning": "tune, melody",
+      "explanationKa": "მელოდია, მუსიკალური ხმა.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-020",
+      "word": "ავანსი",
+      "group": "society",
+      "recordedMeaning": "advance payment",
+      "explanationKa": "სამუშაოსთვის წინასწარ გადახდილი ფულის ნაწილი.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-021",
+      "word": "იჯარა",
+      "group": "society",
+      "recordedMeaning": "lease",
+      "explanationKa": "ქონების ან მიწის დროებით დაქირავება.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-022",
+      "word": "ტარიფი",
+      "group": "society",
+      "recordedMeaning": "tariff; rate",
+      "explanationKa": "მომსახურების დადგენილი ფასი, მაგალითად, გაზისა ან წყლის.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-023",
+      "word": "სექტა",
+      "group": "society",
+      "recordedMeaning": "sect",
+      "explanationKa": "რელიგიური ჯგუფი, რომელიც მთავარ ეკლესიას გამოეყო.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-024",
+      "word": "სენატი",
+      "group": "society",
+      "recordedMeaning": "senate",
+      "explanationKa": "ზოგიერთი ქვეყნის პარლამენტის ზედა პალატა; მმართველი საბჭო ძველ რომში.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-025",
+      "word": "ელიტა",
+      "group": "society",
+      "recordedMeaning": "elite",
+      "explanationKa": "საზოგადოების ყველაზე გავლენიანი ან რჩეული ნაწილი.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-026",
+      "word": "ალიბი",
+      "group": "society",
+      "recordedMeaning": "alibi",
+      "explanationKa": "მტკიცებულება, რომ ბრალდებული დანაშაულის დროს სხვაგან იყო.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-027",
+      "word": "ფობია",
+      "group": "society",
+      "recordedMeaning": "phobia",
+      "explanationKa": "ძლიერი, აუხსნელი შიში რაღაცის მიმართ.",
+      "dictionaryCheck": "none",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-028",
+      "word": "ირონია",
+      "group": "society",
+      "recordedMeaning": "irony",
+      "explanationKa": "ფარული დაცინვა: ნათქვამია ერთი, ნაგულისხმევია მეორე.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-029",
+      "word": "ილუზია",
+      "group": "society",
+      "recordedMeaning": "illusion",
+      "explanationKa": "რეალობის მცდარი აღქმა; ასევე, ფუჭი იმედი.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-030",
+      "word": "სტაჟი",
+      "group": "society",
+      "recordedMeaning": "length of work experience",
+      "explanationKa": "რამდენი ხანი მუშაობს ადამიანი რომელიმე საქმეზე.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-031",
+      "word": "საშვი",
+      "group": "society",
+      "recordedMeaning": "entry pass",
+      "explanationKa": "საბუთი, რომელიც სადმე შესვლის უფლებას იძლევა.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-032",
+      "word": "ნუსხა",
+      "group": "society",
+      "recordedMeaning": "list",
+      "explanationKa": "სია, ჩამონათვალი.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-033",
+      "word": "ხაზინა",
+      "group": "society",
+      "recordedMeaning": "treasury",
+      "explanationKa": "სახელმწიფოს ან მეფის ფულისა და ქონების საცავი.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-034",
+      "word": "ტაიმი",
+      "group": "sport",
+      "recordedMeaning": "half of a sports match",
+      "explanationKa": "სპორტული მატჩის ერთი ნაწილი, მაგალითად, ფეხბურთში.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-035",
+      "word": "ძიუდო",
+      "group": "sport",
+      "recordedMeaning": "judo",
+      "explanationKa": "იაპონური ჭიდაობა, ოლიმპიური სპორტის სახეობა.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-036",
+      "word": "ფრე",
+      "group": "sport",
+      "recordedMeaning": "draw; tie in a game",
+      "explanationKa": "თამაშის შედეგი, როცა არავინ იგებს.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-037",
+      "word": "კოზირი",
+      "group": "sport",
+      "recordedMeaning": "trump card",
+      "explanationKa": "კარტის ფერი, რომელიც სხვა ფერებს ჭრის; გადატანით, მთავარი უპირატესობა.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-038",
+      "word": "ვალეტი",
+      "group": "sport",
+      "recordedMeaning": "jack; playing card",
+      "explanationKa": "კარტის ფიგურა, ათიანზე მაღალი და დედოფალზე დაბალი.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-039",
+      "word": "აჩმა",
+      "group": "history",
+      "recordedMeaning": "achma cheese pastry",
+      "explanationKa": "ფენა-ფენა გამომცხვარი ყველიანი ცომეული.",
+      "dictionaryCheck": "none",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-040",
+      "word": "კუპატი",
+      "group": "history",
+      "recordedMeaning": "kupati sausage",
+      "explanationKa": "ქართული ძეხვი დაკეპილი ხორცითა და სანელებლებით.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-041",
+      "word": "ღომი",
+      "group": "history",
+      "recordedMeaning": "ghomi maize porridge",
+      "explanationKa": "სქელი ფაფა ღომის მარცვლისგან ან სიმინდისგან; დასავლეთ საქართველოს კერძი.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending",
+      "note": "Recorded as a maize porridge, but the dictionary lists the grain first. The explanation covers the dish made from either."
+    },
+    {
+      "id": "WE03-042",
+      "word": "ყანწი",
+      "group": "history",
+      "recordedMeaning": "drinking horn",
+      "explanationKa": "რქისგან გაკეთებული ღვინის სასმისი.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-043",
+      "word": "ერბო",
+      "group": "history",
+      "recordedMeaning": "ghee, clarified butter",
+      "explanationKa": "გადამდნარი კარაქისგან მიღებული ცხიმი.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-044",
+      "word": "შაჰი",
+      "group": "history",
+      "recordedMeaning": "shah",
+      "explanationKa": "ირანის მეფის ტიტული.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-045",
+      "word": "ჯინი",
+      "group": "history",
+      "recordedMeaning": "jinn; mythical spirit",
+      "explanationKa": "არაბულ და სპარსულ ზღაპრებში ზებუნებრივი სული.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending",
+      "note": "The dictionary also lists a low woven basket. The explanation keeps the approved spirit sense."
+    },
+    {
+      "id": "WE03-046",
+      "word": "დევი",
+      "group": "history",
+      "recordedMeaning": "giant",
+      "explanationKa": "ქართული ზღაპრების უზარმაზარი, ხშირად მრავალთავიანი ავი არსება.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-047",
+      "word": "ასკილი",
+      "group": "nature",
+      "recordedMeaning": "dog rose",
+      "explanationKa": "ველური ეკლიანი ბუჩქი; მისი მოწითალო ნაყოფისგან ჩაის ადუღებენ.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-048",
+      "word": "დაფნა",
+      "group": "nature",
+      "recordedMeaning": "laurel",
+      "explanationKa": "მარადმწვანე ხე; მისი სურნელოვანი ფოთოლი სანელებელია.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-049",
+      "word": "ჭადარი",
+      "group": "nature",
+      "recordedMeaning": "plane tree",
+      "explanationKa": "მაღალი ფოთლოვანი ხე, ხშირად ქალაქის ქუჩებსა და ბაღებში.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-050",
+      "word": "წიფელი",
+      "group": "nature",
+      "recordedMeaning": "beech tree",
+      "explanationKa": "ტყის მაღალი ხე მაგარი მერქნითა და ნაცრისფერი ქერქით.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-051",
+      "word": "რეჰანი",
+      "group": "nature",
+      "recordedMeaning": "basil",
+      "explanationKa": "სურნელოვანი მწვანილი, იგივე ბაზილიკი.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-052",
+      "word": "ენოტი",
+      "group": "nature",
+      "recordedMeaning": "raccoon",
+      "explanationKa": "ამერიკული ცხოველი ზოლიანი კუდითა და თვალებთან მუქი ლაქით.",
+      "dictionaryCheck": "none",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-053",
+      "word": "კობრი",
+      "group": "nature",
+      "recordedMeaning": "carp",
+      "explanationKa": "მტკნარი წყლის დიდი თევზი.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-054",
+      "word": "წიწვი",
+      "group": "nature",
+      "recordedMeaning": "conifer needle",
+      "explanationKa": "ფიჭვისა და ნაძვის ნემსისებრი ფოთოლი.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-055",
+      "word": "ანძა",
+      "group": "objects",
+      "recordedMeaning": "mast",
+      "explanationKa": "გემის მაღალი ბოძი იალქნისთვის; ასევე, მაღალი ანტენის ნაგებობა.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-056",
+      "word": "აფრა",
+      "group": "objects",
+      "recordedMeaning": "sail",
+      "explanationKa": "გემის იალქანი.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-057",
+      "word": "ბალთა",
+      "group": "objects",
+      "recordedMeaning": "buckle",
+      "explanationKa": "ქამრის ან ფეხსაცმლის შესაკრავი.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-058",
+      "word": "ბაფთა",
+      "group": "objects",
+      "recordedMeaning": "bow knot",
+      "explanationKa": "ლამაზად შეკრული ლენტი.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-059",
+      "word": "ბაქანი",
+      "group": "objects",
+      "recordedMeaning": "platform",
+      "explanationKa": "სადგურის ზოლი ლიანდაგის გასწვრივ, საიდანაც მატარებელში ადიან.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-060",
+      "word": "დახლი",
+      "group": "objects",
+      "recordedMeaning": "counter",
+      "explanationKa": "გრძელი მაგიდა მაღაზიაში, რომლის უკანაც გამყიდველი დგას.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-061",
+      "word": "კათხა",
+      "group": "objects",
+      "recordedMeaning": "mug",
+      "explanationKa": "სახელურიანი დიდი ჭიქა, მაგალითად, ლუდისთვის.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-062",
+      "word": "კლიტე",
+      "group": "objects",
+      "recordedMeaning": "lock",
+      "explanationKa": "საკეტი, ბოქლომი.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-063",
+      "word": "ლუპა",
+      "group": "objects",
+      "recordedMeaning": "magnifying glass",
+      "explanationKa": "სახელურიანი გამადიდებელი შუშა.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-064",
+      "word": "ნოხი",
+      "group": "objects",
+      "recordedMeaning": "rug",
+      "explanationKa": "ხალიჩა, იატაკზე დასაფენი ნაქსოვი.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-065",
+      "word": "ტივი",
+      "group": "objects",
+      "recordedMeaning": "raft",
+      "explanationKa": "ერთმანეთზე შეკრული მორები მდინარეზე საცურაოდ.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-066",
+      "word": "ჭაღი",
+      "group": "objects",
+      "recordedMeaning": "chandelier",
+      "explanationKa": "ჭერზე დაკიდებული დიდი, მრავალნათურიანი სანათი.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-067",
+      "word": "ღუზა",
+      "group": "objects",
+      "recordedMeaning": "anchor",
+      "explanationKa": "მძიმე რკინა ჯაჭვზე, რომელიც გემს ერთ ადგილას აჩერებს.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-068",
+      "word": "ჭოკი",
+      "group": "objects",
+      "recordedMeaning": "pole",
+      "explanationKa": "გრძელი, წვრილი ჯოხი; მისი დახმარებით სიმაღლეზეც ხტებიან.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-069",
+      "word": "შიფერი",
+      "group": "objects",
+      "recordedMeaning": "roofing slate",
+      "explanationKa": "სახურავის დასაფარი ფილა.",
+      "dictionaryCheck": "none",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-070",
+      "word": "ბარაქა",
+      "group": "literary",
+      "recordedMeaning": "abundance",
+      "explanationKa": "სიუხვე, დოვლათი.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-071",
+      "word": "დინჯი",
+      "group": "literary",
+      "recordedMeaning": "calm; unhurried",
+      "explanationKa": "მშვიდი და აუჩქარებელი.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-072",
+      "word": "დიადი",
+      "group": "literary",
+      "recordedMeaning": "great",
+      "explanationKa": "დიდებული, ამაღლებული.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-073",
+      "word": "ზორბა",
+      "group": "literary",
+      "recordedMeaning": "large and burly",
+      "explanationKa": "დიდი და ახოვანი ტანის.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending",
+      "note": "The source marks this word as colloquial."
+    },
+    {
+      "id": "WE03-074",
+      "word": "ნუგეში",
+      "group": "literary",
+      "recordedMeaning": "comfort, consolation",
+      "explanationKa": "იმედი და სიმშვიდე მწუხარების დროს.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-075",
+      "word": "საბაბი",
+      "group": "literary",
+      "recordedMeaning": "excuse; pretext",
+      "explanationKa": "მიზეზი, ხშირად მოგონილი, რომლითაც ვინმე საქციელს ამართლებს.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-076",
+      "word": "სათნო",
+      "group": "literary",
+      "recordedMeaning": "kind-hearted",
+      "explanationKa": "კეთილი და მოსიყვარულე.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-077",
+      "word": "სათუთი",
+      "group": "literary",
+      "recordedMeaning": "delicate, tender",
+      "explanationKa": "ნაზი, ფრთხილად მოსავლელი.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-078",
+      "word": "ფიცხი",
+      "group": "literary",
+      "recordedMeaning": "quick-tempered",
+      "explanationKa": "ადვილად გაბრაზებადი, ფეთქებადი ხასიათის.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-079",
+      "word": "ცბიერი",
+      "group": "literary",
+      "recordedMeaning": "cunning",
+      "explanationKa": "ეშმაკი, მზაკვარი, ერთი შეხედვით კეთილი.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-080",
+      "word": "ხათრი",
+      "group": "literary",
+      "recordedMeaning": "regard; consideration",
+      "explanationKa": "პატივისცემა და მორიდება ვინმეს მიმართ.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-081",
+      "word": "ჯიბრი",
+      "group": "literary",
+      "recordedMeaning": "spite; rivalry",
+      "explanationKa": "სხვისი აჯობების ან მის საწინააღმდეგოდ მოქმედების სურვილი.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-082",
+      "word": "წიაღი",
+      "group": "literary",
+      "recordedMeaning": "interior; depths",
+      "explanationKa": "რისამე შიგნეული, სიღრმე, მაგალითად, დედამიწისა.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-083",
+      "word": "კომეტა",
+      "group": "tech",
+      "recordedMeaning": "comet",
+      "explanationKa": "ციური სხეული, რომელსაც კაშკაშა კუდი მოჰყვება.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-084",
+      "word": "სფერო",
+      "group": "tech",
+      "recordedMeaning": "sphere; field",
+      "explanationKa": "ბურთისებრი გეომეტრიული სხეული; გადატანით, საქმიანობის დარგი.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-085",
+      "word": "ფაქსი",
+      "group": "tech",
+      "recordedMeaning": "fax",
+      "explanationKa": "მოწყობილობა, რომელიც საბუთებს სატელეფონო ხაზით აგზავნის.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-086",
+      "word": "ანტენა",
+      "group": "tech",
+      "recordedMeaning": "antenna",
+      "explanationKa": "მოწყობილობა რადიო- და ტელესიგნალების დასაჭერად.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-087",
+      "word": "ატლასი",
+      "group": "tech",
+      "recordedMeaning": "atlas",
+      "explanationKa": "წიგნი, რომელშიც რუკებია თავმოყრილი.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending",
+      "note": "The dictionary also lists a shiny silk cloth. The explanation keeps the recorded book of maps."
+    },
+    {
+      "id": "WE03-088",
+      "word": "ორგანი",
+      "group": "arts",
+      "recordedMeaning": "organ; musical instrument",
+      "explanationKa": "მილებიანი დიდი კლავიშიანი საკრავი, ხშირად ეკლესიებში.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending",
+      "note": "The dictionary also lists a double-width cloth. The explanation keeps the approved instrument sense."
+    },
+    {
+      "id": "WE03-089",
+      "word": "მუმია",
+      "group": "history",
+      "recordedMeaning": "mummy",
+      "explanationKa": "ხრწნისგან დაცული გვამი, მაგალითად, ეგვიპტის ფარაონისა.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-090",
+      "word": "შერიფი",
+      "group": "history",
+      "recordedMeaning": "sheriff",
+      "explanationKa": "აშშ-ში ოლქის პოლიციის უფროსი.",
+      "dictionaryCheck": "none",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-091",
+      "word": "კვირტი",
+      "group": "nature",
+      "recordedMeaning": "bud",
+      "explanationKa": "გაუშლელი ყვავილი ან ფოთოლი ტოტზე.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-092",
+      "word": "ლამა",
+      "group": "nature",
+      "recordedMeaning": "llama",
+      "explanationKa": "სამხრეთ ამერიკის გრძელკისერა ცხოველი, აქლემის ნათესავი.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-093",
+      "word": "შტამპი",
+      "group": "objects",
+      "recordedMeaning": "official stamp",
+      "explanationKa": "ბეჭედი დაწესებულების სახელით, რომელსაც საბუთზე დაარტყამენ.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-094",
+      "word": "ლულა",
+      "group": "objects",
+      "recordedMeaning": "barrel of a gun",
+      "explanationKa": "თოფის მილი, რომელშიც ტყვია გადის.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-095",
+      "word": "შოლტი",
+      "group": "objects",
+      "recordedMeaning": "whip",
+      "explanationKa": "ტყავის წვრილი მათრახი ხის ტარით.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    },
+    {
+      "id": "WE03-096",
+      "word": "ფოლგა",
+      "group": "objects",
+      "recordedMeaning": "metal foil",
+      "explanationKa": "ლითონის თხელი ფურცელი საკვების შესაფუთად.",
+      "dictionaryCheck": "ganmarteba.ge",
+      "ownerDecision": "pending"
+    }
+  ]
+}

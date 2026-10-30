@@ -644,6 +644,33 @@ test('finishing the last stop in a country announces the next country', async ()
   }
 });
 
+test('victory explains the level’s words and keeps moving on within reach', async () => {
+  const before = gameStore.getState().game;
+  type Host = { readonly type: unknown; readonly parent: Host | null };
+  const scrolls = (node: Host | null): boolean =>
+    node !== null && (node.type === 'RCTScrollView' || scrolls(node.parent));
+  try {
+    gameStore.setState({ game: reachCurrentLevel(22) });
+    jest.mocked(useLocalSearchParams).mockReturnValue({ levelId: 'ka-022' });
+    const screen = await render(<Victory />);
+    await fireEvent.press(screen.getByTestId('word-meaning-ბოტი'));
+    expect(
+      screen.getByTestId('word-explanation').props.accessibilityLabel,
+    ).toContain('ბოტი. ');
+    await fireEvent.press(screen.getByTestId('word-explanation-close'));
+    expect(screen.queryByTestId('word-explanation')).toBeNull();
+    // Pinned below the scrolling content, so the box cannot push it off screen.
+    expect(scrolls(screen.getByTestId('victory-next'))).toBe(false);
+
+    jest.mocked(useLocalSearchParams).mockReturnValue({ levelId: 'ka-021' });
+    await screen.rerender(<Victory />);
+    expect(screen.queryByTestId('word-meanings')).toBeNull();
+    expect(scrolls(screen.getByTestId('victory-next'))).toBe(true);
+  } finally {
+    gameStore.setState({ game: before });
+  }
+});
+
 test('locked levels, postcards and countries say what opens them', async () => {
   const before = gameStore.getState().game;
   try {

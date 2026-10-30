@@ -34,6 +34,10 @@ export interface LetterWheelViewProps extends LetterWheelProps {
   readonly width?: number;
   readonly feedback?: StripFeedback | null;
   readonly idleHint?: string | null;
+  /** Opens the explanation of the word the strip is showing, if it has one. */
+  readonly onExplain?: (() => void) | null;
+  /** A card is open above the wheel: fade the disc and its side controls. */
+  readonly dimmed?: boolean;
   /** Found-word colour for the strip; usually the chapter scene's accent. */
   readonly accent?: string;
   /** Controls beside the disc on the left (e.g. hints). */
@@ -187,12 +191,13 @@ export function LetterWheel(props: LetterWheelViewProps) {
           tapMode ? 'შეეხე ასოებს თანმიმდევრობით' : (props.idleHint ?? null)
         }
         width={width}
+        onExplain={props.onExplain ?? null}
         {...(props.accent ? { accent: props.accent } : {})}
         {...(tapMode
           ? { onClear: () => setTapIds([]), onSubmit: submitTaps }
           : {})}
       />
-      <View style={{ width, height: size }}>
+      <View style={[{ width, height: size }, props.dimmed && styles.dimmed]}>
         <View
           ref={props.anchors?.disc}
           collapsable={false}
@@ -540,6 +545,7 @@ function TapTile({
 const styles = StyleSheet.create({
   ring: { position: 'absolute', left: 0, top: 0 },
   disc: { position: 'absolute', top: 0 },
+  dimmed: { opacity: 0.32 },
   letterSlot: {
     position: 'absolute',
     alignItems: 'center',

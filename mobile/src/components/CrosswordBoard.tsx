@@ -9,8 +9,9 @@ import Animated, {
   withTiming,
   ZoomIn,
 } from 'react-native-reanimated';
-import type { CrosswordCell, Level } from '../models/types';
-import { fonts, letterLift, motion, palette, radius } from '../theme';
+import type { CrosswordCell, Level, SolvedWord } from '../models/types';
+import { fonts, letterLift, motion, palette, radius, touch } from '../theme';
+import { ExplainButton } from './WordExplanation';
 
 /**
  * One committed event batch, translated into what the board should animate.
@@ -35,6 +36,9 @@ export interface CrosswordBoardProps {
   readonly moment?: BoardMoment | null;
   /** Colour of found cells; usually the chapter scene's accent. */
   readonly accent?: string;
+  /** Solved words with an explanation: each keeps a ? on its first cell. */
+  readonly explained?: readonly SolvedWord[];
+  readonly onExplain?: (word: string) => void;
 }
 
 const GAP = 4;
@@ -52,6 +56,38 @@ export function boardCellSize(
   return Math.max(MIN_CELL, Math.floor(Math.min(MAX_CELL, byWidth, byHeight)));
 }
 
+/**
+ * Where a word's ? sits: on its first cell's top right corner. Two words can
+ * start on one cell, one across and one down; the down word takes the left
+ * corner, and the tap areas stop short of each other so each opens its own word.
+ */
+export function explainSpot(
+  { id, row, column, direction }: SolvedWord,
+  explained: readonly SolvedWord[],
+  size: number,
+  badge: number,
+) {
+  const shared = explained.some(
+    (other) => other.id !== id && other.row === row && other.column === column,
+  );
+  const onLeft = shared && direction === 'down';
+  const reach = Math.max(0, (touch - badge) / 2);
+  const between = Math.max(0, (size - badge * 1.2) / 2);
+  return {
+    position: {
+      left:
+        column * (size + GAP) + (onLeft ? -badge * 0.4 : size - badge * 0.6),
+      top: row * (size + GAP) - badge * 0.4,
+    },
+    hitSlop: {
+      top: reach,
+      bottom: reach,
+      left: shared && !onLeft ? between : reach,
+      right: onLeft ? between : reach,
+    },
+  };
+}
+
 export function CrosswordBoard({
   cells,
   grid,
@@ -59,8 +95,12 @@ export function CrosswordBoard({
   maxHeight,
   moment,
   accent = palette.turquoise,
+  explained = [],
+  onExplain,
 }: CrosswordBoardProps) {
   const size = boardCellSize(grid, maxWidth, maxHeight);
+  // Small enough on a phone's tightest board to leave the letter readable.
+  const badge = Math.max(16, Math.round(size * 0.42));
   const timing = useMemo(() => {
     const order = new Map<string, number>();
     moment?.revealed.forEach((id, index) => order.set(id, index));
@@ -102,6 +142,27 @@ export function CrosswordBoard({
           }
         />
       ))}
+      {onExplain &&
+        explained.map((solved) => {
+          const spot = explainSpot(solved, explained, size, badge);
+          return (
+            <Animated.View
+              key={solved.id}
+              entering={ZoomIn.delay(motion.revealSettle)
+                .springify()
+                .damping(14)}
+              style={[styles.badge, spot.position]}
+            >
+              <ExplainButton
+                word={solved.word}
+                size={badge}
+                hitSlop={spot.hitSlop}
+                onPress={() => onExplain(solved.word)}
+                testID={`board-explain-${solved.id}`}
+              />
+            </Animated.View>
+          );
+        })}
     </View>
   );
 }
@@ -289,6 +350,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   gold: { backgroundColor: palette.gold },
+  badge: { position: 'absolute' },
   letter: {
     fontFamily: fonts.textBold,
     color: '#FFFFFF',

@@ -563,6 +563,35 @@ as the canonical rulebook; tool-specific instruction files should point here.
   Demo-ad builds never reach Unity: testing it needs a registered AdMob test device
   and Unity's test mode, on the owner's explicit approval.
 
+## Word explanations
+
+- On 2026-10-30 the owner approved **"?" word explanations** for **389 words**:
+  149 from the first review, 144 from the second and 96 from the third, all
+  recorded in [the candidate list](docs/WORD_EXPLANATION_CANDIDATES.md). The other
+  214 reviewed words are not selected; do not present them again as unseen. A word
+  that needs no explanation gets no "?". Bonus words are not covered.
+- After a player finds an explained required answer, a gold "?" sits beside it in
+  the word strip until the next trace, and a smaller "?" stays on its first board
+  cell. The victory screen lists the level's explained words, because finishing a
+  level leaves the board before the strip's "?" can be used. Each one opens the
+  same card. While that box shows, the victory logo shrinks and both buttons stay
+  pinned at the bottom, so the next level is never below the fold on small phones.
+- Explanations are free and never interrupt play. Tapping anywhere closes the
+  card. It is drawn through `Screen`'s `overlay`, so it can never cover the banner,
+  and it must not change when ads are requested, shown or refreshed.
+- `content/word-explanations.json` is the runtime text. It is a **draft pending
+  the owner's review**; batches [01](docs/WORD_EXPLANATIONS_BATCH_01.md),
+  [02](docs/WORD_EXPLANATIONS_BATCH_02.md) and
+  [03](docs/WORD_EXPLANATIONS_BATCH_03.md) record the dictionary checks, and a test
+  keeps them identical to the runtime file. Explanations are keyed
+  by spelling, so changing one needs no content revision or save migration.
+- Each explanation must match the owner-approved sense, be one short sentence and
+  be written in original words, not copied from a dictionary. When two explained
+  words start on one cell, the down word's "?" takes the cell's left corner and the
+  two tap areas stop short of each other, so each opens its own word.
+- Unsolved answers stay out of the UI: `GameplayView.solvedWords` lists found words
+  only, as `cells` hide locked letters.
+
 ## Sources of truth
 
 Read these before editing content; current filenames below describe revision 31:
@@ -574,6 +603,7 @@ Read these before editing content; current filenames below describe revision 31:
 - [Journey vocabulary review and all 500 boards](docs/VOCABULARY_REVIEW_V31.md).
 - [Full vocabulary list for owner review](docs/VOCABULARY_OWNER_REVIEW_V31.md).
 - [Current journey manifest](content/journey-v29.json).
+- [Word explanations](content/word-explanations.json).
 - [Central Europe artwork and generation prompts](docs/CENTRAL_EUROPE_ARTWORK.md).
 - [Portugal and Morocco artwork and generation prompts](docs/PORTUGAL_MOROCCO_ARTWORK.md).
 - [Spain artwork and generation prompts](docs/SPAIN_ARTWORK.md).

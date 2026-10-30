@@ -147,11 +147,20 @@ export interface CrosswordCell {
   readonly status: 'locked' | 'revealed';
   readonly letter: string | null;
 }
+/** A found word and its first cell. Unsolved answers are never part of the view. */
+export interface SolvedWord {
+  readonly id: string;
+  readonly word: string;
+  readonly row: number;
+  readonly column: number;
+  readonly direction: 'across' | 'down';
+}
 export interface GameplayView {
   readonly levelId: string;
   readonly title: string;
   readonly grid: Level['grid'];
   readonly cells: readonly CrosswordCell[];
+  readonly solvedWords: readonly SolvedWord[];
   readonly tiles: readonly LetterTile[];
   readonly coins: number;
   readonly foundWords: number;

@@ -13,6 +13,7 @@ import { fonts, letterLift, motion, palette } from '../theme';
 import { RoundButton } from './Buttons';
 import { Icon } from './Icon';
 import { Txt } from './Text';
+import { ExplainButton } from './WordExplanation';
 
 export type StripFeedback =
   | {
@@ -28,6 +29,8 @@ export const STRIP_HEIGHT = 52;
 
 /** How long an outcome stays bright before it settles into a quiet record. */
 const BRIGHT_MS = 1600;
+const CHIP_GAP = 4;
+const EXPLAIN_SIZE = 40;
 const CHIP = {
   found: palette.turquoise,
   bonus: palette.gold,
@@ -40,6 +43,13 @@ const CHIP_TEXT = {
   duplicate: palette.ink,
   invalid: palette.ivory,
 };
+
+function chipSize(width: number, letters: number, max: number): number {
+  return Math.max(
+    20,
+    Math.min(max, Math.floor((width - CHIP_GAP * letters) / letters)),
+  );
+}
 
 function describe(feedback: StripFeedback): string {
   if (feedback.kind === 'notice') return feedback.caption;
@@ -58,6 +68,7 @@ export function WordStrip({
   width,
   onClear,
   onSubmit,
+  onExplain = null,
   accent = palette.turquoise,
 }: {
   readonly letters: readonly string[];
@@ -67,6 +78,8 @@ export function WordStrip({
   /** Tap mode: clear and submit buttons flank the letters while some are chosen. */
   readonly onClear?: () => void;
   readonly onSubmit?: () => void;
+  /** The found word has an explanation: a ? waits beside it until the next trace. */
+  readonly onExplain?: (() => void) | null;
   /** Found-word chips use the board's found-cell colour. */
   readonly accent?: string;
 }) {
@@ -79,6 +92,7 @@ export function WordStrip({
   }, [feedback]);
 
   const tracing = letters.length > 0;
+  const explaining = !tracing && feedback?.kind === 'found' ? onExplain : null;
   const label = tracing
     ? letters.join('')
     : feedback
@@ -118,6 +132,27 @@ export function WordStrip({
           </Animated.View>
         ) : null}
       </View>
+      {explaining && feedback?.kind === 'found' && (
+        <Animated.View
+          entering={ZoomIn.delay(
+            Array.from(feedback.word).length * 55 + motion.base,
+          )
+            .springify()
+            .damping(14)}
+          style={[
+            styles.side,
+            { left: explainLeft(feedback.word, feedback.caption, width) },
+            styles.explain,
+          ]}
+        >
+          <ExplainButton
+            word={feedback.word}
+            size={EXPLAIN_SIZE}
+            onPress={explaining}
+            testID="strip-explain"
+          />
+        </Animated.View>
+      )}
       {tracing && onClear && (
         <View style={[styles.side, styles.left]}>
           <RoundButton
@@ -157,6 +192,18 @@ export function WordStrip({
       )}
     </View>
   );
+}
+
+/** Just past the last chip, staying inside the strip for long words. */
+function explainLeft(
+  word: string,
+  caption: string | undefined,
+  width: number,
+): number {
+  const count = Array.from(word).length;
+  const size = chipSize(width, count, caption ? 26 : 30);
+  const chips = count * size + CHIP_GAP * (count - 1);
+  return Math.min(width / 2 + chips / 2 + 10, width - EXPLAIN_SIZE);
 }
 
 function Outcome({
@@ -232,10 +279,7 @@ function Chips({
   max: number;
   accent?: string;
 }) {
-  const size = Math.max(
-    20,
-    Math.min(max, Math.floor((width - 4 * letters.length) / letters.length)),
-  );
+  const size = chipSize(width, letters.length, max);
   const fill =
     kind === 'tracing' ? palette.ivory : kind === 'found' ? accent : CHIP[kind];
   const color = kind === 'tracing' ? palette.ink : CHIP_TEXT[kind];
@@ -292,7 +336,7 @@ const styles = StyleSheet.create({
     borderRadius: 999,
     backgroundColor: 'rgba(18, 12, 36, 0.42)',
   },
-  chips: { flexDirection: 'row', gap: 4 },
+  chips: { flexDirection: 'row', gap: CHIP_GAP },
   // Flat, like the crossword tiles.
   chip: {
     borderRadius: 8,
@@ -308,6 +352,7 @@ const styles = StyleSheet.create({
   side: { position: 'absolute', top: (STRIP_HEIGHT - 40) / 2 },
   left: { left: 0 },
   right: { right: 0 },
+  explain: { top: (STRIP_HEIGHT - EXPLAIN_SIZE) / 2 },
   submit: {
     width: 40,
     height: 40,
