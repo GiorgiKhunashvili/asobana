@@ -5,7 +5,10 @@ import {
   showAdsPrivacyOptions,
   usePrivacyOptionsRequired,
 } from '../src/ads/consent';
-import { AdsUnavailableError } from '../src/ads/createRewardedAds';
+import {
+  AdsNotAllowedError,
+  AdsUnavailableError,
+} from '../src/ads/createRewardedAds';
 import { startAdsSdk } from '../src/ads/nativeAdsSdk';
 
 const fakeSdk = {
@@ -98,7 +101,10 @@ test('the SDK starts only after consent allows ads', async () => {
   fakeSdk.AdsConsent.gatherConsent
     .mockResolvedValueOnce(info(false, true))
     .mockResolvedValueOnce(info(true, false));
-  await expect(startAdsSdk(sdk)).rejects.toBeInstanceOf(AdsUnavailableError);
+  const blocked = startAdsSdk(sdk);
+  await expect(blocked).rejects.toBeInstanceOf(AdsNotAllowedError);
+  // Consent can change, so this must not read as a build without ads.
+  await expect(blocked).rejects.not.toBeInstanceOf(AdsUnavailableError);
   expect(ads.setRequestConfiguration).not.toHaveBeenCalled();
   expect(ads.initialize).not.toHaveBeenCalled();
   await expect(startAdsSdk(sdk)).resolves.toBe(sdk);

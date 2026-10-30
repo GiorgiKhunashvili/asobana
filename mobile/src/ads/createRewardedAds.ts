@@ -18,18 +18,27 @@ export interface AdCallbacks {
   loaded(): void;
   earned(): void;
   closed(): void;
-  failed(): void;
+  failed(error?: unknown): void;
 }
 export interface RewardedAdHandle {
   load(): void;
   show(): Promise<void>;
   dispose(): void;
 }
+/** This build cannot show ads (Expo Go, web), so retrying cannot help. */
 export class AdsUnavailableError extends Error {}
+/** Consent does not allow ad requests right now, which can change: unlike
+ * AdsUnavailableError, this leaves the ad free to try again. */
+export class AdsNotAllowedError extends Error {
+  readonly code = 'consent-blocked';
+}
+/** Google's loaded ads expire after an hour; refresh before reaching that limit. */
+const MAX_AD_AGE_MS = 55 * 60_000;
 interface Dependencies<Target> {
   createAd(callbacks: AdCallbacks): Promise<RewardedAdHandle>;
   createClaimId(): string;
   claimReward(id: string, target: Target): Promise<void>;
+  reportFailure?(error: unknown): void;
   now?: () => number;
 }
 interface Session<Target> {
@@ -94,8 +103,11 @@ export function createRewardedAds<Target = void>(deps: Dependencies<Target>) {
       }
     }
   };
-  const fail = (s: Session<Target>) => {
+  const expired = (s: Session<Target>) => now() - s.loadedAt >= MAX_AD_AGE_MS;
+  /** `reason` marks a real failure to report; retiring an old ad has none. */
+  const fail = (s: Session<Target>, reason?: unknown) => {
     if (session !== s) return;
+    if (reason !== undefined && !s.closed) deps.reportFailure?.(reason);
     clearTimer();
     s.closed = true;
     disposeAd(s);
@@ -103,6 +115,8 @@ export function createRewardedAds<Target = void>(deps: Dependencies<Target>) {
     else update('error');
   };
   const load = async () => {
+    if (snapshot.status === 'ready' && session && expired(session))
+      fail(session);
     if (
       [
         'loading',
@@ -127,7 +141,6 @@ export function createRewardedAds<Target = void>(deps: Dependencies<Target>) {
     };
     session = s;
     update('loading');
-    timer = setTimeout(() => fail(s), 45_000);
     try {
       s.id = deps.createClaimId();
       const ad = await deps.createAd({
@@ -148,8 +161,8 @@ export function createRewardedAds<Target = void>(deps: Dependencies<Target>) {
           s.closed = true;
           finish(s);
         },
-        failed() {
-          fail(s);
+        failed(error) {
+          fail(s, error ?? 'unknown');
         },
       });
       if (session !== s || s.closed) {
@@ -157,6 +170,8 @@ export function createRewardedAds<Target = void>(deps: Dependencies<Target>) {
         return;
       }
       s.ad = ad;
+      // Only the request is timed: consent takes as long as the player needs.
+      timer = setTimeout(() => fail(s, 'timeout'), 45_000);
       ad.load();
     } catch (error) {
       if (session !== s || s.closed) return;
@@ -167,8 +182,7 @@ export function createRewardedAds<Target = void>(deps: Dependencies<Target>) {
   const show = async (target: Target) => {
     const s = session;
     if (!s?.ad || snapshot.status !== 'ready') return;
-    // Google's loaded ads expire after an hour; refresh before reaching that limit.
-    if (now() - s.loadedAt >= 55 * 60_000) {
+    if (expired(s)) {
       fail(s);
       return;
     }
@@ -177,8 +191,8 @@ export function createRewardedAds<Target = void>(deps: Dependencies<Target>) {
     update('showing'); // Synchronous guard against repeated presses.
     try {
       await s.ad.show();
-    } catch {
-      fail(s);
+    } catch (error) {
+      fail(s, error);
     }
   };
   /** One explicit press may wait for a preload, then present on this screen.
@@ -195,11 +209,7 @@ export function createRewardedAds<Target = void>(deps: Dependencies<Target>) {
     const request = {};
     watchRequest = request;
     try {
-      if (
-        snapshot.status === 'ready' &&
-        session &&
-        now() - session.loadedAt >= 55 * 60_000
-      )
+      if (snapshot.status === 'ready' && session && expired(session))
         fail(session);
       if (!['ready', 'loading'].includes(snapshot.status)) void load();
       if (snapshot.status === 'loading') {

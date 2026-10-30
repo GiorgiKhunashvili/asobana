@@ -535,6 +535,22 @@ as the canonical rulebook; tool-specific instruction files should point here.
   Continuing without watching stays the primary action; only a press presents,
   and leaving the screen cancels a waiting ad. Credit only the earned event,
   recording the receipt, balance and doubled level in one transaction.
+- The owner approved **Sentry** on 2026-10-30 (EU region) to see crashes and real
+  ad failures: demo ads in tester builds nearly always fill, so only `production`
+  can show why live ads fail. Release builds send crash reports and, per ad
+  failure, only its source, code, platform, app version, device model and OS
+  version (`mobile/src/services/errorReporting.ts`, enforced by
+  `mobile/tests/errorReporting.test.ts`). Keep breadcrumbs, sessions, tracing,
+  profiling and replay off, and keep Sentry's per-install IDs out of everything
+  the SDK lets us control. Only native crash reports still carry one (`device.id`
+  on Android, `device_app_hash` on iOS), which the privacy policy discloses.
+  Tester builds report as `beta`.
+  Reporting is a passive record: it must never change when an ad is requested,
+  shown or refreshed. The privacy policy promises an update before data handling
+  changes, so describe any new collection there and in the store declarations
+  first. Source-map upload stays off (`SENTRY_DISABLE_AUTO_UPLOAD` in
+  `mobile/eas.json`) until the owner adds the Sentry organization and project and
+  a `SENTRY_AUTH_TOKEN` EAS secret; until then, JS stack traces stay minified.
 
 ## Sources of truth
 

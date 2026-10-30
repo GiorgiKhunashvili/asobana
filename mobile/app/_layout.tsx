@@ -9,6 +9,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { loadNativeAdsSdk } from '../src/ads/nativeAdsSdk';
 import { SharedGameBanner } from '../src/components/GameBannerAd';
 import { gameStore, useGameStore } from '../src/state/gameStore';
+import { startErrorReporting } from '../src/services/errorReporting';
 import { useGameFeedback } from '../src/services/feedback';
 import { Backdrop } from '../src/components/Backdrop';
 import { PrimaryButton } from '../src/components/Buttons';
@@ -17,6 +18,10 @@ import { StudioCredit } from '../src/components/StudioCredit';
 import Animated, { FadeIn } from 'react-native-reanimated';
 import { Display, Txt } from '../src/components/Text';
 import { chapterTone, fontAssets, palette, space } from '../src/theme';
+
+// Before the first render, so a crash while launching is reported too.
+startErrorReporting();
+
 function Feedback() {
   useGameFeedback();
   return null;

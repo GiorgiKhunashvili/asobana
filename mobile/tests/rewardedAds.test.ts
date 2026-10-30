@@ -1,7 +1,9 @@
 import {
+  AdsNotAllowedError,
   AdsUnavailableError,
   createRewardedAds,
   type AdCallbacks,
+  type RewardedAdHandle,
 } from '../src/ads/createRewardedAds';
 
 function setup(
@@ -160,6 +162,115 @@ test('an expired loaded ad is discarded before showing', async () => {
   expect(handles[0]!.show).not.toHaveBeenCalled();
   expect(ads.getSnapshot().status).toBe('error');
   expect(claimReward).not.toHaveBeenCalled();
+});
+
+test('consent blocking ads is temporary: a later load requests an ad again', async () => {
+  const handle = {
+    load: jest.fn(),
+    show: jest.fn().mockResolvedValue(undefined),
+    dispose: jest.fn(),
+  };
+  const createAd = jest
+    .fn<Promise<RewardedAdHandle>, [AdCallbacks]>()
+    .mockRejectedValueOnce(new AdsNotAllowedError('Not yet'))
+    .mockResolvedValue(handle);
+  const ads = createRewardedAds({
+    createAd,
+    createClaimId: () => 'claim',
+    claimReward: jest.fn(),
+  });
+  await ads.load();
+  expect(ads.getSnapshot().status).toBe('error');
+  await ads.load();
+  expect(ads.getSnapshot().status).toBe('loading');
+  expect(handle.load).toHaveBeenCalledTimes(1);
+});
+
+test('time spent on consent and SDK start does not count against the ad request', async () => {
+  let started!: (handle: RewardedAdHandle) => void;
+  const handle = {
+    load: jest.fn(),
+    show: jest.fn().mockResolvedValue(undefined),
+    dispose: jest.fn(),
+  };
+  const ads = createRewardedAds({
+    createAd: () =>
+      new Promise<RewardedAdHandle>((done) => {
+        started = done;
+      }),
+    createClaimId: () => 'claim',
+    claimReward: jest.fn(),
+  });
+  void ads.load();
+  jest.advanceTimersByTime(120_000); // The player is still reading the form.
+  expect(ads.getSnapshot().status).toBe('loading');
+  started(handle);
+  await flush();
+  expect(handle.load).toHaveBeenCalledTimes(1);
+  jest.advanceTimersByTime(44_999);
+  expect(ads.getSnapshot().status).toBe('loading');
+  jest.advanceTimersByTime(1);
+  expect(ads.getSnapshot().status).toBe('error');
+});
+
+test('a preload replaces an expired ad instead of keeping it marked ready', async () => {
+  const { ads, callbacks, handles, createAd } = setup();
+  await ads.load();
+  callbacks[0]!.loaded();
+  jest.advanceTimersByTime(54 * 60_000);
+  await ads.load(); // Still fresh: nothing to replace.
+  expect(createAd).toHaveBeenCalledTimes(1);
+  jest.advanceTimersByTime(60_000);
+  await ads.load();
+  expect(createAd).toHaveBeenCalledTimes(2);
+  expect(handles[0]!.dispose).toHaveBeenCalledTimes(1);
+  expect(ads.getSnapshot().status).toBe('loading');
+  callbacks[1]!.loaded();
+  expect(ads.getSnapshot().status).toBe('ready');
+});
+
+test('real failures are reported once; retiring an expired ad is not a failure', async () => {
+  const reportFailure = jest.fn();
+  const callbacks: AdCallbacks[] = [];
+  const handles: { load: jest.Mock; show: jest.Mock; dispose: jest.Mock }[] =
+    [];
+  const ads = createRewardedAds<void>({
+    createAd: async (events) => {
+      callbacks.push(events);
+      const handle = {
+        load: jest.fn(),
+        show: jest.fn().mockResolvedValue(undefined),
+        dispose: jest.fn(),
+      };
+      handles.push(handle);
+      return handle;
+    },
+    createClaimId: () => 'claim',
+    claimReward: jest.fn(),
+    reportFailure,
+  });
+  const noFill = { code: 'googleMobileAds/no-fill' };
+  await ads.load();
+  callbacks[0]!.failed(noFill);
+  expect(reportFailure.mock.calls).toEqual([[noFill]]);
+  await ads.load();
+  jest.advanceTimersByTime(45_000);
+  expect(reportFailure).toHaveBeenLastCalledWith('timeout');
+  // A failed show arrives twice: as a rejection and as the SDK's error event.
+  const denied = { code: 'googleMobileAds/not-ready' };
+  await ads.load();
+  callbacks[2]!.loaded();
+  handles[2]!.show.mockRejectedValueOnce(denied);
+  await ads.show();
+  callbacks[2]!.failed(denied);
+  expect(reportFailure).toHaveBeenCalledTimes(3);
+  expect(reportFailure).toHaveBeenLastCalledWith(denied);
+  await ads.load();
+  callbacks[3]!.loaded();
+  jest.advanceTimersByTime(55 * 60_000);
+  await ads.show();
+  expect(ads.getSnapshot().status).toBe('error');
+  expect(reportFailure).toHaveBeenCalledTimes(3);
 });
 
 test('one watch press waits for a preload and repeated presses present only once', async () => {

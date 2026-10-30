@@ -1,7 +1,8 @@
 import Constants, { ExecutionEnvironment } from 'expo-constants';
 import { Platform } from 'react-native';
+import { reportAdFailure } from '../services/errorReporting';
 import { gatherAdsConsent, showAdsPrivacyOptions } from './consent';
-import { AdsUnavailableError } from './createRewardedAds';
+import { AdsNotAllowedError, AdsUnavailableError } from './createRewardedAds';
 
 type AdsSdk = typeof import('react-native-google-mobile-ads');
 let initialization: Promise<AdsSdk> | undefined;
@@ -22,7 +23,7 @@ function importNativeAdsSdk(): Promise<AdsSdk> {
  * consent flow allows ad requests. */
 export async function startAdsSdk(sdk: AdsSdk): Promise<AdsSdk> {
   if (!(await gatherAdsConsent(sdk)))
-    throw new AdsUnavailableError('Ad consent has not been given yet');
+    throw new AdsNotAllowedError('Ad consent has not been given yet');
   await sdk.default().setRequestConfiguration({
     maxAdContentRating: sdk.MaxAdContentRating.G,
   });
@@ -37,6 +38,7 @@ export function loadNativeAdsSdk(): Promise<AdsSdk> {
     .then(startAdsSdk)
     .catch((error: unknown) => {
       initialization = undefined;
+      reportAdFailure('sdk', error);
       throw error;
     });
   return initialization;

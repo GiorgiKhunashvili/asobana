@@ -25,6 +25,12 @@
           "delayAppMeasurementInit": true
         }
       ],
+      [
+        "@sentry/react-native/expo",
+        {
+          "url": "https://de.sentry.io/"
+        }
+      ],
       "expo-router",
       "expo-sqlite",
       [

@@ -298,9 +298,9 @@ test('coins screen shows the 50-coin offer and requires an explicit watch press'
       screen.getByRole('button', { name: 'ნახე რეკლამა · +50 მონეტა' }),
     ).toBeTruthy();
     expect(rewardedAds.load).toHaveBeenCalledTimes(1);
-    expect(rewardedAds.show).not.toHaveBeenCalled();
+    expect(rewardedAds.watch).not.toHaveBeenCalled();
     await fireEvent.press(screen.getByTestId('rewarded-ad'));
-    expect(rewardedAds.show).toHaveBeenCalledTimes(1);
+    expect(rewardedAds.watch).toHaveBeenCalledTimes(1);
     gameStore.setState({
       game: { ...initialState(journeyCatalog), coins: 50 },
     });
@@ -310,6 +310,15 @@ test('coins screen shows the 50-coin offer and requires an explicit watch press'
     gameStore.setState({ game: before });
     jest.mocked(useLocalSearchParams).mockReturnValue({});
   }
+});
+
+test('leaving the coins screen cancels an ad still refreshing after a press', async () => {
+  const screen = await render(<Coins />);
+  await fireEvent.press(screen.getByTestId('rewarded-ad'));
+  const [signal] = jest.mocked(rewardedAds.watch).mock.calls[0]!;
+  expect(signal.aborted).toBe(false);
+  await screen.unmount();
+  expect(signal.aborted).toBe(true);
 });
 
 test('the coin offer disables pending ads and retries an earned save without showing another ad', async () => {

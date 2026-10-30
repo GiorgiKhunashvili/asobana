@@ -1,7 +1,8 @@
 const path = require('node:path');
-const { getDefaultConfig } = require('expo/metro-config');
+const { getSentryExpoConfig } = require('@sentry/react-native/metro');
 
-const config = getDefaultConfig(__dirname);
+// Expo's default config, plus the debug IDs that tie crashes to source maps.
+const config = getSentryExpoConfig(__dirname);
 // Versioned JSON lives outside the mobile workspace and must refresh with code.
 config.watchFolders = [
   ...config.watchFolders,

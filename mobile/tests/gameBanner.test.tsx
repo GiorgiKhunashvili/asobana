@@ -2,16 +2,22 @@ import { act, fireEvent, render } from '@testing-library/react-native';
 import { useIsFocused } from 'expo-router';
 import { useEffect } from 'react';
 import { AppState, View, type AppStateStatus } from 'react-native';
+import { AdsUnavailableError } from '../src/ads/createRewardedAds';
 import { loadNativeAdsSdk } from '../src/ads/nativeAdsSdk';
 import {
   BANNER_KEEP_ALIVE_MS,
   FIRST_BANNER_DELAY_MS,
+  FIRST_SDK_RETRY_MS,
   GameBannerAd,
   SharedGameBanner,
 } from '../src/components/GameBannerAd';
+import { reportAdFailure } from '../src/services/errorReporting';
 
 jest.mock('expo-router', () => ({ useIsFocused: jest.fn(() => true) }));
 jest.mock('../src/ads/nativeAdsSdk', () => ({ loadNativeAdsSdk: jest.fn() }));
+jest.mock('../src/services/errorReporting', () => ({
+  reportAdFailure: jest.fn(),
+}));
 jest.mock(
   'react-native-safe-area-context',
   () => require('react-native-safe-area-context/jest/mock').default,
@@ -127,6 +133,61 @@ test('unsupported builds and SDK failures keep a noninteractive fallback', async
   await wait(FIRST_BANNER_DELAY_MS);
   expect(screen.getByText('რეკლამა ვერ ჩაიტვირთა')).toBeTruthy();
   expect(screen.queryByTestId('native-banner')).toBeNull();
+});
+
+test('a failed SDK start recovers on the same banner, without a level change or restart', async () => {
+  jest.mocked(loadNativeAdsSdk).mockRejectedValueOnce(new Error('offline'));
+  const screen = await render(<App />);
+  await wait(FIRST_BANNER_DELAY_MS);
+  expect(screen.getByText('რეკლამა ვერ ჩაიტვირთა')).toBeTruthy();
+  expect(screen.queryByTestId('native-banner')).toBeNull();
+  await wait(FIRST_SDK_RETRY_MS - 1);
+  expect(loadNativeAdsSdk).toHaveBeenCalledTimes(1);
+  await wait(1);
+  expect(loadNativeAdsSdk).toHaveBeenCalledTimes(2);
+  expect(screen.getByTestId('native-banner')).toBeTruthy();
+  expect(screen.getByText('რეკლამა იტვირთება…')).toBeTruthy();
+  expect(bannerMounts).toBe(1);
+});
+
+test('SDK retries back off, wait while the banner is hidden, and stop on leaving', async () => {
+  jest.mocked(loadNativeAdsSdk).mockRejectedValue(new Error('offline'));
+  const screen = await render(<App />);
+  await wait(FIRST_BANNER_DELAY_MS);
+  await wait(FIRST_SDK_RETRY_MS);
+  expect(loadNativeAdsSdk).toHaveBeenCalledTimes(2);
+  await wait(FIRST_SDK_RETRY_MS);
+  expect(loadNativeAdsSdk).toHaveBeenCalledTimes(2); // The wait doubled.
+  await wait(FIRST_SDK_RETRY_MS);
+  expect(loadNativeAdsSdk).toHaveBeenCalledTimes(3);
+  await screen.rerender(<App visible={false} />);
+  await wait(FIRST_SDK_RETRY_MS * 4);
+  expect(loadNativeAdsSdk).toHaveBeenCalledTimes(3); // Nobody can see it.
+  await screen.rerender(<App />);
+  await wait(FIRST_SDK_RETRY_MS * 4);
+  expect(loadNativeAdsSdk).toHaveBeenCalledTimes(4);
+  act(() => changeState('background'));
+  await wait(FIRST_SDK_RETRY_MS * 20);
+  expect(loadNativeAdsSdk).toHaveBeenCalledTimes(4);
+});
+
+test('a build that cannot show ads does not keep retrying', async () => {
+  jest
+    .mocked(loadNativeAdsSdk)
+    .mockRejectedValue(new AdsUnavailableError('Expo Go'));
+  await render(<App />);
+  await wait(FIRST_BANNER_DELAY_MS);
+  await wait(FIRST_SDK_RETRY_MS * 20);
+  expect(loadNativeAdsSdk).toHaveBeenCalledTimes(1);
+});
+
+test('a banner that fails to load reports the error it was given', async () => {
+  const screen = await render(<App />);
+  await wait(FIRST_BANNER_DELAY_MS);
+  const noFill = { code: 'googleMobileAds/no-fill' };
+  fireEvent(screen.getByTestId('native-banner'), 'adFailedToLoad', noFill);
+  expect(reportAdFailure).toHaveBeenCalledWith('banner', noFill);
+  expect(screen.getByText('რეკლამა ვერ ჩაიტვირთა')).toBeTruthy();
 });
 
 // Ad opportunities must not be removed merely to reduce recreation costs.

@@ -1,4 +1,5 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
+import { AppState } from 'react-native';
 import { liveAdsEnabled } from '../ads/adUnits';
 import { rewardedAds, useRewardedAd } from '../ads/rewardedAds';
 import { rewardedAdMessages } from '../ads/messages';
@@ -13,9 +14,21 @@ export function RewardedAdCard() {
   const { status } = useRewardedAd();
   const ready = useGameStore((state) => state.status === 'ready');
   const busy = useGameStore((state) => state.busy);
+  const request = useRef<AbortController | null>(null);
   useEffect(() => {
     if (ready) void rewardedAds.load();
   }, [ready]);
+  useEffect(() => {
+    // An ad still refreshing must never appear after the player has left.
+    const cancel = () => request.current?.abort();
+    const subscription = AppState.addEventListener('change', (state) => {
+      if (state !== 'active') cancel();
+    });
+    return () => {
+      subscription.remove();
+      cancel();
+    };
+  }, []);
   const blocked =
     !ready ||
     busy ||
@@ -46,8 +59,11 @@ export function RewardedAdCard() {
         disabled={blocked}
         onPress={() => {
           if (blocked) return;
-          if (status === 'ready') void rewardedAds.show();
-          else if (status === 'save-error') void rewardedAds.retryReward();
+          if (status === 'ready') {
+            // Watching replaces an ad that expired on screen, in this one press.
+            request.current = new AbortController();
+            void rewardedAds.watch(request.current.signal);
+          } else if (status === 'save-error') void rewardedAds.retryReward();
           else void rewardedAds.load();
         }}
       />

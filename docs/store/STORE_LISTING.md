@@ -157,9 +157,11 @@ There are no in-app purchases.
 
 ### App Privacy (nutrition label) — draft
 
-Only the Google Mobile Ads SDK collects data. Based on Google's
+The Google Mobile Ads SDK and, from the first release after 2026-10-30, Sentry
+collect data. Based on Google's
 [iOS data disclosure guide](https://developers.google.com/admob/ios/privacy/data-disclosure)
-(read 2026-10-23); as the developer you are responsible for the final answers.
+(read 2026-10-23) and the reports captured from Release builds on 2026-10-30; as
+the developer you are responsible for the final answers.
 
 - **Data used to track you:** none (non-personalized ads only, no ATT prompt;
   declaring tracking would also require the ATT prompt).
@@ -179,6 +181,19 @@ Only the Google Mobile Ads SDK collects data. Based on Google's
 | Crash Data                        | Analytics, App Functionality       | No     |
 | Performance Data                  | Third-Party Advertising, Analytics | Yes    |
 | Other Diagnostic Data             | Analytics                          | No     |
+
+**Change these three answers in App Store Connect before releasing Sentry.** The
+table above is what was submitted on 2026-10-26. Sentry's native crash reports
+carry an app-specific device ID, so they count as linked under the same reasoning:
+
+| Data type             | Purposes                                              | Linked |
+| --------------------- | ----------------------------------------------------- | ------ |
+| Device ID             | Third-Party Advertising, Analytics, App Functionality | Yes    |
+| Crash Data            | Analytics, App Functionality                          | Yes    |
+| Other Diagnostic Data | Analytics, App Functionality                          | No     |
+
+Sentry does not change the tracking answer: its reports are not used for
+advertising or shared with data brokers.
 
 ## Google Play Console
 
@@ -214,6 +229,15 @@ Based on Google's [Play data disclosure guide](https://developers.google.com/adm
 | App activity → App interactions           | Yes       | Yes    | Yes      | Advertising or marketing, Analytics, Fraud prevention |
 | App info and performance → Diagnostics    | Yes       | Yes    | Yes      | Advertising or marketing, Analytics, Fraud prevention |
 | Device or other IDs → Device or other IDs | Yes       | Yes    | Yes      | Advertising or marketing, Analytics, Fraud prevention |
+
+**Update these rows in Play Console before releasing Sentry.** Crash logs are new.
+Sentry acts as a service provider, which Play does not count as sharing:
+
+| Category → type                           | Collected | Shared | Required | Purposes                                                                 |
+| ----------------------------------------- | --------- | ------ | -------- | ------------------------------------------------------------------------ |
+| App info and performance → Crash logs     | Yes       | No     | Yes      | App functionality, Analytics                                             |
+| App info and performance → Diagnostics    | Yes       | Yes    | Yes      | App functionality, Advertising or marketing, Analytics, Fraud prevention |
+| Device or other IDs → Device or other IDs | Yes       | Yes    | Yes      | App functionality, Advertising or marketing, Analytics, Fraud prevention |
 
 ## Screenshots
 

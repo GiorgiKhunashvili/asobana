@@ -3,7 +3,9 @@ import { memo, useEffect, useId, useState, useSyncExternalStore } from 'react';
 import { AppState, StyleSheet, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { adUnitId } from '../ads/adUnits';
+import { AdsUnavailableError } from '../ads/createRewardedAds';
 import { loadNativeAdsSdk } from '../ads/nativeAdsSdk';
+import { reportAdFailure } from '../services/errorReporting';
 import { palette } from '../theme';
 import { Txt } from './Text';
 
@@ -16,6 +18,10 @@ export const FIRST_BANNER_DELAY_MS = 800;
 /** One banner outlives screens: through the victory screen and into the next
  * level it is reused, not rebuilt with a new web view and ad request. */
 export const BANNER_KEEP_ALIVE_MS = 30_000;
+/** A failed SDK start is retried while the banner is wanted, doubling up to the
+ * maximum. Level changes reuse this banner, so nothing else would try again. */
+export const FIRST_SDK_RETRY_MS = 15_000;
+const MAX_SDK_RETRY_MS = 120_000;
 const requestOptions = { requestNonPersonalizedAdsOnly: true };
 type AdsSdk = Awaited<ReturnType<typeof loadNativeAdsSdk>>;
 
@@ -114,16 +120,32 @@ const Banner = memo(function Banner() {
   );
   useEffect(() => {
     let active = true;
-    void loadNativeAdsSdk().then(
-      (value) => {
-        if (active) setSdk(value);
-      },
-      () => {
-        if (active) setStatus('failed');
-      },
-    );
+    let retry: ReturnType<typeof setTimeout> | undefined;
+    const start = (attempt: number) => {
+      void loadNativeAdsSdk().then(
+        (value) => {
+          if (!active) return;
+          setStatus('loading');
+          setSdk(value);
+        },
+        (error: unknown) => {
+          if (!active) return;
+          setStatus('failed');
+          if (!(error instanceof AdsUnavailableError)) schedule(attempt);
+        },
+      );
+    };
+    const schedule = (attempt: number) => {
+      const delay = FIRST_SDK_RETRY_MS * 2 ** attempt;
+      retry = setTimeout(
+        () => (wanted ? start(attempt + 1) : schedule(attempt)),
+        Math.min(delay, MAX_SDK_RETRY_MS),
+      );
+    };
+    start(0);
     return () => {
       active = false;
+      clearTimeout(retry);
     };
   }, []);
   return (
@@ -143,7 +165,10 @@ const Banner = memo(function Banner() {
           size={sdk.BannerAdSize.BANNER}
           requestOptions={requestOptions}
           onAdLoaded={() => setStatus('loaded')}
-          onAdFailedToLoad={() => setStatus('failed')}
+          onAdFailedToLoad={(error) => {
+            reportAdFailure('banner', error);
+            setStatus('failed');
+          }}
         />
       )}
     </View>

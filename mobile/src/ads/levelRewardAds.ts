@@ -1,5 +1,6 @@
 import { randomUUID } from 'expo-crypto';
 import { useSyncExternalStore } from 'react';
+import { reportAdFailure } from '../services/errorReporting';
 import { gameStore } from '../state/gameStore';
 import { createRewardedAds } from './createRewardedAds';
 import { createNativeRewardedAd } from './nativeRewardedAd';
@@ -11,6 +12,7 @@ export const levelRewardAds = createRewardedAds<string>({
   createClaimId: randomUUID,
   claimReward: (id, levelId) =>
     gameStore.getState().claimLevelDouble(levelId, id),
+  reportFailure: (error) => reportAdFailure('rewarded', error),
 });
 export function useLevelRewardAdSnapshot() {
   return useSyncExternalStore(

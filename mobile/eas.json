@@ -6,7 +6,10 @@
   "build": {
     "development": {
       "developmentClient": true,
-      "distribution": "internal"
+      "distribution": "internal",
+      "env": {
+        "SENTRY_DISABLE_AUTO_UPLOAD": "true"
+      }
     },
     "beta": {
       "extends": "production",
@@ -18,7 +21,8 @@
       "distribution": "store",
       "autoIncrement": true,
       "env": {
-        "ASOBANA_LIVE_ADS": "1"
+        "ASOBANA_LIVE_ADS": "1",
+        "SENTRY_DISABLE_AUTO_UPLOAD": "true"
       },
       "ios": {
         "image": "latest"
