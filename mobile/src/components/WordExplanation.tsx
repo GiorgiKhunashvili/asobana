@@ -1,4 +1,4 @@
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { Pressable, StyleSheet, Text, View, type Insets } from 'react-native';
 import Animated, { FadeInDown } from 'react-native-reanimated';
 import { explanationOf } from '../content/wordExplanations';
 import { fonts, motion, palette, radius, space, touch } from '../theme';
@@ -30,11 +30,14 @@ function Mark({ size }: { readonly size: number }) {
 export function ExplainButton({
   word,
   size,
+  hitSlop = Math.max(0, (touch - size) / 2),
   onPress,
   testID,
 }: {
   readonly word: string;
   readonly size: number;
+  /** Reach beyond the mark; narrower where another ? sits close by. */
+  readonly hitSlop?: Insets | number;
   readonly onPress: () => void;
   readonly testID: string;
 }) {
@@ -42,7 +45,7 @@ export function ExplainButton({
     <Pressable
       accessibilityRole="button"
       accessibilityLabel={`${word}: ${QUESTION}`}
-      hitSlop={Math.max(0, (touch - size) / 2)}
+      hitSlop={hitSlop}
       onPress={onPress}
       testID={testID}
     >

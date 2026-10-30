@@ -153,6 +153,7 @@ export interface SolvedWord {
   readonly word: string;
   readonly row: number;
   readonly column: number;
+  readonly direction: 'across' | 'down';
 }
 export interface GameplayView {
   readonly levelId: string;

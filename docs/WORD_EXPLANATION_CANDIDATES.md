@@ -1,6 +1,6 @@
 # Words that may need an explanation
 
-This is the word list for the "?" explanation feature. From the 1,941 distinct answers in the 500 active levels, it marks **149 recommended** words and **193 borderline** words. On 2026-10-30 the owner selected the 149 recommended words, and their draft explanations are in [batch 01](WORD_EXPLANATIONS_BATCH_01.md). The owner then selected 144 more words from the [second review](#second-review-219), and their draft explanations are in [batch 02](WORD_EXPLANATIONS_BATCH_02.md). The other 75 second-review words are not selected.
+This is the word list for the "?" explanation feature. From the 1,941 distinct answers in the 500 active levels, it marks **149 recommended** words and **193 borderline** words. On 2026-10-30 the owner selected the 149 recommended words, and their draft explanations are in [batch 01](WORD_EXPLANATIONS_BATCH_01.md). The owner then selected 144 more words from the [second review](#second-review-219), and their draft explanations are in [batch 02](WORD_EXPLANATIONS_BATCH_02.md). The other 75 second-review words are not selected. The owner then selected 96 words from the [third review](#third-review-235), explained in [batch 03](WORD_EXPLANATIONS_BATCH_03.md); the other 139 are not selected.
 
 A word is included when a typical adult player may not know it, or knows it by name without knowing what it is, as with ბიტი and ბაიტი. Recommended words appear on 160 of the 500 levels; with borderline words included, 297 levels have at least one.
 
@@ -516,3 +516,18 @@ The owner asked to review more words on 2026-10-30. This list has the 193 border
 | თქეში  | downpour          |          1 |          34 |
 | მირაჟი | mirage            |          1 |         148 |
 | ორეული | lookalike; double |          1 |         441 |
+
+## Third review (235)
+
+The owner asked to review more words on 2026-10-30. This list comes from a third pass over the answers not reviewed before. The owner selected 96 of these 235; each `ownerDecision` is in the JSON. The 82 assistant picks are marked with `assistantPick` in the [JSON](WORD_EXPLANATION_CANDIDATES.json).
+
+- **Technology, science and maths:** picks: ლაზერი, რადარი, ცილა, ღერძი, ფაზა, ციკლი, კონუსი, რომბი; others: კომეტა, სფერო, ბრენდი, ფორუმი, ფაქსი, ბლოკი, ანტენა, ბანერი, დისკი, მედია, ატლასი
+- **Geography and landscape:** picks: ქედი, ყურე, ვაკე; others: ხრამი, ხევი, ღელე, გორაკი, ზვავი, მდელო, ველი
+- **Body and health:** picks: ხორხი, ცოფი, ღრძილი; others: ვენა, კომა, პულსი, ტრავმა, წყლული, ჭორფლი, მენჯი, თეძო, ნერვი, ჭირი, დიარეა, ასთმა, სურდო
+- **Music, literature and art:** picks: ჟანრი, ფრესკა, რითმა, ტურნე, ჰანგი; others: ორგანი, პოემა, ტემპი, ჩელო, გრიმი, კადრი, მოტივი, რეპი, ვალსი, ტანგო, ფლეიტა, არფა
+- **Money, work and society:** picks: ავანსი, იჯარა, ტარიფი, სექტა, სენატი, ელიტა, ალიბი, ფობია, ირონია, ილუზია, სტაჟი, საშვი, ნუსხა, ხაზინა; others: ფონდი, იმიჯი, მანია, ორდენი, პრემია, ბუტიკი, კულტი, კლანი, ციტატა, საბჭო, შტაბი, მერია, დუელი, მაფია, პალატა, საბაჟო, ლოგიკა, მისია, ფრონტი, ტირანი
+- **Sport and games:** picks: ტაიმი, ძიუდო, ფრე, კოზირი, ვალეტი; others: რაუნდი, რაგბი, გოლფი, ნარდი, ლოტო, პოკერი, ტუზი, ჯოკერი, კორტი, რინგი, კარატე, ლიგა, შაში
+- **History, faith and tradition:** picks: აჩმა, კუპატი, ღომი, ყანწი, ერბო, შაჰი, ჯინი, დევი; others: ჩოხა, თონე, მუმია, ფერია, მონა, რაინდი, ჯალათი, შერიფი, ტოლმა, საცივი, აჯიკა, შოთი, ფლავი, დემონი, ხატი
+- **Plants and animals:** picks: ასკილი, დაფნა, ჭადარი, წიფელი, რეჰანი, ენოტი, კობრი, წიწვი; others: შინდი, ქაშაყი, თინუსი, კვირტი, ნერგი, გრიზლი, ბზიკი, ხავსი, კობრა, ლამა, პუმა, ვეშაპი, ლოტოსი, ფეიხოა, ხურმა, ალუჩა
+- **Old tools, crafts and household things:** picks: ანძა, აფრა, ბალთა, ბაფთა, ბაქანი, დახლი, კათხა, კლიტე, ლუპა, ნოხი, ტივი, ჭაღი, ღუზა, ჭოკი, შიფერი; others: ბაგირი, ეტლი, მაღარო, ტაშტი, შტამპი, ჟილეტი, ლეიბი, რკალი, კომოდი, ბურღი, დოქი, ლულა, შუბი, შოლტი, შლანგი, რელსი, სეიფი, ფოლგა, საკიდი, კაუჭი, ურიკა
+- **Literary or rarely used words:** picks: ბარაქა, დინჯი, დიადი, ზორბა, ნუგეში, საბაბი, სათნო, სათუთი, ფიცხი, ცბიერი, ხათრი, ჯიბრი, წიაღი; others: ამაო, ბეჯითი, ზანტი, კოპწია, მარდი, მსუყე, ნეტარი, ოინი, ოხერი, საზრდო, სნეული, უვიცი, უღირსი, ფაქიზი, ხისტი, წუნი, შარი, შფოთი, ბინდი, ზღვარი, ლაღი, ნორჩი, ჯავრი, ხიფათი, უხვი

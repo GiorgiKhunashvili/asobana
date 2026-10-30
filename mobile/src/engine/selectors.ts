@@ -36,11 +36,12 @@ export function selectGameplay(
     })),
     solvedWords: level.words
       .filter((word) => progress.solvedWordIds.includes(word.id))
-      .map(({ id, answer, row, column }) => ({
+      .map(({ id, answer, row, column, direction }) => ({
         id,
         word: answer,
         row,
         column,
+        direction,
       })),
     coins: state.coins,
     foundWords: progress.solvedWordIds.length,

@@ -6,7 +6,7 @@ import type { GameStoreState } from '../src/state/createGameStore';
 import { catalog } from '../src/content/catalog';
 import data from '../../content/word-explanations.json';
 import { hasExplanation } from '../src/content/wordExplanations';
-import { CrosswordBoard } from '../src/components/CrosswordBoard';
+import { CrosswordBoard, explainSpot } from '../src/components/CrosswordBoard';
 import { GameBannerAd } from '../src/components/GameBannerAd';
 import { WordMeanings } from '../src/components/WordExplanation';
 import { WordStrip } from '../src/components/WordStrip';
@@ -109,10 +109,10 @@ const answers = new Set(
 const level = catalog.levels[21]!;
 
 describe('explanation content', () => {
-  test('explains exactly the 293 owner-selected active answers', () => {
-    expect(words).toHaveLength(293);
+  test('explains exactly the 389 owner-selected active answers', () => {
+    expect(words).toHaveLength(389);
     expect(words.filter((word) => !answers.has(word))).toEqual([]);
-    const reviewed = ['01', '02'].flatMap((batch) => {
+    const reviewed = ['01', '02', '03'].flatMap((batch) => {
       const { entries } = JSON.parse(
         readFileSync(
           join(__dirname, `../../docs/WORD_EXPLANATIONS_BATCH_${batch}.json`),
@@ -132,13 +132,20 @@ describe('explanation content', () => {
     }
   });
 
-  test('no two explained words share a first cell, so each ? has its own spot', () => {
-    for (const { words: levelWords } of catalog.levels) {
-      const starts = levelWords
+  test('explained words sharing a first cell always cross, so each ? has its own spot', () => {
+    const shared = catalog.levels.flatMap(({ words: levelWords }) =>
+      levelWords
         .filter((word) => hasExplanation(word.answer))
-        .map((word) => `${word.row},${word.column}`);
-      expect(new Set(starts).size).toBe(starts.length);
-    }
+        .flatMap((word, index, all) =>
+          all
+            .slice(index + 1)
+            .filter(
+              (other) => other.row === word.row && other.column === word.column,
+            )
+            .map((other) => [word.direction, other.direction].sort()),
+        ),
+    );
+    expect(shared).toEqual(new Array(4).fill(['across', 'down']));
   });
 });
 
@@ -192,12 +199,43 @@ describe('board', () => {
       <CrosswordBoard
         cells={[]}
         grid={grid}
-        explained={[{ id: 'word-1', word: 'ბიტი', row: 0, column: 6 }]}
+        explained={[
+          { id: 'word-1', word: 'ბიტი', row: 0, column: 6, direction: 'down' },
+        ]}
         onExplain={onExplain}
       />,
     );
     await fireEvent.press(screen.getByTestId('board-explain-word-1'));
     expect(onExplain).toHaveBeenCalledWith('ბიტი');
+  });
+
+  test('two words on one cell keep their ? marks apart, wherever they are found', () => {
+    const across = {
+      id: 'a',
+      word: 'ძუა',
+      row: 1,
+      column: 2,
+      direction: 'across',
+    } as const;
+    const down = {
+      ...across,
+      id: 'd',
+      word: 'ძიუდო',
+      direction: 'down',
+    } as const;
+    const both = [across, down];
+    const left = explainSpot(down, both, 26, 16);
+    const right = explainSpot(across, both, 26, 16);
+    expect(left.position.left).toBeLessThan(right.position.left);
+    // Each tap area stops before the other mark's, so neither can steal a tap.
+    const leftEdge = left.position.left + 16 + left.hitSlop.right;
+    const rightEdge = right.position.left - right.hitSlop.left;
+    expect(leftEdge).toBeLessThanOrEqual(rightEdge);
+    // Alone, a down word keeps the usual corner and a full tap area.
+    expect(explainSpot(down, [down], 26, 16)).toEqual({
+      ...right,
+      hitSlop: { top: 16, bottom: 16, left: 16, right: 16 },
+    });
   });
 
   test('shows no ? unless asked to', async () => {
