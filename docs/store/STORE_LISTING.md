@@ -250,13 +250,14 @@ two rows are new:
 | Personal info → User IDs                  | Yes       | Yes    | Yes      | App functionality                                                                              |
 | Financial info → Purchase history         | Yes       | Yes    | Yes      | Advertising or marketing, Analytics                                                            |
 | Location → Approximate location           | Yes       | Yes    | Yes      | App functionality, Advertising or marketing, Analytics, Fraud prevention, security, compliance |
-| App activity → Page views and taps in app | Yes       | Yes    | Yes      | Advertising or marketing, Analytics                                                            |
+| App activity → App interactions           | Yes       | Yes    | Yes      | Advertising or marketing, Analytics, Fraud prevention, security, compliance                    |
 | App info and performance → Diagnostics    | Yes       | Yes    | Yes      | App functionality, Advertising or marketing, Analytics, Fraud prevention, security, compliance |
 | Device or other IDs → Device or other IDs | Yes       | Yes    | Yes      | App functionality, Advertising or marketing, Analytics, Fraud prevention, security, compliance |
 
-Unity's page gives no purposes for page views and taps, so confirm that row when
-filling in the form. It says it collects taps only inside the ad, not during
-gameplay. Other app activity applies only with Acquire Optimization, which is off.
+Unity's page calls this data page views and taps, which Play lists as App
+interactions (checked 2026-10-31). It gives no purposes, so the row keeps the
+existing ones. It says it collects taps only inside the ad, not during gameplay.
+Other app activity applies only with Acquire Optimization, which is off.
 
 ## Screenshots
 

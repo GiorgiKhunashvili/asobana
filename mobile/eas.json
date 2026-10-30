@@ -21,8 +21,7 @@
       "distribution": "store",
       "autoIncrement": true,
       "env": {
-        "ASOBANA_LIVE_ADS": "1",
-        "SENTRY_DISABLE_AUTO_UPLOAD": "true"
+        "ASOBANA_LIVE_ADS": "1"
       },
       "ios": {
         "image": "latest"
