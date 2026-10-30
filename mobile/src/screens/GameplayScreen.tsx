@@ -28,8 +28,10 @@ import { Icon } from '../components/Icon';
 import { LetterWheel, wheelSize } from '../components/LetterWheel';
 import { Screen, TopBar } from '../components/Screen';
 import { Txt } from '../components/Text';
+import { WordExplanationCard } from '../components/WordExplanation';
 import { STRIP_HEIGHT } from '../components/WordStrip';
 import { catalog } from '../content/catalog';
+import { hasExplanation } from '../content/wordExplanations';
 import { isUnlocked } from '../engine/game';
 import { selectGameplay } from '../engine/selectors';
 import type { GameCommand, GameplayView } from '../models/types';
@@ -240,6 +242,15 @@ function GameLayout({
   };
   const coaching = useTutorial(tutorial && !model.completed && !celebrating);
   const [{ anchors, steps }] = useState(createTutorial);
+  const [explaining, setExplaining] = useState<string | null>(null);
+  const explained = useMemo(
+    () => model.solvedWords.filter(({ word }) => hasExplanation(word)),
+    [model.solvedWords],
+  );
+  const stripWord =
+    feedback?.kind === 'found' && hasExplanation(feedback.word)
+      ? feedback.word
+      : null;
   return (
     <Screen
       tone={tone}
@@ -258,6 +269,15 @@ function GameLayout({
       contentStyle={styles.content}
       footer={
         <GameBannerAd visible={!coaching.active && ad.status !== 'showing'} />
+      }
+      overlay={
+        explaining && (
+          <WordExplanationCard
+            word={explaining}
+            anchorHeight={wheel + space.lg}
+            onClose={() => setExplaining(null)}
+          />
+        )
       }
     >
       <View style={styles.title}>
@@ -290,6 +310,8 @@ function GameLayout({
           maxHeight={Math.max(boardHeight, 120)}
           moment={moment}
           accent={tone.scene.accent}
+          explained={explained}
+          onExplain={setExplaining}
         />
         {ad.engaged && ad.status !== 'showing' && ad.status !== 'ready' && (
           <View style={styles.adNotice} testID="hint-ad-notice">
@@ -387,6 +409,8 @@ function GameLayout({
             onSubmit={onSubmit}
             onTileEntered={tileHaptic}
             feedback={feedback}
+            onExplain={stripWord ? () => setExplaining(stripWord) : null}
+            dimmed={explaining !== null}
             idleHint={
               model.foundWords + model.bonusCount === 0
                 ? 'შეაერთე ასოები'

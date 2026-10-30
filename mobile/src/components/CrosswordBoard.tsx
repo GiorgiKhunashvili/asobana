@@ -9,8 +9,9 @@ import Animated, {
   withTiming,
   ZoomIn,
 } from 'react-native-reanimated';
-import type { CrosswordCell, Level } from '../models/types';
+import type { CrosswordCell, Level, SolvedWord } from '../models/types';
 import { fonts, letterLift, motion, palette, radius } from '../theme';
+import { ExplainButton } from './WordExplanation';
 
 /**
  * One committed event batch, translated into what the board should animate.
@@ -35,6 +36,9 @@ export interface CrosswordBoardProps {
   readonly moment?: BoardMoment | null;
   /** Colour of found cells; usually the chapter scene's accent. */
   readonly accent?: string;
+  /** Solved words with an explanation: each keeps a ? on its first cell. */
+  readonly explained?: readonly SolvedWord[];
+  readonly onExplain?: (word: string) => void;
 }
 
 const GAP = 4;
@@ -59,8 +63,12 @@ export function CrosswordBoard({
   maxHeight,
   moment,
   accent = palette.turquoise,
+  explained = [],
+  onExplain,
 }: CrosswordBoardProps) {
   const size = boardCellSize(grid, maxWidth, maxHeight);
+  // Small enough on a phone's tightest board to leave the letter readable.
+  const badge = Math.max(16, Math.round(size * 0.42));
   const timing = useMemo(() => {
     const order = new Map<string, number>();
     moment?.revealed.forEach((id, index) => order.set(id, index));
@@ -102,6 +110,27 @@ export function CrosswordBoard({
           }
         />
       ))}
+      {onExplain &&
+        explained.map(({ id, word, row, column }) => (
+          <Animated.View
+            key={id}
+            entering={ZoomIn.delay(motion.revealSettle).springify().damping(14)}
+            style={[
+              styles.badge,
+              {
+                left: column * (size + GAP) + size - badge * 0.6,
+                top: row * (size + GAP) - badge * 0.4,
+              },
+            ]}
+          >
+            <ExplainButton
+              word={word}
+              size={badge}
+              onPress={() => onExplain(word)}
+              testID={`board-explain-${id}`}
+            />
+          </Animated.View>
+        ))}
     </View>
   );
 }
@@ -289,6 +318,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   gold: { backgroundColor: palette.gold },
+  badge: { position: 'absolute' },
   letter: {
     fontFamily: fonts.textBold,
     color: '#FFFFFF',

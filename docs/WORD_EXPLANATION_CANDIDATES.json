@@ -1,0 +1,3581 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-30",
+  "status": "owner-selected-two-reviews",
+  "activeRevision": 31,
+  "purpose": "Choose the required answers that should show a \"?\" with a short Georgian explanation after they are found.",
+  "criterion": "A typical adult player may not know the word, or knows it by name without knowing what it is, as with ბიტი and ბაიტი.",
+  "activeDistinctAnswers": 1941,
+  "counts": {
+    "recommended": 149,
+    "borderline": 193,
+    "levelsWithRecommendedWord": 160,
+    "levelsWithAnyCandidate": 297,
+    "secondLook": 26,
+    "assistantPicks": 96
+  },
+  "groups": {
+    "tech": "Technology, science and maths",
+    "geography": "Geography and landscape",
+    "health": "Body and health",
+    "arts": "Music, literature and art",
+    "society": "Money, work and society",
+    "sport": "Sport and games",
+    "history": "History, faith and tradition",
+    "nature": "Plants and animals",
+    "family": "Family relationships",
+    "objects": "Old tools, crafts and household things",
+    "literary": "Literary or rarely used words",
+    "lookalike": "Looks like a different word"
+  },
+  "limitations": [
+    "The selection is assistant editorial judgement from reading each word and its recorded meaning. It is not player data or a native-speaker review.",
+    "Only the 1,941 distinct answers in the active 500 levels were read. The 362 approved words no board uses and the 52 approvals awaiting integration are not covered.",
+    "Bonus words were not reviewed.",
+    "Meanings are copied unchanged from the revision 31 allowlist. A few look imprecise (ურემი is recorded as \"cartload\") and must be checked when explanations are written."
+  ],
+  "gameplayChanged": false,
+  "entries": [
+    {
+      "word": "ბიტი",
+      "tier": "recommended",
+      "group": "tech",
+      "recordedMeaning": "bit; unit of digital information",
+      "timesUsed": 2,
+      "firstLevel": 22,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ბაიტი",
+      "tier": "recommended",
+      "group": "tech",
+      "recordedMeaning": "byte",
+      "timesUsed": 1,
+      "firstLevel": 299,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ბოტი",
+      "tier": "recommended",
+      "group": "tech",
+      "recordedMeaning": "software bot",
+      "timesUsed": 2,
+      "firstLevel": 22,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ჩიპი",
+      "tier": "recommended",
+      "group": "tech",
+      "recordedMeaning": "microchip",
+      "timesUsed": 1,
+      "firstLevel": 209,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ალფა",
+      "tier": "recommended",
+      "group": "tech",
+      "recordedMeaning": "alpha",
+      "timesUsed": 1,
+      "firstLevel": 202,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ბეტა",
+      "tier": "recommended",
+      "group": "tech",
+      "recordedMeaning": "beta",
+      "timesUsed": 1,
+      "firstLevel": 11,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ამპერი",
+      "tier": "recommended",
+      "group": "tech",
+      "recordedMeaning": "ampere",
+      "timesUsed": 1,
+      "firstLevel": 128,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ვატი",
+      "tier": "recommended",
+      "group": "tech",
+      "recordedMeaning": "watt; unit of power",
+      "timesUsed": 4,
+      "firstLevel": 66,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ვოლტი",
+      "tier": "recommended",
+      "group": "tech",
+      "recordedMeaning": "volt",
+      "timesUsed": 1,
+      "firstLevel": 214,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "მუხტი",
+      "tier": "recommended",
+      "group": "tech",
+      "recordedMeaning": "charge",
+      "timesUsed": 1,
+      "firstLevel": 187,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "წრედი",
+      "tier": "recommended",
+      "group": "tech",
+      "recordedMeaning": "electrical circuit",
+      "timesUsed": 1,
+      "firstLevel": 490,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "გენი",
+      "tier": "recommended",
+      "group": "tech",
+      "recordedMeaning": "gene",
+      "timesUsed": 1,
+      "firstLevel": 163,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ოზონი",
+      "tier": "recommended",
+      "group": "tech",
+      "recordedMeaning": "ozone",
+      "timesUsed": 1,
+      "firstLevel": 112,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ნეონი",
+      "tier": "recommended",
+      "group": "tech",
+      "recordedMeaning": "neon",
+      "timesUsed": 1,
+      "firstLevel": 190,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "პლაზმა",
+      "tier": "recommended",
+      "group": "tech",
+      "recordedMeaning": "plasma",
+      "timesUsed": 1,
+      "firstLevel": 160,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "პრიზმა",
+      "tier": "recommended",
+      "group": "tech",
+      "recordedMeaning": "prism",
+      "timesUsed": 1,
+      "firstLevel": 128,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "სინუსი",
+      "tier": "recommended",
+      "group": "tech",
+      "recordedMeaning": "sine",
+      "timesUsed": 1,
+      "firstLevel": 109,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "თუთია",
+      "tier": "recommended",
+      "group": "tech",
+      "recordedMeaning": "zinc",
+      "timesUsed": 1,
+      "firstLevel": 146,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "კვარცი",
+      "tier": "recommended",
+      "group": "tech",
+      "recordedMeaning": "quartz",
+      "timesUsed": 1,
+      "firstLevel": 398,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ეროზია",
+      "tier": "recommended",
+      "group": "tech",
+      "recordedMeaning": "erosion",
+      "timesUsed": 1,
+      "firstLevel": 395,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "განედი",
+      "tier": "recommended",
+      "group": "geography",
+      "recordedMeaning": "latitude",
+      "timesUsed": 1,
+      "firstLevel": 465,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "გრძედი",
+      "tier": "recommended",
+      "group": "geography",
+      "recordedMeaning": "longitude",
+      "timesUsed": 1,
+      "firstLevel": 152,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "დელტა",
+      "tier": "recommended",
+      "group": "geography",
+      "recordedMeaning": "river delta",
+      "timesUsed": 1,
+      "firstLevel": 11,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ლაგუნა",
+      "tier": "recommended",
+      "group": "geography",
+      "recordedMeaning": "lagoon",
+      "timesUsed": 1,
+      "firstLevel": 339,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "კონცხი",
+      "tier": "recommended",
+      "group": "geography",
+      "recordedMeaning": "cape",
+      "timesUsed": 1,
+      "firstLevel": 136,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "სრუტე",
+      "tier": "recommended",
+      "group": "geography",
+      "recordedMeaning": "strait",
+      "timesUsed": 1,
+      "firstLevel": 352,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "პლატო",
+      "tier": "recommended",
+      "group": "geography",
+      "recordedMeaning": "plateau",
+      "timesUsed": 1,
+      "firstLevel": 144,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "რიყე",
+      "tier": "recommended",
+      "group": "geography",
+      "recordedMeaning": "stony riverbank",
+      "timesUsed": 2,
+      "firstLevel": 77,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ჭალა",
+      "tier": "recommended",
+      "group": "geography",
+      "recordedMeaning": "floodplain; riverside grove",
+      "timesUsed": 2,
+      "firstLevel": 30,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ხრიოკი",
+      "tier": "recommended",
+      "group": "geography",
+      "recordedMeaning": "barren; sparsely vegetated",
+      "timesUsed": 1,
+      "firstLevel": 481,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ორღობე",
+      "tier": "recommended",
+      "group": "geography",
+      "recordedMeaning": "lane between fences",
+      "timesUsed": 1,
+      "firstLevel": 65,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ჯებირი",
+      "tier": "recommended",
+      "group": "geography",
+      "recordedMeaning": "embankment holding back water",
+      "timesUsed": 1,
+      "firstLevel": 430,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ანემია",
+      "tier": "recommended",
+      "group": "health",
+      "recordedMeaning": "anemia",
+      "timesUsed": 1,
+      "firstLevel": 245,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "აორტა",
+      "tier": "recommended",
+      "group": "health",
+      "recordedMeaning": "aorta",
+      "timesUsed": 1,
+      "firstLevel": 110,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ლიმფა",
+      "tier": "recommended",
+      "group": "health",
+      "recordedMeaning": "lymph",
+      "timesUsed": 1,
+      "firstLevel": 313,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "თრომბი",
+      "tier": "recommended",
+      "group": "health",
+      "recordedMeaning": "blood clot",
+      "timesUsed": 1,
+      "firstLevel": 330,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "მყესი",
+      "tier": "recommended",
+      "group": "health",
+      "recordedMeaning": "tendon",
+      "timesUsed": 1,
+      "firstLevel": 174,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "მალა",
+      "tier": "recommended",
+      "group": "health",
+      "recordedMeaning": "vertebra",
+      "timesUsed": 1,
+      "firstLevel": 365,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "აპკი",
+      "tier": "recommended",
+      "group": "health",
+      "recordedMeaning": "membrane",
+      "timesUsed": 2,
+      "firstLevel": 38,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "შაკიკი",
+      "tier": "recommended",
+      "group": "health",
+      "recordedMeaning": "migraine",
+      "timesUsed": 1,
+      "firstLevel": 38,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "გამა",
+      "tier": "recommended",
+      "group": "arts",
+      "recordedMeaning": "musical scale",
+      "timesUsed": 1,
+      "firstLevel": 23,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "მინორი",
+      "tier": "recommended",
+      "group": "arts",
+      "recordedMeaning": "minor musical mode",
+      "timesUsed": 1,
+      "firstLevel": 341,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ოქტავა",
+      "tier": "recommended",
+      "group": "arts",
+      "recordedMeaning": "octave",
+      "timesUsed": 1,
+      "firstLevel": 110,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "სონატა",
+      "tier": "recommended",
+      "group": "arts",
+      "recordedMeaning": "sonata",
+      "timesUsed": 1,
+      "firstLevel": 440,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "სონეტი",
+      "tier": "recommended",
+      "group": "arts",
+      "recordedMeaning": "sonnet",
+      "timesUsed": 1,
+      "firstLevel": 198,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "შაირი",
+      "tier": "recommended",
+      "group": "arts",
+      "recordedMeaning": "humorous verse; sixteen-syllable verse",
+      "timesUsed": 1,
+      "firstLevel": 143,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ფარსი",
+      "tier": "recommended",
+      "group": "arts",
+      "recordedMeaning": "farce",
+      "timesUsed": 2,
+      "firstLevel": 153,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "შარჟი",
+      "tier": "recommended",
+      "group": "arts",
+      "recordedMeaning": "humorous caricature",
+      "timesUsed": 1,
+      "firstLevel": 101,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ქნარი",
+      "tier": "recommended",
+      "group": "arts",
+      "recordedMeaning": "lyre",
+      "timesUsed": 1,
+      "firstLevel": 297,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "გუაში",
+      "tier": "recommended",
+      "group": "arts",
+      "recordedMeaning": "gouache paint",
+      "timesUsed": 1,
+      "firstLevel": 99,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "სქოლიო",
+      "tier": "recommended",
+      "group": "arts",
+      "recordedMeaning": "footnote",
+      "timesUsed": 1,
+      "firstLevel": 20,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "დუბლი",
+      "tier": "recommended",
+      "group": "arts",
+      "recordedMeaning": "another take of a film scene",
+      "timesUsed": 1,
+      "firstLevel": 217,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "აუდიტი",
+      "tier": "recommended",
+      "group": "society",
+      "recordedMeaning": "financial audit",
+      "timesUsed": 1,
+      "firstLevel": 299,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ბირჟა",
+      "tier": "recommended",
+      "group": "society",
+      "recordedMeaning": "exchange",
+      "timesUsed": 1,
+      "firstLevel": 101,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ნისია",
+      "tier": "recommended",
+      "group": "society",
+      "recordedMeaning": "credit; payment owed later",
+      "timesUsed": 1,
+      "firstLevel": 288,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "კარატი",
+      "tier": "recommended",
+      "group": "society",
+      "recordedMeaning": "carat",
+      "timesUsed": 1,
+      "firstLevel": 411,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "კრედო",
+      "tier": "recommended",
+      "group": "society",
+      "recordedMeaning": "creed",
+      "timesUsed": 2,
+      "firstLevel": 9,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ეთნოსი",
+      "tier": "recommended",
+      "group": "society",
+      "recordedMeaning": "ethnic group",
+      "timesUsed": 1,
+      "firstLevel": 349,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "გეტო",
+      "tier": "recommended",
+      "group": "society",
+      "recordedMeaning": "segregated urban district",
+      "timesUsed": 1,
+      "firstLevel": 184,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "აიკიდო",
+      "tier": "recommended",
+      "group": "sport",
+      "recordedMeaning": "aikido",
+      "timesUsed": 1,
+      "firstLevel": 135,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "სამბო",
+      "tier": "recommended",
+      "group": "sport",
+      "recordedMeaning": "sambo; wrestling sport",
+      "timesUsed": 1,
+      "firstLevel": 410,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ბადრო",
+      "tier": "recommended",
+      "group": "sport",
+      "recordedMeaning": "discus",
+      "timesUsed": 2,
+      "firstLevel": 56,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ლახტი",
+      "tier": "recommended",
+      "group": "sport",
+      "recordedMeaning": "leather strap used in the traditional game",
+      "timesUsed": 1,
+      "firstLevel": 244,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "როდეო",
+      "tier": "recommended",
+      "group": "sport",
+      "recordedMeaning": "rodeo",
+      "timesUsed": 2,
+      "firstLevel": 65,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "პაიკი",
+      "tier": "recommended",
+      "group": "sport",
+      "recordedMeaning": "chess pawn",
+      "timesUsed": 1,
+      "firstLevel": 38,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "მირონი",
+      "tier": "recommended",
+      "group": "history",
+      "recordedMeaning": "chrism; consecrated scented oil",
+      "timesUsed": 1,
+      "firstLevel": 341,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ჩადრი",
+      "tier": "recommended",
+      "group": "history",
+      "recordedMeaning": "chador",
+      "timesUsed": 1,
+      "firstLevel": 120,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ფარაჯა",
+      "tier": "recommended",
+      "group": "history",
+      "recordedMeaning": "military overcoat",
+      "timesUsed": 1,
+      "firstLevel": 401,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "პატაკი",
+      "tier": "recommended",
+      "group": "history",
+      "recordedMeaning": "formal military report",
+      "timesUsed": 1,
+      "firstLevel": 253,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ოცეული",
+      "tier": "recommended",
+      "group": "history",
+      "recordedMeaning": "platoon",
+      "timesUsed": 1,
+      "firstLevel": 441,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ოდა",
+      "tier": "recommended",
+      "group": "history",
+      "recordedMeaning": "ode; traditional house",
+      "timesUsed": 3,
+      "firstLevel": 50,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "მერანი",
+      "tier": "recommended",
+      "group": "history",
+      "recordedMeaning": "swift riding horse",
+      "timesUsed": 1,
+      "firstLevel": 245,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "რაში",
+      "tier": "recommended",
+      "group": "history",
+      "recordedMeaning": "fairy-tale steed",
+      "timesUsed": 2,
+      "firstLevel": 101,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ანწლი",
+      "tier": "recommended",
+      "group": "nature",
+      "recordedMeaning": "elderberry",
+      "timesUsed": 1,
+      "firstLevel": 166,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ბზა",
+      "tier": "recommended",
+      "group": "nature",
+      "recordedMeaning": "box tree",
+      "timesUsed": 3,
+      "firstLevel": 69,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ბაია",
+      "tier": "recommended",
+      "group": "nature",
+      "recordedMeaning": "buttercup flower",
+      "timesUsed": 4,
+      "firstLevel": 19,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ომბალო",
+      "tier": "recommended",
+      "group": "nature",
+      "recordedMeaning": "pennyroyal herb",
+      "timesUsed": 1,
+      "firstLevel": 93,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "უნაბი",
+      "tier": "recommended",
+      "group": "nature",
+      "recordedMeaning": "jujube fruit",
+      "timesUsed": 1,
+      "firstLevel": 230,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "რკო",
+      "tier": "recommended",
+      "group": "nature",
+      "recordedMeaning": "acorn",
+      "timesUsed": 4,
+      "firstLevel": 9,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ყუნწი",
+      "tier": "recommended",
+      "group": "nature",
+      "recordedMeaning": "fruit stalk",
+      "timesUsed": 1,
+      "firstLevel": 76,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ვარხვი",
+      "tier": "recommended",
+      "group": "nature",
+      "recordedMeaning": "pelican",
+      "timesUsed": 1,
+      "firstLevel": 284,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "აფთარი",
+      "tier": "recommended",
+      "group": "nature",
+      "recordedMeaning": "hyena",
+      "timesUsed": 1,
+      "firstLevel": 268,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "კვერნა",
+      "tier": "recommended",
+      "group": "nature",
+      "recordedMeaning": "marten",
+      "timesUsed": 1,
+      "firstLevel": 432,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ნუკრი",
+      "tier": "recommended",
+      "group": "nature",
+      "recordedMeaning": "fawn",
+      "timesUsed": 1,
+      "firstLevel": 380,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ულაყი",
+      "tier": "recommended",
+      "group": "nature",
+      "recordedMeaning": "stallion",
+      "timesUsed": 1,
+      "firstLevel": 92,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ჯიქი",
+      "tier": "recommended",
+      "group": "nature",
+      "recordedMeaning": "leopard",
+      "timesUsed": 1,
+      "firstLevel": 484,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ქორი",
+      "tier": "recommended",
+      "group": "nature",
+      "recordedMeaning": "goshawk",
+      "timesUsed": 2,
+      "firstLevel": 91,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ძერა",
+      "tier": "recommended",
+      "group": "nature",
+      "recordedMeaning": "kite bird",
+      "timesUsed": 1,
+      "firstLevel": 182,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ჭოტი",
+      "tier": "recommended",
+      "group": "nature",
+      "recordedMeaning": "small owl",
+      "timesUsed": 1,
+      "firstLevel": 427,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ჭუკი",
+      "tier": "recommended",
+      "group": "nature",
+      "recordedMeaning": "turkey chick",
+      "timesUsed": 1,
+      "firstLevel": 5,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "სვავი",
+      "tier": "recommended",
+      "group": "nature",
+      "recordedMeaning": "vulture",
+      "timesUsed": 1,
+      "firstLevel": 470,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ტოროლა",
+      "tier": "recommended",
+      "group": "nature",
+      "recordedMeaning": "lark",
+      "timesUsed": 1,
+      "firstLevel": 474,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ხვადი",
+      "tier": "recommended",
+      "group": "nature",
+      "recordedMeaning": "male animal",
+      "timesUsed": 1,
+      "firstLevel": 342,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "მაკე",
+      "tier": "recommended",
+      "group": "nature",
+      "recordedMeaning": "pregnant; of an animal",
+      "timesUsed": 4,
+      "firstLevel": 95,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ბიცოლა",
+      "tier": "recommended",
+      "group": "family",
+      "recordedMeaning": "aunt",
+      "timesUsed": 1,
+      "firstLevel": 366,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "მაზლი",
+      "tier": "recommended",
+      "group": "family",
+      "recordedMeaning": "husband's brother",
+      "timesUsed": 1,
+      "firstLevel": 238,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "მული",
+      "tier": "recommended",
+      "group": "family",
+      "recordedMeaning": "husband's sister",
+      "timesUsed": 2,
+      "firstLevel": 49,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "გერი",
+      "tier": "recommended",
+      "group": "family",
+      "recordedMeaning": "stepchild",
+      "timesUsed": 2,
+      "firstLevel": 15,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "მასრა",
+      "tier": "recommended",
+      "group": "objects",
+      "recordedMeaning": "spool",
+      "timesUsed": 1,
+      "firstLevel": 104,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "მახათი",
+      "tier": "recommended",
+      "group": "objects",
+      "recordedMeaning": "large sewing needle",
+      "timesUsed": 1,
+      "firstLevel": 236,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "მუთაქა",
+      "tier": "recommended",
+      "group": "objects",
+      "recordedMeaning": "bolster pillow",
+      "timesUsed": 1,
+      "firstLevel": 449,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "მაყალი",
+      "tier": "recommended",
+      "group": "objects",
+      "recordedMeaning": "charcoal brazier",
+      "timesUsed": 1,
+      "firstLevel": 378,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ურო",
+      "tier": "recommended",
+      "group": "objects",
+      "recordedMeaning": "hammer",
+      "timesUsed": 4,
+      "firstLevel": 9,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ურემი",
+      "tier": "recommended",
+      "group": "objects",
+      "recordedMeaning": "cartload",
+      "timesUsed": 1,
+      "firstLevel": 174,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "სალტე",
+      "tier": "recommended",
+      "group": "objects",
+      "recordedMeaning": "metal hoop",
+      "timesUsed": 1,
+      "firstLevel": 431,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ქეჩა",
+      "tier": "recommended",
+      "group": "objects",
+      "recordedMeaning": "thick felt",
+      "timesUsed": 1,
+      "firstLevel": 201,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "შალითა",
+      "tier": "recommended",
+      "group": "objects",
+      "recordedMeaning": "protective fabric cover",
+      "timesUsed": 1,
+      "firstLevel": 154,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "თეჯირი",
+      "tier": "recommended",
+      "group": "objects",
+      "recordedMeaning": "folding room screen",
+      "timesUsed": 1,
+      "firstLevel": 345,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ძუა",
+      "tier": "recommended",
+      "group": "objects",
+      "recordedMeaning": "horsehair",
+      "timesUsed": 1,
+      "firstLevel": 304,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ხარიხა",
+      "tier": "recommended",
+      "group": "objects",
+      "recordedMeaning": "crossbar",
+      "timesUsed": 1,
+      "firstLevel": 469,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ხარაჩო",
+      "tier": "recommended",
+      "group": "objects",
+      "recordedMeaning": "scaffolding",
+      "timesUsed": 1,
+      "firstLevel": 171,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ჩარხი",
+      "tier": "recommended",
+      "group": "objects",
+      "recordedMeaning": "lathe",
+      "timesUsed": 1,
+      "firstLevel": 423,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ზოდი",
+      "tier": "recommended",
+      "group": "objects",
+      "recordedMeaning": "metal ingot",
+      "timesUsed": 1,
+      "firstLevel": 24,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ალაო",
+      "tier": "recommended",
+      "group": "objects",
+      "recordedMeaning": "malt",
+      "timesUsed": 3,
+      "firstLevel": 144,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ლუქი",
+      "tier": "recommended",
+      "group": "objects",
+      "recordedMeaning": "sealing wax",
+      "timesUsed": 2,
+      "firstLevel": 292,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ბაკანი",
+      "tier": "recommended",
+      "group": "objects",
+      "recordedMeaning": "turtle shell",
+      "timesUsed": 1,
+      "firstLevel": 19,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "წალამი",
+      "tier": "recommended",
+      "group": "objects",
+      "recordedMeaning": "vine prunings",
+      "timesUsed": 1,
+      "firstLevel": 238,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "შაშხი",
+      "tier": "recommended",
+      "group": "objects",
+      "recordedMeaning": "salted or dried meat",
+      "timesUsed": 1,
+      "firstLevel": 454,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ბორანი",
+      "tier": "recommended",
+      "group": "objects",
+      "recordedMeaning": "ferry",
+      "timesUsed": 1,
+      "firstLevel": 162,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ბრიჯი",
+      "tier": "recommended",
+      "group": "objects",
+      "recordedMeaning": "breeches; cropped trousers",
+      "timesUsed": 1,
+      "firstLevel": 246,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "აისი",
+      "tier": "recommended",
+      "group": "literary",
+      "recordedMeaning": "dawn",
+      "timesUsed": 3,
+      "firstLevel": 111,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ალიონი",
+      "tier": "recommended",
+      "group": "literary",
+      "recordedMeaning": "dawn",
+      "timesUsed": 1,
+      "firstLevel": 218,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ეული",
+      "tier": "recommended",
+      "group": "literary",
+      "recordedMeaning": "solitary",
+      "timesUsed": 3,
+      "firstLevel": 49,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ვარამი",
+      "tier": "recommended",
+      "group": "literary",
+      "recordedMeaning": "sorrow",
+      "timesUsed": 1,
+      "firstLevel": 323,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "დილეგი",
+      "tier": "recommended",
+      "group": "literary",
+      "recordedMeaning": "dungeon",
+      "timesUsed": 1,
+      "firstLevel": 79,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ღაწვი",
+      "tier": "recommended",
+      "group": "literary",
+      "recordedMeaning": "upper cheek",
+      "timesUsed": 1,
+      "firstLevel": 310,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "უბიწო",
+      "tier": "recommended",
+      "group": "literary",
+      "recordedMeaning": "innocent; morally pure",
+      "timesUsed": 1,
+      "firstLevel": 311,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "უდრეკი",
+      "tier": "recommended",
+      "group": "literary",
+      "recordedMeaning": "resolute",
+      "timesUsed": 1,
+      "firstLevel": 448,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "თარსი",
+      "tier": "recommended",
+      "group": "literary",
+      "recordedMeaning": "jinxed; bringing bad luck",
+      "timesUsed": 1,
+      "firstLevel": 412,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ალღო",
+      "tier": "recommended",
+      "group": "literary",
+      "recordedMeaning": "intuition",
+      "timesUsed": 1,
+      "firstLevel": 271,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ორგული",
+      "tier": "recommended",
+      "group": "literary",
+      "recordedMeaning": "disloyal",
+      "timesUsed": 1,
+      "firstLevel": 52,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ფლიდი",
+      "tier": "recommended",
+      "group": "literary",
+      "recordedMeaning": "deceitful; sly",
+      "timesUsed": 1,
+      "firstLevel": 494,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ხალასი",
+      "tier": "recommended",
+      "group": "literary",
+      "recordedMeaning": "pure; genuine",
+      "timesUsed": 1,
+      "firstLevel": 370,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ხამი",
+      "tier": "recommended",
+      "group": "literary",
+      "recordedMeaning": "raw, inexperienced",
+      "timesUsed": 2,
+      "firstLevel": 96,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ჯმუხი",
+      "tier": "recommended",
+      "group": "literary",
+      "recordedMeaning": "stocky",
+      "timesUsed": 1,
+      "firstLevel": 256,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ჩია",
+      "tier": "recommended",
+      "group": "literary",
+      "recordedMeaning": "small and frail",
+      "timesUsed": 4,
+      "firstLevel": 44,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ბეცი",
+      "tier": "recommended",
+      "group": "literary",
+      "recordedMeaning": "poor-sighted",
+      "timesUsed": 1,
+      "firstLevel": 204,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "თაკარა",
+      "tier": "recommended",
+      "group": "literary",
+      "recordedMeaning": "scorching hot",
+      "timesUsed": 1,
+      "firstLevel": 58,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ბუღი",
+      "tier": "recommended",
+      "group": "literary",
+      "recordedMeaning": "cloud of dust or heat haze",
+      "timesUsed": 2,
+      "firstLevel": 7,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "პეშვი",
+      "tier": "recommended",
+      "group": "literary",
+      "recordedMeaning": "cupped hand",
+      "timesUsed": 1,
+      "firstLevel": 257,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "წირპლი",
+      "tier": "recommended",
+      "group": "literary",
+      "recordedMeaning": "dried discharge around the eyes",
+      "timesUsed": 1,
+      "firstLevel": 251,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "კეხი",
+      "tier": "recommended",
+      "group": "literary",
+      "recordedMeaning": "saddle tree, nose hump",
+      "timesUsed": 1,
+      "firstLevel": 54,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ხორკლი",
+      "tier": "recommended",
+      "group": "literary",
+      "recordedMeaning": "small rough bump on the skin",
+      "timesUsed": 1,
+      "firstLevel": 481,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ტლაპო",
+      "tier": "recommended",
+      "group": "literary",
+      "recordedMeaning": "sloppy mud",
+      "timesUsed": 1,
+      "firstLevel": 144,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "მდორე",
+      "tier": "recommended",
+      "group": "literary",
+      "recordedMeaning": "slow-flowing",
+      "timesUsed": 2,
+      "firstLevel": 113,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ძგიდე",
+      "tier": "recommended",
+      "group": "literary",
+      "recordedMeaning": "partition; septum",
+      "timesUsed": 1,
+      "firstLevel": 152,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ტორი",
+      "tier": "recommended",
+      "group": "literary",
+      "recordedMeaning": "large animal's paw",
+      "timesUsed": 1,
+      "firstLevel": 67,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "გრილი",
+      "tier": "recommended",
+      "group": "lookalike",
+      "recordedMeaning": "cool, breezy, chilly",
+      "timesUsed": 1,
+      "firstLevel": 124,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "ბარი",
+      "tier": "recommended",
+      "group": "lookalike",
+      "recordedMeaning": "valley",
+      "timesUsed": 4,
+      "firstLevel": 56,
+      "ownerDecision": "selected"
+    },
+    {
+      "word": "აზოტი",
+      "tier": "borderline",
+      "group": "tech",
+      "recordedMeaning": "nitrogen",
+      "timesUsed": 2,
+      "firstLevel": 215,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ნიკელი",
+      "tier": "borderline",
+      "group": "tech",
+      "recordedMeaning": "nickel",
+      "timesUsed": 1,
+      "firstLevel": 328,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ქლორი",
+      "tier": "borderline",
+      "group": "tech",
+      "recordedMeaning": "chlorine",
+      "timesUsed": 1,
+      "firstLevel": 35,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ატომი",
+      "tier": "borderline",
+      "group": "tech",
+      "recordedMeaning": "atom",
+      "timesUsed": 1,
+      "firstLevel": 477,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "მოდული",
+      "tier": "borderline",
+      "group": "tech",
+      "recordedMeaning": "module",
+      "timesUsed": 1,
+      "firstLevel": 150,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ბმული",
+      "tier": "borderline",
+      "group": "tech",
+      "recordedMeaning": "link",
+      "timesUsed": 1,
+      "firstLevel": 31,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "შიფრი",
+      "tier": "borderline",
+      "group": "tech",
+      "recordedMeaning": "cipher",
+      "timesUsed": 1,
+      "firstLevel": 25,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "შრიფტი",
+      "tier": "borderline",
+      "group": "tech",
+      "recordedMeaning": "typeface",
+      "timesUsed": 1,
+      "firstLevel": 143,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ნაერთი",
+      "tier": "borderline",
+      "group": "tech",
+      "recordedMeaning": "compound",
+      "timesUsed": 1,
+      "firstLevel": 488,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ხსნარი",
+      "tier": "borderline",
+      "group": "tech",
+      "recordedMeaning": "liquid solution",
+      "timesUsed": 1,
+      "firstLevel": 219,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ოპტიკა",
+      "tier": "borderline",
+      "group": "tech",
+      "recordedMeaning": "optics",
+      "timesUsed": 1,
+      "firstLevel": 132,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ნავთი",
+      "tier": "borderline",
+      "group": "tech",
+      "recordedMeaning": "kerosene",
+      "timesUsed": 1,
+      "firstLevel": 381,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ორბიტა",
+      "tier": "borderline",
+      "group": "tech",
+      "recordedMeaning": "orbit",
+      "timesUsed": 1,
+      "firstLevel": 178,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "პოლუსი",
+      "tier": "borderline",
+      "group": "tech",
+      "recordedMeaning": "pole (geography)",
+      "timesUsed": 1,
+      "firstLevel": 237,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ნაშთი",
+      "tier": "borderline",
+      "group": "tech",
+      "recordedMeaning": "remainder",
+      "timesUsed": 1,
+      "firstLevel": 172,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "დაბა",
+      "tier": "borderline",
+      "group": "geography",
+      "recordedMeaning": "small town",
+      "timesUsed": 2,
+      "firstLevel": 73,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ოლქი",
+      "tier": "borderline",
+      "group": "geography",
+      "recordedMeaning": "district",
+      "timesUsed": 1,
+      "firstLevel": 20,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "არეალი",
+      "tier": "borderline",
+      "group": "geography",
+      "recordedMeaning": "area, range",
+      "timesUsed": 1,
+      "firstLevel": 261,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "მორევი",
+      "tier": "borderline",
+      "group": "geography",
+      "recordedMeaning": "whirlpool",
+      "timesUsed": 1,
+      "firstLevel": 407,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ტბორი",
+      "tier": "borderline",
+      "group": "geography",
+      "recordedMeaning": "pond",
+      "timesUsed": 1,
+      "firstLevel": 178,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "აკნე",
+      "tier": "borderline",
+      "group": "health",
+      "recordedMeaning": "acne",
+      "timesUsed": 3,
+      "firstLevel": 4,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "დამბლა",
+      "tier": "borderline",
+      "group": "health",
+      "recordedMeaning": "paralysis",
+      "timesUsed": 1,
+      "firstLevel": 73,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ხრტილი",
+      "tier": "borderline",
+      "group": "health",
+      "recordedMeaning": "cartilage",
+      "timesUsed": 1,
+      "firstLevel": 243,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ლორწო",
+      "tier": "borderline",
+      "group": "health",
+      "recordedMeaning": "mucus",
+      "timesUsed": 1,
+      "firstLevel": 474,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "სპაზმი",
+      "tier": "borderline",
+      "group": "health",
+      "recordedMeaning": "spasm",
+      "timesUsed": 1,
+      "firstLevel": 374,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ტონუსი",
+      "tier": "borderline",
+      "group": "health",
+      "recordedMeaning": "tone; state of activation",
+      "timesUsed": 1,
+      "firstLevel": 424,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ხახა",
+      "tier": "borderline",
+      "group": "health",
+      "recordedMeaning": "pharynx",
+      "timesUsed": 1,
+      "firstLevel": 469,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "სასა",
+      "tier": "borderline",
+      "group": "health",
+      "recordedMeaning": "palate of the mouth",
+      "timesUsed": 1,
+      "firstLevel": 344,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ნესტო",
+      "tier": "borderline",
+      "group": "health",
+      "recordedMeaning": "nostril",
+      "timesUsed": 1,
+      "firstLevel": 198,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ლავიწი",
+      "tier": "borderline",
+      "group": "health",
+      "recordedMeaning": "collarbone",
+      "timesUsed": 1,
+      "firstLevel": 169,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "კანჭი",
+      "tier": "borderline",
+      "group": "health",
+      "recordedMeaning": "shin",
+      "timesUsed": 1,
+      "firstLevel": 286,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "აკორდი",
+      "tier": "borderline",
+      "group": "arts",
+      "recordedMeaning": "musical chord",
+      "timesUsed": 1,
+      "firstLevel": 135,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ბალადა",
+      "tier": "borderline",
+      "group": "arts",
+      "recordedMeaning": "ballad",
+      "timesUsed": 1,
+      "firstLevel": 73,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ბანი",
+      "tier": "borderline",
+      "group": "arts",
+      "recordedMeaning": "bass voice",
+      "timesUsed": 2,
+      "firstLevel": 19,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ბასი",
+      "tier": "borderline",
+      "group": "arts",
+      "recordedMeaning": "bass voice",
+      "timesUsed": 2,
+      "firstLevel": 149,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ბანჯო",
+      "tier": "borderline",
+      "group": "arts",
+      "recordedMeaning": "banjo",
+      "timesUsed": 1,
+      "firstLevel": 185,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ლირიკა",
+      "tier": "borderline",
+      "group": "arts",
+      "recordedMeaning": "lyric poetry",
+      "timesUsed": 1,
+      "firstLevel": 123,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ეპოსი",
+      "tier": "borderline",
+      "group": "arts",
+      "recordedMeaning": "epic literature",
+      "timesUsed": 1,
+      "firstLevel": 274,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "სატირა",
+      "tier": "borderline",
+      "group": "arts",
+      "recordedMeaning": "satire",
+      "timesUsed": 1,
+      "firstLevel": 153,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "სტროფი",
+      "tier": "borderline",
+      "group": "arts",
+      "recordedMeaning": "stanza",
+      "timesUsed": 1,
+      "firstLevel": 164,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "კოლაჟი",
+      "tier": "borderline",
+      "group": "arts",
+      "recordedMeaning": "collage",
+      "timesUsed": 1,
+      "firstLevel": 290,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ტირაჟი",
+      "tier": "borderline",
+      "group": "arts",
+      "recordedMeaning": "print run",
+      "timesUsed": 1,
+      "firstLevel": 148,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ტიპაჟი",
+      "tier": "borderline",
+      "group": "arts",
+      "recordedMeaning": "character type",
+      "timesUsed": 1,
+      "firstLevel": 269,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ბლუზი",
+      "tier": "borderline",
+      "group": "arts",
+      "recordedMeaning": "blues music",
+      "timesUsed": 1,
+      "firstLevel": 291,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ლირა",
+      "tier": "borderline",
+      "group": "arts",
+      "recordedMeaning": "lira",
+      "timesUsed": 2,
+      "firstLevel": 119,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "დასი",
+      "tier": "borderline",
+      "group": "arts",
+      "recordedMeaning": "troupe, group",
+      "timesUsed": 2,
+      "firstLevel": 239,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "იარუსი",
+      "tier": "borderline",
+      "group": "arts",
+      "recordedMeaning": "tier of seating",
+      "timesUsed": 1,
+      "firstLevel": 62,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ზურნა",
+      "tier": "borderline",
+      "group": "arts",
+      "recordedMeaning": "zurna wind instrument",
+      "timesUsed": 1,
+      "firstLevel": 483,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ვეტო",
+      "tier": "borderline",
+      "group": "society",
+      "recordedMeaning": "veto",
+      "timesUsed": 1,
+      "firstLevel": 224,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "კვოტა",
+      "tier": "borderline",
+      "group": "society",
+      "recordedMeaning": "quota",
+      "timesUsed": 1,
+      "firstLevel": 224,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "დოსიე",
+      "tier": "borderline",
+      "group": "society",
+      "recordedMeaning": "dossier",
+      "timesUsed": 1,
+      "firstLevel": 198,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ოქმი",
+      "tier": "borderline",
+      "group": "society",
+      "recordedMeaning": "official written record",
+      "timesUsed": 1,
+      "firstLevel": 341,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "გირაო",
+      "tier": "borderline",
+      "group": "society",
+      "recordedMeaning": "bail; security deposit",
+      "timesUsed": 1,
+      "firstLevel": 68,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "დილემა",
+      "tier": "borderline",
+      "group": "society",
+      "recordedMeaning": "dilemma",
+      "timesUsed": 1,
+      "firstLevel": 133,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "დოგმა",
+      "tier": "borderline",
+      "group": "society",
+      "recordedMeaning": "dogma",
+      "timesUsed": 1,
+      "firstLevel": 289,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ეთიკა",
+      "tier": "borderline",
+      "group": "society",
+      "recordedMeaning": "ethics",
+      "timesUsed": 1,
+      "firstLevel": 488,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "კლიშე",
+      "tier": "borderline",
+      "group": "society",
+      "recordedMeaning": "cliché",
+      "timesUsed": 1,
+      "firstLevel": 189,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ბლეფი",
+      "tier": "borderline",
+      "group": "society",
+      "recordedMeaning": "bluff",
+      "timesUsed": 1,
+      "firstLevel": 106,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ბუმი",
+      "tier": "borderline",
+      "group": "society",
+      "recordedMeaning": "rapid boom",
+      "timesUsed": 1,
+      "firstLevel": 31,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "პათოსი",
+      "tier": "borderline",
+      "group": "society",
+      "recordedMeaning": "fervor",
+      "timesUsed": 1,
+      "firstLevel": 306,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ტაბუ",
+      "tier": "borderline",
+      "group": "society",
+      "recordedMeaning": "taboo",
+      "timesUsed": 1,
+      "firstLevel": 299,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "სიგელი",
+      "tier": "borderline",
+      "group": "society",
+      "recordedMeaning": "certificate of recognition",
+      "timesUsed": 1,
+      "firstLevel": 196,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "დეპო",
+      "tier": "borderline",
+      "group": "society",
+      "recordedMeaning": "depot",
+      "timesUsed": 1,
+      "firstLevel": 346,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "აუტი",
+      "tier": "borderline",
+      "group": "sport",
+      "recordedMeaning": "throw-in",
+      "timesUsed": 3,
+      "firstLevel": 132,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "რალი",
+      "tier": "borderline",
+      "group": "sport",
+      "recordedMeaning": "motor rally",
+      "timesUsed": 3,
+      "firstLevel": 123,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "სეტი",
+      "tier": "borderline",
+      "group": "sport",
+      "recordedMeaning": "set in tennis",
+      "timesUsed": 2,
+      "firstLevel": 247,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ტაბლო",
+      "tier": "borderline",
+      "group": "sport",
+      "recordedMeaning": "scoreboard",
+      "timesUsed": 1,
+      "firstLevel": 93,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ფანდი",
+      "tier": "borderline",
+      "group": "sport",
+      "recordedMeaning": "trick; wrestling maneuver",
+      "timesUsed": 1,
+      "firstLevel": 442,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ილეთი",
+      "tier": "borderline",
+      "group": "sport",
+      "recordedMeaning": "trick, technique",
+      "timesUsed": 3,
+      "firstLevel": 83,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "აბჯარი",
+      "tier": "borderline",
+      "group": "history",
+      "recordedMeaning": "armor",
+      "timesUsed": 1,
+      "firstLevel": 500,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ბარონი",
+      "tier": "borderline",
+      "group": "history",
+      "recordedMeaning": "baron",
+      "timesUsed": 1,
+      "firstLevel": 162,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "გრაფი",
+      "tier": "borderline",
+      "group": "history",
+      "recordedMeaning": "count; noble title",
+      "timesUsed": 2,
+      "firstLevel": 317,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ლორდი",
+      "tier": "borderline",
+      "group": "history",
+      "recordedMeaning": "lord; title",
+      "timesUsed": 2,
+      "firstLevel": 87,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "თავადი",
+      "tier": "borderline",
+      "group": "history",
+      "recordedMeaning": "Georgian nobleman",
+      "timesUsed": 1,
+      "firstLevel": 428,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ასული",
+      "tier": "borderline",
+      "group": "history",
+      "recordedMeaning": "daughter",
+      "timesUsed": 1,
+      "firstLevel": 445,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "დენთი",
+      "tier": "borderline",
+      "group": "history",
+      "recordedMeaning": "gunpowder",
+      "timesUsed": 1,
+      "firstLevel": 26,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "დალაქი",
+      "tier": "borderline",
+      "group": "history",
+      "recordedMeaning": "barber",
+      "timesUsed": 1,
+      "firstLevel": 202,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ზღუდე",
+      "tier": "borderline",
+      "group": "history",
+      "recordedMeaning": "defensive wall or fence",
+      "timesUsed": 1,
+      "firstLevel": 42,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "მეუფე",
+      "tier": "borderline",
+      "group": "history",
+      "recordedMeaning": "lord; title of a bishop",
+      "timesUsed": 1,
+      "firstLevel": 137,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "მესია",
+      "tier": "borderline",
+      "group": "history",
+      "recordedMeaning": "messiah; savior",
+      "timesUsed": 1,
+      "firstLevel": 78,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "მოლა",
+      "tier": "borderline",
+      "group": "history",
+      "recordedMeaning": "Muslim religious cleric",
+      "timesUsed": 2,
+      "firstLevel": 59,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "მოწამე",
+      "tier": "borderline",
+      "group": "history",
+      "recordedMeaning": "martyr",
+      "timesUsed": 1,
+      "firstLevel": 389,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "სამება",
+      "tier": "borderline",
+      "group": "history",
+      "recordedMeaning": "the Trinity",
+      "timesUsed": 1,
+      "firstLevel": 104,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "შამანი",
+      "tier": "borderline",
+      "group": "history",
+      "recordedMeaning": "shaman",
+      "timesUsed": 1,
+      "firstLevel": 373,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "რჯული",
+      "tier": "borderline",
+      "group": "history",
+      "recordedMeaning": "religious faith",
+      "timesUsed": 1,
+      "firstLevel": 446,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "საიქიო",
+      "tier": "borderline",
+      "group": "history",
+      "recordedMeaning": "afterlife",
+      "timesUsed": 1,
+      "firstLevel": 413,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ვაზნა",
+      "tier": "borderline",
+      "group": "history",
+      "recordedMeaning": "cartridge",
+      "timesUsed": 1,
+      "firstLevel": 122,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ადათი",
+      "tier": "borderline",
+      "group": "history",
+      "recordedMeaning": "custom",
+      "timesUsed": 1,
+      "firstLevel": 141,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ლაბადა",
+      "tier": "borderline",
+      "group": "history",
+      "recordedMeaning": "light overcoat; cloak",
+      "timesUsed": 1,
+      "firstLevel": 73,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ფაფახი",
+      "tier": "borderline",
+      "group": "history",
+      "recordedMeaning": "fur hat",
+      "timesUsed": 1,
+      "firstLevel": 96,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ხარკი",
+      "tier": "borderline",
+      "group": "history",
+      "recordedMeaning": "tribute paid to a conqueror",
+      "timesUsed": 1,
+      "firstLevel": 350,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ყმა",
+      "tier": "borderline",
+      "group": "history",
+      "recordedMeaning": "serf",
+      "timesUsed": 4,
+      "firstLevel": 119,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ბადაგი",
+      "tier": "borderline",
+      "group": "history",
+      "recordedMeaning": "grape syrup",
+      "timesUsed": 1,
+      "firstLevel": 303,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ნადუღი",
+      "tier": "borderline",
+      "group": "history",
+      "recordedMeaning": "whey cheese",
+      "timesUsed": 1,
+      "firstLevel": 206,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ნაზუქი",
+      "tier": "borderline",
+      "group": "history",
+      "recordedMeaning": "sweet spiced bread",
+      "timesUsed": 1,
+      "firstLevel": 483,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ნაბადი",
+      "tier": "borderline",
+      "group": "history",
+      "recordedMeaning": "felt cloak",
+      "timesUsed": 1,
+      "firstLevel": 223,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "კეცი",
+      "tier": "borderline",
+      "group": "history",
+      "recordedMeaning": "ketsi, earthenware frying pan (usually from clay)",
+      "timesUsed": 1,
+      "firstLevel": 204,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ტიტა",
+      "tier": "borderline",
+      "group": "nature",
+      "recordedMeaning": "tulip",
+      "timesUsed": 3,
+      "firstLevel": 64,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ავაზა",
+      "tier": "borderline",
+      "group": "nature",
+      "recordedMeaning": "cheetah",
+      "timesUsed": 1,
+      "firstLevel": 231,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ბელი",
+      "tier": "borderline",
+      "group": "nature",
+      "recordedMeaning": "bear cub",
+      "timesUsed": 3,
+      "firstLevel": 26,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "გვრიტი",
+      "tier": "borderline",
+      "group": "nature",
+      "recordedMeaning": "turtledove",
+      "timesUsed": 1,
+      "firstLevel": 476,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ვერძი",
+      "tier": "borderline",
+      "group": "nature",
+      "recordedMeaning": "ram",
+      "timesUsed": 1,
+      "firstLevel": 152,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ზუთხი",
+      "tier": "borderline",
+      "group": "nature",
+      "recordedMeaning": "sturgeon",
+      "timesUsed": 1,
+      "firstLevel": 54,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "თახვი",
+      "tier": "borderline",
+      "group": "nature",
+      "recordedMeaning": "beaver",
+      "timesUsed": 1,
+      "firstLevel": 343,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "კვიცი",
+      "tier": "borderline",
+      "group": "nature",
+      "recordedMeaning": "foal",
+      "timesUsed": 1,
+      "firstLevel": 398,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ლოქო",
+      "tier": "borderline",
+      "group": "nature",
+      "recordedMeaning": "catfish",
+      "timesUsed": 1,
+      "firstLevel": 20,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "მაჩვი",
+      "tier": "borderline",
+      "group": "nature",
+      "recordedMeaning": "badger",
+      "timesUsed": 1,
+      "firstLevel": 472,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "მწყერი",
+      "tier": "borderline",
+      "group": "nature",
+      "recordedMeaning": "quail",
+      "timesUsed": 1,
+      "firstLevel": 479,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ნაგაზი",
+      "tier": "borderline",
+      "group": "nature",
+      "recordedMeaning": "sheepdog",
+      "timesUsed": 1,
+      "firstLevel": 122,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ტახი",
+      "tier": "borderline",
+      "group": "nature",
+      "recordedMeaning": "boar",
+      "timesUsed": 2,
+      "firstLevel": 241,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ტურა",
+      "tier": "borderline",
+      "group": "nature",
+      "recordedMeaning": "jackal",
+      "timesUsed": 1,
+      "firstLevel": 273,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "შაშვი",
+      "tier": "borderline",
+      "group": "nature",
+      "recordedMeaning": "thrush",
+      "timesUsed": 1,
+      "firstLevel": 257,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ჩხიკვი",
+      "tier": "borderline",
+      "group": "nature",
+      "recordedMeaning": "jay bird",
+      "timesUsed": 1,
+      "firstLevel": 377,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ჯიხვი",
+      "tier": "borderline",
+      "group": "nature",
+      "recordedMeaning": "Caucasian mountain goat",
+      "timesUsed": 1,
+      "firstLevel": 405,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ღიღილო",
+      "tier": "borderline",
+      "group": "nature",
+      "recordedMeaning": "cornflower",
+      "timesUsed": 1,
+      "firstLevel": 179,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "კოკორი",
+      "tier": "borderline",
+      "group": "nature",
+      "recordedMeaning": "flower bud",
+      "timesUsed": 1,
+      "firstLevel": 307,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ჭვავი",
+      "tier": "borderline",
+      "group": "nature",
+      "recordedMeaning": "rye",
+      "timesUsed": 1,
+      "firstLevel": 30,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "სელი",
+      "tier": "borderline",
+      "group": "nature",
+      "recordedMeaning": "flax",
+      "timesUsed": 3,
+      "firstLevel": 47,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ფიჭა",
+      "tier": "borderline",
+      "group": "nature",
+      "recordedMeaning": "honeycomb",
+      "timesUsed": 1,
+      "firstLevel": 362,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ტარო",
+      "tier": "borderline",
+      "group": "nature",
+      "recordedMeaning": "corncob",
+      "timesUsed": 2,
+      "firstLevel": 110,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ქატო",
+      "tier": "borderline",
+      "group": "nature",
+      "recordedMeaning": "bran",
+      "timesUsed": 1,
+      "firstLevel": 110,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "აბრა",
+      "tier": "borderline",
+      "group": "objects",
+      "recordedMeaning": "signboard",
+      "timesUsed": 2,
+      "firstLevel": 151,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "აღვირი",
+      "tier": "borderline",
+      "group": "objects",
+      "recordedMeaning": "bridle",
+      "timesUsed": 1,
+      "firstLevel": 310,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "სადავე",
+      "tier": "borderline",
+      "group": "objects",
+      "recordedMeaning": "rein",
+      "timesUsed": 1,
+      "firstLevel": 344,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "უღელი",
+      "tier": "borderline",
+      "group": "objects",
+      "recordedMeaning": "yoke for oxen",
+      "timesUsed": 2,
+      "firstLevel": 49,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "თასმა",
+      "tier": "borderline",
+      "group": "objects",
+      "recordedMeaning": "braid",
+      "timesUsed": 1,
+      "firstLevel": 103,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "თავლა",
+      "tier": "borderline",
+      "group": "objects",
+      "recordedMeaning": "stable",
+      "timesUsed": 1,
+      "firstLevel": 428,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "კაჟი",
+      "tier": "borderline",
+      "group": "objects",
+      "recordedMeaning": "flint",
+      "timesUsed": 1,
+      "firstLevel": 290,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ტიკი",
+      "tier": "borderline",
+      "group": "objects",
+      "recordedMeaning": "leather wineskin",
+      "timesUsed": 2,
+      "firstLevel": 225,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "კოკა",
+      "tier": "borderline",
+      "group": "objects",
+      "recordedMeaning": "traditional clay jug",
+      "timesUsed": 2,
+      "firstLevel": 267,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "მათარა",
+      "tier": "borderline",
+      "group": "objects",
+      "recordedMeaning": "water flask",
+      "timesUsed": 1,
+      "firstLevel": 58,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "მარაო",
+      "tier": "borderline",
+      "group": "objects",
+      "recordedMeaning": "hand fan",
+      "timesUsed": 1,
+      "firstLevel": 396,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "მაჩეტე",
+      "tier": "borderline",
+      "group": "objects",
+      "recordedMeaning": "machete",
+      "timesUsed": 1,
+      "firstLevel": 39,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "საცერი",
+      "tier": "borderline",
+      "group": "objects",
+      "recordedMeaning": "sieve",
+      "timesUsed": 1,
+      "firstLevel": 180,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "საცხი",
+      "tier": "borderline",
+      "group": "objects",
+      "recordedMeaning": "ointment",
+      "timesUsed": 1,
+      "firstLevel": 302,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ურდული",
+      "tier": "borderline",
+      "group": "objects",
+      "recordedMeaning": "door bolt",
+      "timesUsed": 1,
+      "firstLevel": 87,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ფიალა",
+      "tier": "borderline",
+      "group": "objects",
+      "recordedMeaning": "drinking bowl",
+      "timesUsed": 2,
+      "firstLevel": 202,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ქისა",
+      "tier": "borderline",
+      "group": "objects",
+      "recordedMeaning": "purse",
+      "timesUsed": 3,
+      "firstLevel": 149,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "სკივრი",
+      "tier": "borderline",
+      "group": "objects",
+      "recordedMeaning": "chest",
+      "timesUsed": 1,
+      "firstLevel": 88,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ტიხარი",
+      "tier": "borderline",
+      "group": "objects",
+      "recordedMeaning": "partition wall",
+      "timesUsed": 1,
+      "firstLevel": 355,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ღორღი",
+      "tier": "borderline",
+      "group": "objects",
+      "recordedMeaning": "rubble; broken stone",
+      "timesUsed": 1,
+      "firstLevel": 179,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ფიჩხი",
+      "tier": "borderline",
+      "group": "objects",
+      "recordedMeaning": "dry twigs; kindling",
+      "timesUsed": 1,
+      "firstLevel": 209,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ნაფოტი",
+      "tier": "borderline",
+      "group": "objects",
+      "recordedMeaning": "wood chip",
+      "timesUsed": 1,
+      "firstLevel": 197,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ნაკელი",
+      "tier": "borderline",
+      "group": "objects",
+      "recordedMeaning": "manure",
+      "timesUsed": 1,
+      "firstLevel": 328,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ცხაური",
+      "tier": "borderline",
+      "group": "objects",
+      "recordedMeaning": "grille or lattice",
+      "timesUsed": 1,
+      "firstLevel": 156,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "გუდა",
+      "tier": "borderline",
+      "group": "objects",
+      "recordedMeaning": "leather bag, wineskin",
+      "timesUsed": 1,
+      "firstLevel": 206,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "თერძი",
+      "tier": "borderline",
+      "group": "objects",
+      "recordedMeaning": "tailor",
+      "timesUsed": 1,
+      "firstLevel": 182,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ამაგი",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "care and effort devoted to someone",
+      "timesUsed": 1,
+      "firstLevel": 303,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ამალა",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "entourage",
+      "timesUsed": 2,
+      "firstLevel": 103,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ბაგე",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "lip",
+      "timesUsed": 1,
+      "firstLevel": 134,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ბალანი",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "animal fur; body hair",
+      "timesUsed": 1,
+      "firstLevel": 223,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ბოღმა",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "resentment",
+      "timesUsed": 1,
+      "firstLevel": 234,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ბღუჯა",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "handful",
+      "timesUsed": 1,
+      "firstLevel": 7,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "გესლი",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "venom",
+      "timesUsed": 2,
+      "firstLevel": 118,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ელდა",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "sudden fright",
+      "timesUsed": 1,
+      "firstLevel": 11,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ელფერი",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "shade, tint",
+      "timesUsed": 1,
+      "firstLevel": 406,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ეშვი",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "fang",
+      "timesUsed": 1,
+      "firstLevel": 89,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ეშხი",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "charm",
+      "timesUsed": 1,
+      "firstLevel": 89,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "დუჟი",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "froth at the mouth",
+      "timesUsed": 1,
+      "firstLevel": 461,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "იარა",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "wound",
+      "timesUsed": 3,
+      "firstLevel": 98,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "იერი",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "outward appearance",
+      "timesUsed": 2,
+      "firstLevel": 345,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ლანდი",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "shadowy figure",
+      "timesUsed": 2,
+      "firstLevel": 223,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ლაფი",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "mud",
+      "timesUsed": 2,
+      "firstLevel": 211,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ლეში",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "animal carcass",
+      "timesUsed": 1,
+      "firstLevel": 305,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "მედეგი",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "resilient; steadfast",
+      "timesUsed": 1,
+      "firstLevel": 46,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "მკვახე",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "unripe",
+      "timesUsed": 1,
+      "firstLevel": 336,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "მძორი",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "carcass; carrion",
+      "timesUsed": 1,
+      "firstLevel": 242,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "მწირი",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "scarce; scanty",
+      "timesUsed": 1,
+      "firstLevel": 279,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "მხნე",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "vigorous; resilient",
+      "timesUsed": 1,
+      "firstLevel": 336,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ნატიფი",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "delicate; refined",
+      "timesUsed": 1,
+      "firstLevel": 363,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "სიო",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "breeze",
+      "timesUsed": 5,
+      "firstLevel": 60,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "სხარტი",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "agile; quick-witted",
+      "timesUsed": 1,
+      "firstLevel": 355,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ტლანქი",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "clumsy; rough",
+      "timesUsed": 1,
+      "firstLevel": 368,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "უბე",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "bay; bosom",
+      "timesUsed": 3,
+      "firstLevel": 15,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "უზადო",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "flawless",
+      "timesUsed": 1,
+      "firstLevel": 125,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ულევი",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "inexhaustible",
+      "timesUsed": 2,
+      "firstLevel": 63,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ულუფა",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "portion; serving",
+      "timesUsed": 1,
+      "firstLevel": 409,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "უტყვი",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "silent",
+      "timesUsed": 1,
+      "firstLevel": 444,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "უშრეტი",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "inexhaustible",
+      "timesUsed": 1,
+      "firstLevel": 497,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "უხამსი",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "obscene; indecent",
+      "timesUsed": 1,
+      "firstLevel": 226,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ქანცი",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "strength; stamina",
+      "timesUsed": 1,
+      "firstLevel": 248,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ქეჩო",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "scruff of an animal's neck",
+      "timesUsed": 1,
+      "firstLevel": 201,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ქოსა",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "beardless",
+      "timesUsed": 2,
+      "firstLevel": 186,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ყადრი",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "value, respect",
+      "timesUsed": 1,
+      "firstLevel": 283,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "შნო",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "skill, charm",
+      "timesUsed": 3,
+      "firstLevel": 10,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "შუღლი",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "enmity; feud",
+      "timesUsed": 1,
+      "firstLevel": 404,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "შხეფი",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "splash; large drop",
+      "timesUsed": 2,
+      "firstLevel": 13,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ცვარი",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "dew",
+      "timesUsed": 2,
+      "firstLevel": 180,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ჭავლი",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "jet, stream",
+      "timesUsed": 1,
+      "firstLevel": 30,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ჭინკა",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "mischievous; impish",
+      "timesUsed": 1,
+      "firstLevel": 286,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ჯგრო",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "crowd; throng",
+      "timesUsed": 1,
+      "firstLevel": 6,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ხინჯი",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "flaw",
+      "timesUsed": 1,
+      "firstLevel": 471,
+      "ownerDecision": "selected",
+      "assistantPick": true
+    },
+    {
+      "word": "ქაჯი",
+      "tier": "borderline",
+      "group": "literary",
+      "recordedMeaning": "goblin",
+      "timesUsed": 1,
+      "firstLevel": 484,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ნიშა",
+      "tier": "second-look",
+      "group": "geography",
+      "recordedMeaning": "niche",
+      "timesUsed": 2,
+      "firstLevel": 172,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "კიდური",
+      "tier": "second-look",
+      "group": "health",
+      "recordedMeaning": "limb",
+      "timesUsed": 1,
+      "firstLevel": 194,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "მუზა",
+      "tier": "second-look",
+      "group": "arts",
+      "recordedMeaning": "muse",
+      "timesUsed": 1,
+      "firstLevel": 229,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ფოიე",
+      "tier": "second-look",
+      "group": "arts",
+      "recordedMeaning": "foyer",
+      "timesUsed": 1,
+      "firstLevel": 316,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "აურა",
+      "tier": "second-look",
+      "group": "society",
+      "recordedMeaning": "aura",
+      "timesUsed": 1,
+      "firstLevel": 86,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "კარმა",
+      "tier": "second-look",
+      "group": "society",
+      "recordedMeaning": "karma",
+      "timesUsed": 2,
+      "firstLevel": 58,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "კრახი",
+      "tier": "second-look",
+      "group": "society",
+      "recordedMeaning": "complete failure",
+      "timesUsed": 1,
+      "firstLevel": 350,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "პასაჟი",
+      "tier": "second-look",
+      "group": "society",
+      "recordedMeaning": "shopping arcade",
+      "timesUsed": 1,
+      "firstLevel": 72,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "საბადო",
+      "tier": "second-look",
+      "group": "society",
+      "recordedMeaning": "mineral deposit",
+      "timesUsed": 1,
+      "firstLevel": 50,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "სეირი",
+      "tier": "second-look",
+      "group": "society",
+      "recordedMeaning": "amusing spectacle",
+      "timesUsed": 1,
+      "firstLevel": 203,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ფიასკო",
+      "tier": "second-look",
+      "group": "society",
+      "recordedMeaning": "fiasco",
+      "timesUsed": 1,
+      "firstLevel": 335,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ალყა",
+      "tier": "second-look",
+      "group": "history",
+      "recordedMeaning": "siege",
+      "timesUsed": 1,
+      "firstLevel": 378,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ზავი",
+      "tier": "second-look",
+      "group": "history",
+      "recordedMeaning": "truce",
+      "timesUsed": 1,
+      "firstLevel": 207,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "კერპი",
+      "tier": "second-look",
+      "group": "history",
+      "recordedMeaning": "idol",
+      "timesUsed": 2,
+      "firstLevel": 14,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "დოღი",
+      "tier": "second-look",
+      "group": "history",
+      "recordedMeaning": "horse race",
+      "timesUsed": 1,
+      "firstLevel": 217,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ლიანა",
+      "tier": "second-look",
+      "group": "nature",
+      "recordedMeaning": "climbing vine",
+      "timesUsed": 1,
+      "firstLevel": 339,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ფაფარი",
+      "tier": "second-look",
+      "group": "nature",
+      "recordedMeaning": "mane",
+      "timesUsed": 1,
+      "firstLevel": 433,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ფლორა",
+      "tier": "second-look",
+      "group": "nature",
+      "recordedMeaning": "plant life, flora",
+      "timesUsed": 1,
+      "firstLevel": 105,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ბორტი",
+      "tier": "second-look",
+      "group": "objects",
+      "recordedMeaning": "side of a ship",
+      "timesUsed": 1,
+      "firstLevel": 178,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ზამში",
+      "tier": "second-look",
+      "group": "objects",
+      "recordedMeaning": "suede",
+      "timesUsed": 1,
+      "firstLevel": 454,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "რაფა",
+      "tier": "second-look",
+      "group": "objects",
+      "recordedMeaning": "windowsill",
+      "timesUsed": 2,
+      "firstLevel": 3,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "სარი",
+      "tier": "second-look",
+      "group": "objects",
+      "recordedMeaning": "stake",
+      "timesUsed": 2,
+      "firstLevel": 164,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ბროლი",
+      "tier": "second-look",
+      "group": "objects",
+      "recordedMeaning": "crystal",
+      "timesUsed": 1,
+      "firstLevel": 318,
+      "ownerDecision": "not-selected",
+      "assistantPick": false
+    },
+    {
+      "word": "თქეში",
+      "tier": "second-look",
+      "group": "literary",
+      "recordedMeaning": "downpour",
+      "timesUsed": 1,
+      "firstLevel": 34,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "მირაჟი",
+      "tier": "second-look",
+      "group": "literary",
+      "recordedMeaning": "mirage",
+      "timesUsed": 1,
+      "firstLevel": 148,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    },
+    {
+      "word": "ორეული",
+      "tier": "second-look",
+      "group": "literary",
+      "recordedMeaning": "lookalike; double",
+      "timesUsed": 1,
+      "firstLevel": 441,
+      "ownerDecision": "selected",
+      "assistantPick": false
+    }
+  ],
+  "selection": {
+    "date": "2026-10-30",
+    "decision": "The owner selected the 149 recommended words. The 193 borderline words are not selected.",
+    "batch": "WORD_EXPLANATIONS_BATCH_01.json"
+  },
+  "secondReview": {
+    "date": "2026-10-30",
+    "decision": "The owner selected 144 of the 219 second-review words.",
+    "batch": "WORD_EXPLANATIONS_BATCH_02.json"
+  }
+}

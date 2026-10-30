@@ -17,6 +17,7 @@ export function Screen({
   tone,
   header,
   footer,
+  overlay,
   children,
   contentStyle,
   glowY,
@@ -27,6 +28,8 @@ export function Screen({
   readonly header?: ReactNode;
   /** Fixed safe-area footer, outside the scrolling/gesture content. */
   readonly footer?: ReactNode;
+  /** Drawn over the content only, so it can never cover the header or footer. */
+  readonly overlay?: ReactNode;
   readonly contentStyle?: ViewStyle;
   readonly glowY?: number;
   /** Darkens the painting for screens that are mostly text and cards (0–1). */
@@ -49,16 +52,19 @@ export function Screen({
         }
       >
         {header}
-        <GestureScrollContext.Provider value={scrollGesture}>
-          <GestureDetector gesture={scrollGesture}>
-            <ScrollView
-              contentContainerStyle={[styles.content, contentStyle]}
-              showsVerticalScrollIndicator={false}
-            >
-              {children}
-            </ScrollView>
-          </GestureDetector>
-        </GestureScrollContext.Provider>
+        <View style={styles.root}>
+          <GestureScrollContext.Provider value={scrollGesture}>
+            <GestureDetector gesture={scrollGesture}>
+              <ScrollView
+                contentContainerStyle={[styles.content, contentStyle]}
+                showsVerticalScrollIndicator={false}
+              >
+                {children}
+              </ScrollView>
+            </GestureDetector>
+          </GestureScrollContext.Provider>
+          {overlay}
+        </View>
         {footer}
       </SafeAreaView>
     </View>

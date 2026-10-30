@@ -34,6 +34,14 @@ export function selectGameplay(
       status: visible.has(cell.id) ? 'revealed' : 'locked',
       letter: visible.has(cell.id) ? cell.letter : null,
     })),
+    solvedWords: level.words
+      .filter((word) => progress.solvedWordIds.includes(word.id))
+      .map(({ id, answer, row, column }) => ({
+        id,
+        word: answer,
+        row,
+        column,
+      })),
     coins: state.coins,
     foundWords: progress.solvedWordIds.length,
     totalWords: level.words.length,
