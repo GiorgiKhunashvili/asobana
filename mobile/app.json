@@ -25,6 +25,7 @@
           "delayAppMeasurementInit": true
         }
       ],
+      "./plugins/withUnityAds.js",
       [
         "@sentry/react-native/expo",
         {

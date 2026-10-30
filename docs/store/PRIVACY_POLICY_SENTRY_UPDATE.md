@@ -1,8 +1,9 @@
-# Privacy policy update for Sentry
+# Privacy policy update for Sentry and Unity Ads
 
 **Status: draft, not published.** The policy promises to change before data
-handling does, so publish this before the first release that includes Sentry. The
-source is `asobana/privacy/index.html` and `en/asobana/privacy/index.html` in the
+handling does, so publish this before the first release that includes Sentry or
+Unity Ads. Unity's SDK ships in that release even while its AdMob groups are off.
+The source is `asobana/privacy/index.html` and `en/asobana/privacy/index.html` in the
 separate `spilo-games-website` project. The Georgian text needs the owner's review.
 
 Each change below is a pair: English, then Georgian.
@@ -19,7 +20,52 @@ Set "Last updated" / "ბოლო განახლება" to the publicati
 > თამაში ასევე აგზავნის ავარიული გათიშვისა და რეკლამის შეცდომების ანგარიშებს, რათა
 > პრობლემები გავასწოროთ; მათში შენი პროგრესი და სახელი არ არის.
 
+In the same paragraph, change "shows ads from Google AdMob; Google's ad software
+collects" to "shows ads from Google AdMob and, on Android, Unity Ads; their ad
+software collects".
+
+იმავე აბზაცში "Google AdMob-ის რეკლამას აჩვენებს; რეკლამის საჩვენებლად Google-ის
+პროგრამა" შეცვალე ასე: "Google AdMob-ისა და, Android-ზე, Unity Ads-ის რეკლამას
+აჩვენებს; რეკლამის საჩვენებლად მათი პროგრამა".
+
 ## 3. New section, after "Advertising (Google AdMob)"
+
+### Advertising from Unity Ads (Android)
+
+On Android, some ads may come from Unity Ads, which competes to show ads through
+Google AdMob. To show and measure these ads, Unity's software may collect:
+
+- your IP address, which may be used to estimate your device's general location;
+- device identifiers, such as the advertising ID or an app-specific ID;
+- ad interactions, such as ads shown, taps and views during the ad, not during
+  gameplay;
+- technical and diagnostic data;
+- purchase history, as Unity describes it. Asobana has no in-app purchases.
+
+Unity handles this data under the
+[Unity Privacy Policy](https://unity.com/legal/game-player-and-app-user-privacy-policy),
+which says it may use it for advertising and share it with advertising partners.
+Where the law requires consent, Google's consent form described above covers Unity
+too.
+
+### რეკლამა Unity Ads-იდან (Android)
+
+Android-ზე ზოგიერთი რეკლამა შეიძლება Unity Ads-იდან მოდიოდეს, რომელიც რეკლამის
+საჩვენებლად Google AdMob-ის საშუალებით მონაწილეობს. ამ რეკლამების საჩვენებლად და
+გასაზომად Unity-ის პროგრამამ შეიძლება შეაგროვოს:
+
+- IP მისამართი, რომლითაც შეიძლება შეფასდეს მოწყობილობის მიახლოებითი მდებარეობა;
+- მოწყობილობის იდენტიფიკატორები, მაგალითად სარეკლამო ID ან აპის ID;
+- რეკლამასთან ურთიერთქმედება: ნაჩვენები რეკლამები, დაჭერები და ნახვა თავად
+  რეკლამის დროს და არა თამაშისას;
+- ტექნიკური და დიაგნოსტიკური მონაცემები;
+- შესყიდვების ისტორია, როგორც ამას Unity აღწერს. ასობანაში შესყიდვები არ არის.
+
+Unity ამ მონაცემებს
+[Unity-ის კონფიდენციალურობის პოლიტიკის](https://unity.com/legal/game-player-and-app-user-privacy-policy)
+მიხედვით ამუშავებს, რომლის თანახმადაც მათ შეიძლება რეკლამისთვის იყენებდეს და
+სარეკლამო პარტნიორებს უზიარებდეს. სადაც კანონი თანხმობას მოითხოვს, ზემოთ აღწერილი
+Google-ის თანხმობის ფორმა Unity-საც მოიცავს.
 
 ### Crash and ad error reports (Sentry)
 

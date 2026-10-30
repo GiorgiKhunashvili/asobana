@@ -551,6 +551,17 @@ as the canonical rulebook; tool-specific instruction files should point here.
   first. Source-map upload stays off (`SENTRY_DISABLE_AUTO_UPLOAD` in
   `mobile/eas.json`) until the owner adds the Sentry organization and project and
   a `SENTRY_AUTH_TOKEN` EAS secret; until then, JS stack traces stay minified.
+- The owner approved **Unity Ads** on 2026-10-30 as an AdMob bidding source, to
+  bring in playable ads. It is Android only (`mobile/plugins/withUnityAds.js`);
+  iOS waits for a public App Store page. The SDK ships with both AdMob mediation
+  groups **off**, and the owner switches them on from AdMob once Sentry has a
+  baseline, so no second store update is needed. Keep the adapter pair matched to
+  Google Mobile Ads (`mobile/tests/unityAds.test.ts`). As an exception to the G
+  rating, the owner left Unity's Blocking Controls off after the risk was
+  explained, so the G rating and AdMob blocks do not apply to Unity's bids once
+  the groups are on. Google pays these earnings, shown in AdMob, not Unity.
+  Demo-ad builds never reach Unity: testing it needs a registered AdMob test device
+  and Unity's test mode, on the owner's explicit approval.
 
 ## Sources of truth
 
