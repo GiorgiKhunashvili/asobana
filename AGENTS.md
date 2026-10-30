@@ -548,9 +548,13 @@ as the canonical rulebook; tool-specific instruction files should point here.
   Reporting is a passive record: it must never change when an ad is requested,
   shown or refreshed. The privacy policy promises an update before data handling
   changes, so describe any new collection there and in the store declarations
-  first. Source-map upload stays off (`SENTRY_DISABLE_AUTO_UPLOAD` in
-  `mobile/eas.json`) until the owner adds the Sentry organization and project and
-  a `SENTRY_AUTH_TOKEN` EAS secret; until then, JS stack traces stay minified.
+  first. On 2026-10-31 the owner added the organization token `asobana-builds`, so
+  `beta` and `production` builds upload source maps and JS stack traces are
+  readable from 1.1.0 on. The token lives in `~/.sentryclirc` on the build Mac,
+  outside the repo, because EAS "Secret" variables do not reach local builds. Never
+  commit it or put it in `mobile/eas.json`. A local build without it fails at the
+  upload step; `SENTRY_DISABLE_AUTO_UPLOAD=true` skips the upload, for example in
+  an `npx expo run:*` that will not ship.
 - The owner approved **Unity Ads** on 2026-10-30 as an AdMob bidding source, to
   bring in playable ads. It is Android only (`mobile/plugins/withUnityAds.js`);
   iOS waits for a public App Store page. The SDK ships with both AdMob mediation

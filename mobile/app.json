@@ -2,7 +2,7 @@
   "expo": {
     "name": "Asobana",
     "slug": "geowords",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "scheme": "asobana",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
@@ -29,7 +29,9 @@
       [
         "@sentry/react-native/expo",
         {
-          "url": "https://de.sentry.io/"
+          "url": "https://de.sentry.io/",
+          "organization": "4512344040079360",
+          "project": "asobana-mobile"
         }
       ],
       "expo-router",
